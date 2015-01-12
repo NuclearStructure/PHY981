@@ -1,0 +1,81 @@
+# Slides for PHY981 Nuclear Structure
+TITLE: Nuclear Structure, PHY981  Lectures, Spring semester 2015
+AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA and Department of Physics, University of Oslo, Oslo, Norway 
+DATE:  Spring 2015 
+
+!split
+===== Overview of first week  =====
+!bblock 
+* Tuesday:
+ * Presentation of topics to be covered and introduction to nuclear structure physics
+ * Discussion of quantities like binding energies, masses, radii, separation energies, see chapters 1-4 of Alex Brown's (AB) 2011 lectures
+ * Single-particle degrees of freedom, discussion of data
+* Thursday:
+ * Single-particle degrees of freedom, discussion of data
+ * Hamiltonians and single-particle fields, see  Suhonen (JS) chapter 3 and AB chapters 9 and 10.
+
+You can fetch JS's book from URL: "http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1"
+!eblock
+
+
+!split
+===== Lectures, exercise sessions and syllabus =====
+!bblock
+* Lectures: Tuesdays (3pm-5.50pm, BPS 1300 ) and Thursdays (3pm-5.50pm, BPS 1300)
+* Detailed lecture notes, all exercises presented and projects can be found at the homepage of the course, URL: "https://github.com/NuclearStructure/PHY981".
+* Exercises: No allocated time (but a given time can be determined)
+* Weekly plans and all other information are on the webpage of the course.
+* Syllabus: Lecture notes, exercises and projects. Relevant chapters of Suhonen's text that cover parts of the material are chapters 3-9 and 11. Chapters 1-2 on angular momentum will be used as references for various derivations and only parts of these two chapters will be used. Alex Brown's lecture notes from 2011 can also be used, and the relevant chapters are 1-4, 6-29. Chapter 5 of Brown on angular momentum plays the same role as chapters 1-2 of Suhonen. 
+* A weekly mail will be sent to all partecipants. 
+!eblock
+
+
+!split
+===== Main themes and reading suggestions =====
+!bblock
+The various observables we will discuss in the course are thought to be understood via the following five 
+major topics
+* Single  particle properties and mean-field models, lecture notes, JS chapters 3-5 and AB chapters 7-10 and 14
+* Nuclear forces, covered by lecture notes
+* The nuclear shell-model, lecture notes, JS chapter 8 and AB chapters 11-22.
+* Particle-hole excitations, random-phase approximation and pairing (and perhaps something on collective models), lecture notes and JS chapters 9 and 11.
+* Decays and one and two-body transition probabilities, lecture notes, JS chapters 6 and 7, AB chapters 23-29.
+
+To understand how these topics are linked will provide us with fundamental insights about the laws of motion that govern nuclear physics.
+!eblock
+
+
+!split
+===== Plan for the semester =====
+!bblock Projects, weekly exercises, deadlines and final oral exam
+* One  project with a possible numerical content that counts 30%, weekly exercises  that count 30% and a final oral exam which counts 40\% of the final grade. 
+* Project 1 will be available mid February and to be handed in before spring break (exact dates to be determined)
+* For the final oral exam (after spring break, time to be determined) you have to prepare a 25-30 minutes talk based on either a topic chosen by you or a topic defined towards the end of the semester.
+Duration of the examination is 45 minutes. The remaining 15-20 minutes are for questions from other topics as well. 
+!eblock
+
+
+!split
+===== Selected Texts on Nuclear Structure and Many-body theory =====
+!bblock
+* Heyde, *The Nuclear Shell Model*, Springer 1990
+* Lawson,*Theory of the Nuclear Shell Model*, Oxford 1980
+* Ring and Schuck, *Nuclear Many-Body Theory*, Springer 1980
+* Talmi, *Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model*, Harwood Academic Publishers 1993.
+* Blaizot and Ripka, *Quantum Theory of Finite systems*, MIT press 1986
+* Fetter and Walecka, *Quantum Theory of Many-Particle Systems*, McGraw-Hill, 1971.
+* Dickhoff and Van Neck, *Many-Body Theory Exposed*, World Scientific, 2006.
+!eblock
+
+
+!split
+===== Background enquiry =====
+!bblock Write a small summary of what you do
+You can send the answer as an email to hjensen@msu.edu
+* If you have defined a thesis topic, please send me some details of your thesis project, your interests etc.
+* What is your background in computing? And, if you have programmed, which programming language(s) and environments  are you  most familiar with?  
+* Also, if you have specific wishes with respect to this course, expectations, topics you'd like me to cover or other things, please feel free to write them down, or swing by my office for a chat. 
+
+One of my aims is to be able to tailor this course as close as possible to your specific scientific interests (as far as possible obviously).
+!eblock
+
