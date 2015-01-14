@@ -1,0 +1,300 @@
+%%
+%% Automatically generated file from DocOnce source
+%% (https://github.com/hplgit/doconce/)
+%%
+% #ifdef PTEX2TEX_EXPLANATION
+%%
+%% The file follows the ptex2tex extended LaTeX format, see
+%% ptex2tex: http://code.google.com/p/ptex2tex/
+%%
+%% Run
+%%      ptex2tex myfile
+%% or
+%%      doconce ptex2tex myfile
+%%
+%% to turn myfile.p.tex into an ordinary LaTeX file myfile.tex.
+%% (The ptex2tex program: http://code.google.com/p/ptex2tex)
+%% Many preprocess options can be added to ptex2tex or doconce ptex2tex
+%%
+%%      ptex2tex -DMINTED myfile
+%%      doconce ptex2tex myfile envir=minted
+%%
+%% ptex2tex will typeset code environments according to a global or local
+%% .ptex2tex.cfg configure file. doconce ptex2tex will typeset code
+%% according to options on the command line (just type doconce ptex2tex to
+%% see examples). If doconce ptex2tex has envir=minted, it enables the
+%% minted style without needing -DMINTED.
+% #endif
+
+% #define PREAMBLE
+
+% #ifdef PREAMBLE
+%-------------------- begin preamble ----------------------
+
+\documentclass[%
+twoside,                 % oneside: electronic viewing, twoside: printing
+final,                   % or draft (marks overfull hboxes, figures with paths)
+10pt]{article}
+
+\listfiles               % print all files needed to compile this document
+
+\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts}
+\usepackage[table]{xcolor}
+\usepackage{bm,microtype}
+
+\usepackage{ptex2tex}
+
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage[%
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+            ]{hyperref}
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{2}  % number chapter, section, subsection
+
+\usepackage[framemethod=TikZ]{mdframed}
+
+% --- begin definitions of admonition environments ---
+
+% --- end of definitions of admonition environments ---
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% #endif
+
+
+% ------------------- main content ----------------------
+
+% Slides for PHY981 Nuclear Structure
+
+
+% ----------------- title -------------------------
+
+\thispagestyle{empty}
+
+\begin{center}
+{\LARGE\bf
+\begin{spacing}{1.25}
+Nuclear Structure, PHY981  Lectures, Spring semester 2015
+\end{spacing}
+}
+\end{center}
+
+% ----------------- author(s) -------------------------
+
+\begin{center}
+{\bf Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA and Department of Physics, University of Oslo, Oslo, Norway${}^{}$} \\ [0mm]
+\end{center}
+
+    \begin{center}
+% List of all institutions:
+\end{center}
+    
+% ----------------- end author(s) -------------------------
+
+\begin{center} % date
+Spring 2015 
+\end{center}
+
+\vspace{1cm}
+
+
+% !split
+\subsection{Overview of first week}
+
+% --- begin paragraph admon ---
+\paragraph{}
+
+\begin{itemize}
+\item Thursday only first week:
+\begin{itemize}
+
+ \item Presentation of topics to be covered and introduction to nuclear structure physics
+
+ \item Discussion of quantities like binding energies, masses, radii, separation energies, see chapters 1-4 of Alex Brown's (AB) 2011 lectures
+
+ \item Single-particle degrees of freedom, discussion of data
+% * Thursday:
+
+ \item Single-particle degrees of freedom, discussion of data
+
+ \item Hamiltonians and single-particle fields, see  Suhonen (JS) chapter 3  and AB chapters 9 and 10.
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+As a reading assignment, chapters 1-4 of Alex Brown's text are rather useful.
+You can fetch JS's book from \href{{http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1}}{\nolinkurl{http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1}}
+
+The webpage of the course is at \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{\nolinkurl{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}.
+All material can be downloaded from \href{{http://nuclearstructure.github.io/PHY981/doc/web/index.html}}{\nolinkurl{http://nuclearstructure.github.io/PHY981/doc/web/index.html}}.
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Lectures, exercise sessions and syllabus}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Lectures: Tuesdays (3pm-5.50pm, BPS 1300 ) and Thursdays (3pm-5.50pm, BPS 1300)
+
+\item Detailed lecture notes, all exercises presented and projects can be found at the homepage of the course, \href{{https://github.com/NuclearStructure/PHY981}}{\nolinkurl{https://github.com/NuclearStructure/PHY981}}.
+
+\item Exercises: No allocated time (but a given time can be determined)
+
+\item Weekly plans and all other information are on the webpage of the course.
+
+\item Syllabus: Lecture notes, exercises and projects. Relevant chapters of Suhonen's text that cover parts of the material are chapters 3-9 and 11. Chapters 1-2 on angular momentum will be used as references for various derivations and only parts of these two chapters will be used. Alex Brown's lecture notes from 2011 can also be used, and the relevant chapters are 1-4, 6-29. Chapter 5 of Brown on angular momentum plays the same role as chapters 1-2 of Suhonen. 
+
+\item A weekly mail will be sent to all participants. 
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Main themes and reading suggestions}
+
+% --- begin paragraph admon ---
+\paragraph{}
+The various observables we will discuss in the course are thought to be understood via the following five 
+major topics
+\begin{itemize}
+\item Single  particle properties and mean-field models, lecture notes, JS chapters 3-5 and AB chapters 7-10 and 14
+
+\item Nuclear forces, covered by lecture notes
+
+\item The nuclear shell-model, lecture notes, JS chapter 8 and AB chapters 11-22.
+
+\item Particle-hole excitations, random-phase approximation and pairing (and perhaps something on collective models), lecture notes and JS chapters 9 and 11.
+
+\item Decays and one and two-body transition probabilities, lecture notes, JS chapters 6 and 7, AB chapters 23-29.
+\end{itemize}
+
+\noindent
+To understand how these topics are linked will provide us with fundamental insights about the laws of motion that govern nuclear physics.
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Plan for the semester}
+
+% --- begin paragraph admon ---
+\paragraph{Projects, weekly exercises, deadlines and final oral exam.}
+\begin{itemize}
+\item One  project with a possible numerical content that counts 30\%, weekly exercises  that count 30\% and a final oral exam which counts 40\% of the final grade. 
+
+\item Project 1 will be available mid February and to be handed in before spring break (exact dates to be determined)
+
+\item For the final oral exam (after spring break, time to be determined) you have to prepare a 25-30 minutes talk based on either a topic chosen by you or a topic defined towards the end of the semester.
+\end{itemize}
+
+\noindent
+Duration of the examination is 45 minutes. The remaining 15-20 minutes are for questions from other topics as well.
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Selected Texts on Nuclear Structure and Many-body theory}
+
+% --- begin paragraph admon ---
+\paragraph{}
+\begin{itemize}
+\item Heyde, \emph{The Nuclear Shell Model}, Springer 1990
+
+\item Lawson, \emph{Theory of the Nuclear Shell Model}, Oxford 1980
+
+\item Ring and Schuck, \emph{Nuclear Many-Body Theory}, Springer 1980
+
+\item Talmi, \emph{Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model}, Harwood Academic Publishers 1993.
+
+\item Blaizot and Ripka, \emph{Quantum Theory of Finite systems}, MIT press 1986
+
+\item Fetter and Walecka, \emph{Quantum Theory of Many-Particle Systems}, McGraw-Hill, 1971.
+
+\item Dickhoff and Van Neck, \emph{Many-Body Theory Exposed}, World Scientific, 2006.
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection{Background enquiry}
+
+% --- begin paragraph admon ---
+\paragraph{Write a small summary of what you do.}
+You can send the answer as an email to hjensen@msu.edu
+\begin{itemize}
+\item If you have defined a thesis topic, please send me some details of your thesis project, your interests etc.
+
+\item What is your background in computing? And, if you have programmed, which programming language(s) and environments  are you  most familiar with?  
+
+\item Also, if you have specific wishes with respect to this course, expectations, topics you'd like me to cover or other things, please feel free to write them down, or swing by my office for a chat. 
+\end{itemize}
+
+\noindent
+One of my aims is to be able to tailor this course as close as possible to your specific scientific interests (as far as possible obviously).
+
+\begin{itemize}
+\item The first exercise is exercise 1, see the slides on single-particle data.  It will also be sent electronically to all of you.
+\end{itemize}
+
+\noindent
+% --- end paragraph admon ---
+
+
+
+
+% ------------------- end of main content ---------------
+
+
+% #ifdef PREAMBLE
+\printindex
+
+\end{document}
+% #endif
+
