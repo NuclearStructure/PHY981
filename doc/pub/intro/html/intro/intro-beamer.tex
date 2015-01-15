@@ -1,0 +1,387 @@
+
+% LaTeX Beamer file automatically generated from DocOnce
+% https://github.com/hplgit/doconce
+
+%-------------------- begin beamer-specific preamble ----------------------
+
+\documentclass{beamer}
+
+\usetheme{red_plain}
+\usecolortheme{default}
+
+% turn off the almost invisible, yet disturbing, navigation symbols:
+\setbeamertemplate{navigation symbols}{}
+
+% Examples on customization:
+%\usecolortheme[named=RawSienna]{structure}
+%\usetheme[height=7mm]{Rochester}
+%\setbeamerfont{frametitle}{family=\rmfamily,shape=\itshape}
+%\setbeamertemplate{items}[ball]
+%\setbeamertemplate{blocks}[rounded][shadow=true]
+%\useoutertheme{infolines}
+%
+%\usefonttheme{}
+%\useinntertheme{}
+%
+%\setbeameroption{show notes}
+%\setbeameroption{show notes on second screen=right}
+
+% fine for B/W printing:
+%\usecolortheme{seahorse}
+
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{relsize}
+
+\usepackage{fancybox}  % make sure fancybox is loaded before fancyvrb
+
+\usepackage{fancyvrb}
+%\usepackage{minted} % requires pygments and latex -shell-escape filename
+%\usepackage{anslistings}
+
+\usepackage{amsmath,amssymb,bm}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{colortbl}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{framed}
+% Use some nice templates
+\beamertemplatetransparentcovereddynamic
+
+% --- begin table of contents based on sections ---
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each section:
+% (Only section headings can enter the table of contents in Beamer
+% slides generated from DocOnce source, while subsections are used
+% for the title in ordinary slides.)
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>[plain]
+  \frametitle{}
+  %\frametitle{Outline}
+  \tableofcontents[currentsection]
+  \end{frame}
+}
+% --- end table of contents based on sections ---
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\newcommand{\shortinlinecomment}[3]{\note{\textbf{#1}: #2}}
+\newcommand{\longinlinecomment}[3]{\shortinlinecomment{#1}{#2}{#3}}
+
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3
+    }
+\setlength{\parskip}{0pt}  % {1em}
+
+\newenvironment{doconceexercise}{}{}
+\newcounter{doconceexercisecounter}
+\newenvironment{doconce:movie}{}{}
+\newcounter{doconce:movie:counter}
+
+\newcommand{\subex}[1]{\noindent\textbf{#1}}  % for subexercises: a), b), etc
+
+%-------------------- end beamer-specific preamble ----------------------
+
+% Add user's preamble
+
+
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+
+
+
+% ------------------- main content ----------------------
+
+% Slides for PHY981 Nuclear Structure
+
+
+% ----------------- title -------------------------
+
+\title{Nuclear Structure, PHY981  Lectures, Spring semester 2015}
+
+% ----------------- author(s) -------------------------
+
+\author{Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA and Department of Physics, University of Oslo, Oslo, Norway\inst{}}
+\institute{}
+% ----------------- end author(s) -------------------------
+
+\date{Spring 2015 
+% <optional titlepage figure>
+}
+
+\begin{frame}[plain,fragile]
+\titlepage
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Overview of first week}
+
+\begin{block}{}
+
+\begin{itemize}
+\item Thursday only first week:
+\begin{itemize}
+
+ \item Presentation of topics to be covered and introduction to nuclear structure physics
+
+ \item Discussion of quantities like binding energies, masses, radii, separation energies, see chapters 1-4 of Alex Brown's (AB) 2011 lectures
+
+ \item Single-particle degrees of freedom, discussion of data
+% * Thursday:
+
+ \item Single-particle degrees of freedom, discussion of data
+
+ \item Hamiltonians and single-particle fields, see  Suhonen (JS) chapter 3  and AB chapters 9 and 10.
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Overview of first week}
+
+\begin{block}{}
+As a reading assignment, chapters 1-4 of Alex Brown's text are rather useful.
+You can fetch JS's book from \href{{http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1}}{\nolinkurl{http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1}}
+You can find these texts at the webpage of the course as well.
+The webpage of the course is at \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{\nolinkurl{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}.
+All material can be downloaded from \href{{http://nuclearstructure.github.io/PHY981/doc/web/index.html}}{\nolinkurl{http://nuclearstructure.github.io/PHY981/doc/web/index.html}}.
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Lectures, exercise sessions and syllabus}
+
+\begin{block}{}
+\begin{itemize}
+\item Lectures: Tuesdays (3pm-5.50pm, BPS 1300 ) and Thursdays (3pm-5.50pm, BPS 1300)
+
+\item Detailed lecture notes, all exercises presented and projects can be found at the homepage of the course, \href{{https://github.com/NuclearStructure/PHY981}}{\nolinkurl{https://github.com/NuclearStructure/PHY981}}.
+
+\item Exercises: No allocated time (but a given time can be determined)
+
+\item Weekly plans and all other information are on the webpage of the course.
+
+\item Syllabus: Lecture notes, exercises and projects. Relevant chapters of Suhonen's text that cover parts of the material are chapters 3-9 and 11. Chapters 1-2 on angular momentum will be used as references for various derivations and only parts of these two chapters will be used. Alex Brown's lecture notes from 2011 can also be used, and the relevant chapters are 1-4, 6-29. Chapter 5 of Brown on angular momentum plays the same role as chapters 1-2 of Suhonen. 
+
+\item A weekly mail will be sent to all participants. 
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Main themes and reading suggestions}
+
+\begin{block}{}
+The various observables we will discuss in the course are thought to be understood via the following five 
+major topics
+\begin{itemize}
+\item Single  particle properties and mean-field models, lecture notes, JS chapters 3-5 and AB chapters 7-10 and 14
+
+\item Nuclear forces, covered by lecture notes
+
+\item The nuclear shell-model, lecture notes, JS chapter 8 and AB chapters 11-22.
+
+\item Particle-hole excitations, random-phase approximation and pairing (and perhaps something on collective models), lecture notes and JS chapters 9 and 11.
+
+\item Decays and one and two-body transition probabilities, lecture notes, JS chapters 6 and 7, AB chapters 23-29.
+\end{itemize}
+
+\noindent
+To understand how these topics are linked will provide us with fundamental insights about the laws of motion that govern nuclear physics.
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Plan for the semester}
+
+\begin{block}{Projects, weekly exercises, deadlines and final oral exam }
+\begin{itemize}
+\item One  project with a possible numerical content that counts 30\%, weekly exercises  that count 30\% and a final oral exam which counts 40\% of the final grade. 
+
+\item Project 1 will be available mid February and to be handed in before spring break (exact dates to be determined)
+
+\item For the final oral exam (after spring break, time to be determined) you have to prepare a 25-30 minutes talk based on either a topic chosen by you or a topic defined towards the end of the semester.
+\end{itemize}
+
+\noindent
+Duration of the examination is 45 minutes. The remaining 15-20 minutes are for questions from other topics as well. 
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Selected Texts on Nuclear Structure and Many-body theory}
+
+\begin{block}{}
+\begin{itemize}
+\item Nuclear structure
+\begin{itemize}
+
+ \item Heyde, \emph{The Nuclear Shell Model}, Springer 1990
+
+ \item Lawson, \emph{Theory of the Nuclear Shell Model}, Oxford 1980
+
+ \item Ring and Schuck, \emph{Nuclear Many-Body Theory}, Springer 1980
+
+ \item Talmi, \emph{Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model}, Harwood Academic Publishers 1993.
+
+\end{itemize}
+
+\noindent
+\item Many-body theories
+\begin{itemize}
+
+ \item Blaizot and Ripka, \emph{Quantum Theory of Finite systems}, MIT press 1986
+
+ \item Fetter and Walecka, \emph{Quantum Theory of Many-Particle Systems}, McGraw-Hill, 1971.
+
+ \item Dickhoff and Van Neck, \emph{Many-Body Theory Exposed}, World Scientific, 2006.
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Links and useful software}
+
+\begin{block}{}
+\begin{itemize}
+\item PHY981 on github
+\begin{itemize}
+
+ \item All material is at  \href{{https://github.com/NuclearStructure/PHY981/}}{\nolinkurl{https://github.com/NuclearStructure/PHY981/}}
+
+ \item The following link gives you a quick way to download everything, see \href{{http://nuclearstructure.github.io/PHY981/doc/web/index.html}}{\nolinkurl{http://nuclearstructure.github.io/PHY981/doc/web/index.html}}
+
+ \item And this link \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{\nolinkurl{http://nuclearstructure.github.io/PHY981/doc/web/course.html}} gives direct access to html, ipython notebooks and pdf files of the lectures.
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Links and useful software}
+
+\begin{block}{}
+\begin{itemize}
+\item Useful links
+\begin{itemize}
+
+ \item When I write code in C++ I tend to recommend to use the linear algebra library armadillo, see \href{{http://arma.sourceforge.net/}}{\nolinkurl{http://arma.sourceforge.net/}}. 
+
+ \item To install armadillo see the guidelines at \href{{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/}}{\nolinkurl{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/}}. 
+
+ \item For mac users I recommend using \emph{brew}, see \href{{http://brew.sh/}}{\nolinkurl{http://brew.sh/}}.
+
+ \item If you use ipython notebook and want to run a c++ program, follow the instructions at \href{{http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb}}{\nolinkurl{http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb}}
+
+ \item To set up git, look at \href{{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/setting-up-git/}}{\nolinkurl{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/setting-up-git/}}
+
+ \item An excellent IDE for c++ programmers is Qt Creator, see \href{{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v13/guides/installing-qt-creator/}}{\nolinkurl{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v13/guides/installing-qt-creator/}}.
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Background enquiry}
+
+\begin{block}{Write a small summary of what you do }
+You can send the answer as an email to hjensen@msu.edu
+\begin{itemize}
+\item If you have defined a thesis topic, please send me some details of your thesis project, your interests etc.
+
+\item What is your background in computing? And, if you have programmed, which programming language(s) and environments  are you  most familiar with?  
+
+\item Also, if you have specific wishes with respect to this course, expectations, topics you'd like me to cover or other things, please feel free to write them down, or swing by my office for a chat. 
+\end{itemize}
+
+\noindent
+One of my aims is to be able to tailor this course as close as possible to your specific scientific interests (as far as possible obviously).
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{First exercise: Exercise 1}
+
+\begin{block}{Masses and binding energies }
+The data on binding energies can be found in the file bedata.dat at the github address of the course, see
+\href{{https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs}}{\nolinkurl{https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs}}
+
+\begin{itemize}
+  \item Write a small program which reads in the proton and neutron numbers and the binding energies 
+\end{itemize}
+
+\noindent
+and make a plot of all neutron separation energies for the chain of oxygen (O), calcium (Ca), nickel (Ni), tin (Sn) and lead (Pb) isotopes, that is you need to plot
+\[
+S_n= BE(N,Z)-BE(N-1,Z).
+\]
+Comment your results. 
+\begin{itemize}
+ \item In the same figures, you should also include the liquid drop model results of Eq.~(2.17) of Alex Brown's text, namely
+\end{itemize}
+
+\noindent
+\[
+BE(N,Z)= \alpha_1A-\alpha_2A^{2/3}-\alpha_3\frac{Z^2}{A^{1/3}}-\alpha_4\frac{(N-Z)^2}{A},
+\]
+with $\alpha_1=15.49$ MeV, $\alpha_2=17.23$ MeV, $\alpha_3=0.697$ MeV and $\alpha_4=22.6$ MeV.
+Again, comment your results. 
+\begin{itemize}
+ \item Make also a plot of the binding energies as function of $A$ using the data in the file on bindingenergies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters $\alpha_i=0$. Comment your results. 
+
+ \item Use the liquid drop model to find the neutron drip lines   for Z values up to 120.
+\end{itemize}
+
+\noindent
+Analyze then the fluorine isotopes and find, where available the corresponding experimental data, and compare the liquid drop model predicition with experiment. 
+Comment your results.
+
+A program example in C++ and the input data file \emph{bedata.dat} can be found found at the github repository for the course, see \href{{https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs}}{\nolinkurl{https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs}}
+
+Deadline for this exercise is \textbf{January 26, at noon}.  You can hand in electronically by just sending me your github link, or just the file. I digest most formats, from scans to ipython notebooks. The choice is yours. 
+\end{block}
+\end{frame}
+
+\end{document}

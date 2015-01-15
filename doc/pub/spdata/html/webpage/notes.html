@@ -1,0 +1,587 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Overview of course material: Numerical solution of PDEs">
+
+<title>Overview of course material: Numerical solution of PDEs</title>
+
+
+<style type="text/css">
+/* blueish style */
+
+/* Color definitions:  http://www.december.com/html/spec/color0.html
+   CSS examples:       http://www.w3schools.com/css/css_examples.asp */
+
+body {
+  margin-top: 1.0em;
+  background-color: #ffffff;
+  font-family: Helvetica, Arial, FreeSans, san-serif;
+  color: #000000;
+}
+h1 { font-size: 1.8em; color: #1e36ce; }
+h2 { font-size: 1.6em; color: #1e36ce; }
+h3 { font-size: 1.4em; color: #1e36ce; }
+a { color: #1e36ce; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://raw.github.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://raw.github.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://raw.github.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://raw.github.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 1,
+ 'sections': [(' Preliminary notes for a future textbook ',
+               1,
+               None,
+               '___sec0'),
+              (' Introduction to computing with finite difference methods ',
+               2,
+               None,
+               '___sec1'),
+              (' Finite difference methods for diffusion equations ',
+               2,
+               None,
+               '___sec2'),
+              (' Introduction to finite element methods ',
+               2,
+               None,
+               '___sec3'),
+              (' Finite difference methods for wave motion ',
+               2,
+               None,
+               '___sec4'),
+              (' Finite difference methods for vibration ODEs ',
+               2,
+               None,
+               '___sec5'),
+              (' Scientific software engineering with a simple ODE as case ',
+               2,
+               None,
+               '___sec6'),
+              (' Truncation error analysis ', 2, None, '___sec7'),
+              (' Solving nonlinear ODE and PDE problems ',
+               2,
+               None,
+               '___sec8'),
+              (' Study guides (slides for lectures) ', 1, None, '___sec9'),
+              (' Introduction to computing with finite difference methods ',
+               2,
+               None,
+               '___sec10'),
+              (' Finite difference methods for diffusion equations ',
+               2,
+               None,
+               '___sec11'),
+              (' Introduction to finite element methods ',
+               2,
+               None,
+               '___sec12'),
+              (' Finite difference methods for wave motion ',
+               2,
+               None,
+               '___sec13'),
+              (' Finite difference methods for vibration ODEs ',
+               2,
+               None,
+               '___sec14'),
+              (' Scientific software engineering with a simple ODE as case ',
+               2,
+               None,
+               '___sec15'),
+              (' Truncation error analysis ', 2, None, '___sec16'),
+              (' Solving nonlinear ODE and PDE problems ',
+               2,
+               None,
+               '___sec17')]}
+end of tocinfo -->
+
+<body>
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Strange way of testing for vortex... -->
+
+
+<center><h1>Overview of course material: Numerical solution of PDEs</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Hans Petter Langtangen -->
+
+<center>
+<b>Hans Petter Langtangen</b>  (<tt>hpl at ifi.uio.no</tt>)
+</center>
+
+
+<p>
+<!-- institution(s) -->
+
+<p>
+The teaching material is produced in various formats for printing and
+on-screen reading.
+
+<p>
+<!-- !split -->
+<div class="alert alert-block alert-warning alert-text-normal">
+<b>Warning.</b>
+<p>
+The PDF files are based on LaTeX and have seldom technical
+failures that cannot be easily corrected.
+The HTML-based files, called &quot;HTML&quot; and &quot;Sphinx&quot; below, apply MathJax
+for rendering LaTeX formulas and sometimes this technology gives rise
+to unexpected failures (e.g.,
+incorrect rendering in a web page despite correct LaTeX syntax in the
+formula). Consult the corresponding PDF
+file if you find missing or incorrectly rendered
+formulas in HTML or Sphinx files.
+</div>
+
+
+<h1>Preliminary notes for a future textbook  <a name="___sec0"></a></h1>
+
+<h2>Introduction to computing with finite difference methods  <a name="___sec1"></a></h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/pdf/main_decay-4print.pdf" target="_self">standard format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/pdf/main_decay-4print-2up.pdf" target="_self">2 pages per sheet</a></li>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/pdf/main_decay-4print-A4.pdf" target="_self">A4 format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/pdf/main_decay-4print-A4-2up.pdf" target="_self">2 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/pdf/main_decay-4screen.pdf" target="_self">standard format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/html/main_decay.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/html/main_decay-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/sphinx/index.html" target="_self">Sphinx style</a></li>
+</ul>
+
+</ul>
+
+<h2>Finite difference methods for diffusion equations  <a name="___sec2"></a></h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/pdf/main_diffu-4print.pdf" target="_self">standard format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/pdf/main_diffu-4print-2up.pdf" target="_self">2 pages per sheet</a></li>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/pdf/main_diffu-4print-A4.pdf" target="_self">A4 format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/pdf/main_diffu-4print-A4-2up.pdf" target="_self">2 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/pdf/main_diffu-4screen.pdf" target="_self">standard format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/html/main_diffu.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/html/main_diffu-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/sphinx/index.html" target="_self">Sphinx style</a></li>
+</ul>
+
+</ul>
+
+<h2>Introduction to finite element methods  <a name="___sec3"></a></h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/pdf/main_fem-4print.pdf" target="_self">standard format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/pdf/main_fem-4print-2up.pdf" target="_self">2 pages per sheet</a></li>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/pdf/main_fem-4print-A4.pdf" target="_self">A4 format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/pdf/main_fem-4print-A4-2up.pdf" target="_self">2 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/pdf/main_fem-4screen.pdf" target="_self">standard format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/html/main_fem.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/html/main_fem-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/sphinx/index.html" target="_self">Sphinx style</a></li>
+</ul>
+
+</ul>
+
+<h2>Finite difference methods for wave motion  <a name="___sec4"></a></h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/pdf/main_wave-4print.pdf" target="_self">standard format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/pdf/main_wave-4print-2up.pdf" target="_self">2 pages per sheet</a></li>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/pdf/main_wave-4print-A4.pdf" target="_self">A4 format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/pdf/main_wave-4print-A4-2up.pdf" target="_self">2 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/pdf/main_wave-4screen.pdf" target="_self">standard format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/html/main_wave.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/html/main_wave-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/sphinx/index.html" target="_self">Sphinx style</a></li>
+</ul>
+
+</ul>
+
+<h2>Finite difference methods for vibration ODEs  <a name="___sec5"></a></h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/pdf/main_vib-4print.pdf" target="_self">standard format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/pdf/main_vib-4print-2up.pdf" target="_self">2 pages per sheet</a></li>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/pdf/main_vib-4print-A4.pdf" target="_self">A4 format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/pdf/main_vib-4print-A4-2up.pdf" target="_self">2 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/pdf/main_vib-4screen.pdf" target="_self">standard format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/html/main_vib.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/html/main_vib-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/sphinx/index.html" target="_self">Sphinx style</a></li>
+</ul>
+
+</ul>
+
+<h2>Scientific software engineering with a simple ODE as case  <a name="___sec6"></a></h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/pdf/main_softeng1-4print.pdf" target="_self">standard format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/pdf/main_softeng1-4print-2up.pdf" target="_self">2 pages per sheet</a></li>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/pdf/main_softeng1-4print-A4.pdf" target="_self">A4 format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/pdf/main_softeng1-4print-A4-2up.pdf" target="_self">2 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/pdf/main_softeng1-4screen.pdf" target="_self">standard format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/html/main_softeng1.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/html/main_softeng1-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/sphinx/index.html" target="_self">Sphinx style</a></li>
+</ul>
+
+</ul>
+
+<h2>Truncation error analysis  <a name="___sec7"></a></h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/pdf/main_trunc-4print.pdf" target="_self">standard format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/pdf/main_trunc-4print-2up.pdf" target="_self">2 pages per sheet</a></li>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/pdf/main_trunc-4print-A4.pdf" target="_self">A4 format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/pdf/main_trunc-4print-A4-2up.pdf" target="_self">2 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/pdf/main_trunc-4screen.pdf" target="_self">standard format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/html/main_trunc.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/html/main_trunc-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/sphinx/index.html" target="_self">Sphinx style</a></li>
+</ul>
+
+</ul>
+
+<h2>Solving nonlinear ODE and PDE problems  <a name="___sec8"></a></h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/pdf/main_nonlin-4print.pdf" target="_self">standard format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/pdf/main_nonlin-4print-2up.pdf" target="_self">2 pages per sheet</a></li>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/pdf/main_nonlin-4print-A4.pdf" target="_self">A4 format</a>, compact: <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/pdf/main_nonlin-4print-A4-2up.pdf" target="_self">2 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/pdf/main_nonlin-4screen.pdf" target="_self">standard format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/html/main_nonlin.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/html/main_nonlin-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/sphinx/index.html" target="_self">Sphinx style</a></li>
+</ul>
+
+</ul>
+
+<hr>
+
+<h1>Study guides (slides for lectures)  <a name="___sec9"></a></h1>
+
+The study guides are summaries of the main points in the course
+material. The guides are made such that they can be used as
+slides in lectures.
+
+<h2>Introduction to computing with finite difference methods  <a name="___sec10"></a></h2>
+
+<ul>
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/html/lecture_decay-reveal.html" target="_self">reveal.js darkgray slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/html/lecture_decay-reveal-beige.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/html/lecture_decay-deck.html" target="_self">deck.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/html/lecture_decay.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/html/lecture_decay-1.html" target="_self">plain HTML in one big file</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/html/lecture_decay-solarized.html" target="_self">solarized style in one big file</a></li>
+</ul>
+
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/pdf/lecture_decay-beamer.pdf" target="_self">LaTeX Beamer PDF slides</a></li>
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/decay/pdf/lecture_decay-beamer-handouts2x3.pdf" target="_self">LaTeX Beamer PDF slides for printing (2x3 handouts)</a></li>
+</ul>
+
+<h2>Finite difference methods for diffusion equations  <a name="___sec11"></a></h2>
+
+<ul>
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/html/lecture_diffu-reveal.html" target="_self">reveal.js darkgray slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/html/lecture_diffu-reveal-beige.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/html/lecture_diffu-deck.html" target="_self">deck.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/html/lecture_diffu.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/html/lecture_diffu-1.html" target="_self">plain HTML in one big file</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/html/lecture_diffu-solarized.html" target="_self">solarized style in one big file</a></li>
+</ul>
+
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/pdf/lecture_diffu-beamer.pdf" target="_self">LaTeX Beamer PDF slides</a></li>
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/pdf/lecture_diffu-beamer-handouts2x3.pdf" target="_self">LaTeX Beamer PDF slides for printing (2x3 handouts)</a></li>
+</ul>
+
+<h2>Introduction to finite element methods  <a name="___sec12"></a></h2>
+
+<ul>
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/html/lecture_fem-reveal.html" target="_self">reveal.js darkgray slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/html/lecture_fem-reveal-beige.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/html/lecture_fem-deck.html" target="_self">deck.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/html/lecture_fem.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/html/lecture_fem-1.html" target="_self">plain HTML in one big file</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/html/lecture_fem-solarized.html" target="_self">solarized style in one big file</a></li>
+</ul>
+
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/pdf/lecture_fem-beamer.pdf" target="_self">LaTeX Beamer PDF slides</a></li>
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/fem/pdf/lecture_fem-beamer-handouts2x3.pdf" target="_self">LaTeX Beamer PDF slides for printing (2x3 handouts)</a></li>
+</ul>
+
+<h2>Finite difference methods for wave motion  <a name="___sec13"></a></h2>
+
+<ul>
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/html/lecture_wave-reveal.html" target="_self">reveal.js darkgray slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/html/lecture_wave-reveal-beige.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/html/lecture_wave-deck.html" target="_self">deck.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/html/lecture_wave.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/html/lecture_wave-1.html" target="_self">plain HTML in one big file</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/html/lecture_wave-solarized.html" target="_self">solarized style in one big file</a></li>
+</ul>
+
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/pdf/lecture_wave-beamer.pdf" target="_self">LaTeX Beamer PDF slides</a></li>
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/wave/pdf/lecture_wave-beamer-handouts2x3.pdf" target="_self">LaTeX Beamer PDF slides for printing (2x3 handouts)</a></li>
+</ul>
+
+<h2>Finite difference methods for vibration ODEs  <a name="___sec14"></a></h2>
+
+<ul>
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/html/lecture_vib-reveal.html" target="_self">reveal.js darkgray slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/html/lecture_vib-reveal-beige.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/html/lecture_vib-deck.html" target="_self">deck.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/html/lecture_vib.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/html/lecture_vib-1.html" target="_self">plain HTML in one big file</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/html/lecture_vib-solarized.html" target="_self">solarized style in one big file</a></li>
+</ul>
+
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/pdf/lecture_vib-beamer.pdf" target="_self">LaTeX Beamer PDF slides</a></li>
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/vib/pdf/lecture_vib-beamer-handouts2x3.pdf" target="_self">LaTeX Beamer PDF slides for printing (2x3 handouts)</a></li>
+</ul>
+
+<h2>Scientific software engineering with a simple ODE as case  <a name="___sec15"></a></h2>
+
+<ul>
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/html/lecture_softeng1-reveal.html" target="_self">reveal.js darkgray slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/html/lecture_softeng1-reveal-beige.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/html/lecture_softeng1-deck.html" target="_self">deck.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/html/lecture_softeng1.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/html/lecture_softeng1-1.html" target="_self">plain HTML in one big file</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/html/lecture_softeng1-solarized.html" target="_self">solarized style in one big file</a></li>
+</ul>
+
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/pdf/lecture_softeng1-beamer.pdf" target="_self">LaTeX Beamer PDF slides</a></li>
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/softeng1/pdf/lecture_softeng1-beamer-handouts2x3.pdf" target="_self">LaTeX Beamer PDF slides for printing (2x3 handouts)</a></li>
+</ul>
+
+<h2>Truncation error analysis  <a name="___sec16"></a></h2>
+
+<ul>
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/html/lecture_trunc-reveal.html" target="_self">reveal.js darkgray slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/html/lecture_trunc-reveal-beige.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/html/lecture_trunc-deck.html" target="_self">deck.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/html/lecture_trunc.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/html/lecture_trunc-1.html" target="_self">plain HTML in one big file</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/html/lecture_trunc-solarized.html" target="_self">solarized style in one big file</a></li>
+</ul>
+
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/pdf/lecture_trunc-beamer.pdf" target="_self">LaTeX Beamer PDF slides</a></li>
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/trunc/pdf/lecture_trunc-beamer-handouts2x3.pdf" target="_self">LaTeX Beamer PDF slides for printing (2x3 handouts)</a></li>
+</ul>
+
+<h2>Solving nonlinear ODE and PDE problems  <a name="___sec17"></a></h2>
+
+<ul>
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/html/lecture_nonlin-reveal.html" target="_self">reveal.js darkgray slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/html/lecture_nonlin-reveal-beige.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/html/lecture_nonlin-deck.html" target="_self">deck.js beige slide style</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/html/lecture_nonlin.html" target="_self">plain HTML</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/html/lecture_nonlin-1.html" target="_self">plain HTML in one big file</a></li>
+   <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/html/lecture_nonlin-solarized.html" target="_self">solarized style in one big file</a></li>
+</ul>
+
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/pdf/lecture_nonlin-beamer.pdf" target="_self">LaTeX Beamer PDF slides</a></li>
+ <li> <a href="http://hplgit.github.io/num-methods-for-PDEs/doc/pub/nonlin/pdf/lecture_nonlin-beamer-handouts2x3.pdf" target="_self">LaTeX Beamer PDF slides for printing (2x3 handouts)</a></li>
+</ul>
+
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+
