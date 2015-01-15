@@ -4,7 +4,6 @@ AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and 
 DATE:  Spring 2015 
 
 
-
 !split
 ===== Overview of first week  =====
 !bblock 
@@ -16,13 +15,20 @@ DATE:  Spring 2015
 #* Thursday:
  * Single-particle degrees of freedom, discussion of data
  * Hamiltonians and single-particle fields, see  Suhonen (JS) chapter 3  and AB chapters 9 and 10.
+!eblock
 
+
+!split
+===== Overview of first week  =====
+!bblock 
 As a reading assignment, chapters 1-4 of Alex Brown's text are rather useful.
 You can fetch JS's book from URL: "http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1"
-
+You can find these texts at the webpage of the course as well.
 The webpage of the course is at URL: "http://nuclearstructure.github.io/PHY981/doc/web/course.html".
 All material can be downloaded from URL: "http://nuclearstructure.github.io/PHY981/doc/web/index.html".
 !eblock
+
+
 
 
 !split
@@ -55,7 +61,7 @@ To understand how these topics are linked will provide us with fundamental insig
 !split
 ===== Plan for the semester =====
 !bblock Projects, weekly exercises, deadlines and final oral exam
-* One  project with a possible numerical content that counts 30%, weekly exercises  that count 30% and a final oral exam which counts 40\% of the final grade. 
+* One  project with a possible numerical content that counts 30%, weekly exercises  that count 30% and a final oral exam which counts 40% of the final grade. 
 * Project 1 will be available mid February and to be handed in before spring break (exact dates to be determined)
 * For the final oral exam (after spring break, time to be determined) you have to prepare a 25-30 minutes talk based on either a topic chosen by you or a topic defined towards the end of the semester.
 Duration of the examination is 45 minutes. The remaining 15-20 minutes are for questions from other topics as well. 
@@ -65,14 +71,40 @@ Duration of the examination is 45 minutes. The remaining 15-20 minutes are for q
 !split
 ===== Selected Texts on Nuclear Structure and Many-body theory =====
 !bblock
-* Heyde, *The Nuclear Shell Model*, Springer 1990
-* Lawson, *Theory of the Nuclear Shell Model*, Oxford 1980
-* Ring and Schuck, *Nuclear Many-Body Theory*, Springer 1980
-* Talmi, *Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model*, Harwood Academic Publishers 1993.
-* Blaizot and Ripka, *Quantum Theory of Finite systems*, MIT press 1986
-* Fetter and Walecka, *Quantum Theory of Many-Particle Systems*, McGraw-Hill, 1971.
-* Dickhoff and Van Neck, *Many-Body Theory Exposed*, World Scientific, 2006.
+* Nuclear structure
+ * Heyde, *The Nuclear Shell Model*, Springer 1990
+ * Lawson, *Theory of the Nuclear Shell Model*, Oxford 1980
+ * Ring and Schuck, *Nuclear Many-Body Theory*, Springer 1980
+ * Talmi, *Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model*, Harwood Academic Publishers 1993.
+* Many-body theories
+ * Blaizot and Ripka, *Quantum Theory of Finite systems*, MIT press 1986
+ * Fetter and Walecka, *Quantum Theory of Many-Particle Systems*, McGraw-Hill, 1971.
+ * Dickhoff and Van Neck, *Many-Body Theory Exposed*, World Scientific, 2006.
 !eblock
+
+
+!split
+===== Links and useful software =====
+!bblock
+* PHY981 on github
+ * All material is at  URL: "https://github.com/NuclearStructure/PHY981/"
+ * The following link gives you a quick way to download everything, see URL: "http://nuclearstructure.github.io/PHY981/doc/web/index.html"
+ * And this link URL: "http://nuclearstructure.github.io/PHY981/doc/web/course.html" gives direct access to html, ipython notebooks and pdf files of the lectures.
+!eblock
+
+
+!split
+===== Links and useful software =====
+!bblock
+* Useful links
+ * When I write code in C++ I tend to recommend to use the linear algebra library armadillo, see URL: "http://arma.sourceforge.net/". 
+ * To install armadillo see the guidelines at URL: "http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/". 
+ * For mac users I recommend using *brew*, see URL: "http://brew.sh/".
+ * If you use ipython notebook and want to run a c++ program, follow the instructions at URL: "http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb"
+ * To set up git, look at URL: "http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/setting-up-git/"
+ * An excellent IDE for c++ programmers is Qt Creator, see URL: "http://www.uio.no/studier/emner/matnat/fys/FYS4411/v13/guides/installing-qt-creator/".
+!eblock
+
 
 
 !split
@@ -84,7 +116,37 @@ You can send the answer as an email to hjensen@msu.edu
 * Also, if you have specific wishes with respect to this course, expectations, topics you'd like me to cover or other things, please feel free to write them down, or swing by my office for a chat. 
 
 One of my aims is to be able to tailor this course as close as possible to your specific scientific interests (as far as possible obviously).
+!eblock
 
-* The first exercise is exercise 1, see the slides on single-particle data.  It will also be sent electronically to all of you.
+!split
+=====  First exercise: Exercise 1  =====
+!bblock Masses and binding energies
+The data on binding energies can be found in the file bedata.dat at the github address of the course, see
+URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs"
+
+ *  Write a small program which reads in the proton and neutron numbers and the binding energies 
+and make a plot of all neutron separation energies for the chain of oxygen (O), calcium (Ca), nickel (Ni), tin (Sn) and lead (Pb) isotopes, that is you need to plot
+!bt
+\[
+S_n= BE(N,Z)-BE(N-1,Z).
+\]
+!et
+Comment your results. 
+ * In the same figures, you should also include the liquid drop model results of Eq.~(2.17) of Alex Brown's text, namely
+!bt
+\[
+BE(N,Z)= \alpha_1A-\alpha_2A^{2/3}-\alpha_3\frac{Z^2}{A^{1/3}}-\alpha_4\frac{(N-Z)^2}{A},
+\]
+!et
+with $\alpha_1=15.49$ MeV, $\alpha_2=17.23$ MeV, $\alpha_3=0.697$ MeV and $\alpha_4=22.6$ MeV.
+Again, comment your results. 
+ * Make also a plot of the binding energies as function of $A$ using the data in the file on bindingenergies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters $\alpha_i=0$. Comment your results. 
+ * Use the liquid drop model to find the neutron drip lines   for Z values up to 120.
+Analyze then the fluorine isotopes and find, where available the corresponding experimental data, and compare the liquid drop model predicition with experiment. 
+Comment your results.
+
+A program example in C++ and the input data file *bedata.dat* can be found found at the github repository for the course, see URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs"
+
+Deadline for this exercise is _January 26, at noon_.  You can hand in electronically by just sending me your github link, or just the file. I digest most formats, from scans to ipython notebooks. The choice is yours. 
 !eblock
 
