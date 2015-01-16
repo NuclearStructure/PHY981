@@ -155,13 +155,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/pdf/main_intro-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/pdf/main_intro-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/pdf/intro-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/pdf/intro-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/pdf/main_intro-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/pdf/intro-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -169,14 +169,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/html/main_intro-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/html/main_intro-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/html/intro-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/html/intro-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/ipynb/main_intro.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/intro/ipynb/intro.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -190,13 +190,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/pdf/main_spdata-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/pdf/main_spdata-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/pdf/spdata-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/pdf/spdata-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/pdf/main_spdata-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/pdf/spdata-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -204,14 +204,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/html/main_spdata-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/html/main_spdata-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/html/spdata-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/html/spdata-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/ipynb/main_spdata.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/spdata/ipynb/spdata.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -225,13 +225,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/pdf/main_hfock-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/pdf/main_hfock-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/pdf/hfock-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/pdf/hfock-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/pdf/main_hfock-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/pdf/hfock-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -239,14 +239,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/html/main_hfock-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/html/main_hfock-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/html/hfock-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/html/hfock-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/ipynb/main_hfock.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/hfock/ipynb/hfock.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -260,13 +260,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/pdf/main_secondquant-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/pdf/main_secondquant-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/pdf/secondquant-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/pdf/secondquant-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/pdf/main_secondquant-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/pdf/secondquant-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -274,14 +274,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/html/main_secondquant-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/html/main_secondquant-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/html/secondquant-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/html/secondquant-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/ipynb/main_secondquant.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/ipynb/secondquant.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -295,13 +295,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/pdf/main_forces-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/pdf/main_forces-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/pdf/forces-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/pdf/forces-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/pdf/main_forces-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/pdf/forces-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -309,14 +309,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/html/main_forces-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/html/main_forces-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/html/forces-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/html/forces-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/ipynb/main_forces.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/forces/ipynb/forces.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -330,13 +330,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/pdf/main_fci-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/pdf/main_fci-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/pdf/fci-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/pdf/fci-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/pdf/main_fci-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/pdf/fci-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -344,14 +344,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/html/main_fci-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/html/main_fci-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/html/fci-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/html/fci-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/ipynb/main_fci.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/fci/ipynb/fci.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -365,13 +365,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/pdf/main_decays-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/pdf/main_decays-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/pdf/decays-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/pdf/decays-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/pdf/main_decays-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/pdf/decays-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -379,14 +379,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/html/main_decays-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/html/main_decays-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/html/decays-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/html/decays-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/ipynb/main_decays.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/decays/ipynb/decays.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -400,13 +400,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/pdf/main_simplemodels-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/pdf/main_simplemodels-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/pdf/simplemodels-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/pdf/simplemodels-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/pdf/main_simplemodels-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/pdf/simplemodels-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -414,14 +414,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/html/main_simplemodels-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/html/main_simplemodels-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/html/simplemodels-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/html/simplemodels-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/ipynb/main_simplemodels.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/ipynb/simplemodels.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -435,13 +435,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/pdf/main_mbpt-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/pdf/main_mbpt-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/pdf/mbpt-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/pdf/mbpt-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/pdf/main_mbpt-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/pdf/mbpt-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -449,14 +449,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/html/main_mbpt-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/html/main_mbpt-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/html/mbpt-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/html/mbpt-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/ipynb/main_mbpt.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/ipynb/mbpt.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -470,13 +470,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/pdf/main_cc-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/pdf/main_cc-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/pdf/cc-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/pdf/cc-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/pdf/main_cc-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/pdf/cc-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -484,14 +484,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/html/main_cc-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/html/main_cc-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/html/cc-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/html/cc-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/ipynb/main_cc.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/cc/ipynb/cc.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -505,13 +505,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/pdf/main_srg-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/pdf/main_srg-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/pdf/srg-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/pdf/srg-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/pdf/main_srg-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/pdf/srg-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -519,14 +519,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/html/main_srg-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/html/main_srg-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/html/srg-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/html/srg-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/ipynb/main_srg.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/srg/ipynb/srg.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -540,13 +540,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/pdf/main_gf-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/pdf/main_gf-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/pdf/gf-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/pdf/gf-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/pdf/main_gf-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/pdf/gf-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -554,14 +554,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/html/main_gf-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/html/main_gf-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/html/gf-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/html/gf-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/ipynb/main_gf.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/gf/ipynb/gf.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -575,13 +575,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/pdf/main_mc-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/pdf/main_mc-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/pdf/mc-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/pdf/mc-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/pdf/main_mc-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/pdf/mc-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -589,14 +589,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/html/main_mc-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/html/main_mc-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/html/mc-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/html/mc-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/ipynb/main_mc.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/mc/ipynb/mc.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
@@ -610,13 +610,13 @@ formulas in HTML or ipython notebook files.
    <li> For printing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/pdf/main_inf-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/pdf/main_inf-print6.pdf" target="_self">6 pages per sheet</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/pdf/inf-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/pdf/inf-print6.pdf" target="_self">6 pages per sheet</a></li>
 </ul>
 
    <li> For screen viewing:</li>
 
 <ul>
-     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/pdf/main_inf-beamer.pdf" target="_self">standard Beamer format</a></li>
+     <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/pdf/inf-beamer.pdf" target="_self">standard Beamer format</a></li>
 </ul>
 
 </ul>
@@ -624,14 +624,14 @@ formulas in HTML or ipython notebook files.
  <li> HTML:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/html/main_inf-solarized.html" target="_self">solarized style</a></li>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/html/main_inf-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/html/inf-solarized.html" target="_self">solarized style</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/html/inf-reveal.html" target="_self">reveal.js beige slide style</a></li>
 </ul>
 
  <li> iPython notebook:</li>
 
 <ul>
-   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/ipynb/main_inf.ipynb" target="_self">ipynb file</a></li>
+   <li> <a href="https://github.com/NuclearStructure/PHY981/doc/pub/inf/ipynb/inf.ipynb" target="_self">ipynb file</a></li>
 </ul>
 
 </ul>
