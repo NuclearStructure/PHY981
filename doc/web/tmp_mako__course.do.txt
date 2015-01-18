@@ -1,0 +1,270 @@
+# Strange way of testing for vortex...
+TITLE: Overview of course material: PHY981 Nuclear Structure 
+AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
+
+
+
+
+
+
+
+
+
+
+
+The teaching material is produced in various formats for printing and on-screen reading.
+
+!split
+The PDF files are based on LaTeX and have seldom technical
+failures that cannot be easily corrected.
+The HTML-based files, called ``HTML'' and ``ipynb'' below, apply MathJax
+for rendering LaTeX formulas and sometimes this technology gives rise
+to unexpected failures (e.g.,
+incorrect rendering in a web page despite correct LaTeX syntax in the
+formula). Consult the corresponding PDF
+files if you find missing or incorrectly rendered
+formulas in HTML or ipython notebook files.
+
+
+======= PHY981: Nuclear Structure notes =======
+
+===== Introduction to nuclear structure =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/pdf/intro-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/pdf/intro-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/pdf/intro-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/html/intro-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/html/intro-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/ipynb/intro.ipynb"
+
+
+
+===== Single-particle data, experimental information and simple models =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/pdf/spdata-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/pdf/spdata-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/pdf/spdata-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/html/spdata-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/html/spdata-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/ipynb/spdata.ipynb"
+
+
+
+===== Mean-field theories =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/pdf/hfock-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/pdf/hfock-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/pdf/hfock-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/html/hfock-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/html/hfock-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/ipynb/hfock.ipynb"
+
+
+
+===== Second quantization =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/pdf/secondquant-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/pdf/secondquant-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/pdf/secondquant-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/html/secondquant-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/html/secondquant-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/ipynb/secondquant.ipynb"
+
+
+
+===== Models for nuclear forces =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/pdf/forces-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/pdf/forces-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/pdf/forces-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/html/forces-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/html/forces-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/ipynb/forces.ipynb"
+
+
+
+===== The nuclear shell model and full configuration interaction theory =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/pdf/fci-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/pdf/fci-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/pdf/fci-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/html/fci-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/html/fci-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/ipynb/fci.ipynb"
+
+
+
+===== Nuclear decays =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/pdf/decays-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/pdf/decays-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/pdf/decays-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/html/decays-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/html/decays-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/ipynb/decays.ipynb"
+
+
+
+===== Pairing, random-phase approximation and simple models =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/pdf/simplemodels-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/pdf/simplemodels-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/pdf/simplemodels-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/html/simplemodels-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/html/simplemodels-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/ipynb/simplemodels.ipynb"
+
+
+
+===== Effective interactions for the nuclear shell-model =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/pdf/mbpt-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/pdf/mbpt-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/pdf/mbpt-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/html/mbpt-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/html/mbpt-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/ipynb/mbpt.ipynb"
+
+
+
+===== Coupled cluster theory and nuclear structure =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/pdf/cc-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/pdf/cc-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/pdf/cc-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/html/cc-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/html/cc-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/ipynb/cc.ipynb"
+
+
+
+===== Similarity transformation methods =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/pdf/srg-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/pdf/srg-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/pdf/srg-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/html/srg-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/html/srg-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/ipynb/srg.ipynb"
+
+
+
+===== Green function theory based methods =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/pdf/gf-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/pdf/gf-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/pdf/gf-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/html/gf-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/html/gf-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/ipynb/gf.ipynb"
+
+
+
+===== Monte Carlo  methods =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/pdf/mc-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/pdf/mc-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/pdf/mc-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/html/mc-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/html/mc-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/ipynb/mc.ipynb"
+
+
+
+===== From nuclei to stars, properties of infinite nuclear matter, symmetric and neutron rich =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/pdf/inf-print.pdf", compact: "6 pages per sheet": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/pdf/inf-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/pdf/inf-beamer.pdf"
+ * HTML:
+   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/html/inf-solarized.html"
+   * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/html/inf-reveal.html"
+ * iPython notebook:
+   * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/ipynb/inf.ipynb"
+
+
+
+
+
