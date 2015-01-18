@@ -160,9 +160,16 @@
 \end{itemize}
 
 \noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Overview of first week}
+
+\begin{block}{}
 As a reading assignment, chapters 1-4 of Alex Brown's text are rather useful.
 You can fetch JS's book from \href{{http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1}}{\nolinkurl{http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1}}
-
+You can find these texts at the webpage of the course as well.
 The webpage of the course is at \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{\nolinkurl{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}.
 All material can be downloaded from \href{{http://nuclearstructure.github.io/PHY981/doc/web/index.html}}{\nolinkurl{http://nuclearstructure.github.io/PHY981/doc/web/index.html}}.
 \end{block}
@@ -235,19 +242,81 @@ Duration of the examination is 45 minutes. The remaining 15-20 minutes are for q
 
 \begin{block}{}
 \begin{itemize}
-\item Heyde, \emph{The Nuclear Shell Model}, Springer 1990
+\item Nuclear structure
+\begin{itemize}
 
-\item Lawson, \emph{Theory of the Nuclear Shell Model}, Oxford 1980
+ \item Heyde, \emph{The Nuclear Shell Model}, Springer 1990
 
-\item Ring and Schuck, \emph{Nuclear Many-Body Theory}, Springer 1980
+ \item Lawson, \emph{Theory of the Nuclear Shell Model}, Oxford 1980
 
-\item Talmi, \emph{Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model}, Harwood Academic Publishers 1993.
+ \item Ring and Schuck, \emph{Nuclear Many-Body Theory}, Springer 1980
 
-\item Blaizot and Ripka, \emph{Quantum Theory of Finite systems}, MIT press 1986
+ \item Talmi, \emph{Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model}, Harwood Academic Publishers 1993.
 
-\item Fetter and Walecka, \emph{Quantum Theory of Many-Particle Systems}, McGraw-Hill, 1971.
+\end{itemize}
 
-\item Dickhoff and Van Neck, \emph{Many-Body Theory Exposed}, World Scientific, 2006.
+\noindent
+\item Many-body theories
+\begin{itemize}
+
+ \item Blaizot and Ripka, \emph{Quantum Theory of Finite systems}, MIT press 1986
+
+ \item Fetter and Walecka, \emph{Quantum Theory of Many-Particle Systems}, McGraw-Hill, 1971.
+
+ \item Dickhoff and Van Neck, \emph{Many-Body Theory Exposed}, World Scientific, 2006.
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Links and useful software}
+
+\begin{block}{}
+\begin{itemize}
+\item PHY981 on github
+\begin{itemize}
+
+ \item All material is at  \href{{https://github.com/NuclearStructure/PHY981/}}{\nolinkurl{https://github.com/NuclearStructure/PHY981/}}
+
+ \item The following link gives you a quick way to download everything, see \href{{http://nuclearstructure.github.io/PHY981/doc/web/index.html}}{\nolinkurl{http://nuclearstructure.github.io/PHY981/doc/web/index.html}}
+
+ \item And this link \href{{http://nuclearstructure.github.io/PHY981/doc/web/course.html}}{\nolinkurl{http://nuclearstructure.github.io/PHY981/doc/web/course.html}} gives direct access to html, ipython notebooks and pdf files of the lectures.
+\end{itemize}
+
+\noindent
+\end{itemize}
+
+\noindent
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Links and useful software}
+
+\begin{block}{}
+\begin{itemize}
+\item Useful links
+\begin{itemize}
+
+ \item When I write code in C++ I tend to recommend to use the linear algebra library armadillo, see \href{{http://arma.sourceforge.net/}}{\nolinkurl{http://arma.sourceforge.net/}}. 
+
+ \item To install armadillo see the guidelines at \href{{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/}}{\nolinkurl{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/}}. 
+
+ \item For mac users I recommend using \emph{brew}, see \href{{http://brew.sh/}}{\nolinkurl{http://brew.sh/}}.
+
+ \item If you use ipython notebook and want to run a c++ program, follow the instructions at \href{{http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb}}{\nolinkurl{http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb}}
+
+ \item To set up git, look at \href{{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/setting-up-git/}}{\nolinkurl{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/setting-up-git/}}
+
+ \item An excellent IDE for c++ programmers is Qt Creator, see \href{{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v13/guides/installing-qt-creator/}}{\nolinkurl{http://www.uio.no/studier/emner/matnat/fys/FYS4411/v13/guides/installing-qt-creator/}}.
+\end{itemize}
+
+\noindent
 \end{itemize}
 
 \noindent
@@ -269,12 +338,49 @@ You can send the answer as an email to hjensen@msu.edu
 
 \noindent
 One of my aims is to be able to tailor this course as close as possible to your specific scientific interests (as far as possible obviously).
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{First exercise: Exercise 1}
+
+\begin{block}{Masses and binding energies }
+The data on binding energies can be found in the file bedata.dat at the github address of the course, see
+\href{{https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs}}{\nolinkurl{https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs}}
 
 \begin{itemize}
-\item The first exercise is exercise 1, see the slides on single-particle data.  It will also be sent electronically to all of you.
+  \item Write a small program which reads in the proton and neutron numbers and the binding energies 
 \end{itemize}
 
 \noindent
+and make a plot of all neutron separation energies for the chain of oxygen (O), calcium (Ca), nickel (Ni), tin (Sn) and lead (Pb) isotopes, that is you need to plot
+\[
+S_n= BE(N,Z)-BE(N-1,Z).
+\]
+Comment your results. 
+\begin{itemize}
+ \item In the same figures, you should also include the liquid drop model results of Eq.~(2.17) of Alex Brown's text, namely
+\end{itemize}
+
+\noindent
+\[
+BE(N,Z)= \alpha_1A-\alpha_2A^{2/3}-\alpha_3\frac{Z^2}{A^{1/3}}-\alpha_4\frac{(N-Z)^2}{A},
+\]
+with $\alpha_1=15.49$ MeV, $\alpha_2=17.23$ MeV, $\alpha_3=0.697$ MeV and $\alpha_4=22.6$ MeV.
+Again, comment your results. 
+\begin{itemize}
+ \item Make also a plot of the binding energies as function of $A$ using the data in the file on bindingenergies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters $\alpha_i=0$. Comment your results. 
+
+ \item Use the liquid drop model to find the neutron drip lines   for Z values up to 120.
+\end{itemize}
+
+\noindent
+Analyze then the fluorine isotopes and find, where available the corresponding experimental data, and compare the liquid drop model predicition with experiment. 
+Comment your results.
+
+A program example in C++ and the input data file \emph{bedata.dat} can be found found at the github repository for the course, see \href{{https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs}}{\nolinkurl{https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs}}
+
+Deadline for this exercise is \textbf{January 26, at noon}.  You can hand in electronically by just sending me your github link, or just the file. I digest most formats, from scans to ipython notebooks. The choice is yours. 
 \end{block}
 \end{frame}
 
