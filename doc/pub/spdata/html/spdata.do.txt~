@@ -251,7 +251,7 @@ data = np.loadtxt("datafiles/bindingenergies.dat")
 # Make arrays containing x-axis and binding energies as function of A
 x = data[:,2]
 bexpt = data[:,3]
-plt.plot(x, bexpt ,'b-+')
+plt.plot(x, bexpt ,'ro')
 plt.axis([0,270,-1, 10.0])
 plt.xlabel(r'$A$')
 plt.ylabel(r'Binding energies in [MeV]')
@@ -304,7 +304,7 @@ Performing a least-square fit to data, we obtain the following numerical values 
 * $a_3=0.697$ MeV
 * $a_4=22.6$ MeV
 
-We leave it as an exercise to the reader to use the file with the experimental binding energies and perform such a fit. 
+The python below here allows you to perform a fit of teh above parameters using nonlinear least squares curvefitting.
 !eblock
 
 !split 
@@ -320,7 +320,43 @@ data = np.loadtxt("datafiles/bindingenergies.dat")
 x = data[:,2]
 bexpt = data[:,3]
 liquiddrop = data[:,4]
-plt.plot(x, bexpt ,'b-+', x, liquiddrop, 'r-o')
+plt.plot(x, bexpt ,'b-o', x, liquiddrop, 'r-o')
+plt.axis([0,270,-1, 10.0])
+plt.xlabel(r'$A$')
+plt.ylabel(r'Binding energies in [MeV]')
+plt.legend(('Experiment','Liquid Drop'), loc='upper right')
+plt.title(r'Binding energies from experiment and liquid drop')
+plt.savefig('bindingenergies.pdf')
+plt.savefig('bindingenergies.png')
+plt.show()
+!ec
+!eblock
+
+
+
+!split 
+===== Masses and Binding energies ===== 
+!bblock
+This  python program reads now in the experimental data on binding energies and performs a nonlinear least square fitting of the data. In the example here we use only the parameters $a_1$ and $a_2$, leaving it as an exercise to the reader to perform the fit for all four paramters. The results are plotted and compared with the experimental values.  To read more about non-linear least square methods, see for example the text of M.J. Box, D. Davies and W.H. Swann, Non-Linear optimisation Techniques, Oliver & Boyd, 1969.
+!bc pycod
+import numpy as np
+from scipy.optimize import curve_fit
+from  matplotlib import pyplot as plt
+# Load in data file
+data = np.loadtxt("datafiles/bindingenergies.dat")
+# Make arrays containing A on x-axis and binding energies
+A = data[:,2]
+bexpt = data[:,3]
+# The function we want to fit to, only two terms here
+def func(A,a1, a2)
+    return a1*A-a2*(A**(2.0/3.0))
+# function to perform nonlinear least square with guess for a1 and a2
+popt, pcov = curve_fit(func, A, bexpt, p0 = (16.0, 18.0))
+a1  = popt[0]
+a2 = popt[1]
+liquiddrop = a1*A-a2*(A**(2.0/3.0))
+
+plt.plot(A, bexpt ,'bo', A, liquiddrop, 'ro')
 plt.axis([0,270,-1, 10.0])
 plt.xlabel(r'$A$')
 plt.ylabel(r'Binding energies in [MeV]')
@@ -377,7 +413,7 @@ nucleus $c$ into two other nuclei $a$ and $b$
 ^{N_c+Z_c}c \rightarrow  ^{N_a+Z_a}a+ ^{N_b+Z_b}b .
 \]
 !et
-FIGURE: [figslides/oxygens.jpg, width=600 frac=0.6]
+FIGURE: [figslides/oxygens.jpg, width=600 frac=0.6] Artist's rendition of the emission of one proton from various oxygen isotopes.
 !eblock
 
 
@@ -915,7 +951,7 @@ where $C_{\tau\alpha}$ represents the overlap between the two basis sets.
 !bblock
 The harmonic oscillator (a shifted one by a negative constant) provides also a very good approximation to most bound single-particle states. Furthermore, it serves as a starting point in building up our picture of nuclei, in particular how we define magic numbers and systems with one nucleon added to (or removed from) a closed-shell core nucleus. The figure here shows 
 the various harmonic oscillator states, with those obtained with a Woods-Saxon potential as well, including a spin-orbit splitting (to be discussed below).
-FIGURE: [figslides/singleparticle.png, width=500 frac=0.6]
+FIGURE: [figslides/singleparticle.png, width=500 frac=0.6] Single-particle spectrum and quantum numbers for a harmonic oscillator potential and a Woods-Saxon potential with and without a spin-orbit force.
 !eblock
 
 
@@ -1487,13 +1523,102 @@ The solution is zero in both cases.
 !eblock
 
 
+!split
+=====  Program to solve Schroedinger's equation  =====
+!bblock 
+The following python program is an example of how one can obtain the eigenvalues for a single-nucleon moving in a harmonic oscillator potential. It is rather easy to change the onebody-potential with ones like a Woods-Saxon potential. 
+
+
+* The c++ and Fortran versions of this program can be found at URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs". 
+
+* The c++  program uses the c++ library armadillo, see URL: "http://arma.sourceforge.net/". 
+* To install armadillo see the guidelines at URL: "http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/". 
+* For mac users I recommend using *brew*, see URL: "http://brew.sh/".
+* If you use ipython notebook, you can run c++ programs following the instructions at URL: "http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb"
+!eblock
+
+
+!split
+=====  Program to solve Schroedinger's equation  =====
+!bblock 
+The code sets up the Hamiltonian matrix by defining the the minimun and maximum values of $r$ with a
+maximum value of integration points.  These are set in the initialization function. It plots the 
+eigenfunctions of the three lowest eigenstates.
+!bc pycod
+#Program which solves the one-particle Schrodinger equation 
+#for a potential specified in function
+#potential(). This example is for the harmonic oscillator in 3d
+
+from  matplotlib import pyplot as plt
+import numpy as np
+#Function for initialization of parameters
+def initialize():
+    RMin = 0.0
+    RMax = 10.0
+    lOrbital = 0
+    Dim = 400
+    return RMin, RMax, lOrbital, Dim
+# Here we set up the harmonic oscillator potential
+def potential(r):
+    return r*r
+
+#Get the boundary, orbital momentum and number of integration points
+RMin, RMax, lOrbital, Dim = initialize()
+
+#Initialize constants
+Step    = RMax/(Dim+1)
+DiagConst = 2.0 / (Step*Step)
+NondiagConst =  -1.0 / (Step*Step)
+OrbitalFactor = lOrbital * (lOrbital + 1.0)
+
+#Calculate array of potential values
+v = np.zeros(Dim)
+r = np.linspace(RMin,RMax,Dim)
+for i in xrange(Dim):
+    r[i] = RMin + (i+1) * Step;
+    v[i] = potential(r[i]) + OrbitalFactor/(r[i]*r[i]);
+
+#Setting up tridiagonal matrix and find eigenvectors and eigenvalues
+Hamiltonian = np.zeros((Dim,Dim))
+Hamiltonian[0,0] = DiagConst + v[0];
+Hamiltonian[0,1] = NondiagConst;
+for i in xrange(1,Dim-1):
+    Hamiltonian[i,i-1]  = NondiagConst;
+    Hamiltonian[i,i]    = DiagConst + v[i];
+    Hamiltonian[i,i+1]  = NondiagConst;
+Hamiltonian[Dim-1,Dim-2] = NondiagConst;
+Hamiltonian[Dim-1,Dim-1] = DiagConst + v[Dim-1];
+# diagonalize and obtain eigenvalues, not necessarily sorted
+EigValues, EigVectors = np.linalg.eig(Hamiltonian)
+# sort eigenvectors and eigenvalues
+permute = EigValues.argsort()
+EigValues = EigValues[permute]
+EigVectors = EigVectors[:,permute]
+# now plot the results for the three lowest lying eigenstates
+for i in xrange(3):
+    print EigValues[i]
+FirstEigvector = EigVectors[:,0]
+SecondEigvector = EigVectors[:,1]
+ThirdEigvector = EigVectors[:,2]
+plt.plot(r, FirstEigvector**2 ,'b-',r, SecondEigvector**2 ,'g-',r, ThirdEigvector**2 ,'r-')
+plt.axis([0,4.6,0.0, 0.025])
+plt.xlabel(r'$r$')
+plt.ylabel(r'Radial probability $r^2|R(r)|^2$')
+plt.title(r'Radial probability distributions for three lowest-lying states')
+plt.savefig('eigenvector.pdf')
+plt.savefig('eigenvector.png')
+plt.show()
+
+!ec
+!eblock
 
 
 
 !split
 =====  Exercise 1  =====
 !bblock Masses and binding energies
-The data on binding energies can be found in the file bindingenergies.dat at the github address of the course, see
+The data on binding energies can be found in the file bedata.dat at the github address of the course, see
+URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs"
 
  *  Write a small program which reads in the proton and neutron numbers and the binding energies 
 and make a plot of all neutron separation energies for the chain of oxygen (O), calcium (Ca), nickel (Ni), tin (Sn) and lead (Pb) isotopes, that is you need to plot
@@ -1511,8 +1636,115 @@ BE(N,Z)= \alpha_1A-\alpha_2A^{2/3}-\alpha_3\frac{Z^2}{A^{1/3}}-\alpha_4\frac{(N-
 !et
 with $\alpha_1=15.49$ MeV, $\alpha_2=17.23$ MeV, $\alpha_3=0.697$ MeV and $\alpha_4=22.6$ MeV.
 Again, comment your results. 
- * Make also a plot of the binding energies as function of $A$ using the data in the file on bindingenergies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters $\alpha_i=0$. Comment your results. 
+ * Make also a plot of the binding energies as function of $A$ using the data in the file on binding energies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters $\alpha_i=0$. Comment your results. 
  * Use the liquid drop model to find the neutron drip lines   for Z values up to 120.
 Analyze then the fluorine isotopes and find, where available the corresponding experimental data, and compare the liquid drop model predicition with experiment. 
 Comment your results.
+
+A program example in C++ and the input data file *bedata.dat* can be found found at the github repository for the course, see URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs"
+!eblock
+
+!split
+=====  Exercise 2  =====
+!bblock Masses and binding energies
+The program for finding the eigenvalues of the harmonic oscillator are in the github folder
+URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs".
+
+You can use this program to solve the exercises below, or write your own using your preferred programming language, be it python, fortran or c++ or other languages. Here I will mainly provide fortran, python and c++. 
+
+* Compute the eigenvalues of the five lowest states with a given orbital momentum and oscillator frequency $\omega$. Study these results as functions of the the maximum value of $r$ and the number of integration points $n$, starting with  $r_{\mathrm{max}}=10$. Compare the computed ones with the exact values and comment your results.
+
+* Plot thereafter the eigenfunctions as functions of $r$ for the lowest-lying state with a given orbital momentum $l$.
+
+* Replace thereafter the harmonic oscillator potential with a Woods-Saxon potential using the parameters discussed above. Compute the lowest five eigenvalues and plot the eigenfunction of the lowest-lying state. How does this compare with the harmonic oscillator? Comment your results and possible implications for nuclear physics studies.
+!eblock
+
+!split
+=====  Exercise 3  =====
+!bblock Operators and Slater determinants
+Consider the Slater determinant
+!bt
+\[
+\Phi_{\lambda}^{AS}(x_{1}x_{2}\dots x_{N};\alpha_{1}\alpha_{2}\dots\alpha_{N})
+=\frac{1}{\sqrt{N!}}\sum_{p}(-)^{p}P\prod_{i=1}^{N}\psi_{\alpha_{i}}(x_{i}).
+\]
+!et
+where $P$ is an operator which permutes the coordinates of two particles. We have assumed here that the 
+number of particles is the same as the number of available single-particle states, represented by the
+greek letters $\alpha_{1}\alpha_{2}\dots\alpha_{N}$.
+ * Write  out $\Phi^{AS}$ for $N=3$.  
+ * Show that
+!bt
+\[
+\int dx_{1}dx_{2}\dots dx_{N}\left\vert
+\Phi_{\lambda}^{AS}(x_{1}x_{2}\dots x_{N};\alpha_{1}\alpha_{2}\dots\alpha_{N})
+\right\vert^{2} = 1.
+\]
+!et
+ * Define a general onebody operator $\hat{F} = \sum_{i}^N\hat{f}(x_{i})$ and a general  twobody operator $\hat{G}=\sum_{i>j}^N\hat{g}(x_{i},x_{j})$ with $g$ being invariant under the interchange of the coordinates of particles $i$ and $j$. Calculate the matrix elements for a two-particle Slater determinant
+!bt
+\[
+\langle\Phi_{\alpha_{1}\alpha_{2}}^{AS}|\hat{F}|\Phi_{\alpha_{1}\alpha_{2}}^{AS}\rangle,
+\]
+!et
+and
+!bt
+\[
+\langle\Phi_{\alpha_{1}\alpha_{2}}^{AS}|\hat{G}|\Phi_{\alpha_{1}\alpha_{2}}^{AS}\rangle.
+\]
+!et
+Explain the short-hand notation for the Slater determinant.
+Which properties do you expect these operators to have in addition to an eventual permutation
+symmetry?
+!eblock
+
+!split
+=====  Exercise 4  =====
+!bblock First simple shell-model calculation
+We will now consider a simple three-level problem, depicted in the figure below. This is our first and very simple model of a possible many-nucleon (or just fermion) problem and the shell-model.
+The single-particle states are labelled by the quantum number $p$ and can accomodate up to two single particles,  viz., every single-particle state  is doubly degenerate (you could think of this as one state having spin up and the other spin down). 
+We let the spacing between the doubly degenerate single-particle states be constant, with value $d$.  The first state
+has energy $d$. There are only three available single-particle states, $p=1$, $p=2$ and $p=3$, as illustrated
+in the figure. 
+* How many two-particle Slater determinants can we construct in this space? 
+
+We limit ourselves to a system with only the two lowest single-particle orbits and two particles, $p=1$ and $p=2$. We assume that we can write the Hamiltonian as
+!bt
+\[
+       \hat{H}=\hat{H}_0+\hat{H}_I,
+\]
+!et
+and that the onebody part of the Hamiltonian with single-particle operator $\hat{h}_0$ has the property
+!bt
+\[
+\hat{h}_0\psi_{p\sigma} = p\times d \psi_{p\sigma},
+\]
+!et
+where we have added a spin quantum number $\sigma$. 
+We assume also that the only two-particle states that can exist are those where two particles are in the 
+same state $p$, as shown by the two possibilities to the left in the figure.
+The two-particle matrix elements of $\hat{H}_I$ have all a constant value, $-g$.
+
+
+         
+* Show then that the Hamiltonian matrix can be written as 
+!bt
+\[
+\left(\begin{array}{cc}2d-g &-g \\
+-g &4d-g \end{array}\right),
+\]
+!et
+* Find the eigenvalues and eigenvectors.  What is mixing of the state with two particles in $p=2$  to the wave function with two-particles in $p=1$? Discuss your results in terms of a linear combination of Slater determinants. 
+* Add the possibility that the two particles can be in the state with $p=3$ as well and find the Hamiltonian matrix, the eigenvalues and the eigenvectors. We still insist that we only have two-particle states composed of two particles being in the same level $p$. You can diagonalize numerically your $3\times 3$ matrix.
+
+This simple model catches several birds with a stone. It demonstrates how we can build linear combinations
+of Slater determinants and interpret these as different admixtures to a given state. It represents also the way we are going to interpret these contributions.  The two-particle states above $p=1$ will be interpreted as 
+excitations from the ground state configuration, $p=1$ here.  The reliability of this ansatz for the ground state, 
+with two particles in $p=1$,
+depends on the strength of the interaction $g$ and the single-particle spacing $d$.
+Finally, this model is a simple schematic ansatz for studies of pairing correlations and thereby superfluidity/superconductivity  
+in fermionic systems. 
+
+FIGURE: [figslides/simplemodel.png, width=500 frac=0.6] Schematic plot of the possible single-particle levels with double degeneracy. The filled circles indicate occupied particle states. The spacing between each level $p$ is constant in this picture. We show some possible two-particle states.
+
 !eblock

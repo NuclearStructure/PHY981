@@ -551,7 +551,7 @@ data = np.loadtxt(<span style="color: #CD5555">&quot;datafiles/bindingenergies.d
 <span style="color: #228B22"># Make arrays containing x-axis and binding energies as function of A</span>
 x = data[:,<span style="color: #B452CD">2</span>]
 bexpt = data[:,<span style="color: #B452CD">3</span>]
-plt.plot(x, bexpt ,<span style="color: #CD5555">&#39;b-+&#39;</span>)
+plt.plot(x, bexpt ,<span style="color: #CD5555">&#39;ro&#39;</span>)
 plt.axis([<span style="color: #B452CD">0</span>,<span style="color: #B452CD">270</span>,-<span style="color: #B452CD">1</span>, <span style="color: #B452CD">10.0</span>])
 plt.xlabel(<span style="color: #CD5555">r&#39;$A$&#39;</span>)
 plt.ylabel(<span style="color: #CD5555">r&#39;Binding energies in [MeV]&#39;</span>)
@@ -626,7 +626,7 @@ Performing a least-square fit to data, we obtain the following numerical values 
 </ul>
 <p>
 
-We leave it as an exercise to the reader to use the file with the experimental binding energies and perform such a fit.
+The python below here allows you to perform a fit of teh above parameters using nonlinear least squares curvefitting.
 </div>
 
 
@@ -653,7 +653,7 @@ data = np.loadtxt(<span style="color: #CD5555">&quot;datafiles/bindingenergies.d
 x = data[:,<span style="color: #B452CD">2</span>]
 bexpt = data[:,<span style="color: #B452CD">3</span>]
 liquiddrop = data[:,<span style="color: #B452CD">4</span>]
-plt.plot(x, bexpt ,<span style="color: #CD5555">&#39;b-+&#39;</span>, x, liquiddrop, <span style="color: #CD5555">&#39;r-o&#39;</span>)
+plt.plot(x, bexpt ,<span style="color: #CD5555">&#39;b-o&#39;</span>, x, liquiddrop, <span style="color: #CD5555">&#39;r-o&#39;</span>)
 plt.axis([<span style="color: #B452CD">0</span>,<span style="color: #B452CD">270</span>,-<span style="color: #B452CD">1</span>, <span style="color: #B452CD">10.0</span>])
 plt.xlabel(<span style="color: #CD5555">r&#39;$A$&#39;</span>)
 plt.ylabel(<span style="color: #CD5555">r&#39;Binding energies in [MeV]&#39;</span>)
@@ -674,7 +674,53 @@ plt.show()
 
 <section>
 
-<h2 id="___sec18">\( Q \)-values and separation energies </h2>
+<h2 id="___sec18">Masses and Binding energies </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+This  python program reads now in the experimental data on binding energies and performs a nonlinear least square fitting of the data. In the example here we use only the parameters \( a_1 \) and \( a_2 \), leaving it as an exercise to the reader to perform the fit for all four paramters. The results are plotted and compared with the experimental values.  To read more about non-linear least square methods, see for example the text of M.J. Box, D. Davies and W.H. Swann, Non-Linear optimisation Techniques, Oliver &amp; Boyd, 1969.
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">scipy.optimize</span> <span style="color: #8B008B; font-weight: bold">import</span> curve_fit
+<span style="color: #8B008B; font-weight: bold">from</span>  <span style="color: #008b45; text-decoration: underline">matplotlib</span> <span style="color: #8B008B; font-weight: bold">import</span> pyplot <span style="color: #8B008B; font-weight: bold">as</span> plt
+<span style="color: #228B22"># Load in data file</span>
+data = np.loadtxt(<span style="color: #CD5555">&quot;datafiles/bindingenergies.dat&quot;</span>)
+<span style="color: #228B22"># Make arrays containing A on x-axis and binding energies</span>
+A = data[:,<span style="color: #B452CD">2</span>]
+bexpt = data[:,<span style="color: #B452CD">3</span>]
+<span style="color: #228B22"># The function we want to fit to, only two terms here</span>
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">func</span>(A,a1, a2):
+    <span style="color: #8B008B; font-weight: bold">return</span> a1*A-a2*(A**(<span style="color: #B452CD">2.0</span>/<span style="color: #B452CD">3.0</span>))
+<span style="color: #228B22"># function to perform nonlinear least square with guess for a1 and a2</span>
+popt, pcov = curve_fit(func, A, bexpt, p0 = (<span style="color: #B452CD">16.0</span>, <span style="color: #B452CD">18.0</span>))
+a1  = popt[<span style="color: #B452CD">0</span>]
+a2 = popt[<span style="color: #B452CD">1</span>]
+liquiddrop = a1*A-a2*(A**(<span style="color: #B452CD">2.0</span>/<span style="color: #B452CD">3.0</span>))
+
+plt.plot(A, bexpt ,<span style="color: #CD5555">&#39;bo&#39;</span>, A, liquiddrop, <span style="color: #CD5555">&#39;ro&#39;</span>)
+plt.axis([<span style="color: #B452CD">0</span>,<span style="color: #B452CD">270</span>,-<span style="color: #B452CD">1</span>, <span style="color: #B452CD">10.0</span>])
+plt.xlabel(<span style="color: #CD5555">r&#39;$A$&#39;</span>)
+plt.ylabel(<span style="color: #CD5555">r&#39;Binding energies in [MeV]&#39;</span>)
+plt.legend((<span style="color: #CD5555">&#39;Experiment&#39;</span>,<span style="color: #CD5555">&#39;Liquid Drop&#39;</span>), loc=<span style="color: #CD5555">&#39;upper right&#39;</span>)
+plt.title(<span style="color: #CD5555">r&#39;Binding energies from experiment and liquid drop&#39;</span>)
+plt.savefig(<span style="color: #CD5555">&#39;bindingenergies.pdf&#39;</span>)
+plt.savefig(<span style="color: #CD5555">&#39;bindingenergies.png&#39;</span>)
+plt.show()
+</pre></div>
+
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec19">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -720,7 +766,7 @@ $$
 
 <section>
 
-<h2 id="___sec19">Motivation </h2>
+<h2 id="___sec20">Motivation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Do we understand the physics of dripline systems?</b>
 <p>
@@ -732,7 +778,15 @@ $$
 $$
 <p>&nbsp;<br>
 
-<center><p><img src="figslides/oxygens.jpg" align="bottom" width=600></p></center>
+
+<p>
+<center> <!-- figure -->
+<hr class="figure">
+<center><p class="caption">Figure 2:  Artist's rendition of the emission of one proton from various oxygen isotopes. </p></center>
+<p><img src="figslides/oxygens.jpg" align="bottom" width=600></p>
+</center>
+
+
 </div>
 
 
@@ -743,7 +797,7 @@ $$
 
 <section>
 
-<h2 id="___sec20">\( Q \)-values and separation energies </h2>
+<h2 id="___sec21">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -765,7 +819,7 @@ Spontaneous decay involves a single initial nuclear state and is allowed if \( Q
 
 <section>
 
-<h2 id="___sec21">\( Q \)-values and separation energies </h2>
+<h2 id="___sec22">\( Q \)-values and separation energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -808,7 +862,7 @@ $$
 
 <section>
 
-<h2 id="___sec22">Separation energies and energy gaps </h2>
+<h2 id="___sec23">Separation energies and energy gaps </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -852,7 +906,7 @@ We leave it as an exercise to the reader to define and interpret the two-neutron
 
 <section>
 
-<h2 id="___sec23">Separation energies for oxygen isotopes </h2>
+<h2 id="___sec24">Separation energies for oxygen isotopes </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -889,7 +943,7 @@ plt.show()
 
 <section>
 
-<h2 id="___sec24">Energy gaps for oxygen isotopes </h2>
+<h2 id="___sec25">Energy gaps for oxygen isotopes </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -926,7 +980,7 @@ plt.show()
 
 <section>
 
-<h2 id="___sec25">Features to be noted  </h2>
+<h2 id="___sec26">Features to be noted  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -958,7 +1012,7 @@ In the exercises below you will be asked to perform a similar analysis for other
 
 <section>
 
-<h2 id="___sec26">Radii  </h2>
+<h2 id="___sec27">Radii  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -986,7 +1040,7 @@ $$
 
 <section>
 
-<h2 id="___sec27">Radii  </h2>
+<h2 id="___sec28">Radii  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1029,7 +1083,7 @@ mesonic-exchange corrections that should be included.
 
 <section>
 
-<h2 id="___sec28">Definitions </h2>
+<h2 id="___sec29">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1053,7 +1107,7 @@ definitions.  When we refer to a single neutron we will use the label \( n \) an
 
 <section>
 
-<h2 id="___sec29">Definitions </h2>
+<h2 id="___sec30">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1104,7 +1158,7 @@ Since we are dealing with protons and neutrons we need to add isospin as a new d
 
 <section>
 
-<h2 id="___sec30">Definitions </h2>
+<h2 id="___sec31">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1156,7 +1210,7 @@ We will use the standard nuclear physics definition of isospin, resulting in \( 
 
 <section>
 
-<h2 id="___sec31">Definitions </h2>
+<h2 id="___sec32">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1185,7 +1239,7 @@ $$
 
 <section>
 
-<h2 id="___sec32">Definitions </h2>
+<h2 id="___sec33">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1215,7 +1269,7 @@ being the ansatz for the ground state.
 
 <section>
 
-<h2 id="___sec33">Definitions </h2>
+<h2 id="___sec34">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1242,7 +1296,7 @@ $$
 
 <section>
 
-<h2 id="___sec34">Definitions </h2>
+<h2 id="___sec35">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1278,7 +1332,7 @@ has to be antisymmetric, resulting in the eigenvalue \( \beta = -1 \).
 
 <section>
 
-<h2 id="___sec35">Definitions and notations </h2>
+<h2 id="___sec36">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1305,7 +1359,7 @@ numbers needed to classify a given \( A \)-particle state and \( \Psi_{\lambda} 
 
 <section>
 
-<h2 id="___sec36">Definitions and notations </h2>
+<h2 id="___sec37">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1346,7 +1400,7 @@ have dimension energy.
 
 <section>
 
-<h2 id="___sec37">Definitions and notations </h2>
+<h2 id="___sec38">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1382,7 +1436,7 @@ $$
 
 <section>
 
-<h2 id="___sec38">A modified Hamiltonian  </h2>
+<h2 id="___sec39">A modified Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1426,7 +1480,7 @@ Woods-Saxon potential. However, this is not fully correct, because as we have di
 
 <section>
 
-<h2 id="___sec39">A modified Hamiltonian  </h2>
+<h2 id="___sec40">A modified Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1467,7 +1521,7 @@ $$
 
 <section>
 
-<h2 id="___sec40">A modified Hamiltonian  </h2>
+<h2 id="___sec41">A modified Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1500,13 +1554,21 @@ where \( C_{\tau\alpha} \) represents the overlap between the two basis sets.
 
 <section>
 
-<h2 id="___sec41">A modified Hamiltonian  </h2>
+<h2 id="___sec42">A modified Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 The harmonic oscillator (a shifted one by a negative constant) provides also a very good approximation to most bound single-particle states. Furthermore, it serves as a starting point in building up our picture of nuclei, in particular how we define magic numbers and systems with one nucleon added to (or removed from) a closed-shell core nucleus. The figure here shows 
 the various harmonic oscillator states, with those obtained with a Woods-Saxon potential as well, including a spin-orbit splitting (to be discussed below).
-<center><p><img src="figslides/singleparticle.png" align="bottom" width=500></p></center>
+
+<p>
+<center> <!-- figure -->
+<hr class="figure">
+<center><p class="caption">Figure 3:  Single-particle spectrum and quantum numbers for a harmonic oscillator potential and a Woods-Saxon potential with and without a spin-orbit force. </p></center>
+<p><img src="figslides/singleparticle.png" align="bottom" width=500></p>
+</center>
+
+
 </div>
 
 
@@ -1517,7 +1579,7 @@ the various harmonic oscillator states, with those obtained with a Woods-Saxon p
 
 <section>
 
-<h2 id="___sec42">The harmonic oscillator Hamiltonian  </h2>
+<h2 id="___sec43">The harmonic oscillator Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1561,7 +1623,7 @@ This is ok if the number of nucleons is large, but still with this Hamiltonian, 
 
 <section>
 
-<h2 id="___sec43">Translationally Invariant Hamiltonian  </h2>
+<h2 id="___sec44">Translationally Invariant Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1599,7 +1661,7 @@ $$
 
 <section>
 
-<h2 id="___sec44">The harmonic oscillator Hamiltonian  </h2>
+<h2 id="___sec45">The harmonic oscillator Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1627,7 +1689,7 @@ $$
 
 <section>
 
-<h2 id="___sec45">The harmonic oscillator Hamiltonian  </h2>
+<h2 id="___sec46">The harmonic oscillator Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1678,7 +1740,7 @@ $$
 
 <section>
 
-<h2 id="___sec46">Translationally Invariant Hamiltonian  </h2>
+<h2 id="___sec47">Translationally Invariant Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1718,7 +1780,7 @@ $$
 
 <section>
 
-<h2 id="___sec47">The Woods-Saxon potential  </h2>
+<h2 id="___sec48">The Woods-Saxon potential  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1744,7 +1806,7 @@ The value for \( r_0 \) can be extracted from a fit to data, see for example M.&
 
 <section>
 
-<h2 id="___sec48">The Woods-Saxon potential  </h2>
+<h2 id="___sec49">The Woods-Saxon potential  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1802,7 +1864,7 @@ From the plot we notice that the potential
 
 <section>
 
-<h2 id="___sec49">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec50">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1834,7 +1896,7 @@ $$
 
 <section>
 
-<h2 id="___sec50">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec51">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1875,7 +1937,7 @@ $$
 
 <section>
 
-<h2 id="___sec51">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec52">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1913,7 +1975,7 @@ Later, we will see how this term arises from the two-nucleon force in a natural 
 
 <section>
 
-<h2 id="___sec52">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec53">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1951,7 +2013,7 @@ This will lead us to our first and simplest many-body theory, Hartree-Fock theor
 
 <section>
 
-<h2 id="___sec53">Single-particle Hamiltonians and spin-orbit force  </h2>
+<h2 id="___sec54">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1979,7 +2041,7 @@ To solve the above equation is however rather straightforward numerically.
 
 <section>
 
-<h2 id="___sec54">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec55">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2021,7 +2083,7 @@ with \( n=0,1,2,\dots \) and \( l=0,1,2,\dots \).
 
 <section>
 
-<h2 id="___sec55">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec56">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2048,7 +2110,7 @@ The boundary conditions are \( u(0)=0 \) and \( u(\infty)=0 \).
 
 <section>
 
-<h2 id="___sec56">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec57">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2088,7 +2150,7 @@ $$
 
 <section>
 
-<h2 id="___sec57">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec58">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2142,7 +2204,7 @@ the eigenvalues for \( l=0 \) are
 
 <section>
 
-<h2 id="___sec58">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec59">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2173,7 +2235,7 @@ You need to check your results for the energies against different values
 
 <section>
 
-<h2 id="___sec59">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec60">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2217,7 +2279,7 @@ where \( V_i=\rho_i^2 \) is the harmonic oscillator potential.
 
 <section>
 
-<h2 id="___sec60">Numerical solution of the single-particle Schroedinger equation </h2>
+<h2 id="___sec61">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2301,18 +2363,18 @@ The solution is zero in both cases.
 
 <section>
 
-<h2 id="___sec61">Program to solve Schroedinger's equation  </h2>
+<h2 id="___sec62">Program to solve Schroedinger's equation  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-The following c++ program is an example of how one can obtain the eigenvalues for a single-nucleon moving in a harmonic oscillator potential. It is rather easy to change the onebody-potential with ones like a Woods-Saxon potential. 
+The following python program is an example of how one can obtain the eigenvalues for a single-nucleon moving in a harmonic oscillator potential. It is rather easy to change the onebody-potential with ones like a Woods-Saxon potential. 
 
 <ul>
-<p><li> The program uses the c++ library armadillo, see <a href="http://arma.sourceforge.net/" target="_blank"><tt>http://arma.sourceforge.net/</tt></a>.</li> 
+<p><li> The c++ and Fortran versions of this program can be found at <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>.</li> 
+<p><li> The c++  program uses the c++ library armadillo, see <a href="http://arma.sourceforge.net/" target="_blank"><tt>http://arma.sourceforge.net/</tt></a>.</li> 
 <p><li> To install armadillo see the guidelines at <a href="http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/" target="_blank"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/</tt></a>.</li> 
 <p><li> For mac users I recommend using <em>brew</em>, see <a href="http://brew.sh/" target="_blank"><tt>http://brew.sh/</tt></a>.</li>
-<p><li> The full program can be found found at the github repository for the course, see <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a></li>
-<p><li> If you use ipython notebook, you can run this program following the instructions at <a href="http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb" target="_blank"><tt>http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb</tt></a></li>
+<p><li> If you use ipython notebook, you can run c++ programs following the instructions at <a href="http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb" target="_blank"><tt>http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb</tt></a></li>
 </ul>
 </div>
 
@@ -2324,120 +2386,79 @@ The following c++ program is an example of how one can obtain the eigenvalues fo
 
 <section>
 
-<h2 id="___sec62">Program to solve Schroedinger's equation  </h2>
+<h2 id="___sec63">Program to solve Schroedinger's equation  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-The code sets up the Hamiltonian matrix reading from file the minimun and maximum values of \( r \) with a
-maximum value of integration points.  
+The code sets up the Hamiltonian matrix by defining the the minimun and maximum values of \( r \) with a
+maximum value of integration points.  These are set in the initialization function. It plots the 
+eigenfunctions of the three lowest eigenstates.
 <p>
 
-<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #228B22">/*</span>
-<span style="color: #228B22">  Solves the one-particle Schrodinger equation</span>
-<span style="color: #228B22">  for a potential specified in function</span>
-<span style="color: #228B22">  potential(). This example is for the harmonic oscillator in 3d</span>
-<span style="color: #228B22">*/</span>
-<span style="color: #1e889b">#include &lt;cmath&gt;</span>
-<span style="color: #1e889b">#include &lt;iostream&gt;</span>
-<span style="color: #1e889b">#include &lt;fstream&gt;</span>
-<span style="color: #1e889b">#include &lt;iomanip&gt;</span>
-<span style="color: #1e889b">#include &lt;armadillo&gt;</span>
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #228B22">#Program which solves the one-particle Schrodinger equation </span>
+<span style="color: #228B22">#for a potential specified in function</span>
+<span style="color: #228B22">#potential(). This example is for the harmonic oscillator in 3d</span>
 
-<span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span>  std;
-<span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span>  arma;
-<span style="color: #228B22">// input and output files as global variables</span>
-ofstream ofile;  
-ifstream ifile;
+<span style="color: #8B008B; font-weight: bold">from</span>  <span style="color: #008b45; text-decoration: underline">matplotlib</span> <span style="color: #8B008B; font-weight: bold">import</span> pyplot <span style="color: #8B008B; font-weight: bold">as</span> plt
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
+<span style="color: #228B22">#Function for initialization of parameters</span>
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">initialize</span>():
+    RMin = <span style="color: #B452CD">0.0</span>
+    RMax = <span style="color: #B452CD">10.0</span>
+    lOrbital = <span style="color: #B452CD">0</span>
+    Dim = <span style="color: #B452CD">400</span>
+    <span style="color: #8B008B; font-weight: bold">return</span> RMin, RMax, lOrbital, Dim
+<span style="color: #228B22"># Here we set up the harmonic oscillator potential</span>
+<span style="color: #8B008B; font-weight: bold">def</span> <span style="color: #008b45">potential</span>(r):
+    <span style="color: #8B008B; font-weight: bold">return</span> r*r
 
-<span style="color: #a7a7a7; font-weight: bold">double</span> <span style="color: #008b45">potential</span>(<span style="color: #a7a7a7; font-weight: bold">double</span>);
-<span style="color: #a7a7a7; font-weight: bold">void</span> <span style="color: #008b45">output</span>(<span style="color: #a7a7a7; font-weight: bold">double</span>, <span style="color: #a7a7a7; font-weight: bold">double</span>, <span style="color: #a7a7a7; font-weight: bold">int</span>, vec&amp; );
+<span style="color: #228B22">#Get the boundary, orbital momentum and number of integration points</span>
+RMin, RMax, lOrbital, Dim = initialize()
 
+<span style="color: #228B22">#Initialize constants</span>
+Step    = RMax/(Dim+<span style="color: #B452CD">1</span>)
+DiagConst = <span style="color: #B452CD">2.0</span> / (Step*Step)
+NondiagConst =  -<span style="color: #B452CD">1.0</span> / (Step*Step)
+OrbitalFactor = lOrbital * (lOrbital + <span style="color: #B452CD">1.0</span>)
 
-<span style="color: #228B22">// Begin of main program   </span>
+<span style="color: #228B22">#Calculate array of potential values</span>
+v = np.zeros(Dim)
+r = np.linspace(RMin,RMax,Dim)
+<span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">xrange</span>(Dim):
+    r[i] = RMin + (i+<span style="color: #B452CD">1</span>) * Step;
+    v[i] = potential(r[i]) + OrbitalFactor/(r[i]*r[i]);
 
-<span style="color: #a7a7a7; font-weight: bold">int</span> <span style="color: #008b45">main</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> argc, <span style="color: #a7a7a7; font-weight: bold">char</span>* argv[])
-{
-  <span style="color: #a7a7a7; font-weight: bold">char</span> *outfilename, *infilename;
-  <span style="color: #a7a7a7; font-weight: bold">int</span>       i, j, Dim, lOrbital;
-  <span style="color: #a7a7a7; font-weight: bold">double</span>    RMin, RMax, Step, DiagConst, NondiagConst, OrbitalFactor; 
-  <span style="color: #228B22">// With spherical coordinates RMin = 0 always</span>
-  RMin = <span style="color: #B452CD">0.0</span>;
-  <span style="color: #8B008B; font-weight: bold">if</span> (argc &lt;= <span style="color: #B452CD">2</span>) {
-    cout &lt;&lt; <span style="color: #CD5555">&quot;Bad Usage: &quot;</span> &lt;&lt; argv[<span style="color: #B452CD">0</span>] &lt;&lt; 
-      <span style="color: #CD5555">&quot; read also input and output files on same line&quot;</span> &lt;&lt; endl;
-    exit(<span style="color: #B452CD">1</span>);
-  }
-  <span style="color: #8B008B; font-weight: bold">if</span> (argc &gt; <span style="color: #B452CD">2</span>) {
-    infilename=argv[<span style="color: #B452CD">1</span>];
-    outfilename=argv[<span style="color: #B452CD">2</span>];
-    ifile.open(infilename); 
-    ofile.open(outfilename); 
-  }
-  <span style="color: #228B22">//  Read in data from file</span>
-  ifile &gt;&gt;  RMax;  ifile &gt;&gt; lOrbital;  ifile &gt;&gt; Dim;  
-  mat Hamiltonian = zeros&lt;mat&gt;(Dim,Dim);
-  <span style="color: #228B22">// Integration step length</span>
-  Step    = RMax/ Dim;
-  DiagConst = <span style="color: #B452CD">2.0</span> / (Step*Step);
-  NondiagConst =  -<span style="color: #B452CD">1.0</span> / (Step*Step);
-  OrbitalFactor = lOrbital * (lOrbital + <span style="color: #B452CD">1.0</span>);
-  
-  <span style="color: #228B22">// local memory for r and the potential w[r] </span>
-  vec r(Dim); vec w(Dim);
-  <span style="color: #8B008B; font-weight: bold">for</span>(i = <span style="color: #B452CD">0</span>; i &lt; Dim; i++) {
-    r(i) = RMin + (i+<span style="color: #B452CD">1</span>) * Step;
-    w(i) = potential(r(i)) + OrbitalFactor/(r(i) * r(i));
-  }
-
-
-  <span style="color: #228B22">// Setting up tridiagonal matrix and brute diagonalization using Armadillo</span>
-  Hamiltonian(<span style="color: #B452CD">0</span>,<span style="color: #B452CD">0</span>) = DiagConst + w(<span style="color: #B452CD">0</span>);
-  Hamiltonian(<span style="color: #B452CD">0</span>,<span style="color: #B452CD">1</span>) = NondiagConst;
-  <span style="color: #8B008B; font-weight: bold">for</span>(i = <span style="color: #B452CD">1</span>; i &lt; Dim-<span style="color: #B452CD">1</span>; i++) {
-    Hamiltonian(i,i-<span style="color: #B452CD">1</span>)    = NondiagConst;
-    Hamiltonian(i,i)    = DiagConst + w(i);
-    Hamiltonian(i,i+<span style="color: #B452CD">1</span>)    = NondiagConst;
-  }
-  Hamiltonian(Dim-<span style="color: #B452CD">1</span>,Dim-<span style="color: #B452CD">2</span>) = NondiagConst;
-  Hamiltonian(Dim-<span style="color: #B452CD">1</span>,Dim-<span style="color: #B452CD">1</span>) = DiagConst + w(Dim-<span style="color: #B452CD">1</span>);
-  <span style="color: #228B22">// diagonalize and obtain eigenvalues</span>
-  vec Eigval(Dim);
-  eig_sym(Eigval, Hamiltonian);
-  output(RMin , RMax, Dim, Eigval);
-  ifile.close();  <span style="color: #228B22">// close input file</span>
-  ofile.close();  <span style="color: #228B22">// close output file</span>
-  <span style="color: #8B008B; font-weight: bold">return</span> <span style="color: #B452CD">0</span>;
-}  <span style="color: #228B22">//  end of main function</span>
-
-
-<span style="color: #228B22">/*</span>
-<span style="color: #228B22">  The function potential()</span>
-<span style="color: #228B22">  calculates and return the value of the </span>
-<span style="color: #228B22">  potential for a given argument x.</span>
-<span style="color: #228B22">  The potential here is for the hydrogen atom</span>
-<span style="color: #228B22">*/</span>        
-
-<span style="color: #a7a7a7; font-weight: bold">double</span> <span style="color: #008b45">potential</span>(<span style="color: #a7a7a7; font-weight: bold">double</span> x)
-{
-  <span style="color: #8B008B; font-weight: bold">return</span> x*x;
-
-} <span style="color: #228B22">// End: function potential()  </span>
-
-
-<span style="color: #a7a7a7; font-weight: bold">void</span> <span style="color: #008b45">output</span>(<span style="color: #a7a7a7; font-weight: bold">double</span> RMin , <span style="color: #a7a7a7; font-weight: bold">double</span> RMax, <span style="color: #a7a7a7; font-weight: bold">int</span> Dim, vec&amp; d)
-{
-  <span style="color: #a7a7a7; font-weight: bold">int</span> i;
-  ofile &lt;&lt; <span style="color: #CD5555">&quot;RESULTS:&quot;</span> &lt;&lt; endl;
-  ofile &lt;&lt; setiosflags(ios::showpoint | ios::uppercase);
-  ofile &lt;&lt;<span style="color: #CD5555">&quot;Rmin = &quot;</span> &lt;&lt; setw(<span style="color: #B452CD">15</span>) &lt;&lt; setprecision(<span style="color: #B452CD">8</span>) &lt;&lt; RMin &lt;&lt; endl;  
-  ofile &lt;&lt;<span style="color: #CD5555">&quot;Rmax = &quot;</span> &lt;&lt; setw(<span style="color: #B452CD">15</span>) &lt;&lt; setprecision(<span style="color: #B452CD">8</span>) &lt;&lt; RMax &lt;&lt; endl;  
-  ofile &lt;&lt;<span style="color: #CD5555">&quot;Number of steps = &quot;</span> &lt;&lt; setw(<span style="color: #B452CD">15</span>) &lt;&lt; Dim &lt;&lt; endl;  
-  ofile &lt;&lt; <span style="color: #CD5555">&quot;Five lowest eigenvalues:&quot;</span> &lt;&lt; endl;
-  <span style="color: #8B008B; font-weight: bold">for</span>(i = <span style="color: #B452CD">0</span>; i &lt; <span style="color: #B452CD">5</span>; i++) {
-    ofile &lt;&lt; setw(<span style="color: #B452CD">15</span>) &lt;&lt; setprecision(<span style="color: #B452CD">8</span>) &lt;&lt; d[i] &lt;&lt; endl;
-  }
-}  <span style="color: #228B22">// end of function output         </span>
+<span style="color: #228B22">#Setting up tridiagonal matrix and find eigenvectors and eigenvalues</span>
+Hamiltonian = np.zeros((Dim,Dim))
+Hamiltonian[<span style="color: #B452CD">0</span>,<span style="color: #B452CD">0</span>] = DiagConst + v[<span style="color: #B452CD">0</span>];
+Hamiltonian[<span style="color: #B452CD">0</span>,<span style="color: #B452CD">1</span>] = NondiagConst;
+<span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">xrange</span>(<span style="color: #B452CD">1</span>,Dim-<span style="color: #B452CD">1</span>):
+    Hamiltonian[i,i-<span style="color: #B452CD">1</span>]  = NondiagConst;
+    Hamiltonian[i,i]    = DiagConst + v[i];
+    Hamiltonian[i,i+<span style="color: #B452CD">1</span>]  = NondiagConst;
+Hamiltonian[Dim-<span style="color: #B452CD">1</span>,Dim-<span style="color: #B452CD">2</span>] = NondiagConst;
+Hamiltonian[Dim-<span style="color: #B452CD">1</span>,Dim-<span style="color: #B452CD">1</span>] = DiagConst + v[Dim-<span style="color: #B452CD">1</span>];
+<span style="color: #228B22"># diagonalize and obtain eigenvalues, not necessarily sorted</span>
+EigValues, EigVectors = np.linalg.eig(Hamiltonian)
+<span style="color: #228B22"># sort eigenvectors and eigenvalues</span>
+permute = EigValues.argsort()
+EigValues = EigValues[permute]
+EigVectors = EigVectors[:,permute]
+<span style="color: #228B22"># now plot the results for the three lowest lying eigenstates</span>
+<span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">xrange</span>(<span style="color: #B452CD">3</span>):
+    <span style="color: #8B008B; font-weight: bold">print</span> EigValues[i]
+FirstEigvector = EigVectors[:,<span style="color: #B452CD">0</span>]
+SecondEigvector = EigVectors[:,<span style="color: #B452CD">1</span>]
+ThirdEigvector = EigVectors[:,<span style="color: #B452CD">2</span>]
+plt.plot(r, FirstEigvector**<span style="color: #B452CD">2</span> ,<span style="color: #CD5555">&#39;b-&#39;</span>,r, SecondEigvector**<span style="color: #B452CD">2</span> ,<span style="color: #CD5555">&#39;g-&#39;</span>,r, ThirdEigvector**<span style="color: #B452CD">2</span> ,<span style="color: #CD5555">&#39;r-&#39;</span>)
+plt.axis([<span style="color: #B452CD">0</span>,<span style="color: #B452CD">4.6</span>,<span style="color: #B452CD">0.0</span>, <span style="color: #B452CD">0.025</span>])
+plt.xlabel(<span style="color: #CD5555">r&#39;$r$&#39;</span>)
+plt.ylabel(<span style="color: #CD5555">r&#39;Radial probability $r^2|R(r)|^2$&#39;</span>)
+plt.title(<span style="color: #CD5555">r&#39;Radial probability distributions for three lowest-lying states&#39;</span>)
+plt.savefig(<span style="color: #CD5555">&#39;eigenvector.pdf&#39;</span>)
+plt.savefig(<span style="color: #CD5555">&#39;eigenvector.png&#39;</span>)
+plt.show()
 </pre></div>
 
 </div>
@@ -2450,7 +2471,7 @@ ifstream ifile;
 
 <section>
 
-<h2 id="___sec63">Exercise 1  </h2>
+<h2 id="___sec64">Exercise 1  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Masses and binding energies.</b>
 <p>
@@ -2486,7 +2507,7 @@ with \( \alpha_1=15.49 \) MeV, \( \alpha_2=17.23 \) MeV, \( \alpha_3=0.697 \) Me
 Again, comment your results. 
 
 <ul>
- <p><li> Make also a plot of the binding energies as function of \( A \) using the data in the file on bindingenergies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters \( \alpha_i=0 \). Comment your results.</li> 
+ <p><li> Make also a plot of the binding energies as function of \( A \) using the data in the file on binding energies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters \( \alpha_i=0 \). Comment your results.</li> 
  <p><li> Use the liquid drop model to find the neutron drip lines   for Z values up to 120.</li>
 </ul>
 <p>
@@ -2506,7 +2527,7 @@ A program example in C++ and the input data file <em>bedata.dat</em> can be foun
 
 <section>
 
-<h2 id="___sec64">Exercise 2  </h2>
+<h2 id="___sec65">Exercise 2  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Masses and binding energies.</b>
 <p>
@@ -2514,13 +2535,154 @@ The program for finding the eigenvalues of the harmonic oscillator are in the gi
 <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>.
 
 <p>
-You can this program to solve the exercises below, or write your own using your preferred programming language, be it python, fortran or c++ or toher languages. Here I will mainly provide fortran, python and c++. 
+You can use this program to solve the exercises below, or write your own using your preferred programming language, be it python, fortran or c++ or other languages. Here I will mainly provide fortran, python and c++. 
 
 <ul>
 <p><li> Compute the eigenvalues of the five lowest states with a given orbital momentum and oscillator frequency \( \omega \). Study these results as functions of the the maximum value of \( r \) and the number of integration points \( n \), starting with  \( r_{\mathrm{max}}=10 \). Compare the computed ones with the exact values and comment your results.</li>
 <p><li> Plot thereafter the eigenfunctions as functions of \( r \) for the lowest-lying state with a given orbital momentum \( l \).</li>
-<p><li> Replace thereafter the harmonic oscillator potential with a Woods-Saxon potential using the paramters discussed above. Compute the lowest five eigenvalues and plot the eigenfunction of the lowest-lying state. How does this compare with the harmonic oscillator? Comment your results and possible implications for nuclear physics studies.</li>
+<p><li> Replace thereafter the harmonic oscillator potential with a Woods-Saxon potential using the parameters discussed above. Compute the lowest five eigenvalues and plot the eigenfunction of the lowest-lying state. How does this compare with the harmonic oscillator? Comment your results and possible implications for nuclear physics studies.</li>
 </ul>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec66">Exercise 3  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Operators and Slater determinants.</b>
+<p>
+Consider the Slater determinant
+<p>&nbsp;<br>
+$$
+\Phi_{\lambda}^{AS}(x_{1}x_{2}\dots x_{N};\alpha_{1}\alpha_{2}\dots\alpha_{N})
+=\frac{1}{\sqrt{N!}}\sum_{p}(-)^{p}P\prod_{i=1}^{N}\psi_{\alpha_{i}}(x_{i}).
+$$
+<p>&nbsp;<br>
+
+where \( P \) is an operator which permutes the coordinates of two particles. We have assumed here that the 
+number of particles is the same as the number of available single-particle states, represented by the
+greek letters \( \alpha_{1}\alpha_{2}\dots\alpha_{N} \).
+
+<ul>
+ <p><li> Write  out \( \Phi^{AS} \) for \( N=3 \).</li>  
+ <p><li> Show that</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+\int dx_{1}dx_{2}\dots dx_{N}\left\vert
+\Phi_{\lambda}^{AS}(x_{1}x_{2}\dots x_{N};\alpha_{1}\alpha_{2}\dots\alpha_{N})
+\right\vert^{2} = 1.
+$$
+<p>&nbsp;<br>
+
+
+<ul>
+ <p><li> Define a general onebody operator \( \hat{F} = \sum_{i}^N\hat{f}(x_{i}) \) and a general  twobody operator \( \hat{G}=\sum_{i>j}^N\hat{g}(x_{i},x_{j}) \) with \( g \) being invariant under the interchange of the coordinates of particles \( i \) and \( j \). Calculate the matrix elements for a two-particle Slater determinant</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+\langle\Phi_{\alpha_{1}\alpha_{2}}^{AS}|\hat{F}|\Phi_{\alpha_{1}\alpha_{2}}^{AS}\rangle,
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+\langle\Phi_{\alpha_{1}\alpha_{2}}^{AS}|\hat{G}|\Phi_{\alpha_{1}\alpha_{2}}^{AS}\rangle.
+$$
+<p>&nbsp;<br>
+
+Explain the short-hand notation for the Slater determinant.
+Which properties do you expect these operators to have in addition to an eventual permutation
+symmetry?
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec67">Exercise 4  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>First simple shell-model calculation.</b>
+<p>
+We will now consider a simple three-level problem, depicted in the figure below. This is our first and very simple model of a possible many-nucleon (or just fermion) problem and the shell-model.
+The single-particle states are labelled by the quantum number \( p \) and can accomodate up to two single particles,  viz., every single-particle state  is doubly degenerate (you could think of this as one state having spin up and the other spin down). 
+We let the spacing between the doubly degenerate single-particle states be constant, with value \( d \).  The first state
+has energy \( d \). There are only three available single-particle states, \( p=1 \), \( p=2 \) and \( p=3 \), as illustrated
+in the figure. 
+
+<ul>
+<p><li> How many two-particle Slater determinants can we construct in this space?</li> 
+</ul>
+<p>
+
+We limit ourselves to a system with only the two lowest single-particle orbits and two particles, \( p=1 \) and \( p=2 \). We assume that we can write the Hamiltonian as
+<p>&nbsp;<br>
+$$
+       \hat{H}=\hat{H}_0+\hat{H}_I,
+$$
+<p>&nbsp;<br>
+
+and that the onebody part of the Hamiltonian with single-particle operator \( \hat{h}_0 \) has the property
+<p>&nbsp;<br>
+$$
+\hat{h}_0\psi_{p\sigma} = p\times d \psi_{p\sigma},
+$$
+<p>&nbsp;<br>
+
+where we have added a spin quantum number \( \sigma \). 
+We assume also that the only two-particle states that can exist are those where two particles are in the 
+same state \( p \), as shown by the two possibilities to the left in the figure.
+The two-particle matrix elements of \( \hat{H}_I \) have all a constant value, \( -g \).
+
+<ul>
+<p><li> Show then that the Hamiltonian matrix can be written as</li> 
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+\left(\begin{array}{cc}2d-g &-g \\
+-g &4d-g \end{array}\right),
+$$
+<p>&nbsp;<br>
+
+
+<ul>
+<p><li> Find the eigenvalues and eigenvectors.  What is mixing of the state with two particles in \( p=2 \)  to the wave function with two-particles in \( p=1 \)? Discuss your results in terms of a linear combination of Slater determinants.</li> 
+<p><li> Add the possibility that the two particles can be in the state with \( p=3 \) as well and find the Hamiltonian matrix, the eigenvalues and the eigenvectors. We still insist that we only have two-particle states composed of two particles being in the same level \( p \). You can diagonalize numerically your \( 3\times 3 \) matrix.</li>
+</ul>
+<p>
+
+This simple model catches several birds with a stone. It demonstrates how we can build linear combinations
+of Slater determinants and interpret these as different admixtures to a given state. It represents also the way we are going to interpret these contributions.  The two-particle states above \( p=1 \) will be interpreted as 
+excitations from the ground state configuration, \( p=1 \) here.  The reliability of this ansatz for the ground state, 
+with two particles in \( p=1 \),
+depends on the strength of the interaction \( g \) and the single-particle spacing \( d \).
+Finally, this model is a simple schematic ansatz for studies of pairing correlations and thereby superfluidity/superconductivity  
+in fermionic systems. 
+
+<p>
+<center> <!-- figure -->
+<hr class="figure">
+<center><p class="caption">Figure 4:  Schematic plot of the possible single-particle levels with double degeneracy. The filled circles indicate occupied particle states. The spacing between each level \( p \) is constant in this picture. We show some possible two-particle states. </p></center>
+<p><img src="figslides/simplemodel.png" align="bottom" width=500></p>
+</center>
+
+
 </div>
 
 

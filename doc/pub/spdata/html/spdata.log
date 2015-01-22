@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  15 JAN 2015 16:59
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  22 JAN 2015 13:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1415,20 +1415,31 @@ runsystem(rm spdata.out.pyg)...executed.
 
 runsystem(rm spdata.pyg)...executed.
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 542.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 542.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 542.
+\openout3 = `spdata.pyg'.
 
-<figslides/oxygens.jpg, id=102, 794.97pt x 964.3227pt>
+runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
+-P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
+tt,xleftmargin=7mm" -o spdata.out.pyg spdata.pyg)...executed.
+
+ (./spdata.out.pyg)
+runsystem(rm spdata.out.pyg)...executed.
+
+runsystem(rm spdata.pyg)...executed.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 582.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 582.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 582.
+
+[9] <figslides/oxygens.jpg, id=108, 794.97pt x 964.3227pt>
 File: figslides/oxygens.jpg Graphic file (type jpg)
 
 <use figslides/oxygens.jpg>
-Package pdftex.def Info: figslides/oxygens.jpg used on input line 581.
+Package pdftex.def Info: figslides/oxygens.jpg used on input line 620.
 (pdftex.def)             Requested size: 207.0021pt x 251.10056pt.
- [9] [10 <./figslides/oxygens.jpg>]
+ [10] [11 <./figslides/oxygens.jpg>]
 \openout3 = `spdata.pyg'.
 
 runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
@@ -1447,84 +1458,79 @@ runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape
 -P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
 tt,xleftmargin=7mm" -o spdata.out.pyg spdata.pyg)...executed.
 
- (./spdata.out.pyg [11])
+ (./spdata.out.pyg [12])
 runsystem(rm spdata.out.pyg)...executed.
 
 runsystem(rm spdata.pyg)...executed.
 
- [12] [13] [14] [15] [16] [17]
-<figslides/singleparticle.png, id=196, 642.4pt x 767.86874pt>
+ [13] [14] [15] [16] [17] [18]
+<figslides/singleparticle.png, id=203, 642.4pt x 767.86874pt>
 File: figslides/singleparticle.png Graphic file (type png)
 
 <use figslides/singleparticle.png>
-Package pdftex.def Info: figslides/singleparticle.png used on input line 1133.
+Package pdftex.def Info: figslides/singleparticle.png used on input line 1176.
 (pdftex.def)             Requested size: 207.0021pt x 247.43365pt.
- [18] [19 <./figslides/singleparticle.png>]
-[20]
+ [19] [20 <./figslides/singleparticle.png>]
+[21]
 \openout3 = `spdata.pyg'.
 
 runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
 -P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
 tt,xleftmargin=7mm" -o spdata.out.pyg spdata.pyg)...executed.
 
- (./spdata.out.pyg [21])
+ (./spdata.out.pyg [22])
 runsystem(rm spdata.out.pyg)...executed.
 
 runsystem(rm spdata.pyg)...executed.
 
- [22] [23] [24] [25] [26]
-Overfull \hbox (15.60367pt too wide) detected at line 1667
+ [23] [24] [25] [26] [27]
+Overfull \hbox (15.60367pt too wide) detected at line 1715
 [] [] [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 ^^U []
  []
 
 
-Overfull \hbox (8.18497pt too wide) in paragraph at lines 1696--1697
-[]\T1/lmr/m/n/10 (-20) The pro-gram uses the c++ li-brary ar-madillo, see [][]$
-\T1/lmtt/m/n/10 http : / / arma . sourceforge .
+Overfull \hbox (4.44908pt too wide) in paragraph at lines 1745--1746
+\T1/lmtt/m/n/10 github . com / NuclearStructure / PHY981 / tree / master / doc 
+/ pub / spdata /
  []
 
 
-Overfull \hbox (3.49818pt too wide) in paragraph at lines 1702--1703
-\T1/lmr/m/n/10 (-20) see [][]$\T1/lmtt/m/n/10 https : / / github . com / Nuclea
-rStructure / PHY981 / tree / master / doc /
+Overfull \hbox (1.91348pt too wide) in paragraph at lines 1753--1754
+\T1/lmr/m/n/10 (-20) struc-tions at [][]$\T1/lmtt/m/n/10 http : / / nbviewer . 
+ipython . org / github / dragly / cppmagic /
  []
 
-
-Overfull \hbox (6.84824pt too wide) in paragraph at lines 1704--1705
-\T1/lmr/m/n/10 (-20) tions at [][]$\T1/lmtt/m/n/10 http : / / nbviewer . ipytho
-n . org / github / dragly / cppmagic / blob /
- []
-
-[27]
+[28]
 \openout3 = `spdata.pyg'.
 
-runsystem(pygmentize -l c++ -f latex -F tokenmerge      -P mathescape       -P 
-"verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=tt,
-xleftmargin=7mm" -o spdata.out.pyg spdata.pyg)...executed.
+runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
+-P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
+tt,xleftmargin=7mm" -o spdata.out.pyg spdata.pyg)...executed.
 
- (./spdata.out.pyg
-
-LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 7.
-
-[28])
+ (./spdata.out.pyg [29])
 runsystem(rm spdata.out.pyg)...executed.
 
 runsystem(rm spdata.pyg)...executed.
 
- [29]
-Overfull \hbox (23.62901pt too wide) in paragraph at lines 1883--1885
+ [30]
+Overfull \hbox (23.62901pt too wide) in paragraph at lines 1890--1892
 \T1/lmr/m/n/10 (-20) har-monic os-cil-la-tor are in the github folder [][]$\T1/
 lmtt/m/n/10 https : / / github . com / NuclearStructure /
  []
 
-[30]
+[31] [32] <figslides/simplemodel.png, id=340, 1530.71875pt x 320.19624pt>
+File: figslides/simplemodel.png Graphic file (type png)
+
+<use figslides/simplemodel.png>
+Package pdftex.def Info: figslides/simplemodel.png used on input line 2008.
+(pdftex.def)             Requested size: 207.0021pt x 43.29791pt.
+
 No file spdata.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1907.
-[31]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1907.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2023.
+[33 <./figslides/simplemodel.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2023.
  (./spdata.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1907.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2023.
 
 
  *File List*
@@ -1676,36 +1682,38 @@ figslides/careach.png
   omslmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
   spdata.out.pyg
   spdata.out.pyg
+  spdata.out.pyg
 figslides/oxygens.jpg
   spdata.out.pyg
   spdata.out.pyg
 figslides/singleparticle.png
   spdata.out.pyg
   spdata.out.pyg
+figslides/simplemodel.png
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1907.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2023.
 
 Package rerunfilecheck Info: File `spdata.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1907.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2023.
  ) 
 Here is how much of TeX's memory you used:
- 23009 strings out of 493488
- 405370 string characters out of 3141326
+ 23030 strings out of 493488
+ 405664 string characters out of 3141326
  520129 words of memory out of 3000000
- 25471 multiletter control sequences out of 15000+200000
- 76322 words of font info for 152 fonts, out of 3000000 for 9000
+ 25473 multiletter control sequences out of 15000+200000
+ 76251 words of font info for 154 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  68i,10n,65p,976b,559s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2012/t
-exmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2012/texmf-dist/
-fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2012/texmf-dist/fonts/enc/
-dvips/lm/lm-mathsy.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/a
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/20
+12/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2012/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2012/texmf-dist/fonts/
+enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmmib10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/l
 m/lmbx10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmbx12.p
 fb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/lo
@@ -1720,14 +1728,13 @@ ive/2012/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2012/t
 exmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2012/texmf-dist/
 fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
 /public/lm/lmtk10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm
-/lmtko10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmtt10.p
-fb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></usr/lo
-cal/texlive/2012/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on spdata.pdf (31 pages, 1497794 bytes).
+/lmtt10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmtt9.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on spdata.pdf (33 pages, 1480188 bytes).
 PDF statistics:
- 438 PDF objects out of 1000 (max. 8388607)
- 377 compressed objects within 4 object streams
- 169 named destinations out of 1000 (max. 500000)
- 25116 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 454 PDF objects out of 1000 (max. 8388607)
+ 391 compressed objects within 4 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 24609 words of extra memory for PDF output out of 24883 (max. 10000000)
 

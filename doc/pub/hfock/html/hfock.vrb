@@ -1,0 +1,22 @@
+\frametitle{Analysis of Hartree-Fock equations and Koopman's theorem}
+
+\begin{block}{}
+We can thus make our first interpretation of the separation energies in terms of the simplest
+possible many-body theory.
+If we also recall that the so-called energy gap for neutrons (or protons) is defined as
+\[
+\Delta S_n= 2BE(N,Z)-BE(N-1,Z)-BE(N+1,Z),
+\]
+for neutrons and the corresponding gap for protons
+\[
+\Delta S_p= 2BE(N,Z)-BE(N,Z-1)-BE(N,Z+1),
+\]
+we can define the neutron and proton energy gaps for $^{16}$O as
+\[
+\Delta S_{\nu}=\epsilon_{0d^{\nu}_{5/2}}^{\mathrm{HF}}-\epsilon_{0p^{\nu}_{1/2}}^{\mathrm{HF}},
+\]
+and
+\[
+\Delta S_{\pi}=\epsilon_{0d^{\pi}_{5/2}}^{\mathrm{HF}}-\epsilon_{0p^{\pi}_{1/2}}^{\mathrm{HF}}.
+\]
+\end{block}

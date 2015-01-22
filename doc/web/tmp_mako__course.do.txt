@@ -38,7 +38,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/pdf/intro-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/html/intro-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/html/intro.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/html/intro-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/intro/ipynb/intro.ipynb"
@@ -55,7 +55,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/pdf/spdata-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/html/spdata-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/html/spdata.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/html/spdata-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/spdata/ipynb/spdata.ipynb"
@@ -72,7 +72,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/pdf/hfock-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/html/hfock-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/html/hfock.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/html/hfock-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/hfock/ipynb/hfock.ipynb"
@@ -89,7 +89,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/pdf/secondquant-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/html/secondquant-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/html/secondquant.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/html/secondquant-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/secondquant/ipynb/secondquant.ipynb"
@@ -106,7 +106,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/pdf/forces-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/html/forces-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/html/forces.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/html/forces-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/forces/ipynb/forces.ipynb"
@@ -123,7 +123,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/pdf/fci-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/html/fci-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/html/fci.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/html/fci-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/fci/ipynb/fci.ipynb"
@@ -140,7 +140,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/pdf/decays-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/html/decays-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/html/decays.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/html/decays-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/decays/ipynb/decays.ipynb"
@@ -157,7 +157,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/pdf/simplemodels-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/html/simplemodels-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/html/simplemodels.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/html/simplemodels-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/simplemodels/ipynb/simplemodels.ipynb"
@@ -174,7 +174,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/pdf/mbpt-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/html/mbpt-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/html/mbpt.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/html/mbpt-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/mbpt/ipynb/mbpt.ipynb"
@@ -191,7 +191,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/pdf/cc-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/html/cc-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/html/cc.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/html/cc-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/cc/ipynb/cc.ipynb"
@@ -208,7 +208,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/pdf/srg-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/html/srg-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/html/srg.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/html/srg-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/srg/ipynb/srg.ipynb"
@@ -225,7 +225,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/pdf/gf-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/html/gf-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/html/gf.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/html/gf-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/gf/ipynb/gf.ipynb"
@@ -242,7 +242,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/pdf/mc-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/html/mc-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/html/mc.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/html/mc-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/mc/ipynb/mc.ipynb"
@@ -259,7 +259,7 @@ formulas in HTML or ipython notebook files.
    * For screen viewing:
      * "standard Beamer format": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/pdf/inf-beamer.pdf"
  * HTML:
-   * "solarized style": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/html/inf-solarized.html"
+   * "Plain html style": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/html/inf.html"
    * "reveal.js beige slide style": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/html/inf-reveal.html"
  * iPython notebook:
    * "ipynb file": "https://github.com/NuclearStructure/PHY981/doc/pub/inf/ipynb/inf.ipynb"
