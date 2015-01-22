@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  22 JAN 2015 13:58
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  22 JAN 2015 17:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1348,25 +1348,25 @@ OML/lmm/m/it/10 dx[] \OT1/lmr/m/n/10 + [] [] [] []
 
 [9]
 
-LaTeX Warning: Reference `H2Expectation2' on page 10 undefined on input line 77
-5.
+LaTeX Warning: Reference `H2Expectation2' on page 10 undefined on input line 75
+4.
 
-[10]
-Overfull \hbox (69.48947pt too wide) detected at line 821
+
+Overfull \hbox (69.48947pt too wide) detected at line 800
 [] [] \OML/lmm/m/it/10 ^^N [][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]\OT1/lmr/m/
 n/10 )\OML/lmm/m/it/10  []dx[] \OT1/lmr/m/n/10 + [] [] [] [] +
  []
 
 
-Overfull \hbox (267.82417pt too wide) detected at line 832
+Overfull \hbox (267.82417pt too wide) detected at line 811
 [] [] \OML/lmm/m/it/10  [][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]\OT1/lmr/m/n/1
 0 )\OML/lmm/m/it/10 ^^N []dx[] \OT1/lmr/m/n/10 + [] [] [] [] \OMS/lmsy/m/n/10 ^
 ^@ [] \OML/lmm/m/it/10 E[] [] ^^N [] []dx[] \OMS/lmsy/m/n/10 ^^@ [] \OML/lmm/m/
 it/10 E[] []  []^^N []dx[] \OT1/lmr/m/n/10 = 0\OML/lmm/m/it/10 :
  []
 
-
-Overfull \hbox (94.95775pt too wide) detected at line 851
+[10]
+Overfull \hbox (94.95775pt too wide) detected at line 830
 [] [] \OML/lmm/m/it/10  []\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]\OT1/lmr/m/n/10 
 ) \OMS/lmsy/m/n/10 ^^@ [] \OML/lmm/m/it/10  []\OT1/lmr/m/n/10 (\OML/lmm/m/it/10
  x[]\OT1/lmr/m/n/10 ) = \OML/lmm/m/it/10 ^^O[] []\OT1/lmr/m/n/10 (\OML/lmm/m/it
@@ -1375,37 +1375,34 @@ Overfull \hbox (94.95775pt too wide) detected at line 851
 
 
 LaTeX Warning: Reference `eq:hartreefockcoordinatespace' on page 11 undefined o
-n input line 873.
+n input line 852.
 
 [11] [12]
 
-LaTeX Warning: Reference `FunctionalEPhi' on page 13 undefined on input line 99
-6.
+LaTeX Warning: Reference `FunctionalEPhi' on page 13 undefined on input line 97
+5.
+
+
+LaTeX Warning: Reference `eq:newbasis' on page 13 undefined on input line 983.
+
+
+LaTeX Warning: Reference `eq:newbasis' on page 13 undefined on input line 989.
 
 [13]
 
-LaTeX Warning: Reference `eq:newbasis' on page 14 undefined on input line 1004.
+LaTeX Warning: Reference `eq:newbasis' on page 14 undefined on input line 999.
 
 
-
-LaTeX Warning: Reference `eq:newbasis' on page 14 undefined on input line 1010.
-
-
-
-LaTeX Warning: Reference `eq:newbasis' on page 14 undefined on input line 1020.
-
-
-
-LaTeX Warning: Reference `FunctionalEPhi2' on page 14 undefined on input line 1
-020.
+LaTeX Warning: Reference `FunctionalEPhi2' on page 14 undefined on input line 9
+99.
 
 [14]
 
 LaTeX Warning: Reference `eq:hartreefockcoordinatespace' on page 15 undefined o
-n input line 1101.
+n input line 1080.
 
-[15] [16]
-Overfull \hbox (27.84044pt too wide) detected at line 1206
+[15]
+Overfull \hbox (27.84044pt too wide) detected at line 1185
 \OML/lmm/m/it/10 E[] \OT1/lmr/m/n/10 = \OMS/lmsy/m/n/10 h\OT1/lmr/m/n/10 ^^H[]\
 OMS/lmsy/m/n/10 j[]j\OT1/lmr/m/n/10 ^^H[]\OMS/lmsy/m/n/10 i \OT1/lmr/m/n/10 = [
 ]\OMS/lmsy/m/n/10 h\OML/lmm/m/it/10 i\OMS/lmsy/m/n/10 j[] \OT1/lmr/m/n/10 + []\
@@ -1414,47 +1411,45 @@ OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 j\OMS/lmsy/m/n/10 i \OT1/lmr/m/n/10 + [] [] [
 it/10 i\OMS/lmsy/m/n/10 i\OML/lmm/m/it/10 ;
  []
 
-[17]
+[16]
 
-LaTeX Warning: Reference `eq:newbasis' on page 18 undefined on input line 1243.
+LaTeX Warning: Reference `eq:newbasis' on page 17 undefined on input line 1222.
 
 
 
-Overfull \hbox (14.43268pt too wide) detected at line 1265
+Overfull \hbox (8.73358pt too wide) detected at line 1244
 \OML/lmm/m/it/10 E\OT1/lmr/m/n/10 [^^H[](\OML/lmm/m/it/10 N\OT1/lmr/m/n/10 )] \
 OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 E\OT1/lmr/m/n/10 [^^H[](\OML/lmm/m/it/10 N
  \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1)] = \OMS/lmsy/m/n/10 h\OML/lmm/m/it/10 
 k\OMS/lmsy/m/n/10 j[]j\OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 i \OT1/lmr/m/n/10 + []
- []\OMS/lmsy/m/n/10 h\OML/lmm/m/it/10 ik\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 V\OM
-S/lmsy/m/n/10 j\OML/lmm/m/it/10 ik\OMS/lmsy/m/n/10 i[][] []h\OML/lmm/m/it/10 kj
-\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 V\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 kj\OMS/l
-msy/m/n/10 i[]\OML/lmm/m/it/10 ;
+ []\OMS/lmsy/m/n/10 h\OML/lmm/m/it/10 ik\OMS/lmsy/m/n/10 j[]j\OML/lmm/m/it/10 i
+k\OMS/lmsy/m/n/10 i[][] []h\OML/lmm/m/it/10 kj\OMS/lmsy/m/n/10 j[]j\OML/lmm/m/i
+t/10 kj\OMS/lmsy/m/n/10 i[]\OML/lmm/m/it/10 ;
  []
 
-[18]
+[17] [18]
 
-LaTeX Warning: Reference `eq:newbasis' on page 19 undefined on input line 1324.
+LaTeX Warning: Reference `eq:newbasis' on page 19 undefined on input line 1303.
 
 
-[19]
-Overfull \hbox (11.18277pt too wide) detected at line 1346
+
+Overfull \hbox (5.48367pt too wide) detected at line 1325
 \OML/lmm/m/it/10 E\OT1/lmr/m/n/10 [^^H[](\OML/lmm/m/it/10 A\OT1/lmr/m/n/10 )] \
 OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 E\OT1/lmr/m/n/10 [^^H[](\OML/lmm/m/it/10 A
  \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1)] = \OMS/lmsy/m/n/10 h\OML/lmm/m/it/10 
 k\OMS/lmsy/m/n/10 j[]j\OML/lmm/m/it/10 k\OMS/lmsy/m/n/10 i \OT1/lmr/m/n/10 + []
- []\OMS/lmsy/m/n/10 h\OML/lmm/m/it/10 ik\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 V\OM
-S/lmsy/m/n/10 j\OML/lmm/m/it/10 ik\OMS/lmsy/m/n/10 i[][] []h\OML/lmm/m/it/10 kj
-\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 V\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 kj\OMS/l
-msy/m/n/10 i[]\OML/lmm/m/it/10 ;
+ []\OMS/lmsy/m/n/10 h\OML/lmm/m/it/10 ik\OMS/lmsy/m/n/10 j[]j\OML/lmm/m/it/10 i
+k\OMS/lmsy/m/n/10 i[][] []h\OML/lmm/m/it/10 kj\OMS/lmsy/m/n/10 j[]j\OML/lmm/m/i
+t/10 kj\OMS/lmsy/m/n/10 i[]\OML/lmm/m/it/10 ;
  []
 
-[20]
+[19] [20]
 No file hfock.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1465.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1444.
 [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1465.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1444.
  (./hfock.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1465.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1444.
 
 
  *File List*
@@ -1595,7 +1590,7 @@ epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
   omslmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1465.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1444.
 
 Package rerunfilecheck Info: File `hfock.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1605,16 +1600,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1465.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1444.
  ) 
 Here is how much of TeX's memory you used:
- 22322 strings out of 493488
- 394767 string characters out of 3141326
+ 22320 strings out of 493488
+ 394743 string characters out of 3141326
  499380 words of memory out of 3000000
  24914 multiletter control sequences out of 15000+200000
  55216 words of font info for 105 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 68i,16n,65p,920b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,17n,65p,920b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 12/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2012/texmf-dist/
@@ -1631,10 +1626,10 @@ blic/lm/lmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmr
 local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texl
 ive/2012/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2012/t
 exmf-dist/fonts/type1/public/lm/lmsy7.pfb>
-Output written on hfock.pdf (21 pages, 270671 bytes).
+Output written on hfock.pdf (21 pages, 270117 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
- 161 named destinations out of 1000 (max. 500000)
+ 332 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
+ 159 named destinations out of 1000 (max. 500000)
  14349 words of extra memory for PDF output out of 14400 (max. 10000000)
 

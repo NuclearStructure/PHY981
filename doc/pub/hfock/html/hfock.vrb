@@ -11,7 +11,7 @@ for neutrons and the corresponding gap for protons
 \[
 \Delta S_p= 2BE(N,Z)-BE(N,Z-1)-BE(N,Z+1),
 \]
-we can define the neutron and proton energy gaps for $^{16}$O as
+we can define the neutron and proton energy gaps for ${}^{16}\mbox{O}$ as
 \[
 \Delta S_{\nu}=\epsilon_{0d^{\nu}_{5/2}}^{\mathrm{HF}}-\epsilon_{0p^{\nu}_{1/2}}^{\mathrm{HF}},
 \]

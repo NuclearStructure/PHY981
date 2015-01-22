@@ -203,7 +203,7 @@ that is to find a local minimum with a Slater determinant \( \Phi_0 \) being the
 We will show that the Hartree-Fock Hamiltonian \( \hat{h}^{\mathrm{HF}} \) equals our definition of the operator \( \hat{f} \) discussed in connection with the new definition of the normal-ordered Hamiltonian (see later lectures), that is we have, for a specific matrix element
 <p>&nbsp;<br>
 $$
-\langle p |\hat{h}^{\mathrm{HF}}| q \rangle =\langle p |\hat{f}| q \rangle=\langle p|\hat{t}+\hat{u}_{\mathrm{ext}}+|q \rangle +\sum_{i\le F} \langle pi | \hat{V} | qi\rangle_{AS},
+\langle p |\hat{h}^{\mathrm{HF}}| q \rangle =\langle p |\hat{f}| q \rangle=\langle p|\hat{t}+\hat{u}_{\mathrm{ext}}|q \rangle +\sum_{i\le F} \langle pi | \hat{V} | qi\rangle_{AS},
 $$
 <p>&nbsp;<br>
 
@@ -405,7 +405,7 @@ This means that our Hamiltonian is written as the sum of some onebody part and a
 $$
 \begin{equation}
     \hat{H} = \hat{H}_0 + \hat{H}_I 
-    = \sum_{i=1}^A \hat{h}_0(x_i) + \sum_{i < j}^A V(r_{ij}),
+    = \sum_{i=1}^A \hat{h}_0(x_i) + \sum_{i < j}^A \hat{v}(r_{ij}),
 \tag{1}
 \end{equation}
 $$
@@ -437,7 +437,7 @@ one derived from the self-consistent solution of the Hartree-Fock equations to b
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-Our Hamiltonian is invariant under the permutation (interchange) of two particles. % (exercise here, prove it)
+Our Hamiltonian is invariant under the permutation (interchange) of two particles.
 Since we deal with fermions however, the total wave function is antisymmetric.
 Let \( \hat{P} \) be an operator which interchanges two particles.
 Due to the symmetries we have ascribed to our Hamiltonian, this operator commutes with the total Hamiltonian,
@@ -550,7 +550,7 @@ $$
 $$
 <p>&nbsp;<br>
 
-where we have used the shorthand \( d\mathbf{\tau}=d\mathbf{r}_1d\mathbf{r}_2\dots d\mathbf{r}_N \).
+where we have used the shorthand \( d\mathbf{\tau}=dx_1dr_2\dots dr_A \).
 </div>
 
 
@@ -715,7 +715,7 @@ sum of one-body Hamiltonians
 $$
 \begin{equation}
   \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}
-  = \sum_{\mu=1}^A \int \psi_{\mu}^*(\mathbf{r})\hat{h}_0\psi_{\mu}(\mathbf{r})
+  = \sum_{\mu=1}^A \int \psi_{\mu}^*(x)\hat{h}_0\psi_{\mu}(x)dx
   d\mathbf{r}.
   \tag{7}
 \end{equation}
@@ -738,7 +738,7 @@ $$
 We introduce the following shorthand for the above integral
 <p>&nbsp;<br>
 $$
-\langle \mu | \hat{h}_0 | \mu \rangle = \int \psi_{\mu}^*(\mathbf{r})\hat{h}_0\psi_{\mu}(\mathbf{r}),
+\langle \mu | \hat{h}_0 | \mu \rangle = \int \psi_{\mu}^*(x)\hat{h}_0\psi_{\mu}(x)dx,
 $$
 <p>&nbsp;<br>
 
@@ -746,7 +746,7 @@ and rewrite Eq.&nbsp;<a href="#mjx-eqn-7">(7)</a> as
 <p>&nbsp;<br>
 $$
 \begin{equation}
-  \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}
+  \int \Phi^*\hat{H}_0\Phi  d\tau
   = \sum_{\mu=1}^A \langle \mu | \hat{h}_0 | \mu \rangle.
   \tag{8}
 \end{equation}
@@ -780,7 +780,7 @@ which reduces to
 $$
  \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
   = \sum_{i\le j=1}^A \sum_{p} (-)^p\int 
-  \Phi_H^*V(r_{ij})\hat{P}\Phi_H d\mathbf{\tau},
+  \Phi_H^*\hat{v}(r_{ij})\hat{P}\Phi_H d\mathbf{\tau},
 $$
 <p>&nbsp;<br>
 
@@ -806,7 +806,7 @@ any two particles no longer vanish, and we get
 $$
   \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
   = \sum_{i < j=1}^A \int  
-  \Phi_H^*V(r_{ij})(1-P_{ij})\Phi_H d\mathbf{\tau}.
+  \Phi_H^*\hat{v}(r_{ij})(1-P_{ij})\Phi_H d\mathbf{\tau}.
 $$
 <p>&nbsp;<br>
 
@@ -834,11 +834,11 @@ $$
 \begin{split}
   \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
   = \frac{1}{2}\sum_{\mu=1}^A\sum_{\nu=1}^A
-    &\left[ \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)V(r_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
+    &\left[ \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)\hat{v}(r_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
     dx_idx_j \right.\\
   &\left.
   - \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)
-  V(r_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
+  \hat{v}(r_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
   dx_idx_j
   \right]. \tag{9}
 \end{split}
@@ -890,7 +890,7 @@ $$
 We introduce the following shorthands for the above two integrals
 <p>&nbsp;<br>
 $$
-\langle \mu\nu|\hat{v}|\mu\nu\rangle =  \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)V(r_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
+\langle \mu\nu|\hat{v}|\mu\nu\rangle =  \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)\hat{v}(r_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
     dx_idx_j,
 $$
 <p>&nbsp;<br>
@@ -899,7 +899,7 @@ and
 <p>&nbsp;<br>
 $$
 \langle \mu\nu|\hat{v}|\nu\mu\rangle = \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)
-  V(r_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
+  \hat{v}(r_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
   dx_idx_j.  
 $$
 <p>&nbsp;<br>
@@ -1018,21 +1018,17 @@ $$
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-Recalling our discussions earlier, we introduced the following shorthands for the integrals, replacing here
-the two-body Coulomb interaction with a more general two-body interaction \( V \),
+Since the interaction is invariant under the interchange of two particles it means for example that we have
 <p>&nbsp;<br>
 $$
-\langle \mu\nu|V|\mu\nu\rangle =  \int \psi_{\mu}^*(\mathbf{r}_i)\psi_{\nu}^*(\mathbf{r}_j)V(r_{ij})\psi_{\mu}(\mathbf{r}_i)\psi_{\nu}(\mathbf{r}_j)
-    d\mathbf{r}_i\mathbf{r}_j,
+\langle \mu\nu|\hat{v}|\mu\nu\rangle =  \langle \nu\mu|\hat{v}|\nu\mu\rangle,  
 $$
 <p>&nbsp;<br>
 
-and
+or in the more general case
 <p>&nbsp;<br>
 $$
-\langle \mu\nu|V|\nu\mu\rangle = \int \psi_{\mu}^*(\mathbf{r}_i)\psi_{\nu}^*(\mathbf{r}_j)
-  V(r_{ij})\psi_{\nu}(\mathbf{r}_i)\psi_{\mu}(\mathbf{r}_i)
-  d\mathbf{r}_i\mathbf{r}_j.  
+\langle \mu\nu|\hat{v}|\sigma\tau\rangle =  \langle \nu\mu|\hat{v}|\tau\sigma\rangle.  
 $$
 <p>&nbsp;<br>
 </div>
@@ -1049,17 +1045,31 @@ $$
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-Since the interaction is invariant under the interchange of two particles it means for example that we have
+The direct and exchange matrix elements can be  brought together if we define the antisymmetrized matrix element
 <p>&nbsp;<br>
 $$
-\langle \mu\nu|V|\mu\nu\rangle =  \langle \nu\mu|V|\nu\mu\rangle,  
+\langle \mu\nu|\hat{v}|\mu\nu\rangle_{AS}= \langle \mu\nu|\hat{v}|\mu\nu\rangle-\langle \mu\nu|\hat{v}|\nu\mu\rangle,
 $$
 <p>&nbsp;<br>
 
-or in the more general case
+or for a general matrix element  
 <p>&nbsp;<br>
 $$
-\langle \mu\nu|V|\sigma\tau\rangle =  \langle \nu\mu|V|\tau\sigma\rangle.  
+\langle \mu\nu|\hat{v}|\sigma\tau\rangle_{AS}= \langle \mu\nu|\hat{v}|\sigma\tau\rangle-\langle \mu\nu|\hat{v}|\tau\sigma\rangle.
+$$
+<p>&nbsp;<br>
+
+It has the symmetry property
+<p>&nbsp;<br>
+$$
+\langle \mu\nu|\hat{v}|\sigma\tau\rangle_{AS}= -\langle \mu\nu|\hat{v}|\tau\sigma\rangle_{AS}=-\langle \nu\mu|\hat{v}|\sigma\tau\rangle_{AS}.
+$$
+<p>&nbsp;<br>
+
+The antisymmetric matrix element is also hermitian, implying 
+<p>&nbsp;<br>
+$$
+\langle \mu\nu|\hat{v}|\sigma\tau\rangle_{AS}= \langle \sigma\tau|\hat{v}|\mu\nu\rangle_{AS}.
 $$
 <p>&nbsp;<br>
 </div>
@@ -1076,53 +1086,12 @@ $$
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-The direct and exchange matrix elements can be  brought together if we define the antisymmetrized matrix element
-<p>&nbsp;<br>
-$$
-\langle \mu\nu|V|\mu\nu\rangle_{AS}= \langle \mu\nu|V|\mu\nu\rangle-\langle \mu\nu|V|\nu\mu\rangle,
-$$
-<p>&nbsp;<br>
-
-or for a general matrix element  
-<p>&nbsp;<br>
-$$
-\langle \mu\nu|V|\sigma\tau\rangle_{AS}= \langle \mu\nu|V|\sigma\tau\rangle-\langle \mu\nu|V|\tau\sigma\rangle.
-$$
-<p>&nbsp;<br>
-
-It has the symmetry property
-<p>&nbsp;<br>
-$$
-\langle \mu\nu|V|\sigma\tau\rangle_{AS}= -\langle \mu\nu|V|\tau\sigma\rangle_{AS}=-\langle \nu\mu|V|\sigma\tau\rangle_{AS}.
-$$
-<p>&nbsp;<br>
-
-The antisymmetric matrix element is also hermitian, implying 
-<p>&nbsp;<br>
-$$
-\langle \mu\nu|V|\sigma\tau\rangle_{AS}= \langle \sigma\tau|V|\mu\nu\rangle_{AS}.
-$$
-<p>&nbsp;<br>
-</div>
-
-
-<p>
-
-</section>
-
-
-<section>
-
-<h2 id="___sec29">Derivation of Hartree-Fock equations in coordinate space </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
 With these notations we rewrite the Hartree-Fock functional as
 <p>&nbsp;<br>
 $$
 \begin{equation}
   \int \Phi^*\hat{H_I}\Phi d\mathbf{\tau} 
-  = \frac{1}{2}\sum_{\mu=1}^A\sum_{\nu=1}^A \langle \mu\nu|V|\mu\nu\rangle_{AS}. \tag{10}
+  = \frac{1}{2}\sum_{\mu=1}^A\sum_{\nu=1}^A \langle \mu\nu|\hat{v}|\mu\nu\rangle_{AS}. \tag{10}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1136,7 +1105,7 @@ $$
 \begin{equation}
   E[\Phi] 
   = \sum_{\mu=1}^A \langle \mu | h | \mu \rangle +
-  \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle \mu\nu|V|\mu\nu\rangle_{AS}. \tag{11}
+  \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle \mu\nu|\hat{v}|\mu\nu\rangle_{AS}. \tag{11}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1152,7 +1121,7 @@ In our coordinate space derivations below we will spell out the Hartree-Fock equ
 
 <section>
 
-<h2 id="___sec30">Derivation of Hartree-Fock equations in coordinate space </h2>
+<h2 id="___sec29">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1183,7 +1152,7 @@ $$
 
 <section>
 
-<h2 id="___sec31">Derivation of Hartree-Fock equations in coordinate space </h2>
+<h2 id="___sec30">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1222,7 +1191,7 @@ $$
 
 <section>
 
-<h2 id="___sec32">Derivation of Hartree-Fock equations in coordinate space </h2>
+<h2 id="___sec31">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1256,7 +1225,7 @@ as summation indices, we obtain two identical terms.
 
 <section>
 
-<h2 id="___sec33">Derivation of Hartree-Fock equations in coordinate space </h2>
+<h2 id="___sec32">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1283,7 +1252,7 @@ This alternative derivation of the Hartree-Fock equations is given below.
 
 <section>
 
-<h2 id="___sec34">Analysis of Hartree-Fock equations in coordinate space </h2>
+<h2 id="___sec33">Analysis of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1322,7 +1291,7 @@ respectively.
 
 <section>
 
-<h2 id="___sec35">Analysis of Hartree-Fock equations in coordinate space </h2>
+<h2 id="___sec34">Analysis of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1372,7 +1341,7 @@ $$
 
 <section>
 
-<h2 id="___sec36">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
+<h2 id="___sec35">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1401,7 +1370,7 @@ to truncate the above sum.  We assume that the basis \( \phi_{\lambda} \) is ort
 
 <section>
 
-<h2 id="___sec37">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
+<h2 id="___sec36">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1430,7 +1399,7 @@ $$
 
 <section>
 
-<h2 id="___sec38">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
+<h2 id="___sec37">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1447,7 +1416,7 @@ For general single-particle states we employ the labels \( pqrs\dots \).
 
 <section>
 
-<h2 id="___sec39">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
+<h2 id="___sec38">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1456,7 +1425,7 @@ In Eq.&nbsp;<a href="#mjx-eqn-11">(11)</a>, restated here
 $$
   E[\Phi] 
   = \sum_{\mu=1}^A \langle \mu | h | \mu \rangle +
-  \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle \mu\nu|V|\mu\nu\rangle_{AS},
+  \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle \mu\nu|\hat{v}|\mu\nu\rangle_{AS},
 $$
 <p>&nbsp;<br>
 
@@ -1468,7 +1437,7 @@ $$
 \begin{equation}
   E[\Phi^{HF}] 
   = \sum_{i=1}^A \langle i | h | i \rangle +
-  \frac{1}{2}\sum_{ij=1}^A\langle ij|V|ij\rangle_{AS}, \tag{14}
+  \frac{1}{2}\sum_{ij=1}^A\langle ij|\hat{v}|ij\rangle_{AS}, \tag{14}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1484,7 +1453,7 @@ where \( \Phi^{HF} \) is the new Slater determinant defined by the new basis of 
 
 <section>
 
-<h2 id="___sec40">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
+<h2 id="___sec39">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1494,7 +1463,7 @@ $$
 \begin{equation}
   E[\Psi] 
   = \sum_{i=1}^A \sum_{\alpha\beta} C^*_{i\alpha}C_{i\beta}\langle \alpha | h | \beta \rangle +
-  \frac{1}{2}\sum_{ij=1}^A\sum_{{\alpha\beta\gamma\delta}} C^*_{i\alpha}C^*_{j\beta}C_{i\gamma}C_{j\delta}\langle \alpha\beta|V|\gamma\delta\rangle_{AS}. \tag{15}
+  \frac{1}{2}\sum_{ij=1}^A\sum_{{\alpha\beta\gamma\delta}} C^*_{i\alpha}C^*_{j\beta}C_{i\gamma}C_{j\delta}\langle \alpha\beta|\hat{v}|\gamma\delta\rangle_{AS}. \tag{15}
 \end{equation}
 $$
 <p>&nbsp;<br>
@@ -1508,7 +1477,7 @@ $$
 
 <section>
 
-<h2 id="___sec41">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
+<h2 id="___sec40">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1540,7 +1509,7 @@ $$
 
 <section>
 
-<h2 id="___sec42">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
+<h2 id="___sec41">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1557,7 +1526,7 @@ the following Hartree-Fock equations
 <p>&nbsp;<br>
 $$
 \sum_{\beta} C_{i\beta}\langle \alpha | h | \beta \rangle+
-\sum_{j=1}^A\sum_{\beta\gamma\delta} C^*_{j\beta}C_{j\delta}C_{i\gamma}\langle \alpha\beta|V|\gamma\delta\rangle_{AS}=\epsilon_i^{HF}C_{i\alpha}.
+\sum_{j=1}^A\sum_{\beta\gamma\delta} C^*_{j\beta}C_{j\delta}C_{i\gamma}\langle \alpha\beta|\hat{v}|\gamma\delta\rangle_{AS}=\epsilon_i^{HF}C_{i\alpha}.
 $$
 <p>&nbsp;<br>
 </div>
@@ -1570,7 +1539,7 @@ $$
 
 <section>
 
-<h2 id="___sec43">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
+<h2 id="___sec42">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1578,7 +1547,7 @@ We can rewrite this equation as (changing dummy variables)
 <p>&nbsp;<br>
 $$
 \sum_{\beta} \left\{\langle \alpha | h | \beta \rangle+
-\sum_{j}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|V|\beta\delta\rangle_{AS}\right\}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}.
+\sum_{j}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}\right\}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}.
 $$
 <p>&nbsp;<br>
 
@@ -1593,7 +1562,7 @@ Note that the sums over greek indices run over the number of basis set functions
 
 <section>
 
-<h2 id="___sec44">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
+<h2 id="___sec43">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1601,7 +1570,7 @@ Defining
 <p>&nbsp;<br>
 $$
 h_{\alpha\beta}^{HF}=\langle \alpha | h | \beta \rangle+
-\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|V|\beta\delta\rangle_{AS},
+\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS},
 $$
 <p>&nbsp;<br>
 
@@ -1616,7 +1585,7 @@ $$
 
 The latter is nothing but a standard eigenvalue problem. Compared with Eq.&nbsp;<a href="#mjx-eqn-12">(12)</a>,
 we see that we do not need to compute any integrals in an iterative procedure for solving the equations.
-It suffices to tabulate the matrix elements \( \langle \alpha | h | \beta \rangle \) and \( \langle \alpha\gamma|V|\beta\delta\rangle_{AS} \) once and for all. Successive iterations require thus only a look-up in tables over one-body and two-body matrix elements. These details will be discussed below when we solve the Hartree-Fock equations numerical.
+It suffices to tabulate the matrix elements \( \langle \alpha | h | \beta \rangle \) and \( \langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS} \) once and for all. Successive iterations require thus only a look-up in tables over one-body and two-body matrix elements. These details will be discussed below when we solve the Hartree-Fock equations numerical.
 </div>
 
 
@@ -1627,7 +1596,7 @@ It suffices to tabulate the matrix elements \( \langle \alpha | h | \beta \rangl
 
 <section>
 
-<h2 id="___sec45">Hartree-Fock algorithm </h2>
+<h2 id="___sec44">Hartree-Fock algorithm </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1635,7 +1604,7 @@ Our Hartree-Fock matrix  is thus
 <p>&nbsp;<br>
 $$
 \hat{h}_{\alpha\beta}^{HF}=\langle \alpha | \hat{h}_0 | \beta \rangle+
-\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|V|\beta\delta\rangle_{AS}.
+\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
 $$
 <p>&nbsp;<br>
 
@@ -1651,7 +1620,7 @@ The Hartree-Fock equations are solved in an iterative waym starting with a guess
 
 <section>
 
-<h2 id="___sec46">Hartree-Fock algorithm </h2>
+<h2 id="___sec45">Hartree-Fock algorithm </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1660,7 +1629,7 @@ Normally we assume that the single-particle basis \( |\beta\rangle \) forms an e
 <p>&nbsp;<br>
 $$
 \hat{h}_{\alpha\beta}^{HF}=\epsilon_{\alpha}\delta_{\alpha,\beta}+
-\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|V|\beta\delta\rangle_{AS}.
+\sum_{j=1}^A\sum_{\gamma\delta} C^*_{j\gamma}C_{j\delta}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
 $$
 <p>&nbsp;<br>
 
@@ -1687,7 +1656,7 @@ $$
 
 <section>
 
-<h2 id="___sec47">Hartree-Fock algorithm </h2>
+<h2 id="___sec46">Hartree-Fock algorithm </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1704,7 +1673,7 @@ To set up the algorithm we can proceed as follows:
 <p>&nbsp;<br>
 $$
 \hat{h}_{\alpha\beta}^{HF}=\epsilon_{\alpha}\delta_{\alpha,\beta}+
-\sum_{j = 1}^A\sum_{\gamma\delta} C_{j\gamma}^{(0)}C_{j\delta}^{(0)}\langle \alpha\gamma|V|\beta\delta\rangle_{AS}.
+\sum_{j = 1}^A\sum_{\gamma\delta} C_{j\gamma}^{(0)}C_{j\delta}^{(0)}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
 $$
 <p>&nbsp;<br>
 </div>
@@ -1717,7 +1686,7 @@ $$
 
 <section>
 
-<h2 id="___sec48">Hartree-Fock algorithm </h2>
+<h2 id="___sec47">Hartree-Fock algorithm </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1731,7 +1700,7 @@ Solving the Hartree-Fock eigenvalue problem yields then new eigenvectors \( C_{i
 
 <p>&nbsp;<br>
 $$
-\sum_{j = 1}^A\sum_{\gamma\delta} C_{j\gamma}^{(1)}C_{j\delta}^{(1)}\langle \alpha\gamma|V|\beta\delta\rangle_{AS}.
+\sum_{j = 1}^A\sum_{\gamma\delta} C_{j\gamma}^{(1)}C_{j\delta}^{(1)}\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}.
 $$
 <p>&nbsp;<br>
 
@@ -1755,7 +1724,7 @@ energies and \( m \) is the number of single-particle states.
 
 <section>
 
-<h2 id="___sec49">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec48">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1786,7 +1755,7 @@ Our single-particle states \( ijk\dots \) are now single-particle states obtaine
 
 <section>
 
-<h2 id="___sec50">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec49">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1809,7 +1778,7 @@ This form will be used in our discussion of Koopman's theorem.
 
 <section>
 
-<h2 id="___sec51">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec50">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Atomic physics case.</b>
 <p>
@@ -1818,7 +1787,7 @@ We have
 $$
   E[\Phi^{\mathrm{HF}}(N)] 
   = \sum_{i=1}^H \langle i | \hat{h}_0 | i \rangle +
-  \frac{1}{2}\sum_{ij=1}^N\langle ij|V|ij\rangle_{AS},
+  \frac{1}{2}\sum_{ij=1}^N\langle ij|\hat{v}|ij\rangle_{AS},
 $$
 <p>&nbsp;<br>
 
@@ -1829,7 +1798,7 @@ when we remove one electron or add one electron, we can then define the correspo
 $$
   E[\Phi^{\mathrm{HF}}(N-1)] 
   = \sum_{i=1; i\ne k}^N \langle i | \hat{h}_0 | i \rangle +
-  \frac{1}{2}\sum_{ij=1;i,j\ne k}^N\langle ij|V|ij\rangle_{AS},
+  \frac{1}{2}\sum_{ij=1;i,j\ne k}^N\langle ij|\hat{v}|ij\rangle_{AS},
 $$
 <p>&nbsp;<br>
 
@@ -1844,7 +1813,7 @@ where we have removed a single-particle state \( k\le F \), that is a state belo
 
 <section>
 
-<h2 id="___sec52">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec51">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1852,7 +1821,7 @@ Calculating the difference
 <p>&nbsp;<br>
 $$
   E[\Phi^{\mathrm{HF}}(N)]-   E[\Phi^{\mathrm{HF}}(N-1)] = \langle k | \hat{h}_0 | k \rangle +
-  \frac{1}{2}\sum_{i=1;i\ne k}^N\langle ik|V|ik\rangle_{AS}  \frac{1}{2}\sum_{j=1;j\ne k}^N\langle kj|V|kj\rangle_{AS},
+  \frac{1}{2}\sum_{i=1;i\ne k}^N\langle ik|\hat{v}|ik\rangle_{AS}  \frac{1}{2}\sum_{j=1;j\ne k}^N\langle kj|\hat{v}|kj\rangle_{AS},
 $$
 <p>&nbsp;<br>
 
@@ -1860,7 +1829,7 @@ we obtain
 <p>&nbsp;<br>
 $$
   E[\Phi^{\mathrm{HF}}(N)]-   E[\Phi^{\mathrm{HF}}(N-1)] = \langle k | \hat{h}_0 | k \rangle +
-  \frac{1}{2}\sum_{j=1}^N\langle kj|V|kj\rangle_{AS}
+  \frac{1}{2}\sum_{j=1}^N\langle kj|\hat{v}|kj\rangle_{AS}
 $$
 <p>&nbsp;<br>
 
@@ -1880,7 +1849,7 @@ $$
 
 <section>
 
-<h2 id="___sec53">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec52">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1903,7 +1872,7 @@ Koopman's theorem states that for example the ionization energy of a closed-shel
 
 <section>
 
-<h2 id="___sec54">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec53">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1927,7 +1896,7 @@ in terms of the particles or degrees of freedom which we believe are the fundame
 
 <section>
 
-<h2 id="___sec55">Analysis of Hartree-Fock equations, Koopman's theorem </h2>
+<h2 id="___sec54">Analysis of Hartree-Fock equations, Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1937,7 +1906,7 @@ between nuclear forces and separation energies. Changing to nuclear system, we d
 $$
   E[\Phi^{\mathrm{HF}}(A)] 
   = \sum_{i=1}^A \langle i | \hat{h}_0 | i \rangle +
-  \frac{1}{2}\sum_{ij=1}^A\langle ij|V|ij\rangle_{AS},
+  \frac{1}{2}\sum_{ij=1}^A\langle ij|\hat{v}|ij\rangle_{AS},
 $$
 <p>&nbsp;<br>
 
@@ -1947,7 +1916,7 @@ for \( A \) nucleons, where \( A=N+Z \), with \( N \) now being the number of ne
 $$
   E[\Phi^{\mathrm{HF}}(A-1)] 
   = \sum_{i=1; i\ne k}^A \langle i | \hat{h}_0 | i \rangle +
-  \frac{1}{2}\sum_{ij=1;i,j\ne k}^A\langle ij|V|ij\rangle_{AS},
+  \frac{1}{2}\sum_{ij=1;i,j\ne k}^A\langle ij|\hat{v}|ij\rangle_{AS},
 $$
 <p>&nbsp;<br>
 
@@ -1962,7 +1931,7 @@ where we have removed a single-particle state \( k\le F \), that is a state belo
 
 <section>
 
-<h2 id="___sec56">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec55">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1971,7 +1940,7 @@ Calculating the difference
 $$
   E[\Phi^{\mathrm{HF}}(A)]-   E[\Phi^{\mathrm{HF}}(A-1)] 
   = \langle k | \hat{h}_0 | k \rangle +
-  \frac{1}{2}\sum_{i=1;i\ne k}^A\langle ik|V|ik\rangle_{AS}  \frac{1}{2}\sum_{j=1;j\ne k}^A\langle kj|V|kj\rangle_{AS},
+  \frac{1}{2}\sum_{i=1;i\ne k}^A\langle ik|\hat{v}|ik\rangle_{AS}  \frac{1}{2}\sum_{j=1;j\ne k}^A\langle kj|\hat{v}|kj\rangle_{AS},
 $$
 <p>&nbsp;<br>
 
@@ -1980,7 +1949,7 @@ which becomes
 $$
   E[\Phi^{\mathrm{HF}}(A)]-   E[\Phi^{\mathrm{HF}}(A-1)] 
   = \langle k | \hat{h}_0 | k \rangle +
-  \frac{1}{2}\sum_{j=1}^A\langle kj|V|kj\rangle_{AS}
+  \frac{1}{2}\sum_{j=1}^A\langle kj|\hat{v}|kj\rangle_{AS}
 $$
 <p>&nbsp;<br>
 
@@ -2001,7 +1970,7 @@ $$
 
 <section>
 
-<h2 id="___sec57">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec56">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2031,7 +2000,7 @@ define separation energies. We have thus our first link between nuclear forces (
 
 <section>
 
-<h2 id="___sec58">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec57">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2050,7 +2019,7 @@ BE(A+1)-BE(A)\approx  E[\Phi^{\mathrm{HF}}(A+1)]-   E[\Phi^{\mathrm{HF}}(A)] =  
 $$
 <p>&nbsp;<br>
 
-If  we use oxygen-16 as our closed-shell nucleus, we could then interpret the separation energy
+If  we use \( {}^{16}\mbox{O} \) as our closed-shell nucleus, we could then interpret the separation energy
 <p>&nbsp;<br>
 $$
 BE(^{16}\mathrm{O})-BE(^{15}\mathrm{O})\approx \epsilon_{0p^{\nu}_{1/2}}^{\mathrm{HF}}, 
@@ -2073,7 +2042,7 @@ $$
 
 <section>
 
-<h2 id="___sec59">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec58">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2092,8 +2061,8 @@ $$
 <p>&nbsp;<br>
 
 We can continue like this for all \( A\pm 1 \) nuclei where \( A \) is a good closed-shell (or subshell closure)
-nucleus. Examples are $^{4}$He, $^{22}$O, $^{24}$O, $^{40}$Ca, $^{48}$Ca, $^{52}$Ca, $^{54}$Ca, $^{56}$Ni, 
-$^{68}$Ni, $^{78}$Ni, $^{90}$Zr, $^{88}$Sr, $^{100}$Sn, $^{132}$Sn and $^{208}$Pb, to mention some possile cases.
+nucleus. Examples are \( {}^{22}\mbox{O} \), \( {}^{24}\mbox{O} \), \( {}^{40}\mbox{Ca} \), \( {}^{48}\mbox{Ca} \), \( {}^{52}\mbox{Ca} \), \( {}^{54}\mbox{Ca} \), \( {}^{56}\mbox{Ni} \), 
+\( {}^{68}\mbox{Ni} \), \( {}^{78}\mbox{Ni} \), \( {}^{90}\mbox{Zr} \), \( {}^{88}\mbox{Sr} \), \( {}^{100}\mbox{Sn} \), \( {}^{132}\mbox{Sn} \) and \( {}^{208}\mbox{Pb} \), to mention some possile cases.
 </div>
 
 
@@ -2104,7 +2073,7 @@ $^{68}$Ni, $^{78}$Ni, $^{90}$Zr, $^{88}$Sr, $^{100}$Sn, $^{132}$Sn and $^{208}$P
 
 <section>
 
-<h2 id="___sec60">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec59">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2124,7 +2093,7 @@ $$
 $$
 <p>&nbsp;<br>
 
-we can define the neutron and proton energy gaps for $^{16}$O as
+we can define the neutron and proton energy gaps for \( {}^{16}\mbox{O} \) as
 <p>&nbsp;<br>
 $$
 \Delta S_{\nu}=\epsilon_{0d^{\nu}_{5/2}}^{\mathrm{HF}}-\epsilon_{0p^{\nu}_{1/2}}^{\mathrm{HF}}, 
