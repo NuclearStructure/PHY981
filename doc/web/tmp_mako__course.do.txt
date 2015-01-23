@@ -34,14 +34,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/intro/pdf/intro-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/intro/pdf/intro-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/pdf/intro-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/pdf/intro-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/intro/pdf/intro-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/pdf/intro-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/intro/html/intro.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/intro/html/intro-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/html/intro.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/html/intro-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/intro/ipynb/intro.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/ipynb/intro.ipynb"
 
 
 
@@ -51,14 +51,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/spdata/pdf/spdata-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/spdata/pdf/spdata-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/pdf/spdata-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/pdf/spdata-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/spdata/pdf/spdata-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/pdf/spdata-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/spdata/html/spdata.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/spdata/html/spdata-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/html/spdata.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/html/spdata-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/spdata/ipynb/spdata.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/ipynb/spdata.ipynb"
 
 
 
@@ -68,14 +68,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/hfock/pdf/hfock-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/hfock/pdf/hfock-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/pdf/hfock-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/pdf/hfock-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/hfock/pdf/hfock-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/pdf/hfock-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/hfock/html/hfock.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/hfock/html/hfock-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/html/hfock.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/html/hfock-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/hfock/ipynb/hfock.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/ipynb/hfock.ipynb"
 
 
 
@@ -85,14 +85,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/pdf/secondquant-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/pdf/secondquant-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/pdf/secondquant-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/pdf/secondquant-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/pdf/secondquant-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/pdf/secondquant-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/html/secondquant.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/html/secondquant-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/html/secondquant.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/html/secondquant-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/ipynb/secondquant.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/ipynb/secondquant.ipynb"
 
 
 
@@ -102,14 +102,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/forces/pdf/forces-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/forces/pdf/forces-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/pdf/forces-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/pdf/forces-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/forces/pdf/forces-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/pdf/forces-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/forces/html/forces.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/forces/html/forces-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/html/forces.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/html/forces-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/forces/ipynb/forces.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/ipynb/forces.ipynb"
 
 
 
@@ -119,14 +119,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/fci/pdf/fci-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/fci/pdf/fci-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/pdf/fci-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/pdf/fci-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/fci/pdf/fci-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/pdf/fci-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/fci/html/fci.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/fci/html/fci-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/html/fci.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/html/fci-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/fci/ipynb/fci.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/ipynb/fci.ipynb"
 
 
 
@@ -136,14 +136,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/decays/pdf/decays-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/decays/pdf/decays-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/pdf/decays-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/pdf/decays-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/decays/pdf/decays-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/pdf/decays-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/decays/html/decays.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/decays/html/decays-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/html/decays.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/html/decays-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/decays/ipynb/decays.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/ipynb/decays.ipynb"
 
 
 
@@ -153,14 +153,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/pdf/simplemodels-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/pdf/simplemodels-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/pdf/simplemodels-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/pdf/simplemodels-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/pdf/simplemodels-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/pdf/simplemodels-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/html/simplemodels.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/html/simplemodels-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/html/simplemodels.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/html/simplemodels-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/ipynb/simplemodels.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/ipynb/simplemodels.ipynb"
 
 
 
@@ -170,14 +170,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/pdf/mbpt-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/pdf/mbpt-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/pdf/mbpt-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/pdf/mbpt-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/pdf/mbpt-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/pdf/mbpt-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/html/mbpt.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/html/mbpt-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/html/mbpt.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/html/mbpt-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/ipynb/mbpt.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/ipynb/mbpt.ipynb"
 
 
 
@@ -187,14 +187,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/cc/pdf/cc-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/cc/pdf/cc-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/pdf/cc-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/pdf/cc-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/cc/pdf/cc-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/pdf/cc-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/cc/html/cc.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/cc/html/cc-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/html/cc.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/html/cc-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/cc/ipynb/cc.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/ipynb/cc.ipynb"
 
 
 
@@ -204,14 +204,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/srg/pdf/srg-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/srg/pdf/srg-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/pdf/srg-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/pdf/srg-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/srg/pdf/srg-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/pdf/srg-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/srg/html/srg.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/srg/html/srg-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/html/srg.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/html/srg-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/srg/ipynb/srg.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/ipynb/srg.ipynb"
 
 
 
@@ -221,14 +221,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/gf/pdf/gf-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/gf/pdf/gf-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/pdf/gf-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/pdf/gf-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/gf/pdf/gf-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/pdf/gf-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/gf/html/gf.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/gf/html/gf-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/html/gf.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/html/gf-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/gf/ipynb/gf.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/ipynb/gf.ipynb"
 
 
 
@@ -238,14 +238,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/mc/pdf/mc-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/mc/pdf/mc-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/pdf/mc-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/pdf/mc-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/mc/pdf/mc-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/pdf/mc-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/mc/html/mc.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/mc/html/mc-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/html/mc.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/html/mc-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/mc/ipynb/mc.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/ipynb/mc.ipynb"
 
 
 
@@ -255,14 +255,14 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": " http://nuclearstructure.github.io/PHY981/doc/pub/inf/pdf/inf-print.pdf", compact: "6 pages per sheet": " http://nuclearstructure.github.io/PHY981/doc/pub/inf/pdf/inf-print6.pdf"
+     * "Standard one-page format": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/pdf/inf-print.pdf", compact: "6 pages per sheet": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/pdf/inf-print6.pdf"
    * For screen viewing:
-     * "standard Beamer format": " http://nuclearstructure.github.io/PHY981/doc/pub/inf/pdf/inf-beamer.pdf"
+     * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/pdf/inf-beamer.pdf"
  * HTML:
-   * "Plain html style": " http://nuclearstructure.github.io/PHY981/doc/pub/inf/html/inf.html"
-   * "reveal.js beige slide style": " http://nuclearstructure.github.io/PHY981/doc/pub/inf/html/inf-reveal.html"
+   * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/html/inf.html"
+   * "reveal.js beige slide style": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/html/inf-reveal.html"
  * iPython notebook:
-   * "ipynb file": " http://nuclearstructure.github.io/PHY981/doc/pub/inf/ipynb/inf.ipynb"
+   * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/ipynb/inf.ipynb"
 
 
 
