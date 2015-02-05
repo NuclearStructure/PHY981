@@ -1,0 +1,220 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Second Quantization">
+
+<title>Second Quantization</title>
+
+
+<style type="text/css">
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
+}
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [(' Second quantization ', 2, None, '___sec0'),
+              (' Second quantization ', 2, None, '___sec1'),
+              (' Second quantization ', 2, None, '___sec2'),
+              (' Second quantization ', 2, None, '___sec3'),
+              (' Second quantization ', 2, None, '___sec4'),
+              (' Second quantization ', 2, None, '___sec5'),
+              (' Second quantization ', 2, None, '___sec6'),
+              (' Second quantization ', 2, None, '___sec7'),
+              (' Second quantization ', 2, None, '___sec8'),
+              (' Second quantization ', 2, None, '___sec9'),
+              (' Second quantization ', 2, None, '___sec10'),
+              (' Second quantization ', 2, None, '___sec11'),
+              (' Second quantization ', 2, None, '___sec12'),
+              (' Second quantization ', 2, None, '___sec13'),
+              (' Second quantization ', 2, None, '___sec14'),
+              (' Second quantization ', 2, None, '___sec15'),
+              (' Second quantization ', 2, None, '___sec16'),
+              (' Second quantization ', 2, None, '___sec17'),
+              (' Second quantization ', 2, None, '___sec18'),
+              (' Second quantization ', 2, None, '___sec19'),
+              (' Second quantization ', 2, None, '___sec20'),
+              (' Second quantization ', 2, None, '___sec21'),
+              (' Second quantization ', 2, None, '___sec22'),
+              (' Second quantization ', 2, None, '___sec23'),
+              (' Second quantization ', 2, None, '___sec24'),
+              (' Second quantization ', 2, None, '___sec25'),
+              (' Second quantization ', 2, None, '___sec26'),
+              (' Second quantization ', 2, None, '___sec27'),
+              (' Second quantization ', 2, None, '___sec28'),
+              (' Two-body operators in second quantization ',
+               2,
+               None,
+               '___sec29'),
+              (' Operators in second quantization ', 2, None, '___sec30'),
+              (' Operators in second quantization ', 2, None, '___sec31'),
+              (' Operators in second quantization ', 2, None, '___sec32'),
+              (' Operators in second quantization ', 2, None, '___sec33'),
+              (' Operators in second quantization ', 2, None, '___sec34'),
+              (' Operators in second quantization ', 2, None, '___sec35'),
+              (' Operators in second quantization ', 2, None, '___sec36'),
+              (' Operators in second quantization ', 2, None, '___sec37'),
+              (' Operators in second quantization ', 2, None, '___sec38'),
+              (' Operators in second quantization ', 2, None, '___sec39'),
+              (' Operators in second quantization ', 2, None, '___sec40'),
+              (' Operators in second quantization ', 2, None, '___sec41'),
+              (' Particle-hole formalism ', 2, None, '___sec42'),
+              (' Particle-hole formalism ', 2, None, '___sec43'),
+              (' Particle-hole formalism ', 2, None, '___sec44'),
+              (' Particle-hole formalism ', 2, None, '___sec45'),
+              (' Particle-hole formalism ', 2, None, '___sec46'),
+              (' Particle-hole formalism ', 2, None, '___sec47'),
+              (' Particle-hole formalism ', 2, None, '___sec48'),
+              (' Particle-hole formalism ', 2, None, '___sec49'),
+              (' Particle-hole formalism ', 2, None, '___sec50'),
+              (' Particle-hole formalism ', 2, None, '___sec51'),
+              (' Particle-hole formalism ', 2, None, '___sec52'),
+              ('  Summarizing and defining a normal-ordered Hamiltonian ',
+               2,
+               None,
+               '___sec53'),
+              ('  Summarizing and defining a normal-ordered Hamiltonian ',
+               2,
+               None,
+               '___sec54'),
+              ('  Summarizing and defining a normal-ordered Hamiltonian ',
+               2,
+               None,
+               '___sec55'),
+              ('  Summarizing and defining a normal-ordered Hamiltonian ',
+               2,
+               None,
+               '___sec56'),
+              (' Operators in second quantization ', 2, None, '___sec57'),
+              (' Operators in second quantization ', 2, None, '___sec58'),
+              (' Operators in second quantization ', 2, None, '___sec59'),
+              (' Operators in second quantization ', 2, None, '___sec60'),
+              (' Operators in second quantization ', 2, None, '___sec61'),
+              (' Operators in second quantization ', 2, None, '___sec62'),
+              (' Operators in second quantization ', 2, None, '___sec63'),
+              (' Operators in second quantization ', 2, None, '___sec64'),
+              (' Operators in second quantization ', 2, None, '___sec65'),
+              (' Exercises: Program to set up Slater determinants  ',
+               2,
+               None,
+               '___sec66')]}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "none"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<a name="part0000"></a>
+<p>
+<!-- begin top navigation -->
+<table style="width: 100%"><tr><td>
+</td><td>
+<div style="text-align: right;"><a href="._secondquant-plain001.html"><img src="http://hplgit.github.io/doconce/bundled/html_images/next1.png" border=0 alt="Next &raquo;"></a></div>
+</td></tr></table>
+<!-- end top navigation -->
+</p>
+
+<p>
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Slides for PHY981 -->
+
+
+<center><h1>Second Quantization</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway -->
+
+<center>
+<b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
+</center>
+
+
+<p>
+<!-- institution(s) -->
+<p>
+<center><h4>Spring 2015</h4></center> <!-- date -->
+<p>
+<p>
+<!-- begin bottom navigation -->
+<table style="width: 100%"><tr><td>
+</td><td>
+<div style="text-align: right;"><a href="._secondquant-plain001.html"><img src="http://hplgit.github.io/doconce/bundled/html_images/next1.png" border=0 alt="Next &raquo;"></a></div>
+</td></tr></table>
+<!-- end bottom navigation -->
+</p>
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+

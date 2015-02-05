@@ -1,0 +1,157 @@
+\documentclass[prc]{revtex4}
+\usepackage[dvips]{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{lscape}
+
+\usepackage{epic,eepic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvips]{epsfig}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{bezier}
+\usepackage{pstricks}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{braket}
+\usepackage[dvips]{graphicx}
+\usepackage{pst-plot}
+
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]
+    {\bra{#1}#2\ket{#3}}
+
+\newcommand{\normord}[1]{
+    \left\{#1\right\}
+}
+
+\usepackage{amsmath}
+\begin{document}
+
+\title{Exercises PHY981 Spring 2015}
+%\author{}
+\maketitle
+The exercises are available at the beginning of the 
+week and are  to be handed in 
+the week thereafter on {\bf Wednesdays at noon}. This can be done electronically by sending your github link or by sending a scan of your notes, a pdf or postscript file, or ipython notebook or any format you prefer,  by email to 
+hjensen@nscl.msu.edu. 
+
+
+
+\subsection*{Exercise 5}
+This exercise serves to convince you about the relation between
+two different single-particle bases, where one could be our new Hartree-Fock basis and the other a harmonic oscillator basis.
+\begin{enumerate}
+\item[a)]
+Consider a Slater determinant built up of single-particle orbitals $\psi_{\lambda}$, 
+with $\lambda = 1,2,\dots,A$.
+
+The unitary transformation
+\[
+\psi_a  = \sum_{\lambda} C_{a\lambda}\phi_{\lambda},
+\]
+brings us into the new basis.  
+The new basis has quantum numbers $a=1,2,\dots,A$.
+Show that the new basis is orthonormal.
+Show that the new Slater determinant constructed from the new single-particle wave functions can be
+written as the determinant based on the previous basis and the determinant of the matrix $C$.
+Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
+(Hint, $C$ is a unitary matrix). 
+\item[b)]  Starting with the second quantization representation of the Slater determinant 
+\[
+\Phi_{0}=\prod_{i=1}^{n}a_{\alpha_{i}}^{\dagger}\ket{0},
+\]
+use Wick's theorem to compute the normalization integral
+$<\Phi_{0}|\Phi_{0}>$.
+
+\end{enumerate}
+
+\subsection*{Exercise 6}
+
+Calculate the matrix elements
+\[
+\bra{\alpha_{1}\alpha_{2}}\hat{F}\ket{\alpha_{1}\alpha_{2}}
+\]
+and
+\[
+\bra{\alpha_{1}\alpha_{2}}\hat{G}\ket{\alpha_{1}\alpha_{2}}
+\]
+with
+\[
+\ket{\alpha_{1}\alpha_{2}}=a_{\alpha_{1}}^{\dagger}
+a_{\alpha_{2}}^{\dagger}\ket{0} ,
+\]
+\[
+\hat{F}=\sum_{\alpha\beta}\bra{\alpha}f\ket{\beta}
+a_{\alpha}^{\dagger}a_{\beta}  ,
+\]
+\[
+\bra{\alpha}f\ket{\beta}=\int \psi_{\alpha}^{*}(x)f(x)\psi_{\beta}(x)dx ,
+\]
+\[
+\hat{G} = \frac{1}{2}\sum_{\alpha\beta\gamma\delta}
+\bra{\alpha\beta}g\ket{\gamma\delta}
+a_{\alpha}^{\dagger}a_{\beta}^{\dagger}a_{\delta}a_{\gamma} ,
+\]
+and
+
+\[
+\bra{\alpha\beta}g\ket{\gamma\delta}=
+\int\int \psi_{\alpha}^{*}(x_{1})\psi_{\beta}^{*}(x_{2})g(x_{1},
+x_{2})\psi_{\gamma}(x_{1})\psi_{\delta}(x_{2})dx_{1}dx_{2}
+\]
+
+Compare these results with those from exercise 3c).
+
+
+\subsection*{Exercise 7}
+
+Show that the onebody part of the Hamiltonian
+    \begin{equation*}
+        \hat{H}_0 = \sum_{pq} \element{p}{\hat{h}_0}{q} a^\dagger_p a_q
+    \end{equation*}
+can be written, using standard annihilation and creation operators, in normal-ordered form as 
+    \begin{align*}
+        \hat{H}_0 &= \sum_{pq} \element{p}{\hat{h}_0}{q} a^\dagger_p a_q \nonumber \\
+            &= \sum_{pq} \element{p}{\hat{h}_0}{q} \left\{a^\dagger_p a_q\right\} + 
+                \delta_{pq\in i} \sum_{pq} \element{p}{\hat{h}_0}{q} \nonumber \\
+            &= \sum_{pq} \element{p}{\hat{h}_0}{q} \left\{a^\dagger_p a_q\right\} +
+                \sum_i \element{i}{\hat{h}_0}{i}
+    \end{align*}
+Explain the meaning of the various symbols. Which reference 
+vacuum has been used?
+
+\subsection*{Exercise 8}
+Show that the twobody part of the Hamiltonian
+    \begin{equation*}
+        \hat{H}_I = \frac{1}{4} \sum_{pqrs} \element{pq}{\hat{v}}{rs} a^\dagger_p a^\dagger_q a_s  a_r
+    \end{equation*}
+can be written, using standard annihilation and creation operators, in normal-ordered form as 
+    \begin{align*}
+    \hat{H}_I &= \frac{1}{4} \sum_{pqrs} \element{pq}{\hat{v}}{rs} a^\dagger_p a^\dagger_q a_s  a_r \nonumber \\
+        &= \frac{1}{4} \sum_{pqrs} \element{pq}{\hat{v}}{rs} \normord{a^\dagger_p a^\dagger_q a_s  a_r}
+            + \sum_{pqi} \element{pi}{\hat{v}}{qi} \normord{a^\dagger_p a_q} 
+            + \frac{1}{2} \sum_{ij} \element{ij}{\hat{v}}{ij}
+    \end{align*}
+Explain again the meaning of the various symbols.
+
+This exercise is optional: Derive the normal-ordered form of the threebody part of the Hamiltonian.
+    \begin{align*}
+    \hat{H}_3 &= \frac{1}{36} \sum_{\substack{
+                        pqr \\
+                        stu}}
+                 \element{pqr}{\hat{v}_3}{stu} a^\dagger_p a^\dagger_q a^\dagger_r a_u a_t a_s\\
+    \end{align*}
+and specify the contributions to the twobody, onebody and the scalar part.
+
+\end{document}

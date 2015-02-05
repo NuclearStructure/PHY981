@@ -1,0 +1,120 @@
+\frametitle{Exercises: Program to set up Slater determinants}
+
+\begin{block}{Exercise 5 }
+
+Write a program which sets up all possible Slater determinants given $N=4$ eletrons which can occupy
+the atomic single-particle states defined by the $1s$, $2s2p$ and $3s3p3d$ shells. How many single-particle
+states $n$ are there in total?  Include the spin degrees of freedom as well.
+We include here a python program which may aid in this direction. It uses bit manipulation functions from \href{{http://wiki.python.org/moin/BitManipulation}}{\nolinkurl{http://wiki.python.org/moin/BitManipulation}}.
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
+import math
+
+"""
+A simple Python class for Slater determinant manipulation
+Bit-manipulation stolen from:
+
+http://wiki.python.org/moin/BitManipulation
+"""
+
+# bitCount() counts the number of bits set (not an optimal function)
+
+def bitCount(int_type):
+    """ Count bits set in integer """
+    count = 0
+    while(int_type):
+        int_type &= int_type - 1
+        count += 1
+    return(count)
+
+
+# testBit() returns a nonzero result, 2**offset, if the bit at 'offset' is one.
+
+def testBit(int_type, offset):
+    mask = 1 << offset
+    return(int_type & mask) >> offset
+
+# setBit() returns an integer with the bit at 'offset' set to 1.
+
+def setBit(int_type, offset):
+    mask = 1 << offset
+    return(int_type | mask)
+
+# clearBit() returns an integer with the bit at 'offset' cleared.
+
+def clearBit(int_type, offset):
+    mask = ~(1 << offset)
+    return(int_type & mask)
+
+# toggleBit() returns an integer with the bit at 'offset' inverted, 0 -> 1 and 1 -> 0.
+
+def toggleBit(int_type, offset):
+    mask = 1 << offset
+    return(int_type ^ mask)
+
+# binary string made from number
+
+def bin0(s):
+    return str(s) if s<=1 else bin0(s>>1) + str(s&1)
+
+def bin(s, L = 0):
+    ss = bin0(s)
+    if L > 0:
+        return '0'*(L-len(ss)) + ss
+    else:
+        return ss
+
+
+
+class Slater:
+    """ Class for Slater determinants """
+    def __init__(self):
+        self.word = int(0)
+
+    def create(self, j):
+        print "c^+_" + str(j) + " |" + bin(self.word) + ">  = ",
+        # Assume bit j is set, then we return zero.
+        s = 0
+        # Check if bit j is set.
+        isset = testBit(self.word, j)
+        if isset == 0:
+            bits = bitCount(self.word & ((1<<j)-1))
+            s = pow(-1, bits)
+            self.word = setBit(self.word, j)
+
+        print str(s) + " x |" + bin(self.word) + ">"
+        return s
+
+    def annihilate(self, j):
+        print "c_" + str(j) + " |" + bin(self.word) + ">  = ",
+        # Assume bit j is not set, then we return zero.
+        s = 0
+        # Check if bit j is set.
+        isset = testBit(self.word, j)
+        if isset == 1:
+            bits = bitCount(self.word & ((1<<j)-1))
+            s = pow(-1, bits)
+            self.word = clearBit(self.word, j)
+
+        print str(s) + " x |" + bin(self.word) + ">"
+        return s
+
+
+
+# Do some testing:
+
+phi = Slater()
+phi.create(0)
+phi.create(1)
+phi.create(2)
+phi.create(3)
+
+print
+
+
+s = phi.annihilate(2)
+s = phi.create(7)
+s = phi.annihilate(0)
+s = phi.create(200)
+
+\end{minted}
+\end{block}
