@@ -1287,7 +1287,7 @@ states.  When performing the commutator algebra we can regroup the operator in f
 	\hat{H}_I = \hat{H}_I^{(a)} + \hat{H}_I^{(b)} + \hat{H}_I^{(c)} + \hat{H}_I^{(d)} + \hat{H}_I^{(e)} \label{eq:2-65}
 \end{equation}
 Using anti-symmetrized  matrix elements, 
-the term  $\hat{H}_I^{(a)}$ is  
+bthe term  $\hat{H}_I^{(a)}$ is  
 \begin{equation}
 	\hat{H}_I^{(a)} = \frac{1}{4}
 	\sum_{abcd} \langle ab|\hat{V}|cd\rangle 
@@ -1700,6 +1700,127 @@ which results in $|0001000000000000\rangle$. Counting the number of $1-$bits giv
 
 
 
+% !split
+\subsection{Exercise 5}
+
+% --- begin paragraph admon ---
+\paragraph{}
+This exercise serves to convince you about the relation between
+two different single-particle bases, where one could be our new Hartree-Fock basis and the other a harmonic oscillator basis.
+\begin{itemize}
+\item Consider a Slater determinant built up of single-particle orbitals $\psi_{\lambda}$, 
+\end{itemize}
+
+\noindent
+with $\lambda = 1,2,\dots,A$. The unitary transformation
+\[
+\psi_a  = \sum_{\lambda} C_{a\lambda}\phi_{\lambda},
+\]
+brings us into the new basis.  
+The new basis has quantum numbers $a=1,2,\dots,A$.
+Show that the new basis is orthonormal.
+Show that the new Slater determinant constructed from the new single-particle wave functions can be
+written as the determinant based on the previous basis and the determinant of the matrix $C$.
+Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
+(Hint, $C$ is a unitary matrix). 
+\begin{itemize}
+\item Starting with the second quantization representation of the Slater determinant 
+\end{itemize}
+
+\noindent
+\[
+\Phi_{0}=\prod_{i=1}^{n}a_{\alpha_{i}}^{\dagger}|0\rangle,
+\]
+use Wick's theorem to compute the normalization integral
+$\langle\Phi_{0}|\Phi_{0}\rangle$.
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{Exercise 6}
+
+% --- begin paragraph admon ---
+\paragraph{}
+Calculate the matrix elements
+\[
+\langle \alpha_{1}\alpha_{2}|\hat{F}|\alpha_{1}\alpha_{2}\rangle
+\]
+and
+\[
+\langle \alpha_{1}\alpha_{2}|\hat{G}|\alpha_{1}\alpha_{2}\rangle
+\]
+with
+\[
+|\alpha_{1}\alpha_{2}\rangle=a_{\alpha_{1}}^{\dagger}a_{\alpha_{2}}^{\dagger}|0\rangle ,
+\]
+\[
+\hat{F}=\sum_{\alpha\beta}\langle \alpha|\hat{f}|\beta\rangle
+a_{\alpha}^{\dagger}a_{\beta}  ,
+\]
+\[
+\langle \alpha|\hat{f}|\beta\rangle=\int \psi_{\alpha}^{*}(x)f(x)\psi_{\beta}(x)dx ,
+\]
+\[
+\hat{G} = \frac{1}{2}\sum_{\alpha\beta\gamma\delta}
+\langle \alpha\beta |\hat{g}|\gamma\delta\rangle
+a_{\alpha}^{\dagger}a_{\beta}^{\dagger}a_{\delta}a_{\gamma} ,
+\]
+and
+\[
+\langle \alpha\beta |\hat{g}|\gamma\delta\rangle=
+\int\int \psi_{\alpha}^{*}(x_{1})\psi_{\beta}^{*}(x_{2})g(x_{1},
+x_{2})\psi_{\gamma}(x_{1})\psi_{\delta}(x_{2})dx_{1}dx_{2}
+\]
+Compare these results with those from exercise 3c).
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{Exercise 7}
+
+% --- begin paragraph admon ---
+\paragraph{}
+Show that the onebody part of the Hamiltonian
+\[	     
+\hat{H}_0 = \sum_{pq} \langle p|\hat{h}_0|q\rangle a^{\dagger}_p a_q,
+\]
+can be written, using standard annihilation and creation operators, in normal-ordered form as 
+\[
+\hat{H}_0 = \sum_{pq} \langle p|\hat{h}_0|q\rangle \left\{a^\dagger_p a_q\right\} +
+             \sum_i \langle i|\hat{h}_0|i\rangle.
+\]
+Explain the meaning of the various symbols. Which reference 
+vacuum has been used?
+% --- end paragraph admon ---
+
+  
+
+% !split
+\subsection{Exercise 8}
+
+% --- begin paragraph admon ---
+\paragraph{}
+Show that the twobody part of the Hamiltonian
+\[
+  \hat{H}_I = \frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle a^\dagger_p a^\dagger_q a_s  a_r,
+\]
+can be written, using standard annihilation and creation operators, in normal-ordered form as 
+\[
+\hat{H}_I =\frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle \left\{a^\dagger_p a^\dagger_q a_s  a_r\right\}
+            + \sum_{pqi} \langle pi|\hat{v}|qi\rangle \left\{a^\dagger_p a_q\right\} 
+            + \frac{1}{2} \sum_{ij}\langle ij|\hat{v}|ij\rangle.
+\]
+Explain again the meaning of the various symbols.
+
+This exercise is optional: Derive the normal-ordered form of the threebody part of the Hamiltonian.
+\[
+\hat{H}_3 = \frac{1}{36} \sum_{\substack{pqr \\ stu}}
+                 \langle pqr|\hat{v}_3|stu\rangle a^\dagger_p a^\dagger_q a^\dagger_r a_u a_t a_s,
+\]
+and specify the contributions to the twobody, onebody and the scalar part.
+% --- end paragraph admon ---
 
 
 
@@ -1708,7 +1829,7 @@ which results in $|0001000000000000\rangle$. Counting the number of $1-$bits giv
 \subsection{Exercises: Program to set up Slater determinants}
 
 % --- begin paragraph admon ---
-\paragraph{Exercise 5.}
+\paragraph{Exercise 9.}
 
 Write a program which sets up all possible Slater determinants given $N=4$ eletrons which can occupy
 the atomic single-particle states defined by the $1s$, $2s2p$ and $3s3p3d$ shells. How many single-particle
@@ -1830,6 +1951,28 @@ s = phi.create(200)
     
 
 
+% !split
+\subsection{Exercises: Program to set up Slater determinants}
+
+% --- begin paragraph admon ---
+\paragraph{Exercise 10.}
+Compute the matrix element
+\[
+\langle\alpha_{1}\alpha_{2}\alpha_{3}|\hat{G}|\alpha_{1}'\alpha_{2}'\alpha_{3}'\rangle,
+\]
+using Wick's theorem and express the two-body operator
+$G$ in the occupation number (second quantization) 
+representation.
+
+This exercise can be solve using the symbolic python package as follows
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+from sympy import symbols, Function, Dummy, latex
+from sympy.physics.secondquant import wicks, F, Fd, NO
+
+a1,a2,a3,b1,b2,b3,a,b,g,d = symbols('a1,a2,a3,b1,b2,b3,a,b,g,d',above_fermi=True)
+print(latex(wicks(F(a3)*F(a2)*F(a1)*Fd(a)*Fd(b)*F(d)*F(g)*Fd(b1)*Fd(b2)*Fd(b3),keep_only_fully_contracted=True)))
+\end{minted}
+% --- end paragraph admon ---
 
 
 

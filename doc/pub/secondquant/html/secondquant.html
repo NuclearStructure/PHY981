@@ -141,10 +141,18 @@ div { text-align: justify; text-justify: inter-word; }
               (' Operators in second quantization ', 2, None, '___sec63'),
               (' Operators in second quantization ', 2, None, '___sec64'),
               (' Operators in second quantization ', 2, None, '___sec65'),
+              (' Exercise 5 ', 2, None, '___sec66'),
+              (' Exercise 6 ', 2, None, '___sec67'),
+              (' Exercise 7 ', 2, None, '___sec68'),
+              (' Exercise 8 ', 2, None, '___sec69'),
               (' Exercises: Program to set up Slater determinants  ',
                2,
                None,
-               '___sec66')]}
+               '___sec70'),
+              (' Exercises: Program to set up Slater determinants  ',
+               2,
+               None,
+               '___sec71')]}
 end of tocinfo -->
 
 <body>
@@ -1564,7 +1572,7 @@ $$
 $$
 
 Using anti-symmetrized  matrix elements, 
-the term  \( \hat{H}_I^{(a)} \) is  
+bthe term  \( \hat{H}_I^{(a)} \) is  
 $$
 \begin{equation}
 	\hat{H}_I^{(a)} = \frac{1}{4}
@@ -2019,9 +2027,152 @@ which results in \( |0001000000000000\rangle \). Counting the number of $1-$bits
 <p>
 <!-- !split -->
 
-<h2 id="___sec66">Exercises: Program to set up Slater determinants  </h2>
+<h2 id="___sec66">Exercise 5 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Exercise 5.</b>
+<b></b>
+<p>
+This exercise serves to convince you about the relation between
+two different single-particle bases, where one could be our new Hartree-Fock basis and the other a harmonic oscillator basis.
+
+<ul>
+<li> Consider a Slater determinant built up of single-particle orbitals \( \psi_{\lambda} \),</li> 
+</ul>
+
+with \( \lambda = 1,2,\dots,A \). The unitary transformation
+$$
+\psi_a  = \sum_{\lambda} C_{a\lambda}\phi_{\lambda},
+$$
+
+brings us into the new basis.  
+The new basis has quantum numbers \( a=1,2,\dots,A \).
+Show that the new basis is orthonormal.
+Show that the new Slater determinant constructed from the new single-particle wave functions can be
+written as the determinant based on the previous basis and the determinant of the matrix \( C \).
+Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
+(Hint, \( C \) is a unitary matrix). 
+
+<ul>
+<li> Starting with the second quantization representation of the Slater determinant</li> 
+</ul>
+
+$$
+\Phi_{0}=\prod_{i=1}^{n}a_{\alpha_{i}}^{\dagger}|0\rangle,
+$$
+
+use Wick's theorem to compute the normalization integral
+\( \langle\Phi_{0}|\Phi_{0}\rangle \).
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec67">Exercise 6 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Calculate the matrix elements
+$$
+\langle \alpha_{1}\alpha_{2}|\hat{F}|\alpha_{1}\alpha_{2}\rangle
+$$
+
+and
+$$
+\langle \alpha_{1}\alpha_{2}|\hat{G}|\alpha_{1}\alpha_{2}\rangle
+$$
+
+with
+$$
+|\alpha_{1}\alpha_{2}\rangle=a_{\alpha_{1}}^{\dagger}a_{\alpha_{2}}^{\dagger}|0\rangle ,
+$$
+
+$$
+\hat{F}=\sum_{\alpha\beta}\langle \alpha|\hat{f}|\beta\rangle
+a_{\alpha}^{\dagger}a_{\beta}  ,
+$$
+
+$$
+\langle \alpha|\hat{f}|\beta\rangle=\int \psi_{\alpha}^{*}(x)f(x)\psi_{\beta}(x)dx ,
+$$
+
+$$
+\hat{G} = \frac{1}{2}\sum_{\alpha\beta\gamma\delta}
+\langle \alpha\beta |\hat{g}|\gamma\delta\rangle
+a_{\alpha}^{\dagger}a_{\beta}^{\dagger}a_{\delta}a_{\gamma} ,
+$$
+
+and
+$$
+\langle \alpha\beta |\hat{g}|\gamma\delta\rangle=
+\int\int \psi_{\alpha}^{*}(x_{1})\psi_{\beta}^{*}(x_{2})g(x_{1},
+x_{2})\psi_{\gamma}(x_{1})\psi_{\delta}(x_{2})dx_{1}dx_{2}
+$$
+
+Compare these results with those from exercise 3c).
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec68">Exercise 7 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Show that the onebody part of the Hamiltonian
+$$	     
+\hat{H}_0 = \sum_{pq} \langle p|\hat{h}_0|q\rangle a^{\dagger}_p a_q,
+$$
+
+can be written, using standard annihilation and creation operators, in normal-ordered form as 
+$$
+\hat{H}_0 = \sum_{pq} \langle p|\hat{h}_0|q\rangle \left\{a^\dagger_p a_q\right\} +
+             \sum_i \langle i|\hat{h}_0|i\rangle.
+$$
+
+Explain the meaning of the various symbols. Which reference 
+vacuum has been used?
+</div>
+  
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec69">Exercise 8 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Show that the twobody part of the Hamiltonian
+$$
+  \hat{H}_I = \frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle a^\dagger_p a^\dagger_q a_s  a_r,
+$$
+
+can be written, using standard annihilation and creation operators, in normal-ordered form as 
+$$
+\hat{H}_I =\frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle \left\{a^\dagger_p a^\dagger_q a_s  a_r\right\}
+            + \sum_{pqi} \langle pi|\hat{v}|qi\rangle \left\{a^\dagger_p a_q\right\} 
+            + \frac{1}{2} \sum_{ij}\langle ij|\hat{v}|ij\rangle.
+$$
+
+Explain again the meaning of the various symbols.
+
+<p>
+This exercise is optional: Derive the normal-ordered form of the threebody part of the Hamiltonian.
+$$
+\hat{H}_3 = \frac{1}{36} \sum_{\substack{pqr \\ stu}}
+                 \langle pqr|\hat{v}_3|stu\rangle a^\dagger_p a^\dagger_q a^\dagger_r a_u a_t a_s,
+$$
+
+and specify the contributions to the twobody, onebody and the scalar part.
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec70">Exercises: Program to set up Slater determinants  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 9.</b>
 <p>
 
 <p>
@@ -2143,6 +2294,37 @@ s = phi.create(200)
 <!-- end verbatim block -->
 </div>
     
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec71">Exercises: Program to set up Slater determinants  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 10.</b>
+<p>
+Compute the matrix element
+$$
+\langle\alpha_{1}\alpha_{2}\alpha_{3}|\hat{G}|\alpha_{1}'\alpha_{2}'\alpha_{3}'\rangle,
+$$
+
+using Wick's theorem and express the two-body operator
+\( G \) in the occupation number (second quantization) 
+representation.
+
+<p>
+This exercise can be solve using the symbolic python package as follows
+<!-- begin verbatim block  pycod-->
+<pre><code>from sympy import symbols, Function, Dummy, latex
+from sympy.physics.secondquant import wicks, F, Fd, NO
+
+a1,a2,a3,b1,b2,b3,a,b,g,d = symbols('a1,a2,a3,b1,b2,b3,a,b,g,d',above_fermi=True)
+print(latex(wicks(F(a3)*F(a2)*F(a1)*Fd(a)*Fd(b)*F(d)*F(g)*Fd(b1)*Fd(b2)*Fd(b3),keep_only_fully_contracted=True)))
+</code></pre>
+<!-- end verbatim block -->
+
+
+</div>
+
 
 <p>
 
