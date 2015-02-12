@@ -1,0 +1,120 @@
+\documentclass[prc]{revtex4}
+\usepackage[dvips]{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{lscape}
+
+\usepackage{epic,eepic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvips]{epsfig}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{bezier}
+\usepackage{pstricks}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{braket}
+\usepackage[dvips]{graphicx}
+\usepackage{pst-plot}
+
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]
+    {\bra{#1}#2\ket{#3}}
+
+\newcommand{\normord}[1]{
+    \left\{#1\right\}
+}
+
+\usepackage{amsmath}
+\begin{document}
+
+\title{Exercises PHY981 Spring 2015}
+%\author{}
+\maketitle
+The exercises are available at the beginning of the 
+week and are  to be handed in 
+the week thereafter on {\bf Wednesdays at noon}. This can be done electronically by sending your github link or by sending a scan of your notes, a pdf or postscript file, or ipython notebook or any format you prefer,  by email to 
+hjensen@nscl.msu.edu. 
+
+
+
+\subsection*{Exercise 9}
+The aim of this exercise is to set up specific matrix elements that will turn useful when we start our discussions of the nuclear shell model. In particular you will notice, depending on the character of the operator, that many matrix elements will actually be zero.
+
+Consider three $N$-particle 
+Slater determinants  $|\Phi_0$, $|\Phi_i^a\rangle$ and $|\Phi_{ij}^{ab}\rangle$, where the notation means that 
+Slater determinant $|\Phi_i^a\rangle$ differs from $|\Phi_0\rangle$ by one single-particle state, that is a single-particle
+state $\psi_i$ is replaced by a single-particle state $\psi_a$. 
+It is often interpreted as a so-called one-particle-one-hole excitation.
+Similarly, the Slater determinant $|\Phi_{ij}^{ab}\rangle$
+differs by two single-particle states from $|\Phi_0\rangle$ and is normally thought of as a two-particle-two-hole excitation.
+We assume also that $|\Phi_0\rangle$ represents our new vacuum reference state
+and the labels $ijk\dots$ represent single-particle states below the Fermi level and $abc\dots$ represent states above the Fermi level, so-called particle states.
+We define thereafter a general onebody normal-ordered (with respect to the new vacuum state) operator 
+as
+\[
+\hat{F}_N=\sum_{pq}\langle p |f |\beta\rangle \left\{a_{p}^{\dagger}a_{q}\right\}  ,
+\]
+with
+\[
+\langle p |f| q\rangle=\int \psi_{p}^{*}(x)f(x)\psi_{q}(x)dx ,
+\]
+and a general normal-ordered two-body operator
+\[
+\hat{G}_N = \frac{1}{4}\sum_{pqrs}
+\langle pq |g| rs\rangle_{AS} \left\{a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r}\right\} ,
+\]
+with for example the direct matrix element given as
+\[
+\langle pq |g| rs\rangle=
+\int\int \psi_{p}^{*}(x_{1})\psi_{q}^{*}(x_{2})g(x_{1}, x_{2})\psi_{r}(x_{1})\psi_{s}(x_{2})dx_{1}dx_{2}
+\]
+with $g$ being invariant under the interchange of the coordinates of two particles.
+The single-particle states $\psi_i$ are not necessarily eigenstates of $\hat{f}$.  The curly brackets mean that the operators are normal-ordered with respect to the new vacuum reference state. 
+\begin{enumerate}
+\item[a)]  How would you write the above Slater determinants in a second quantization formalism, utilizing the fact that we have defined a new reference state? 
+
+\item[b)] Use thereafter Wick's theorem to find the expectation values of 
+\[
+\langle \Phi_0 |\hat{F}_N|\Phi_0\rangle,
+\]
+and
+\[
+\langle \Phi_0\hat{G}_N|\Phi_0\rangle.
+\]
+\item[c)] Find thereafter 
+\[
+\langle \Phi_0 |\hat{F}_N|\Phi_i^a\rangle,
+\]
+and
+\[
+\langle \Phi_0|\hat{G}_N|\Phi_i^a\rangle,
+\]
+and finally
+\item[d)] find 
+\[
+\langle \Phi_0 |\hat{F}_N|\Phi_{ij}^{ab}\rangle,
+\]
+and
+\[
+\langle \Phi_0|\hat{G}_N|\Phi_{ij}^{ab}\rangle.
+\]
+What happens with the two-body operator if we have a transition probability  of the type
+\[
+\langle \Phi_0|\hat{G}_N|\Phi_{ijk}^{abc}\rangle,
+\]
+where the Slater determinant to the right of the operator differs by more than two single-particle states?
+\end{enumerate}
+
+
+\end{document}
