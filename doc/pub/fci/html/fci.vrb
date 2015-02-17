@@ -1,0 +1,34 @@
+\frametitle{Example case: pairing Hamiltonian}
+
+\begin{block}{}
+
+Now we take the following Hamiltonian
+\[
+\hat{H} = \sum_n n \delta \hat{N}_n  - G \hat{P}^\dagger \hat{P}
+\]
+where
+\[
+\hat{N}_n = \hat{a}^\dagger_{n, m=+1/2} \hat{a}_{n, m=+1/2} +
+\hat{a}^\dagger_{n, m=-1/2} \hat{a}_{n, m=-1/2}
+\]
+and
+\[
+\hat{P}^\dagger = \sum_{n} \hat{a}^\dagger_{n, m=+1/2} \hat{a}^\dagger_{n, m=-1/2}
+\]
+We can write down the $ 6 \times 6$  Hamiltonian in the basis from the prior slide:
+\[
+H = \left (
+\begin{array}{cccccc}
+2\delta -2G & -G & -G & -G & -G & 0 \\
+ -G & 4\delta -2G & -G & -G & -0 & -G \\
+-G & -G & 6\delta -2G & 0 & -G & -G \\
+ -G & -G & 0 & 6\delta-2G & -G & -G \\
+ -G & 0 & -G & -G & 8\delta-2G & -G \\
+0 & -G & -G & -G & -G & 10\delta -2G
+\end{array} \right )
+\]
+(You should check by hand that this is correct.)
+
+For $\delta = 0$ we have the closed form solution of  the g.s. energy given by $-6G$.
+
+\end{block}

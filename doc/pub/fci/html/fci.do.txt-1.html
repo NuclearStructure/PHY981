@@ -1,0 +1,638 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Nuclear Shell Model">
+
+<title>Nuclear Shell Model</title>
+
+
+<style type="text/css">
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
+}
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [(' Nuclear shell model ', 2, None, '___sec0'),
+              (' Slater determinants as basis states, Repetition ',
+               2,
+               None,
+               '___sec1'),
+              (' Slater determinants as basis states, repetition ',
+               2,
+               None,
+               '___sec2'),
+              (' Slater determinants as basis states ', 2, None, '___sec3'),
+              (' Slater determinants as basis states ', 2, None, '___sec4'),
+              (' Quick repetition of the occupation representation ',
+               2,
+               None,
+               '___sec5'),
+              (' Full Configuration Interaction Theory ', 2, None, '___sec6'),
+              (' Full Configuration Interaction Theory ', 2, None, '___sec7'),
+              (' Full Configuration Interaction Theory ', 2, None, '___sec8'),
+              (' Full Configuration Interaction Theory ', 2, None, '___sec9'),
+              (' Full Configuration Interaction Theory ',
+               2,
+               None,
+               '___sec10'),
+              (' Full Configuration Interaction Theory ',
+               2,
+               None,
+               '___sec11'),
+              (' Full Configuration Interaction Theory ',
+               2,
+               None,
+               '___sec12'),
+              (' Full Configuration Interaction Theory ',
+               2,
+               None,
+               '___sec13'),
+              (' Full Configuration Interaction Theory ',
+               2,
+               None,
+               '___sec14'),
+              (' Full Configuration Interaction Theory ',
+               2,
+               None,
+               '___sec15')]}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Slides for PHY981 -->
+
+
+<center><h1>Nuclear Shell Model</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway -->
+
+<center>
+<b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
+</center>
+
+
+<p>
+<!-- institution(s) -->
+<p>
+<center><h4>Spring 2015</h4></center> <!-- date -->
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec0">Nuclear shell model </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+The topics covered in this and next week's lectures can be found in Alex Brown's lecture notes, chapters 5, 18, 21-22.
+See also Suhonen's chapter's 2 and 5.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec1">Slater determinants as basis states, Repetition </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The simplest possible choice for many-body wavefunctions are <b>product</b> wavefunctions.
+That is
+$$ 
+\Psi(x_1, x_2, x_3, \ldots, x_A) \approx \phi_1(x_1) \phi_2(x_2) \phi_3(x_3) \ldots
+$$
+
+because we are really only good  at thinking about one particle at a time. Such 
+product wavefunctions, without correlations, are easy to 
+work with; for example, if the single-particle states \( \phi_i(x) \) are orthonormal, then 
+the product wavefunctions are easy to orthonormalize.   
+
+<p>
+Similarly, computing matrix elements of operators are relatively easy, because the 
+integrals factorize.
+
+<p>
+The price we pay is the lack of correlations, which we must build up by using many, many product 
+wavefunctions. (Thus we have a trade-off: compact representation of correlations but 
+difficult integrals versus easy integrals but many states required.)
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec2">Slater determinants as basis states, repetition </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Because we have fermions, we are required to have antisymmetric wavefunctions, e.g.
+$$
+\Psi(x_1, x_2, x_3, \ldots, x_A) = - \Psi(x_2, x_1, x_3, \ldots, x_A)
+$$
+
+etc. This is accomplished formally by using the determinantal formalism
+$$
+\Psi(x_1, x_2, \ldots, x_N) 
+= \frac{1}{\sqrt{N!}} 
+\det \left | 
+\begin{array}{cccc}
+\phi_1(x_1) & \phi_1(x_2) & \ldots & \phi_1(x_N) \\
+\phi_2(x_1) & \phi_2(x_2) & \ldots & \phi_2(x_N) \\
+ \vdots & & &  \\
+\phi_N(x_1) & \phi_N(x_2) & \ldots & \phi_N(x_N) 
+\end{array}
+\right |
+$$
+
+Product wavefunction + antisymmetry = Slater determinant.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec3">Slater determinants as basis states </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+$$
+\Psi(x_1, x_2, \ldots, x_N) 
+= \frac{1}{\sqrt{N!}} 
+\det \left | 
+\begin{array}{cccc}
+\phi_1(x_1) & \phi_1(x_2) & \ldots & \phi_1(x_N) \\
+\phi_2(x_1) & \phi_2(x_2) & \ldots & \phi_2(x_N) \\
+ \vdots & & &  \\
+\phi_N(x_1) & \phi_N(x_2) & \ldots & \phi_N(x_N) 
+\end{array}
+\right |
+$$
+
+Properties of the determinant (interchange of any two rows or 
+any two columns yields a change in sign; thus no two rows and no 
+two columns can be the same) lead to the Pauli principle:
+
+<ul>
+<li> No two particles can be at the same place (two columns the same); and</li>
+<li> No two particles can be in the same state (two rows the same).</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec4">Slater determinants as basis states </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+As a practical matter, however, Slater determinants beyond \( N=4 \) quickly become 
+unwieldy. Thus we turn to the <b>occupation representation</b> or <b>second quantization</b> to simplify calculations. 
+
+<p>
+The occupation representation, using fermion <b>creation</b> and <b>annihilation</b> 
+operators, is compact and efficient. It is also abstract and, at first encounter, not easy to 
+internalize. It is inspired by other operator formalism, such as the ladder operators for 
+the harmonic oscillator or for angular momentum, but unlike those cases, the operators <b>do not have coordinate space representations</b>.
+
+<p>
+Instead, one can think of fermion creation/annihilation operators as a game of symbols that 
+compactly reproduces what one would do, albeit clumsily, with full coordinate-space Slater 
+determinants.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec5">Quick repetition of the occupation representation </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We start with a set of orthonormal single-particle states \( \{ \phi_i(x) \} \). 
+(Note: this requirement, and others, can be relaxed, but leads to a 
+more involved formalism.) <b>Any</b> orthonormal set will do. 
+
+<p>
+To each single-particle state \( \phi_i(x) \) we associate a creation operator 
+\( \hat{a}^\dagger_i \) and an annihilation operator \( \hat{a}_i \). 
+
+<p>
+When acting on the vacuum state \( | 0 \rangle \), the creation operator \( \hat{a}^\dagger_i \) causes 
+a particle to occupy the single-particle state \( \phi_i(x) \):
+$$
+\phi_i(x) \rightarrow \hat{a}^\dagger_i |0 \rangle
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec6">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We have defined the ansatz for the ground state as 
+$$
+|\Phi_0\rangle = \left(\prod_{i\le F}\hat{a}_{i}^{\dagger}\right)|0\rangle,
+$$
+
+where the index \( i \) defines different single-particle states up to the Fermi level. We have assumed that we have \( N \) fermions. 
+A given one-particle-one-hole (\( 1p1h \)) state can be written as
+$$
+|\Phi_i^a\rangle = \hat{a}_{a}^{\dagger}\hat{a}_i|\Phi_0\rangle,
+$$
+
+while a \( 2p2h \) state can be written as
+$$
+|\Phi_{ij}^{ab}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i|\Phi_0\rangle,
+$$
+
+and a general \( NpNh \) state as 
+$$
+|\Phi_{ijk\dots}^{abc\dots}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_{c}^{\dagger}\dots\hat{a}_k\hat{a}_j\hat{a}_i|\Phi_0\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec7">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can then expand our exact state function for the ground state 
+as
+$$
+|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots
+=(C_0+\hat{C})|\Phi_0\rangle,
+$$
+
+where we have introduced the so-called correlation operator 
+$$
+\hat{C}=\sum_{ai}C_i^a\hat{a}_{a}^{\dagger}\hat{a}_i  +\sum_{abij}C_{ij}^{ab}\hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i+\dots
+$$
+
+Since the normalization of \( \Psi_0 \) is at our disposal and since \( C_0 \) is by hypothesis non-zero, we may arbitrarily set \( C_0=1 \) with 
+corresponding proportional changes in all other coefficients. Using this so-called intermediate normalization we have
+$$
+\langle \Psi_0 | \Phi_0 \rangle = \langle \Phi_0 | \Phi_0 \rangle = 1, 
+$$
+
+resulting in 
+$$
+|\Psi_0\rangle=(1+\hat{C})|\Phi_0\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec8">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We rewrite 
+$$
+|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots,
+$$
+
+in a more compact form as 
+$$
+|\Psi_0\rangle=\sum_{PH}C_H^P\Phi_H^P=\left(\sum_{PH}C_H^P\hat{A}_H^P\right)|\Phi_0\rangle,
+$$
+
+where \( H \) stands for \( 0,1,\dots,n \) hole states and \( P \) for \( 0,1,\dots,n \) particle states. 
+Our requirement of unit normalization gives
+$$
+\langle \Psi_0 | \Phi_0 \rangle = \sum_{PH}|C_H^P|^2= 1,
+$$
+
+and the energy can be written as 
+$$
+E= \langle \Psi_0 | \hat{H} |\Phi_0 \rangle= \sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec9">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Normally 
+$$
+E= \langle \Psi_0 | \hat{H} |\Phi_0 \rangle= \sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'},
+$$
+
+is solved by diagonalization setting up the Hamiltonian matrix defined by the basis of all possible Slater determinants. A diagonalization
+<!-- to do: add text about Rayleigh-Ritz -->
+is equivalent to finding the variational minimum   of 
+$$
+ \langle \Psi_0 | \hat{H} |\Phi_0 \rangle-\lambda \langle \Psi_0 |\Phi_0 \rangle,
+$$
+
+where \( \lambda \) is a variational multiplier to be identified with the energy of the system.
+The minimization process results in 
+$$
+\delta\left[ \langle \Psi_0 | \hat{H} |\Phi_0 \rangle-\lambda \langle \Psi_0 |\Phi_0 \rangle\right]=
+\sum_{P'H'}\left\{\delta[C_H^{*P}]\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}+
+C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle \delta[C_{H'}^{P'}]-
+\lambda( \delta[C_H^{*P}]C_{H'}^{P'}+C_H^{*P}\delta[C_{H'}^{P'}]\right\} = 0.
+$$
+
+Since the coefficients \( \delta[C_H^{*P}] \) and \( \delta[C_{H'}^{P'}] \) are complex conjugates it is necessary and sufficient to require the quantities that multiply with \( \delta[C_H^{*P}] \) to vanish.  
+
+<p>
+This leads to 
+$$
+\sum_{P'H'}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}-\lambda C_H^{P}=0,
+$$
+
+for all sets of \( P \) and \( H \).
+
+<p>
+If we then multiply by the corresponding \( C_H^{*P} \) and sum over \( PH \) we obtain
+$$ 
+\sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}-\lambda\sum_{PH}|C_H^P|^2=0,
+$$
+
+leading to the identification \( \lambda = E \). This means that we have for all \( PH \) sets
+$$
+\begin{equation}
+\sum_{P'H'}\langle \Phi_H^P | \hat{H} -E|\Phi_{H'}^{P'} \rangle = 0. \label{eq:fullci}
+\end{equation}
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec10">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+An alternative way to derive the last equation is to start from 
+$$
+(\hat{H} -E)|\Psi_0\rangle = (\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0, 
+$$
+
+and if this equation is successively projected against all \( \Phi_H^P \) in the expansion of \( \Psi \), then the last equation on the previous slide
+results.   As stated previously, one solves this equation normally by diagonalization. If we are able to solve this equation exactly (that is
+numerically exactly) in a large Hilbert space (it will be truncated in terms of the number of single-particle states included in the definition
+of Slater determinants), it can then serve as a benchmark for other many-body methods which approximate the correlation operator
+\( \hat{C} \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec11">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+For reasons to come (links with Coupled-Cluster theory and Many-Body perturbation theory), 
+we will rewrite Eq.&nbsp;( ref{eq:fullci}) as a set of coupled non-linear equations in terms of the unknown coefficients \( C_H^P \). 
+
+<p>
+To see this, we look at the contributions arising from 
+$$
+\langle \Phi_H^P | = \langle \Phi_0|
+$$
+
+in  Eq.&nbsp;\eqref{eq:fullci}, that is we multiply with \( \langle \Phi_0 | \)
+from the left in 
+$$
+(\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0. 
+$$
+
+If we assume that we have a two-body operator at most, Slater's rule gives then an equation for the 
+correlation energy in terms of \( C_i^a \) and \( C_{ij}^{ab} \) only.  We get then
+$$
+\langle \Phi_0 | \hat{H} -E| \Phi_0\rangle + \sum_{ai}\langle \Phi_0 | \hat{H} -E|\Phi_{i}^{a} \rangle C_{i}^{a}+
+\sum_{abij}\langle \Phi_0 | \hat{H} -E|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}=0,
+$$
+
+or 
+$$
+E-E_0 =\Delta E=\sum_{ai}\langle \Phi_0 | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+
+\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab},
+$$
+
+where the energy \( E_0 \) is the reference energy and \( \Delta E \) defines the so-called correlation energy.
+The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian. 
+
+<p>
+In our chapter on Hartree-Fock calculations, 
+we have already computed the matrix \( \langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle  \) and \( \langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab}\rangle \).  If we are using a Hartree-Fock basis, then the matrix elements
+\( \langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle  \) and we are left with a correlation energy given by
+$$
+E-E_0 =\Delta E^{HF}=\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}. 
+$$
+
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec12">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Inserting the various matrix elements we can rewrite the previous equation as
+$$
+\Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
+\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
+$$
+
+This equation determines the correlation energy but not the coefficients \( C \). 
+We need more equations. Our next step is to set up
+$$
+\langle \Phi_i^a | \hat{H} -E| \Phi_0\rangle + \sum_{bj}\langle \Phi_i^a | \hat{H} -E|\Phi_{j}^{b} \rangle C_{j}^{b}+
+\sum_{bcjk}\langle \Phi_i^a | \hat{H} -E|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
+\sum_{bcdjkl}\langle \Phi_i^a | \hat{H} -E|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=0,
+$$
+
+as this equation will allow us to find an expression for the coefficents \( C_i^a \) since we can rewrite this equation as 
+$$
+\langle i | \hat{f}| a\rangle +\langle \Phi_i^a | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+ \sum_{bj\ne ai}\langle \Phi_i^a | \hat{H}|\Phi_{j}^{b} \rangle C_{j}^{b}+
+\sum_{bcjk}\langle \Phi_i^a | \hat{H}|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
+\sum_{bcdjkl}\langle \Phi_i^a | \hat{H}|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=0.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec13">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We rewrite this equation as
+$$
+C_{i}^{a}=-(\langle \Phi_i^a | \hat{H}|\Phi_{i}^{a})^{-1}\left(\langle i | \hat{f}| a\rangle+ \sum_{bj\ne ai}\langle \Phi_i^a | \hat{H}|\Phi_{j}^{b} \rangle C_{j}^{b}+\sum_{bcjk}\langle \Phi_i^a | \hat{H}|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
+\sum_{bcdjkl}\langle \Phi_i^a | \hat{H}|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}\right).
+$$
+
+Since these equations are solved iteratively ( that is we can start with a guess for the coefficients \( C_i^a \)), it is common to start the  iteration 
+by setting 
+$$
+ C_{i}^{a}=-\frac{\langle i | \hat{f}| a\rangle}{\langle \Phi_i^a | \hat{H}|\Phi_{i}^{a}\rangle},
+$$
+
+and the denominator can be written as
+$$
+  C_{i}^{a}=\frac{\langle i | \hat{f}| a\rangle}{\langle i | \hat{f}| i\rangle-\langle a | \hat{f}| a\rangle+\langle ai | \hat{v}| ai\rangle}.
+$$
+
+The observant reader will however see that we need an equation for \( C_{jk}^{bc} \) and \( C_{jkl}^{bcd} \) as well.
+To find equations for these coefficients we need then to continue our multiplications from the left with the various
+\( \Phi_{H}^P \) terms. 
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec14">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+For \( C_{jk}^{bc} \) we need then
+$$
+\langle \Phi_{ij}^{ab} | \hat{H} -E| \Phi_0\rangle + \sum_{kc}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{k}^{c} \rangle C_{k}^{c}+
+\sum_{cdkl}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{kl}^{cd} \rangle C_{kl}^{cd}+\sum_{cdeklm}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klm}^{cde} \rangle C_{klm}^{cde}+\sum_{cdefklmn}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klmn}^{cdef} \rangle C_{klmn}^{cdef}=0,
+$$
+
+and we can isolate the coefficients \( C_{kl}^{cd} \) in a similar way as we did for the coefficients \( C_{i}^{a} \). 
+At the end we can rewrite our solution of the Schr\"odinger equation in terms of \( n \) coupled equations for the coefficients \( C_H^P \).
+This is a very cumbersome way of solving the equation. However, by using this iterative scheme we can illustrate how we can compute the
+various terms in the wave operator or correlation operator \( \hat{C} \). We will later identify the calculation of the various terms \( C_H^P \)
+as parts of different many-body approximations to full CI. In particular, we will relate this non-linear scheme with Coupled Cluster theory and
+many-body perturbation theory.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec15">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+If we use a Hartree-Fock basis, we simplify this equation
+$$
+\Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
+\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
+$$
+
+What about
+$$
+\langle \Phi_i^a | \hat{H} -E| \Phi_0\rangle + \sum_{bj}\langle \Phi_i^a | \hat{H} -E|\Phi_{j}^{b} \rangle C_{j}^{b}+
+\sum_{bcjk}\langle \Phi_i^a | \hat{H} -E|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
+\sum_{bcdjkl}\langle \Phi_i^a | \hat{H} -E|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=0,
+$$
+
+and
+$$
+\langle \Phi_{ij}^{ab} | \hat{H} -E| \Phi_0\rangle + \sum_{kc}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{k}^{c} \rangle C_{k}^{c}+
+\sum_{cdkl}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{kl}^{cd} \rangle C_{kl}^{cd}+\sum_{cdeklm}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klm}^{cde} \rangle C_{klm}^{cde}+\sum_{cdefklmn}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klmn}^{cdef} \rangle C_{klmn}^{cdef}=0?
+$$
+</div>
+
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+
