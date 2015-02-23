@@ -1,9 +1,24 @@
-\frametitle{Phenomenology of nuclear forces}
+\frametitle{The Lippman-Schwinger equation for two-nucleon scattering}
 
 \begin{block}{}
-
-The central part of one-pion exchange interaction, arising from the spin-spin term,
-is thus attractive for $s$-waves and all even $l$ values. For $p$-waves and all other odd values
-it is repulsive. However, its overall strength is weak. This is discussed further in one of exercises below.
-
+This partial wave basis is useful for defining the operator for
+the nucleon-nucleon interaction, which
+is symmetric with respect to rotations, parity and
+isospin transformations. These symmetries imply that the interaction is
+diagonal with respect to the quantum numbers of total relative angular
+momentum ${\cal J}$, spin $S$ and isospin $T$ (we skip isospin for the moment). Using the above plane wave expansion,
+and coupling to final ${\cal J}$ and $S$ and $T$ we get
+\[
+ \langle\mathbf{k'}\vert V \vert\mathbf{k}\rangle= (4\pi)^2 \sum_{STll'm_lm_{l'}{\cal J}}\imath^{l+l'} Y_{lm}^{*}(\mathbf{\hat{k}}) Y_{l'm'}(\mathbf{\hat{k}'})
+\]
+\[
+\langle lm_lSm_S|{\cal J}M\rangle \langle l'm_{l'}Sm_S|{\cal J}M\rangle\langle k'l'S{\cal J}M\vert V \vert klS{\cal J}M\rangle,
+\]
+where we have defined
+\[
+    \langle k'l'S{\cal J}M\vert V \vert klS{\cal J}M\rangle=\int j_{l'}(k'r')\langle l'S{\cal J}M\vert V(r',r)\vert lS{\cal J}M\rangle j_l(kr) {r'}^2 dr' r^2 dr.
+\]
+We have omitted the momentum of the center-of-mass motion $\mathbf{K}$ and the
+corresponding orbital momentum $L$, since the interaction is diagonal
+in these variables.
 \end{block}

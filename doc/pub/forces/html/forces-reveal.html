@@ -2354,6 +2354,818 @@ it is repulsive. However, its overall strength is weak. This is discussed furthe
 
 <p>
 
+</section>
+
+
+<section>
+
+<h2 id="___sec64">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+What follows now is a more technical discussion on how we can solve the two-nucleon problem.
+This will lead us to the so-called Lippman-Schwinger equation for the scattering problem and a rewrite of Schroedinger's equation in relative and center-of-mass coordinates. 
+
+<p>
+Before we break down the Schroedinger equation into a partial wave decomposition, we derive now the so-called Lippman-Schwinger equation. We will do this in an operator form first.
+Thereafter, we rewrite it in terms of various quantum numbers such as relative momenta, orbital momenta etc. 
+The Schr\"odinger equation in abstract vector representation is
+<p>&nbsp;<br>
+$$
+  \left( \hat{H}_0 + \hat{V} \right) \vert \psi_n \rangle = E_n \vert\psi_n \rangle. 
+$$
+<p>&nbsp;<br>
+
+In our case for the two-body problem \( \hat{H}_0 \) is just the kinetic energy. 
+We rewrite it as 
+<p>&nbsp;<br>
+$$
+\left( \hat{H}_0 -E_n \right)\vert\psi_n \rangle =-\hat{V}\vert \psi_n \rangle . 
+$$
+<p>&nbsp;<br>
+
+We assume that the invers of \( \left( \hat{H}_0 -E_n\right) \) exists and rewrite this equation as
+<p>&nbsp;<br>
+$$
+\vert\psi_n \rangle =\frac{1}{\left( E_n -\hat{H}_0\right)}\hat{V}\vert \psi_n \rangle . 
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec65">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The equation
+<p>&nbsp;<br>
+$$
+\vert \psi_n \rangle =\frac{1}{\left( E_n -\hat{H}_0\right)}\hat{V}\vert \psi_n \rangle,
+$$
+<p>&nbsp;<br>
+
+is normally solved in an iterative fashion. 
+We assume first that
+<p>&nbsp;<br>
+$$
+\vert\psi_n \rangle = \vert\phi_n \rangle,
+$$
+<p>&nbsp;<br>
+
+where \( \vert\phi_n \rangle \) are the eigenfunctions of 
+<p>&nbsp;<br>
+$$
+\hat{H}_0\vert \phi_n \rangle=\omega_n\vert \phi_n \rangle
+$$
+<p>&nbsp;<br>
+
+the so-called unperturbed problem. In our case, these will simply be the kinetic energies of the relative motion.
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec66">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Inserting  \( \vert\phi_n \rangle \)  on the right-hand side of 
+<p>&nbsp;<br>
+$$
+\vert \psi_n \rangle =\frac{1}{( E_n -\hat{H}_0)}\hat{V}\vert \psi_n \rangle,
+$$
+<p>&nbsp;<br>
+
+yields
+<p>&nbsp;<br>
+$$
+\vert \psi_n \rangle =\vert\phi_n \rangle+\frac{1}{\left( E_n -\hat{H}_0\right)}\hat{V}\vert \phi_n \rangle,
+$$
+<p>&nbsp;<br>
+
+as our first iteration. 
+Reinserting again gives
+<p>&nbsp;<br>
+$$
+\vert \psi_n \rangle =\vert\phi_n \rangle+\frac{1}{\left( E_n -\hat{H}_0\right)}\hat{V}\vert \phi_n \rangle+\frac{1}{( E_n -\hat{H}_0)}\hat{V}\frac{1}{\left( E_n -\hat{H}_0\right)}\hat{V}\vert \phi_n \rangle,
+$$
+<p>&nbsp;<br>
+
+and continuing we obtain
+<p>&nbsp;<br>
+$$
+\vert \psi_n \rangle =\sum_{i=0}^{\infty}\left[\frac{1}{( E_n -\hat{H}_0)}\hat{V}\right]^i\vert \phi_n \rangle.
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec67">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+It is easy to see that 
+<p>&nbsp;<br>
+$$
+\vert \psi_n \rangle =\sum_{i=0}^{\infty}\left[\frac{1}{(E_n -\hat{H}_0)}\hat{V}\right]^i\vert \phi_n \rangle,
+$$
+<p>&nbsp;<br>
+
+can be rewritten as 
+<p>&nbsp;<br>
+$$
+\vert \psi_n \rangle =\vert\phi_n \rangle+\frac{1}{( E_n -\hat{H}_0)}
+\hat{V}\left(1+ \frac{1}{(E_n -\hat{H}_0)}\hat{V}+\frac{1}{(E_n -\hat{H}_0)}\hat{V}\frac{1}{(E_n -\hat{H}_0)}\hat{V}+\dots\right]\vert \phi_n \rangle,
+$$
+<p>&nbsp;<br>
+
+which we rewrite as 
+<p>&nbsp;<br>
+$$
+\vert \psi_n \rangle =\vert\phi_n \rangle+\frac{1}{(E_n -\hat{H}_0)}\hat{V}\vert \psi_n \rangle.
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec68">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In operator form we have thus
+<p>&nbsp;<br>
+$$
+\vert \psi_n \rangle =\vert\phi_n \rangle+\frac{1}{(E_n -\hat{H}_0)}\hat{V}\vert \psi_n \rangle.
+$$
+<p>&nbsp;<br>
+
+We multiply from the left with \( \hat{V} \) and \( \langle \phi_m \vert \) and obtain
+<p>&nbsp;<br>
+$$
+\langle \phi_m \vert\hat{V}\vert \psi_n \rangle =\langle \phi_m \vert\hat{V}\vert\phi_n \rangle+\langle \phi_m \vert\hat{V}\frac{1}{(E_n -\hat{H}_0)}\hat{V}\vert \psi_n \rangle.
+$$
+<p>&nbsp;<br>
+
+We define thereafter the so-called \( T \)-matrix as
+<p>&nbsp;<br>
+$$
+\langle \phi_m \vert\hat{T}\vert \phi_n \rangle=\langle \phi_m \vert\hat{V}\vert \psi_n \rangle.
+$$
+<p>&nbsp;<br>
+
+We can rewrite our equation as
+<p>&nbsp;<br>
+$$
+\langle \phi_m \vert\hat{T}\vert \phi_n \rangle =\langle \phi_m \vert\hat{V}\vert\phi_n \rangle+\langle \phi_m \vert\hat{V}\frac{1}{(E_n -\hat{H}_0)}\hat{T}\vert \phi_n \rangle.
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec69">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The equation
+<p>&nbsp;<br>
+$$
+\langle \phi_m \vert\hat{T}\vert \phi_n \rangle =\langle \phi_m \vert\hat{V}\vert\phi_n \rangle+\langle \phi_m \vert\hat{V}\frac{1}{(E_n -\hat{H}_0)}\hat{T}\vert \phi_n \rangle,
+$$
+<p>&nbsp;<br>
+
+is called the Lippman-Schwinger equation. Inserting the completeness relation
+<p>&nbsp;<br>
+$$ 
+\mathbf{1} = \sum_n \vert \phi_n\rangle\langle \phi_n \vert, \:\: \langle \phi_n\vert \phi_{n'} \rangle = \delta_{n,n'}
+$$
+<p>&nbsp;<br>
+
+we have 
+<p>&nbsp;<br>
+$$
+\langle \phi_m \vert\hat{T}\vert \phi_n \rangle =\langle \phi_m \vert\hat{V}\vert\phi_n \rangle+\sum_k \langle \phi_m \vert\hat{V}\vert \phi_k\rangle\frac{1}{(E_n -\omega_k)}\langle \phi_k \vert\hat{T}\vert \phi_n \rangle,
+$$
+<p>&nbsp;<br>
+
+which is (when we specify the state \( \vert\phi_n \rangle \)) an integral equation that can actually be solved by matrix inversion easily! The unknown quantity is the \( T \)-matrix.
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec70">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Now we wish to introduce a partial wave decomposition in order to solve the Lippman-Schwinger equation. With a partial wave decomposition we can reduce a three-dimensional integral equation to a one-dimensional one. 
+
+<p>
+Let us continue with our Schroedinger equation in the abstract vector representation
+<p>&nbsp;<br>
+$$
+\left(T + V\right)\vert\psi_n\rangle = E_n\vert\psi_n \rangle 
+$$
+<p>&nbsp;<br>
+
+Here \( T \) is the kinetic energy operator and \( V \) is the potential operator. 
+The eigenstates form a complete orthonormal set according to 
+<p>&nbsp;<br>
+$$ 
+\mathbf{1}=\sum_n\vert\psi_n\rangle\langle\psi_n\vert, \:\: \langle\psi_n\vert\psi_{n'}\rangle =\delta_{n,n'}
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec71">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The most commonly used representations are the coordinate and
+the momentum space representations. They define the completeness relations 
+<p>&nbsp;<br>
+$$
+\begin{eqnarray*}
+ \mathbf{1}&=&  \int d\mathbf{r} \:\vert\mathbf{r} \rangle \langle \mathbf{r}\vert, \:\: \langle  \mathbf{r}\vert  \mathbf{r'} \rangle = \delta ( \mathbf{r}-\mathbf{r'}) \\
+\mathbf{1} &=& \int d\mathbf{k} \:\vert  \mathbf{k}\rangle \langle \mathbf{k}\vert, \:\: \langle\mathbf{k}\vert  \mathbf{k'} \rangle = \delta ( \mathbf{k}-\mathbf{k'}) 
+\end{eqnarray*}
+$$
+<p>&nbsp;<br>
+
+Here the basis states in  both \( \mathbf{r} \)- and \( \mathbf{k} \)-space are dirac-delta 
+function normalized. From this it follows that the plane-wave states are given by,
+<p>&nbsp;<br>
+$$
+\langle\mathbf{r}\vert\mathbf{k} \rangle =\left(\frac{1}{2\pi}\right)^{3/2}\exp\left(i\mathbf{k\cdot r} \right)
+$$
+<p>&nbsp;<br>
+
+which is a transformation function defining the mapping from the abstract 
+\( \vert\mathbf{k}\rangle \) to the abstract \( \vert\mathbf{r}\rangle  \) space.
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec72">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+That the \( \mathbf{r} \)-space basis states are 
+delta-function normalized follows from 
+<p>&nbsp;<br>
+$$
+\delta ( \mathbf{r}-\mathbf{r'}) = \langle \mathbf{r} \vert \mathbf{r}'\rangle = \langle \mathbf{r} \vert \mathbf{1} \vert \mathbf{r}'\rangle = \int d\mathbf{k} \langle \mathbf{r}\vert \mathbf{k} \rangle \langle \mathbf{k}\vert \mathbf{r}' \rangle =\left( {1\over 2\pi}\right)^3 \int d\mathbf{k} e^{i \mathbf{k}(\mathbf{r} - \mathbf{r}')} 
+$$
+<p>&nbsp;<br>
+
+and the same for the momentum space basis states,
+<p>&nbsp;<br>
+$$
+\delta ( \mathbf{k}-\mathbf{k'}) = \langle \mathbf{k} \vert \mathbf{k}'\rangle = \langle \mathbf{k} \vert \mathbf{1} \vert \mathbf{k}'\rangle =\int d\mathbf{r} \langle \mathbf{k}\vert \mathbf{r} \rangle \langle \mathbf{r}\vert \mathbf{k}' \rangle = \left( {1\over 2\pi}\right)^3 \int d\mathbf{r} e^{i \mathbf{r}(\mathbf{k} - \mathbf{k}')} 
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec73">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Projecting  on momentum states, we obtain the momentum space Schroedinger equation as
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\frac{\hbar^2}{2\mu}k^2\psi_n(\mathbf{k})+\int d\mathbf{k'}V(\mathbf{k}, \mathbf{k'}) \psi_n(\mathbf{k'})=E_n \psi_n(\mathbf{k})
+\tag{1}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+Here the notation \( \psi_n(\mathbf{k}) =\langle\mathbf{k}\vert\psi_n\rangle  \) and 
+\( \langle\mathbf{k}\vert V\vert\mathbf{k}' \rangle =V(\mathbf{k}, \mathbf{k'}) \) has been introduced.
+The potential in momentum space is given by a double Fourier-transform 
+of the potential in coordinate space, i.e.
+<p>&nbsp;<br>
+$$ 
+V(\mathbf{k},\mathbf{k'}) = \left( \frac{1}{2\pi}\right)^3\int d\mathbf{r}\int d\mathbf{r}'\exp{-i\mathbf{kr}}V(\mathbf{r},\mathbf{r}')\exp{i\mathbf{k}'\mathbf{r}'}  
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec74">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Here it is assumed that the potential interaction does not contain any spin dependence. 
+Instead of a differential equation in coordinate space, the Schroedinger
+equation becomes an integral equation in momentum space. This has 
+many tractable features. Firstly, most realistic 
+nucleon-nucleon interactions derived from field-theory are given 
+explicitly in momentum space. Secondly, the boundary conditions imposed
+on the differential equation in coordinate space are automatically built into the
+integral equation. And last, but not least, integral equations are easy to numerically 
+implement, and convergence is obtained by just increasing the number of integration
+points.
+Instead of solving the three-dimensional integral equation, an 
+infinite set of 1-dimensional equations can be obtained via a  partial wave
+expansion.
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec75">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The wave function \( \psi_n(\mathbf{k}) \) can be expanded in a complete set of spherical harmonics, that is
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  \psi_n(\mathbf{k}) = \sum _{lm} \psi_{nlm}(k)Y_{lm}(\hat{k}) \hspace{1cm} \psi_{nlm}(k) = \int d\hat{k} Y_{lm}^*(\hat{k})\psi_n(\mathbf{k}).   , 
+  \tag{2}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+By inserting equation <a href="#mjx-eqn-2">(2)</a> in equation <a href="#mjx-eqn-1">(1)</a>, and projecting from the left
+\( Y_{lm}(\hat{k}) \), the three-dimensional Schroedinger equation&nbsp;<a href="#mjx-eqn-1">(1)</a> is reduced
+to an infinite set of  1-dimensional angular momentum coupled integral equations, 
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  \left( \frac{\hbar^2}{2\mu} k^2-E_{nlm}\right)\psi_{nlm}(k) = -\sum_{l'm'}\int_{0}^\infty dk' {k'}^2 V_{lm, l'm'}(k,k') \psi_{nl'm'}(k') 
+  \tag{3}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+where the angular momentum projected potential takes the form,
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  V_{lm, l'm'}(k,k') = \int d{\hat{k}} \int d{\hat{k}'}Y_{lm}^*(\hat{k})V(\mathbf{k}, \mathbf{k'})Y_{l'm'}(\hat{k}')
+    \tag{4}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+here \( d{\hat k} = d\theta \sin(\theta)d\varphi \).
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec76">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Note that we discuss only the orbital momentum, we will include angular momentum and spin later}. 
+
+<p>
+The potential is often given in position space. It is then convenient to establish 
+the connection between \( V_{lm, l'm'}(k,k') \) and \( V_{lm, l'm'}(r,r') \). Inserting 
+position space completeness in equation&nbsp;<a href="#mjx-eqn-4">(4)</a> gives
+<p>&nbsp;<br>
+$$
+\begin{equation}
+V =\int d\mathbf{r}\int d\mathbf{r}'\left\{\int d{\hat{k}}Y_{lm}^*(\hat{k})\langle \mathbf{k}\vert \mathbf{r}\rangle\right\}\langle\mathbf{r}\vert V\vert\mathbf{r}'\rangle\left\{\int d\hat{k}'Y_{lm}(\hat{k}')\langle\mathbf{r'}\vert\mathbf{k}'\rangle\right\}
+  \tag{5}
+\end{equation}
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec77">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Since the plane waves depend only on the absolute values of position and momentum, 
+\( \vert\mathbf{k}\vert \) and $ \vert\mathbf{r}\vert$,
+and the angle between them, \( \theta_{kr} \), they may be expanded in terms of bipolar harmonics of 
+zero rank, i.e.  
+<p>&nbsp;<br>
+$$ 
+  \exp{(i \mathbf{k}\cdot \mathbf{r})} = 4\pi\sum_{l=0}^{\infty} i^l j_l(kr)\left( Y_l(\hat{k}) \cdot Y_l(\hat{r}) \right)= \sum_{l=0}^{\infty} (2l+1)i^l j_l(kr) P_l(\cos \theta_{kr}) 
+$$
+<p>&nbsp;<br>
+
+where the addition theorem for spherical harmonics has been used in order to write
+the expansion in terms of Legendre polynomials. The spherical Bessel functions, \( j_l(z) \),  
+are given in terms of Bessel functions of the first kind with half integer orders,  
+<p>&nbsp;<br>
+$$
+j_l(z) = \sqrt{\pi \over 2 z} J_{l+1/2}(z).  
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec78">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Inserting the plane-wave expansion
+into the brackets of equation&nbsp;<a href="#mjx-eqn-5">(5)</a> yields, 
+<p>&nbsp;<br>
+$$
+\begin{eqnarray*}
+  \nonumber
+  \int d{\hat{k}}  Y_{lm}^*(\hat{k})\langle \mathbf{k}\vert \mathbf{r} \rangle & = &  
+  \left( {1\over 2\pi} \right) ^{3/2}4\pi i^{-l} j_l(kr) Y_{lm}^*(\hat{r}), \\  
+  \nonumber
+  \int d{\hat{k}'}\:   Y_{lm}(\hat{k}') \langle \mathbf{r'}\vert \mathbf{k}' \rangle & = &  
+  \left( {1\over 2\pi} \right) ^{3/2}4\pi i^{l'} j_{l'}(k'r') Y_{l'm'}(\hat{r}). 
+\end{eqnarray*}
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec79">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The connection between the momentum- and position space angular momentum 
+projected potentials are then given, 
+<p>&nbsp;<br>
+$$
+  V_{lm, l'm'}(k,k')=\frac{2}{\pi}i^{l'-l}\int_0^\infty drr^2 \int_0^\infty dr'{r'}^2j_l(kr) V_{lm,l'm'}(r,r') j_{l'}(k'r')
+  \tag{6}
+$$
+<p>&nbsp;<br>
+
+which is known as a double Fourier-Bessel transform. The position space angular 
+momentum projected potential is given by
+<p>&nbsp;<br>
+$$
+  V_{lm, l'm'}(r,r') = \int d{\hat{r}} \int d{\hat{r}'}Y_{lm}^*(\hat{r})V(\mathbf{r}, \mathbf{r'})Y_{l'm'}(\hat{r}').
+  \tag{7}
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec80">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+No assumptions of locality/non-locality and deformation of the interaction has so far been made, 
+and the result in equation&nbsp;<a href="#mjx-eqn-6">(6)</a> is general. In position space the Schroedinger equation 
+takes form of an integro-differential equation in case of a non-local interaction, 
+in momentum space the Schroedinger equation is an ordinary integral equation of the Fredholm type, 
+see equation&nbsp;<a href="#mjx-eqn-3">(3)</a>. This is a further advantage of the momentum space approach as compared to 
+the standard position space approach.  
+If we assume that the 
+interaction is of local character, i.e. 
+<p>&nbsp;<br>
+$$
+  \langle \mathbf{r}\vert V \vert \mathbf{r'}\rangle = V(\mathbf{r}) \delta( \mathbf{r}-\mathbf{r}' ) = 
+  V(\mathbf{r}) {\delta( { r}-{r}' ) \over r^2} \delta ( \cos \theta - \cos \theta' ) \delta (\varphi-\varphi'), 
+$$
+<p>&nbsp;<br>
+
+then equation&nbsp;<a href="#mjx-eqn-7">(7)</a> reduces to 
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  V_{lm, l'm'}(r,r') = \frac{\delta({r}-{r}')}{r^2}\int d{\hat{r}}\:
+  Y_{lm}^*(\hat{r})V(\mathbf{r})Y_{l'm'}(\hat{r}),
+  \tag{8}
+\end{equation}
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec81">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+and equation <a href="#mjx-eqn-6">(6)</a> reduces to  
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  V_{lm, l'm'}(k,k') = \frac{2}{\pi}i^{l' -l}\int_0^\infty drr^2j_l(kr) V_{lm,l'm'}(r) j_{l'}(k'r)
+  \tag{9}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+where 
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  V_{lm, l'm'}(r) = \int d{\hat{r}}Y_{lm}^*(\hat{r})V(\mathbf{r})Y_{l'm'}(\hat{r}),
+  \tag{10}
+\end{equation}
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec82">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In the case that the interaction is central, \( V(\mathbf{r}) = V(r) \), then
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  V_{lm, l'm'}(r) = V(r) \int d{\hat{r}}Y_{lm}^*(\hat{r})Y_{l'm'}(\hat{r}) = V(r) \delta_{l,l'}\delta_{m,m'},
+  \tag{11}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+and 
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  V_{lm, l'm'}(k,k') = \frac{2}{\pi} \int_0^\infty drr^2j_l(kr) V(r) j_{l'}(k'r)\delta_{l,l'}\delta_{m,m'} = V_l(k,k') \delta_{l,l'}\delta_{m,m'}
+  \tag{12}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+where the momentum space representation of the interaction finally reads,
+<p>&nbsp;<br>
+$$
+\begin{equation}
+  V_{l}(k,k') = {2 \over \pi} \int_0^\infty dr\: r^2 \:
+  j_l(kr) V(r) j_{l}(k'r).
+  \tag{13}
+\end{equation}
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec83">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+For a local and spherical symmetric potential, 
+the coupled momentum space Schr\"odinger equations given in equation&nbsp;<a href="#mjx-eqn-3">(3)</a>
+decouples in angular momentum, 
+giving
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\frac{\hbar^2}{2\mu} k^2 \psi_{n l}(k) +\int_{0}^\infty dk' {k'}^2 V_{l}(k,k') \psi_{n l }(k')=E_{n l} \psi_{n l}(k) 
+  \tag{14}
+\end{equation}   
+$$
+<p>&nbsp;<br>
+
+Where we have written \( \psi_{n l }(k)=\psi_{nlm}(k) \), since the 
+equation becomes independent of the projection \( m \) for spherical symmetric interactions. 
+The momentum space wave functions \( \psi_{n l}(k) \) defines a complete orthogonal set 
+of functions, which spans the space of functions with a positive finite Euclidean norm 
+ (also called \( l^2 \)-norm), \( \sqrt{\langle\psi_n\vert\psi_n\rangle} \), which 
+is a Hilbert space. The corresponding normalized wave function in coordinate space
+is given by the Fourier-Bessel transform 
+<p>&nbsp;<br>
+$$
+  \phi_{n l}(r)  = \sqrt{\frac{2}{\pi}}\int dk k^2 j_l(kr) \psi_{n l}(k)
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec84">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We will thus assume that the interaction is spherically symmetric and use
+the partial wave expansion of the plane waves in
+terms of spherical harmonics.
+This means that we can separate the radial part of the wave function from its
+angular dependence. The wave function of the relative motion is described
+in terms of plane waves as
+<p>&nbsp;<br>
+$$
+\exp{(\imath \mathbf{kr})}=\langle\mathbf{r}\vert\mathbf{k}\rangle=4\pi\sum_{lm}\imath^{l}j_{l}(kr)Y_{lm}^{*}(\mathbf{\hat{k}})Y_{lm}(\mathbf{\hat{r}}),
+$$
+<p>&nbsp;<br>
+
+where \( j_l \) is a spherical Bessel function and \( Y_{lm} \) the
+spherical harmonics.
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec85">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In terms of the relative and center-of-mass momenta \( \mathbf{k} \) and
+\( \mathbf{K} \), the potential in momentum space is related to the nonlocal operator
+\( V(\mathbf{r},\mathbf{r}') \) by
+<p>&nbsp;<br>
+$$
+\langle\mathbf{k'K'}\vert V \vert \mathbf{kK}\rangle =\int d\mathbf{r}d \mathbf{r'}
+        \exp{-(\imath \mathbf{k'r'})}V(\mathbf{r'},\mathbf{r})\exp{\imath \mathbf{kr}}\delta(\mathbf{K},\mathbf{K'}).
+$$
+<p>&nbsp;<br>
+
+We will assume that the interaction is spherically symmetric.
+Can separate the radial part of the wave function from its
+angular dependence. The wave function of the relative motion is described
+in terms of plane waves as
+<p>&nbsp;<br>
+$$
+\exp{(\imath \mathbf{kr})} =\langle\mathbf{r}\vert\mathbf{k}\rangle= 4\pi\sum_{lm}\imath^{l}j_{l}(kr)Y_{lm}^{*}(\mathbf{\hat{k}})Y_{lm}(\mathbf{\hat{r}}),
+$$
+<p>&nbsp;<br>
+
+where \( j_l \) is a spherical Bessel function and \( Y_{lm} \) the
+spherical harmonic.
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec86">The Lippman-Schwinger equation for two-nucleon scattering </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+This partial wave basis is useful for defining the operator for
+the nucleon-nucleon interaction, which
+is symmetric with respect to rotations, parity and
+isospin transformations. These symmetries imply that the interaction is
+diagonal with respect to the quantum numbers of total relative angular
+momentum \( {\cal J} \), spin \( S \) and isospin \( T \) (we skip isospin for the moment). Using the above plane wave expansion,
+and coupling to final \( {\cal J} \) and \( S \) and \( T \) we get
+<p>&nbsp;<br>
+$$
+ \langle\mathbf{k'}\vert V \vert\mathbf{k}\rangle= (4\pi)^2 \sum_{STll'm_lm_{l'}{\cal J}}\imath^{l+l'} Y_{lm}^{*}(\mathbf{\hat{k}}) Y_{l'm'}(\mathbf{\hat{k}'})
+$$
+<p>&nbsp;<br>
+
+<p>&nbsp;<br>
+$$
+\langle lm_lSm_S|{\cal J}M\rangle \langle l'm_{l'}Sm_S|{\cal J}M\rangle\langle k'l'S{\cal J}M\vert V \vert klS{\cal J}M\rangle,
+$$
+<p>&nbsp;<br>
+
+where we have defined
+<p>&nbsp;<br>
+$$
+    \langle k'l'S{\cal J}M\vert V \vert klS{\cal J}M\rangle=\int j_{l'}(k'r')\langle l'S{\cal J}M\vert V(r',r)\vert lS{\cal J}M\rangle j_l(kr) {r'}^2 dr' r^2 dr.
+$$
+<p>&nbsp;<br>
+
+We have omitted the momentum of the center-of-mass motion \( \mathbf{K} \) and the 
+corresponding orbital momentum \( L \), since the interaction is diagonal
+in these variables.
+</div>
+
+
 
 </section>
 

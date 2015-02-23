@@ -2,6 +2,7 @@
 %% Automatically generated file from DocOnce source
 %% (https://github.com/hplgit/doconce/)
 %%
+%%
 
 
 %-------------------- begin preamble ----------------------
@@ -17,17 +18,18 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 \usepackage[table]{xcolor}
 \usepackage{bm,microtype}
 
-\usepackage{fancyvrb} % packages needed for verbatim environments
-
 \usepackage[T1]{fontenc}
 %\usepackage[latin1]{inputenc}
-\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
 
 \usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
 
 % Hyperlinks in PDF:
 \definecolor{linkcolor}{rgb}{0,0,0.4}
-\usepackage[%
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
     colorlinks=true,
     linkcolor=linkcolor,
     urlcolor=linkcolor,
@@ -37,7 +39,7 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
     pdfmenubar=true,
     pdftoolbar=true,
     bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
-            ]{hyperref}
+    }
 %\hyperbaseurl{}   % hyperlinks are relative to this root
 
 \setcounter{tocdepth}{2}  % number chapter, section, subsection
@@ -1648,6 +1650,210 @@ it is repulsive. However, its overall strength is weak. This is discussed furthe
 % --- end paragraph admon ---
 
 
+
+% !split
+\subsection{The Lippman-Schwinger equation for two-nucleon scattering}
+
+% --- begin paragraph admon ---
+\paragraph{}
+What follows now is a more technical discussion on how we can solve the two-nucleon problem.
+This will lead us to the so-called Lippman-Schwinger equation for the scattering problem and a rewrite of Schroedinger's equation in relative and center-of-mass coordinates. 
+
+
+Before we break down the Schroedinger equation into a partial wave decomposition, we derive now the so-called Lippman-Schwinger equation. We will do this in an operator form first.
+Thereafter, we rewrite it in terms of various quantum numbers such as relative momenta, orbital momenta etc. 
+The Schr\"odinger equation in abstract vector representation is
+\[
+  \left( \hat{H}_0 + \hat{V} \right) \vert \psi_n \rangle = E_n \vert\psi_n \rangle. 
+\]
+In our case for the two-body problem $\hat{H}_0$ is just the kinetic energy. 
+We rewrite it as 
+\[
+\left( \hat{H}_0 -E_n \right)\vert\psi_n \rangle =-\hat{V}\vert \psi_n \rangle . 
+\]
+We assume that the invers of $\left( \hat{H}_0 -E_n\right)$ exists and rewrite this equation as
+\[
+\vert\psi_n \rangle =\frac{1}{\left( E_n -\hat{H}_0\right)}\hat{V}\vert \psi_n \rangle . 
+\]
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{The Lippman-Schwinger equation for two-nucleon scattering}
+
+% --- begin paragraph admon ---
+\paragraph{}
+The equation
+\[
+\vert \psi_n \rangle =\frac{1}{\left( E_n -\hat{H}_0\right)}\hat{V}\vert \psi_n \rangle,
+\]
+is normally solved in an iterative fashion. 
+We assume first that
+\[
+\vert\psi_n \rangle = \vert\phi_n \rangle,
+\] 
+where $\vert\phi_n \rangle$ are the eigenfunctions of 
+\[
+\hat{H}_0\vert \phi_n \rangle=\omega_n\vert \phi_n \rangle
+\]
+the so-called unperturbed problem. In our case, these will simply be the kinetic energies of the relative motion.
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{The Lippman-Schwinger equation for two-nucleon scattering}
+
+% --- begin paragraph admon ---
+\paragraph{}
+Inserting  $\vert\phi_n \rangle$  on the right-hand side of 
+\[
+\vert \psi_n \rangle =\frac{1}{( E_n -\hat{H}_0)}\hat{V}\vert \psi_n \rangle,
+\]
+yields
+\[
+\vert \psi_n \rangle =\vert\phi_n \rangle+\frac{1}{\left( E_n -\hat{H}_0\right)}\hat{V}\vert \phi_n \rangle,
+\]
+as our first iteration. 
+Reinserting again gives
+\[
+\vert \psi_n \rangle =\vert\phi_n \rangle+\frac{1}{\left( E_n -\hat{H}_0\right)}\hat{V}\vert \phi_n \rangle+\frac{1}{( E_n -\hat{H}_0)}\hat{V}\frac{1}{\left( E_n -\hat{H}_0\right)}\hat{V}\vert \phi_n \rangle,
+\]
+and continuing we obtain
+\[
+\vert \psi_n \rangle =\sum_{i=0}^{\infty}\left[\frac{1}{( E_n -\hat{H}_0)}\hat{V}\right]^i\vert \phi_n \rangle.
+\]
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{The Lippman-Schwinger equation for two-nucleon scattering}
+
+% --- begin paragraph admon ---
+\paragraph{}
+It is easy to see that 
+\[
+\vert \psi_n \rangle =\sum_{i=0}^{\infty}\left[\frac{1}{(E_n -\hat{H}_0)}\hat{V}\right]^i\vert \phi_n \rangle,
+\]
+can be rewritten as 
+\[
+\vert \psi_n \rangle =\vert\phi_n \rangle+\frac{1}{( E_n -\hat{H}_0)}
+\hat{V}\left(1+ \frac{1}{(E_n -\hat{H}_0)}\hat{V}+\frac{1}{(E_n -\hat{H}_0)}\hat{V}\frac{1}{(E_n -\hat{H}_0)}\hat{V}+\dots\right]\vert \phi_n \rangle,
+\]
+which we rewrite as 
+\[
+\vert \psi_n \rangle =\vert\phi_n \rangle+\frac{1}{(E_n -\hat{H}_0)}\hat{V}\vert \psi_n \rangle.
+\]
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{The Lippman-Schwinger equation for two-nucleon scattering}
+
+% --- begin paragraph admon ---
+\paragraph{}
+In operator form we have thus
+\[
+\vert \psi_n \rangle =\vert\phi_n \rangle+\frac{1}{(E_n -\hat{H}_0)}\hat{V}\vert \psi_n \rangle.
+\]
+We multiply from the left with $\hat{V}$ and $\langle \phi_m \vert$ and obtain
+\[
+\langle \phi_m \vert\hat{V}\vert \psi_n \rangle =\langle \phi_m \vert\hat{V}\vert\phi_n \rangle+\langle \phi_m \vert\hat{V}\frac{1}{(E_n -\hat{H}_0)}\hat{V}\vert \psi_n \rangle.
+\]
+We define thereafter the so-called $T$-matrix as
+\[
+\langle \phi_m \vert\hat{T}\vert \phi_n \rangle=\langle \phi_m \vert\hat{V}\vert \psi_n \rangle.
+\]
+We can rewrite our equation as
+\[
+\langle \phi_m \vert\hat{T}\vert \phi_n \rangle =\langle \phi_m \vert\hat{V}\vert\phi_n \rangle+\langle \phi_m \vert\hat{V}\frac{1}{(E_n -\hat{H}_0)}\hat{T}\vert \phi_n \rangle.
+\]
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{The Lippman-Schwinger equation for two-nucleon scattering}
+
+% --- begin paragraph admon ---
+\paragraph{}
+The equation
+\[
+\langle \phi_m \vert\hat{T}\vert \phi_n \rangle =\langle \phi_m \vert\hat{V}\vert\phi_n \rangle+\langle \phi_m \vert\hat{V}\frac{1}{(E_n -\hat{H}_0)}\hat{T}\vert \phi_n \rangle,
+\]
+is called the Lippman-Schwinger equation. Inserting the completeness relation
+\[ 
+\mathbf{1} = \sum_n \vert \phi_n\rangle\langle \phi_n \vert, \:\: \langle \phi_n\vert \phi_{n'} \rangle = \delta_{n,n'}
+\]
+we have 
+\[
+\langle \phi_m \vert\hat{T}\vert \phi_n \rangle =\langle \phi_m \vert\hat{V}\vert\phi_n \rangle+\sum_k \langle \phi_m \vert\hat{V}\vert \phi_k\rangle\frac{1}{(E_n -\omega_k)}\langle \phi_k \vert\hat{T}\vert \phi_n \rangle,
+\]
+which is (when we specify the state $\vert\phi_n \rangle$) an integral equation that can actually be solved by matrix inversion easily! The unknown quantity is the $T$-matrix.
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{The Lippman-Schwinger equation for two-nucleon scattering}
+
+% --- begin paragraph admon ---
+\paragraph{}
+Now we wish to introduce a partial wave decomposition in order to solve the Lippman-Schwinger equation. With a partial wave decomposition we can reduce a three-dimensional integral equation to a one-dimensional one. 
+
+Let us continue with our Schroedinger equation in the abstract vector representation
+\[
+\left(T + V \right) \vert \psi_n \rangle = E_n \vert\psi_n \rangle 
+\]
+Here $T$ is the kinetic energy operator and $V$ is the potential operator. 
+The eigenstates form a complete orthonormal set according to 
+\[ 
+\mathbf{1} = \sum_n \vert \psi_n\rangle\langle \psi_n \vert, \:\: \langle \psi_n\vert \psi_{n'} \rangle = \delta_{n,n'}
+\]
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{The Lippman-Schwinger equation for two-nucleon scattering}
+
+% --- begin paragraph admon ---
+\paragraph{}
+The most commonly used representations are the coordinate and
+the momentum space representations. They define the completeness relations 
+\begin{eqnarray*}
+ \mathbf{1}&=&  \int d\mathbf{r} \:\vert\mathbf{r} \rangle \langle \mathbf{r}\vert, \:\: \langle  \mathbf{r}\vert  \mathbf{r'} \rangle = \delta ( \mathbf{r}-\mathbf{r'}) \\
+\mathbf{1} &=& \int d\mathbf{k} \:\vert  \mathbf{k}\rangle \langle \mathbf{k}\vert, \:\: \langle\mathbf{k}\vert  \mathbf{k'} \rangle = \delta ( \mathbf{k}-\mathbf{k'}) 
+\end{eqnarray*}
+Here the basis states in  both $\mathbf{r}$- and $\mathbf{k}$-space are dirac-delta 
+function normalized. From this it follows that the plane-wave states are given by,
+\[
+\langle\mathbf{r}\vert\mathbf{k} \rangle =\left(\frac{1}{2\pi}\right)^{3/2}\exp\left(i\mathbf{k\cdot r} \right)
+\]
+which is a transformation function defining the mapping from the abstract 
+$\vert\mathbf{k}\rangle$ to the abstract $\vert\mathbf{r}\rangle $ space.
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection{The Lippman-Schwinger equation for two-nucleon scattering}
+
+% --- begin paragraph admon ---
+\paragraph{}
+That the $\mathbf{r}$-space basis states are 
+delta-function normalized follows from 
+\[
+\delta ( \mathbf{r}-\mathbf{r'}) = \langle \mathbf{r} \vert \mathbf{r}'\rangle = \langle \mathbf{r} \vert \mathbf{1} \vert \mathbf{r}'\rangle = \int \mathrm{d}\mathbf{k} \langle \mathbf{r}\vert \mathbf{k} \rangle \langle \mathbf{k}\vert \mathbf{r}' \rangle =\left( {1\over 2\pi}\right)^3 \int \mathrm{d}\mathbf{k} e^{i \mathbf{k}(\mathbf{r} - \mathbf{r}')} 
+\]
+and the same for the momentum space basis states,
+\[
+\delta ( \mathbf{k}-\mathbf{k'}) = \langle \mathbf{k} \vert \mathbf{k}'\rangle = \langle \mathbf{k} \vert \mathbf{1} \vert \mathbf{k}'\rangle =\int \mathrm{d}\mathbf{r} \langle \mathbf{k}\vert \mathbf{r} \rangle \langle \mathbf{r}\vert \mathbf{k}' \rangle = \left( {1\over 2\pi}\right)^3 \int \mathrm{d}\mathbf{r} e^{i \mathbf{r}(\mathbf{k} - \mathbf{k}')} 
+\]
+% --- end paragraph admon ---
 
 
 
