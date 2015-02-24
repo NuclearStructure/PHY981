@@ -1,34 +1,28 @@
-\frametitle{Example case: pairing Hamiltonian}
+\frametitle{Angular momentum algebra, Wigner-Eckart theorem}
 
 \begin{block}{}
-
-Now we take the following Hamiltonian
+The $\hat{V}$-matrix in terms of harmonic oscillator wave functions reads
 \[
-\hat{H} = \sum_n n \delta \hat{N}_n  - G \hat{P}^\dagger \hat{P}
+  \langle (ab)JT|\hat{V}|(cd)JT\rangle=
+  {\displaystyle \sum_{\lambda \lambda ' SS' {\cal J}}\sum_{nln'l'NN'L}
+  \frac{\left(1-(-1)^{l+S+T}\right)}{\sqrt{(1+\delta_{ab})
+  (1+\delta_{cd})}}}
 \]
-where
 \[
-\hat{N}_n = \hat{a}^\dagger_{n, m=+1/2} \hat{a}_{n, m=+1/2} +
-\hat{a}^\dagger_{n, m=-1/2} \hat{a}_{n, m=-1/2}
+  \times\langle ab|\lambda SJ\rangle \langle cd|\lambda 'S'J\rangle
+  \left\langle nlNL| n_{a}l_{a}n_{b}l_{b}\lambda\right\rangle
+  \left\langle n'l'NL| n_{c}l_{c}n_{d}l_{d}\lambda ' \right\rangle
 \]
-and
 \[
-\hat{P}^\dagger = \sum_{n} \hat{a}^\dagger_{n, m=+1/2} \hat{a}^\dagger_{n, m=-1/2}
+ \times \hat{{\cal J}}(-1)^{\lambda + \lambda ' +l +l'}
+  \left\{\begin{array}{ccc}L&l&\lambda\\S&J&{\cal J}
+  \end{array}\right\}
+  \left\{\begin{array}{ccc}L&l'&\lambda '\\S&J&{\cal J}
+  \end{array}\right\}
 \]
-We can write down the $ 6 \times 6$  Hamiltonian in the basis from the prior slide:
 \[
-H = \left (
-\begin{array}{cccccc}
-2\delta -2G & -G & -G & -G & -G & 0 \\
- -G & 4\delta -2G & -G & -G & -0 & -G \\
--G & -G & 6\delta -2G & 0 & -G & -G \\
- -G & -G & 0 & 6\delta-2G & -G & -G \\
- -G & 0 & -G & -G & 8\delta-2G & -G \\
-0 & -G & -G & -G & -G & 10\delta -2G
-\end{array} \right )
+ \times\langle nNlL{\cal J}ST\vert\hat{V}\vert n'N'l'L'{\cal J}S'T\rangle.
 \]
-(You should check by hand that this is correct.)
-
-For $\delta = 0$ we have the closed form solution of  the g.s. energy given by $-6G$.
-
+The label $a$ represents here all the single particle quantum numbers
+$n_{a}l_{a}j_{a}$.
 \end{block}

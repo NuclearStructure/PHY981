@@ -1868,7 +1868,7 @@ The two-body matrix element is a scalar and since it obeys rotational symmetry, 
 meaning that the corresponding matrix element in $J$-scheme is 
 !bt
 \[
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_b_m_cm_d}\langle j_am_aj_bm_b|JM\rangle
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_bm_cm_d}\langle j_am_aj_bm_b|JM\rangle
 \]
 !et
 !bt
@@ -1933,7 +1933,7 @@ we can also express the two-body matrix element in $m$-scheme in terms of that i
 from left in
 !bt
 \[
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_b_m_cm_d}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_bm_cm_d}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle
 \]
 !et
 !bt
@@ -2038,12 +2038,14 @@ However, when we deal the same state in an angular momentum coupled basis, we ne
 as follows
 !bt
 \[
-| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) J\rangle= \sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle|j_am_a\rangle\otimes |j_bm_b\rangle \otimes |j_cm_c\rangle \ , \label{eq:fabc}
+| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) J\rangle= \sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle|j_am_a\rangle\otimes |j_bm_b\rangle \otimes |j_cm_c\rangle \ , 
+label{eq:fabc}
 \]
 !et
 that is, we couple first $j_a$ to $j_b$ to yield an intermediate angular momentum $J_{ab}$, then to $j_c$ yielding the final angular momentum $J$.
 
 !eblock
+
 !split
 ===== Angular momentum algebra, Wigner-Eckart theorem =====
 !bblock 
@@ -2254,15 +2256,15 @@ is given by
 \[
 \begin{array}{ll}
 &\\
-\bra{lSJ}S_{12}\ket{l'S'J} =&
+\langle lSJ\vert S_{12}\vert l'S'J\rangle =&
 (-)^{S+J}\sqrt{30(2l+1)(2l'+1)(2S+1)(2S'+1)}\\
 &\times\left\{\begin{array}{ccc}J&S'&l'\\2&l&S\end{array}\right\}
 \left(\begin{array}{ccc}l'&2&l\\0&0&0\end{array}\right)
 \left\{\begin{array}{ccc}s_{1}&s_{2}&S\\s_{3}&s_{4}&S'\\
 1&1&2\end{array}
 \right\}\\
-&\times\bra{s_{1}}\left | \sigma_{1}\right | \ket{s_{3}}
-\bra{s_{2}}\left | \sigma_{2}\right | \ket{s_{4}},
+&\times\langle s_{1}\vert\vert \sigma_{1}\vert\vert s_{3}\rangle
+\langle s_{2}\vert\vert \sigma_{2}\vert \vert s_{4}\rangle,
 \end{array}
 \]
 !et
@@ -2420,15 +2422,15 @@ operates  only on
 the spin states we can write the matrix element 
 !bt
 \begin{eqnarray*}
-\bra{lSJ}V\ket{lSJ}& = &
-\bra{lSJ}\left[ \left[{\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^{(2)} \otimes
-\left[{\bf r} \otimes {\bf r} \right]^{(2)}\right]^{(0)}_0\ket{l'S'J}\\
+\langle lSJ\vert V\vert lSJ\rangle & = &
+\langle lSJ \vert\left[ \left[{\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^{(2)} \otimes
+\left[{\bf r} \otimes {\bf r} \right]^{(2)}\right]^{(0)}_0\vert l'S'J\rangle \\
 &  = &
 (-1)^{J+l+S}
 \left\{\begin{array}{ccc} l&S&J \\ l'&S'&2\end{array}\right\}
-\bra{l} |\left[{\bf r} \otimes {\bf r} \right]^{(2)} | \ket{l'}\\
+\langle l \vert\vert\left[{\bf r} \otimes {\bf r} \right]^{(2)} \vert \vert l'\rangle\\
 & &
-\times \bra{S} |\left[{\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^{(2)} | \ket{S'}
+\times \langle S\vert\vert\left[{\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^{(2)} \vert\vert S'\rangle
 \end{eqnarray*}
 !et
 
@@ -2449,7 +2451,7 @@ Using this expression we get
 !bt
 \begin{eqnarray*}
 \left[{\bf r} \otimes {\bf r} \right]^{(2)}_\mu &=& \frac{4\pi}{3}r^2
-\sum_{\alpha ,\beta}\bra{1\alpha 1\beta}2\mu \rangle Y_{1\alpha} Y_{1\beta}
+\sum_{\alpha ,\beta}\langle 1\alpha 1\beta\vert 2\mu \rangle Y_{1\alpha} Y_{1\beta}
 \end{eqnarray*}
 !et
 
@@ -2483,8 +2485,8 @@ Using this relation we get
 \left[{\bf r} \otimes {\bf r} \right]^{(2)}_\mu &=& 
 \sqrt{4\pi}r^2
 \sum_{lm}
-\sum_{\alpha ,\beta}   \bra{1\alpha 1\beta}2\mu \rangle \\
-&&\times \bra{1\alpha 1\beta}l-m \rangle
+\sum_{\alpha ,\beta}   \langle 1\alpha 1\beta\vert 2\mu \rangle \\
+&&\times \langle 1\alpha 1\beta\vert l-m \rangle
 \frac{(-1)^{1-1-m}}{\sqrt{2l+1}} 
 \left(\begin{array}{ccc} 1&1&l \\ 0  &0  &0\end{array}\right)Y_{l-m}(-1)^m\\
 &=& \sqrt{4\pi}r^2
@@ -2503,9 +2505,9 @@ We can then  use this relation to rewrite the reduced matrix element containing 
 position vector as  
 !bt
 \begin{eqnarray*}
-\bra{l} |\left[{\bf r} \otimes {\bf r} \right]^{(2)} | \ket{l'}
+\langle l \vert\vert\left[{\bf r} \otimes {\bf r} \right]^{(2)} \vert \vert l'\rangle
 & = & 
-\sqrt{4\pi}\sqrt{ \frac{2}{15}}r^2 \bra{l} |Y_2 | \ket{l'} \\
+\sqrt{4\pi}\sqrt{ \frac{2}{15}}r^2 \langle l \vert\vert Y_2 \vert \vert l'\rangle \\
 & = &\sqrt{4\pi}\sqrt{ \frac{2}{15}}  r^2 (-1)^l
 \sqrt{\frac{(2l+1)5(2l'+1)}{4\pi}}
 \left(\begin{array}{ccc} l&2&l' \\ 0&0&0\end{array}\right)
@@ -2521,13 +2523,13 @@ Using the  reduced matrix element of the spin
 operators defined as
 !bt
 \begin{eqnarray*}
-\bra{S} |\left[{\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^{(2)} | \ket{S'}
+\langle S\vert \vert\left[{\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^{(2)} \vert \vert S' \rangle
 & = & 
 \sqrt{(2S+1)(2S'+1)5}
 \left\{\begin{array}{ccc} s_1&s_2&S \\s_3&s_4&S' \\ 1&1&2\end{array}\right\}\\
 &\times& 
-\bra{s_1} | {\bf \sigma}_1 | \ket{s_3}
-\bra{s_2} | {\bf \sigma}_2 | \ket{s_4}
+\langle s_1 \vert \vert {\bf \sigma}_1 \vert \vert s_3\rangle
+\langle s_2 \vert\vert {\bf \sigma}_2 \vert \vert s_4\rangle
 \end{eqnarray*}
 !et
 and inserting  these expressions for the two reduced matrix elements we get 
@@ -2535,14 +2537,14 @@ and inserting  these expressions for the two reduced matrix elements we get
 \[
 \begin{array}{ll}
 &\\
-\bra{lSJ}V\ket{l'S'J} =&(-1)^{S+J}\sqrt{30(2l+1)(2l'+1)(2S+1)(2S'+1)}\\
+\langle lSJ\vert V\vert l'S'J\rangle =&(-1)^{S+J}\sqrt{30(2l+1)(2l'+1)(2S+1)(2S'+1)}\\
 &\times\left\{\begin{array}{ccc}l&S &J \\l'&S&2\end{array}\right\}
 \left(\begin{array}{ccc}l&2&l'\\0&0&0\end{array}\right)
 \left\{\begin{array}{ccc}s_{1}&s_{2}&S\\s_{3}&s_{4}&S'\\
 1&1&2\end{array}
 \right\}\\
-&\times\bra{s_{1}}\left | \sigma_{1}\right | \ket{s_{3}}
-\bra{s_{2}}\left | \sigma_{2}\right | \ket{s_{4}}.
+&\times\langle s_{1}\vert\vert \sigma_{1}\vert\vert s_{3}\rangle
+\langle s_{2}\vert\vert \sigma_{2}\vert \vert s_{4}\rangle.
 \end{array}
 \]
 !et
@@ -2557,7 +2559,7 @@ and various partial wave quantum numbers like the spin $S$, the total relative a
 We can then write the  free interaction matrix $V$ as
 !bt
 \[
-    \bra{kKlL{\cal J}ST}\hat{V}\ket{k'Kl'L{\cal J}S'T}.
+    \langle kKlL{\cal J}ST\vert\hat{V}\vert k'Kl'L{\cal J}S'T\rangle.
 \]
 !et
 Transformations from the relative and center-of-mass motion
@@ -2572,16 +2574,16 @@ To obtain a $V$-matrix in a h.o.~basis, we need
 the transformation
 !bt
 \[
-     \bra{nNlL{\cal J}ST}\hat{V}\ket{n'N'l'L'{\cal J}S'T},
+     \langle nNlL{\cal J}ST\vert\hat{V}\vert n'N'l'L'{\cal J}S'T\rangle,
 \]
 !et
 with $n$ and $N$ the principal quantum numbers of the relative and
 center-of-mass motion, respectively.
 !bt
 \[
-   \ket{nlNL{\cal J}ST}= \int k^{2}K^{2}dkdKR_{nl}(\sqrt{2}\alpha k)
+   \vert nlNL{\cal J}ST\rangle= \int k^{2}K^{2}dkdKR_{nl}(\sqrt{2}\alpha k)
 R_{NL}(\sqrt{1/2}\alpha K)
-\ket{klKL{\cal J}ST}.
+\vert klKL{\cal J}ST\rangle.
 \]
 !et
 The parameter $\alpha$ is the chosen oscillator length.
@@ -2598,7 +2600,7 @@ can be expressed as
 !bt
 \[
 \begin{array}{ll}
-\ket{(n_{a}l_{a}j_{a})(n_{b}l_{b}j_{b})JT}=&
+\vert (n_{a}l_{a}j_{a})(n_{b}l_{b}j_{b})JT\rangle =&
 {\displaystyle
 \frac{1}{\sqrt{(1+\delta_{12})}}
 \sum_{\lambda S{\cal J}}\sum_{nNlL}}
@@ -2607,7 +2609,8 @@ F\times \langle ab|\lambda SJ \rangle\\
 \left\{\begin{array}{ccc}L&l&\lambda\\S&J&{\cal J}
 \end{array}\right\}\\
 &\times \left\langle nlNL| n_al_an_bl_b\right\rangle
-\ket{nlNL{\cal J}ST},\end{array}\label{eq:hoho}
+\vert nlNL{\cal J}ST\rangle ,\end{array}
+label{eq:hoho}
 \]
 !et
 where the term
@@ -2669,7 +2672,7 @@ The $\hat{V}$-matrix in terms of harmonic oscillator wave functions reads
 !et
 !bt
 \[
- \times\bra{nNlL{\cal J}ST}\hat{V}\ket{n'N'l'L'{\cal J}S'T}.
+ \times\langle nNlL{\cal J}ST\vert\hat{V}\vert n'N'l'L'{\cal J}S'T\rangle.
 \]
 !et
 The label $a$ represents here all the single particle quantum numbers  
