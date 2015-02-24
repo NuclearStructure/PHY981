@@ -1,0 +1,16 @@
+\frametitle{$\beta$-decay}
+
+\begin{block}{}
+For $N > Z$ we usually have
+$T_{i}=T_{zi}$ which means that $B(F_{+})=0$.
+
+For $N=Z (T_{zi}=0)$ and $T_{i}=0$ we get
+$B(F_{+})=B(F_{-})=0$, and for $T_{i}=1$ we
+have $B(F_{+}) = B(F_{-}) = 2$. Fermi transitions which would be zero
+if isospin is conserved are called isospin-forbidden Fermi transitions.
+
+When $N > Z$ there are some situations where one has $B(GT_{+})=0$,
+and then we obtain $B(GT_{-}) = 3(N_{i}-Z_{i})$. In particular
+for the $\beta_{-}$ decay of the neutron we have $B(F_{-})=1$
+and $B(GT_{-})=3$.
+\end{block}
