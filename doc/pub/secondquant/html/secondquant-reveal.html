@@ -2490,18 +2490,15 @@ which results in \( |0001000000000000\rangle \). Counting the number of $1-$bits
 
 <section>
 
-<h2 id="___sec66">Exercise 5 </h2>
+<h2 id="___sec66">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b></b>
+<b>Exercise 5.</b>
 <p>
 This exercise serves to convince you about the relation between
 two different single-particle bases, where one could be our new Hartree-Fock basis and the other a harmonic oscillator basis.
 
-<ul>
-<p><li> Consider a Slater determinant built up of single-particle orbitals \( \psi_{\lambda} \),</li> 
-</ul>
 <p>
-
+Consider a Slater determinant built up of single-particle orbitals \( \psi_{\lambda} \), 
 with \( \lambda = 1,2,\dots,A \). The unitary transformation
 <p>&nbsp;<br>
 $$
@@ -2517,11 +2514,8 @@ written as the determinant based on the previous basis and the determinant of th
 Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
 (Hint, \( C \) is a unitary matrix). 
 
-<ul>
-<p><li> Starting with the second quantization representation of the Slater determinant</li> 
-</ul>
 <p>
-
+Starting with the second quantization representation of the Slater determinant 
 <p>&nbsp;<br>
 $$
 \Phi_{0}=\prod_{i=1}^{n}a_{\alpha_{i}}^{\dagger}|0\rangle,
@@ -2540,9 +2534,9 @@ use Wick's theorem to compute the normalization integral
 
 <section>
 
-<h2 id="___sec67">Exercise 6 </h2>
+<h2 id="___sec67">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b></b>
+<b>Exercise 6.</b>
 <p>
 Calculate the matrix elements
 <p>&nbsp;<br>
@@ -2606,9 +2600,9 @@ Compare these results with those from exercise 3c).
 
 <section>
 
-<h2 id="___sec68">Exercise 7 </h2>
+<h2 id="___sec68">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b></b>
+<b>Exercise 7.</b>
 <p>
 Show that the onebody part of the Hamiltonian
 <p>&nbsp;<br>
@@ -2637,9 +2631,9 @@ vacuum has been used?
 
 <section>
 
-<h2 id="___sec69">Exercise 8 </h2>
+<h2 id="___sec69">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b></b>
+<b>Exercise 8.</b>
 <p>
 Show that the twobody part of the Hamiltonian
 <p>&nbsp;<br>
@@ -2679,9 +2673,121 @@ and specify the contributions to the twobody, onebody and the scalar part.
 
 <section>
 
-<h2 id="___sec70">Exercises: Program to set up Slater determinants  </h2>
+<h2 id="___sec70">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Exercise 9.</b>
+<p>
+
+<p>
+The aim of this exercise is to set up specific matrix elements that will turn useful when we start our discussions of the nuclear shell model. In particular you will notice, depending on the character of the operator, that many matrix elements will actually be zero.
+
+<p>
+Consider three \( N \)-particle  Slater determinants  \( |\Phi_0 \), \( |\Phi_i^a\rangle \) and \( |\Phi_{ij}^{ab}\rangle \), where the notation means that 
+Slater determinant \( |\Phi_i^a\rangle \) differs from \( |\Phi_0\rangle \) by one single-particle state, that is a single-particle
+state \( \psi_i \) is replaced by a single-particle state \( \psi_a \). 
+It is often interpreted as a so-called one-particle-one-hole excitation.
+Similarly, the Slater determinant \( |\Phi_{ij}^{ab}\rangle \)
+differs by two single-particle states from \( |\Phi_0\rangle \) and is normally thought of as a two-particle-two-hole excitation.
+We assume also that \( |\Phi_0\rangle \) represents our new vacuum reference state
+and the labels \( ijk\dots \) represent single-particle states below the Fermi level and \( abc\dots \) represent states above the Fermi level, so-called particle states.
+We define thereafter a general onebody normal-ordered (with respect to the new vacuum state) operator 
+as
+<p>&nbsp;<br>
+$$
+\hat{F}_N=\sum_{pq}\langle p |f |\beta\rangle \left\{a_{p}^{\dagger}a_{q}\right\}  ,
+$$
+<p>&nbsp;<br>
+
+with
+<p>&nbsp;<br>
+$$
+\langle p |f| q\rangle=\int \psi_{p}^{*}(x)f(x)\psi_{q}(x)dx ,
+$$
+<p>&nbsp;<br>
+
+and a general normal-ordered two-body operator
+<p>&nbsp;<br>
+$$
+\hat{G}_N = \frac{1}{4}\sum_{pqrs}
+\langle pq |g| rs\rangle_{AS} \left\{a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r}\right\} ,
+$$
+<p>&nbsp;<br>
+
+with for example the direct matrix element given as
+<p>&nbsp;<br>
+$$
+\langle pq |g| rs\rangle=
+\int\int \psi_{p}^{*}(x_{1})\psi_{q}^{*}(x_{2})g(x_{1}, x_{2})\psi_{r}(x_{1})\psi_{s}(x_{2})dx_{1}dx_{2}
+$$
+<p>&nbsp;<br>
+
+with \( g \) being invariant under the interchange of the coordinates of two particles.
+The single-particle states \( \psi_i \) are not necessarily eigenstates of \( \hat{f} \).  The curly brackets mean that the operators are normal-ordered with respect to the new vacuum reference state. 
+
+<p>
+How would you write the above Slater determinants in a second quantization formalism, utilizing the fact that we have defined a new reference state? 
+
+<p>
+Use thereafter Wick's theorem to find the expectation values of 
+<p>&nbsp;<br>
+$$
+\langle \Phi_0 \vert\hat{F}_N\vert\Phi_0\rangle,
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+\langle \Phi_0\hat{G}_N|\Phi_0\rangle.
+$$
+<p>&nbsp;<br>
+
+
+<p>
+Find thereafter 
+<p>&nbsp;<br>
+$$
+\langle \Phi_0 |\hat{F}_N|\Phi_i^a\rangle,
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+\langle \Phi_0|\hat{G}_N|\Phi_i^a\rangle,
+$$
+<p>&nbsp;<br>
+
+Finally, find
+<p>&nbsp;<br>
+$$
+\langle \Phi_0 |\hat{F}_N|\Phi_{ij}^{ab}\rangle,
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+\langle \Phi_0|\hat{G}_N|\Phi_{ij}^{ab}\rangle.
+$$
+<p>&nbsp;<br>
+
+What happens with the two-body operator if we have a transition probability  of the type
+<p>&nbsp;<br>
+$$
+\langle \Phi_0|\hat{G}_N|\Phi_{ijk}^{abc}\rangle,
+$$
+<p>&nbsp;<br>
+
+where the Slater determinant to the right of the operator differs by more than two single-particle states?
+
+
+</div>
+
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 10.</b>
 <p>
 
 <p>
@@ -2812,9 +2918,9 @@ s = phi.create(<span style="color: #B452CD">200</span>)
 
 <section>
 
-<h2 id="___sec71">Exercises: Program to set up Slater determinants  </h2>
+<h2 id="___sec71">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Exercise 10.</b>
+<b>Exercise 11.</b>
 <p>
 Compute the matrix element
 <p>&nbsp;<br>
@@ -2827,17 +2933,264 @@ using Wick's theorem and express the two-body operator
 \( G \) in the occupation number (second quantization) 
 representation.
 
+
+</div>
+
+
 <p>
-This exercise can be solve using the symbolic python package as follows
+
+</section>
+
+
+<section>
+
+<h2 id="___sec72">Exercises: Using sympy to compute matrix elements  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The last exercise can be solved using the symbolic Python package called <em>SymPy</em>. SymPy is a Python 
+package for general purpose symbolic algebra. There is a physics module with several interesting submodules.
+Among these, the submodule called <em>secondquant</em>, contains several  functionalities that allow us to test
+our algebraic manipulations using Wick's theorem and operators for second quantization.
 <p>
 
 <!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy</span> <span style="color: #8B008B; font-weight: bold">import</span> symbols, Function, Dummy, latex
-<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy.physics.secondquant</span> <span style="color: #8B008B; font-weight: bold">import</span> wicks, F, Fd, NO
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy</span> <span style="color: #8B008B; font-weight: bold">import</span> *
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy.physics.secondquant</span> <span style="color: #8B008B; font-weight: bold">import</span> *
 
-a1,a2,a3,b1,b2,b3,a,b,g,d = symbols(<span style="color: #CD5555">&#39;a1,a2,a3,b1,b2,b3,a,b,g,d&#39;</span>,above_fermi=<span style="color: #658b00">True</span>)
-<span style="color: #8B008B; font-weight: bold">print</span>(latex(wicks(F(a3)*F(a2)*F(a1)*Fd(a)*Fd(b)*F(d)*F(g)*Fd(b1)*Fd(b2)*Fd(b3),keep_only_fully_contracted=<span style="color: #658b00">True</span>)))
+i, j = symbols(<span style="color: #CD5555">&#39;i,j&#39;</span>, below_fermi=<span style="color: #658b00">True</span>)
+a, b = symbols(<span style="color: #CD5555">&#39;a,b&#39;</span>, above_fermi=<span style="color: #658b00">True</span>)
+p, q = symbols(<span style="color: #CD5555">&#39;p,q&#39;</span>)
+<span style="color: #8B008B; font-weight: bold">print</span> simplify(wicks(Fd(i)*F(a)*Fd(p)*F(q)*Fd(b)*F(j), keep_only_fully_contracted=<span style="color: #658b00">True</span>))
 </pre></div>
+<p>
+The code defines single-particle states above and below the Fermi level, in addition to the genereal symbols
+\( pq \) which can refer to any type of state below or above the Fermi level. Wick's theorem is implemented between 
+the creation and annihilation operators <em>Fd</em> and <em>F</em>, respectively. Using the simplify option, one can lump together several Kronecker-\( \delta \) functions. 
+
+
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec73">Exercises: Using sympy to compute matrix elements  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can expand the above Python code by defining one-body and two-body operators using  the following SymPy code 
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #228B22"># This code sets up a two-body Hamiltonian for fermions</span>
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy</span> <span style="color: #8B008B; font-weight: bold">import</span> symbols, latex, WildFunction, collect, Rational
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy.physics.secondquant</span> <span style="color: #8B008B; font-weight: bold">import</span> F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO
+
+<span style="color: #228B22"># setup hamiltonian</span>
+p,q,r,s = symbols(<span style="color: #CD5555">&#39;p q r s&#39;</span>,dummy=<span style="color: #658b00">True</span>)
+f = AntiSymmetricTensor(<span style="color: #CD5555">&#39;f&#39;</span>,(p,),(q,))
+pr = NO((Fd(p)*F(q)))
+v = AntiSymmetricTensor(<span style="color: #CD5555">&#39;v&#39;</span>,(p,q),(r,s))
+pqsr = NO(Fd(p)*Fd(q)*F(s)*F(r))
+Hamiltonian=f*pr + Rational(<span style="color: #B452CD">1</span>)/Rational(<span style="color: #B452CD">4</span>)*v*pqsr
+<span style="color: #8B008B; font-weight: bold">print</span> <span style="color: #CD5555">&quot;Hamiltonian defined as:&quot;</span>, latex(Hamiltonian)
+</pre></div>
+<p>
+Here we have used the <em>AntiSymmetricTensor</em> functionality, together with normal-ordering defined by the <em>NO</em> function. 
+Using the <em>latex</em> option, this program produces the following output
+<p>&nbsp;<br>
+$$
+f^{p}_{q} \left\{a^\dagger_{p} a_{q}\right\} - \frac{1}{4} v^{qp}_{sr} \left\{a^\dagger_{p} a^\dagger_{q} a_{r} a_{s}\right\}
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec74">Exercises: Using sympy to compute matrix elements  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can now use this code to compute the matrix elements between two two-body Slater determinants using Wick's theorem.
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy</span> <span style="color: #8B008B; font-weight: bold">import</span> symbols, latex, WildFunction, collect, Rational, simplify
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy.physics.secondquant</span> <span style="color: #8B008B; font-weight: bold">import</span> F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
+<span style="color: #228B22"># setup hamiltonian</span>
+p,q,r,s = symbols(<span style="color: #CD5555">&#39;p q r s&#39;</span>,dummy=<span style="color: #658b00">True</span>)
+f = AntiSymmetricTensor(<span style="color: #CD5555">&#39;f&#39;</span>,(p,),(q,))
+pr = NO((Fd(p)*F(q)))
+v = AntiSymmetricTensor(<span style="color: #CD5555">&#39;v&#39;</span>,(p,q),(r,s))
+pqsr = NO(Fd(p)*Fd(q)*F(s)*F(r))
+Hamiltonian=f*pr + Rational(<span style="color: #B452CD">1</span>)/Rational(<span style="color: #B452CD">4</span>)*v*pqsr
+c,d = symbols(<span style="color: #CD5555">&#39;c, d&#39;</span>,above_fermi=<span style="color: #658b00">True</span>)
+a,b = symbols(<span style="color: #CD5555">&#39;a, b&#39;</span>,above_fermi=<span style="color: #658b00">True</span>)
+
+expression = wicks(F(b)*F(a)*Hamiltonian*Fd(c)*Fd(d),keep_only_fully_contracted=<span style="color: #658b00">True</span>, simplify_kronecker_deltas=<span style="color: #658b00">True</span>)
+expression = evaluate_deltas(expression)
+expression = simplify(expression)
+<span style="color: #8B008B; font-weight: bold">print</span> <span style="color: #CD5555">&quot;Hamiltonian defined as:&quot;</span>, latex(expression)
+</pre></div>
+<p>
+The result is as expected,
+<p>&nbsp;<br>
+$$
+\delta_{a c} f^{b}_{d} - \delta_{a d} f^{b}_{c} - \delta_{b c} f^{a}_{d} + \delta_{b d} f^{a}_{c} + v^{ab}_{cd}.
+$$
+<p>&nbsp;<br>
+
+
+
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec75">Exercises: Using sympy to compute matrix elements  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can continue along these lines and define a normal-ordered Hamiltonian with respect to a given reference state.
+In our first step we just define the Hamiltonian
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy</span> <span style="color: #8B008B; font-weight: bold">import</span> symbols, latex, WildFunction, collect, Rational, simplify
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy.physics.secondquant</span> <span style="color: #8B008B; font-weight: bold">import</span> F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
+<span style="color: #228B22"># setup hamiltonian</span>
+p,q,r,s = symbols(<span style="color: #CD5555">&#39;p q r s&#39;</span>,dummy=<span style="color: #658b00">True</span>)
+f = AntiSymmetricTensor(<span style="color: #CD5555">&#39;f&#39;</span>,(p,),(q,))
+pr = Fd(p)*F(q)
+v = AntiSymmetricTensor(<span style="color: #CD5555">&#39;v&#39;</span>,(p,q),(r,s))
+pqsr = Fd(p)*Fd(q)*F(s)*F(r)
+<span style="color: #228B22">#define the Hamiltonian</span>
+Hamiltonian = f*pr + Rational(<span style="color: #B452CD">1</span>)/Rational(<span style="color: #B452CD">4</span>)*v*pqsr
+<span style="color: #228B22">#define indices for states above and below the Fermi level</span>
+index_rule = {
+     <span style="color: #CD5555">&#39;below&#39;</span>:  <span style="color: #CD5555">&#39;kl&#39;</span>,
+     <span style="color: #CD5555">&#39;above&#39;</span>:  <span style="color: #CD5555">&#39;cd&#39;</span>,
+     <span style="color: #CD5555">&#39;general&#39;</span>: <span style="color: #CD5555">&#39;pqrs&#39;</span>
+     }
+Hnormal = substitute_dummies(Hamiltonian,new_indices=<span style="color: #658b00">True</span>, pretty_indices=index_rule)
+<span style="color: #8B008B; font-weight: bold">print</span> <span style="color: #CD5555">&quot;Hamiltonian defined as:&quot;</span>, latex(Hnormal)
+</pre></div>
+<p>
+which results in
+<p>&nbsp;<br>
+$$
+f^{q}_{p} a^\dagger_{q} a_{p} + \frac{1}{4} v^{sr}_{qp} a^\dagger_{s} a^\dagger_{r} a_{p} a_{q}
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec76">Exercises: Using sympy to compute matrix elements  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In our next step we define the reference energy \( E_0 \) and redefine the Hamiltonian by subtracting the reference energy and collecting the coefficients for all normal-ordered products (given by the <em>NO</em> function).
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy</span> <span style="color: #8B008B; font-weight: bold">import</span> symbols, latex, WildFunction, collect, Rational, simplify
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy.physics.secondquant</span> <span style="color: #8B008B; font-weight: bold">import</span> F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
+<span style="color: #228B22"># setup hamiltonian</span>
+p,q,r,s = symbols(<span style="color: #CD5555">&#39;p q r s&#39;</span>,dummy=<span style="color: #658b00">True</span>)
+f = AntiSymmetricTensor(<span style="color: #CD5555">&#39;f&#39;</span>,(p,),(q,))
+pr = Fd(p)*F(q)
+v = AntiSymmetricTensor(<span style="color: #CD5555">&#39;v&#39;</span>,(p,q),(r,s))
+pqsr = Fd(p)*Fd(q)*F(s)*F(r)
+<span style="color: #228B22">#define the Hamiltonian</span>
+Hamiltonian=f*pr + Rational(<span style="color: #B452CD">1</span>)/Rational(<span style="color: #B452CD">4</span>)*v*pqsr
+<span style="color: #228B22">#define indices for states above and below the Fermi level</span>
+index_rule = {
+     <span style="color: #CD5555">&#39;below&#39;</span>:  <span style="color: #CD5555">&#39;kl&#39;</span>,
+     <span style="color: #CD5555">&#39;above&#39;</span>:  <span style="color: #CD5555">&#39;cd&#39;</span>,
+     <span style="color: #CD5555">&#39;general&#39;</span>: <span style="color: #CD5555">&#39;pqrs&#39;</span>
+     }
+Hnormal = substitute_dummies(Hamiltonian,new_indices=<span style="color: #658b00">True</span>, pretty_indices=index_rule)
+E0 = wicks(Hnormal,keep_only_fully_contracted=<span style="color: #658b00">True</span>)
+Hnormal = Hnormal-E0
+w = WildFunction(<span style="color: #CD5555">&#39;w&#39;</span>)
+Hnormal = collect(Hnormal, NO(w))
+Hnormal = evaluate_deltas(Hnormal)
+<span style="color: #8B008B; font-weight: bold">print</span> latex(Hnormal)
+</pre></div>
+<p>
+which gives us 
+<p>&nbsp;<br>
+$$
+- f^{i}_{i} + f^{q}_{p} a^\dagger_{q} a_{p} - \frac{1}{4} v^{ii}_{ii} - \frac{1}{4} v^{ii}_{ii} + \frac{1}{4} v^{sr}_{qp} a^\dagger_{r} a^\dagger_{s} a_{q} a_{p},
+$$
+<p>&nbsp;<br>
+
+again as expected, with the reference energy to be subtracted.
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec77">Exercises: Using sympy to compute matrix elements  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can now go back to exercise 11 and define the Hamiltonian and the second-quantized representation of a  three-body Slater determinant. 
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy</span> <span style="color: #8B008B; font-weight: bold">import</span> symbols, latex, WildFunction, collect, Rational, simplify
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sympy.physics.secondquant</span> <span style="color: #8B008B; font-weight: bold">import</span> F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
+<span style="color: #228B22"># setup hamiltonian</span>
+p,q,r,s = symbols(<span style="color: #CD5555">&#39;p q r s&#39;</span>,dummy=<span style="color: #658b00">True</span>)
+
+v = AntiSymmetricTensor(<span style="color: #CD5555">&#39;v&#39;</span>,(p,q),(r,s))
+pqsr = NO(Fd(p)*Fd(q)*F(s)*F(r))
+Hamiltonian=Rational(<span style="color: #B452CD">1</span>)/Rational(<span style="color: #B452CD">4</span>)*v*pqsr
+a,b,c,d,e,f = symbols(<span style="color: #CD5555">&#39;a,b, c, d, e, f&#39;</span>,above_fermi=<span style="color: #658b00">True</span>)
+
+expression = wicks(F(c)*F(b)*F(a)*Hamiltonian*Fd(d)*Fd(e)*Fd(f),keep_only_fully_contracted=<span style="color: #658b00">True</span>, simplify_kronecker_deltas=<span style="color: #658b00">True</span>)
+expression = evaluate_deltas(expression)
+expression = simplify(expression)
+<span style="color: #8B008B; font-weight: bold">print</span> latex(expression)
+</pre></div>
+<p>
+resulting in nine terms (as expected), 
+<p>&nbsp;<br>
+$$
+ - \delta_{a d} v^{cb}_{ef} - \delta_{a e} v^{cb}_{fd} + \delta_{a f} v^{cb}_{ed} - \delta_{b d} v^{ac}_{ef} - \delta_{b e} v^{ac}_{fd} + \delta_{b f} v^{ac}_{ed} + \delta_{c d} v^{ab}_{ef} + \delta_{c e} v^{ab}_{fd} - \delta_{c f} v^{ab}_{ed}
+$$
+<p>&nbsp;<br>
+
+
 
 </div>
 
