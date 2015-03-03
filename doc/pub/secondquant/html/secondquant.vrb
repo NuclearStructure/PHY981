@@ -1,21 +1,26 @@
-\frametitle{Exercises: Program to set up Slater determinants}
+\frametitle{Exercises: Using sympy to compute matrix elements}
 
-\begin{block}{Exercise 10 }
-Compute the matrix element
-\[
-\langle\alpha_{1}\alpha_{2}\alpha_{3}|\hat{G}|\alpha_{1}'\alpha_{2}'\alpha_{3}'\rangle,
-\]
-using Wick's theorem and express the two-body operator
-$G$ in the occupation number (second quantization)
-representation.
-
-This exercise can be solve using the symbolic python package as follows
+\begin{block}{}
+We can now go back to exercise 11 and define the Hamiltonian and the second-quantized representation of a  three-body Slater determinant.
 \begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
-from sympy import symbols, Function, Dummy, latex
-from sympy.physics.secondquant import wicks, F, Fd, NO
+from sympy import symbols, latex, WildFunction, collect, Rational, simplify
+from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
+# setup hamiltonian
+p,q,r,s = symbols('p q r s',dummy=True)
 
-a1,a2,a3,b1,b2,b3,a,b,g,d = symbols('a1,a2,a3,b1,b2,b3,a,b,g,d',above_fermi=True)
-print(latex(wicks(F(a3)*F(a2)*F(a1)*Fd(a)*Fd(b)*F(d)*F(g)*Fd(b1)*Fd(b2)*Fd(b3),keep_only_fully_contracted=True)))
+v = AntiSymmetricTensor('v',(p,q),(r,s))
+pqsr = NO(Fd(p)*Fd(q)*F(s)*F(r))
+Hamiltonian=Rational(1)/Rational(4)*v*pqsr
+a,b,c,d,e,f = symbols('a,b, c, d, e, f',above_fermi=True)
+
+expression = wicks(F(c)*F(b)*F(a)*Hamiltonian*Fd(d)*Fd(e)*Fd(f),keep_only_fully_contracted=True, simplify_kronecker_deltas=True)
+expression = evaluate_deltas(expression)
+expression = simplify(expression)
+print latex(expression)
 \end{minted}
+resulting in nine terms (as expected),
+\[
+ - \delta_{a d} v^{cb}_{ef} - \delta_{a e} v^{cb}_{fd} + \delta_{a f} v^{cb}_{ed} - \delta_{b d} v^{ac}_{ef} - \delta_{b e} v^{ac}_{fd} + \delta_{b f} v^{ac}_{ed} + \delta_{c d} v^{ab}_{ef} + \delta_{c e} v^{ab}_{fd} - \delta_{c f} v^{ab}_{ed}
+\]
 
 \end{block}
