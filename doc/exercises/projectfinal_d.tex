@@ -1,0 +1,124 @@
+\documentclass[prc]{revtex4}
+\usepackage[dvips]{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{lscape}
+
+\usepackage{epic,eepic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvips]{epsfig}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{bezier}
+\usepackage{pstricks}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{braket}
+\usepackage[dvips]{graphicx}
+\usepackage{pst-plot}
+
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]
+    {\bra{#1}#2\ket{#3}}
+
+\newcommand{\normord}[1]{
+    \left\{#1\right\}
+}
+
+
+\usepackage{amsmath}
+\begin{document}
+
+
+\title{Project for the final oral examination of PHY981}
+%\author{}
+\maketitle
+\section*{Shell-model studies of oxygen and fluorine isotopes}
+
+The aim of this project is to study the structure of selected low-lying states of the oxygen and fluorine isotopes towards their respective dripline. We will focus mainly on spectra   using Alex Brown's Nushellx code. 
+These chains of  isotopes have been studied extensively during the last years (see the reference list), 
+with many efforts toward the understanding of their dripline 
+properties, involving studies of low-lying excited states and electromagnetic transitions. For the oxygen isotopes, 
+$^{24}$O is the last particle-stable nucleus, and for the fluorine isotopes $^{31}$F  is assumed to the last stable one. 
+
+The task here is to study these isotopic chains, extract excitation energies and compare with available data. To achieve this you will need to use an effective interaction designed for the $1s0d$ shell first
+and then, for nuclei beyond $A=24$ you may need to consider degrees of freedom from the $1p0f$ shell. Since a full calculation in these two 
+major shells becomes quickly time-consuming for the fluorine isotopes, you will need to truncate the number of particles which can leave/occupy selected single-particle states. In the file which contains the single-particle data, you can reduce the size of the total space of Slater determinants by limiting the number of particles which can populate 
+the $1p0f$ shell. Here you could limit yourselves to consider only the single-particle states $0f_{7/2}$ and $1p_{3/2}$.
+
+
+\begin{enumerate}
+\item Test your effective interaction and setup of single-particle energies by computing the spectra of $^{18}$O and $^{18}$F in order to see that your $1s0d$-shell calculations where set up correctly.  Compare the spectra with available data.
+Use the USDA and USDB interactions in the Nushellx directory over interactions, see Reference 1 below.
+\item Perform shell-model studies using Nushellx for all oxygen isotopes from $^{18}$O to $^{28}$O, plot the lowest-lying 3-4 states and compare with data where available. Comment your results. 
+\item Perform also shell-model studies using Nushellx for all oxygen isotopes from $^{18}$F to $^{29}$F, plot the lowest-lying 3-4 states and compare with data where available. Comment your results. Try also to compute $^{30}$F and $^{31}$F. Here you need to include the $0f_{7/2}$ and $1p_{3/2}$ single-particle states. 
+\item See also if you can find  excited states in $^{25}$O and $^{25}$F  with negative parity.
+
+\end{enumerate}
+
+Here follows a list of recent references.
+
+
+\begin{thebibliography}{99}
+\bibitem{usdab} B.~A.~Brown and W.~A.~Richter, Phys.~Rev.~C {\bf 74},  034315 (2006).
+
+
+\bibitem{sorlin2008} O. Sorlin and M.-G. Porquet, Prog. Part. Nucl. Phys. \textbf{61},  602 (2008), Phys. Scr. (2012) in press.
+
+\bibitem{michael2012} T.~Baumann, A.~Spyrou, and M.~Thoennessen, Rep. Prog. Phys. {\bf 75},  036301  (2012).
+
+
+\bibitem{hoffman2009} C.~R.~Hoffman {\em et al.}, Phys.~Rev.~Lett.~{\bf 102},152501  (2009). 
+
+\bibitem{Hoffman09} C.~R.~Hoffman {\em et al.}, Phys.~Lett.~B {\bf 672}, 17 (2009).
+
+\bibitem{kanungo2009} R.~Kanungo {\em et al.}, Phys.~Rev.~Lett.~{\bf 102}, 152501 (2009).
+
+
+
+
+\bibitem{Tshoo2012} K. Tshoo  {\em et al.}, Phys.~Rev.~Lett.~{\bf 109}, 022501 (2012).  
+
+\bibitem{Hoffman08} C. R. Hoffman {\em et al.}, Phys. Rev. Lett. {\bf 100}, 152502 (2008).
+
+\bibitem{lundeberg2012} E.~Lunderberg {\it et al.}, Phys.~Rev.~Lett.~{\bf 108}, 142503 (2012). 
+
+\bibitem{Otsuka2010} T. Otsuka {\it et al.}, Phys.~Rev.~Lett.~{\bf 105}, 032501 (2010). 
+
+
+\bibitem{christian2012} G.~Christian {\em et al.}, Phys.~Rev.~Lett. {\bf 108}, 032501 (2012)
+
+
+
+\bibitem{Hagen2012} G.~Hagen {\em et al.}, Phys. Rev. Lett. {\bf 108}, 242501 (2012).
+
+\bibitem{lepalieur} A.~Lepailleur {\it et al.}, Phys.~Rev.~Lett.~{\bf 110}, 082502 (2013). 
+
+\end{thebibliography}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
