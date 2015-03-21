@@ -1,0 +1,771 @@
+# Slides for PHY981
+TITLE: Infinite matter
+AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+DATE: Spring 2015
+
+!split
+===== Studies of infinite matter =====
+
+!bblock 
+* For historical and pedagogical  reasons we start with the electron gas in two and three dimensions 
+* Thereafter we discuss infinite nuclear matter
+!eblock
+
+
+
+!split
+===== Electron gas and HF solution =====
+!bblock
+The electron gas is perhaps the only realistic model of a 
+system of many interacting particles that allows for a solution
+of the Hartree-Fock equations on a closed form. Furthermore, to first order in the interaction, one can also
+compute on a closed form the total energy and several other properties of a many-particle systems. 
+The model gives a very good approximation to the properties of valence electrons in metals.
+The assumptions are
+
+*  System of electrons that is not influenced by external forces except by an attraction provided by a uniform background of ions. These ions give rise to a uniform background charge. The ions are stationary.
+*  The system as a whole is neutral.
+*  We assume we have $N_e$ electrons in a cubic box of length $L$ and volume $\Omega=L^3$. This volume contains also a
+uniform distribution of positive charge with density $N_ee/\Omega$. 
+
+
+This is a homogeneous system and the one-particle wave functions are given by plane wave functions normalized to a volume $\Omega$ 
+for a box with length $L$ (the limit $L\rightarrow \infty$ is to be taken after we have computed various expectation values)
+!bt
+\[
+\psi_{{\bf k}\sigma}({\bf r})= \frac{1}{\sqrt{\Omega}}\exp{(i{\bf kr})}\xi_{\sigma}
+\]
+!et
+where ${\bf k}$ is the wave number and  $\xi_{\sigma}$ is a spin function for either spin up or down
+!bt
+\[ 
+\xi_{\sigma=+1/2}=\left(\begin{array}{c} 1 \\ 0 \end{array}\right) \hspace{0.5cm}
+\xi_{\sigma=-1/2}=\left(\begin{array}{c} 0 \\ 1 \end{array}\right).
+\]
+!et
+We assume that we have periodic boundary conditions which limit the allowed wave numbers to
+!bt
+\[
+k_i=\frac{2\pi n_i}{L}\hspace{0.5cm} i=x,y,z \hspace{0.5cm} n_i=0,\pm 1,\pm 2, \dots
+\]
+!et
+We assume first that the electrons interact via a central, symmetric and translationally invariant
+interaction  $V(r_{12})$ with
+$r_{12}=|{\bf r}_1-{\bf r}_2|$.  The interaction is spin independent.
+
+The total Hamiltonian consists then of kinetic and potential energy
+!bt
+\[
+\hat{H} = \hat{T}+\hat{V}.
+\]
+!et
+The operator for the kinetic energy can be written as
+!bt
+\[
+\hat{T}=\sum_{{\bf k}\sigma}\frac{\hbar^2k^2}{2m}a_{{\bf k}\sigma}^{\dagger}a_{{\bf k}\sigma}.
+\]
+!et
+
+The Hamilton operator is given by
+!bt
+\[
+\hat{H}=\hat{H}_{el}+\hat{H}_{b}+\hat{H}_{el-b},
+\]
+!et
+with the electronic part
+!bt
+\[
+\hat{H}_{el}=\sum_{i=1}^N\frac{p_i^2}{2m}+\frac{e^2}{2}\sum_{i\ne j}\frac{e^{-\mu |{\bf r}_i-{\bf r}_j|}}{|{\bf r}_i-{\bf r}_j|},
+\]
+!et
+where we have introduced an explicit convergence factor
+(the limit $\mu\rightarrow 0$ is performed after having calculated the various integrals).
+Correspondingly, we have
+!bt
+\[
+\hat{H}_{b}=\frac{e^2}{2}\int\int d{\bf r}d{\bf r}'\frac{n({\bf r})n({\bf r}')e^{-\mu |{\bf r}-{\bf r}'|}}{|{\bf r}-{\bf r}'|},
+\]
+!et
+which is the energy contribution from the positive background charge with density
+$n({\bf r})=N/\Omega$. Finally,
+!bt
+\[
+\hat{H}_{el-b}=-\frac{e^2}{2}\sum_{i=1}^N\int d{\bf r}\frac{n({\bf r})e^{-\mu |{\bf r}-{\bf x}_i|}}{|{\bf r}-{\bf x}_i|},
+\]
+!et
+is the interaction between the electrons and the positive background.
+!eblock
+
+!split
+===== Electron gas and HF solution =====
+!bblock
+In exercise 5 we show that the Hartree-Fock energy can be written as 
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m_e}-\frac{e^{2}}
+{\Omega^{2}}\sum_{k'\leq
+k_{F}}\int d{\bf r}e^{i({\bf k}'-{\bf k}){\bf r}}\int
+d{\bf r'}\frac{e^{i({\bf k}-{\bf k}'){\bf r}'}}
+{\vert{\bf r}-{\bf r}'\vert}
+\]
+!et
+resulting in
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m_e}-\frac{e^{2}
+k_{F}}{2\pi}
+\left[
+2+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right]
+\]
+!et
+
+The results can be rewritten in terms of the density
+!bt
+\[
+n= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_s^3},
+\]
+!et
+where $n=N_e/\Omega$, $N_e$ being the number of electrons, and $r_s$ is the radius of a sphere which represents the volum per conducting electron.  
+It can be convenient to use the Bohr radius $a_0=\hbar^2/e^2m_e$.
+For most metals we have a relation $r_s/a_0\sim 2-6$.  The quantity $r_s$ is dimensionless.
+
+In exercise 6 we find that
+the total energy
+$E_0/N_e=\langle\Phi_{0}|\hat{H}|\Phi_{0}\rangle/N_e$ for
+for this system to first order in the interaction is given as 
+!bt
+\[
+E_0/N_e=\frac{e^2}{2a_0}\left[\frac{2.21}{r_s^2}-\frac{0.916}{r_s}\right].
+\]
+!et
+
+!eblock
+
+
+
+
+
+!split
+===== Exercises: Derivation of Hartree-Fock equations  =====
+!bblock  Exercise 1
+Consider a Slater determinant built up of single-particle orbitals $\psi_{\lambda}$, 
+with $\lambda = 1,2,\dots,N$.
+
+The unitary transformation
+!bt
+\[
+\psi_a  = \sum_{\lambda} C_{a\lambda}\phi_{\lambda},
+\]
+!et
+brings us into the new basis.  
+The new basis has quantum numbers $a=1,2,\dots,N$.
+Show that the new basis is orthonormal.
+Show that the new Slater determinant constructed from the new single-particle wave functions can be
+written as the determinant based on the previous basis and the determinant of the matrix $C$.
+Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
+(Hint, $C$ is a unitary matrix). 
+
+!eblock
+
+!split
+===== Exercises: Derivation of Hartree-Fock equations  =====
+!bblock  Exercise 2 
+Consider the  Slater  determinant
+!bt
+\[
+\Phi_{0}=\frac{1}{\sqrt{n!}}\sum_{p}(-)^{p}P
+\prod_{i=1}^{n}\psi_{\alpha_{i}}(x_{i}).
+\]
+!et
+A small variation in this function is given by
+!bt
+\[
+\delta\Phi_{0}=\frac{1}{\sqrt{n!}}\sum_{p}(-)^{p}P
+\psi_{\alpha_{1}}(x_{1})\psi_{\alpha_{2}}(x_{2})\dots
+\psi_{\alpha_{i-1}}(x_{i-1})(\delta\psi_{\alpha_{i}}(x_{i}))
+\psi_{\alpha_{i+1}}(x_{i+1})\dots\psi_{\alpha_{n}}(x_{n}).
+\]
+!et
+Show that
+!bt
+\[
+\langle \delta\Phi_{0}|\sum_{i=1}^{n}\left\{t(x_{i})+u(x_{i})
+\right\}+\frac{1}{2}
+\sum_{i\neq j=1}^{n}v(x_{i},x_{j})|\Phi_{0}\rangle=\sum_{i=1}^{n}\langle \delta\psi_{\alpha_{i}}|\hat{t}+\hat{u}
+|\phi_{\alpha_{i}}\rangle
++\sum_{i\neq j=1}^{n}\left\{\langle\delta\psi_{\alpha_{i}}
+\psi_{\alpha_{j}}|\hat{v}|\psi_{\alpha_{i}}\psi_{\alpha_{j}}\rangle-
+\langle\delta\psi_{\alpha_{i}}\psi_{\alpha_{j}}|\hat{v}
+|\psi_{\alpha_{j}}\psi_{\alpha_{i}}\rangle\right\}
+\]
+!et
+!eblock
+
+
+!split
+===== Exercises: Derivation of Hartree-Fock equations  =====
+!bblock  Exercise 3 
+What is the diagrammatic representation of the HF equation?
+!bt
+\[
+-\langle\alpha_{k}|u^{HF}|\alpha_{i}\rangle+\sum_{j=1}^{n}
+\left[\langle\alpha_{k}\alpha_{j}|\hat{v}|\alpha_{i}\alpha_{j}\rangle-
+\langle\alpha_{k}\alpha_{j}|v|\alpha_{j}\alpha_{i}\rangle\right]=0
+\]
+!et
+(Represent $(-u^{HF})$ by the symbol $---$X .)
+!eblock
+
+!split
+===== Exercises: Derivation of Hartree-Fock equations  =====
+!bblock  Exercise 4 
+Consider the ground state $|\Phi\rangle$ 
+of a bound many-particle system of fermions. Assume that we remove one particle
+from the single-particle state $\lambda$ and that our system ends in a new state
+$|\Phi_{n}\rangle$. 
+Define the energy needed to remove this particle as
+!bt
+\[
+E_{\lambda}=\sum_{n}\vert\langle\Phi_{n}|a_{\lambda}|\Phi\rangle\vert^{2}(E_{0}-E_{n}),
+\]
+!et
+where $E_{0}$ and $E_{n}$  are the ground state energies of the states
+$|\Phi\rangle$  and  $|\Phi_{n}\rangle$, respectively.
+ * Show that
+!bt
+\[
+E_{\lambda}=\langle\Phi|a_{\lambda}^{\dagger}\left[
+a_{\lambda},H \right]|\Phi\rangle,
+\]
+!et
+where $H$ is the Hamiltonian of this system.
+ * If we assume that $\Phi$ is the  Hartree-Fock result, find the 
+relation between $E_{\lambda}$ and the single-particle energy
+$\varepsilon_{\lambda}$
+for states $\lambda \leq F$ and $\lambda >F$, with
+!bt
+\[
+\varepsilon_{\lambda}=\langle\lambda|\hat{t}+\hat{u}|\lambda\rangle,
+\]
+!et
+and
+!bt
+\[
+\langle\lambda|\hat{u}|\lambda\rangle=\sum_{\beta \leq F}
+\langle\lambda\beta|\hat{v}|\lambda\beta\rangle.
+\]
+!et
+We have assumed an antisymmetrized matrix element here.
+Discuss the result.
+
+The Hamiltonian operator is defined as
+!bt
+\[
+H=\sum_{\alpha\beta}\langle\alpha|\hat{t}|\beta\rangle a_{\alpha}^{\dagger}a_{\beta}+
+\frac{1}{2}\sum_{\alpha\beta\gamma\delta}\langle\alpha\beta|\hat{v}|\gamma\delta\rangle a_{\alpha}^{\dagger}a_{\beta}^{\dagger}a_{\delta}a_{\gamma}.
+\]
+!et
+!eblock
+
+
+!split
+===== Exercises: Electron gas  =====
+!bblock  Exercise 5
+The electron gas model allows closed form solutions for quantities like the 
+single-particle Hartree-Fock energy.  The latter quantity is given by the following expression
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}}
+{V^{2}}\sum_{k'\leq
+k_{F}}\int d{\bf r}e^{i({\bf k'}-{\bf k}){\bf r}}\int
+d{\bf r}'\frac{e^{i({\bf k}-{\bf k'}){\bf r}'}}
+{\vert{\bf r}-{\bf r'}\vert}
+\]
+!et
+ * Show that
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}
+k_{F}}{2\pi}
+\left[
+2+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right]
+\]
+!et
+(Hint: Introduce the convergence factor 
+$e^{-\mu\vert{\bf r}-{\bf r}'\vert}$
+in the potential and use  $\sum_{{\bf k}}\rightarrow
+\frac{V}{(2\pi)^{3}}\int d{\bf k}$ )
+ * Rewrite the above result as a function of the density
+!bt
+\[
+n= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_s^3},
+\]
+!et
+where $n=N/V$, $N$ being the number of particles, and $r_s$ is the radius of a sphere which represents the volum per conducting electron.  
+It can be convenient to use the Bohr radius $a_0=\hbar^2/e^2m$.
+
+For most metals we have a relation $r_s/a_0\sim 2-6$.
+
+Make a plot of the free electron energy and the Hartree-Fock energy and discuss the behavior around the Fermi surface. Extract also   the Hartree-Fock band width $\Delta\varepsilon^{HF}$ defined as
+!bt
+\[ 
+\Delta\varepsilon^{HF}=\varepsilon_{k_{F}}^{HF}-
+\varepsilon_{0}^{HF}.
+\]
+!et
+Compare this results with the corresponding one for a free electron and comment your results. How large is the contribution due to the exchange term in the Hartree-Fock equation?\newline
+ * We will now define a quantity called the effective mass.
+For $\vert{\bf k}\vert$ near $k_{F}$, we can Taylor expand the Hartree-Fock energy as  
+!bt
+\[
+\varepsilon_{k}^{HF}=\varepsilon_{k_{F}}^{HF}+
+\left(\frac{\partial\varepsilon_{k}^{HF}}{\partial k}\right)_{k_{F}}(k-k_{F})+\dots
+\]
+!et
+If we compare the latter with the corresponding expressiyon for the non-interacting system
+!bt
+\[
+\varepsilon_{k}^{(0)}=\frac{\hbar^{2}k^{2}_{F}}{2m}+
+\frac{\hbar^{2}k_{F}}{m}\left(k-k_{F}\right)+\dots ,
+\]
+!et
+we can define the so-called effective Hartree-Fock mass as
+!bt
+\[
+m_{HF}^{*}\equiv\hbar^{2}k_{F}\left(
+\frac{\partial\varepsilon_{k}^{HF}}
+{\partial k}\right)_{k_{F}}^{-1}
+\]
+!et
+Compute $m_{HF}^{*}$ and comment your results after you have done 
+point d). \newline
+ * Show that the level density (the number of single-electron states per unit energy) can be written as
+!bt
+\[
+n(\varepsilon)=\frac{Vk^{2}}{2\pi^{2}}\left(
+\frac{\partial\varepsilon}{\partial k}\right)^{-1}
+\]
+!et
+Calculate $n(\varepsilon_{F}^{HF})$ and comment the results.
+
+
+!eblock
+
+
+
+!split
+===== Exercises: Electron gas  =====
+!bblock  Solution to exercise 5
+We want to show that, given the Hartree-Fock equation for the electron gas
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}}
+{V^{2}}\sum_{p\leq
+k_{F}}\int d{\bf r}\exp{(i({\bf p}-{\bf k}){\bf r})}\int
+d{\bf r}'\frac{\exp{(i({\bf k}-{\bf p}){\bf r}'})}
+{\vert{\bf r}-{\bf r'}\vert}
+\]
+!et
+the single-particle energy can be written as
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}
+k_{F}}{2\pi}
+\left[
+2+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right].
+\]
+!et
+We introduce the convergence factor 
+$e^{-\mu\vert{\bf r}-{\bf r}'\vert}$
+in the potential and use  $\sum_{{\bf k}}\rightarrow
+\frac{V}{(2\pi)^{3}}\int d{\bf k}$. We can then rewrite the integral as 
+!bt
+\[
+\frac{e^{2}}
+{V^{2}}\sum_{k'\leq
+k_{F}}\int d{\bf r}\exp{(i({\bf k'}-{\bf k}){\bf r})}\int
+d{\bf r}'\frac{\exp{(i({\bf k}-{\bf p}){\bf r}'})}
+{\vert{\bf r}-{\bf r'}\vert}=\frac{e^{2}}{V (2\pi)^3}  \int d{\bf r}\int
+\frac{d{\bf r}'}{\vert{\bf r}-{\bf r'}\vert}\exp{(-i{\bf k}({\bf r}-{\bf r}'))}\int d{\bf p}\exp{(i{\bf p}({\bf r}-{\bf r}'))},
+\]
+!et
+and introducing the abovementioned convergence factor we have
+!bt
+\[
+\lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d{\bf r}\int d{\bf r}'\frac{\exp{(-\mu\vert{\bf r}-{\bf r}'\vert})}{\vert{\bf r}-{\bf r'}\vert}\int d{\bf p}\exp{(i({\bf p}-{\bf k})({\bf r}-{\bf r}'))}.
+\]
+!et
+With a change variables to ${\bf x} = {\bf r}-{\bf r}'$ and ${\bf y}={\bf r}'$ we rewrite the last integral as
+!bt
+\[
+\lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d{\bf p}\int d{\bf y}\int d{\bf x}\exp{(i({\bf p}-{\bf k}){\bf x})}\frac{\exp{(-\mu\vert{\bf x}\vert})}{\vert{\bf x}\vert}.
+\]
+!et
+The integration over ${\bf x}$ can be performed using spherical coordinates, resulting in (with $x=\vert {\bf x}\vert$)
+!bt
+\[
+\int d{\bf x}\exp{(i({\bf p}-{\bf k}){\bf x})}\frac{\exp{(-\mu\vert{\bf x}\vert})}{\vert{\bf x}\vert}=\int x^2 dx d\phi d\cos{(\theta)}\exp{(i({\bf p}-{\bf k})x\cos{(\theta))}}\frac{\exp{(-\mu x)}}{x},
+\]
+!et
+which yields
+!bt
+\[
+4\pi \int dx \frac{ \sin{(\vert {\bf p}-{\bf k}\vert)x} }{\vert {\bf p}-{\bf k}\vert}{\exp{(-\mu x)}}= \frac{4\pi}{\mu^2+\vert {\bf p}-{\bf k}\vert^2}.
+\]
+!et
+This results gives us 
+!bt
+\[
+\lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d{\bf p}\int d{\bf y}\frac{4\pi}{\mu^2+\vert {\bf p}-{\bf k}\vert^2}=\lim_{\mu \to 0}\frac{e^{2}}{ 2\pi^2}  \int d{\bf p}\frac{1}{\mu^2+\vert {\bf p}-{\bf k}\vert^2},
+\]
+!et
+where we have used that the integrand on teh left-hand side does not depend on ${\bf y}$ and that $\int d{\bf y}=V$.Introducing spherical coordinates we can rewrite the integral as 
+!bt
+\[
+\lim_{\mu \to 0}\frac{e^{2}}{ 2\pi^2}  \int d{\bf p}\frac{1}{\mu^2+\vert {\bf p}-{\bf k}\vert^2}=\frac{e^{2}}{ 2\pi^2}  \int d{\bf p}\frac{1}{\vert {\bf p}-{\bf k}\vert^2}=\frac{e^{2}}{\pi}  \int_0^{k_F} p^2dp\int_0^{\pi} d\theta\cos{(\theta)}\frac{1}{p^2+k^2-2pk\cos{(\theta)}},
+\]
+!et
+and with the change of variables $\cos{(\theta)}=u$ we have 
+!bt
+\[
+\frac{e^{2}}{\pi}  \int_0^{k_F} p^2dp\int_{0}^{\pi} d\theta\cos{(\theta)}\frac{1}{p^2+k^2-2pk\cos{(\theta)}}=\frac{e^{2}}{\pi}  \int_0^{k_F} p^2dp\int_{-1}^{1} du\frac{1}{p^2+k^2-2pku},
+\]
+!et
+which gives
+!bt
+\[
+\frac{e^{2}}{k\pi}  \int_0^{k_F} pdp\left\{ln(\vert p+k\vert)-ln(\vert p-k\vert)\right\},
+\]
+!et
+and introducing new variables $x=p+k$ and $y=p-k$, we obtain after some straightforward reordering of the integral
+!bt
+\[
+\frac{e^{2}}{k\pi}\left[
+kk_F+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right],
+\]
+!et
+which gives the abovementioned expression for the single-particle energy.
+
+Introducing the dimensionless quantity $x=k/k_F$ and the function
+!bt
+\[
+F(x) = \frac{1}{2}+\frac{1-x^2}{4x}\ln{\left\vert \frac{1+x}{1-x}\right\vert},
+\]
+!et
+we can rewrite the single-particle Hartree-Fock energy as 
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{2e^{2}
+k_{F}}{\pi}F(k/k_F),
+\]
+!et
+and dividing by the non-interacting contribution at the Fermi level, 
+!bt
+\[
+\varepsilon_{0}^{HF}=\frac{\hbar^{2}k_F^{2}}{2m},
+\]
+!et
+we have
+!bt
+\[
+\frac{\varepsilon_{k}^{HF} }{\varepsilon_{0}^{HF}}=x^2-\frac{e^2m}{\hbar^2 k_F\pi}F(x)=x^2-\frac{4}{\pi k_Fa_0}F(x),
+\]
+!et
+where $a_0=0.0529$ nm is the Bohr radius, setting thereby a natural length scale. 
+By introducing the radius $r_s$ of a sphere whose volume is the volume occupied by each electron, we can rewrite the previous equation in terms of $r_s$ using that the electron density $n=N/V$
+!bt
+\[
+n=\frac{k_F^3}{3\pi^2} = \frac{3}{4\pi r_s^3},
+\]
+!et
+we have (with $k_F=1.92/r_s$,
+!bt
+\[
+\frac{\varepsilon_{k}^{HF} }{\varepsilon_{0}^{HF}}=x^2-\frac{e^2m}{\hbar^2 k_F\pi}F(x)=x^2-\frac{r_s}{a_0}0.663F(x),
+\]
+!et
+with $r_s \sim 2-6$ for most metals. 
+
+We can now define the so-called bandwidth, that is the scatter between the maximal and the minimal value of the electrons in the conductance band of a metal (up to the Fermi level). For $x=1$, which corresponds to 
+
+
+
+!eblock
+
+
+!split
+===== Exercises: Electron gas  =====
+!bblock  Exercise 6
+We consider a system of electrons in infinite matter, the so-called electron gas. This is a homogeneous system and the one-particle states are given by plane wave function normalized to a volume $\Omega$ 
+for a box with length $L$ (the limit $L\rightarrow \infty$ is to be taken after we have computed various expectation values)
+!bt
+\[
+\psi_{{\bf k}\sigma}({\bf r})= \frac{1}{\sqrt{\Omega}}\exp{(i{\bf kr})}\xi_{\sigma}
+\]
+!et
+where ${\bf k}$ is the wave number and  $\xi_{\sigma}$ is a spin function for either spin up or down
+!bt
+\[ 
+\xi_{\sigma=+1/2}=\left(\begin{array}{c} 1 \\ 0 \end{array}\right) \hspace{0.5cm}
+\xi_{\sigma=-1/2}=\left(\begin{array}{c} 0 \\ 1 \end{array}\right).
+\]
+!et
+We assume that we have periodic boundary conditions which limit the allowed wave numbers to
+!bt
+\[
+k_i=\frac{2\pi n_i}{L}\hspace{0.5cm} i=x,y,z \hspace{0.5cm} n_i=0,\pm 1,\pm 2, \dots
+\]
+!et
+We assume first that the particles interact via a central, symmetric and translationally invariant
+interaction  $V(r_{12})$ with
+$r_{12}=|{\bf r}_1-{\bf r}_2|$.  The interaction is spin independent.
+
+The total Hamiltonian consists then of kinetic and potential energy
+!bt
+\[
+\hat{H} = \hat{T}+\hat{V}.
+\]
+!et
+ * Show that the operator for the kinetic energy can be written as
+!bt
+\[
+\hat{T}=\sum_{{\bf k}\sigma}\frac{\hbar^2k^2}{2m}a_{{\bf k}\sigma}^{\dagger}a_{{\bf k}\sigma}.
+\]
+!et
+Find also the number operator $\hat{N}$ and find a corresponding expression for the interaction
+$\hat{V}$ expressed with creation and annihilation operators.   The expression for the interaction
+has to be written in  $k$ space, even though $V$ depends only on the relative distance. It means that you ned to set up the Fourier transform $\langle {\bf k}_i{\bf k}_j| V | {\bf k}_m{\bf k}_n\rangle$.
+ * We will now study the electron gas. The Hamilton operator is given by
+!bt
+\[
+\hat{H}=\hat{H}_{el}+\hat{H}_{b}+\hat{H}_{el-b},
+\]
+!et
+with the electronic part
+!bt
+\[
+\hat{H}_{el}=\sum_{i=1}^N\frac{p_i^2}{2m}+\frac{e^2}{2}\sum_{i\ne j}\frac{e^{-\mu |{\bf r}_i-{\bf r}_j|}}{|{\bf r}_i-{\bf r}_j|},
+\]
+!et
+where we have introduced an explicit convergence factor
+(the limit $\mu\rightarrow 0$ is performed after having calculated the various integrals).
+Correspondingly, we have
+!bt
+\[
+\hat{H}_{b}=\frac{e^2}{2}\int\int d{\bf r}d{\bf r}'\frac{n({\bf r})n({\bf r}')e^{-\mu |{\bf r}-{\bf r}'|}}{|{\bf r}-{\bf r}'|},
+\]
+!et
+which is the energy contribution from the positive background charge with density
+$n({\bf r})=N/\Omega$. Finally,
+!bt
+\[
+\hat{H}_{el-b}=-\frac{e^2}{2}\sum_{i=1}^N\int d{\bf r}\frac{n({\bf r})e^{-\mu |{\bf r}-{\bf x}_i|}}{|{\bf r}-{\bf x}_i|},
+\]
+!et
+is the interaction between the electrons and the positive background.
+
+Show that
+!bt
+\[
+\hat{H}_{b}=\frac{e^2}{2}\frac{N^2}{\Omega}\frac{4\pi}{\mu^2},
+\]
+!et
+and
+!bt
+\[
+\hat{H}_{el-b}=-e^2\frac{N^2}{\Omega}\frac{4\pi}{\mu^2}.
+\]
+!et
+Show thereafter that the final Hamiltonian can be written as 
+!bt
+\[
+H=H_{0}+H_{I},
+\]
+!et
+with
+!bt
+\[
+H_{0}={\displaystyle\sum_{{\bf k}\sigma}}
+\frac{\hbar^{2}k^{2}}{2m}a_{{\bf k}\sigma}^{\dagger}
+a_{{\bf k}\sigma},
+\]
+!et
+and
+!bt
+\[
+H_{I}=\frac{e^{2}}{2\Omega}{\displaystyle\sum_{\sigma_{1}
+\sigma_{2}}}{\displaystyle
+\sum_{{\bf q}\neq 0,{\bf k},{\bf p}}}\frac{4\pi}{q^{2}}
+a_{{\bf k}+{\bf q},\sigma_{1}}^{\dagger}
+a_{{\bf p}-{\bf q},\sigma_{2}}^{\dagger}
+a_{{\bf p}\sigma_{2}}a_{{\bf k}\sigma_{1}}.
+\] 
+!et
+ * Calculate $E_0/N=\bra{\Phi_{0}}H\ket{\Phi_{0}}/N$ for for this system to first order in the interaction. Show that, by using
+!bt
+\[
+\rho= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_0^3},
+\]
+!et
+with $\rho=N/\Omega$, $r_0$
+being the radius of a sphere representing the volume an electron occupies 
+and the Bohr radius $a_0=\hbar^2/e^2m$, 
+that the energy per electron can be written as 
+!bt
+\[
+E_0/N=\frac{e^2}{2a_0}\left[\frac{2.21}{r_s^2}-\frac{0.916}{r_s}\right].
+\]
+!et
+Here we have defined
+$r_s=r_0/a_0$ to be a dimensionless quantity.
+
+Plot your results. Why is this system stable?
+ * Calculate thermodynamical quantities like the pressure, given by
+!bt
+\[
+P=-\left(\frac{\partial E}{\partial \Omega}\right)_N,
+\]
+!et
+and the bulk modulus
+!bt
+\[
+B=-\Omega\left(\frac{\partial P}{\partial \Omega}\right)_N,
+\]
+!et
+and comment your results.
+
+!eblock
+
+
+!split
+===== Exercises: Electron gas  =====
+!bblock  Solution to exercise 6
+We have to show first  that
+!bt
+\[
+\hat{H}_{b}=\frac{e^2}{2}\frac{N_e^2}{\Omega}\frac{4\pi}{\mu^2},
+\]
+!et
+and
+!bt
+\[
+\hat{H}_{el-b}=-e^2\frac{N_e^2}{\Omega}\frac{4\pi}{\mu^2}.
+\]
+!et
+And then that the final Hamiltonian can be written as 
+!bt
+\[
+H=H_{0}+H_{I},
+\]
+!et
+with
+!bt
+\[
+H_{0}={\displaystyle\sum_{{\bf k}\sigma}}
+\frac{\hbar^{2}k^{2}}{2m_e}a_{{\bf k}\sigma}^{\dagger}
+a_{{\bf k}\sigma},
+\]
+!et
+and
+!bt
+\[
+H_{I}=\frac{e^{2}}{2\Omega}{\displaystyle\sum_{\sigma_{1}
+\sigma_{2}}}{\displaystyle
+\sum_{{\bf q}\neq 0,{\bf k},{\bf p}}}\frac{4\pi}{q^{2}}
+a_{{\bf k}+{\bf q},\sigma_{1}}^{\dagger}
+a_{{\bf p}-{\bf q},\sigma_{2}}^{\dagger}
+a_{{\bf p}\sigma_{2}}a_{{\bf k}\sigma_{1}}.
+\] 
+!et
+
+!eblock
+
+!split
+===== Electron gas and HF solution =====
+!bblock
+Let us now calculate the following part of the Hamiltonian
+!bt
+\[ \hat H_b = \frac{e^2}{2} \iint \frac{n({\bf r}) n({\bf r}')e^{-\mu|{\bf r} - {\bf r}'|}}{|{\bf r} - {\bf r}'|} d{\bf r} d{\bf r}' , 
+\]
+!et
+where $n({\bf r}) = N_e/\Omega$, the density of the positive background charge. We define ${\bf r}_{12} = {\bf r} - {\bf r}'$, resulting in $d{\bf r}_{12} = d{\bf r}$, and allowing us to rewrite the integral as
+!bt
+\[ 
+\hat H_b = \frac{e^2 N_e^2}{2\Omega^2} \iint \frac{e^{-\mu |{\bf r}_{12}|}}{|{\bf r}_{12}|} d{\bf r}_{12} d{\bf r}' = \frac{e^2 N_e^2}{2\Omega} \int \frac{e^{-\mu |{\bf r}_{12}|}}{|{\bf r}_{12}|} d{\bf r}_{12} . 
+\]
+!et
+Here we have used that $\int \! {\bf r} = \Omega$. We change to spherical coordinates and the lack of angle 
+dependencies yields a factor $4\pi$, resulting in
+!bt
+\[ 
+\hat H_b = \frac{4\pi e^2 N_e^2}{2\Omega} \int_0^\infty re^{-\mu r} \, \mathrm{d} r . 
+\]
+!et
+
+
+Solving by partial integration
+!bt
+\[ \int_0^\infty re^{-\mu r} \, \mathrm{d} r = \left[ -\frac{r}{\mu} e^{-\mu r} \right]_0^\infty + \frac{1}{\mu} \int_0^\infty e^{-\mu r} \, \mathrm{d} r
+= \frac{1}{\mu} \left[ - \frac{1}{\mu} e^{-\mu r} \right]_0^\infty = \frac{1}{\mu^2}, 
+\]
+!et
+gives
+!bt
+\[
+\hat{H}_b = \frac{e^2}{2} \frac{N_e^2}{\Omega} \frac{4\pi}{\mu^2} .
+\]
+!et
+The next term is 
+!bt
+\[ 
+\hat H_{el-b} = -e^2 \sum_{i = 1}^N \int \frac{n({\bf r}) e^{-\mu |{\bf r} - {\bf x}_i|}}{|{\bf r} - {\bf x}_i|} {\bf r} . 
+\]
+!et
+Inserting  $n({\bf r})$ and changing variables in the same way as in the previous integral ${\bf y} = {\bf r} - {\bf x}_i$, we get $\mathrm{d}^3 {\bf y} = \mathrm{d}^3 {\bf r}$. This gives
+!bt
+\[ 
+\hat H_{el-b} = -\frac{e^2 N_e}{\Omega} \sum_{i = 1^N} \int \frac{e^{-\mu |{\bf y}|}}{|{\bf y}|} \, \mathrm{d}^3 {\bf y}
+=  -\frac{4\pi e^2 N_e}{\Omega} \sum_{i = 1}^N \int_0^\infty y e^{-\mu y} \mathrm{d} y. 
+\]
+!et
+We have already seen this  type of integral. The answer is 
+!bt
+\[ 
+\hat H_{el-b} = -\frac{4\pi e^2 N_e}{\Omega} \sum_{i = 1}^N \frac{1}{\mu^2}, 
+\]
+!et
+which gives
+!bt
+\[
+\hat H_{el-b} = -e^2 \frac{N_e^2}{\Omega} \frac{4\pi}{\mu^2} .
+\]
+!et
+
+Finally, we need to evaluate $\hat H_{el}$. This term reads
+!bt
+\[ 
+\hat H_{el} = \sum_{i=1}^{N_e} \frac{\hat{\vec p}_i^2}{2m_e} + \frac{e^2}{2} \sum_{i \neq j} \frac{e^{-\mu |{\bf r}_i - {\bf r}_j|}}{{\bf r}_i - {\bf r}_j} . 
+\]
+!et
+The last term represents the repulsion between two electrons. It is a central symmetric interaction
+and is translationally invariant. The potential is given by the expression
+!bt
+\[ 
+v(|{\bf r}|) = e^2 \frac{e^{\mu|{\bf r}|}}{|{\bf r}|}, 
+\]
+!et
+which we derived in connection with the Hartree-Fock derivation.
+
+
+!eblock
+
+
+

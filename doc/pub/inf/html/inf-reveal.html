@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Infinite matter">
+
+<title>Infinite matter</title>
+
+
+
+
+
+
+
+<!-- reveal.js: http://lab.hakim.se/reveal-js/ -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<!--
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/beigesmall.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/darkgray.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/cbc.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simula.css" id="theme">
+-->
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+</script>
+
+<style type="text/css">
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    p.caption { width: 80%; font-size: 60%; font-style: italic; text-align: left; }
+    hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .reveal .alert-text-small   { font-size: 80%;  }
+    .reveal .alert-text-large   { font-size: 130%; }
+    .reveal .alert-text-normal  { font-size: 90%;  }
+    .reveal .alert {
+             padding:8px 35px 8px 14px; margin-bottom:18px;
+             text-shadow:0 1px 0 rgba(255,255,255,0.5);
+             border:5px solid #bababa;
+             -webkit-border-radius: 14px; -moz-border-radius: 14px;
+             border-radius:14px
+             background-position: 10px 10px;
+             background-repeat: no-repeat;
+             background-size: 38px;
+             padding-left: 30px; /* 55px; if icon */
+     }
+     .reveal .alert-block {padding-top:14px; padding-bottom:14px}
+     .reveal .alert-block > p, .alert-block > ul {margin-bottom:1em}
+     /*.reveal .alert li {margin-top: 1em}*/
+     .reveal .alert-block p+p {margin-top:5px}
+     /*.reveal .alert-notice { background-image: url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_notice.png); }
+     .reveal .alert-summary  { background-image:url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_summary.png); }
+     .reveal .alert-warning { background-image: url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_warning.png); }
+     .reveal .alert-question {background-image:url(http://hplgit.github.io/doconce/bundled/html_images/small_gray_question.png); } */
+
+</style>
+
+
+
+<!-- Styles for table layout of slides -->
+<style type="text/css">
+td.padding {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:50px;
+  padding-left:50px;
+}
+</style>
+
+</head>
+
+<body>
+<div class="reveal">
+
+<!-- Any section element inside the <div class="slides"> container
+     is displayed as a slide -->
+
+<div class="slides">
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "none"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+
+
+
+<section>
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Slides for PHY981 -->
+
+
+<center><h1 style="text-align: center;">Infinite matter</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway -->
+
+<center>
+<b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
+</center>
+
+
+<p>&nbsp;<br>
+<!-- institution(s) -->
+<p>&nbsp;<br>
+<center><h4>Spring 2015</h4></center> <!-- date -->
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec0">Studies of infinite matter </h2>
+
+<p>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<p><li> For historical and pedagogical  reasons we start with the electron gas in two and three dimensions</li> 
+<p><li> Thereafter we discuss infinite nuclear matter</li>
+</ul>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec1">Electron gas and HF solution </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The electron gas is perhaps the only realistic model of a 
+system of many interacting particles that allows for a solution
+of the Hartree-Fock equations on a closed form. Furthermore, to first order in the interaction, one can also
+compute on a closed form the total energy and several other properties of a many-particle systems. 
+The model gives a very good approximation to the properties of valence electrons in metals.
+The assumptions are
+
+<ul>
+ <p><li> System of electrons that is not influenced by external forces except by an attraction provided by a uniform background of ions. These ions give rise to a uniform background charge. The ions are stationary.</li>
+ <p><li> The system as a whole is neutral.</li>
+ <p><li> We assume we have \( N_e \) electrons in a cubic box of length \( L \) and volume \( \Omega=L^3 \). This volume contains also a</li>
+</ul>
+<p>
+
+uniform distribution of positive charge with density \( N_ee/\Omega \). 
+
+<p>
+This is a homogeneous system and the one-particle wave functions are given by plane wave functions normalized to a volume \( \Omega \) 
+for a box with length \( L \) (the limit \( L\rightarrow \infty \) is to be taken after we have computed various expectation values)
+<p>&nbsp;<br>
+$$
+\psi_{{\bf k}\sigma}({\bf r})= \frac{1}{\sqrt{\Omega}}\exp{(i{\bf kr})}\xi_{\sigma}
+$$
+<p>&nbsp;<br>
+
+where \( {\bf k} \) is the wave number and  \( \xi_{\sigma} \) is a spin function for either spin up or down
+<p>&nbsp;<br>
+$$ 
+\xi_{\sigma=+1/2}=\left(\begin{array}{c} 1 \\ 0 \end{array}\right) \hspace{0.5cm}
+\xi_{\sigma=-1/2}=\left(\begin{array}{c} 0 \\ 1 \end{array}\right).
+$$
+<p>&nbsp;<br>
+
+We assume that we have periodic boundary conditions which limit the allowed wave numbers to
+<p>&nbsp;<br>
+$$
+k_i=\frac{2\pi n_i}{L}\hspace{0.5cm} i=x,y,z \hspace{0.5cm} n_i=0,\pm 1,\pm 2, \dots
+$$
+<p>&nbsp;<br>
+
+We assume first that the electrons interact via a central, symmetric and translationally invariant
+interaction  \( V(r_{12}) \) with
+\( r_{12}=|{\bf r}_1-{\bf r}_2| \).  The interaction is spin independent.
+
+<p>
+The total Hamiltonian consists then of kinetic and potential energy
+<p>&nbsp;<br>
+$$
+\hat{H} = \hat{T}+\hat{V}.
+$$
+<p>&nbsp;<br>
+
+The operator for the kinetic energy can be written as
+<p>&nbsp;<br>
+$$
+\hat{T}=\sum_{{\bf k}\sigma}\frac{\hbar^2k^2}{2m}a_{{\bf k}\sigma}^{\dagger}a_{{\bf k}\sigma}.
+$$
+<p>&nbsp;<br>
+
+
+<p>
+The Hamilton operator is given by
+<p>&nbsp;<br>
+$$
+\hat{H}=\hat{H}_{el}+\hat{H}_{b}+\hat{H}_{el-b},
+$$
+<p>&nbsp;<br>
+
+with the electronic part
+<p>&nbsp;<br>
+$$
+\hat{H}_{el}=\sum_{i=1}^N\frac{p_i^2}{2m}+\frac{e^2}{2}\sum_{i\ne j}\frac{e^{-\mu |{\bf r}_i-{\bf r}_j|}}{|{\bf r}_i-{\bf r}_j|},
+$$
+<p>&nbsp;<br>
+
+where we have introduced an explicit convergence factor
+(the limit \( \mu\rightarrow 0 \) is performed after having calculated the various integrals).
+Correspondingly, we have
+<p>&nbsp;<br>
+$$
+\hat{H}_{b}=\frac{e^2}{2}\int\int d{\bf r}d{\bf r}'\frac{n({\bf r})n({\bf r}')e^{-\mu |{\bf r}-{\bf r}'|}}{|{\bf r}-{\bf r}'|},
+$$
+<p>&nbsp;<br>
+
+which is the energy contribution from the positive background charge with density
+\( n({\bf r})=N/\Omega \). Finally,
+<p>&nbsp;<br>
+$$
+\hat{H}_{el-b}=-\frac{e^2}{2}\sum_{i=1}^N\int d{\bf r}\frac{n({\bf r})e^{-\mu |{\bf r}-{\bf x}_i|}}{|{\bf r}-{\bf x}_i|},
+$$
+<p>&nbsp;<br>
+
+is the interaction between the electrons and the positive background.
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec2">Electron gas and HF solution </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In exercise 5 we show that the Hartree-Fock energy can be written as 
+<p>&nbsp;<br>
+$$
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m_e}-\frac{e^{2}}
+{\Omega^{2}}\sum_{k'\leq
+k_{F}}\int d{\bf r}e^{i({\bf k}'-{\bf k}){\bf r}}\int
+d{\bf r'}\frac{e^{i({\bf k}-{\bf k}'){\bf r}'}}
+{\vert{\bf r}-{\bf r}'\vert}
+$$
+<p>&nbsp;<br>
+
+resulting in
+<p>&nbsp;<br>
+$$
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m_e}-\frac{e^{2}
+k_{F}}{2\pi}
+\left[
+2+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right]
+$$
+<p>&nbsp;<br>
+
+
+<p>
+The results can be rewritten in terms of the density
+<p>&nbsp;<br>
+$$
+n= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_s^3},
+$$
+<p>&nbsp;<br>
+
+where \( n=N_e/\Omega \), \( N_e \) being the number of electrons, and \( r_s \) is the radius of a sphere which represents the volum per conducting electron.  
+It can be convenient to use the Bohr radius \( a_0=\hbar^2/e^2m_e \).
+For most metals we have a relation \( r_s/a_0\sim 2-6 \).  The quantity \( r_s \) is dimensionless.
+
+<p>
+In exercise 6 we find that
+the total energy
+\( E_0/N_e=\langle\Phi_{0}|\hat{H}|\Phi_{0}\rangle/N_e \) for
+for this system to first order in the interaction is given as 
+<p>&nbsp;<br>
+$$
+E_0/N_e=\frac{e^2}{2a_0}\left[\frac{2.21}{r_s^2}-\frac{0.916}{r_s}\right].
+$$
+<p>&nbsp;<br>
+
+
+
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec3">Exercises: Derivation of Hartree-Fock equations  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 1.</b>
+<p>
+Consider a Slater determinant built up of single-particle orbitals \( \psi_{\lambda} \), 
+with \( \lambda = 1,2,\dots,N \).
+
+<p>
+The unitary transformation
+<p>&nbsp;<br>
+$$
+\psi_a  = \sum_{\lambda} C_{a\lambda}\phi_{\lambda},
+$$
+<p>&nbsp;<br>
+
+brings us into the new basis.  
+The new basis has quantum numbers \( a=1,2,\dots,N \).
+Show that the new basis is orthonormal.
+Show that the new Slater determinant constructed from the new single-particle wave functions can be
+written as the determinant based on the previous basis and the determinant of the matrix \( C \).
+Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
+(Hint, \( C \) is a unitary matrix). 
+
+
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec4">Exercises: Derivation of Hartree-Fock equations  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 2.</b>
+<p>
+Consider the  Slater  determinant
+<p>&nbsp;<br>
+$$
+\Phi_{0}=\frac{1}{\sqrt{n!}}\sum_{p}(-)^{p}P
+\prod_{i=1}^{n}\psi_{\alpha_{i}}(x_{i}).
+$$
+<p>&nbsp;<br>
+
+A small variation in this function is given by
+<p>&nbsp;<br>
+$$
+\delta\Phi_{0}=\frac{1}{\sqrt{n!}}\sum_{p}(-)^{p}P
+\psi_{\alpha_{1}}(x_{1})\psi_{\alpha_{2}}(x_{2})\dots
+\psi_{\alpha_{i-1}}(x_{i-1})(\delta\psi_{\alpha_{i}}(x_{i}))
+\psi_{\alpha_{i+1}}(x_{i+1})\dots\psi_{\alpha_{n}}(x_{n}).
+$$
+<p>&nbsp;<br>
+
+Show that
+<p>&nbsp;<br>
+$$
+\langle \delta\Phi_{0}|\sum_{i=1}^{n}\left\{t(x_{i})+u(x_{i})
+\right\}+\frac{1}{2}
+\sum_{i\neq j=1}^{n}v(x_{i},x_{j})|\Phi_{0}\rangle=\sum_{i=1}^{n}\langle \delta\psi_{\alpha_{i}}|\hat{t}+\hat{u}
+|\phi_{\alpha_{i}}\rangle
++\sum_{i\neq j=1}^{n}\left\{\langle\delta\psi_{\alpha_{i}}
+\psi_{\alpha_{j}}|\hat{v}|\psi_{\alpha_{i}}\psi_{\alpha_{j}}\rangle-
+\langle\delta\psi_{\alpha_{i}}\psi_{\alpha_{j}}|\hat{v}
+|\psi_{\alpha_{j}}\psi_{\alpha_{i}}\rangle\right\}
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec5">Exercises: Derivation of Hartree-Fock equations  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 3.</b>
+<p>
+What is the diagrammatic representation of the HF equation?
+<p>&nbsp;<br>
+$$
+-\langle\alpha_{k}|u^{HF}|\alpha_{i}\rangle+\sum_{j=1}^{n}
+\left[\langle\alpha_{k}\alpha_{j}|\hat{v}|\alpha_{i}\alpha_{j}\rangle-
+\langle\alpha_{k}\alpha_{j}|v|\alpha_{j}\alpha_{i}\rangle\right]=0
+$$
+<p>&nbsp;<br>
+
+(Represent \( (-u^{HF}) \) by the symbol $---$X .)
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec6">Exercises: Derivation of Hartree-Fock equations  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 4.</b>
+<p>
+Consider the ground state \( |\Phi\rangle \) 
+of a bound many-particle system of fermions. Assume that we remove one particle
+from the single-particle state \( \lambda \) and that our system ends in a new state
+\( |\Phi_{n}\rangle \). 
+Define the energy needed to remove this particle as
+<p>&nbsp;<br>
+$$
+E_{\lambda}=\sum_{n}\vert\langle\Phi_{n}|a_{\lambda}|\Phi\rangle\vert^{2}(E_{0}-E_{n}),
+$$
+<p>&nbsp;<br>
+
+where \( E_{0} \) and \( E_{n} \)  are the ground state energies of the states
+\( |\Phi\rangle \)  and  \( |\Phi_{n}\rangle \), respectively.
+
+<ul>
+ <p><li> Show that</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+E_{\lambda}=\langle\Phi|a_{\lambda}^{\dagger}\left[
+a_{\lambda},H \right]|\Phi\rangle,
+$$
+<p>&nbsp;<br>
+
+where \( H \) is the Hamiltonian of this system.
+
+<ul>
+ <p><li> If we assume that \( \Phi \) is the  Hartree-Fock result, find the</li> 
+</ul>
+<p>
+
+relation between \( E_{\lambda} \) and the single-particle energy
+\( \varepsilon_{\lambda} \)
+for states \( \lambda \leq F \) and \( \lambda >F \), with
+<p>&nbsp;<br>
+$$
+\varepsilon_{\lambda}=\langle\lambda|\hat{t}+\hat{u}|\lambda\rangle,
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+\langle\lambda|\hat{u}|\lambda\rangle=\sum_{\beta \leq F}
+\langle\lambda\beta|\hat{v}|\lambda\beta\rangle.
+$$
+<p>&nbsp;<br>
+
+We have assumed an antisymmetrized matrix element here.
+Discuss the result.
+
+<p>
+The Hamiltonian operator is defined as
+<p>&nbsp;<br>
+$$
+H=\sum_{\alpha\beta}\langle\alpha|\hat{t}|\beta\rangle a_{\alpha}^{\dagger}a_{\beta}+
+\frac{1}{2}\sum_{\alpha\beta\gamma\delta}\langle\alpha\beta|\hat{v}|\gamma\delta\rangle a_{\alpha}^{\dagger}a_{\beta}^{\dagger}a_{\delta}a_{\gamma}.
+$$
+<p>&nbsp;<br>
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec7">Exercises: Electron gas  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 5.</b>
+<p>
+The electron gas model allows closed form solutions for quantities like the 
+single-particle Hartree-Fock energy.  The latter quantity is given by the following expression
+<p>&nbsp;<br>
+$$
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}}
+{V^{2}}\sum_{k'\leq
+k_{F}}\int d{\bf r}e^{i({\bf k'}-{\bf k}){\bf r}}\int
+d{\bf r}'\frac{e^{i({\bf k}-{\bf k'}){\bf r}'}}
+{\vert{\bf r}-{\bf r'}\vert}
+$$
+<p>&nbsp;<br>
+
+
+<ul>
+ <p><li> Show that</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}
+k_{F}}{2\pi}
+\left[
+2+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right]
+$$
+<p>&nbsp;<br>
+
+(Hint: Introduce the convergence factor 
+\( e^{-\mu\vert{\bf r}-{\bf r}'\vert} \)
+in the potential and use  \( \sum_{{\bf k}}\rightarrow
+\frac{V}{(2\pi)^{3}}\int d{\bf k} \) )
+
+<ul>
+ <p><li> Rewrite the above result as a function of the density</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+n= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_s^3},
+$$
+<p>&nbsp;<br>
+
+where \( n=N/V \), \( N \) being the number of particles, and \( r_s \) is the radius of a sphere which represents the volum per conducting electron.  
+It can be convenient to use the Bohr radius \( a_0=\hbar^2/e^2m \).
+
+<p>
+For most metals we have a relation \( r_s/a_0\sim 2-6 \).
+
+<p>
+Make a plot of the free electron energy and the Hartree-Fock energy and discuss the behavior around the Fermi surface. Extract also   the Hartree-Fock band width \( \Delta\varepsilon^{HF} \) defined as
+<p>&nbsp;<br>
+$$ 
+\Delta\varepsilon^{HF}=\varepsilon_{k_{F}}^{HF}-
+\varepsilon_{0}^{HF}.
+$$
+<p>&nbsp;<br>
+
+Compare this results with the corresponding one for a free electron and comment your results. How large is the contribution due to the exchange term in the Hartree-Fock equation?\newline
+
+<ul>
+ <p><li> We will now define a quantity called the effective mass.</li>
+</ul>
+<p>
+
+For \( \vert{\bf k}\vert \) near \( k_{F} \), we can Taylor expand the Hartree-Fock energy as  
+<p>&nbsp;<br>
+$$
+\varepsilon_{k}^{HF}=\varepsilon_{k_{F}}^{HF}+
+\left(\frac{\partial\varepsilon_{k}^{HF}}{\partial k}\right)_{k_{F}}(k-k_{F})+\dots
+$$
+<p>&nbsp;<br>
+
+If we compare the latter with the corresponding expressiyon for the non-interacting system
+<p>&nbsp;<br>
+$$
+\varepsilon_{k}^{(0)}=\frac{\hbar^{2}k^{2}_{F}}{2m}+
+\frac{\hbar^{2}k_{F}}{m}\left(k-k_{F}\right)+\dots ,
+$$
+<p>&nbsp;<br>
+
+we can define the so-called effective Hartree-Fock mass as
+<p>&nbsp;<br>
+$$
+m_{HF}^{*}\equiv\hbar^{2}k_{F}\left(
+\frac{\partial\varepsilon_{k}^{HF}}
+{\partial k}\right)_{k_{F}}^{-1}
+$$
+<p>&nbsp;<br>
+
+Compute \( m_{HF}^{*} \) and comment your results after you have done 
+point d). \newline
+
+<ul>
+ <p><li> Show that the level density (the number of single-electron states per unit energy) can be written as</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+n(\varepsilon)=\frac{Vk^{2}}{2\pi^{2}}\left(
+\frac{\partial\varepsilon}{\partial k}\right)^{-1}
+$$
+<p>&nbsp;<br>
+
+Calculate \( n(\varepsilon_{F}^{HF}) \) and comment the results.
+
+
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec8">Exercises: Electron gas  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Solution to exercise 5.</b>
+<p>
+We want to show that, given the Hartree-Fock equation for the electron gas
+<p>&nbsp;<br>
+$$
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}}
+{V^{2}}\sum_{p\leq
+k_{F}}\int d{\bf r}\exp{(i({\bf p}-{\bf k}){\bf r})}\int
+d{\bf r}'\frac{\exp{(i({\bf k}-{\bf p}){\bf r}'})}
+{\vert{\bf r}-{\bf r'}\vert}
+$$
+<p>&nbsp;<br>
+
+the single-particle energy can be written as
+<p>&nbsp;<br>
+$$
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}
+k_{F}}{2\pi}
+\left[
+2+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right].
+$$
+<p>&nbsp;<br>
+
+We introduce the convergence factor 
+\( e^{-\mu\vert{\bf r}-{\bf r}'\vert} \)
+in the potential and use  \( \sum_{{\bf k}}\rightarrow
+\frac{V}{(2\pi)^{3}}\int d{\bf k} \). We can then rewrite the integral as 
+<p>&nbsp;<br>
+$$
+\frac{e^{2}}
+{V^{2}}\sum_{k'\leq
+k_{F}}\int d{\bf r}\exp{(i({\bf k'}-{\bf k}){\bf r})}\int
+d{\bf r}'\frac{\exp{(i({\bf k}-{\bf p}){\bf r}'})}
+{\vert{\bf r}-{\bf r'}\vert}=\frac{e^{2}}{V (2\pi)^3}  \int d{\bf r}\int
+\frac{d{\bf r}'}{\vert{\bf r}-{\bf r'}\vert}\exp{(-i{\bf k}({\bf r}-{\bf r}'))}\int d{\bf p}\exp{(i{\bf p}({\bf r}-{\bf r}'))},
+$$
+<p>&nbsp;<br>
+
+and introducing the abovementioned convergence factor we have
+<p>&nbsp;<br>
+$$
+\lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d{\bf r}\int d{\bf r}'\frac{\exp{(-\mu\vert{\bf r}-{\bf r}'\vert})}{\vert{\bf r}-{\bf r'}\vert}\int d{\bf p}\exp{(i({\bf p}-{\bf k})({\bf r}-{\bf r}'))}.
+$$
+<p>&nbsp;<br>
+
+With a change variables to \( {\bf x} = {\bf r}-{\bf r}' \) and \( {\bf y}={\bf r}' \) we rewrite the last integral as
+<p>&nbsp;<br>
+$$
+\lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d{\bf p}\int d{\bf y}\int d{\bf x}\exp{(i({\bf p}-{\bf k}){\bf x})}\frac{\exp{(-\mu\vert{\bf x}\vert})}{\vert{\bf x}\vert}.
+$$
+<p>&nbsp;<br>
+
+The integration over \( {\bf x} \) can be performed using spherical coordinates, resulting in (with \( x=\vert {\bf x}\vert \))
+<p>&nbsp;<br>
+$$
+\int d{\bf x}\exp{(i({\bf p}-{\bf k}){\bf x})}\frac{\exp{(-\mu\vert{\bf x}\vert})}{\vert{\bf x}\vert}=\int x^2 dx d\phi d\cos{(\theta)}\exp{(i({\bf p}-{\bf k})x\cos{(\theta))}}\frac{\exp{(-\mu x)}}{x},
+$$
+<p>&nbsp;<br>
+
+which yields
+<p>&nbsp;<br>
+$$
+4\pi \int dx \frac{ \sin{(\vert {\bf p}-{\bf k}\vert)x} }{\vert {\bf p}-{\bf k}\vert}{\exp{(-\mu x)}}= \frac{4\pi}{\mu^2+\vert {\bf p}-{\bf k}\vert^2}.
+$$
+<p>&nbsp;<br>
+
+This results gives us 
+<p>&nbsp;<br>
+$$
+\lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d{\bf p}\int d{\bf y}\frac{4\pi}{\mu^2+\vert {\bf p}-{\bf k}\vert^2}=\lim_{\mu \to 0}\frac{e^{2}}{ 2\pi^2}  \int d{\bf p}\frac{1}{\mu^2+\vert {\bf p}-{\bf k}\vert^2},
+$$
+<p>&nbsp;<br>
+
+where we have used that the integrand on teh left-hand side does not depend on \( {\bf y} \) and that \( \int d{\bf y}=V \).Introducing spherical coordinates we can rewrite the integral as 
+<p>&nbsp;<br>
+$$
+\lim_{\mu \to 0}\frac{e^{2}}{ 2\pi^2}  \int d{\bf p}\frac{1}{\mu^2+\vert {\bf p}-{\bf k}\vert^2}=\frac{e^{2}}{ 2\pi^2}  \int d{\bf p}\frac{1}{\vert {\bf p}-{\bf k}\vert^2}=\frac{e^{2}}{\pi}  \int_0^{k_F} p^2dp\int_0^{\pi} d\theta\cos{(\theta)}\frac{1}{p^2+k^2-2pk\cos{(\theta)}},
+$$
+<p>&nbsp;<br>
+
+and with the change of variables \( \cos{(\theta)}=u \) we have 
+<p>&nbsp;<br>
+$$
+\frac{e^{2}}{\pi}  \int_0^{k_F} p^2dp\int_{0}^{\pi} d\theta\cos{(\theta)}\frac{1}{p^2+k^2-2pk\cos{(\theta)}}=\frac{e^{2}}{\pi}  \int_0^{k_F} p^2dp\int_{-1}^{1} du\frac{1}{p^2+k^2-2pku},
+$$
+<p>&nbsp;<br>
+
+which gives
+<p>&nbsp;<br>
+$$
+\frac{e^{2}}{k\pi}  \int_0^{k_F} pdp\left\{ln(\vert p+k\vert)-ln(\vert p-k\vert)\right\},
+$$
+<p>&nbsp;<br>
+
+and introducing new variables \( x=p+k \) and \( y=p-k \), we obtain after some straightforward reordering of the integral
+<p>&nbsp;<br>
+$$
+\frac{e^{2}}{k\pi}\left[
+kk_F+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right],
+$$
+<p>&nbsp;<br>
+
+which gives the abovementioned expression for the single-particle energy.
+
+<p>
+Introducing the dimensionless quantity \( x=k/k_F \) and the function
+<p>&nbsp;<br>
+$$
+F(x) = \frac{1}{2}+\frac{1-x^2}{4x}\ln{\left\vert \frac{1+x}{1-x}\right\vert},
+$$
+<p>&nbsp;<br>
+
+we can rewrite the single-particle Hartree-Fock energy as 
+<p>&nbsp;<br>
+$$
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{2e^{2}
+k_{F}}{\pi}F(k/k_F),
+$$
+<p>&nbsp;<br>
+
+and dividing by the non-interacting contribution at the Fermi level, 
+<p>&nbsp;<br>
+$$
+\varepsilon_{0}^{HF}=\frac{\hbar^{2}k_F^{2}}{2m},
+$$
+<p>&nbsp;<br>
+
+we have
+<p>&nbsp;<br>
+$$
+\frac{\varepsilon_{k}^{HF} }{\varepsilon_{0}^{HF}}=x^2-\frac{e^2m}{\hbar^2 k_F\pi}F(x)=x^2-\frac{4}{\pi k_Fa_0}F(x),
+$$
+<p>&nbsp;<br>
+
+where \( a_0=0.0529 \) nm is the Bohr radius, setting thereby a natural length scale. 
+By introducing the radius \( r_s \) of a sphere whose volume is the volume occupied by each electron, we can rewrite the previous equation in terms of \( r_s \) using that the electron density \( n=N/V \)
+<p>&nbsp;<br>
+$$
+n=\frac{k_F^3}{3\pi^2} = \frac{3}{4\pi r_s^3},
+$$
+<p>&nbsp;<br>
+
+we have (with \( k_F=1.92/r_s \),
+<p>&nbsp;<br>
+$$
+\frac{\varepsilon_{k}^{HF} }{\varepsilon_{0}^{HF}}=x^2-\frac{e^2m}{\hbar^2 k_F\pi}F(x)=x^2-\frac{r_s}{a_0}0.663F(x),
+$$
+<p>&nbsp;<br>
+
+with \( r_s \sim 2-6 \) for most metals. 
+
+<p>
+We can now define the so-called bandwidth, that is the scatter between the maximal and the minimal value of the electrons in the conductance band of a metal (up to the Fermi level). For \( x=1 \), which corresponds to 
+
+
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec9">Exercises: Electron gas  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 6.</b>
+<p>
+We consider a system of electrons in infinite matter, the so-called electron gas. This is a homogeneous system and the one-particle states are given by plane wave function normalized to a volume \( \Omega \) 
+for a box with length \( L \) (the limit \( L\rightarrow \infty \) is to be taken after we have computed various expectation values)
+<p>&nbsp;<br>
+$$
+\psi_{{\bf k}\sigma}({\bf r})= \frac{1}{\sqrt{\Omega}}\exp{(i{\bf kr})}\xi_{\sigma}
+$$
+<p>&nbsp;<br>
+
+where \( {\bf k} \) is the wave number and  \( \xi_{\sigma} \) is a spin function for either spin up or down
+<p>&nbsp;<br>
+$$ 
+\xi_{\sigma=+1/2}=\left(\begin{array}{c} 1 \\ 0 \end{array}\right) \hspace{0.5cm}
+\xi_{\sigma=-1/2}=\left(\begin{array}{c} 0 \\ 1 \end{array}\right).
+$$
+<p>&nbsp;<br>
+
+We assume that we have periodic boundary conditions which limit the allowed wave numbers to
+<p>&nbsp;<br>
+$$
+k_i=\frac{2\pi n_i}{L}\hspace{0.5cm} i=x,y,z \hspace{0.5cm} n_i=0,\pm 1,\pm 2, \dots
+$$
+<p>&nbsp;<br>
+
+We assume first that the particles interact via a central, symmetric and translationally invariant
+interaction  \( V(r_{12}) \) with
+\( r_{12}=|{\bf r}_1-{\bf r}_2| \).  The interaction is spin independent.
+
+<p>
+The total Hamiltonian consists then of kinetic and potential energy
+<p>&nbsp;<br>
+$$
+\hat{H} = \hat{T}+\hat{V}.
+$$
+<p>&nbsp;<br>
+
+
+<ul>
+ <p><li> Show that the operator for the kinetic energy can be written as</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+\hat{T}=\sum_{{\bf k}\sigma}\frac{\hbar^2k^2}{2m}a_{{\bf k}\sigma}^{\dagger}a_{{\bf k}\sigma}.
+$$
+<p>&nbsp;<br>
+
+Find also the number operator \( \hat{N} \) and find a corresponding expression for the interaction
+\( \hat{V} \) expressed with creation and annihilation operators.   The expression for the interaction
+has to be written in  \( k \) space, even though \( V \) depends only on the relative distance. It means that you ned to set up the Fourier transform \( \langle {\bf k}_i{\bf k}_j| V | {\bf k}_m{\bf k}_n\rangle \).
+
+<ul>
+ <p><li> We will now study the electron gas. The Hamilton operator is given by</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+\hat{H}=\hat{H}_{el}+\hat{H}_{b}+\hat{H}_{el-b},
+$$
+<p>&nbsp;<br>
+
+with the electronic part
+<p>&nbsp;<br>
+$$
+\hat{H}_{el}=\sum_{i=1}^N\frac{p_i^2}{2m}+\frac{e^2}{2}\sum_{i\ne j}\frac{e^{-\mu |{\bf r}_i-{\bf r}_j|}}{|{\bf r}_i-{\bf r}_j|},
+$$
+<p>&nbsp;<br>
+
+where we have introduced an explicit convergence factor
+(the limit \( \mu\rightarrow 0 \) is performed after having calculated the various integrals).
+Correspondingly, we have
+<p>&nbsp;<br>
+$$
+\hat{H}_{b}=\frac{e^2}{2}\int\int d{\bf r}d{\bf r}'\frac{n({\bf r})n({\bf r}')e^{-\mu |{\bf r}-{\bf r}'|}}{|{\bf r}-{\bf r}'|},
+$$
+<p>&nbsp;<br>
+
+which is the energy contribution from the positive background charge with density
+\( n({\bf r})=N/\Omega \). Finally,
+<p>&nbsp;<br>
+$$
+\hat{H}_{el-b}=-\frac{e^2}{2}\sum_{i=1}^N\int d{\bf r}\frac{n({\bf r})e^{-\mu |{\bf r}-{\bf x}_i|}}{|{\bf r}-{\bf x}_i|},
+$$
+<p>&nbsp;<br>
+
+is the interaction between the electrons and the positive background.
+
+<p>
+Show that
+<p>&nbsp;<br>
+$$
+\hat{H}_{b}=\frac{e^2}{2}\frac{N^2}{\Omega}\frac{4\pi}{\mu^2},
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+\hat{H}_{el-b}=-e^2\frac{N^2}{\Omega}\frac{4\pi}{\mu^2}.
+$$
+<p>&nbsp;<br>
+
+Show thereafter that the final Hamiltonian can be written as 
+<p>&nbsp;<br>
+$$
+H=H_{0}+H_{I},
+$$
+<p>&nbsp;<br>
+
+with
+<p>&nbsp;<br>
+$$
+H_{0}={\displaystyle\sum_{{\bf k}\sigma}}
+\frac{\hbar^{2}k^{2}}{2m}a_{{\bf k}\sigma}^{\dagger}
+a_{{\bf k}\sigma},
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+H_{I}=\frac{e^{2}}{2\Omega}{\displaystyle\sum_{\sigma_{1}
+\sigma_{2}}}{\displaystyle
+\sum_{{\bf q}\neq 0,{\bf k},{\bf p}}}\frac{4\pi}{q^{2}}
+a_{{\bf k}+{\bf q},\sigma_{1}}^{\dagger}
+a_{{\bf p}-{\bf q},\sigma_{2}}^{\dagger}
+a_{{\bf p}\sigma_{2}}a_{{\bf k}\sigma_{1}}.
+$$
+<p>&nbsp;<br>
+
+
+<ul>
+ <p><li> Calculate \( E_0/N=\bra{\Phi_{0}}H\ket{\Phi_{0}}/N \) for for this system to first order in the interaction. Show that, by using</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+\rho= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_0^3},
+$$
+<p>&nbsp;<br>
+
+with \( \rho=N/\Omega \), \( r_0 \)
+being the radius of a sphere representing the volume an electron occupies 
+and the Bohr radius \( a_0=\hbar^2/e^2m \), 
+that the energy per electron can be written as 
+<p>&nbsp;<br>
+$$
+E_0/N=\frac{e^2}{2a_0}\left[\frac{2.21}{r_s^2}-\frac{0.916}{r_s}\right].
+$$
+<p>&nbsp;<br>
+
+Here we have defined
+\( r_s=r_0/a_0 \) to be a dimensionless quantity.
+
+<p>
+Plot your results. Why is this system stable?
+
+<ul>
+ <p><li> Calculate thermodynamical quantities like the pressure, given by</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+P=-\left(\frac{\partial E}{\partial \Omega}\right)_N,
+$$
+<p>&nbsp;<br>
+
+and the bulk modulus
+<p>&nbsp;<br>
+$$
+B=-\Omega\left(\frac{\partial P}{\partial \Omega}\right)_N,
+$$
+<p>&nbsp;<br>
+
+and comment your results.
+
+
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec10">Exercises: Electron gas  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Solution to exercise 6.</b>
+<p>
+We have to show first  that
+<p>&nbsp;<br>
+$$
+\hat{H}_{b}=\frac{e^2}{2}\frac{N_e^2}{\Omega}\frac{4\pi}{\mu^2},
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+\hat{H}_{el-b}=-e^2\frac{N_e^2}{\Omega}\frac{4\pi}{\mu^2}.
+$$
+<p>&nbsp;<br>
+
+And then that the final Hamiltonian can be written as 
+<p>&nbsp;<br>
+$$
+H=H_{0}+H_{I},
+$$
+<p>&nbsp;<br>
+
+with
+<p>&nbsp;<br>
+$$
+H_{0}={\displaystyle\sum_{{\bf k}\sigma}}
+\frac{\hbar^{2}k^{2}}{2m_e}a_{{\bf k}\sigma}^{\dagger}
+a_{{\bf k}\sigma},
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+H_{I}=\frac{e^{2}}{2\Omega}{\displaystyle\sum_{\sigma_{1}
+\sigma_{2}}}{\displaystyle
+\sum_{{\bf q}\neq 0,{\bf k},{\bf p}}}\frac{4\pi}{q^{2}}
+a_{{\bf k}+{\bf q},\sigma_{1}}^{\dagger}
+a_{{\bf p}-{\bf q},\sigma_{2}}^{\dagger}
+a_{{\bf p}\sigma_{2}}a_{{\bf k}\sigma_{1}}.
+$$
+<p>&nbsp;<br>
+
+
+
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec11">Electron gas and HF solution </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Let us now calculate the following part of the Hamiltonian
+<p>&nbsp;<br>
+$$ \hat H_b = \frac{e^2}{2} \iint \frac{n({\bf r}) n({\bf r}')e^{-\mu|{\bf r} - {\bf r}'|}}{|{\bf r} - {\bf r}'|} d{\bf r} d{\bf r}' , 
+$$
+<p>&nbsp;<br>
+
+where \( n({\bf r}) = N_e/\Omega \), the density of the positive background charge. We define \( {\bf r}_{12} = {\bf r} - {\bf r}' \), resulting in \( d{\bf r}_{12} = d{\bf r} \), and allowing us to rewrite the integral as
+<p>&nbsp;<br>
+$$ 
+\hat H_b = \frac{e^2 N_e^2}{2\Omega^2} \iint \frac{e^{-\mu |{\bf r}_{12}|}}{|{\bf r}_{12}|} d{\bf r}_{12} d{\bf r}' = \frac{e^2 N_e^2}{2\Omega} \int \frac{e^{-\mu |{\bf r}_{12}|}}{|{\bf r}_{12}|} d{\bf r}_{12} . 
+$$
+<p>&nbsp;<br>
+
+Here we have used that \( \int \! {\bf r} = \Omega \). We change to spherical coordinates and the lack of angle 
+dependencies yields a factor \( 4\pi \), resulting in
+<p>&nbsp;<br>
+$$ 
+\hat H_b = \frac{4\pi e^2 N_e^2}{2\Omega} \int_0^\infty re^{-\mu r} \, \mathrm{d} r . 
+$$
+<p>&nbsp;<br>
+
+
+<p>
+Solving by partial integration
+<p>&nbsp;<br>
+$$ \int_0^\infty re^{-\mu r} \, \mathrm{d} r = \left[ -\frac{r}{\mu} e^{-\mu r} \right]_0^\infty + \frac{1}{\mu} \int_0^\infty e^{-\mu r} \, \mathrm{d} r
+= \frac{1}{\mu} \left[ - \frac{1}{\mu} e^{-\mu r} \right]_0^\infty = \frac{1}{\mu^2}, 
+$$
+<p>&nbsp;<br>
+
+gives
+<p>&nbsp;<br>
+$$
+\hat{H}_b = \frac{e^2}{2} \frac{N_e^2}{\Omega} \frac{4\pi}{\mu^2} .
+$$
+<p>&nbsp;<br>
+
+The next term is 
+<p>&nbsp;<br>
+$$ 
+\hat H_{el-b} = -e^2 \sum_{i = 1}^N \int \frac{n({\bf r}) e^{-\mu |{\bf r} - {\bf x}_i|}}{|{\bf r} - {\bf x}_i|} {\bf r} . 
+$$
+<p>&nbsp;<br>
+
+Inserting  \( n({\bf r}) \) and changing variables in the same way as in the previous integral \( {\bf y} = {\bf r} - {\bf x}_i \), we get \( \mathrm{d}^3 {\bf y} = \mathrm{d}^3 {\bf r} \). This gives
+<p>&nbsp;<br>
+$$ 
+\hat H_{el-b} = -\frac{e^2 N_e}{\Omega} \sum_{i = 1^N} \int \frac{e^{-\mu |{\bf y}|}}{|{\bf y}|} \, \mathrm{d}^3 {\bf y}
+=  -\frac{4\pi e^2 N_e}{\Omega} \sum_{i = 1}^N \int_0^\infty y e^{-\mu y} \mathrm{d} y. 
+$$
+<p>&nbsp;<br>
+
+We have already seen this  type of integral. The answer is 
+<p>&nbsp;<br>
+$$ 
+\hat H_{el-b} = -\frac{4\pi e^2 N_e}{\Omega} \sum_{i = 1}^N \frac{1}{\mu^2}, 
+$$
+<p>&nbsp;<br>
+
+which gives
+<p>&nbsp;<br>
+$$
+\hat H_{el-b} = -e^2 \frac{N_e^2}{\Omega} \frac{4\pi}{\mu^2} .
+$$
+<p>&nbsp;<br>
+
+
+<p>
+Finally, we need to evaluate \( \hat H_{el} \). This term reads
+<p>&nbsp;<br>
+$$ 
+\hat H_{el} = \sum_{i=1}^{N_e} \frac{\hat{\vec p}_i^2}{2m_e} + \frac{e^2}{2} \sum_{i \neq j} \frac{e^{-\mu |{\bf r}_i - {\bf r}_j|}}{{\bf r}_i - {\bf r}_j} . 
+$$
+<p>&nbsp;<br>
+
+The last term represents the repulsion between two electrons. It is a central symmetric interaction
+and is translationally invariant. The potential is given by the expression
+<p>&nbsp;<br>
+$$ 
+v(|{\bf r}|) = e^2 \frac{e^{\mu|{\bf r}|}}{|{\bf r}|}, 
+$$
+<p>&nbsp;<br>
+
+which we derived in connection with the Hartree-Fock derivation.
+
+
+</div>
+
+
+<p>
+
+
+</section>
+
+
+
+</div> <!-- class="slides" -->
+</div> <!-- class="reveal" -->
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.min.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+    // Display navigation controls in the bottom right corner
+    controls: true,
+
+    // Display progress bar (below the horiz. slider)
+    progress: true,
+
+    // Display the page number of the current slide
+    slideNumber: true,
+
+    // Push each slide change to the browser history
+    history: false,
+
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
+
+    // Enable the slide overview mode
+    overview: true,
+
+    // Vertical centering of slides
+    //center: true,
+    center: false,
+
+    // Enables touch navigation on devices with touch input
+    touch: true,
+
+    // Loop the presentation
+    loop: false,
+
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Turns fragments on and off globally
+    fragments: true,
+
+    // Flags if the presentation is running in an embedded mode,
+    // i.e. contained within a limited portion of the screen
+    embedded: false,
+
+    // Number of milliseconds between automatically proceeding to the
+    // next slide, disabled when set to 0, this value can be overwritten
+    // by using a data-autoslide attribute on your slides
+    autoSlide: 0,
+
+    // Stop auto-sliding after user input
+    autoSlideStoppable: true,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: false,
+
+    // Hides the address bar on mobile devices
+    hideAddressBar: true,
+
+    // Opens links in an iframe preview overlay
+    previewLinks: false,
+
+    // Transition style
+    transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Transition speed
+    transitionSpeed: 'default', // default/fast/slow
+
+    // Transition style for full page slide backgrounds
+    backgroundTransition: 'default', // default/none/slide/concave/convex/zoom
+
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+
+    // Parallax background image
+    //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // Parallax background size
+    //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+
+    theme: Reveal.getQueryHash().theme, // available themes are in reveal.js/css/theme
+    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+});
+
+Reveal.initialize({
+    dependencies: [
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+        // Interpret Markdown in <section> elements
+        { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+        // Syntax highlight for <code> elements
+        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Zoom in and out with Alt+click
+        { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Speaker notes
+        { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Remote control your reveal.js presentation using a touch device
+        //{ src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // MathJax
+        //{ src: 'reveal.js/plugin/math/math.js', async: true }
+    ]
+});
+
+Reveal.initialize({
+
+    // The "normal" size of the presentation, aspect ratio will be preserved
+    // when the presentation is scaled to fit different resolutions. Can be
+    // specified using percentage units.
+    width: 1170,  // original: 960,
+    height: 700,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 1.0
+
+});
+</script>
+
+<!-- begin footer logo
+<div style="position: absolute; bottom: 0px; left: 0; margin-left: 0px">
+<img src="somelogo.png">
+</div>
+     end footer logo -->
+
+
+
+</body>
+</html>

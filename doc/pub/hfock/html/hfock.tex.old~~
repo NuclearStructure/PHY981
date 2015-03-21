@@ -2,6 +2,7 @@
 %% Automatically generated file from DocOnce source
 %% (https://github.com/hplgit/doconce/)
 %%
+%%
 
 
 %-------------------- begin preamble ----------------------
@@ -17,17 +18,18 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 \usepackage[table]{xcolor}
 \usepackage{bm,microtype}
 
-\usepackage{fancyvrb} % packages needed for verbatim environments
-
 \usepackage[T1]{fontenc}
 %\usepackage[latin1]{inputenc}
-\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
 
 \usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
 
 % Hyperlinks in PDF:
 \definecolor{linkcolor}{rgb}{0,0,0.4}
-\usepackage[%
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
     colorlinks=true,
     linkcolor=linkcolor,
     urlcolor=linkcolor,
@@ -37,7 +39,7 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
     pdfmenubar=true,
     pdftoolbar=true,
     bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
-            ]{hyperref}
+    }
 %\hyperbaseurl{}   % hyperlinks are relative to this root
 
 \setcounter{tocdepth}{2}  % number chapter, section, subsection
