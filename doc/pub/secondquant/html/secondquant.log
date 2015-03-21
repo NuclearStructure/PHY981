@@ -1,0 +1,3095 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  21 MAR 2015 14:33
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**secondquant
+(./secondquant.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamer.cls
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasercs.sty
+Package: beamerbasercs 2012/06/01 (rcs-revision 352157baec3a)
+)
+Document Class: beamer 2011/09/12 development version 3.20 A class for typesett
+ing presentations (rcs-revision 70f9d8411e54)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+Package: beamerbasemodes 2012/04/15 (rcs-revision cc6557182d97)
+\beamer@tempbox=\box26
+\beamer@tempcount=\count79
+\c@beamerpauses=\count80
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
+Package: beamerbasedecode 2010/05/01 (rcs-revision efa082c6111d)
+\beamer@slideinframe=\count81
+\beamer@minimum=\count82
+)
+\beamer@commentbox=\box27
+\beamer@modecount=\count83
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+\headheight=\dimen102
+\headdp=\dimen103
+\footheight=\dimen104
+\sidebarheight=\dimen105
+\beamer@tempdim=\dimen106
+\beamer@finalheight=\dimen107
+\beamer@animht=\dimen108
+\beamer@animdp=\dimen109
+\beamer@animwd=\dimen110
+\beamer@leftmargin=\dimen111
+\beamer@rightmargin=\dimen112
+\beamer@leftsidebar=\dimen113
+\beamer@rightsidebar=\dimen114
+\beamer@boxsize=\dimen115
+\beamer@vboxoffset=\dimen116
+\beamer@descdefault=\dimen117
+\beamer@descriptionwidth=\dimen118
+\beamer@lastskip=\skip41
+\beamer@areabox=\box28
+\beamer@animcurrent=\box29
+\beamer@animshowbox=\box30
+\beamer@sectionbox=\box31
+\beamer@logobox=\box32
+\beamer@linebox=\box33
+\beamer@sectioncount=\count84
+\beamer@subsubsectionmax=\count85
+\beamer@subsectionmax=\count86
+\beamer@sectionmax=\count87
+\beamer@totalheads=\count88
+\beamer@headcounter=\count89
+\beamer@partstartpage=\count90
+\beamer@sectionstartpage=\count91
+\beamer@subsectionstartpage=\count92
+\beamer@animationtempa=\count93
+\beamer@animationtempb=\count94
+\beamer@xpos=\count95
+\beamer@ypos=\count96
+\beamer@showpartnumber=\count97
+\beamer@currentsubsection=\count98
+\beamer@coveringdepth=\count99
+\beamer@sectionadjust=\count100
+\beamer@tocsectionnumber=\count101
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+Package: beamerbaseoptions 2010/04/27 (rcs-revision 982469101dd6)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+))
+\beamer@paperwidth=\skip42
+\beamer@paperheight=\skip43
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count102
+\Gm@cntv=\count103
+\c@Gm@tempcnt=\count104
+\Gm@bindingoffset=\dimen119
+\Gm@wd@mp=\dimen120
+\Gm@odd@mp=\dimen121
+\Gm@even@mp=\dimen122
+\Gm@layoutwidth=\dimen123
+\Gm@layoutheight=\dimen124
+\Gm@layouthoffset=\dimen125
+\Gm@layoutvoffset=\dimen126
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count105
+))
+\Gin@req@height=\dimen127
+\Gin@req@width=\dimen128
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks16
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box34
+(/usr/local/texlive/2012/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks19
+))
+\pgf@x=\dimen129
+\pgf@y=\dimen130
+\pgf@xa=\dimen131
+\pgf@ya=\dimen132
+\pgf@xb=\dimen133
+\pgf@yb=\dimen134
+\pgf@xc=\dimen135
+\pgf@yc=\dimen136
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count106
+\c@pgf@countb=\count107
+\c@pgf@countc=\count108
+\c@pgf@countd=\count109
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count110
+\pgfsyssoftpath@bigbuffer@items=\count111
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/local/texlive/2012/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen137
+\pgfmath@count=\count112
+\pgfmath@box=\box35
+\pgfmath@toks=\toks20
+\pgfmath@stack@operand=\toks21
+\pgfmath@stack@operation=\toks22
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count113
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen138
+\pgf@picmaxx=\dimen139
+\pgf@picminy=\dimen140
+\pgf@picmaxy=\dimen141
+\pgf@pathminx=\dimen142
+\pgf@pathmaxx=\dimen143
+\pgf@pathminy=\dimen144
+\pgf@pathmaxy=\dimen145
+\pgf@xx=\dimen146
+\pgf@xy=\dimen147
+\pgf@yx=\dimen148
+\pgf@yy=\dimen149
+\pgf@zx=\dimen150
+\pgf@zy=\dimen151
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen152
+\pgf@path@lasty=\dimen153
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen154
+\pgf@shorten@start@additional=\dimen155
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box36
+\pgf@hbox=\box37
+\pgf@layerbox@main=\box38
+\pgf@picture@serial@count=\count114
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen156
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen157
+\pgf@pt@y=\dimen158
+\pgf@pt@temp=\dimen159
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen160
+\pgf@sys@shading@range@num=\count115
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box39
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count116
+\XC@countmixins=\count117
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen161
+\Hy@linkcounter=\count118
+\Hy@pagecounter=\count119
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count120
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 3941.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 3941.
+Package hyperref Info: Option `implicit' set `false' on input line 3941.
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4300.
+\c@Hy@tempcnt=\count121
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4653.
+\Fld@menulength=\count122
+\Field@Width=\dimen162
+\Fld@charsize=\dimen163
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
+\Hy@abspage=\count123
+
+
+Package hyperref Message: Stopped early.
+
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
+\Fld@listcount=\count124
+\c@bookmark@seq@number=\count125
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+Package: beamerbaserequires 2010/05/01  (rcs-revision efa082c6111d)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasecompatibility.st
+y
+Package: beamerbasecompatibility 2012/05/01  (rcs-revision 67c48b3b652d)
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+Package: beamerbasefont 2012/05/10  (rcs-revision a0b4f9f91ee9)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks23
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+Package: sansmathaccent 2012/04/26
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+Package: beamerbasetranslator 2010/06/11  (rcs-revision 85fd1cc7fc42)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/translator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/translator-lang
+uage-mappings.tex)))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasemisc.sty
+Package: beamerbasemisc 2012/02/24  (rcs-revision 2ff5461be705)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty
+Package: beamerbasetwoscreens 2010/05/01  (rcs-revision efa082c6111d)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+Package: beamerbaseoverlay 2012/04/03  (rcs-revision 45744d9ae88b)
+\beamer@argscount=\count126
+\beamer@lastskipcover=\skip44
+\beamer@trivlistdepth=\count127
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasetitle.sty
+Package: beamerbasetitle 2010/09/21  (rcs-revision f0446ed0b6ae)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+Package: beamerbasesection 2012/05/30  (rcs-revision 22ff49def670)
+\c@lecture=\count128
+\c@part=\count129
+\c@section=\count130
+\c@subsection=\count131
+\c@subsubsection=\count132
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+Package: beamerbaseframe 2012/05/31  (rcs-revision 5fc3b3dbfeba)
+\beamer@framebox=\box40
+\beamer@frametitlebox=\box41
+\beamer@zoombox=\box42
+\beamer@zoomcount=\count133
+\beamer@zoomframecount=\count134
+\beamer@frametextheight=\dimen164
+\c@subsectionslide=\count135
+\beamer@frametopskip=\skip45
+\beamer@framebottomskip=\skip46
+\beamer@frametopskipautobreak=\skip47
+\beamer@framebottomskipautobreak=\skip48
+\beamer@envbody=\toks24
+\c@framenumber=\count136
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+Package: beamerbaseverbatim 2011/09/12  (rcs-revision 70f9d8411e54)
+\beamer@verbatimfileout=\write4
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+Package: beamerbaseframesize 2011/09/12  (rcs-revision 70f9d8411e54)
+\beamer@splitbox=\box43
+\beamer@autobreakcount=\count137
+\beamer@autobreaklastheight=\dimen165
+\beamer@frametitletoks=\toks25
+\beamer@framesubtitletoks=\toks26
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
+sty
+Package: beamerbaseframecomponents 2012/03/07  (rcs-revision 9f094699ce15)
+\beamer@footins=\box44
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasecolor.sty
+Package: beamerbasecolor 2010/06/06  (rcs-revision d1a9b48be06d)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+Package: beamerbasenotes 2010/05/01  (rcs-revision efa082c6111d)
+\beamer@frameboxcopy=\box45
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasetoc.sty
+Package: beamerbasetoc 2012/02/28  (rcs-revision 138681b92320)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+Package: beamerbasetemplates 2010/05/01  (rcs-revision efa082c6111d)
+\beamer@sbttoks=\toks27
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+Package: beamerbaseauxtemplates 2012/05/01  (rcs-revision 67c48b3b652d)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+Package: beamerbaseboxes 2012/05/13  (rcs-revision 56972908a390)
+\bmb@box=\box46
+\bmb@colorbox=\box47
+\bmb@boxshadow=\box48
+\bmb@boxshadowball=\box49
+\bmb@boxshadowballlarge=\box50
+\bmb@temp=\dimen166
+\bmb@dima=\dimen167
+\bmb@dimb=\dimen168
+\bmb@prevheight=\dimen169
+)
+\beamer@blockheadheight=\dimen170
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.s
+ty
+Package: beamerbaselocalstructure 2012/05/25  (rcs-revision 5ff5e8ed7c0e)
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks28
+)
+\c@figure=\count138
+\c@table=\count139
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+Package: beamerbasenavigation 2012/04/03  (rcs-revision 42a0f21a412d)
+\beamer@section@min@dim=\dimen171
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+Package: beamerbasetheorems 2010/06/06  (rcs-revision 7e7cc5e53e9d)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks29
+\ex@=\dimen172
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen173
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count140
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count141
+\leftroot@=\count142
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count143
+\DOTSCASE@=\count144
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen174
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count145
+\c@MaxMatrixCols=\count146
+\dotsspace@=\muskip11
+\c@parentequation=\count147
+\dspbrk@lvl=\count148
+\tag@help=\toks30
+\row@=\count149
+\column@=\count150
+\maxfields@=\count151
+\andhelp@=\toks31
+\eqnshift@=\dimen175
+\alignsep@=\dimen176
+\tagshift@=\dimen177
+\tagwidth@=\dimen178
+\totwidth@=\dimen179
+\lineht@=\dimen180
+\@envbody=\toks32
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2009/07/02 v2.20.1
+\thm@style=\toks34
+\thm@bodyfont=\toks35
+\thm@headfont=\toks36
+\thm@notefont=\toks37
+\thm@headpunct=\toks38
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks39
+)
+\c@theorem=\count152
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/beamerbasethemes.sty
+Package: beamerbasethemes 2010/05/01  (rcs-revision efa082c6111d)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/theme/beamerthemede
+fault.sty
+Package: beamerthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/font/beamerfontthem
+edefault.sty
+Package: beamerfontthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
+emedefault.sty
+Package: beamercolorthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerth
+emedefault.sty
+Package: beamerinnerthemedefault 2012/05/01  (rcs-revision 67c48b3b652d)
+\beamer@dima=\dimen181
+\beamer@dimb=\dimen182
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/outer/beamerouterth
+emedefault.sty
+Package: beamerouterthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+))) (./beamerthemered_plain.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
+emestructure.sty
+Package: beamercolorthemestructure 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/themes/font/beamerfontthem
+estructurebold.sty
+Package: beamerfontthemestructurebold 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box53
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen183
+\pgf@nodesepend=\dimen184
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen185
+\pgffor@skip=\dimen186
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count153
+\pgfplotmarksize=\dimen187
+)
+\tikz@lastx=\dimen188
+\tikz@lasty=\dimen189
+\tikz@lastxsaved=\dimen190
+\tikz@lastysaved=\dimen191
+\tikzleveldistance=\dimen192
+\tikzsiblingdistance=\dimen193
+\tikz@figbox=\box54
+\tikz@tempbox=\box55
+\tikztreelevel=\count154
+\tikznumberofchildren=\count155
+\tikznumberofcurrentchild=\count156
+\tikz@fig@count=\count157
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count158
+\pgfmatrixcurrentcolumn=\count159
+\pgf@matrix@numberofcolumns=\count160
+)
+\tikz@expandcount=\count161
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+)))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
+\arrowsize=\dimen194
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v2.10 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2008/10/07 v2.10 (rcs-revision 1.3)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2009/10/27 v2.10 (rcs-revision 1.3)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2008/06/26 v2.10 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.callouts.code.tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.callouts.code.tex))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2010/01/07 v2.10 (rcs-revision 1.2)
+\pgfnodepartlowerbox=\box56
+\pgfnodeparttwobox=\box57
+\pgfnodepartthreebox=\box58
+\pgfnodepartfourbox=\box59
+\pgfnodeparttwentybox=\box60
+\pgfnodepartnineteenbox=\box61
+\pgfnodeparteighteenbox=\box62
+\pgfnodepartseventeenbox=\box63
+\pgfnodepartsixteenbox=\box64
+\pgfnodepartfifteenbox=\box65
+\pgfnodepartfourteenbox=\box66
+\pgfnodepartthirteenbox=\box67
+\pgfnodeparttwelvebox=\box68
+\pgfnodepartelevenbox=\box69
+\pgfnodeparttenbox=\box70
+\pgfnodepartninebox=\box71
+\pgfnodeparteightbox=\box72
+\pgfnodepartsevenbox=\box73
+\pgfnodepartsixbox=\box74
+\pgfnodepartfivebox=\box75
+)))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2010/02/08 v2.10 (rcs-revision 1.2)
+\pgf@layerbox@background=\box76
+\pgf@layerboxsaved@background=\box77
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen195
+\pgfdecoratedremainingdistance=\dimen196
+\pgfdecoratedinputsegmentcompleteddistance=\dimen197
+\pgfdecoratedinputsegmentremainingdistance=\dimen198
+\pgf@decorate@distancetomove=\dimen199
+\pgf@decorate@repeatstate=\count162
+\pgfdecorationsegmentamplitude=\dimen200
+\pgfdecorationsegmentlength=\dimen201
+)
+\tikz@lib@dec@box=\box78
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymindmap.code.tex
+File: tikzlibrarymindmap.code.tex 2009/11/12 v2.10 (rcs-revision 1.9)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytrees.code.tex
+File: tikzlibrarytrees.code.tex 2008/02/24 v2.10 (rcs-revision 1.2)
+)))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfarrows.sty
+Package: pgfarrows 2006/10/11 v2.10 (rcs-revision 1.3)
+
+
+Package pgfarrows Warning: This package is obsolete. pgf.sty will load arrow ma
+nagement automatically on input line 17.
+
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfnodes.sty
+Package: pgfnodes 2006/10/11 v2.10 (rcs-revision 1.3)
+
+
+Package pgfnodes Warning: This package is obsolete. pgf.sty will load node mana
+gement automatically on input line 17.
+
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfautomata.sty
+Package: pgfautomata 2006/10/11 v2.10 (rcs-revision 1.3)
+
+Package pgfautomata Warning: This package is obsolete. on input line 17.
+
+\pgf@stateradius=\dimen202
+\pgf@mooreradius=\dimen203
+\pgf@doublethickness=\dimen204
+\pgf@statebackoff=\dimen205
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfheaps.sty
+Package: pgfheaps 2006/10/11 v2.10 (rcs-revision 1.3)
+
+
+Package pgfheaps Warning: This package is obsolete. on input line 16.
+
+\pgf@heapx=\dimen206
+\pgf@heapy=\dimen207
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfshade.sty
+Package: pgfshade 2006/10/11 v2.10 (rcs-revision 1.3)
+
+
+Package pgfshade Warning: This package is obsolete. pgf.sty will load shade man
+agement automatically on input line 17.
+
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen208
+\epsfysize=\dimen209
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2011/09/21 ver 4.0
+
+Examine \normalsize starts \@setfontsize size may be \@xipt. 
+Examine \small starts \@setfontsize size may be \@xpt. 
+Examine \footnotesize starts \@setfontsize size may be \@ixpt. 
+Examine \large starts \@setfontsize size may be \@xiipt. 
+Examine \Large starts \@setfontsize size may be \@xivpt. 
+Examine \LARGE starts \@setfontsize size may be \@xviipt. 
+Examine \scriptsize starts \@setfontsize size may be \@viiipt. 
+Examine \tiny starts \@setfontsize size may be \@vipt. 
+Examine \huge starts \@setfontsize size may be \@xxpt. 
+Examine \Huge starts \@setfontsize size may be \@xxvpt. )
+(/usr/local/texlive/2012/texmf-dist/tex/latex/fancybox/fancybox.sty
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box79
+\shadowsize=\dimen210
+\@Sbox=\box80
+\do@VerbBox=\toks42
+\the@fancyput=\toks43
+\this@fancyput=\toks44
+\EndVerbatimTokens=\toks45
+\Verbatim@Outfile=\write5
+\Verbatim@Infile=\read2
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count163
+\FV@InFile=\read3
+\FV@TabBox=\box81
+\c@FancyVerbLine=\count164
+\FV@StepNumber=\count165
+\FV@OutFile=\write6
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2011/09/17 v1.7 Yet another Pygments shim for LaTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count166
+\float@exts=\toks46
+\float@box=\box82
+\@float@everytoks=\toks47
+\@floatcapt=\box83
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count167
+\calc@Bcount=\count168
+\calc@Adimen=\dimen211
+\calc@Bdimen=\dimen212
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count169
+\calc@Cskip=\skip59
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2011/03/01 v1.6 Catch the contents of a file (HO)
+)
+runsystem(uname -s > "secondquant.w18")...executed.
+
+
+(./secondquant.w18)
+runsystem(rm -- "secondquant.w18")...executed.
+
+)
+\minted@bgbox=\box84
+\minted@code=\write7
+\@float@every@listing=\toks48
+\c@listing=\count170
+)
+runsystem(which pygmentize && touch secondquant.aex)...executed.
+
+runsystem(rm secondquant.aex)...executed.
+
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
+LaTeX Info: Redefining \bm on input line 204.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks49
+\inpenc@posthook=\toks50
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen213
+\extrarowheight=\dimen214
+\NC@list=\toks51
+\extratabsurround=\skip60
+\backup@length=\skip61
+)
+\everycr=\toks52
+\minrowclearance=\skip62
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/08 v3.8m The Babel package
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/english.ldf
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+LaTeX Info: Redefining \textlatin on input line 82.
+\babel@savecnt=\count171
+\U@D=\dimen215
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip63
+\fb@frw=\dimen216
+\fb@frh=\dimen217
+\FrameRule=\dimen218
+\FrameSep=\dimen219
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 86.
+Package hyperref Info: Option `pdfmenubar' set `true' on input line 86.
+Package hyperref Info: Option `pdftoolbar' set `true' on input line 86.
+\c@doconceexercisecounter=\count172
+\c@doconce:movie:counter=\count173
+\@indexfile=\write8
+\openout8 = `secondquant.idx'.
+
+
+Writing index file secondquant.idx
+No file secondquant.aux.
+\openout1 = `secondquant.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=307.28987pt
+* \textheight=244.6939pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=14.22636pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count174
+\scratchdimen=\dimen220
+\scratchbox=\box85
+\nofMPsegments=\count175
+\nofMParguments=\count176
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count177
+\MPscratchDim=\dimen221
+\MPnumerator=\count178
+\makeMPintoPDFobject=\count179
+\everyMPtoPDFconversion=\toks54
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box86
+Package hyperref Info: Link coloring ON on input line 110.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count180
+)
+LaTeX Info: Redefining \ref on input line 110.
+LaTeX Info: Redefining \pageref on input line 110.
+LaTeX Info: Redefining \nameref on input line 110.
+
+(./secondquant.out) (./secondquant.out)
+\@outlinefile=\write9
+\openout9 = `secondquant.out'.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 110.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 110.
+\symnumbers=\mathgroup9
+\sympureletters=\mathgroup10
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 110.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 110.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 110.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 110.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 110.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 110.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 110.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 110.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 110.
+LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
+(Font)              `pureletters' in the math version `normal' on input line 11
+0.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 11
+0.
+LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
+(Font)              `pureletters' in the math version `bold' on input line 110.
+
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  T1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 1
+10.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/dicts/translato
+r-basic-dictionary/translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/dicts/translato
+r-bibliography-dictionary/translator-bibliography-dictionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/dicts/translato
+r-environment-dictionary/translator-environment-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/dicts/translato
+r-months-dictionary/translator-months-dictionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/dicts/translato
+r-numbers-dictionary/translator-numbers-dictionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/dicts/translato
+r-theorem-dictionary/translator-theorem-dictionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+)
+LaTeX Info: Redefining \includegraphics on input line 110.
+runsystem(pygmentize -S default -f latex > secondquant.pyg)...executed.
+
+
+(./secondquant.pyg) (./secondquant.nav)
+
+Package hyperref Warning: Option `pdfauthor' has already been used,
+(hyperref)                setting the option has no effect on input line 126.
+
+\openout4 = `secondquant.vrb'.
+
+(./secondquant.vrb
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
+line 1.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2012/04/26
+)) [1
+
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+\openout4 = `secondquant.vrb'.
+
+
+(./secondquant.vrb) [2
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [3
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-1a' on page 4 undefined on input line 4.
+
+
+LaTeX Warning: Reference `eq:2-1b' on page 4 undefined on input line 9.
+
+) [4
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-2' on page 5 undefined on input line 6.
+
+) [5
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-3b' on page 6 undefined on input line 12.
+
+
+LaTeX Warning: Reference `eq:2-4b' on page 6 undefined on input line 12.
+
+) [6
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-5' on page 7 undefined on input line 8.
+
+) [7
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-4a' on page 8 undefined on input line 11.
+
+) [8
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-9b' on page 9 undefined on input line 4.
+
+
+LaTeX Warning: Reference `eq:2-8' on page 9 undefined on input line 5.
+
+
+LaTeX Warning: Reference `eq:2-10' on page 9 undefined on input line 10.
+
+) [9
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [10
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [11
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+[12
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [13
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (1.84462pt too wide) in alignment at lines 6--12
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eq:2-16a' on page 14 undefined on input line 13.
+
+
+LaTeX Warning: Reference `eq:2-16b' on page 14 undefined on input line 13.
+
+) [14
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [15
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [16
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+[17
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-17' on page 18 undefined on input line 4.
+
+
+LaTeX Warning: Reference `eq:2-19' on page 18 undefined on input line 4.
+
+) [18
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [19
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [20
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+[21
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [22
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (52.20683pt too wide) detected at line 15
+\OT1/cmss/m/n/10.95 ^^H(\OT1/mathkerncmss/m/sl/10.95 x[]\OML/cmm/m/it/10.95 ; \
+OT1/mathkerncmss/m/sl/10.95 x[]\OML/cmm/m/it/10.95 ; [] ; \OT1/mathkerncmss/m/s
+l/10.95 x[]\OML/cmm/m/it/10.95 ; []; []; [] ; []\OT1/cmss/m/n/10.95 ) = [] [
+](\OMS/cmsy/m/n/10.95 ^^@\T1/cmss/m/n/10.95 1\OT1/cmss/m/n/10.95 )[][]\OML/cmm/
+m/it/10.95  []\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 x[]\OT1/cmss/m/
+n/10.95 )\OML/cmm/m/it/10.95  []\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.
+95 x[]\OT1/cmss/m/n/10.95 ) [] \OML/cmm/m/it/10.95  []\OT1/cmss/m/n/10.95 (\OT1
+/mathkerncmss/m/sl/10.95 x[]\OT1/cmss/m/n/10.95 )\OML/cmm/m/it/10.95 :
+ []
+
+) [23
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-25' on page 24 undefined on input line 9.
+
+)
+Overfull \vbox (15.46187pt too high) detected at line 567
+ []
+
+[24
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [25
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [26
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-28' on page 27 undefined on input line 4.
+
+
+LaTeX Warning: Reference `eq:2-23' on page 27 undefined on input line 6.
+
+
+LaTeX Warning: Reference `eq:2-28' on page 27 undefined on input line 13.
+
+)
+Overfull \vbox (38.5769pt too high) detected at line 633
+ []
+
+[27
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [28
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-30b' on page 29 undefined on input line 4.
+
+) [29
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [30
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [31
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+[32
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [33
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [34
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-34' on page 35 undefined on input line 4.
+
+
+Overfull \hbox (1.72989pt too wide) in alignment at lines 5--22
+ [][][] []
+ []
+
+) [35
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [36
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-38b' on page 37 undefined on input line 5.
+
+) [37
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-39' on page 38 undefined on input line 4.
+
+) [38
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [39
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [40
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-42b' on page 41 undefined on input line 5.
+
+
+LaTeX Warning: Reference `eq:2-40' on page 41 undefined on input line 5.
+
+) [41
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [42
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [43
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (57.14024pt too high) detected at line 960
+ []
+
+[44
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-2' on page 45 undefined on input line 5.
+
+) [45
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-47a' on page 46 undefined on input line 4.
+
+) [46
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:2-48c' on page 47 undefined on input line 11.
+
+)
+Overfull \vbox (65.33745pt too high) detected at line 1030
+ []
+
+[47
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (57.38565pt too high) detected at line 1068
+ []
+
+[48
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (33.77896pt too wide) detected at line 23
+\OT1/mathkerncmss/m/sl/10.95 N\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 ^^L[]^^L
+[] [] ^^L[]^^M[]^^M[] [] ^^M[]\OMS/cmsy/m/n/10.95 i \OT1/cmss/m/n/10.95 = (\OT1
+/mathkerncmss/m/sl/10.95 n[] \OT1/cmss/m/n/10.95 + \OT1/mathkerncmss/m/sl/10.95
+ n[] \OMS/cmsy/m/n/10.95 ^^@ \OT1/mathkerncmss/m/sl/10.95 n[]\OT1/cmss/m/n/10.9
+5 )\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 ^^L[]^^L[] [] ^^L[]^^M[]^^M[] [] ^^
+M[]\OMS/cmsy/m/n/10.95 i[][][]
+ []
+
+
+LaTeX Warning: Reference `eq:2-56' on page 49 undefined on input line 25.
+
+
+Overfull \hbox (37.98088pt too wide) detected at line 33
+\OT1/mathkerncmss/m/sl/10.95 N[] \OT1/cmss/m/n/10.95 = \OMS/cmsy/m/n/10.95 j\OM
+L/cmm/m/it/10.95 ^^L[]^^L[] [] ^^L[]^^M[]^^M[] [] ^^M[]\OMS/cmsy/m/n/10.95 i \O
+T1/cmss/m/n/10.95 = (\OT1/mathkerncmss/m/sl/10.95 n[] \OT1/cmss/m/n/10.95 + \OT
+1/mathkerncmss/m/sl/10.95 n[]\OT1/cmss/m/n/10.95 )\OMS/cmsy/m/n/10.95 j\OML/cmm
+/m/it/10.95 ^^L[]^^L[] [] ^^L[]^^M[]^^M[] [] ^^M[]\OMS/cmsy/m/n/10.95 i[][][]
+ []
+
+)
+Overfull \vbox (189.97043pt too high) detected at line 1106
+ []
+
+[49
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (22.34499pt too wide) in alignment at lines 5--13
+ [][][] []
+ []
+
+) [50
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrbpdfTeX warning (ext4): destination with the same identifier 
+(name{eq:2-63b}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.16 b_i^\dagger b_j \label{eq:2-63b}
+                                     ) [51
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [52
+
+]
+\openout4 = `secondquant.vrb'.
+
+
+(./secondquant.vrb) [53
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (126.7415pt too high) detected at line 1225
+ []
+
+[54
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [55
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [56
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+[57
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (152.46872pt too wide) detected at line 12
+\OMS/cmsy/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95 pqr\OMS/cmsy/m/n/10.95 j[]j\O
+T1/mathkerncmss/m/sl/10.95 stu\OMS/cmsy/m/n/10.95 i[] \OT1/cmss/m/n/10.95 = \OM
+S/cmsy/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95 pqr\OMS/cmsy/m/n/10.95 j[]j\OT1/
+mathkerncmss/m/sl/10.95 stu\OMS/cmsy/m/n/10.95 i \OT1/cmss/m/n/10.95 + \OMS/cms
+y/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95 pqr\OMS/cmsy/m/n/10.95 j[]j\OT1/mathk
+erncmss/m/sl/10.95 tus\OMS/cmsy/m/n/10.95 i \OT1/cmss/m/n/10.95 + \OMS/cmsy/m/n
+/10.95 h\OT1/mathkerncmss/m/sl/10.95 pqr\OMS/cmsy/m/n/10.95 j[]j\OT1/mathkerncm
+ss/m/sl/10.95 ust\OMS/cmsy/m/n/10.95 i ^^@ h\OT1/mathkerncmss/m/sl/10.95 pqr\OM
+S/cmsy/m/n/10.95 j[]j\OT1/mathkerncmss/m/sl/10.95 sut\OMS/cmsy/m/n/10.95 i ^^@ 
+h\OT1/mathkerncmss/m/sl/10.95 pqr\OMS/cmsy/m/n/10.95 j[]j\OT1/mathkerncmss/m/sl
+/10.95 tsu\OMS/cmsy/m/n/10.95 i ^^@ h\OT1/mathkerncmss/m/sl/10.95 pqr\OMS/cmsy/
+m/n/10.95 j[]j\OT1/mathkerncmss/m/sl/10.95 uts\OMS/cmsy/m/n/10.95 i\OML/cmm/m/i
+t/10.95 :
+ []
+
+) [58
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (34.51155pt too high) detected at line 1328
+ []
+
+[59
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \[
+      
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.8 \]
+      
+? 
+
+! LaTeX Error: \begin{beamercolorbox} on input line 3 ended by \end{equation*}.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \]
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.8 \]
+      
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.8 \]
+      
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.8 \]
+      
+? 
+! Undefined control sequence.
+\endbeamercolorbox ->\ifdim \beamer@colbox@sep 
+                                               =0pt\else \vskip \beamer@colb...
+l.14 \end{block}
+                
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.14 \end{block}
+                
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   =
+l.14 \end{block}
+                
+? 
+! Undefined control sequence.
+\endbeamercolorbox ...ifdim \beamer@colbox@colsep 
+                                                  =0pt\else \vskip \beamer@c...
+l.14 \end{block}
+                
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.14 \end{block}
+                
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   =
+l.14 \end{block}
+                
+? 
+! Undefined control sequence.
+\endbeamercolorbox ...fdim \beamer@colbox@colseps 
+                                                  =0pt\else \vskip \beamer@c...
+l.14 \end{block}
+                
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.14 \end{block}
+                
+? s
+OK, entering \scrollmode...
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   =
+l.14 \end{block}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Extra }, or forgotten \endgroup.
+\endbeamercolorbox ...box@colseps \fi \fi \egroup 
+                                                  \egroup \wd \beamer@tempbo...
+l.14 \end{block}
+                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\endbeamercolorbox ...eps \fi \fi \egroup \egroup 
+                                                  \wd \beamer@tempbox =\hsiz...
+l.14 \end{block}
+                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+\endbeamercolorbox ...@tempbox =\beamer@colbox@ht 
+                                                  \fi \ifx \beamer@colbox@dp...
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\endbeamercolorbox ...@tempbox =\beamer@colbox@dp 
+                                                  \fi \ifbeamer@colbox@round...
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \beamer@colbox@color 
+                                
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \beamer@colbox@color 
+                                
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \beamer@colbox@color 
+                                
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \beamer@colbox@color 
+                                
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \string \color@ \beamer@colbox@color 
+                                                .fg
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \string \color@ \beamer@colbox@color 
+                                                .bg
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\endbeamercolorbox ...e by \beamer@colbox@colseps 
+                                                  \relax \advance \hsize by ...
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.14 \end{block}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.14 \end{block}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\endbeamercolorbox ...e by \beamer@colbox@colseps 
+                                                  \relax \hskip -\beamer@col...
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.14 \end{block}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.14 \end{block}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\endbeamercolorbox ...kip -\beamer@colbox@colseps 
+                                                  \fboxsep =0pt\colorbox {bg...
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \hskip \beamer@colbox@colseps 
+                                         \hbox {\box \beamer@tempbox }\hskip...
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \hbox 
+l.14 \end{block}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \hbox 
+l.14 \end{block}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> ...pbox }\hskip \beamer@colbox@colseps 
+                                                  
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.14 \end{block}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.14 \end{block}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\endbeamercolorbox ...kip -\beamer@colbox@colseps 
+                                                  }}\fi \ifdim \@tempdima >\...
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.14 \end{block}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.14 \end{block}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+Overfull \hbox (29.42215pt too wide) in paragraph at lines 14--14
+\T1/cmss/m/n/10.95 =0pt[][][][][][]  
+ []
+
+
+! LaTeX Error: \begin{altenv} on input line 3 ended by \end{beamercolorbox}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \end{block}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (8.46223pt too wide) in paragraph at lines 14--14
+[]\T1/cmss/m/n/10.95 =[][][]  
+ []
+
+! Undefined control sequence.
+\endaltenv ->\beamer@eoenv 
+                           
+l.14 \end{block}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{uncoverenv} on input line 3 ended by \end{altenv}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \end{block}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{actionenv} on input line 3 ended by \end{uncoverenv}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \end{block}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{block} on input line 3 ended by \end{actionenv}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \end{block}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{beamer@framepauses} on input line 1345 ended by \end{bloc
+k}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \end{block}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+
+! LaTeX Error: \begin{beamer@frameslide} on input line 1345 ended by \end{beame
+r@framepauses}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1345 \end{frame}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1345 \end{frame}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Too many }'s.
+\endbeamer@frameslide ...amer@framepauses}\egroup 
+                                                  \ifx \beamer@frametitle \@...
+l.1345 \end{frame}
+                  
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Undefined control sequence.
+\endbeamer@frameslide ...box \else \beamer@zoomer 
+                                                  \fi \beamer@undolabels \be...
+l.1345 \end{frame}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{beamer@frameslide}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1345 \end{frame}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.1345 \end{frame}
+                  
+Things are pretty mixed up, but I think the worst is over.
+
+
+LaTeX Font Warning: Font shape `T1/cmss/bx/n' in size <4> not available
+(Font)              size <5> substituted on input line 1345.
+
+
+LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
+(Font)              size <5> substituted on input line 1345.
+
+[60
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (94.31161pt too wide) detected at line 21
+\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 c[]\OMS/cmsy/m/n/10.95 i \OT1
+/cmss/m/n/10.95 = \OT1/mathkerncmss/m/sl/10.95 exp [] \OMS/cmsy/m/n/10.95 j\OT1
+/mathkerncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.95 i \OT1/cmss/m/n/10.95 = [] [] \OM
+S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.95 i
+ []
+
+)
+Overfull \vbox (41.29669pt too high) detected at line 1371
+ []
+
+[61
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (288.35948pt too wide) detected at line 21
+\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 c[]\OMS/cmsy/m/n/10.95 i \OT1
+/cmss/m/n/10.95 = [] [] \OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 a[]a[
+] [] a[]\OMS/cmsy/m/n/10.95 j\T1/cmss/m/n/10.95 0\OMS/cmsy/m/n/10.95 i \OT1/cms
+s/m/n/10.95 = [] \OT1/mathkerncmss/m/sl/10.95 a[] [] a[] [] \OMS/cmsy/m/n/10.95
+ j\T1/cmss/m/n/10.95 0\OMS/cmsy/m/n/10.95 i \OT1/cmss/m/n/10.95 = [] [] \OMS/cm
+sy/m/n/10.95 j\T1/cmss/m/n/10.95 0\OMS/cmsy/m/n/10.95 i\OML/cmm/m/it/10.95 :
+ []
+
+)
+Overfull \vbox (50.55199pt too high) detected at line 1396
+ []
+
+[62
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+
+LaTeX Warning: Reference `eq:newb' on page 63 undefined on input line 13.
+
+)
+Overfull \vbox (113.97456pt too high) detected at line 1423
+ []
+
+[63
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (7.99516pt too wide) detected at line 10
+\OMS/cmsy/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.95 j[]i \OT
+1/cmss/m/n/10.95 = \OMS/cmsy/m/n/10.95 h\T1/cmss/m/n/10.95 0\OMS/cmsy/m/n/10.95
+ j\OT1/mathkerncmss/m/sl/10.95 a[] [] a[] [] [] [] [] \OMS/cmsy/m/n/10.95 j\T1/
+cmss/m/n/10.95 0\OMS/cmsy/m/n/10.95 i\OML/cmm/m/it/10.95 ;
+ []
+
+)
+Overfull \vbox (41.44856pt too high) detected at line 1450
+ []
+
+[64
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (79.09877pt too high) detected at line 1479
+ []
+
+[65
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (108.193pt too high) detected at line 1508
+ []
+
+[66
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (150.85388pt too wide) detected at line 17
+[] \OT1/cmss/m/n/10.95 = [] [] \OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.9
+5 c\OMS/cmsy/m/n/10.95 i \OT1/cmss/m/n/10.95 = []
+ []
+
+)
+Overfull \vbox (38.97864pt too high) detected at line 1531
+ []
+
+[67
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (60.34981pt too wide) detected at line 21
+[] [] [] \OML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/sl/10.95 C[]\OML/cmm/m/it/1
+0.95 ^^N\OT1/mathkerncmss/m/sl/10.95 C[]\OMS/cmsy/m/n/10.95 h\OT1/mathkerncmss/
+m/sl/10.95 c\OMS/cmsy/m/n/10.95 j[]\OT1/mathkerncmss/m/sl/10.95 a[]a[]a[]a[]\OM
+S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.95 i \OT1/cmss
+/m/n/10.95 + [] [] [] \OML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/sl/10.95 C[]\O
+ML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/sl/10.95 C[]\OMS/cmsy/m/n/10.95 h\OT1/
+mathkerncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 a[]a
+[]a[]a[][]\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.9
+5 i \OT1/cmss/m/n/10.95 + []
+ []
+
+) [68
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (359.85417pt too wide) detected at line 10
+\OMS/cmsy/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.95 j [] j\O
+T1/mathkerncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.95 i \OT1/cmss/m/n/10.95 = [] [] \
+OML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/sl/10.95 C[]\OML/cmm/m/it/10.95 ^^N\O
+T1/mathkerncmss/m/sl/10.95 C[]\OMS/cmsy/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95
+ p\OMS/cmsy/m/n/10.95 j[]j\OT1/mathkerncmss/m/sl/10.95 q\OMS/cmsy/m/n/10.95 ih\
+OT1/mathkerncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.95 j [] j\OT1/mathkerncmss/m/sl/1
+0.95 c\OMS/cmsy/m/n/10.95 i \OT1/cmss/m/n/10.95 + [] [] [] \OML/cmm/m/it/10.95 
+^^N\OT1/mathkerncmss/m/sl/10.95 C[]\OML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/s
+l/10.95 C[]\OMS/cmsy/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95 pq\OMS/cmsy/m/n/10
+.95 j[]j\OT1/mathkerncmss/m/sl/10.95 rs\OMS/cmsy/m/n/10.95 ih\OT1/mathkerncmss/
+m/sl/10.95 c\OMS/cmsy/m/n/10.95 j [] j\OT1/mathkerncmss/m/sl/10.95 c\OMS/cmsy/m
+/n/10.95 i\OML/cmm/m/it/10.95 ;
+ []
+
+) [69
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (2.04239pt too high) detected at line 1600
+ []
+
+[70
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [71
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (316.7503pt too wide) detected at line 8
+\OMS/cmsy/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95 c[]\OMS/cmsy/m/n/10.95 j\OT1/
+mathkerncmss/m/sl/10.95 H\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 c[]\
+OMS/cmsy/m/n/10.95 i \OT1/cmss/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 h\OT1/mathker
+ncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 H\OMS/cmsy/
+m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 c\OMS/cmsy/m/n/10.95 i \OT1/cmss/m/n/10
+.95 + [] \OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/sl/10.
+95 C[]\OMS/cmsy/m/n/10.95 j[]\OT1/cmss/m/n/10.95 (\OML/cmm/m/it/10.95 "[] \OMS/
+cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 "[]\OT1/cmss/m/n/10.95 ) + [] \OT1/mathk
+erncmss/m/sl/10.95 A[]\OML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/sl/10.95 C[]\O
+ML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/sl/10.95 C[] \OT1/cmss/m/n/10.95 + [] 
+[] \OT1/mathkerncmss/m/sl/10.95 B[]\OML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/s
+l/10.95 C[]\OML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/sl/10.95 C[] \OT1/cmss/m/
+n/10.95 + [] [] \OT1/mathkerncmss/m/sl/10.95 B[]\OML/cmm/m/it/10.95 ^^N\OT1/mat
+hkerncmss/m/sl/10.95 C[]\OML/cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/sl/10.95 C[]
+ \OT1/cmss/m/n/10.95 + \OT1/mathkerncmss/m/sl/10.95 O\OT1/cmss/m/n/10.95 (\OML/
+cmm/m/it/10.95 ^^N\OT1/mathkerncmss/m/sl/10.95 C[]\OT1/cmss/m/n/10.95 )\OML/cmm
+/m/it/10.95 ;
+ []
+
+) [72
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [73
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [74
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (13.55518pt too wide) detected at line 15
+[] \OT1/mathkerncmss/m/sl/10.95 a[]a[] [] a[]\OMS/cmsy/m/n/10.95 j\T1/cmss/m/n/
+10.95 0\OMS/cmsy/m/n/10.95 i\OML/cmm/m/it/10.95 :
+ []
+
+) [75
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (66.26299pt too wide) detected at line 20
+[]
+ []
+
+)
+Overfull \vbox (40.06009pt too high) detected at line 1728
+ []
+
+[76
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [77
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (10.87091pt too high) detected at line 1766
+ []
+
+[78
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [79
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [80
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (8.62102pt too wide) detected at line 15
+\OT1/mathkerncmss/m/sl/10.95 a[]a[]\OT1/cmss/m/n/10.95 ^^H[] = \OT1/mathkerncms
+s/m/sl/10.95 a[]\OMS/cmsy/m/n/10.95 j\T1/cmss/m/n/10.95 0001001000100100\OMS/cm
+sy/m/n/10.95 i \OT1/cmss/m/n/10.95 = \OT1/mathkerncmss/m/sl/10.95 a[]a[]a[]a[]a
+[]\OMS/cmsy/m/n/10.95 j\T1/cmss/m/n/10.95 0\OMS/cmsy/m/n/10.95 i\OML/cmm/m/it/1
+0.95 ;
+ []
+
+) [81
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [82
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (26.14021pt too high) detected at line 1896
+ []
+
+[83
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (53.2718pt too high) detected at line 1925
+ []
+
+[84
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb)
+Overfull \vbox (57.88237pt too high) detected at line 1963
+ []
+
+[85
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [86
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+Overfull \hbox (14.89738pt too wide) detected at line 13
+[] \OT1/cmss/m/n/10.95 = [] []\OMS/cmsy/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95
+ pq\OMS/cmsy/m/n/10.95 j[]j\OT1/mathkerncmss/m/sl/10.95 rs\OMS/cmsy/m/n/10.95 i
+ [] \OT1/cmss/m/n/10.95 + []\OMS/cmsy/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95 p
+i\OMS/cmsy/m/n/10.95 j[]j\OT1/mathkerncmss/m/sl/10.95 qi\OMS/cmsy/m/n/10.95 i [
+] \OT1/cmss/m/n/10.95 + [] []\OMS/cmsy/m/n/10.95 h\OT1/mathkerncmss/m/sl/10.95 
+ij\OMS/cmsy/m/n/10.95 j[]j\OT1/mathkerncmss/m/sl/10.95 ij\OMS/cmsy/m/n/10.95 i\
+OML/cmm/m/it/10.95 :
+ []
+
+)
+Overfull \vbox (29.25182pt too high) detected at line 2006
+ []
+
+[87
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 78.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+\openout6 = `secondquant.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
+-P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
+tt,xleftmargin=2mm" -o secondquant.out.pyg secondquant.pyg)...executed.
+
+
+(./secondquant.out.pyg
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2.
+)
+runsystem(rm secondquant.out.pyg)...executed.
+
+runsystem(rm secondquant.pyg)...executed.
+
+)
+Overfull \vbox (1691.43813pt too high) detected at line 2199
+ []
+
+[88
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb) [89
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+\openout6 = `secondquant.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
+-P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
+tt,xleftmargin=2mm" -o secondquant.out.pyg secondquant.pyg)...executed.
+
+ (./secondquant.out.pyg)
+runsystem(rm secondquant.out.pyg)...executed.
+
+runsystem(rm secondquant.pyg)...executed.
+
+)
+Overfull \vbox (3.74019pt too high) detected at line 2238
+ []
+
+[90
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+\openout6 = `secondquant.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
+-P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
+tt,xleftmargin=2mm" -o secondquant.out.pyg secondquant.pyg)...executed.
+
+ (./secondquant.out.pyg)
+runsystem(rm secondquant.out.pyg)...executed.
+
+runsystem(rm secondquant.pyg)...executed.
+
+) [91
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+\openout6 = `secondquant.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
+-P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
+tt,xleftmargin=2mm" -o secondquant.out.pyg secondquant.pyg)...executed.
+
+
+(./secondquant.out.pyg)
+runsystem(rm secondquant.out.pyg)...executed.
+
+runsystem(rm secondquant.pyg)...executed.
+
+) [92
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+\openout6 = `secondquant.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
+-P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
+tt,xleftmargin=2mm" -o secondquant.out.pyg secondquant.pyg)...executed.
+
+ (./secondquant.out.pyg)
+runsystem(rm secondquant.out.pyg)...executed.
+
+runsystem(rm secondquant.pyg)...executed.
+
+)
+Overfull \vbox (7.82954pt too high) detected at line 2329
+ []
+
+[93
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+\openout6 = `secondquant.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
+-P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
+tt,xleftmargin=2mm" -o secondquant.out.pyg secondquant.pyg)...executed.
+
+ (./secondquant.out.pyg)
+runsystem(rm secondquant.out.pyg)...executed.
+
+runsystem(rm secondquant.pyg)...executed.
+
+)
+Overfull \vbox (95.1781pt too high) detected at line 2367
+ []
+
+[94
+
+]
+\openout4 = `secondquant.vrb'.
+
+ (./secondquant.vrb
+\openout6 = `secondquant.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge      -P mathescape       
+-P "verboptions= ,fontsize=\fontsize {9pt}{9pt},baselinestretch=1.0,fontfamily=
+tt,xleftmargin=2mm" -o secondquant.out.pyg secondquant.pyg)...executed.
+
+ (./secondquant.out.pyg)
+runsystem(rm secondquant.out.pyg)...executed.
+
+runsystem(rm secondquant.pyg)...executed.
+
+
+Overfull \hbox (34.03355pt too wide) detected at line 24
+\OMS/cmsy/m/n/10.95 ^^@\OML/cmm/m/it/10.95 ^^N[]\OT1/mathkerncmss/m/sl/10.95 v[
+] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 ^^N[]\OT1/mathkerncmss/m/sl/10.95
+ v[] \OT1/cmss/m/n/10.95 + \OML/cmm/m/it/10.95 ^^N[]\OT1/mathkerncmss/m/sl/10.9
+5 v[] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 ^^N[]\OT1/mathkerncmss/m/sl/1
+0.95 v[] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 ^^N[]\OT1/mathkerncmss/m/s
+l/10.95 v[] \OT1/cmss/m/n/10.95 + \OML/cmm/m/it/10.95 ^^N[]\OT1/mathkerncmss/m/
+sl/10.95 v[] \OT1/cmss/m/n/10.95 + \OML/cmm/m/it/10.95 ^^N[]\OT1/mathkerncmss/m
+/sl/10.95 v[] \OT1/cmss/m/n/10.95 + \OML/cmm/m/it/10.95 ^^N[]\OT1/mathkerncmss/
+m/sl/10.95 v[] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 ^^N[]\OT1/mathkerncm
+ss/m/sl/10.95 v[]
+ []
+
+) [95
+
+]
+\tf@nav=\write10
+\openout10 = `secondquant.nav'.
+
+\tf@toc=\write11
+\openout11 = `secondquant.toc'.
+
+\tf@snm=\write12
+\openout12 = `secondquant.snm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2398.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2398.
+ (./secondquant.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2398.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2398.
+
+Package rerunfilecheck Info: File `secondquant.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2398.
+ ) 
+Here is how much of TeX's memory you used:
+ 22762 strings out of 493488
+ 445332 string characters out of 3141326
+ 589015 words of memory out of 3000000
+ 25058 multiletter control sequences out of 15000+200000
+ 37572 words of font info for 100 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 52i,17n,69p,575b,608s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/
+local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfit0900.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/local/texliv
+e/2012/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/local/texlive/
+2012/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2012
+/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2012/t
+exmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2012/tex
+mf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2012/texmf
+-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2012/texmf-d
+ist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on secondquant.pdf (95 pages, 451243 bytes).
+PDF statistics:
+ 673 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+
