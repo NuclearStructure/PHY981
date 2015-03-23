@@ -1,56 +1,16 @@
-\frametitle{Electron gas and HF solution}
+\frametitle{Screened interactions and periodic boundary conditions}
 
 \begin{block}{}
-Let us now calculate the following part of the Hamiltonian
-\[ \hat H_b = \frac{e^2}{2} \iint \frac{n({\bf r}) n({\bf r}')e^{-\mu|{\bf r} - {\bf r}'|}}{|{\bf r} - {\bf r}'|} d{\bf r} d{\bf r}' ,
-\]
-where $n({\bf r}) = N_e/\Omega$, the density of the positive background charge. We define ${\bf r}_{12} = {\bf r} - {\bf r}'$, resulting in $d{\bf r}_{12} = d{\bf r}$, and allowing us to rewrite the integral as
+As soon as you have the Hartree-Fock program functioning, you can start looking at a modified Coulomb interaction with a screening term, a so-called Yukawa-type interaction, that is
 \[
-\hat H_b = \frac{e^2 N_e^2}{2\Omega^2} \iint \frac{e^{-\mu |{\bf r}_{12}|}}{|{\bf r}_{12}|} d{\bf r}_{12} d{\bf r}' = \frac{e^2 N_e^2}{2\Omega} \int \frac{e^{-\mu |{\bf r}_{12}|}}{|{\bf r}_{12}|} d{\bf r}_{12} .
+V(r) \approx \frac{\exp{-(\mu r)}}{\mu r},
 \]
-Here we have used that $\int \! {\bf r} = \Omega$. We change to spherical coordinates and the lack of angle
-dependencies yields a factor $4\pi$, resulting in
-\[
-\hat H_b = \frac{4\pi e^2 N_e^2}{2\Omega} \int_0^\infty re^{-\mu r} \, \mathrm{d} r .
-\]
+where $\mu$ plays the role of an effective range parameter with dimension inverse length.
+\begin{itemize}
+\item Play around with different  values of $\mu$ and check the stability of the Hartree-Fock results as function of the number of single-particle basis states.
 
+\item Study thereafter the stability of the solutions (pick some selected values of $\mu$ and study the Hartree-Fock results with standard periodic boundary conditions and so-called \href{{https://journals.aps.org/prc/abstract/10.1103/PhysRevC.89.014319}}{twisted boundary conditions}.
+\end{itemize}
 
-Solving by partial integration
-\[ \int_0^\infty re^{-\mu r} \, \mathrm{d} r = \left[ -\frac{r}{\mu} e^{-\mu r} \right]_0^\infty + \frac{1}{\mu} \int_0^\infty e^{-\mu r} \, \mathrm{d} r
-= \frac{1}{\mu} \left[ - \frac{1}{\mu} e^{-\mu r} \right]_0^\infty = \frac{1}{\mu^2},
-\]
-gives
-\[
-\hat{H}_b = \frac{e^2}{2} \frac{N_e^2}{\Omega} \frac{4\pi}{\mu^2} .
-\]
-The next term is
-\[
-\hat H_{el-b} = -e^2 \sum_{i = 1}^N \int \frac{n({\bf r}) e^{-\mu |{\bf r} - {\bf x}_i|}}{|{\bf r} - {\bf x}_i|} {\bf r} .
-\]
-Inserting  $n({\bf r})$ and changing variables in the same way as in the previous integral ${\bf y} = {\bf r} - {\bf x}_i$, we get $\mathrm{d}^3 {\bf y} = \mathrm{d}^3 {\bf r}$. This gives
-\[
-\hat H_{el-b} = -\frac{e^2 N_e}{\Omega} \sum_{i = 1^N} \int \frac{e^{-\mu |{\bf y}|}}{|{\bf y}|} \, \mathrm{d}^3 {\bf y}
-=  -\frac{4\pi e^2 N_e}{\Omega} \sum_{i = 1}^N \int_0^\infty y e^{-\mu y} \mathrm{d} y.
-\]
-We have already seen this  type of integral. The answer is
-\[
-\hat H_{el-b} = -\frac{4\pi e^2 N_e}{\Omega} \sum_{i = 1}^N \frac{1}{\mu^2},
-\]
-which gives
-\[
-\hat H_{el-b} = -e^2 \frac{N_e^2}{\Omega} \frac{4\pi}{\mu^2} .
-\]
-
-Finally, we need to evaluate $\hat H_{el}$. This term reads
-\[
-\hat H_{el} = \sum_{i=1}^{N_e} \frac{\hat{\vec p}_i^2}{2m_e} + \frac{e^2}{2} \sum_{i \neq j} \frac{e^{-\mu |{\bf r}_i - {\bf r}_j|}}{{\bf r}_i - {\bf r}_j} .
-\]
-The last term represents the repulsion between two electrons. It is a central symmetric interaction
-and is translationally invariant. The potential is given by the expression
-\[
-v(|{\bf r}|) = e^2 \frac{e^{\mu|{\bf r}|}}{|{\bf r}|},
-\]
-which we derived in connection with the Hartree-Fock derivation.
-
-
+\noindent
 \end{block}

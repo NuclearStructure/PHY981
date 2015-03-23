@@ -1302,6 +1302,63 @@ and
 !eblock
 
 
+!split
+===== Exercises: Derivation of Hartree-Fock equations  =====
+!bblock  Exercise 1
+Consider a Slater determinant built up of single-particle orbitals $\psi_{\lambda}$, 
+with $\lambda = 1,2,\dots,N$.
+
+The unitary transformation
+!bt
+\[
+\psi_a  = \sum_{\lambda} C_{a\lambda}\phi_{\lambda},
+\]
+!et
+brings us into the new basis.  
+The new basis has quantum numbers $a=1,2,\dots,N$.
+Show that the new basis is orthonormal.
+Show that the new Slater determinant constructed from the new single-particle wave functions can be
+written as the determinant based on the previous basis and the determinant of the matrix $C$.
+Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
+(Hint, $C$ is a unitary matrix). 
+
+!eblock
+
+!split
+===== Exercises: Derivation of Hartree-Fock equations  =====
+!bblock  Exercise 2 
+Consider the  Slater  determinant
+!bt
+\[
+\Phi_{0}=\frac{1}{\sqrt{n!}}\sum_{p}(-)^{p}P
+\prod_{i=1}^{n}\psi_{\alpha_{i}}(x_{i}).
+\]
+!et
+A small variation in this function is given by
+!bt
+\[
+\delta\Phi_{0}=\frac{1}{\sqrt{n!}}\sum_{p}(-)^{p}P
+\psi_{\alpha_{1}}(x_{1})\psi_{\alpha_{2}}(x_{2})\dots
+\psi_{\alpha_{i-1}}(x_{i-1})(\delta\psi_{\alpha_{i}}(x_{i}))
+\psi_{\alpha_{i+1}}(x_{i+1})\dots\psi_{\alpha_{n}}(x_{n}).
+\]
+!et
+Show that
+!bt
+\[
+\langle \delta\Phi_{0}|\sum_{i=1}^{n}\left\{t(x_{i})+u(x_{i})
+\right\}+\frac{1}{2}
+\sum_{i\neq j=1}^{n}v(x_{i},x_{j})|\Phi_{0}\rangle=\sum_{i=1}^{n}\langle \delta\psi_{\alpha_{i}}|\hat{t}+\hat{u}
+|\phi_{\alpha_{i}}\rangle
++\sum_{i\neq j=1}^{n}\left\{\langle\delta\psi_{\alpha_{i}}
+\psi_{\alpha_{j}}|\hat{v}|\psi_{\alpha_{i}}\psi_{\alpha_{j}}\rangle-
+\langle\delta\psi_{\alpha_{i}}\psi_{\alpha_{j}}|\hat{v}
+|\psi_{\alpha_{j}}\psi_{\alpha_{i}}\rangle\right\}
+\]
+!et
+!eblock
+
+
 
 
 

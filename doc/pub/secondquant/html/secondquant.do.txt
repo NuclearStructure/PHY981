@@ -9,6 +9,7 @@ DATE: Spring 2015
 !bblock Second quantization
 * Second quantization and operators, two-body operator with examples 
 * Wick's theorem (missing in html and ipython notebook but in pdf files)
+* Thouless' theorem and analysis of the Hartree-Fock equations using second quantization
 * Examples on how to use bit representations for Slater determinants
 !eblock
 
@@ -2003,7 +2004,7 @@ which results in $|0001000000000000\rangle$. Counting the number of $1-$bits giv
 
 !split
 ===== Exercises =====
-!bblock  Exercise 5
+!bblock  Exercise 1
 This exercise serves to convince you about the relation between
 two different single-particle bases, where one could be our new Hartree-Fock basis and the other a harmonic oscillator basis.
 
@@ -2034,7 +2035,7 @@ $\langle\Phi_{0}|\Phi_{0}\rangle$.
 
 !split
 ===== Exercises =====
-!bblock  Exercise 6
+!bblock  Exercise 2
 Calculate the matrix elements
 !bt
 \[
@@ -2084,7 +2085,7 @@ Compare these results with those from exercise 3c).
 
 !split
 ===== Exercises =====
-!bblock Exercise 7
+!bblock Exercise 3
 Show that the onebody part of the Hamiltonian
 !bt
 \[	     
@@ -2104,7 +2105,7 @@ vacuum has been used?
 
 !split
 ===== Exercises =====
-!bblock Exercise 8
+!bblock Exercise 4
 Show that the twobody part of the Hamiltonian
 !bt
 \[
@@ -2135,7 +2136,7 @@ and specify the contributions to the twobody, onebody and the scalar part.
 
 !split
 ===== Exercises =====
-!bblock  Exercise 9
+!bblock  Exercise 5
 
 The aim of this exercise is to set up specific matrix elements that will turn useful when we start our discussions of the nuclear shell model. In particular you will notice, depending on the character of the operator, that many matrix elements will actually be zero.
 
@@ -2226,8 +2227,9 @@ where the Slater determinant to the right of the operator differs by more than t
 
 !eblock
 
-
-!bblock  Exercise 10
+!split
+===== Exercises =====
+!bblock  Exercise 6
 
 Write a program which sets up all possible Slater determinants given $N=4$ eletrons which can occupy
 the atomic single-particle states defined by the $1s$, $2s2p$ and $3s3p3d$ shells. How many single-particle
@@ -2349,7 +2351,7 @@ s = phi.create(200)
 
 !split
 ===== Exercises: Using sympy to compute matrix elements  =====
-!bblock  Exercise 11
+!bblock  Exercise 7
 Compute the matrix element
 !bt
 \[
@@ -2521,7 +2523,7 @@ again as expected, with the reference energy to be subtracted.
 !split
 ===== Exercises: Using sympy to compute matrix elements  =====
 !bblock 
-We can now go back to exercise 11 and define the Hamiltonian and the second-quantized representation of a  three-body Slater determinant. 
+We can now go back to exercise 7 and define the Hamiltonian and the second-quantized representation of a  three-body Slater determinant. 
 !bc  pycod
 from sympy import symbols, latex, WildFunction, collect, Rational, simplify
 from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
@@ -2548,6 +2550,71 @@ resulting in nine terms (as expected),
 !eblock
 
 
+
+!split
+===== Exercises: Derivation of Hartree-Fock equations  =====
+!bblock  Exercise 8
+What is the diagrammatic representation of the HF equation?
+!bt
+\[
+-\langle\alpha_{k}|u^{HF}|\alpha_{i}\rangle+\sum_{j=1}^{n}
+\left[\langle\alpha_{k}\alpha_{j}|\hat{v}|\alpha_{i}\alpha_{j}\rangle-
+\langle\alpha_{k}\alpha_{j}|v|\alpha_{j}\alpha_{i}\rangle\right]=0
+\]
+!et
+(Represent $(-u^{HF})$ by the symbol $---$X .)
+!eblock
+
+!split
+===== Exercises: Derivation of Hartree-Fock equations  =====
+!bblock  Exercise 9
+Consider the ground state $|\Phi\rangle$ 
+of a bound many-particle system of fermions. Assume that we remove one particle
+from the single-particle state $\lambda$ and that our system ends in a new state
+$|\Phi_{n}\rangle$. 
+Define the energy needed to remove this particle as
+!bt
+\[
+E_{\lambda}=\sum_{n}\vert\langle\Phi_{n}|a_{\lambda}|\Phi\rangle\vert^{2}(E_{0}-E_{n}),
+\]
+!et
+where $E_{0}$ and $E_{n}$  are the ground state energies of the states
+$|\Phi\rangle$  and  $|\Phi_{n}\rangle$, respectively.
+ * Show that
+!bt
+\[
+E_{\lambda}=\langle\Phi|a_{\lambda}^{\dagger}\left[
+a_{\lambda},H \right]|\Phi\rangle,
+\]
+!et
+where $H$ is the Hamiltonian of this system.
+ * If we assume that $\Phi$ is the  Hartree-Fock result, find the 
+relation between $E_{\lambda}$ and the single-particle energy
+$\varepsilon_{\lambda}$
+for states $\lambda \leq F$ and $\lambda >F$, with
+!bt
+\[
+\varepsilon_{\lambda}=\langle\lambda|\hat{t}+\hat{u}|\lambda\rangle,
+\]
+!et
+and
+!bt
+\[
+\langle\lambda|\hat{u}|\lambda\rangle=\sum_{\beta \leq F}
+\langle\lambda\beta|\hat{v}|\lambda\beta\rangle.
+\]
+!et
+We have assumed an antisymmetrized matrix element here.
+Discuss the result.
+
+The Hamiltonian operator is defined as
+!bt
+\[
+H=\sum_{\alpha\beta}\langle\alpha|\hat{t}|\beta\rangle a_{\alpha}^{\dagger}a_{\beta}+
+\frac{1}{2}\sum_{\alpha\beta\gamma\delta}\langle\alpha\beta|\hat{v}|\gamma\delta\rangle a_{\alpha}^{\dagger}a_{\beta}^{\dagger}a_{\delta}a_{\gamma}.
+\]
+!et
+!eblock
 
 
 
