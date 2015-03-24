@@ -155,6 +155,7 @@ MathJax.Hub.Config({
 <ul>
 <p><li> Second quantization and operators, two-body operator with examples</li> 
 <p><li> Wick's theorem (missing in html and ipython notebook but in pdf files)</li>
+<p><li> Thouless' theorem and analysis of the Hartree-Fock equations using second quantization</li>
 <p><li> Examples on how to use bit representations for Slater determinants</li>
 </ul>
 </div>
@@ -3141,7 +3142,7 @@ which results in \( |0001000000000000\rangle \). Counting the number of $1-$bits
 
 <h2 id="___sec82">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Exercise 5.</b>
+<b>Exercise 1.</b>
 <p>
 This exercise serves to convince you about the relation between
 two different single-particle bases, where one could be our new Hartree-Fock basis and the other a harmonic oscillator basis.
@@ -3185,7 +3186,7 @@ use Wick's theorem to compute the normalization integral
 
 <h2 id="___sec83">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Exercise 6.</b>
+<b>Exercise 2.</b>
 <p>
 Calculate the matrix elements
 <p>&nbsp;<br>
@@ -3251,7 +3252,7 @@ Compare these results with those from exercise 3c).
 
 <h2 id="___sec84">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Exercise 7.</b>
+<b>Exercise 3.</b>
 <p>
 Show that the onebody part of the Hamiltonian
 <p>&nbsp;<br>
@@ -3282,7 +3283,7 @@ vacuum has been used?
 
 <h2 id="___sec85">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Exercise 8.</b>
+<b>Exercise 4.</b>
 <p>
 Show that the twobody part of the Hamiltonian
 <p>&nbsp;<br>
@@ -3324,7 +3325,7 @@ and specify the contributions to the twobody, onebody and the scalar part.
 
 <h2 id="___sec86">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Exercise 9.</b>
+<b>Exercise 5.</b>
 <p>
 
 <p>
@@ -3435,8 +3436,15 @@ where the Slater determinant to the right of the operator differs by more than t
 
 
 <p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec87">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Exercise 10.</b>
+<b>Exercise 6.</b>
 <p>
 
 <p>
@@ -3567,9 +3575,9 @@ s = phi.create(<span style="color: #B452CD">200</span>)
 
 <section>
 
-<h2 id="___sec87">Exercises: Using sympy to compute matrix elements  </h2>
+<h2 id="___sec88">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
-<b>Exercise 11.</b>
+<b>Exercise 7.</b>
 <p>
 Compute the matrix element
 <p>&nbsp;<br>
@@ -3593,7 +3601,7 @@ representation.
 
 <section>
 
-<h2 id="___sec88">Exercises: Using sympy to compute matrix elements  </h2>
+<h2 id="___sec89">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -3628,7 +3636,7 @@ the creation and annihilation operators <em>Fd</em> and <em>F</em>, respectively
 
 <section>
 
-<h2 id="___sec89">Exercises: Using sympy to compute matrix elements  </h2>
+<h2 id="___sec90">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -3667,7 +3675,7 @@ $$
 
 <section>
 
-<h2 id="___sec90">Exercises: Using sympy to compute matrix elements  </h2>
+<h2 id="___sec91">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -3712,7 +3720,7 @@ $$
 
 <section>
 
-<h2 id="___sec91">Exercises: Using sympy to compute matrix elements  </h2>
+<h2 id="___sec92">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -3757,7 +3765,7 @@ $$
 
 <section>
 
-<h2 id="___sec92">Exercises: Using sympy to compute matrix elements  </h2>
+<h2 id="___sec93">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -3808,11 +3816,11 @@ again as expected, with the reference energy to be subtracted.
 
 <section>
 
-<h2 id="___sec93">Exercises: Using sympy to compute matrix elements  </h2>
+<h2 id="___sec94">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-We can now go back to exercise 11 and define the Hamiltonian and the second-quantized representation of a  three-body Slater determinant. 
+We can now go back to exercise 7 and define the Hamiltonian and the second-quantized representation of a  three-body Slater determinant. 
 <p>
 
 <!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
@@ -3841,6 +3849,105 @@ $$
 
 
 
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec95">Exercises: Derivation of Hartree-Fock equations  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 8.</b>
+<p>
+What is the diagrammatic representation of the HF equation?
+<p>&nbsp;<br>
+$$
+-\langle\alpha_{k}|u^{HF}|\alpha_{i}\rangle+\sum_{j=1}^{n}
+\left[\langle\alpha_{k}\alpha_{j}|\hat{v}|\alpha_{i}\alpha_{j}\rangle-
+\langle\alpha_{k}\alpha_{j}|v|\alpha_{j}\alpha_{i}\rangle\right]=0
+$$
+<p>&nbsp;<br>
+
+(Represent \( (-u^{HF}) \) by the symbol $---$X .)
+</div>
+
+
+<p>
+
+</section>
+
+
+<section>
+
+<h2 id="___sec96">Exercises: Derivation of Hartree-Fock equations  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Exercise 9.</b>
+<p>
+Consider the ground state \( |\Phi\rangle \) 
+of a bound many-particle system of fermions. Assume that we remove one particle
+from the single-particle state \( \lambda \) and that our system ends in a new state
+\( |\Phi_{n}\rangle \). 
+Define the energy needed to remove this particle as
+<p>&nbsp;<br>
+$$
+E_{\lambda}=\sum_{n}\vert\langle\Phi_{n}|a_{\lambda}|\Phi\rangle\vert^{2}(E_{0}-E_{n}),
+$$
+<p>&nbsp;<br>
+
+where \( E_{0} \) and \( E_{n} \)  are the ground state energies of the states
+\( |\Phi\rangle \)  and  \( |\Phi_{n}\rangle \), respectively.
+
+<ul>
+ <p><li> Show that</li>
+</ul>
+<p>
+
+<p>&nbsp;<br>
+$$
+E_{\lambda}=\langle\Phi|a_{\lambda}^{\dagger}\left[
+a_{\lambda},H \right]|\Phi\rangle,
+$$
+<p>&nbsp;<br>
+
+where \( H \) is the Hamiltonian of this system.
+
+<ul>
+ <p><li> If we assume that \( \Phi \) is the  Hartree-Fock result, find the</li> 
+</ul>
+<p>
+
+relation between \( E_{\lambda} \) and the single-particle energy
+\( \varepsilon_{\lambda} \)
+for states \( \lambda \leq F \) and \( \lambda >F \), with
+<p>&nbsp;<br>
+$$
+\varepsilon_{\lambda}=\langle\lambda|\hat{t}+\hat{u}|\lambda\rangle,
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+\langle\lambda|\hat{u}|\lambda\rangle=\sum_{\beta \leq F}
+\langle\lambda\beta|\hat{v}|\lambda\beta\rangle.
+$$
+<p>&nbsp;<br>
+
+We have assumed an antisymmetrized matrix element here.
+Discuss the result.
+
+<p>
+The Hamiltonian operator is defined as
+<p>&nbsp;<br>
+$$
+H=\sum_{\alpha\beta}\langle\alpha|\hat{t}|\beta\rangle a_{\alpha}^{\dagger}a_{\beta}+
+\frac{1}{2}\sum_{\alpha\beta\gamma\delta}\langle\alpha\beta|\hat{v}|\gamma\delta\rangle a_{\alpha}^{\dagger}a_{\beta}^{\dagger}a_{\delta}a_{\gamma}.
+$$
+<p>&nbsp;<br>
 </div>
 
 

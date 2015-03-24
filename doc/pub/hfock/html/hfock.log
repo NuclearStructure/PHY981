@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  17 MAR 2015 14:41
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  23 MAR 2015 19:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1238,12 +1238,33 @@ t/10 kj\OMS/lmsy/m/n/10 i[]\OML/lmm/m/it/10 ;
  []
 
 [19] [20]
+Overfull \hbox (32.4297pt too wide) detected at line 1475
+\OML/lmm/m/it/10 ^^N\OT1/lmr/m/n/10 ^^H[] = [] [](\OMS/lmsy/m/n/10 ^^@\OT1/lmr/
+m/n/10 )[]\OML/lmm/m/it/10 P []\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]\OT1/lmr/m/
+n/10 )\OML/lmm/m/it/10  []\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]\OT1/lmr/m/n/10 
+) [] \OML/lmm/m/it/10  []\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]\OT1/lmr/m/n/10 )
+(\OML/lmm/m/it/10 ^^N []\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]\OT1/lmr/m/n/10 ))
+\OML/lmm/m/it/10  []\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]\OT1/lmr/m/n/10 ) [] \
+OML/lmm/m/it/10  []\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]\OT1/lmr/m/n/10 )\OML/l
+mm/m/it/10 :
+ []
+
+
+Overfull \hbox (178.70746pt too wide) detected at line 1486
+\OMS/lmsy/m/n/10 h\OML/lmm/m/it/10 ^^N\OT1/lmr/m/n/10 ^^H[]\OMS/lmsy/m/n/10 j [
+] [] \OT1/lmr/m/n/10 + [] [] \OML/lmm/m/it/10 v\OT1/lmr/m/n/10 (\OML/lmm/m/it/1
+0 x[]; x[]\OT1/lmr/m/n/10 )\OMS/lmsy/m/n/10 j\OT1/lmr/m/n/10 ^^H[]\OMS/lmsy/m/n
+/10 i \OT1/lmr/m/n/10 = []\OMS/lmsy/m/n/10 h\OML/lmm/m/it/10 ^^N []\OMS/lmsy/m/
+n/10 j[] \OT1/lmr/m/n/10 + []\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 ^^^[]\OMS/lmsy/
+m/n/10 i \OT1/lmr/m/n/10 + [] []
+ []
+
 No file hfock.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1446.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1502.
 [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1446.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1502.
  (./hfock.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1446.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1502.
 
 
  *File List*
@@ -1383,7 +1404,7 @@ epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
   omslmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1446.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1502.
 
 Package rerunfilecheck Info: File `hfock.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1393,20 +1414,20 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1446.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1502.
  ) 
 Here is how much of TeX's memory you used:
- 22005 strings out of 493488
- 392163 string characters out of 3141326
+ 22009 strings out of 493488
+ 392211 string characters out of 3141326
  503479 words of memory out of 3000000
  24601 multiletter control sequences out of 15000+200000
  55216 words of font info for 105 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  68i,17n,65p,920b,351s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-12/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2012/texmf-dist/
-fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2012/texmf-dist/fonts/enc/
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
+12/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2012/texmf-d
+ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2012/texmf-dist/fonts/enc/
 dvips/lm/lm-mathex.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/l
 m/lmbx10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmbx12.p
 fb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/lo
@@ -1418,11 +1439,12 @@ blic/lm/lmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmr
 5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/
 local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texl
 ive/2012/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2012/t
-exmf-dist/fonts/type1/public/lm/lmsy7.pfb>
-Output written on hfock.pdf (21 pages, 270117 bytes).
+exmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2012/texmf-dist/f
+onts/type1/public/lm/lmsy7.pfb>
+Output written on hfock.pdf (21 pages, 277713 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 159 named destinations out of 1000 (max. 500000)
+ 342 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
+ 163 named destinations out of 1000 (max. 500000)
  14349 words of extra memory for PDF output out of 14400 (max. 10000000)
 

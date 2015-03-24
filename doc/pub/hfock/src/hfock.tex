@@ -2,6 +2,7 @@
 %% Automatically generated file from DocOnce source
 %% (https://github.com/hplgit/doconce/)
 %%
+%%
 
 
 %-------------------- begin preamble ----------------------
@@ -17,17 +18,18 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
 \usepackage[table]{xcolor}
 \usepackage{bm,microtype}
 
-\usepackage{fancyvrb} % packages needed for verbatim environments
-
 \usepackage[T1]{fontenc}
 %\usepackage[latin1]{inputenc}
-\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
 
 \usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
 
 % Hyperlinks in PDF:
 \definecolor{linkcolor}{rgb}{0,0,0.4}
-\usepackage[%
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
     colorlinks=true,
     linkcolor=linkcolor,
     urlcolor=linkcolor,
@@ -37,7 +39,7 @@ final,                   % or draft (marks overfull hboxes, figures with paths)
     pdfmenubar=true,
     pdftoolbar=true,
     bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
-            ]{hyperref}
+    }
 %\hyperbaseurl{}   % hyperlinks are relative to this root
 
 \setcounter{tocdepth}{2}  % number chapter, section, subsection
@@ -1425,6 +1427,62 @@ we can define the neutron and proton energy gaps for ${}^{16}\mbox{O}$ as
 and 
 \[
 \Delta S_{\pi}=\epsilon_{0d^{\pi}_{5/2}}^{\mathrm{HF}}-\epsilon_{0p^{\pi}_{1/2}}^{\mathrm{HF}}. 
+\]
+% --- end paragraph admon ---
+
+
+
+
+% !split
+\subsection*{Exercises: Derivation of Hartree-Fock equations}
+
+% --- begin paragraph admon ---
+\paragraph{Exercise 1.}
+Consider a Slater determinant built up of single-particle orbitals $\psi_{\lambda}$, 
+with $\lambda = 1,2,\dots,N$.
+
+The unitary transformation
+\[
+\psi_a  = \sum_{\lambda} C_{a\lambda}\phi_{\lambda},
+\]
+brings us into the new basis.  
+The new basis has quantum numbers $a=1,2,\dots,N$.
+Show that the new basis is orthonormal.
+Show that the new Slater determinant constructed from the new single-particle wave functions can be
+written as the determinant based on the previous basis and the determinant of the matrix $C$.
+Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
+(Hint, $C$ is a unitary matrix).
+% --- end paragraph admon ---
+
+
+
+% !split
+\subsection*{Exercises: Derivation of Hartree-Fock equations}
+
+% --- begin paragraph admon ---
+\paragraph{Exercise 2.}
+Consider the  Slater  determinant
+\[
+\Phi_{0}=\frac{1}{\sqrt{n!}}\sum_{p}(-)^{p}P
+\prod_{i=1}^{n}\psi_{\alpha_{i}}(x_{i}).
+\]
+A small variation in this function is given by
+\[
+\delta\Phi_{0}=\frac{1}{\sqrt{n!}}\sum_{p}(-)^{p}P
+\psi_{\alpha_{1}}(x_{1})\psi_{\alpha_{2}}(x_{2})\dots
+\psi_{\alpha_{i-1}}(x_{i-1})(\delta\psi_{\alpha_{i}}(x_{i}))
+\psi_{\alpha_{i+1}}(x_{i+1})\dots\psi_{\alpha_{n}}(x_{n}).
+\]
+Show that
+\[
+\langle \delta\Phi_{0}|\sum_{i=1}^{n}\left\{t(x_{i})+u(x_{i})
+\right\}+\frac{1}{2}
+\sum_{i\neq j=1}^{n}v(x_{i},x_{j})|\Phi_{0}\rangle=\sum_{i=1}^{n}\langle \delta\psi_{\alpha_{i}}|\hat{t}+\hat{u}
+|\phi_{\alpha_{i}}\rangle
++\sum_{i\neq j=1}^{n}\left\{\langle\delta\psi_{\alpha_{i}}
+\psi_{\alpha_{j}}|\hat{v}|\psi_{\alpha_{i}}\psi_{\alpha_{j}}\rangle-
+\langle\delta\psi_{\alpha_{i}}\psi_{\alpha_{j}}|\hat{v}
+|\psi_{\alpha_{j}}\psi_{\alpha_{i}}\rangle\right\}
 \]
 % --- end paragraph admon ---
 
