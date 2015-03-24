@@ -1,0 +1,16 @@
+\frametitle{Screened interactions and periodic boundary conditions}
+
+\begin{block}{}
+As soon as you have the Hartree-Fock program functioning, you can start looking at a modified Coulomb interaction with a screening term, a so-called Yukawa-type interaction, that is
+\[
+V(r) \approx \frac{\exp{-(\mu r)}}{\mu r},
+\]
+where $\mu$ plays the role of an effective range parameter with dimension inverse length.
+\begin{itemize}
+\item Play around with different  values of $\mu$ and check the stability of the Hartree-Fock results as function of the number of single-particle basis states.
+
+\item Study thereafter the stability of the solutions (pick some selected values of $\mu$ and study the Hartree-Fock results with standard periodic boundary conditions and so-called \href{{https://journals.aps.org/prc/abstract/10.1103/PhysRevC.89.014319}}{twisted boundary conditions}.
+\end{itemize}
+
+\noindent
+\end{block}

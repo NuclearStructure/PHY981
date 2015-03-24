@@ -1,0 +1,303 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Infinite matter">
+
+<title>Infinite matter</title>
+
+
+<style type="text/css">
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
+}
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [(' Studies of infinite matter ', 2, None, '___sec0'),
+              (' The infinite electron gas ', 2, None, '___sec1'),
+              (' The electron gas ', 2, None, '___sec2'),
+              (' The electron gas ', 2, None, '___sec3'),
+              (' The electron gas ', 2, None, '___sec4'),
+              (' The infinite electron gas as a homogenous system ',
+               2,
+               None,
+               '___sec5'),
+              (' Periodic boundary conditions ', 2, None, '___sec6'),
+              (' Defining the Hamiltonian operator ', 2, None, '___sec7'),
+              (' Single-particle Hartree-Fock energy ', 2, None, '___sec8'),
+              (' Single-particle Hartree-Fock energy in a more compact form ',
+               2,
+               None,
+               '___sec9'),
+              (' Total Hartree-Fock energy ', 2, None, '___sec10'),
+              (' Exercises: Hartree-Fock single-particle solution for the electron gas  ',
+               2,
+               None,
+               '___sec11'),
+              (' Exercises: Hartree-Fock single-particle solution for the electron gas  ',
+               2,
+               None,
+               '___sec12'),
+              (' Exercises: Hartree-Fock single-particle solution for the electron gas  ',
+               2,
+               None,
+               '___sec13'),
+              (' Exercises: Hartree-Fock single-particle solution for the electron gas  ',
+               2,
+               None,
+               '___sec14'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec15'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec16'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec17'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec18'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec19'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec20'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec21'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec22'),
+              (' Hartree-Fock band gap for  the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec23'),
+              (' Plot of the Hartree-Fock single-particle energy for the three-dimensional electron gas  ',
+               2,
+               None,
+               '___sec24'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec25'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec26'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec27'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec28'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec29'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec30'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec31'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec32'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec33'),
+              (' Electron gas and HF solution ', 2, None, '___sec34'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec35'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec36'),
+              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+               2,
+               None,
+               '___sec37'),
+              (' Preparing the ground for numerical calculations; kinetic energy and Ewald term ',
+               2,
+               None,
+               '___sec38'),
+              (' Computing numerically properties of the electron gas ',
+               2,
+               None,
+               '___sec39'),
+              (' Ewald correction term ', 2, None, '___sec40'),
+              (' Interaction in momentum space  ', 2, None, '___sec41'),
+              (' Ewald Effective interaction in two dimensions ',
+               2,
+               None,
+               '___sec42'),
+              (' And in three dimensions ', 2, None, '___sec43'),
+              (' Antisymmetrized matrix elements in three dimensions ',
+               2,
+               None,
+               '___sec44'),
+              (' Antisymmetrized matrix elements in two dimensions ',
+               2,
+               None,
+               '___sec45'),
+              (' Fock operator ', 2, None, '___sec46'),
+              (' Periodic boundary conditions and single-particle states ',
+               2,
+               None,
+               '___sec47'),
+              (' Single-particle states in two and three dimensions ',
+               2,
+               None,
+               '___sec48'),
+              (' Setting up single-particle states ', 2, None, '___sec49'),
+              (' Magic number for the two-dimensional electron gas ',
+               2,
+               None,
+               '___sec50'),
+              (' Hartree-Fock benchmarks in two and three dimensions ',
+               2,
+               None,
+               '___sec51'),
+              (' Hartree-Fock energies ', 2, None, '___sec52'),
+              (' Simplifications to many-body theories ',
+               2,
+               None,
+               '___sec53'),
+              (' Specific tasks ', 2, None, '___sec54'),
+              (' Screened interactions and periodic boundary conditions ',
+               2,
+               None,
+               '___sec55')]}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "none"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<a name="part0000"></a>
+<p>
+
+</p>
+
+<p>
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Slides for PHY981 -->
+
+
+<center><h1>Infinite matter</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway -->
+
+<center>
+<b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
+</center>
+
+
+<p>
+<!-- institution(s) -->
+<p>
+<center><h4>Spring 2015</h4></center> <!-- date -->
+<p>
+<p>
+<!-- begin bottom navigation -->
+<table style="width: 100%"><tr><td>
+</td><td>
+<div style="text-align: right;"><a href="._inf-plain001.html"><img src="http://hplgit.github.io/doconce/bundled/html_images/next1.png" border=0 alt="Next &raquo;"></a></div>
+</td></tr></table>
+<!-- end bottom navigation -->
+</p>
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+
