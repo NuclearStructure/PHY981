@@ -11,6 +11,8 @@ DATE: Spring 2015
 * Wick's theorem (missing in html and ipython notebook but in pdf files)
 * Thouless' theorem and analysis of the Hartree-Fock equations using second quantization
 * Examples on how to use bit representations for Slater determinants
+* TO DO: add material about Wick's theorem and diagrammatic representation
+* TO DO: Link determinantal analysis with Thouless' theorem
 !eblock
 
 
@@ -229,12 +231,12 @@ $a_\beta$.
 The action of the anti-commutator 
 $\{a_\alpha^{\dagger}$,$a_\alpha\}$ on a given $n$-particle state is
 !bt
-\begin{eqnarray}
-	a_\alpha^{\dagger} a_\alpha \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &=& 0 \nonumber \\
-	a_\alpha a_\alpha^{\dagger} \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &=&
+\begin{align}
+	a_\alpha^{\dagger} a_\alpha \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &= 0 \nonumber \\
+	a_\alpha a_\alpha^{\dagger} \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &=
 	a_\alpha \underbrace{|\alpha \alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} = 
 	\underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} label{eq:2-16a}
-\end{eqnarray}
+\end{align}
 !et
 if the single-particle state $\alpha$ is not contained in the state.
 !eblock
@@ -246,13 +248,13 @@ if the single-particle state $\alpha$ is not contained in the state.
  If it is present
 we arrive at
 !bt
-\begin{eqnarray}
-	a_\alpha^{\dagger} a_\alpha |\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &=&
+\begin{align}
+	a_\alpha^{\dagger} a_\alpha |\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &=
 	a_\alpha^{\dagger} a_\alpha (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle \nonumber \\
-	= (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle &=& 
+	= (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle &=
 	|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle \nonumber \\
-	a_\alpha a_\alpha^{\dagger}|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &=& 0 label{eq:2-16b}
-\end{eqnarray}
+	a_\alpha a_\alpha^{\dagger}|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &= 0 label{eq:2-16b}
+\end{align}
 !et
 From Eqs.~(ref{eq:2-16a}) and  (ref{eq:2-16b}) we arrive at 
 !bt
@@ -1315,12 +1317,11 @@ We can also define a three-body operator
 !et
 with the antisymmetrized matrix element
 !bt
-\[
+\begin{align}
             \langle pqr|\hat{v}_3|stu\rangle_{AS} = \langle pqr|\hat{v}_3|stu\rangle + \langle pqr|\hat{v}_3|tus\rangle + \langle pqr|\hat{v}_3|ust\rangle- \langle pqr|\hat{v}_3|sut\rangle - \langle pqr|\hat{v}_3|tsu\rangle - \langle pqr|\hat{v}_3|uts\rangle.
-\]
+\end{align}
 !et
 !eblock
-
 
 !split
 ===== Hartree-Fock in second quantization and stability of HF solution =====
@@ -1350,7 +1351,8 @@ a_{\alpha_{i}}^{\dagger}|0\rangle$, can be written as
 ===== Hartree-Fock in second quantization and Thouless' theorem =====
 !bblock
 
-Let us give a simple proof of Thouless' theorem. The theorem states that we can make a linear combination av particle-hole excitations  with respect to a given reference state $| c\rangle$. With this linear combination, we can make a new Slater determinant $| c'\rangle $ which is not orthogonal to $| c\rangle , that is
+Let us give a simple proof of Thouless' theorem. The theorem states that we can make a linear combination av particle-hole excitations  with respect to a given reference state $\vert c\rangle$. With this linear combination, we can make a new Slater determinant $\vert c'\rangle $ which is not orthogonal to 
+$\vert c\rangle$, that is
 !bt
 \[
 \langle c|c'\rangle \ne 0.
@@ -1364,6 +1366,9 @@ To show this we need some intermediate steps. The exponential product of two ope
 !et 
 
 !eblock
+
+
+
 !split
 ===== Thouless' theorem =====
 !bblock
@@ -1421,9 +1426,10 @@ which we can rewrite as
 !et
 The last equation can be written as
 !bt
-\[
-|c'\rangle=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle=\left(1+\sum_{a>F}C_{ai_1}a_{a}^{\dagger}a_{i_1}\right)a^{\dagger}_{i_1}\left(1+\sum_{a>F}C_{ai_2}a_{a}^{\dagger}a_{i_2}\right)a^{\dagger}_{i_2} \dots |0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle.
-\]
+\begin{align}
+|c'\rangle&=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle=\left(1+\sum_{a>F}C_{ai_1}a_{a}^{\dagger}a_{i_1}\right)a^{\dagger}_{i_1} \\
+& \times\left(1+\sum_{a>F}C_{ai_2}a_{a}^{\dagger}a_{i_2}\right)a^{\dagger}_{i_2} \dots |0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle.
+\end{align}
 !et
 !eblock
 
@@ -1530,6 +1536,7 @@ b_k^{\dagger}=a_{k}^{\dagger}+\sum_{p=i_{n+1}}^{\infty}c_{kp}a_{p}^{\dagger}.
 !et
 !eblock
 
+
 !split
 ===== Thouless' theorem   =====
 !bblock
@@ -1565,6 +1572,8 @@ With this as a background, we are now ready to study the stability of the Hartre
 
 !eblock
 
+
+
 !split
 ===== Hartree-Fock in second quantization and stability of HF solution =====
 !bblock
@@ -1583,10 +1592,11 @@ with
 !et
 Using Thouless' theorem we can write out ${|c'\rangle}$ as
 !bt
-\[
- {|c'\rangle}=\exp\left\{\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle =\left\{1+\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}
+\begin{align}
+ {|c'\rangle}&=\exp\left\{\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle\\ 
+&=\left\{1+\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}
 a_{i}+\frac{1}{2!}\sum_{ab > F}\sum_{ij \le F}\delta C_{ai}\delta C_{bj}a_{a}^{\dagger}a_{i}a_{b}^{\dagger}a_{j}+\dots\right\}
-\]
+\end{align}
 !et
 where the amplitudes $\delta C$ are small.
 
@@ -1627,12 +1637,13 @@ The expectation value for the energy is now given by (using the Hartree-Fock con
 !bblock
 We have already calculated the second term on the right-hand side of the previous equation
 !bt
-\[
-\langle c | \left(\{a^\dagger_i a_a\} \hat{H} \{a^\dagger_b a_j\} \right) | c\rangle=\sum_{pq} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle p|\hat{h}_0 |q\rangle 
+\begin{align}
+\langle c | \left(\{a^\dagger_i a_a\} \hat{H} \{a^\dagger_b a_j\} \right) | c\rangle&=\sum_{pq} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle p|\hat{h}_0 |q\rangle 
             \langle c | \left(\{a^{\dagger}_i a_a\}\{a^{\dagger}_pa_q\} 
-             \{a^{\dagger}_b a_j\} \right)| c\rangle +\frac{1}{4} \sum_{pqrs} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle pq| \hat{v}|rs\rangle 
+             \{a^{\dagger}_b a_j\} \right)| c\rangle\\
+& +\frac{1}{4} \sum_{pqrs} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle pq| \hat{v}|rs\rangle 
             \langle c | \left(\{a^\dagger_i a_a\}\{a^{\dagger}_p a^{\dagger}_q a_s  a_r\} \{a^{\dagger}_b a_j\} \right)| c\rangle ,
-\]
+\end{align}
 !et
 resulting in
 !bt
@@ -1698,9 +1709,11 @@ both being anti-symmetrized.
 
 With these definitions we write out the energy as
 !bt
-\[
-\langle c'|H|c'\rangle = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a^{HF}-\varepsilon_i^{HF})+\sum_{ijab}A_{ai,bj}\delta C_{ai}^*\delta C_{bj}+\frac{1}{2} \sum_{ijab} B_{ai,bj}^*\delta C_{ai}\delta C_{bj}+\frac{1}{2} \sum_{ijab} B_{ai,bj}\delta C_{ai}^*\delta C_{bj}^*
-+O(\delta C_{ai}^3),\]
+\begin{align}
+\langle c'|H|c'\rangle& = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a^{HF}-\varepsilon_i^{HF})+\sum_{ijab}A_{ai,bj}\delta C_{ai}^*\delta C_{bj}+\\
+&\frac{1}{2} \sum_{ijab} B_{ai,bj}^*\delta C_{ai}\delta C_{bj}+\frac{1}{2} \sum_{ijab} B_{ai,bj}\delta C_{ai}^*\delta C_{bj}^*
++O(\delta C_{ai}^3),
+\end{align}
 !et
 which can be rewritten as
 !bt

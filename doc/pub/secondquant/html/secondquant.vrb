@@ -1,14 +1,48 @@
-\frametitle{Hartree-Fock in second quantization and Thouless' theorem}
+\frametitle{Exercises: Derivation of Hartree-Fock equations}
 
-\begin{block}{}
-
-Let us give a simple proof of Thouless' theorem. The theorem states that we can make a linear combination av particle-hole excitations  with respect to a given reference state $| c\rangle$. With this linear combination, we can make a new Slater determinant $| c'\rangle $ which is not orthogonal to $| c\rangle , that is
+\begin{block}{Exercise 9 }
+Consider the ground state $|\Phi\rangle$
+of a bound many-particle system of fermions. Assume that we remove one particle
+from the single-particle state $\lambda$ and that our system ends in a new state
+$|\Phi_{n}\rangle$.
+Define the energy needed to remove this particle as
 \[
-\langle c|c'\rangle \ne 0.
+E_{\lambda}=\sum_{n}\vert\langle\Phi_{n}|a_{\lambda}|\Phi\rangle\vert^{2}(E_{0}-E_{n}),
 \]
-To show this we need some intermediate steps. The exponential product of two operators  $\exp{\hat{A}}\times\exp{\hat{B}}$ is equal to $\exp{(\hat{A}+\hat{B})}$ only if the two operators commute, that is
-\[
-[\hat{A},\hat{B}] = 0.
-\]
+where $E_{0}$ and $E_{n}$  are the ground state energies of the states
+$|\Phi\rangle$  and  $|\Phi_{n}\rangle$, respectively.
+\begin{itemize}
+ \item Show that
+\end{itemize}
 
+\noindent
+\[
+E_{\lambda}=\langle\Phi|a_{\lambda}^{\dagger}\left[
+a_{\lambda},H \right]|\Phi\rangle,
+\]
+where $H$ is the Hamiltonian of this system.
+\begin{itemize}
+ \item If we assume that $\Phi$ is the  Hartree-Fock result, find the
+\end{itemize}
+
+\noindent
+relation between $E_{\lambda}$ and the single-particle energy
+$\varepsilon_{\lambda}$
+for states $\lambda \leq F$ and $\lambda >F$, with
+\[
+\varepsilon_{\lambda}=\langle\lambda|\hat{t}+\hat{u}|\lambda\rangle,
+\]
+and
+\[
+\langle\lambda|\hat{u}|\lambda\rangle=\sum_{\beta \leq F}
+\langle\lambda\beta|\hat{v}|\lambda\beta\rangle.
+\]
+We have assumed an antisymmetrized matrix element here.
+Discuss the result.
+
+The Hamiltonian operator is defined as
+\[
+H=\sum_{\alpha\beta}\langle\alpha|\hat{t}|\beta\rangle a_{\alpha}^{\dagger}a_{\beta}+
+\frac{1}{2}\sum_{\alpha\beta\gamma\delta}\langle\alpha\beta|\hat{v}|\gamma\delta\rangle a_{\alpha}^{\dagger}a_{\beta}^{\dagger}a_{\delta}a_{\gamma}.
+\]
 \end{block}
