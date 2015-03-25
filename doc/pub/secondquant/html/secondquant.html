@@ -287,6 +287,8 @@ MathJax.Hub.Config({
 <li> Wick's theorem (missing in html and ipython notebook but in pdf files)</li>
 <li> Thouless' theorem and analysis of the Hartree-Fock equations using second quantization</li>
 <li> Examples on how to use bit representations for Slater determinants</li>
+<li> TO DO: add material about Wick's theorem and diagrammatic representation</li>
+<li> TO DO: Link determinantal analysis with Thouless' theorem</li>
 </ul>
 </div>
 
@@ -566,12 +568,12 @@ The next step is to establish the  commutator algebra of \( a_\alpha^{\dagger} \
 The action of the anti-commutator 
 \( \{a_\alpha^{\dagger} \),$a_\alpha\}$ on a given \( n \)-particle state is
 $$
-\begin{eqnarray}
-	a_\alpha^{\dagger} a_\alpha \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &=& 0 \nonumber \\
-	a_\alpha a_\alpha^{\dagger} \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &=&
+\begin{align}
+	a_\alpha^{\dagger} a_\alpha \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &= 0 \nonumber \\
+	a_\alpha a_\alpha^{\dagger} \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &=
 	a_\alpha \underbrace{|\alpha \alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} = 
 	\underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} \label{eq:2-16a}
-\end{eqnarray}
+\end{align}
 $$
 
 if the single-particle state \( \alpha \) is not contained in the state.
@@ -588,13 +590,13 @@ if the single-particle state \( \alpha \) is not contained in the state.
  If it is present
 we arrive at
 $$
-\begin{eqnarray}
-	a_\alpha^{\dagger} a_\alpha |\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &=&
+\begin{align}
+	a_\alpha^{\dagger} a_\alpha |\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &=
 	a_\alpha^{\dagger} a_\alpha (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle \nonumber \\
-	= (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle &=& 
+	= (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle &=
 	|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle \nonumber \\
-	a_\alpha a_\alpha^{\dagger}|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &=& 0 \label{eq:2-16b}
-\end{eqnarray}
+	a_\alpha a_\alpha^{\dagger}|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &= 0 \label{eq:2-16b}
+\end{align}
 $$
 
 From Eqs.&nbsp;\eqref{eq:2-16a} and  \eqref{eq:2-16b} we arrive at 
@@ -1835,7 +1837,9 @@ $$
 
 with the antisymmetrized matrix element
 $$
+\begin{align}
             \langle pqr|\hat{v}_3|stu\rangle_{AS} = \langle pqr|\hat{v}_3|stu\rangle + \langle pqr|\hat{v}_3|tus\rangle + \langle pqr|\hat{v}_3|ust\rangle- \langle pqr|\hat{v}_3|sut\rangle - \langle pqr|\hat{v}_3|tsu\rangle - \langle pqr|\hat{v}_3|uts\rangle.
+\end{align}
 $$
 </div>
 
@@ -1876,7 +1880,8 @@ $$
 <p>
 
 <p>
-Let us give a simple proof of Thouless' theorem. The theorem states that we can make a linear combination av particle-hole excitations  with respect to a given reference state \( | c\rangle \). With this linear combination, we can make a new Slater determinant \( | c'\rangle  \) which is not orthogonal to $| c\rangle , that is
+Let us give a simple proof of Thouless' theorem. The theorem states that we can make a linear combination av particle-hole excitations  with respect to a given reference state \( \vert c\rangle \). With this linear combination, we can make a new Slater determinant \( \vert c'\rangle  \) which is not orthogonal to 
+\( \vert c\rangle \), that is
 $$
 \langle c|c'\rangle \ne 0.
 $$
@@ -1890,6 +1895,8 @@ $$
 
 </div>
 
+
+<p>
 <!-- !split -->
 
 <h2 id="___sec59">Thouless' theorem </h2>
@@ -1951,7 +1958,10 @@ $$
 
 The last equation can be written as
 $$
-|c'\rangle=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle=\left(1+\sum_{a>F}C_{ai_1}a_{a}^{\dagger}a_{i_1}\right)a^{\dagger}_{i_1}\left(1+\sum_{a>F}C_{ai_2}a_{a}^{\dagger}a_{i_2}\right)a^{\dagger}_{i_2} \dots |0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle.
+\begin{align}
+|c'\rangle&=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle=\left(1+\sum_{a>F}C_{ai_1}a_{a}^{\dagger}a_{i_1}\right)a^{\dagger}_{i_1} \\
+& \left(1+\sum_{a>F}C_{ai_2}a_{a}^{\dagger}a_{i_2}\right)a^{\dagger}_{i_2} \dots |0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle.
+\end{align}
 $$
 </div>
 
@@ -2121,8 +2131,11 @@ $$
 
 Using Thouless' theorem we can write out \( {|c'\rangle} \) as
 $$
- {|c'\rangle}=\exp\left\{\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle =\left\{1+\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}
+\begin{align}
+ {|c'\rangle}&=\exp\left\{\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle\\ 
+&=\left\{1+\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}
 a_{i}+\frac{1}{2!}\sum_{ab > F}\sum_{ij \le F}\delta C_{ai}\delta C_{bj}a_{a}^{\dagger}a_{i}a_{b}^{\dagger}a_{j}+\dots\right\}
+\end{align}
 $$
 
 where the amplitudes \( \delta C \) are small.
@@ -2174,10 +2187,13 @@ $$
 <p>
 We have already calculated the second term on the right-hand side of the previous equation
 $$
-\langle c | \left(\{a^\dagger_i a_a\} \hat{H} \{a^\dagger_b a_j\} \right) | c\rangle=\sum_{pq} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle p|\hat{h}_0 |q\rangle 
+\begin{align}
+\langle c | \left(\{a^\dagger_i a_a\} \hat{H} \{a^\dagger_b a_j\} \right) | c\rangle&=\sum_{pq} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle p|\hat{h}_0 |q\rangle 
             \langle c | \left(\{a^{\dagger}_i a_a\}\{a^{\dagger}_pa_q\} 
-             \{a^{\dagger}_b a_j\} \right)| c\rangle +\frac{1}{4} \sum_{pqrs} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle pq| \hat{v}|rs\rangle 
+             \{a^{\dagger}_b a_j\} \right)| c\rangle\\
+& +\frac{1}{4} \sum_{pqrs} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle pq| \hat{v}|rs\rangle 
             \langle c | \left(\{a^\dagger_i a_a\}\{a^{\dagger}_p a^{\dagger}_q a_s  a_r\} \{a^{\dagger}_b a_j\} \right)| c\rangle ,
+\end{align}
 $$
 
 resulting in
@@ -2253,8 +2269,12 @@ both being anti-symmetrized.
 <p>
 With these definitions we write out the energy as
 $$
-\langle c'|H|c'\rangle = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a^{HF}-\varepsilon_i^{HF})+\sum_{ijab}A_{ai,bj}\delta C_{ai}^*\delta C_{bj}+\frac{1}{2} \sum_{ijab} B_{ai,bj}^*\delta C_{ai}\delta C_{bj}+\frac{1}{2} \sum_{ijab} B_{ai,bj}\delta C_{ai}^*\delta C_{bj}^*
-+O(\delta C_{ai}^3),$$
+\begin{align}
+\langle c'|H|c'\rangle& = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a^{HF}-\varepsilon_i^{HF})+\sum_{ijab}A_{ai,bj}\delta C_{ai}^*\delta C_{bj}+\\
+&\frac{1}{2} \sum_{ijab} B_{ai,bj}^*\delta C_{ai}\delta C_{bj}+\frac{1}{2} \sum_{ijab} B_{ai,bj}\delta C_{ai}^*\delta C_{bj}^*
++O(\delta C_{ai}^3),
+\end{align}
+$$
 
 which can be rewritten as
 $$

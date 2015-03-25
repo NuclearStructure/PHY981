@@ -144,7 +144,13 @@
 
 \item Wick's theorem (missing in html and ipython notebook but in pdf files)
 
+\item Thouless' theorem and analysis of the Hartree-Fock equations using second quantization
+
 \item Examples on how to use bit representations for Slater determinants
+
+\item TO DO: add material about Wick's theorem and diagrammatic representation
+
+\item TO DO: Link determinantal analysis with Thouless' theorem
 \end{itemize}
 
 \noindent
@@ -341,12 +347,12 @@ $a_\beta$.
 \begin{block}{}
 The action of the anti-commutator 
 $\{a_\alpha^{\dagger}$,$a_\alpha\}$ on a given $n$-particle state is
-\begin{eqnarray}
-	a_\alpha^{\dagger} a_\alpha \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &=& 0 \nonumber \\
-	a_\alpha a_\alpha^{\dagger} \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &=&
+\begin{align}
+	a_\alpha^{\dagger} a_\alpha \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &= 0 \nonumber \\
+	a_\alpha a_\alpha^{\dagger} \underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} &=
 	a_\alpha \underbrace{|\alpha \alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} = 
 	\underbrace{|\alpha_1\alpha_2 \dots \alpha_{n}\rangle}_{\neq \alpha} \label{eq:2-16a}
-\end{eqnarray}
+\end{align}
 if the single-particle state $\alpha$ is not contained in the state.
 \end{block}
 \end{frame}
@@ -357,13 +363,13 @@ if the single-particle state $\alpha$ is not contained in the state.
 \begin{block}{}
  If it is present
 we arrive at
-\begin{eqnarray}
-	a_\alpha^{\dagger} a_\alpha |\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &=&
+\begin{align}
+	a_\alpha^{\dagger} a_\alpha |\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &=
 	a_\alpha^{\dagger} a_\alpha (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle \nonumber \\
-	= (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle &=& 
+	= (-1)^k |\alpha \alpha_1\alpha_2 \dots \alpha_{n-1}\rangle &=
 	|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle \nonumber \\
-	a_\alpha a_\alpha^{\dagger}|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &=& 0 \label{eq:2-16b}
-\end{eqnarray}
+	a_\alpha a_\alpha^{\dagger}|\alpha_1\alpha_2 \dots \alpha_{k}\alpha \alpha_{k+1} \dots \alpha_{n-1}\rangle &= 0 \label{eq:2-16b}
+\end{align}
 From Eqs.~(\ref{eq:2-16a}) and  (\ref{eq:2-16b}) we arrive at 
 \begin{equation}
 	\{a_\alpha^{\dagger} , a_\alpha \} = a_\alpha^{\dagger} a_\alpha + a_\alpha a_\alpha^{\dagger} = 1 \label{eq:2-17}
@@ -1299,9 +1305,388 @@ We can also define a three-body operator
                 a_p^\dagger a_q^\dagger a_r^\dagger a_u a_t a_s
 \]
 with the antisymmetrized matrix element
-\[
+\begin{align}
             \langle pqr|\hat{v}_3|stu\rangle_{AS} = \langle pqr|\hat{v}_3|stu\rangle + \langle pqr|\hat{v}_3|tus\rangle + \langle pqr|\hat{v}_3|ust\rangle- \langle pqr|\hat{v}_3|sut\rangle - \langle pqr|\hat{v}_3|tsu\rangle - \langle pqr|\hat{v}_3|uts\rangle.
+\end{align}
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Hartree-Fock in second quantization and stability of HF solution}
+
+\begin{block}{}
+We wish now to derive the Hartree-Fock equations using our second-quantized formalism and study the stability of the equations. 
+Our ansatz for the ground state of the system is approximated as (this is our representation of a Slater determinant in second quantization)
+\[   
+|\Phi_0\rangle = |c\rangle = a^{\dagger}_i a^{\dagger}_j \dots a^{\dagger}_l|0\rangle.
 \]
+We wish to determine $\hat{u}^{HF}$ so that 
+$E_0^{HF}= \langle c|\hat{H}| c\rangle$ becomes a local minimum. 
+
+In our analysis here we will need Thouless' theorem, which states that
+an arbitrary Slater determinant $|c'\rangle$ which is not orthogonal to a determinant
+$| c\rangle ={\displaystyle\prod_{i=1}^{n}}
+a_{\alpha_{i}}^{\dagger}|0\rangle$, can be written as
+\[
+|c'\rangle=exp\left\{\sum_{a>F}\sum_{i\le F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle 
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Hartree-Fock in second quantization and Thouless' theorem}
+
+\begin{block}{}
+
+Let us give a simple proof of Thouless' theorem. The theorem states that we can make a linear combination av particle-hole excitations  with respect to a given reference state $\vert c\rangle$. With this linear combination, we can make a new Slater determinant $\vert c'\rangle $ which is not orthogonal to 
+$\vert c\rangle$, that is
+\[
+\langle c|c'\rangle \ne 0.
+\] 
+To show this we need some intermediate steps. The exponential product of two operators  $\exp{\hat{A}}\times\exp{\hat{B}}$ is equal to $\exp{(\hat{A}+\hat{B})}$ only if the two operators commute, that is
+\[
+[\hat{A},\hat{B}] = 0.
+\]
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Thouless' theorem}
+
+\begin{block}{}
+
+If the operators do not commute, we need to resort to the \href{{http://www.encyclopediaofmath.org/index.php/Campbell%E2%80%93Hausdorff_formula}}{Baker-Campbell-Hauersdorf}. This relation states that
+\[
+\exp{\hat{C}}=\exp{\hat{A}}\exp{\hat{B}},
+\]
+with 
+\[
+\hat{C}=\hat{A}+\hat{B}+\frac{1}{2}[\hat{A},\hat{B}]+\frac{1}{12}[[\hat{A},\hat{B}],\hat{B}]-\frac{1}{12}[[\hat{A},\hat{B}],\hat{A}]+\dots
+\]
+From these relations, we note that 
+in our expression  for $|c'\rangle$ we have commutators of the type
+\[
+[a_{a}^{\dagger}a_{i},a_{b}^{\dagger}a_{j}],
+\]
+and it is easy to convince oneself that these commutators, or higher powers thereof, are all zero. This means that we can write out our new representation of a Slater determinant as
+\[
+|c'\rangle=exp\left\{\sum_{a>F}\sum_{i\le F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}+\left(\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right)^2+\dots\right\}| c\rangle
+\]
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Thouless' theorem}
+
+\begin{block}{}
+
+We note that
+\[
+\prod_{i}\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\sum_{b>F}C_{bi}a_{b}^{\dagger}a_{i}| c\rangle =0,
+\]
+and all higher-order powers of these combinations of creation and annihilation operators disappear 
+due to the fact that $(a_i)^n| c\rangle =0$ when $n > 1$. This allows us to rewrite the expression for $|c'\rangle $ as
+\[
+|c'\rangle=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle,
+\]
+which we can rewrite as 
+\[
+|c'\rangle=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle.
+\]
+The last equation can be written as
+\begin{align}
+|c'\rangle&=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle=\left(1+\sum_{a>F}C_{ai_1}a_{a}^{\dagger}a_{i_1}\right)a^{\dagger}_{i_1} \\
+& \left(1+\sum_{a>F}C_{ai_2}a_{a}^{\dagger}a_{i_2}\right)a^{\dagger}_{i_2} \dots |0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle.
+\end{align}
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{New operators}
+
+\begin{block}{}
+
+If we define a new creation operator 
+\begin{equation}
+b^{\dagger}_{i}=a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}, \label{eq:newb}
+\end{equation}
+we have 
+\[
+|c'\rangle=\prod_{i}b^{\dagger}_{i}|0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle,
+\]
+meaning that the new representation of the Slater determinant in second quantization, $|c'\rangle$, looks like our previous ones. However, this representation is not general enough since we have a restriction on the sum over single-particle states in Eq.~(\ref{eq:newb}). The single-particle states have all to be above the Fermi level.
+The question then is whether we can construct a general representation of a Slater determinant with a creation operator 
+\[
+\tilde{b}^{\dagger}_{i}=\sum_{p}f_{ip}a_{p}^{\dagger},
+\]
+where $f_{ip}$ is a matrix element of a unitary matrix which transforms our creation and annihilation operators
+$a^{\dagger}$ and $a$ to $\tilde{b}^{\dagger}$ and $\tilde{b}$. These new operators define a new representation of a Slater determinant as
+\[
+|\tilde{c}\rangle=\prod_{i}\tilde{b}^{\dagger}_{i}|0\rangle.
+\]
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Showing that $|\tilde{c}\rangle= |c'\rangle$}
+
+\begin{block}{}
+
+
+We need to show that $|\tilde{c}\rangle= |c'\rangle$. We need also to assume that the new state
+is not orthogonal to $|c\rangle$, that is $\langle c| \tilde{c}\rangle \ne 0$. From this it follows that 
+\[
+\langle c| \tilde{c}\rangle=\langle 0| a_{i_n}\dots a_{i_1}\left(\sum_{p=i_1}^{i_n}f_{i_1p}a_{p}^{\dagger} \right)\left(\sum_{q=i_1}^{i_n}f_{i_2q}a_{q}^{\dagger} \right)\dots \left(\sum_{t=i_1}^{i_n}f_{i_nt}a_{t}^{\dagger} \right)|0\rangle,
+\]
+which is nothing but the determinant $det(f_{ip})$ which we can, using the intermediate normalization condition, 
+normalize to one, that is
+\[
+det(f_{ip})=1,
+\]
+meaning that $f$ has an inverse defined as (since we are dealing with orthogonal, and in our case unitary as well, transformations)
+\[
+\sum_{k} f_{ik}f^{-1}_{kj} = \delta_{ij},
+\]
+and 
+\[
+\sum_{j} f^{-1}_{ij}f_{jk} = \delta_{ik}.
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Wrapping it up}
+
+\begin{block}{}
+
+Using these relations we can then define the linear combination of creation (and annihilation as well) 
+operators as
+\[
+\sum_{i}f^{-1}_{ki}\tilde{b}^{\dagger}_{i}=\sum_{i}f^{-1}_{ki}\sum_{p=i_1}^{\infty}f_{ip}a_{p}^{\dagger}=a_{k}^{\dagger}+\sum_{i}\sum_{p=i_{n+1}}^{\infty}f^{-1}_{ki}f_{ip}a_{p}^{\dagger}.
+\]
+Defining 
+\[
+c_{kp}=\sum_{i \le F}f^{-1}_{ki}f_{ip},
+\]
+we can redefine 
+\[
+a_{k}^{\dagger}+\sum_{i}\sum_{p=i_{n+1}}^{\infty}f^{-1}_{ki}f_{ip}a_{p}^{\dagger}=a_{k}^{\dagger}+\sum_{p=i_{n+1}}^{\infty}c_{kp}a_{p}^{\dagger}=b_k^{\dagger},
+\]
+our starting point. We have shown that our general representation of a Slater determinant 
+\[
+|\tilde{c}\rangle=\prod_{i}\tilde{b}^{\dagger}_{i}|0\rangle=|c'\rangle=\prod_{i}b^{\dagger}_{i}|0\rangle,
+\]
+with 
+\[
+b_k^{\dagger}=a_{k}^{\dagger}+\sum_{p=i_{n+1}}^{\infty}c_{kp}a_{p}^{\dagger}.
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Thouless' theorem}
+
+\begin{block}{}
+
+This means that we can actually write an ansatz for the ground state of the system as a linear combination of
+terms which contain the ansatz itself $|c\rangle$ with  an admixture from an infinity of one-particle-one-hole states. The latter has important consequences when we wish to interpret the Hartree-Fock equations and their stability. We can rewrite the new representation as 
+\[
+|c'\rangle = |c\rangle+|\delta c\rangle,
+\]
+where $|\delta c\rangle$ can now be interpreted as a small variation. If we approximate this term with 
+contributions from one-particle-one-hole (\emph{1p-1h}) states only, we arrive at 
+\[
+|c'\rangle = \left(1+\sum_{ai}\delta C_{ai}a_{a}^{\dagger}a_i\right)|c\rangle.
+\]
+In our derivation of the Hartree-Fock equations we have shown that 
+\[
+\langle \delta c| \hat{H} | c\rangle =0,
+\]
+which means that we have to satisfy
+\[
+\langle c|\sum_{ai}\delta C_{ai}\left\{a_{a}^{\dagger}a_i\right\} \hat{H} | c\rangle =0.
+\]
+With this as a background, we are now ready to study the stability of the Hartree-Fock equations.
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Hartree-Fock in second quantization and stability of HF solution}
+
+\begin{block}{}
+The variational condition for deriving the Hartree-Fock equations guarantees only that the expectation value $\langle c | \hat{H} | c \rangle$ has an extreme value, not necessarily a minimum. To figure out whether the extreme value we have found  is a minimum, we can use second quantization to analyze our results and find a criterion 
+for the above expectation value to a local minimum. We will use Thouless' theorem and show that
+\[
+\frac{\langle c' |\hat{H} | c'\rangle}{\langle c' |c'\rangle} \ge \langle c |\hat{H} | c\rangle= E_0,
+\]
+with
+\[
+ {|c'\rangle} = {|c\rangle + |\delta c\rangle}.
+\]
+Using Thouless' theorem we can write out ${|c'\rangle}$ as
+\begin{align}
+ {|c'\rangle}&=\exp\left\{\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle\\ 
+&=\left\{1+\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}
+a_{i}+\frac{1}{2!}\sum_{ab > F}\sum_{ij \le F}\delta C_{ai}\delta C_{bj}a_{a}^{\dagger}a_{i}a_{b}^{\dagger}a_{j}+\dots\right\}
+\end{align}
+where the amplitudes $\delta C$ are small.
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Hartree-Fock in second quantization and stability of HF solution}
+
+\begin{block}{}
+
+The norm of $|c'\rangle$ is given by (using the intermediate normalization condition $\langle c' |c\rangle=1$) 
+\[
+\langle c' | c'\rangle = 1+\sum_{a>F}
+\sum_{i\le F}|\delta C_{ai}|^2+O(\delta C_{ai}^3).
+\]
+The expectation value for the energy is now given by (using the Hartree-Fock condition)
+\[
+\langle c' |\hat{H} | c'\rangle=\langle c |\hat{H} | c\rangle +
+\sum_{ab>F}
+\sum_{ij\le F}\delta C_{ai}^*\delta C_{bj}\langle c |a_{i}^{\dagger}a_{a}\hat{H}a_{b}^{\dagger}a_{j}|c\rangle+
+\]
+\[
+\frac{1}{2!}\sum_{ab>F}
+\sum_{ij\le F}\delta C_{ai}\delta C_{bj}\langle c |\hat{H}a_{a}^{\dagger}a_{i}a_{b}^{\dagger}a_{j}|c\rangle+\frac{1}{2!}\sum_{ab>F}
+\sum_{ij\le F}\delta C_{ai}^*\delta C_{bj}^*\langle c|a_{j}^{\dagger}a_{b}a_{i}^{\dagger}a_{a}\hat{H}|c\rangle
++\dots
+\] 
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Hartree-Fock in second quantization and stability of HF solution}
+
+\begin{block}{}
+We have already calculated the second term on the right-hand side of the previous equation
+\begin{align}
+\langle c | \left(\{a^\dagger_i a_a\} \hat{H} \{a^\dagger_b a_j\} \right) | c\rangle&=\sum_{pq} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle p|\hat{h}_0 |q\rangle 
+            \langle c | \left(\{a^{\dagger}_i a_a\}\{a^{\dagger}_pa_q\} 
+             \{a^{\dagger}_b a_j\} \right)| c\rangle\\
+& +\frac{1}{4} \sum_{pqrs} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle pq| \hat{v}|rs\rangle 
+            \langle c | \left(\{a^\dagger_i a_a\}\{a^{\dagger}_p a^{\dagger}_q a_s  a_r\} \{a^{\dagger}_b a_j\} \right)| c\rangle ,
+\end{align}
+resulting in
+\[
+E_0\sum_{ai}|\delta C_{ai}|^2+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a-\varepsilon_i)-\sum_{ijab} \langle aj|\hat{v}| bi\rangle \delta C_{ai}^*\delta C_{bj}.
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Hartree-Fock in second quantization and stability of HF solution}
+
+\begin{block}{}
+\[
+\frac{1}{2!}\langle c |\left(\{a^\dagger_j a_b\} \{a^\dagger_i a_a\} \hat{V}_N  \right) | c\rangle  = 
+\frac{1}{2!}\langle c |\left( \hat{V}_N \{a^\dagger_a a_i\} \{a^\dagger_b a_j\} \right)^{\dagger} | c\rangle 
+\]
+which is nothing but
+\[
+\frac{1}{2!}\langle c |  \left( \hat{V}_N \{a^\dagger_a a_i\} \{a^\dagger_b a_j\} \right) | c\rangle^*
+=\frac{1}{2} \sum_{ijab} (\langle ij|\hat{v}|ab\rangle)^*\delta C_{ai}^*\delta C_{bj}^*
+\]
+or 
+\[
+\frac{1}{2} \sum_{ijab} (\langle ab|\hat{v}|ij\rangle)\delta C_{ai}^*\delta C_{bj}^*
+\]
+where we have used the relation
+\[ 
+\langle a |\hat{A} | b\rangle =  (\langle b |\hat{A}^{\dagger} | a\rangle)^*
+\]
+due to the hermiticity of $\hat{H}$ and $\hat{V}$.
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Hartree-Fock in second quantization and stability of HF solution}
+
+\begin{block}{}
+We define two matrix elements
+\[
+A_{ai,bj}=-\langle aj|\hat{v} bi\rangle
+\]
+and
+\[
+B_{ai,bj}=\langle ab|\hat{v}|ij\rangle
+\]
+both being anti-symmetrized.
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Hartree-Fock in second quantization and stability of HF solution}
+
+\begin{block}{}
+
+With these definitions we write out the energy as
+\begin{align}
+\langle c'|H|c'\rangle& = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a^{HF}-\varepsilon_i^{HF})+\sum_{ijab}A_{ai,bj}\delta C_{ai}^*\delta C_{bj}+\\
+&\frac{1}{2} \sum_{ijab} B_{ai,bj}^*\delta C_{ai}\delta C_{bj}+\frac{1}{2} \sum_{ijab} B_{ai,bj}\delta C_{ai}^*\delta C_{bj}^*
++O(\delta C_{ai}^3),
+\end{align}
+which can be rewritten as
+\[
+\langle c'|H|c'\rangle = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\Delta E+O(\delta C_{ai}^3),
+\]
+and skipping higher-order terms we arrived
+\[
+\frac{\langle c' |\hat{H} | c'\rangle}{\langle c' |c'\rangle} =E_0+\frac{\Delta E}{\left(1+\sum_{ai}|\delta C_{ai}|^2\right)}.
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Hartree-Fock in second quantization and stability of HF solution}
+
+\begin{block}{}
+We have defined 
+\[
+\Delta E = \frac{1}{2} \langle \chi | \hat{M}| \chi \rangle
+\]
+with the vectors 
+\[ 
+\chi = \left[ \delta C\hspace{0.2cm} \delta C^*\right]^T
+\]
+and the matrix 
+\[
+\hat{M}=\left(\begin{array}{cc} \Delta + A & B \\ B^* & \Delta + A^*\end{array}\right),
+\]
+with $\Delta_{ai,bj} = (\varepsilon_a-\varepsilon_i)\delta_{ab}\delta_{ij}$.
+
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Hartree-Fock in second quantization and stability of HF solution}
+
+\begin{block}{}
+The condition
+\[
+\Delta E = \frac{1}{2} \langle \chi | \hat{M}| \chi \rangle \ge 0
+\]
+for an arbitrary  vector 
+\[ 
+\chi = \left[ \delta C\hspace{0.2cm} \delta C^*\right]^T
+\]
+means that all eigenvalues of the matrix have to be larger than or equal zero. 
+A necessary (but no sufficient) condition is that the matrix elements (for all $ai$ )
+\[
+(\varepsilon_a-\varepsilon_i)\delta_{ab}\delta_{ij}+A_{ai,bj} \ge 0.
+\]
+This equation can be used as a first test of the stability of the Hartree-Fock equation.
 \end{block}
 \end{frame}
 
@@ -1525,7 +1910,7 @@ which results in $|0001000000000000\rangle$. Counting the number of $1-$bits giv
 \begin{frame}[plain,fragile]
 \frametitle{Exercises}
 
-\begin{block}{Exercise 5 }
+\begin{block}{Exercise 1 }
 This exercise serves to convince you about the relation between
 two different single-particle bases, where one could be our new Hartree-Fock basis and the other a harmonic oscillator basis.
 
@@ -1554,7 +1939,7 @@ $\langle\Phi_{0}|\Phi_{0}\rangle$.
 \begin{frame}[plain,fragile]
 \frametitle{Exercises}
 
-\begin{block}{Exercise 6 }
+\begin{block}{Exercise 2 }
 Calculate the matrix elements
 \[
 \langle \alpha_{1}\alpha_{2}|\hat{F}|\alpha_{1}\alpha_{2}\rangle
@@ -1592,7 +1977,7 @@ Compare these results with those from exercise 3c).
 \begin{frame}[plain,fragile]
 \frametitle{Exercises}
 
-\begin{block}{Exercise 7 }
+\begin{block}{Exercise 3 }
 Show that the onebody part of the Hamiltonian
 \[	     
 \hat{H}_0 = \sum_{pq} \langle p|\hat{h}_0|q\rangle a^{\dagger}_p a_q,
@@ -1610,7 +1995,7 @@ vacuum has been used?
 \begin{frame}[plain,fragile]
 \frametitle{Exercises}
 
-\begin{block}{Exercise 8 }
+\begin{block}{Exercise 4 }
 Show that the twobody part of the Hamiltonian
 \[
   \hat{H}_I = \frac{1}{4} \sum_{pqrs} \langle pq|\hat{v}|rs\rangle a^\dagger_p a^\dagger_q a_s  a_r,
@@ -1635,7 +2020,7 @@ and specify the contributions to the twobody, onebody and the scalar part.
 \begin{frame}[plain,fragile]
 \frametitle{Exercises}
 
-\begin{block}{Exercise 9 }
+\begin{block}{Exercise 5 }
 
 The aim of this exercise is to set up specific matrix elements that will turn useful when we start our discussions of the nuclear shell model. In particular you will notice, depending on the character of the operator, that many matrix elements will actually be zero.
 
@@ -1703,9 +2088,12 @@ What happens with the two-body operator if we have a transition probability  of 
 where the Slater determinant to the right of the operator differs by more than two single-particle states?
 
 \end{block}
+\end{frame}
 
+\begin{frame}[plain,fragile]
+\frametitle{Exercises}
 
-\begin{block}{Exercise 10 }
+\begin{block}{Exercise 6 }
 
 Write a program which sets up all possible Slater determinants given $N=4$ eletrons which can occupy
 the atomic single-particle states defined by the $1s$, $2s2p$ and $3s3p3d$ shells. How many single-particle
@@ -1828,7 +2216,7 @@ s = phi.create(200)
 \begin{frame}[plain,fragile]
 \frametitle{Exercises: Using sympy to compute matrix elements}
 
-\begin{block}{Exercise 11 }
+\begin{block}{Exercise 7 }
 Compute the matrix element
 \[
 \langle\alpha_{1}\alpha_{2}\alpha_{3}|\hat{G}|\alpha_{1}'\alpha_{2}'\alpha_{3}'\rangle,
@@ -1997,7 +2385,7 @@ again as expected, with the reference energy to be subtracted.
 \frametitle{Exercises: Using sympy to compute matrix elements}
 
 \begin{block}{}
-We can now go back to exercise 11 and define the Hamiltonian and the second-quantized representation of a  three-body Slater determinant. 
+We can now go back to exercise 7 and define the Hamiltonian and the second-quantized representation of a  three-body Slater determinant. 
 \begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=2mm]{python}
 from sympy import symbols, latex, WildFunction, collect, Rational, simplify
 from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
@@ -2019,6 +2407,71 @@ resulting in nine terms (as expected),
  - \delta_{a d} v^{cb}_{ef} - \delta_{a e} v^{cb}_{fd} + \delta_{a f} v^{cb}_{ed} - \delta_{b d} v^{ac}_{ef} - \delta_{b e} v^{ac}_{fd} + \delta_{b f} v^{ac}_{ed} + \delta_{c d} v^{ab}_{ef} + \delta_{c e} v^{ab}_{fd} - \delta_{c f} v^{ab}_{ed}
 \]
 
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Exercises: Derivation of Hartree-Fock equations}
+
+\begin{block}{Exercise 8 }
+What is the diagrammatic representation of the HF equation?
+\[
+-\langle\alpha_{k}|u^{HF}|\alpha_{i}\rangle+\sum_{j=1}^{n}
+\left[\langle\alpha_{k}\alpha_{j}|\hat{v}|\alpha_{i}\alpha_{j}\rangle-
+\langle\alpha_{k}\alpha_{j}|v|\alpha_{j}\alpha_{i}\rangle\right]=0
+\]
+(Represent $(-u^{HF})$ by the symbol $---$X .)
+\end{block}
+\end{frame}
+
+\begin{frame}[plain,fragile]
+\frametitle{Exercises: Derivation of Hartree-Fock equations}
+
+\begin{block}{Exercise 9 }
+Consider the ground state $|\Phi\rangle$ 
+of a bound many-particle system of fermions. Assume that we remove one particle
+from the single-particle state $\lambda$ and that our system ends in a new state
+$|\Phi_{n}\rangle$. 
+Define the energy needed to remove this particle as
+\[
+E_{\lambda}=\sum_{n}\vert\langle\Phi_{n}|a_{\lambda}|\Phi\rangle\vert^{2}(E_{0}-E_{n}),
+\]
+where $E_{0}$ and $E_{n}$  are the ground state energies of the states
+$|\Phi\rangle$  and  $|\Phi_{n}\rangle$, respectively.
+\begin{itemize}
+ \item Show that
+\end{itemize}
+
+\noindent
+\[
+E_{\lambda}=\langle\Phi|a_{\lambda}^{\dagger}\left[
+a_{\lambda},H \right]|\Phi\rangle,
+\]
+where $H$ is the Hamiltonian of this system.
+\begin{itemize}
+ \item If we assume that $\Phi$ is the  Hartree-Fock result, find the 
+\end{itemize}
+
+\noindent
+relation between $E_{\lambda}$ and the single-particle energy
+$\varepsilon_{\lambda}$
+for states $\lambda \leq F$ and $\lambda >F$, with
+\[
+\varepsilon_{\lambda}=\langle\lambda|\hat{t}+\hat{u}|\lambda\rangle,
+\]
+and
+\[
+\langle\lambda|\hat{u}|\lambda\rangle=\sum_{\beta \leq F}
+\langle\lambda\beta|\hat{v}|\lambda\beta\rangle.
+\]
+We have assumed an antisymmetrized matrix element here.
+Discuss the result.
+
+The Hamiltonian operator is defined as
+\[
+H=\sum_{\alpha\beta}\langle\alpha|\hat{t}|\beta\rangle a_{\alpha}^{\dagger}a_{\beta}+
+\frac{1}{2}\sum_{\alpha\beta\gamma\delta}\langle\alpha\beta|\hat{v}|\gamma\delta\rangle a_{\alpha}^{\dagger}a_{\beta}^{\dagger}a_{\delta}a_{\gamma}.
+\]
 \end{block}
 \end{frame}
 
