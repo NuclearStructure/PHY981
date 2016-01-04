@@ -1,0 +1,1325 @@
+# Slides for PHY981
+TITLE: Infinite matter
+AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
+DATE: Spring 2016
+
+!split
+===== Studies of infinite matter =====
+
+!bblock 
+Studies of infinite nuclear matter play an important role  in nuclear physics. The aim of this part of the lectures is to provide the necessary ingredients for perfoming studies of neutron star matter (or matter in $\beta$-equilibrium) and symmetric nuclear matter. We start however with the electron gas in two and three dimensions for both historical and pedagogical reasons. Since there are several benchmark calculations for the electron gas, this small detour will allow us to establish the necessary formalism. Thereafter we will study infinite nuclear matter 
+* at the Hartree-Fock with realistic nuclear forces and
+* using many-body methods like coupled-cluster theory or in-medium SRG as discussed in our previous sections.
+!eblock
+
+
+
+!split
+===== The infinite electron gas =====
+!bblock
+The electron gas is perhaps the only realistic model of a 
+system of many interacting particles that allows for a solution
+of the Hartree-Fock equations on a closed form. Furthermore, to first order in the interaction, one can also
+compute on a closed form the total energy and several other properties of a many-particle systems. 
+The model gives a very good approximation to the properties of valence electrons in metals.
+The assumptions are
+
+*  System of electrons that is not influenced by external forces except by an attraction provided by a uniform background of ions. These ions give rise to a uniform background charge. The ions are stationary.
+*  The system as a whole is neutral.
+*  We assume we have $N_e$ electrons in a cubic box of length $L$ and volume $\Omega=L^3$. This volume contains also a uniform distribution of positive charge with density $N_ee/\Omega$. 
+!eblock
+
+
+!split
+===== The electron gas =====
+!bblock
+The homogeneous electron gas is one of the few examples of a system of many
+interacting particles that allows for a solution of the mean-field
+Hartree-Fock equations on a closed form.  To first order in the
+electron-electron interaction, this applies to ground state properties
+like the energy and its pertinent equation of state as well.  The
+homogeneus electron gas is a system of electrons that is not
+influenced by external forces except by an attraction provided by a
+uniform background of ions. These ions give rise to a uniform
+background charge.  The ions are stationary and the system as a whole
+is neutral.
+Irrespective of this simplicity, this system, in both two and
+three-dimensions, has eluded a proper description of correlations in
+terms of various first principle methods, except perhaps for quantum
+Monte Carlo methods. In particular, the diffusion Monte Carlo
+calculations of "Ceperley":"http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.45.566" 
+and "Ceperley and Tanatar":"http://journals.aps.org/prb/abstract/10.1103/PhysRevB.39.5005" 
+are presently still considered as the
+best possible benchmarks for the two- and three-dimensional electron
+gas. 
+!eblock
+
+
+!split
+===== The electron gas =====
+!bblock
+The electron gas, in 
+two or three dimensions is thus interesting as a test-bed for 
+electron-electron correlations. The three-dimensional 
+electron gas is particularly important as a cornerstone 
+of the local-density approximation in density-functional 
+theory. In the physical world, systems 
+similar to the three-dimensional electron gas can be 
+found in, for example, alkali metals and doped 
+semiconductors. Two-dimensional electron fluids are 
+observed on metal and liquid-helium surfaces, as well as 
+at metal-oxide-semiconductor interfaces. However, the Coulomb 
+interaction has an infinite range, and therefore 
+long-range correlations play an essential role in the
+electron gas. 
+!eblock
+
+
+!split
+===== The electron gas =====
+!bblock
+At low densities, the electrons become 
+localized and form a lattice. This so-called Wigner 
+crystallization is a direct consequence 
+of the long-ranged repulsive interaction. At higher
+densities, the electron gas is better described as a
+liquid.
+When using, for example, Monte Carlo methods the electron gas must be approximated 
+by a finite system. The long-range Coulomb interaction 
+in the electron gas causes additional finite-size effects  that are not
+present in other infinite systems like nuclear matter or neutron star matter.
+This poses additional challenges to many-body methods when applied 
+to the electron gas.
+!eblock
+
+
+
+!split
+===== The infinite electron gas as a homogenous system =====
+!bblock
+This is a homogeneous system and the one-particle wave functions are given by plane wave functions normalized to a volume $\Omega$ 
+for a box with length $L$ (the limit $L\rightarrow \infty$ is to be taken after we have computed various expectation values)
+!bt
+\[
+\psi_{\mathbf{k}\sigma}(\mathbf{r})= \frac{1}{\sqrt{\Omega}}\exp{(i\mathbf{kr})}\xi_{\sigma}
+\]
+!et
+where $\mathbf{k}$ is the wave number and  $\xi_{\sigma}$ is a spin function for either spin up or down
+!bt
+\[ 
+\xi_{\sigma=+1/2}=\left(\begin{array}{c} 1 \\ 0 \end{array}\right) \hspace{0.5cm}
+\xi_{\sigma=-1/2}=\left(\begin{array}{c} 0 \\ 1 \end{array}\right).
+\]
+!et
+
+!eblock
+
+!split
+===== Periodic boundary conditions =====
+!bblock
+
+We assume that we have periodic boundary conditions which limit the allowed wave numbers to
+!bt
+\[
+k_i=\frac{2\pi n_i}{L}\hspace{0.5cm} i=x,y,z \hspace{0.5cm} n_i=0,\pm 1,\pm 2, \dots
+\]
+!et
+We assume first that the electrons interact via a central, symmetric and translationally invariant
+interaction  $V(r_{12})$ with
+$r_{12}=|\mathbf{r}_1-\mathbf{r}_2|$.  The interaction is spin independent.
+
+The total Hamiltonian consists then of kinetic and potential energy
+!bt
+\[
+\hat{H} = \hat{T}+\hat{V}.
+\]
+!et
+The operator for the kinetic energy can be written as
+!bt
+\[
+\hat{T}=\sum_{\mathbf{k}\sigma}\frac{\hbar^2k^2}{2m}a_{\mathbf{k}\sigma}^{\dagger}a_{\mathbf{k}\sigma}.
+\]
+!et
+!eblock
+
+!split
+===== Defining the Hamiltonian operator =====
+!bblock
+The Hamiltonian operator is given by
+!bt
+\[
+\hat{H}=\hat{H}_{el}+\hat{H}_{b}+\hat{H}_{el-b},
+\]
+!et
+with the electronic part
+!bt
+\[
+\hat{H}_{el}=\sum_{i=1}^N\frac{p_i^2}{2m}+\frac{e^2}{2}\sum_{i\ne j}\frac{e^{-\mu |\mathbf{r}_i-\mathbf{r}_j|}}{|\mathbf{r}_i-\mathbf{r}_j|},
+\]
+!et
+where we have introduced an explicit convergence factor
+(the limit $\mu\rightarrow 0$ is performed after having calculated the various integrals).
+Correspondingly, we have
+!bt
+\[
+\hat{H}_{b}=\frac{e^2}{2}\int\int d\mathbf{r}d\mathbf{r}'\frac{n(\mathbf{r})n(\mathbf{r}')e^{-\mu |\mathbf{r}-\mathbf{r}'|}}{|\mathbf{r}-\mathbf{r}'|},
+\]
+!et
+which is the energy contribution from the positive background charge with density
+$n(\mathbf{r})=N/\Omega$. Finally,
+!bt
+\[
+\hat{H}_{el-b}=-\frac{e^2}{2}\sum_{i=1}^N\int d\mathbf{r}\frac{n(\mathbf{r})e^{-\mu |\mathbf{r}-\mathbf{x}_i|}}{|\mathbf{r}-\mathbf{x}_i|},
+\]
+!et
+is the interaction between the electrons and the positive background.
+!eblock
+
+!split
+===== Single-particle Hartree-Fock energy =====
+!bblock
+In the first exercise below we show that the Hartree-Fock energy can be written as 
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m_e}-\frac{e^{2}}
+{\Omega^{2}}\sum_{k'\leq
+k_{F}}\int d\mathbf{r}e^{i(\mathbf{k}'-\mathbf{k})\mathbf{r}}\int
+d\mathbf{r'}\frac{e^{i(\mathbf{k}-\mathbf{k}')\mathbf{r}'}}
+{\vert\mathbf{r}-\mathbf{r}'\vert}
+\]
+!et
+resulting in
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m_e}-\frac{e^{2}
+k_{F}}{2\pi}
+\left[
+2+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right]
+\]
+!et
+
+!eblock
+
+!split
+===== Single-particle Hartree-Fock energy in a more compact form =====
+!bblock
+
+The previous result can be rewritten in terms of the density
+!bt
+\[
+n= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_s^3},
+\]
+!et
+where $n=N_e/\Omega$, $N_e$ being the number of electrons, and $r_s$ is the radius of a sphere which represents the volum per conducting electron.  
+It can be convenient to use the Bohr radius $a_0=\hbar^2/e^2m_e$.
+For most metals we have a relation $r_s/a_0\sim 2-6$.  The quantity $r_s$ is dimensionless.
+
+!eblock
+
+!split
+===== Total Hartree-Fock energy =====
+!bblock
+
+In the second exercise below  we find that
+the total energy
+$E_0/N_e=\langle\Phi_{0}|\hat{H}|\Phi_{0}\rangle/N_e$ for
+for this system to first order in the interaction is given as 
+!bt
+\[
+E_0/N_e=\frac{e^2}{2a_0}\left[\frac{2.21}{r_s^2}-\frac{0.916}{r_s}\right].
+\]
+!et
+
+!eblock
+
+
+
+
+
+
+!split
+===== Exercises: Hartree-Fock single-particle solution for the electron gas  =====
+!bblock  Exercise 1
+The electron gas model allows closed form solutions for quantities like the 
+single-particle Hartree-Fock energy.  The latter quantity is given by the following expression
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}}
+{V^{2}}\sum_{k'\leq
+k_{F}}\int d\mathbf{r}e^{i(\mathbf{k'}-\mathbf{k})\mathbf{r}}\int
+d\mathbf{r}'\frac{e^{i(\mathbf{k}-\mathbf{k'})\mathbf{r}'}}
+{\vert\mathbf{r}-\mathbf{r'}\vert}
+\]
+!et
+Show first that
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}
+k_{F}}{2\pi}
+\left[
+2+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right]
+\]
+!et
+(Hint: Introduce the convergence factor 
+$e^{-\mu\vert\mathbf{r}-\mathbf{r}'\vert}$
+in the potential and use  $\sum_{\mathbf{k}}\rightarrow
+\frac{V}{(2\pi)^{3}}\int d\mathbf{k}$ )
+
+Rewrite the above result as a function of the density
+!bt
+\[
+n= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_s^3},
+\]
+!et
+where $n=N/V$, $N$ being the number of particles, and $r_s$ is the radius of a sphere which represents the volum per conducting electron.  
+
+!eblock
+
+!split
+===== Exercises: Hartree-Fock single-particle solution for the electron gas  =====
+!bblock  Exercise 1
+It can be convenient to use the Bohr radius $a_0=\hbar^2/e^2m$.
+For most metals we have a relation $r_s/a_0\sim 2-6$.
+
+Make a plot of the free electron energy and the Hartree-Fock energy and discuss the behavior around the Fermi surface. Extract also   the Hartree-Fock band width $\Delta\varepsilon^{HF}$ defined as
+!bt
+\[ 
+\Delta\varepsilon^{HF}=\varepsilon_{k_{F}}^{HF}-
+\varepsilon_{0}^{HF}.
+\]
+!et
+Compare this results with the corresponding one for a free electron and comment your results. How large is the contribution due to the exchange term in the Hartree-Fock equation?
+!eblock
+
+
+!split
+===== Exercises: Hartree-Fock single-particle solution for the electron gas  =====
+!bblock  Exercise 1
+
+We will now define a quantity called the effective mass.
+For $\vert\mathbf{k}\vert$ near $k_{F}$, we can Taylor expand the Hartree-Fock energy as  
+!bt
+\[
+\varepsilon_{k}^{HF}=\varepsilon_{k_{F}}^{HF}+
+\left(\frac{\partial\varepsilon_{k}^{HF}}{\partial k}\right)_{k_{F}}(k-k_{F})+\dots
+\]
+!et
+If we compare the latter with the corresponding expressiyon for the non-interacting system
+!bt
+\[
+\varepsilon_{k}^{(0)}=\frac{\hbar^{2}k^{2}_{F}}{2m}+
+\frac{\hbar^{2}k_{F}}{m}\left(k-k_{F}\right)+\dots ,
+\]
+!et
+we can define the so-called effective Hartree-Fock mass as
+!bt
+\[
+m_{HF}^{*}\equiv\hbar^{2}k_{F}\left(
+\frac{\partial\varepsilon_{k}^{HF}}
+{\partial k}\right)_{k_{F}}^{-1}
+\]
+!et
+Compute $m_{HF}^{*}$ and comment your results.
+!eblock
+
+!split
+===== Exercises: Hartree-Fock single-particle solution for the electron gas  =====
+!bblock  Exercise 1
+Show that the level density (the number of single-electron states per unit energy) can be written as
+!bt
+\[
+n(\varepsilon)=\frac{Vk^{2}}{2\pi^{2}}\left(
+\frac{\partial\varepsilon}{\partial k}\right)^{-1}
+\]
+!et
+Calculate $n(\varepsilon_{F}^{HF})$ and comment the results.
+
+
+!eblock
+
+
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Partial solution to exercise 1
+We want to show that, given the Hartree-Fock equation for the electron gas
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}}
+{V^{2}}\sum_{p\leq
+k_{F}}\int d\mathbf{r}\exp{(i(\mathbf{p}-\mathbf{k})\mathbf{r})}\int
+d\mathbf{r}'\frac{\exp{(i(\mathbf{k}-\mathbf{p})\mathbf{r}'})}
+{\vert\mathbf{r}-\mathbf{r'}\vert}
+\]
+!et
+the single-particle energy can be written as
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{e^{2}
+k_{F}}{2\pi}
+\left[
+2+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right].
+\]
+!et
+
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  
+
+We introduce the convergence factor 
+$e^{-\mu\vert\mathbf{r}-\mathbf{r}'\vert}$
+in the potential and use  $\sum_{\mathbf{k}}\rightarrow
+\frac{V}{(2\pi)^{3}}\int d\mathbf{k}$. We can then rewrite the integral as 
+!bt
+\begin{align}
+\frac{e^{2}}
+{V^{2}}\sum_{k'\leq
+k_{F}}\int d\mathbf{r}\exp{(i(\mathbf{k'}-\mathbf{k})\mathbf{r})}\int
+d\mathbf{r}'\frac{\exp{(i(\mathbf{k}-\mathbf{p})\mathbf{r}'})}
+{\vert\mathbf{r}-\mathbf{r'}\vert}= & \\
+\frac{e^{2}}{V (2\pi)^3}  \int d\mathbf{r}\int
+\frac{d\mathbf{r}'}{\vert\mathbf{r}-\mathbf{r'}\vert}\exp{(-i\mathbf{k}(\mathbf{r}-\mathbf{r}'))}\int d\mathbf{p}\exp{(i\mathbf{p}(\mathbf{r}-\mathbf{r}'))},
+\end{align}
+!et
+and introducing the abovementioned convergence factor we have
+!bt
+\begin{align}
+\lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d\mathbf{r}\int d\mathbf{r}'\frac{\exp{(-\mu\vert\mathbf{r}-\mathbf{r}'\vert})}{\vert\mathbf{r}-\mathbf{r'}\vert}\int d\mathbf{p}\exp{(i(\mathbf{p}-\mathbf{k})(\mathbf{r}-\mathbf{r}'))}.
+\end{align}
+!et
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock 
+With a change variables to $\mathbf{x} = \mathbf{r}-\mathbf{r}'$ and $\mathbf{y}=\mathbf{r}'$ we rewrite the last integral as
+!bt
+\[
+\lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d\mathbf{p}\int d\mathbf{y}\int d\mathbf{x}\exp{(i(\mathbf{p}-\mathbf{k})\mathbf{x})}\frac{\exp{(-\mu\vert\mathbf{x}\vert})}{\vert\mathbf{x}\vert}.
+\]
+!et
+The integration over $\mathbf{x}$ can be performed using spherical coordinates, resulting in (with $x=\vert \mathbf{x}\vert$)
+!bt
+\[
+\int d\mathbf{x}\exp{(i(\mathbf{p}-\mathbf{k})\mathbf{x})}\frac{\exp{(-\mu\vert\mathbf{x}\vert})}{\vert\mathbf{x}\vert}=\int x^2 dx d\phi d\cos{(\theta)}\exp{(i(\mathbf{p}-\mathbf{k})x\cos{(\theta))}}\frac{\exp{(-\mu x)}}{x}.
+\]
+!et
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock 
+We obtain
+!bt
+\begin{align}
+4\pi \int dx \frac{ \sin{(\vert \mathbf{p}-\mathbf{k}\vert)x} }{\vert \mathbf{p}-\mathbf{k}\vert}{\exp{(-\mu x)}}= \frac{4\pi}{\mu^2+\vert \mathbf{p}-\mathbf{k}\vert^2}.
+\end{align}
+!et
+This results gives us 
+!bt
+\begin{align}
+\lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d\mathbf{p}\int d\mathbf{y}\frac{4\pi}{\mu^2+\vert \mathbf{p}-\mathbf{k}\vert^2}=\lim_{\mu \to 0}\frac{e^{2}}{ 2\pi^2}  \int d\mathbf{p}\frac{1}{\mu^2+\vert \mathbf{p}-\mathbf{k}\vert^2},
+\end{align}
+!et
+where we have used that the integrand on the left-hand side does not depend on $\mathbf{y}$ and that $\int d\mathbf{y}=V$.
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock 
+Introducing spherical coordinates we can rewrite the integral as 
+!bt
+\begin{align}
+\lim_{\mu \to 0}\frac{e^{2}}{ 2\pi^2}  \int d\mathbf{p}\frac{1}{\mu^2+\vert \mathbf{p}-\mathbf{k}\vert^2}=\frac{e^{2}}{ 2\pi^2}  \int d\mathbf{p}\frac{1}{\vert \mathbf{p}-\mathbf{k}\vert^2}=& \\
+\frac{e^{2}}{\pi}  \int_0^{k_F} p^2dp\int_0^{\pi} d\theta\cos{(\theta)}\frac{1}{p^2+k^2-2pk\cos{(\theta)}},
+\end{align}
+!et
+and with the change of variables $\cos{(\theta)}=u$ we have 
+!bt
+\[
+\frac{e^{2}}{\pi}  \int_0^{k_F} p^2dp\int_{0}^{\pi} d\theta\cos{(\theta)}\frac{1}{p^2+k^2-2pk\cos{(\theta)}}=\frac{e^{2}}{\pi}  \int_0^{k_F} p^2dp\int_{-1}^{1} du\frac{1}{p^2+k^2-2pku},
+\]
+!et
+which gives
+!bt
+\[
+\frac{e^{2}}{k\pi}  \int_0^{k_F} pdp\left\{ln(\vert p+k\vert)-ln(\vert p-k\vert)\right\}.
+\]
+!et
+!eblock
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock 
+Introducing new variables $x=p+k$ and $y=p-k$, we obtain after some straightforward reordering of the integral
+!bt
+\[
+\frac{e^{2}}{k\pi}\left[
+kk_F+\frac{k_{F}^{2}-k^{2}}{kk_{F}}ln\left\vert\frac{k+k_{F}}
+{k-k_{F}}\right\vert
+\right],
+\]
+!et
+which gives the abovementioned expression for the single-particle energy.
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock 
+Introducing the dimensionless quantity $x=k/k_F$ and the function
+!bt
+\[
+F(x) = \frac{1}{2}+\frac{1-x^2}{4x}\ln{\left\vert \frac{1+x}{1-x}\right\vert},
+\]
+!et
+we can rewrite the single-particle Hartree-Fock energy as 
+!bt
+\[
+\varepsilon_{k}^{HF}=\frac{\hbar^{2}k^{2}}{2m}-\frac{2e^{2}
+k_{F}}{\pi}F(k/k_F),
+\]
+!et
+and dividing by the non-interacting contribution at the Fermi level, 
+!bt
+\[
+\varepsilon_{0}^{F}=\frac{\hbar^{2}k_F^{2}}{2m},
+\]
+!et
+we have
+!bt
+\[
+\frac{\varepsilon_{k}^{HF} }{\varepsilon_{0}^{F}}=x^2-\frac{e^2m}{\hbar^2 k_F\pi}F(x)=x^2-\frac{4}{\pi k_Fa_0}F(x),
+\]
+!et
+where $a_0=0.0529$ nm is the Bohr radius, setting thereby a natural length scale. 
+!eblock
+
+
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock 
+
+By introducing the radius $r_s$ of a sphere whose volume is the volume occupied by each electron, we can rewrite the previous equation in terms of $r_s$ using that the electron density $n=N/V$
+!bt
+\[
+n=\frac{k_F^3}{3\pi^2} = \frac{3}{4\pi r_s^3},
+\]
+!et
+we have (with $k_F=1.92/r_s$,
+!bt
+\[
+\frac{\varepsilon_{k}^{HF} }{\varepsilon_{0}^{F}}=x^2-\frac{e^2m}{\hbar^2 k_F\pi}F(x)=x^2-\frac{r_s}{a_0}0.663F(x),
+\]
+!et
+with $r_s \sim 2-6$ for most metals. 
+!eblock
+
+
+!split
+===== Hartree-Fock band gap for  the  electron gas in three dimensions =====
+!bblock 
+We can now define the so-called band gap, that is the scatter between the maximal and the minimal value of the electrons in the conductance band of a metal (up to the Fermi level). 
+For $x=1$ and $r_s/a_0=4$ we have 
+!bt
+\[
+\frac{\varepsilon_{k=k_F}^{HF} }{\varepsilon_{0}^{F}} = -0.326,
+\]
+!et
+and for $x=0$ we have
+!bt
+\[
+\frac{\varepsilon_{k=0}^{HF} }{\varepsilon_{0}^{F}} = -2.652,
+\]
+!et
+which results in a gap at the Fermi level of 
+!bt
+\[
+\Delta \varepsilon^{HF} = \frac{\varepsilon_{k=k_F}^{HF} }{\varepsilon_{0}^{F}}-\frac{\varepsilon_{k=0}^{HF} }{\varepsilon_{0}^{F}} = 2.326.
+\]
+!et
+This quantity measures the deviation from the $k=0$ single-particle energy and the energy at the Fermi level.
+The general result is 
+!bt
+\[
+\Delta \varepsilon^{HF} = 1+\frac{r_s}{a_0}0.663.
+\]
+!et
+
+!eblock
+
+
+
+
+
+!split
+===== Plot of the Hartree-Fock single-particle energy for the three-dimensional electron gas  =====
+!bblock
+The following python code produces a plot of the electron energy for a free electron (only kinetic energy) and 
+for the Hartree-Fock solution. We have chosen here a ratio $r_s/a_0=4$ and the equations are plotted as funtions
+of $k/f_F$. 
+!bc pycod
+import numpy as np
+from math import log
+from  matplotlib import pyplot as plt
+from matplotlib import rc, rcParams
+import matplotlib.units as units
+import matplotlib.ticker as ticker
+rc('text',usetex=True)
+rc('font',**{'family':'serif','serif':['Hartree-Fock energy']})
+font = {'family' : 'serif',
+        'color'  : 'darkred',
+        'weight' : 'normal',
+        'size'   : 16,
+        }
+
+N = 100
+x = np.linspace(0.0, 2.0,N)
+F = 0.5+np.log(abs((1.0+x)/(1.0-x)))*(1.0-x*x)*0.25/x
+y = x*x -4.0*0.663*F
+
+plt.plot(x, y, 'b-')
+plt.plot(x, x*x, 'r-')
+plt.title(r'{\bf Hartree-Fock single-particle energy for electron gas}', fontsize=20)     
+plt.text(3, -40, r'Parameters: $r_s/a_0=4$', fontdict=font)
+plt.xlabel(r'$k/k_F$',fontsize=20)
+plt.ylabel(r'$\varepsilon_k^{HF}/\varepsilon_0^F$',fontsize=20)
+# Tweak spacing to prevent clipping of ylabel
+plt.subplots_adjust(left=0.15)
+plt.savefig('hartreefockspelgas.pdf', format='pdf')
+plt.show()
+!ec
+From the plot we notice that the exchange term increases considerably the band gap
+compared with the non-interacting gas of electrons.
+!eblock
+
+
+
+
+
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Exercise 2
+We consider a system of electrons in infinite matter, the so-called electron gas. This is a homogeneous system and the one-particle states are given by plane wave function normalized to a volume $\Omega$ 
+for a box with length $L$ (the limit $L\rightarrow \infty$ is to be taken after we have computed various expectation values)
+!bt
+\[
+\psi_{\mathbf{k}\sigma}(\mathbf{r})= \frac{1}{\sqrt{\Omega}}\exp{(i\mathbf{kr})}\xi_{\sigma}
+\]
+!et
+where $\mathbf{k}$ is the wave number and  $\xi_{\sigma}$ is a spin function for either spin up or down
+!bt
+\[ 
+\xi_{\sigma=+1/2}=\left(\begin{array}{c} 1 \\ 0 \end{array}\right) \hspace{0.5cm}
+\xi_{\sigma=-1/2}=\left(\begin{array}{c} 0 \\ 1 \end{array}\right).
+\]
+!et
+We assume that we have periodic boundary conditions which limit the allowed wave numbers to
+!bt
+\[
+k_i=\frac{2\pi n_i}{L}\hspace{0.5cm} i=x,y,z \hspace{0.5cm} n_i=0,\pm 1,\pm 2, \dots
+\]
+!et
+We assume first that the particles interact via a central, symmetric and translationally invariant
+interaction  $V(r_{12})$ with
+$r_{12}=|\mathbf{r}_1-\mathbf{r}_2|$.  The interaction is spin independent.
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Exercise 2
+The total Hamiltonian consists then of kinetic and potential energy
+!bt
+\[
+\hat{H} = \hat{T}+\hat{V}.
+\]
+!et
+Show that the operator for the kinetic energy can be written as
+!bt
+\[
+\hat{T}=\sum_{\mathbf{k}\sigma}\frac{\hbar^2k^2}{2m}a_{\mathbf{k}\sigma}^{\dagger}a_{\mathbf{k}\sigma}.
+\]
+!et
+Find also the number operator $\hat{N}$ and find a corresponding expression for the interaction
+$\hat{V}$ expressed with creation and annihilation operators.   The expression for the interaction
+has to be written in  $k$ space, even though $V$ depends only on the relative distance. It means that you ned to set up the Fourier transform $\langle \mathbf{k}_i\mathbf{k}_j| V | \mathbf{k}_m\mathbf{k}_n\rangle$.
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Exercise 2
+The Hamiltonian operator is given by
+!bt
+\[
+\hat{H}=\hat{H}_{el}+\hat{H}_{b}+\hat{H}_{el-b},
+\]
+!et
+with the electronic part
+!bt
+\[
+\hat{H}_{el}=\sum_{i=1}^N\frac{p_i^2}{2m}+\frac{e^2}{2}\sum_{i\ne j}\frac{e^{-\mu |\mathbf{r}_i-\mathbf{r}_j|}}{|\mathbf{r}_i-\mathbf{r}_j|},
+\]
+!et
+where we have introduced an explicit convergence factor
+(the limit $\mu\rightarrow 0$ is performed after having calculated the various integrals).
+Correspondingly, we have
+!bt
+\[
+\hat{H}_{b}=\frac{e^2}{2}\int\int d\mathbf{r}d\mathbf{r}'\frac{n(\mathbf{r})n(\mathbf{r}')e^{-\mu |\mathbf{r}-\mathbf{r}'|}}{|\mathbf{r}-\mathbf{r}'|},
+\]
+!et
+which is the energy contribution from the positive background charge with density
+$n(\mathbf{r})=N/\Omega$. Finally,
+!bt
+\[
+\hat{H}_{el-b}=-\frac{e^2}{2}\sum_{i=1}^N\int d\mathbf{r}\frac{n(\mathbf{r})e^{-\mu |\mathbf{r}-\mathbf{x}_i|}}{|\mathbf{r}-\mathbf{x}_i|},
+\]
+!et
+is the interaction between the electrons and the positive background.
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Exercise 2
+Show that
+!bt
+\[
+\hat{H}_{b}=\frac{e^2}{2}\frac{N^2}{\Omega}\frac{4\pi}{\mu^2},
+\]
+!et
+and
+!bt
+\[
+\hat{H}_{el-b}=-e^2\frac{N^2}{\Omega}\frac{4\pi}{\mu^2}.
+\]
+!et
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Exercise 2
+Show thereafter that the final Hamiltonian can be written as 
+!bt
+\[
+H=H_{0}+H_{I},
+\]
+!et
+with
+!bt
+\[
+H_{0}={\displaystyle\sum_{\mathbf{k}\sigma}}
+\frac{\hbar^{2}k^{2}}{2m}a_{\mathbf{k}\sigma}^{\dagger}
+a_{\mathbf{k}\sigma},
+\]
+!et
+and
+!bt
+\[
+H_{I}=\frac{e^{2}}{2\Omega}{\displaystyle\sum_{\sigma_{1}\sigma_{2}}}{\displaystyle\sum_{\mathbf{q}\neq 0,\mathbf{k},\mathbf{p}}}\frac{4\pi}{q^{2}}
+a_{\mathbf{k}+\mathbf{q},\sigma_{1}}^{\dagger}
+a_{\mathbf{p}-\mathbf{q},\sigma_{2}}^{\dagger}
+a_{\mathbf{p}\sigma_{2}}a_{\mathbf{k}\sigma_{1}}.
+\] 
+!et
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Exercise 2
+Calculate $E_0/N=\langle \Phi_{0}\vert H\vert \Phi_{0}\rangle/N$ for for this system to first order in the interaction. Show that, by using
+!bt
+\[
+\rho= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_0^3},
+\]
+!et
+with $\rho=N/\Omega$, $r_0$
+being the radius of a sphere representing the volume an electron occupies 
+and the Bohr radius $a_0=\hbar^2/e^2m$, 
+that the energy per electron can be written as 
+!bt
+\[
+E_0/N=\frac{e^2}{2a_0}\left[\frac{2.21}{r_s^2}-\frac{0.916}{r_s}\right].
+\]
+!et
+Here we have defined
+$r_s=r_0/a_0$ to be a dimensionless quantity.
+!eblock
+
+
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Exercise 2
+Plot your results. Why is this system stable?
+Calculate thermodynamical quantities like the pressure, given by
+!bt
+\[
+P=-\left(\frac{\partial E}{\partial \Omega}\right)_N,
+\]
+!et
+and the bulk modulus
+!bt
+\[
+B=-\Omega\left(\frac{\partial P}{\partial \Omega}\right)_N,
+\]
+!et
+and comment your results.
+
+!eblock
+
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Solution to exercise 2
+We have to show first  that
+!bt
+\[
+\hat{H}_{b}=\frac{e^2}{2}\frac{N_e^2}{\Omega}\frac{4\pi}{\mu^2},
+\]
+!et
+and
+!bt
+\[
+\hat{H}_{el-b}=-e^2\frac{N_e^2}{\Omega}\frac{4\pi}{\mu^2}.
+\]
+!et
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Solution to exercise 2
+
+And then that the final Hamiltonian can be written as 
+!bt
+\[
+H=H_{0}+H_{I},
+\]
+!et
+with
+!bt
+\[
+H_{0}={\displaystyle\sum_{\mathbf{k}\sigma}}
+\frac{\hbar^{2}k^{2}}{2m_e}a_{\mathbf{k}\sigma}^{\dagger}
+a_{\mathbf{k}\sigma},
+\]
+!et
+and
+!bt
+\[
+H_{I}=\frac{e^{2}}{2\Omega}{\displaystyle\sum_{\sigma_{1}
+\sigma_{2}}}{\displaystyle
+\sum_{\mathbf{q}\neq 0,\mathbf{k},\mathbf{p}}}\frac{4\pi}{q^{2}}
+a_{\mathbf{k}+\mathbf{q},\sigma_{1}}^{\dagger}
+a_{\mathbf{p}-\mathbf{q},\sigma_{2}}^{\dagger}
+a_{\mathbf{p}\sigma_{2}}a_{\mathbf{k}\sigma_{1}}.
+\] 
+!et
+
+!eblock
+
+!split
+===== Electron gas and HF solution =====
+!bblock
+Let us now calculate the following part of the Hamiltonian
+!bt
+\[ \hat H_b = \frac{e^2}{2} \iint \frac{n(\mathbf{r}) n(\mathbf{r}')e^{-\mu|\mathbf{r} - \mathbf{r}'|}}{|\mathbf{r} - \mathbf{r}'|} d\mathbf{r} d\mathbf{r}' , 
+\]
+!et
+where $n(\mathbf{r}) = N_e/\Omega$, the density of the positive background charge. We define $\mathbf{r}_{12} = \mathbf{r} - \mathbf{r}'$, resulting in $d\mathbf{r}_{12} = d\mathbf{r}$, and allowing us to rewrite the integral as
+!bt
+\[ 
+\hat H_b = \frac{e^2 N_e^2}{2\Omega^2} \iint \frac{e^{-\mu |\mathbf{r}_{12}|}}{|\mathbf{r}_{12}|} d\mathbf{r}_{12} d\mathbf{r}' = \frac{e^2 N_e^2}{2\Omega} \int \frac{e^{-\mu |\mathbf{r}_{12}|}}{|\mathbf{r}_{12}|} d\mathbf{r}_{12} . 
+\]
+!et
+Here we have used that $\int \! \mathbf{r} = \Omega$. We change to spherical coordinates and the lack of angle 
+dependencies yields a factor $4\pi$, resulting in
+!bt
+\[ 
+\hat H_b = \frac{4\pi e^2 N_e^2}{2\Omega} \int_0^\infty re^{-\mu r} \, \mathrm{d} r . 
+\]
+!et
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Solution to exercise 2
+Solving by partial integration
+!bt
+\[ \int_0^\infty re^{-\mu r} \, \mathrm{d} r = \left[ -\frac{r}{\mu} e^{-\mu r} \right]_0^\infty + \frac{1}{\mu} \int_0^\infty e^{-\mu r} \, \mathrm{d} r
+= \frac{1}{\mu} \left[ - \frac{1}{\mu} e^{-\mu r} \right]_0^\infty = \frac{1}{\mu^2}, 
+\]
+!et
+gives
+!bt
+\[
+\hat{H}_b = \frac{e^2}{2} \frac{N_e^2}{\Omega} \frac{4\pi}{\mu^2} .
+\]
+!et
+The next term is 
+!bt
+\[ 
+\hat H_{el-b} = -e^2 \sum_{i = 1}^N \int \frac{n(\mathbf{r}) e^{-\mu |\mathbf{r} - \mathbf{x}_i|}}{|\mathbf{r} - \mathbf{x}_i|} \mathbf{r} . 
+\]
+!et
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Solution to exercise 2
+Inserting  $n(\mathbf{r})$ and changing variables in the same way as in the previous integral $\mathbf{y} = \mathbf{r} - \mathbf{x}_i$, we get $\mathrm{d}^3 \mathbf{y} = \mathrm{d}^3 \mathbf{r}$. This gives
+!bt
+\begin{align}
+\hat H_{el-b} = -\frac{e^2 N_e}{\Omega} \sum_{i = 1^N} \int \frac{e^{-\mu |\mathbf{y}|}}{|\mathbf{y}|} \, \mathrm{d}^3 \mathbf{y}
+=  -\frac{4\pi e^2 N_e}{\Omega} \sum_{i = 1}^N \int_0^\infty y e^{-\mu y} \mathrm{d} y. 
+\end{align}
+!et
+We have already seen this  type of integral. The answer is 
+!bt
+\[ 
+\hat H_{el-b} = -\frac{4\pi e^2 N_e}{\Omega} \sum_{i = 1}^N \frac{1}{\mu^2}, 
+\]
+!et
+which gives
+!bt
+\[
+\hat H_{el-b} = -e^2 \frac{N_e^2}{\Omega} \frac{4\pi}{\mu^2} .
+\]
+!et
+!eblock
+
+!split
+===== Hartree-Fock ground state energy for the  electron gas in three dimensions =====
+!bblock  Solution to exercise 2
+Finally, we need to evaluate $\hat H_{el}$. This term reads
+!bt
+\[ 
+\hat H_{el} = \sum_{i=1}^{N_e} \frac{\hat{\vec p}_i^2}{2m_e} + \frac{e^2}{2} \sum_{i \neq j} \frac{e^{-\mu |\mathbf{r}_i - \mathbf{r}_j|}}{\mathbf{r}_i - \mathbf{r}_j} . 
+\]
+!et
+The last term represents the repulsion between two electrons. It is a central symmetric interaction
+and is translationally invariant. The potential is given by the expression
+!bt
+\[ 
+v(|\mathbf{r}|) = e^2 \frac{e^{\mu|\mathbf{r}|}}{|\mathbf{r}|}, 
+\]
+!et
+which we derived in connection with the single-particle Hartree-Fock derivation.
+
+More material will be added here!
+!eblock
+
+
+
+!split
+===== Preparing the ground for numerical calculations; kinetic energy and Ewald term =====
+!bblock
+The kinetic energy operator is
+!bt
+\begin{align}
+  \hat{H}_{\text{kin}} = -\frac{\hbar^{2}}{2m}\sum_{i=1}^{N}\nabla_{i}^{2},
+\end{align}
+!et
+where the sum is taken over all particles in the finite
+box. The Ewald electron-electron interaction operator 
+can be written as 
+!bt
+\begin{align}
+  \hat{H}_{ee} = \sum_{i < j}^{N} v_{E}\left( \mathbf{r}_{i}-\mathbf{r}_{j}\right)
+  + \frac{1}{2}Nv_{0},
+\end{align}
+!et
+where $v_{E}(\mathbf{r})$ is the effective two-body 
+interaction and $v_{0}$ is the self-interaction, defined 
+as $v_{0} = \lim_{\mathbf{r} \rightarrow 0} \left\{ v_{E}(\mathbf{r}) - 1/r\right\} $. 
+
+!eblock
+
+!split
+===== Computing numerically properties of the electron gas =====
+!bblock
+The negative 
+electron charges are neutralized by a positive, homogeneous 
+background charge. Fraser *et al.* explain how the
+electron-background and background-background terms, 
+$\hat{H}_{eb}$ and $\hat{H}_{bb}$, vanish
+when using Ewald's interaction for the three-dimensional
+electron gas. Using the same arguments, one can show that
+these terms are also zero in the corresponding 
+two-dimensional system. 
+
+!eblock
+
+!split
+===== Ewald correction term =====
+!bblock
+In the three-dimensional electron gas, the Ewald 
+interaction is 
+!bt
+\begin{align}
+  v_{E}(\mathbf{r}) &= \sum_{\mathbf{k} \neq \mathbf{0}}
+  \frac{4\pi }{L^{3}k^{2}}e^{i\mathbf{k}\cdot \mathbf{r}}
+  e^{-\eta^{2}k^{2}/4} \nonumber \\
+  &+ \sum_{\mathbf{R}}\frac{1}{\left| \mathbf{r}
+    -\mathbf{R}\right| } \mathrm{erfc} \left( \frac{\left| 
+    \mathbf{r}-\mathbf{R}\right|}{\eta }\right)
+  - \frac{\pi \eta^{2}}{L^{3}},
+\end{align}
+!et
+where $L$ is the box side length, $\mathrm{erfc}(x)$ is the 
+complementary error function, and $\eta $ is a free
+parameter that can take any value in the interval 
+$(0, \infty )$.
+!eblock
+
+!split
+===== Interaction in momentum space  =====
+!bblock
+The translational vector 
+!bt
+\begin{align}
+  \mathbf{R} = L\left(n_{x}\mathbf{u}_{x} + n_{y}
+  \mathbf{u}_{y} + n_{z}\mathbf{u}_{z}\right) ,
+\end{align}
+!et
+where $\mathbf{u}_{i}$ is the unit vector for dimension $i$,
+is defined for all integers $n_{x}$, $n_{y}$, and 
+$n_{z}$. These vectors are used to obtain all image
+cells in the entire real space. 
+The parameter $\eta $ decides how 
+the Coulomb interaction is divided into a short-ranged
+and long-ranged part, and does not alter the total
+function. However, the number of operations needed
+to calculate the Ewald interaction with a desired 
+accuracy depends on $\eta $, and $\eta $ is therefore 
+often chosen to optimize the convergence as a function
+of the simulation-cell size. In
+our calculations, we choose $\eta $ to be an infinitesimally
+small positive number, similarly as was done by "Shepherd *et al.*":"https://journals.aps.org/prb/abstract/10.1103/PhysRevB.86.035111" and "Roggero *et al.*":"https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.115138".
+
+This gives an interaction that is evaluated only in
+Fourier space. 
+
+!eblock
+
+!split
+===== Ewald Effective interaction in two dimensions =====
+!bblock
+When studying the two-dimensional electron gas, we
+use an Ewald interaction that is quasi two-dimensional.
+The interaction is derived in three dimensions, with 
+Fourier discretization in only two dimensions. The Ewald effective
+interaction has the form 
+!bt
+\begin{align}
+  v_{E}(\mathbf{r}) &= \sum_{\mathbf{k} \neq \mathbf{0}} 
+  \frac{\pi }{L^{2}k}\left\{ e^{-kz} \mathrm{erfc} \left(
+  \frac{\eta k}{2} - \frac{z}{\eta }\right)+ \right. \nonumber \\
+  & \left. e^{kz}\mathrm{erfc} \left( \frac{\eta k}{2} + \frac{z}{\eta }
+  \right) \right\} e^{i\mathbf{k}\cdot \mathbf{r}_{xy}} 
+  \nonumber \\
+  & + \sum_{\mathbf{R}}\frac{1}{\left| \mathbf{r}-\mathbf{R}
+    \right| } \mathrm{erfc} \left( \frac{\left| \mathbf{r}-\mathbf{R}
+    \right|}{\eta }\right) \nonumber \\
+  & - \frac{2\pi}{L^{2}}\left\{ z\mathrm{erf} \left( \frac{z}{\eta }
+  \right) + \frac{\eta }{\sqrt{\pi }}e^{-z^{2}/\eta^{2}}\right\},
+\end{align}
+!et
+where the Fourier vectors $\mathbf{k}$ and the position vector
+$\mathbf{r}_{xy}$ are defined in the $(x,y)$ plane. When
+applying the interaction $v_{E}(\mathbf{r})$ to two-dimensional
+systems, we set $z$ to zero. 
+
+!eblock
+
+!split
+===== And in three dimensions =====
+!bblock
+Similarly as in the 
+three-dimensional case, also here we 
+choose $\eta $ to approach zero from above. The resulting 
+Fourier-transformed interaction is
+!bt
+\begin{align}
+  v_{E}^{\eta = 0, z = 0}(\mathbf{r}) = \sum_{\mathbf{k} \neq \mathbf{0}} 
+  \frac{2\pi }{L^{2}k}e^{i\mathbf{k}\cdot \mathbf{r}_{xy}}. 
+\end{align}
+!et
+The self-interaction $v_{0}$ is a constant that can be 
+included in the reference energy.
+
+!eblock
+
+!split
+===== Antisymmetrized matrix elements in three dimensions =====
+!bblock
+In the three-dimensional electron gas, the antisymmetrized
+matrix elements are
+!bt
+\begin{align} label{eq:vmat_3dheg}
+  & \langle \mathbf{k}_{p}m_{s_{p}}\mathbf{k}_{q}m_{s_{q}}
+  |\tilde{v}|\mathbf{k}_{r}m_{s_{r}}\mathbf{k}_{s}m_{s_{s}}\rangle_{AS} 
+  \nonumber \\
+  & = \frac{4\pi }{L^{3}}\delta_{\mathbf{k}_{p}+\mathbf{k}_{q},
+    \mathbf{k}_{r}+\mathbf{k}_{s}}\left\{ 
+  \delta_{m_{s_{p}}m_{s_{r}}}\delta_{m_{s_{q}}m_{s_{s}}}
+  \left( 1 - \delta_{\mathbf{k}_{p}\mathbf{k}_{r}}\right) 
+  \frac{1}{|\mathbf{k}_{r}-\mathbf{k}_{p}|^{2}}
+  \right. \nonumber \\
+  & \left. - \delta_{m_{s_{p}}m_{s_{s}}}\delta_{m_{s_{q}}m_{s_{r}}}
+  \left( 1 - \delta_{\mathbf{k}_{p}\mathbf{k}_{s}} \right)
+  \frac{1}{|\mathbf{k}_{s}-\mathbf{k}_{p}|^{2}} 
+  \right\} ,
+\end{align}
+!et
+where the Kronecker delta functions 
+$\delta_{\mathbf{k}_{p}\mathbf{k}_{r}}$ and
+$\delta_{\mathbf{k}_{p}\mathbf{k}_{s}}$ ensure that the 
+contribution with zero momentum transfer vanishes.
+!eblock
+
+
+!split
+===== Antisymmetrized matrix elements in two dimensions =====
+!bblock
+Similarly, the matrix elements for the two-dimensional
+electron gas are
+!bt
+\begin{align} label{eq:vmat_2dheg}
+  & \langle \mathbf{k}_{p}m_{s_{p}}\mathbf{k}_{q}m_{s_{q}}
+  |v|\mathbf{k}_{r}m_{s_{r}}\mathbf{k}_{s}m_{s_{s}}\rangle_{AS} 
+  \nonumber \\
+  & = \frac{2\pi }{L^{2}}
+  \delta_{\mathbf{k}_{p}+\mathbf{k}_{q},\mathbf{k}_{r}+\mathbf{k}_{s}}
+  \left\{ \delta_{m_{s_{p}}m_{s_{r}}}\delta_{m_{s_{q}}m_{s_{s}}} 
+  \left( 1 - \delta_{\mathbf{k}_{p}\mathbf{k}_{r}}\right)
+  \frac{1}{
+    |\mathbf{k}_{r}-\mathbf{k}_{p}|} \right.
+  \nonumber \\
+  & - \left. \delta_{m_{s_{p}}m_{s_{s}}}\delta_{m_{s_{q}}m_{s_{r}}}
+  \left( 1 - \delta_{\mathbf{k}_{p}\mathbf{k}_{s}}\right)
+  \frac{1}{ 
+    |\mathbf{k}_{s}-\mathbf{k}_{p}|}
+  \right\} ,
+\end{align}
+!et
+where the single-particle momentum vectors $\mathbf{k}_{p,q,r,s}$
+are now defined in two dimensions.
+!eblock
+
+!split
+===== Fock operator =====
+!bblock
+In the calculations, the 
+self-interaction constant is included in the reference 
+energy. We therefore get the 
+Fock-operator matrix elements 
+!bt
+\begin{align}
+  \langle \mathbf{k}_{p}|f|\mathbf{k}_{q} \rangle
+  = \frac{\hbar^{2}k_{p}^{2}}{2m}\delta_{\mathbf{k}_{p},
+  \mathbf{k}_{q}} + \sum_{\mathbf{k}_{i}}\langle 
+  \mathbf{k}_{p}\mathbf{k}_{i}|v|\mathbf{k}_{q}
+  \mathbf{k}_{i}\rangle_{AS}.
+  label{eq:fock_heg}
+\end{align}
+!et
+In work of Shepherd *et al.* the matrix elements were 
+defined with the self-interaction constant included in the
+two-body interaction. This gives Fock-operator matrix 
+elements with a gap constant.
+!eblock
+
+!split
+===== Periodic boundary conditions and single-particle states =====
+!bblock
+When using periodic boundary conditions, the 
+discrete-momentum single-particle basis functions 
+!bt
+\[
+\phi_{\mathbf{k}}(\mathbf{r}) =
+e^{i\mathbf{k}\cdot \mathbf{r}}/L^{d/2}
+\]
+!et
+are associated with 
+the single-particle energy   
+!bt
+\begin{align}
+  \varepsilon_{n_{x}, n_{y}} = \frac{\hbar^{2}}{2m} \left( \frac{2\pi }{L}\right)^{2}\left( n_{x}^{2} + n_{y}^{2}\right)
+\end{align}
+!et
+for two-dimensional sytems and 
+!bt
+\begin{align}
+  \varepsilon_{n_{x}, n_{y}, n_{z}} = \frac{\hbar^{2}}{2m}
+  \left( \frac{2\pi }{L}\right)^{2}
+  \left( n_{x}^{2} + n_{y}^{2} + n_{z}^{2}\right)
+\end{align} 
+!et
+for three-dimensional systems.
+!eblock
+
+!split
+===== Single-particle states in two and three dimensions =====
+!bblock
+We choose  the single-particle basis such that both the occupied and 
+unoccupied single-particle spaces have a closed-shell 
+structure. This means that all single-particle states 
+corresponding to energies below a chosen cutoff are
+included in the basis. We study only the unpolarized spin
+phase, in which all orbitals are occupied with one spin-up 
+and one spin-down electron. 
+!eblock
+
+!split
+===== Setting up single-particle states =====
+!bblock
+The table illustrates  how single-particle energies
+    fill energy shells in a two-dimensional electron box.
+  Here $n_{x}$ and $n_{y}$ are the momentum quantum numbers,
+  $n_{x}^{2} + n_{y}^{2}$ determines the single-particle 
+  energy level, $N_{\uparrow \downarrow }$ represents the 
+  cumulated number of spin-orbitals in an unpolarized spin
+  phase, and $N_{\uparrow \uparrow }$ stands for the
+  cumulated number of spin-orbitals in a spin-polarized
+  system.
+
+!eblock
+
+!split
+===== Magic number for the two-dimensional electron gas =====
+!bblock
+
+|------------------------------------------------------------------------------------------------------|
+| $n_{x}^{2}+n_{y}^{2}$ | $n_{x}$ | $n_{y}$ |  $N_{\uparrow \downarrow }$ | $N_{\uparrow \uparrow }$   |
+|------------------------------------------------------------------------------------------------------|
+|    0                  | 0       | 0       | 2                           | 1                          |
+|------------------------------------------------------------------------------------------------------|
+|    1 | -1 |  0 | | |
+|    |  1 |  0 | | |
+|    |  0 | -1 | | |
+|    |  0 |  1 | 10 | 5 |
+|---------------------------|
+|    2  | -1 | -1 | | |
+|    | -1 |  1 | | |
+|    |  1 | -1 | | |
+|    |  1 |  1 | 18 | 9 |
+|---------------------------|
+|    4  | -2 | 0 | | |
+|    |  2 | 0 | | |
+|    |  0 | -2 | | |
+|    |  0 |  2 | 26 | 13 |
+|---------------------------|
+|    5  | -2 | -1 | | |
+|    |  2 | -1 | | |
+|    | -2 |  1 | | |
+|    |  2 |  1 | | |
+|    | -1 | -2 | | |
+|    | -1 |  2 | | |
+|    |  1 | -2 | | |
+|    |  1 |  2 | 42 | 21 |
+|---------------------------|
+
+!eblock
+
+!split
+===== Hartree-Fock benchmarks in two and three dimensions =====
+!bblock
+Finally, a useful benchmark for our calculations is the expression for
+the reference energy $E_0$ per particle.
+Defining the $T=0$ density $\rho_0$, we can in turn determine in three
+dimensions the radius $r_0$ of a sphere representing the volume an
+electron occupies (the classical electron radius) as
+!bt
+\[
+r_0= \left(\frac{3}{4\pi \rho}\right)^{1/3}.
+\]
+!et
+In two dimensions the corresponding quantity is
+!bt
+\[
+r_0= \left(\frac{1}{\pi \rho}\right)^{1/2}.
+\]
+!et
+!eblock
+
+!split
+===== Hartree-Fock energies =====
+!bblock
+One can then express the reference energy per electron in terms of the
+dimensionless quantity $r_s=r_0/a_0$, where we have introduced the
+Bohr radius $a_0=\hbar^2/e^2m$. The energy per electron computed with
+the reference Slater determinant can then be written as
+(using hereafter only atomic units, meaning that $\hbar = m = e = 1$)
+!bt
+\[
+E_0/N=\frac{1}{2}\left[\frac{2.21}{r_s^2}-\frac{0.916}{r_s}\right],
+\]
+!et
+for the three-dimensional electron gas.  For the two-dimensional gas
+the corresponding expression is (show this)
+!bt
+\[
+E_0/N=\frac{1}{r_s^2}-\frac{8\sqrt{2}}{3\pi r_s}.
+\]
+!et
+!eblock
+
+!split
+===== Simplifications to many-body theories =====
+!bblock
+For an infinite homogeneous system, there are some particular
+simplications due to the conservation of the total momentum of the
+particles.  By symmetry considerations, the total momentum of the
+system has to be zero. Both the kinetic energy operator and the
+total Hamiltonian $\hat{H}$ are assumed to be diagonal in the total
+momentum $\mathbf{K}$. Hence, both the reference state $\Phi_{0}$ and
+the correlated ground state $\Psi$ must be eigenfunctions of the
+operator $\mathbf{\hat{K}}$ with the corresponding eigenvalue
+$\mathbf{K} = \mathbf{0}$.  This leads to important
+simplications to our different many-body methods. In coupled cluster
+theory for example, all
+terms that involve single particle-hole excitations vanish. 
+!eblock
+
+
+!split
+===== Specific tasks =====
+!bblock
+
+* Start by solving exercises 1 and 2 and convince yourself about the correctness of the expressions.
+* Convince yourself about the Hartree-Fock results for the two-dimensional system.
+* In order to start coding, you should read in parallel a text on "programming and numerical methods":"http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf".
+* The first programming exercise is to set up the basis functions for two and three dimensions using periodic boundary conditions. Extend the table above to the three-dimensional case. 
+* Compute thereafter the Hartree-Fock energy in two and three dimensions and make sure that your basis is large enough to reach the so-called Hartree-Fock limit.
+
+!eblock
+
+!split
+===== Screened interactions and periodic boundary conditions =====
+!bblock
+As soon as you have the Hartree-Fock program functioning, you can start looking at a modified Coulomb interaction with a screening term, a so-called Yukawa-type interaction, that is 
+!bt
+\[
+V(r) \approx \frac{\exp{-(\mu r)}}{\mu r},
+\]
+!et
+where $\mu$ plays the role of an effective range parameter with dimension inverse length. 
+* Play around with different  values of $\mu$ and check the stability of the Hartree-Fock results as function of the number of single-particle basis states. 
+* Study thereafter the stability of the solutions (pick some selected values of $\mu$ and study the Hartree-Fock results with standard periodic boundary conditions and so-called "twisted boundary conditions":"https://journals.aps.org/prc/abstract/10.1103/PhysRevC.89.014319". 
+
+!eblock
+
+
+
+
+
+
+

@@ -18,6 +18,7 @@
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
 <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
@@ -35,14 +36,21 @@
 <link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
 <link rel="stylesheet" href="reveal.js/css/theme/cbc.css" id="theme">
 <link rel="stylesheet" href="reveal.js/css/theme/simula.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/league.css" id="theme">
 -->
 
 <!-- For syntax highlighting -->
 <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
-<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<!-- Printing and PDF exports -->
 <script>
-document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
 </script>
 
 <style type="text/css">
@@ -57,7 +65,7 @@ document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.l
              text-shadow:0 1px 0 rgba(255,255,255,0.5);
              border:5px solid #bababa;
              -webkit-border-radius: 14px; -moz-border-radius: 14px;
-             border-radius:14px
+             border-radius:14px;
              background-position: 10px 10px;
              background-repeat: no-repeat;
              background-size: 38px;
@@ -133,18 +141,17 @@ MathJax.Hub.Config({
 <b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
 </center>
 
-
 <p>&nbsp;<br>
 <!-- institution(s) -->
-<p>&nbsp;<br>
-<center><h4>Spring 2015</h4></center> <!-- date -->
-<p>
 
+<br>
+<p>&nbsp;<br>
+<center><h4>Spring 2016</h4></center> <!-- date -->
+<br>
 </section>
 
 
 <section>
-
 <h2 id="___sec0">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -171,15 +178,10 @@ transitions \( J_{i} \) is that for the higher-energy initial state. But in
 Coulomb excitation the initial state is usually
 taken as the ground state, and it is normal to use the notation \( B(\uparrow) \) for transitions from the ground state.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec1">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -191,7 +193,6 @@ $$
 {\cal O}(\lambda ) = \sum_{i} O(\lambda ,i). 
 $$
 <p>&nbsp;<br>
-
 
 <p>
 The electric transition operator is given by
@@ -206,15 +207,10 @@ and \( q \) stands for proton \( q=p \) or neutron \( q=n \).
 
 
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec2">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -233,15 +229,10 @@ neutron, which represent the center-of-mass corrections and the
 average effects of the renormalization from wavefunction
 admixtures outside the model space.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec3">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -269,15 +260,10 @@ $$
 
 and where \( m_{p} \) is the mass of the proton.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec4">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -293,15 +279,10 @@ space.
 
 
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec5">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -321,15 +302,10 @@ O(E2) = r^{2}Y^{(2)}_{\mu }(\hat{r})e_{q} e,
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec6">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -348,15 +324,10 @@ O(M1)=\sqrt{\frac{3}{4\pi }}[\mathbf{l}g^{l }_{q}+\mathbf{s} \; g^{s}_{q}]\mu _{
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec7">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -388,15 +359,10 @@ The matrix element will vanish unless  \( \pi _{i}\pi _{f}\pi _{O}=+1 \).
 
 
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec8">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -419,17 +385,11 @@ $$
 <p>&nbsp;<br>
 
 
-
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec9">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -455,15 +415,10 @@ Q = \sqrt{\frac{16\pi }{5}}\langle J,M=J\vert {\cal O}(E2)\vert J,M=J\rangle= \s
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec10">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -494,15 +449,10 @@ densities OBTD, and the other involving the reduced
 single-particle matrix
 elements (SPME).
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec11">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -520,15 +470,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec12">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -565,15 +510,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec13">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -607,15 +547,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec14">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -642,15 +577,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec15">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -682,15 +612,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec16">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -735,15 +660,10 @@ $$
 Thus the \( M1 \) operator connects only
 those orbitals which have the same \( n \) and \( l \) values.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec17">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -772,15 +692,10 @@ $$
 The state \( \vert \Psi_0\rangle \) is not normalized, rather we have used an intermediate 
 normalization \( \langle \Phi_0 \vert \Psi_0\rangle=1 \) since we have \( \langle \Phi_0\vert \Phi_0\rangle=1 \).
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec18">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -816,21 +731,16 @@ $$
 
 which is an exact result. We call this quantity the correlation energy.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec19">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 This equation forms the starting point for all perturbative derivations. However,
-as it stands it represents nothing but a mere formal rewriting of Schroedinger's equation and is not of much practical use. The exact wave function \( \vert \Psi_0\rangle \) is unknown. In order to obtain a perturbative expansion, we need to expand the exact wave function in terms of the interaction \( \hat{H}_I \). 
+as it stands it represents nothing but a mere formal rewriting of Schroedinger's equation and is not of much practical use. The exact wave function \( \vert \Psi_0\rangle \) is unknown. In order to obtain a perturbative expansion, we need to expand the exact wave function in terms of the interaction \( \hat{H}_I \).
 
 <p>
 Here we have assumed that our model space defined by the operator \( \hat{P} \) is one-dimensional, meaning that
@@ -847,15 +757,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec20">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -876,15 +781,10 @@ $$
 
 where \( \omega \) is an energy variable to be specified later.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec21">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -896,7 +796,6 @@ $$
 \left(\omega-\hat{H}_0\right)^{-1}=\frac{1}{\left(\omega-\hat{H}_0\right)}.
 $$
 <p>&nbsp;<br>
-
 
 <p>
 We can rewrite Schroedinger's equation as
@@ -917,15 +816,10 @@ which is possible since we have defined the operator \( \hat{Q} \) in terms of t
 
 
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec22">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -949,15 +843,10 @@ and does not represent a practical calculational scheme.
 It is a non-linear equation in two unknown quantities, the energy \( E \) and the exact
 wave function \( \vert \Psi_0\rangle \). We can however start with a guess for \( \vert \Psi_0\rangle \) on the right hand side of the last equation.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec23">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -979,22 +868,17 @@ $$
 which is now  a perturbative expansion of the exact energy in terms of the interaction
 \( \hat{H}_I \) and the unperturbed wave function \( \vert \Psi_0\rangle \).
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec24">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 In our equations for \( \vert \Psi_0\rangle \) and \( \Delta E \) in terms of the unperturbed
 solutions \( \vert \Phi_i\rangle \)  we have still an undetermined parameter \( \omega \)
-and a dependecy on the exact energy \( E \). Not much has been gained thus from a practical computational point of view. 
+and a dependecy on the exact energy \( E \). Not much has been gained thus from a practical computational point of view.
 
 <p>
 In Brilluoin-Wigner perturbation theory it is customary to set \( \omega=E \). This results in the following perturbative expansion for the energy \( \Delta E \)
@@ -1011,19 +895,13 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec25">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
-<p>
 <p>&nbsp;<br>
 $$
 \Delta E=\sum_{i=0}^{\infty}\langle \Phi_0\vert \hat{H}_I\left\{\frac{\hat{Q}}{\omega-\hat{H}_0}\left(\omega-E+\hat{H}_I\right)\right\}^i\vert \Phi_0\rangle=$$
@@ -1036,7 +914,7 @@ $$
 $$
 <p>&nbsp;<br>
 
-This expression depends however on the exact energy \( E \) and is again not very convenient from a practical point of view. It can obviously be solved iteratively, by starting with a guess for  \( E \) and then solve till some kind of self-consistency criterion has been reached. 
+This expression depends however on the exact energy \( E \) and is again not very convenient from a practical point of view. It can obviously be solved iteratively, by starting with a guess for  \( E \) and then solve till some kind of self-consistency criterion has been reached.
 
 <p>
 Actually, the above expression is nothing but a rewrite again of the full Schr\"odinger equation.
@@ -1059,13 +937,10 @@ $$
 \frac{1}{\hat{e}}\hat{Q}\hat{H}_I\hat{Q}\frac{1}{\hat{e}}+\dots\right]\hat{Q}.
 $$
 <p>&nbsp;<br>
-
-
 </section>
 
 
 <section>
-
 <h2 id="___sec26">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1092,15 +967,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec27">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1120,15 +990,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec28">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1157,19 +1022,13 @@ $$
 
 which is the contribution to second order.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec29">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
-<p>
 <p>&nbsp;<br>
 $$
 \Delta E^{(3)}=\langle \Phi_0\vert \hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\frac{\hat{Q}}{W_0-\hat{H}_0}\hat{H}_I\Phi_0\rangle-
@@ -1179,30 +1038,20 @@ $$
 
 being the third-order contribution.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec30">Electromagnetic multipole moments and transitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 Let us analyse a given contribution to first first order in perturbation, that is, the contribution includes (more material to come)
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec31">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1210,15 +1059,10 @@ Let us analyse a given contribution to first first order in perturbation, that i
 We will now focus on  allowed \( \beta \)-decay.  
 Suhonen's chapter 7 and Alex Brown's chapter 29 cover much of the material to be discussed on \( \beta \)-decay.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec32">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1247,15 +1091,10 @@ The weak-interaction vector (\( V \)) and axial-vector (\( A \)) coupling
 constants for the decay of neutron into a proton are denoted by \( g_{V} \)
 and \( g_{A} \), respectively.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec33">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1292,15 +1131,10 @@ t_{1/2} = \frac{T_{1/2}}{b_{if}}.
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec34">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1322,15 +1156,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec35">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1360,15 +1189,10 @@ $$
 
 This result, together with the value of \( K_{o} \) can be used to obtain \( g_{V} \).
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec36">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1382,15 +1206,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec37">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1433,15 +1252,10 @@ t_{+}\vert p\rangle=\vert n\rangle, \;\; t_{+}\vert n\rangle= 0.
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec38">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1459,15 +1273,10 @@ the Fermi matrix element must obey the isospin triangle condition
 \( T_{f}=T_{i} \) $(\Delta T=0)$, and the Fermi operator can only connect
 isobaric analogue states.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec39">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1500,15 +1309,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec40">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1542,15 +1346,10 @@ B(F_{+})(N_{i}> Z_{i}) = 0.
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec41">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1586,15 +1385,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec42">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1607,15 +1401,10 @@ with the same \( \ell \) value. The matrix elements such as
 are zero due to the \( \Delta\ell \) coupling are called \( \ell \)-<b>forbidden</b> matrix
 elements.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec43">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1648,15 +1437,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec44">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1710,15 +1494,10 @@ $$
 $$
 <p>&nbsp;<br>
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec45">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1739,20 +1518,14 @@ $$
 $$
 <p>&nbsp;<br>
 
-
 <p>
 The sum-rule for the Fermi matrix elements applies even
 when isospin is not conserved.
 </div>
-
-
-<p>
-
 </section>
 
 
 <section>
-
 <h2 id="___sec46">\( \beta \)-decay </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
@@ -1772,11 +1545,6 @@ and then we obtain \( B(GT_{-}) = 3(N_{i}-Z_{i}) \). In particular
 for the \( \beta_{-} \) decay of the neutron we have \( B(F_{-})=1 \)
 and \( B(GT_{-})=3 \).
 </div>
-
-
-<p>
-
-
 </section>
 
 
@@ -1785,7 +1553,7 @@ and \( B(GT_{-})=3 \).
 </div> <!-- class="reveal" -->
 
 <script src="reveal.js/lib/js/head.min.js"></script>
-<script src="reveal.js/js/reveal.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:

@@ -11,32 +11,37 @@ Automatically generated HTML file from DocOnce source
 <title>Single-particle properties and nuclear data</title>
 
 
-<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
-<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
 <style type="text/css">
-h1 {color: #b58900;}  /* yellow */
-/* h1 {color: #cb4b16;}  orange */
-/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
-code { padding: 0px; background-color: inherit; }
-pre {
-  border: 0pt solid #93a1a1;
-  box-shadow: none;
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
 }
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 .alert-text-small   { font-size: 80%;  }
 .alert-text-large   { font-size: 130%; }
 .alert-text-normal  { font-size: 90%;  }
 .alert {
   padding:8px 35px 8px 14px; margin-bottom:18px;
   text-shadow:0 1px 0 rgba(255,255,255,0.5);
-  border:1px solid #93a1a1;
+  border:1px solid #bababa;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   color: #555;
-  background-color: #eee8d5;
+  background-color: #f8f8f8;
   background-position: 10px 5px;
   background-repeat: no-repeat;
   background-size: 38px;
@@ -47,10 +52,10 @@ pre {
 .alert-block > p, .alert-block > ul {margin-bottom:1em}
 .alert li {margin-top: 1em}
 .alert-block p+p {margin-top:5px}
-.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
-.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
-.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
-.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
 
 div { text-align: justify; text-justify: inter-word; }
 </style>
@@ -60,131 +65,125 @@ div { text-align: justify; text-justify: inter-word; }
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [(' Motivation ', 2, None, '___sec0'),
-              (' Motivation ', 2, None, '___sec1'),
-              (' Motivation ', 2, None, '___sec2'),
-              (' Motivation ', 2, None, '___sec3'),
-              (' Motivation ', 2, None, '___sec4'),
-              (' Motivation ', 2, None, '___sec5'),
-              (' Motivation ', 2, None, '___sec6'),
-              (' Motivation ', 2, None, '___sec7'),
-              (' Motivation ', 2, None, '___sec8'),
-              (' Recent articles on Oxygen isotopes ', 2, None, '___sec9'),
-              (' Motivation ', 2, None, '___sec10'),
-              (' Masses and Binding energies ', 2, None, '___sec11'),
-              (' Masses and Binding energies ', 2, None, '___sec12'),
-              (' Masses and Binding energies ', 2, None, '___sec13'),
-              (' Masses and Binding energies ', 2, None, '___sec14'),
-              (' Liquid drop model as a simple parametrization of binding energies  ',
+ 'sections': [('Motivation', 2, None, '___sec0'),
+              ('Motivation', 2, None, '___sec1'),
+              ('Motivation', 2, None, '___sec2'),
+              ('Motivation', 2, None, '___sec3'),
+              ('Motivation', 2, None, '___sec4'),
+              ('Motivation', 2, None, '___sec5'),
+              ('Motivation', 2, None, '___sec6'),
+              ('Motivation', 2, None, '___sec7'),
+              ('Motivation', 2, None, '___sec8'),
+              ('Recent articles on Oxygen isotopes', 2, None, '___sec9'),
+              ('Motivation', 2, None, '___sec10'),
+              ('Masses and Binding energies', 2, None, '___sec11'),
+              ('Masses and Binding energies', 2, None, '___sec12'),
+              ('Masses and Binding energies', 2, None, '___sec13'),
+              ('Masses and Binding energies', 2, None, '___sec14'),
+              ('Liquid drop model as a simple parametrization of binding energies',
                2,
                None,
                '___sec15'),
-              (' Liquid drop model as a simple parametrization of binding energies  ',
+              ('Liquid drop model as a simple parametrization of binding energies',
                2,
                None,
                '___sec16'),
-              (' Masses and Binding energies ', 2, None, '___sec17'),
-              (' Masses and Binding energies ', 2, None, '___sec18'),
-              (' $Q$-values and separation energies ', 2, None, '___sec19'),
-              (' Motivation ', 2, None, '___sec20'),
-              (' $Q$-values and separation energies ', 2, None, '___sec21'),
-              (' $Q$-values and separation energies ', 2, None, '___sec22'),
-              ('  Separation energies and energy gaps ', 2, None, '___sec23'),
-              ('  Separation energies for oxygen isotopes ',
+              ('Masses and Binding energies', 2, None, '___sec17'),
+              ('Masses and Binding energies', 2, None, '___sec18'),
+              ('$Q$-values and separation energies', 2, None, '___sec19'),
+              ('Motivation', 2, None, '___sec20'),
+              ('$Q$-values and separation energies', 2, None, '___sec21'),
+              ('$Q$-values and separation energies', 2, None, '___sec22'),
+              ('Separation energies and energy gaps', 2, None, '___sec23'),
+              ('Separation energies for oxygen isotopes',
                2,
                None,
                '___sec24'),
-              ('  Energy gaps for oxygen isotopes ', 2, None, '___sec25'),
-              (' Features to be noted  ', 2, None, '___sec26'),
-              (' Radii  ', 2, None, '___sec27'),
-              (' Radii  ', 2, None, '___sec28'),
-              (' Definitions ', 2, None, '___sec29'),
-              (' Definitions ', 2, None, '___sec30'),
-              (' Definitions ', 2, None, '___sec31'),
-              (' Definitions ', 2, None, '___sec32'),
-              (' Definitions ', 2, None, '___sec33'),
-              (' Definitions ', 2, None, '___sec34'),
-              (' Definitions ', 2, None, '___sec35'),
-              (' Definitions and notations ', 2, None, '___sec36'),
-              (' Definitions and notations ', 2, None, '___sec37'),
-              (' Definitions and notations ', 2, None, '___sec38'),
-              (' A modified Hamiltonian  ', 2, None, '___sec39'),
-              (' A modified Hamiltonian  ', 2, None, '___sec40'),
-              (' A modified Hamiltonian  ', 2, None, '___sec41'),
-              (' A modified Hamiltonian  ', 2, None, '___sec42'),
-              (' The harmonic oscillator Hamiltonian  ', 2, None, '___sec43'),
-              (' Translationally Invariant Hamiltonian  ',
-               2,
-               None,
-               '___sec44'),
-              (' The harmonic oscillator Hamiltonian  ', 2, None, '___sec45'),
-              (' The harmonic oscillator Hamiltonian  ', 2, None, '___sec46'),
-              (' Translationally Invariant Hamiltonian  ',
-               2,
-               None,
-               '___sec47'),
-              (' The Woods-Saxon potential  ', 2, None, '___sec48'),
-              (' The Woods-Saxon potential  ', 2, None, '___sec49'),
-              (' Single-particle Hamiltonians and spin-orbit force  ',
+              ('Energy gaps for oxygen isotopes', 2, None, '___sec25'),
+              ('Features to be noted', 2, None, '___sec26'),
+              ('Radii', 2, None, '___sec27'),
+              ('Radii', 2, None, '___sec28'),
+              ('Definitions', 2, None, '___sec29'),
+              ('Definitions', 2, None, '___sec30'),
+              ('Definitions', 2, None, '___sec31'),
+              ('Definitions', 2, None, '___sec32'),
+              ('Definitions', 2, None, '___sec33'),
+              ('Definitions', 2, None, '___sec34'),
+              ('Definitions', 2, None, '___sec35'),
+              ('Definitions and notations', 2, None, '___sec36'),
+              ('Definitions and notations', 2, None, '___sec37'),
+              ('Definitions and notations', 2, None, '___sec38'),
+              ('A modified Hamiltonian', 2, None, '___sec39'),
+              ('A modified Hamiltonian', 2, None, '___sec40'),
+              ('A modified Hamiltonian', 2, None, '___sec41'),
+              ('A modified Hamiltonian', 2, None, '___sec42'),
+              ('The harmonic oscillator Hamiltonian', 2, None, '___sec43'),
+              ('Translationally Invariant Hamiltonian', 2, None, '___sec44'),
+              ('The harmonic oscillator Hamiltonian', 2, None, '___sec45'),
+              ('The harmonic oscillator Hamiltonian', 2, None, '___sec46'),
+              ('Translationally Invariant Hamiltonian', 2, None, '___sec47'),
+              ('The Woods-Saxon potential', 2, None, '___sec48'),
+              ('The Woods-Saxon potential', 2, None, '___sec49'),
+              ('Single-particle Hamiltonians and spin-orbit force',
                2,
                None,
                '___sec50'),
-              (' Single-particle Hamiltonians and spin-orbit force  ',
+              ('Single-particle Hamiltonians and spin-orbit force',
                2,
                None,
                '___sec51'),
-              ('   Single-particle Hamiltonians and spin-orbit force  ',
+              ('Single-particle Hamiltonians and spin-orbit force',
                2,
                None,
                '___sec52'),
-              ('   Single-particle Hamiltonians and spin-orbit force  ',
+              ('Single-particle Hamiltonians and spin-orbit force',
                2,
                None,
                '___sec53'),
-              ('   Single-particle Hamiltonians and spin-orbit force  ',
+              ('Single-particle Hamiltonians and spin-orbit force',
                2,
                None,
                '___sec54'),
-              (' Numerical solution of the single-particle Schroedinger equation ',
+              ('Numerical solution of the single-particle Schroedinger equation',
                2,
                None,
                '___sec55'),
-              ('  Numerical solution of the single-particle Schroedinger equation ',
+              ('Numerical solution of the single-particle Schroedinger equation',
                2,
                None,
                '___sec56'),
-              ('  Numerical solution of the single-particle Schroedinger equation ',
+              ('Numerical solution of the single-particle Schroedinger equation',
                2,
                None,
                '___sec57'),
-              ('  Numerical solution of the single-particle Schroedinger equation ',
+              ('Numerical solution of the single-particle Schroedinger equation',
                2,
                None,
                '___sec58'),
-              ('  Numerical solution of the single-particle Schroedinger equation ',
+              ('Numerical solution of the single-particle Schroedinger equation',
                2,
                None,
                '___sec59'),
-              ('  Numerical solution of the single-particle Schroedinger equation ',
+              ('Numerical solution of the single-particle Schroedinger equation',
                2,
                None,
                '___sec60'),
-              ('  Numerical solution of the single-particle Schroedinger equation ',
+              ('Numerical solution of the single-particle Schroedinger equation',
                2,
                None,
                '___sec61'),
-              ("  Program to solve Schroedinger's equation  ",
+              ("Program to solve Schroedinger's equation",
                2,
                None,
                '___sec62'),
-              ("  Program to solve Schroedinger's equation  ",
+              ("Program to solve Schroedinger's equation",
                2,
                None,
                '___sec63'),
-              ('  Exercise 1  ', 2, None, '___sec64'),
-              ('  Exercise 2  ', 2, None, '___sec65'),
-              ('  Exercise 3  ', 2, None, '___sec66'),
-              ('  Exercise 4  ', 2, None, '___sec67')]}
+              ('Exercise 1', 2, None, '___sec64'),
+              ('Exercise 2', 2, None, '___sec65'),
+              ('Exercise 3', 2, None, '___sec66'),
+              ('Exercise 4', 2, None, '___sec67')]}
 end of tocinfo -->
 
 <body>
@@ -220,11 +219,13 @@ MathJax.Hub.Config({
 <b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA and Department of Physics, University of Oslo, Oslo, Norway</b> 
 </center>
 
-
 <p>
 <!-- institution(s) -->
+
+<br>
 <p>
 <center><h4>Spring 2015</h4></center> <!-- date -->
+<br>
 <p>
 <!-- !split  -->
 
@@ -277,7 +278,7 @@ There are several properties which relate the thickness of the neutron skin to q
 nuclear matter, such as the symmetry energy at the saturation point for nuclear matter, the slope
 of the equation of state for neutron matter
 or the low-energy electric dipole strength due to the pigmy dipole resonance. 
-See Ref.&nbsp;<a href="http://iopscience.iop.org/1402-4896/2013/T152" target="_self"><tt>http://iopscience.iop.org/1402-4896/2013/T152</tt></a> for several interesting discussions of these topics.
+See Ref.&nbsp;<a href="http://iopscience.iop.org/1402-4896/2013/T152" target="_blank"><tt>http://iopscience.iop.org/1402-4896/2013/T152</tt></a> for several interesting discussions of these topics.
 </div>
 
 
@@ -355,7 +356,7 @@ one neutron on top of \( {}^{16}\mbox{O} \). We infer from data and our theoreti
 
 <p>
 Since we want to develop a theory capable of interpreting data in terms of our laws of motion and the pertinent forces,
-we can think of this neutron as a particle which moves in a potential field. We can hence attempt at solving our equations of motion (Schroedinger's equation in our case) for this system along the same lines as we did in atomic physics when we solved Schroedinger's equation for the hydrogen atom. We just need to define a model for our effective single-particle potential. 
+we can think of this neutron as a particle which moves in a potential field. We can hence attempt at solving our equations of motion (Schroedinger's equation in our case) for this system along the same lines as we did in atomic physics when we solved Schroedinger's equation for the hydrogen atom. We just need to define a model for our effective single-particle potential.
 
 <p>
 A simple potential model which enjoys quite some popularity in nuclear physics, is the three-dimensional harmonic oscillator. This potential model captures some of the physics of deeply bound single-particle states but fails in reproducing 
@@ -375,11 +376,11 @@ the less bound single-particle states. A parametrized, and more realistic,  pote
 
 <p>
 To be able to interpret a nucleus in such  a way requires at least that we are capable of parametrizing the abovementioned
-interactions in order to reproduce say the excitation spectrum of a nucleus like \( {}^{17}\mbox{O} \). 
+interactions in order to reproduce say the excitation spectrum of a nucleus like \( {}^{17}\mbox{O} \).
 
 <p>
 With such a parametrized interaction we are able to solve Schroedinger's equation for the motion of one nucleon in a given field. A nucleus is however a true and complicated many-nucleon system, with extremely many degrees of freedom and complicated correlations, rendering the ideal solution of the many-nucleon Schroedinger equation an impossible enterprise. It is much easier to solve a single-particle problem with say a Woods-Saxon potential. Using such a potential hides however many of the complicated correlations and interactions which we see in nuclei. Such an effective single-nucleon potential is for example not capable of 
-describing properties like the binding energy or the rms radius of a given nucleus. 
+describing properties like the binding energy or the rms radius of a given nucleus.
 
 <p>
 An improvement to these simpler single-nucleon potentials is given by the Hartree-Fock method, where the variational principle is used to define a mean-field which the nucleons move in. There are many different classes of mean-field methods.
@@ -396,14 +397,14 @@ An important difference between these methods and the simpler parametrized mean-
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-The aim of this section is to present some of the experimental data we will confront theory with. In particular, we will focus on separation and shell-gap energies and use these to build a picture of nuclei in terms of (from a philosophical stand we would call this  a reductionist approach) a single-particle picture. The harmonic oscillator will serve as an excellent starting point in building nuclei from the bottom and up. Here we will neglect nuclear forces, these are introduced in the next section when we discuss the Hartree-Fock method. 
+The aim of this section is to present some of the experimental data we will confront theory with. In particular, we will focus on separation and shell-gap energies and use these to build a picture of nuclei in terms of (from a philosophical stand we would call this  a reductionist approach) a single-particle picture. The harmonic oscillator will serve as an excellent starting point in building nuclei from the bottom and up. Here we will neglect nuclear forces, these are introduced in the next section when we discuss the Hartree-Fock method.
 
 <p>
 The aim of this course is to develop our physics intuition of nuclear systems using  a theoretical approach  where we describe data in terms of 
-the motion of individual nucleons and their mutual interactions. 
+the motion of individual nucleons and their mutual interactions.
 
 <p>
-<b>How our theoretical pictures and models can be used to interpret data is in essence what this course is about</b>. Our narrative will lead us along a path where we start with single-particle models and end with the theory of the nuclear shell-model. The latter will be used to understand and analyze excitation spectra and decay patterns of nuclei, linking our theoretical understanding with interpretations of experiment. The way we build up our theoretical descriptions and interpretations follows what we may call a standard reductionistic approach, that is we start with what we believe are our effective degrees of freedom (nucleons in our case) and interactions amongst these and solve thereafter the underlying equations of motions. This defines the nuclear many-body problem, and mean-field approaches like Hartree-Fock theory and the nuclear shell-model represent different approaches to our solutions of Schroedinger's equation. 
+<b>How our theoretical pictures and models can be used to interpret data is in essence what this course is about</b>. Our narrative will lead us along a path where we start with single-particle models and end with the theory of the nuclear shell-model. The latter will be used to understand and analyze excitation spectra and decay patterns of nuclei, linking our theoretical understanding with interpretations of experiment. The way we build up our theoretical descriptions and interpretations follows what we may call a standard reductionistic approach, that is we start with what we believe are our effective degrees of freedom (nucleons in our case) and interactions amongst these and solve thereafter the underlying equations of motions. This defines the nuclear many-body problem, and mean-field approaches like Hartree-Fock theory and the nuclear shell-model represent different approaches to our solutions of Schroedinger's equation.
 
 
 </div>
@@ -468,7 +469,7 @@ Our first approach in analyzing data theoretically, is to see if we can use expe
 </ul>
 
 The next step is to see if we could use these interpretations to say something about shell closures and magic numbers. Since we focus on single-particle properties, a quantity we can extract from experiment is the separation energy for protons and neutrons. Before we proceed, we need to define quantities like masses and binding energies.   Two excellent reviews on 
-recent trends in the determination of nuclear masses can be found in <a href="http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.1021" target="_self"><tt>http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.1021</tt></a> and in <a href="http://iopscience.iop.org/1402-4896/2013/T152/014017/" target="_self"><tt>http://iopscience.iop.org/1402-4896/2013/T152/014017/</tt></a>
+recent trends in the determination of nuclear masses can be found in <a href="http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.1021" target="_blank"><tt>http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.1021</tt></a> and in <a href="http://iopscience.iop.org/1402-4896/2013/T152/014017/" target="_blank"><tt>http://iopscience.iop.org/1402-4896/2013/T152/014017/</tt></a>
 </div>
 
 
@@ -493,7 +494,7 @@ u = M(^{12}\mathrm{C})/12 = 931.49386 \hspace{0.1cm} \mathrm{MeV}/c^2.
 $$
 
 In this course we will mainly use 
-data from the 2003 compilation of Audi, Wapstra and Thibault, see <a href="http://www.sciencedirect.com/science/journal/03759474/729/1" target="_self"><tt>http://www.sciencedirect.com/science/journal/03759474/729/1</tt></a>.
+data from the 2003 compilation of Audi, Wapstra and Thibault, see <a href="http://www.sciencedirect.com/science/journal/03759474/729/1" target="_blank"><tt>http://www.sciencedirect.com/science/journal/03759474/729/1</tt></a>.
 </div>
 
 
@@ -513,7 +514,6 @@ and
 $$
 m_n = 939.56536(8)\hspace{0.1cm} \mathrm{MeV}/c^2 = 1.0086649156(6)u.
 $$
-
 
 <p>
 In the 2003 mass evaluation there are 2127 nuclei measured with an accuracy of 0.2
@@ -555,30 +555,32 @@ where \( \Delta_H c^2 = 7.2890 \) MeV and \( \Delta_n c^2 = 8.0713 \) MeV.
 <b></b>
 <p>
 The following python program reads in the experimental data on binding energies and, stored in the file bindingenergies.dat,  plots them as function of the mass number \( A \). One notices clearly a saturation of the binding energy per nucleon at \( A\approx 56 \).
-<!-- begin verbatim block  pycod-->
-<pre><code>import numpy as np
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt(&quot;datafiles/bindingenergies.dat&quot;)
-# Make arrays containing x-axis and binding energies as function of A
-x = data[:,2]
-bexpt = data[:,3]
-plt.plot(x, bexpt ,'ro')
-plt.axis([0,270,-1, 10.0])
-plt.xlabel(r'$A$')
-plt.ylabel(r'Binding energies in [MeV]')
-plt.legend(('Experiment'), loc='upper right')
-plt.title(r'Binding energies from experiment')
-plt.savefig('expbindingenergies.pdf')
-plt.savefig('expbindingenergies.png')
-plt.show()
-</code></pre>
-<!-- end verbatim block -->
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+<span style="color: #008000; font-weight: bold">from</span>  <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> pyplot <span style="color: #008000; font-weight: bold">as</span> plt
+<span style="color: #408080; font-style: italic"># Load in data file</span>
+data <span style="color: #666666">=</span> np<span style="color: #666666">.</span>loadtxt(<span style="color: #BA2121">&quot;datafiles/bindingenergies.dat&quot;</span>)
+<span style="color: #408080; font-style: italic"># Make arrays containing x-axis and binding energies as function of A</span>
+x <span style="color: #666666">=</span> data[:,<span style="color: #666666">2</span>]
+bexpt <span style="color: #666666">=</span> data[:,<span style="color: #666666">3</span>]
+plt<span style="color: #666666">.</span>plot(x, bexpt ,<span style="color: #BA2121">&#39;ro&#39;</span>)
+plt<span style="color: #666666">.</span>axis([<span style="color: #666666">0</span>,<span style="color: #666666">270</span>,<span style="color: #666666">-1</span>, <span style="color: #666666">10.0</span>])
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">r&#39;$A$&#39;</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">r&#39;Binding energies in [MeV]&#39;</span>)
+plt<span style="color: #666666">.</span>legend((<span style="color: #BA2121">&#39;Experiment&#39;</span>), loc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;upper right&#39;</span>)
+plt<span style="color: #666666">.</span>title(<span style="color: #BA2121">r&#39;Binding energies from experiment&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;expbindingenergies.pdf&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;expbindingenergies.png&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
+
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec15">Liquid drop model as a simple parametrization of binding energies  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -599,7 +601,7 @@ to the experimental data.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec16">Liquid drop model as a simple parametrization of binding energies  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -638,26 +640,28 @@ The python below here allows you to perform a fit of teh above parameters using 
 <b></b>
 <p>
 The following python program reads now in the experimental data on binding energies as well as the results from the above liquid drop model and plots these energies as function of the mass number \( A \). One sees that for larger values of \( A \), there is a better agreement with data. 
-<!-- begin verbatim block  pycod-->
-<pre><code>import numpy as np
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt(&quot;datafiles/bindingenergies.dat&quot;)
-# Make arrays containing x-axis and binding energies as function of
-x = data[:,2]
-bexpt = data[:,3]
-liquiddrop = data[:,4]
-plt.plot(x, bexpt ,'b-o', x, liquiddrop, 'r-o')
-plt.axis([0,270,-1, 10.0])
-plt.xlabel(r'$A$')
-plt.ylabel(r'Binding energies in [MeV]')
-plt.legend(('Experiment','Liquid Drop'), loc='upper right')
-plt.title(r'Binding energies from experiment and liquid drop')
-plt.savefig('bindingenergies.pdf')
-plt.savefig('bindingenergies.png')
-plt.show()
-</code></pre>
-<!-- end verbatim block -->
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+<span style="color: #008000; font-weight: bold">from</span>  <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> pyplot <span style="color: #008000; font-weight: bold">as</span> plt
+<span style="color: #408080; font-style: italic"># Load in data file</span>
+data <span style="color: #666666">=</span> np<span style="color: #666666">.</span>loadtxt(<span style="color: #BA2121">&quot;datafiles/bindingenergies.dat&quot;</span>)
+<span style="color: #408080; font-style: italic"># Make arrays containing x-axis and binding energies as function of</span>
+x <span style="color: #666666">=</span> data[:,<span style="color: #666666">2</span>]
+bexpt <span style="color: #666666">=</span> data[:,<span style="color: #666666">3</span>]
+liquiddrop <span style="color: #666666">=</span> data[:,<span style="color: #666666">4</span>]
+plt<span style="color: #666666">.</span>plot(x, bexpt ,<span style="color: #BA2121">&#39;b-o&#39;</span>, x, liquiddrop, <span style="color: #BA2121">&#39;r-o&#39;</span>)
+plt<span style="color: #666666">.</span>axis([<span style="color: #666666">0</span>,<span style="color: #666666">270</span>,<span style="color: #666666">-1</span>, <span style="color: #666666">10.0</span>])
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">r&#39;$A$&#39;</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">r&#39;Binding energies in [MeV]&#39;</span>)
+plt<span style="color: #666666">.</span>legend((<span style="color: #BA2121">&#39;Experiment&#39;</span>,<span style="color: #BA2121">&#39;Liquid Drop&#39;</span>), loc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;upper right&#39;</span>)
+plt<span style="color: #666666">.</span>title(<span style="color: #BA2121">r&#39;Binding energies from experiment and liquid drop&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;bindingenergies.pdf&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;bindingenergies.png&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
+
 </div>
 
 
@@ -669,35 +673,37 @@ plt.show()
 <b></b>
 <p>
 This  python program reads now in the experimental data on binding energies and performs a nonlinear least square fitting of the data. In the example here we use only the parameters \( a_1 \) and \( a_2 \), leaving it as an exercise to the reader to perform the fit for all four paramters. The results are plotted and compared with the experimental values.  To read more about non-linear least square methods, see for example the text of M.J. Box, D. Davies and W.H. Swann, Non-Linear optimisation Techniques, Oliver &amp; Boyd, 1969.
-<!-- begin verbatim block  pycod-->
-<pre><code>import numpy as np
-from scipy.optimize import curve_fit
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt(&quot;datafiles/bindingenergies.dat&quot;)
-# Make arrays containing A on x-axis and binding energies
-A = data[:,2]
-bexpt = data[:,3]
-# The function we want to fit to, only two terms here
-def func(A,a1, a2):
-    return a1*A-a2*(A**(2.0/3.0))
-# function to perform nonlinear least square with guess for a1 and a2
-popt, pcov = curve_fit(func, A, bexpt, p0 = (16.0, 18.0))
-a1  = popt[0]
-a2 = popt[1]
-liquiddrop = a1*A-a2*(A**(2.0/3.0))
+<p>
 
-plt.plot(A, bexpt ,'bo', A, liquiddrop, 'ro')
-plt.axis([0,270,-1, 10.0])
-plt.xlabel(r'$A$')
-plt.ylabel(r'Binding energies in [MeV]')
-plt.legend(('Experiment','Liquid Drop'), loc='upper right')
-plt.title(r'Binding energies from experiment and liquid drop')
-plt.savefig('bindingenergies.pdf')
-plt.savefig('bindingenergies.png')
-plt.show()
-</code></pre>
-<!-- end verbatim block -->
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">scipy.optimize</span> <span style="color: #008000; font-weight: bold">import</span> curve_fit
+<span style="color: #008000; font-weight: bold">from</span>  <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> pyplot <span style="color: #008000; font-weight: bold">as</span> plt
+<span style="color: #408080; font-style: italic"># Load in data file</span>
+data <span style="color: #666666">=</span> np<span style="color: #666666">.</span>loadtxt(<span style="color: #BA2121">&quot;datafiles/bindingenergies.dat&quot;</span>)
+<span style="color: #408080; font-style: italic"># Make arrays containing A on x-axis and binding energies</span>
+A <span style="color: #666666">=</span> data[:,<span style="color: #666666">2</span>]
+bexpt <span style="color: #666666">=</span> data[:,<span style="color: #666666">3</span>]
+<span style="color: #408080; font-style: italic"># The function we want to fit to, only two terms here</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">func</span>(A,a1, a2):
+    <span style="color: #008000; font-weight: bold">return</span> a1<span style="color: #666666">*</span>A<span style="color: #666666">-</span>a2<span style="color: #666666">*</span>(A<span style="color: #666666">**</span>(<span style="color: #666666">2.0/3.0</span>))
+<span style="color: #408080; font-style: italic"># function to perform nonlinear least square with guess for a1 and a2</span>
+popt, pcov <span style="color: #666666">=</span> curve_fit(func, A, bexpt, p0 <span style="color: #666666">=</span> (<span style="color: #666666">16.0</span>, <span style="color: #666666">18.0</span>))
+a1  <span style="color: #666666">=</span> popt[<span style="color: #666666">0</span>]
+a2 <span style="color: #666666">=</span> popt[<span style="color: #666666">1</span>]
+liquiddrop <span style="color: #666666">=</span> a1<span style="color: #666666">*</span>A<span style="color: #666666">-</span>a2<span style="color: #666666">*</span>(A<span style="color: #666666">**</span>(<span style="color: #666666">2.0/3.0</span>))
+
+plt<span style="color: #666666">.</span>plot(A, bexpt ,<span style="color: #BA2121">&#39;bo&#39;</span>, A, liquiddrop, <span style="color: #BA2121">&#39;ro&#39;</span>)
+plt<span style="color: #666666">.</span>axis([<span style="color: #666666">0</span>,<span style="color: #666666">270</span>,<span style="color: #666666">-1</span>, <span style="color: #666666">10.0</span>])
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">r&#39;$A$&#39;</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">r&#39;Binding energies in [MeV]&#39;</span>)
+plt<span style="color: #666666">.</span>legend((<span style="color: #BA2121">&#39;Experiment&#39;</span>,<span style="color: #BA2121">&#39;Liquid Drop&#39;</span>), loc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;upper right&#39;</span>)
+plt<span style="color: #666666">.</span>title(<span style="color: #BA2121">r&#39;Binding energies from experiment and liquid drop&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;bindingenergies.pdf&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;bindingenergies.png&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
+
 </div>
 
 
@@ -731,7 +737,6 @@ $$
 $$
 
 
-
 </div>
 
 
@@ -747,7 +752,6 @@ nucleus \( c \) into two other nuclei \( a \) and \( b \)
 $$
 ^{N_c+Z_c}c \rightarrow  ^{N_a+Z_a}a+ ^{N_b+Z_b}b .
 $$
-
 
 <p>
 <center> <!-- figure -->
@@ -847,27 +851,28 @@ We leave it as an exercise to the reader to define and interpret the two-neutron
 <b></b>
 <p>
 The following python programs can now be used to plot the separation energies and the energy gaps for the oxygen isotopes.  The following python code reads the separation energies from file for all oxygen isotopes from \( A=13 \) to \( A=25 \), The data are taken from the file <em>snox.dat</em>.  This files contains the separation energies and the shell gap energies.
-<!-- begin verbatim block  pycod-->
-<pre><code>
-import numpy as np
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt(&quot;datafiles/snox.dat&quot;)
-# Make arrays containing x-axis and binding energies as function of
-x = data[:,1]
-y = data[:,2]
+<p>
 
-plt.plot(x, y,'b-+',markersize=6)
-plt.axis([4,18,-1, 25.0])
-plt.xlabel(r'Number of neutrons $N$',fontsize=20)
-plt.ylabel(r'$S_n$ [MeV]',fontsize=20)
-plt.legend(('Separation energies for oxygen isotpes'), loc='upper right')
-plt.title(r'Separation energy for the oxygen isotopes')
-plt.savefig('snoxygen.pdf')
-plt.savefig('snoxygen.png')
-plt.show()
-</code></pre>
-<!-- end verbatim block -->
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+<span style="color: #008000; font-weight: bold">from</span>  <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> pyplot <span style="color: #008000; font-weight: bold">as</span> plt
+<span style="color: #408080; font-style: italic"># Load in data file</span>
+data <span style="color: #666666">=</span> np<span style="color: #666666">.</span>loadtxt(<span style="color: #BA2121">&quot;datafiles/snox.dat&quot;</span>)
+<span style="color: #408080; font-style: italic"># Make arrays containing x-axis and binding energies as function of</span>
+x <span style="color: #666666">=</span> data[:,<span style="color: #666666">1</span>]
+y <span style="color: #666666">=</span> data[:,<span style="color: #666666">2</span>]
+
+plt<span style="color: #666666">.</span>plot(x, y,<span style="color: #BA2121">&#39;b-+&#39;</span>,markersize<span style="color: #666666">=6</span>)
+plt<span style="color: #666666">.</span>axis([<span style="color: #666666">4</span>,<span style="color: #666666">18</span>,<span style="color: #666666">-1</span>, <span style="color: #666666">25.0</span>])
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">r&#39;Number of neutrons $N$&#39;</span>,fontsize<span style="color: #666666">=20</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">r&#39;$S_n$ [MeV]&#39;</span>,fontsize<span style="color: #666666">=20</span>)
+plt<span style="color: #666666">.</span>legend((<span style="color: #BA2121">&#39;Separation energies for oxygen isotpes&#39;</span>), loc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;upper right&#39;</span>)
+plt<span style="color: #666666">.</span>title(<span style="color: #BA2121">r&#39;Separation energy for the oxygen isotopes&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;snoxygen.pdf&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;snoxygen.png&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
+
 </div>
 
 
@@ -879,34 +884,33 @@ plt.show()
 <b></b>
 <p>
 Here we display the python program for plotting the corresponding results for shell gaps for the oyxgen isotopes. 
-<!-- begin verbatim block  pycod-->
-<pre><code>
-import numpy as np
-from  matplotlib import pyplot as plt
-# Load in data file
-data = np.loadtxt(&quot;datafiles/snox.dat&quot;)
-# Make arrays containing x-axis and binding energies as function of
-x = data[:,1]
-y = data[:,3]
+<p>
 
-plt.plot(x, y,'b-+',markersize=6)
-plt.axis([4,18,-7, 12.0])
-plt.xlabel(r'Number of neutrons $N$',fontsize=20)
-plt.ylabel(r'$\Delta S_n$ [MeV]',fontsize=20)
-plt.legend(('Shell gap energies for oxygen isotpes'), loc='upper right')
-plt.title(r'Shell gap energies for the oxygen isotopes')
-plt.savefig('gapoxygen.pdf')
-plt.savefig('gapoxygen.png')
-plt.show()
-</code></pre>
-<!-- end verbatim block -->
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+<span style="color: #008000; font-weight: bold">from</span>  <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> pyplot <span style="color: #008000; font-weight: bold">as</span> plt
+<span style="color: #408080; font-style: italic"># Load in data file</span>
+data <span style="color: #666666">=</span> np<span style="color: #666666">.</span>loadtxt(<span style="color: #BA2121">&quot;datafiles/snox.dat&quot;</span>)
+<span style="color: #408080; font-style: italic"># Make arrays containing x-axis and binding energies as function of</span>
+x <span style="color: #666666">=</span> data[:,<span style="color: #666666">1</span>]
+y <span style="color: #666666">=</span> data[:,<span style="color: #666666">3</span>]
 
+plt<span style="color: #666666">.</span>plot(x, y,<span style="color: #BA2121">&#39;b-+&#39;</span>,markersize<span style="color: #666666">=6</span>)
+plt<span style="color: #666666">.</span>axis([<span style="color: #666666">4</span>,<span style="color: #666666">18</span>,<span style="color: #666666">-7</span>, <span style="color: #666666">12.0</span>])
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">r&#39;Number of neutrons $N$&#39;</span>,fontsize<span style="color: #666666">=20</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">r&#39;$\Delta S_n$ [MeV]&#39;</span>,fontsize<span style="color: #666666">=20</span>)
+plt<span style="color: #666666">.</span>legend((<span style="color: #BA2121">&#39;Shell gap energies for oxygen isotpes&#39;</span>), loc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;upper right&#39;</span>)
+plt<span style="color: #666666">.</span>title(<span style="color: #BA2121">r&#39;Shell gap energies for the oxygen isotopes&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;gapoxygen.pdf&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;gapoxygen.png&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec26">Features to be noted  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -923,16 +927,16 @@ One may thus infer that intrinsic properties of nucleons in a nucleus are close 
 
 <ul>
 <li> In the discussion of the neutron separation energies for the oxygen isotopes, we note  a clear staggering effect between odd and even isotopes with the even ones being more bound (larger separation energies). We will later link this to strong pairing correlations in nuclei.</li>
-<li> The neutron separation energy becomes negative at \( {}^{25}\mbox{O} \), making this nucleus unstable with respect to the emission of one neutron. A nucleus like \( {}^{24}\mbox{O} \) is thus the last stable oxygen isotopes which has been observed. Oyxgen-26 has been found to be unbound with respect to \( {}^{24}\mbox{O} \), see <a href="ournals.aps.org/prl/abstract/10.1103/PhysRevLett.108.142503" target="_self"><tt>ournals.aps.org/prl/abstract/10.1103/PhysRevLett.108.142503</tt></a> .</li>
+<li> The neutron separation energy becomes negative at \( {}^{25}\mbox{O} \), making this nucleus unstable with respect to the emission of one neutron. A nucleus like \( {}^{24}\mbox{O} \) is thus the last stable oxygen isotopes which has been observed. Oyxgen-26 has been found to be unbound with respect to \( {}^{24}\mbox{O} \), see <a href="ournals.aps.org/prl/abstract/10.1103/PhysRevLett.108.142503" target="_blank"><tt>ournals.aps.org/prl/abstract/10.1103/PhysRevLett.108.142503</tt></a> .</li>
 <li> We note also that there are large shell-gaps for some nuclei, meaning that more energy is needed to remove one nucleon. These gaps are used to define so-called magic numbers. For the oxygen isotopes we see a clear gap for \( {}^{16}\mbox{O} \). We will interpret this gap as one of several experimental properties that define so-called magic numbers. In our discussion below we will make a first interpretation using  single-particle states from the harmonic oscillator and the Woods-Saxon potential.</li> 
 </ul>
 
 In the exercises below you will be asked to perform a similar analysis for other chains of isotopes and interpret the results.
 </div>
- 
+
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec27">Radii  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -952,7 +956,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec28">Radii  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1005,7 +1009,7 @@ definitions.  When we refer to a single neutron we will use the label \( n \) an
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec30">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1042,7 +1046,7 @@ Since we are dealing with protons and neutrons we need to add isospin as a new d
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec31">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1080,7 +1084,7 @@ We will use the standard nuclear physics definition of isospin, resulting in \( 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec32">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1101,7 +1105,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec33">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1123,7 +1127,7 @@ being the ansatz for the ground state.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec34">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1142,7 +1146,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec35">Definitions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1170,7 +1174,7 @@ has to be antisymmetric, resulting in the eigenvalue \( \beta = -1 \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec36">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1191,7 +1195,7 @@ numbers needed to classify a given \( A \)-particle state and \( \Psi_{\lambda} 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec37">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1222,7 +1226,7 @@ have dimension energy.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec38">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1245,12 +1249,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec39">A modified Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1269,13 +1272,11 @@ $$
   \hat{H}_0=\sum_{i=1}^A \hat{h}_0(x_i) =  \sum_{i=1}^A\left(\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i)\right).
 $$
 
-
 <p>
 The interaction (or potential energy term) reads now
 $$
   \hat{H}_I=  \sum_{i < j=1}^A \hat{v}(x_{ij})-\sum_{i=1}^A\hat{u}_{\mathrm{ext}}(x_i).
 $$
-
 
 <p>
 In nuclear physics the one-body part \( u_{\mathrm{ext}}(x_i) \) is often approximated by a harmonic oscillator potential or a
@@ -1284,7 +1285,7 @@ Woods-Saxon potential. However, this is not fully correct, because as we have di
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec40">A modified Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1301,10 +1302,9 @@ $$
   \hat{h}_0(x_i)\psi_{\alpha}(x_i)=\varepsilon_{\alpha}\psi_{\alpha}(x_i),  
 $$
 
-
 <p>
 where the eigenvalues are \( \varepsilon_{\alpha} \) and the eigenfunctions are \( \psi_{\alpha}(x_i) \). The subscript \( \alpha \) represents quantum numbers like the orbital angular momentum \( l_{\alpha} \), its projection \( m_{l_{\alpha}} \) and the   
-principal quantum number \( n_{\alpha}=0,1,2,\dots \). 
+principal quantum number \( n_{\alpha}=0,1,2,\dots \).
 
 <p>
 The eigenvalues are
@@ -1315,7 +1315,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec41">A modified Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1341,7 +1341,7 @@ where \( C_{\tau\alpha} \) represents the overlap between the two basis sets.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec42">A modified Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1362,7 +1362,7 @@ the various harmonic oscillator states, with those obtained with a Woods-Saxon p
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec43">The harmonic oscillator Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1370,7 +1370,7 @@ the various harmonic oscillator states, with those obtained with a Woods-Saxon p
 <p>
 In nuclear physics the one-body part \( u_{\mathrm{ext}}(x_i) \) is often 
 approximated by a harmonic oscillator potential. However,  as we also noted with the Woods-Saxon potential there is no 
-external confining potential in nuclei. 
+external confining potential in nuclei.
 
 <p>
 What many people do then, is to add and subtract a harmonic oscillator potential,
@@ -1396,7 +1396,7 @@ This is ok if the number of nucleons is large, but still with this Hamiltonian, 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec44">Translationally Invariant Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1424,7 +1424,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec45">The harmonic oscillator Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1444,7 +1444,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec46">The harmonic oscillator Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1462,9 +1462,8 @@ $$
       H_{\mathrm{HO}}= \frac{\boldsymbol{P}^2}{2mA}+\frac{mA\omega^2\boldsymbol{R}^2}{2}
 	    +\frac{1}{2mA}\sum_{i < j}(\boldsymbol{p}_i-\boldsymbol{p}_j)^2
 	    +\frac{m\omega^2}{2A}\sum_{i < j}(\boldsymbol{r}_i-\boldsymbol{r}_j)^2.
-     \label{eq:obho}
+\label{eq:obho}
  $$
-
 
 <p>
 Alternatively, we could write it as	
@@ -1472,7 +1471,6 @@ $$
  H_{\mathrm{HO}}= H_{\mathrm{CoM}}+\frac{1}{2mA}\sum_{i < j}(\boldsymbol{p}_i-\boldsymbol{p}_j)^2
 	    +\frac{m\omega^2}{2A}\sum_{i < j}(\boldsymbol{r}_i-\boldsymbol{r}_j)^2,
  $$
-
 
 <p>
 The center-of-mass term is defined as
@@ -1483,7 +1481,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec47">Translationally Invariant Hamiltonian  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1513,7 +1511,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec48">The Woods-Saxon potential  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1528,53 +1526,54 @@ $$
 
 with \( V_0\approx 50 \) MeV representing the potential well depth, \( a\approx 0.5 \) fm 
 length representing the "surface thickness" of the nucleus and \( R=r_0A^{1/3} \), with \( r_0=1.25 \) fm and \( A \) the number of nucleons.
-The value for \( r_0 \) can be extracted from a fit to data, see for example M.&nbsp;Kirson, <a href="http://www.sciencedirect.com/science/article/pii/S037594740600769X" target="_self"><tt>http://www.sciencedirect.com/science/article/pii/S037594740600769X</tt></a>.
+The value for \( r_0 \) can be extracted from a fit to data, see for example M.&nbsp;Kirson, <a href="http://www.sciencedirect.com/science/article/pii/S037594740600769X" target="_blank"><tt>http://www.sciencedirect.com/science/article/pii/S037594740600769X</tt></a>.
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec49">The Woods-Saxon potential  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-The following python code produces a plot of the Woods-Saxon potential with the above parameters. 
+The following python code produces a plot of the Woods-Saxon potential with the above parameters.
 
 <p>
-<!-- begin verbatim block  pycod-->
-<pre><code>import numpy as np
-from  matplotlib import pyplot as plt
-from matplotlib import rc, rcParams
-import matplotlib.units as units
-import matplotlib.ticker as ticker
-rc('text',usetex=True)
-rc('font',**{'family':'serif','serif':['Woods-Saxon potential']})
-font = {'family' : 'serif',
-        'color'  : 'darkred',
-        'weight' : 'normal',
-        'size'   : 16,
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+<span style="color: #008000; font-weight: bold">from</span>  <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> pyplot <span style="color: #008000; font-weight: bold">as</span> plt
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> rc, rcParams
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">matplotlib.units</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">units</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">matplotlib.ticker</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">ticker</span>
+rc(<span style="color: #BA2121">&#39;text&#39;</span>,usetex<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+rc(<span style="color: #BA2121">&#39;font&#39;</span>,<span style="color: #666666">**</span>{<span style="color: #BA2121">&#39;family&#39;</span>:<span style="color: #BA2121">&#39;serif&#39;</span>,<span style="color: #BA2121">&#39;serif&#39;</span>:[<span style="color: #BA2121">&#39;Woods-Saxon potential&#39;</span>]})
+font <span style="color: #666666">=</span> {<span style="color: #BA2121">&#39;family&#39;</span> : <span style="color: #BA2121">&#39;serif&#39;</span>,
+        <span style="color: #BA2121">&#39;color&#39;</span>  : <span style="color: #BA2121">&#39;darkred&#39;</span>,
+        <span style="color: #BA2121">&#39;weight&#39;</span> : <span style="color: #BA2121">&#39;normal&#39;</span>,
+        <span style="color: #BA2121">&#39;size&#39;</span>   : <span style="color: #666666">16</span>,
         }
-v0 = 50
-A = 100
-a = 0.5
-r0 = 1.25
-R = r0*A**(0.3333)
-x = np.linspace(0.0, 10.0)
-y = -v0/(1+np.exp((x-R)/a))
+v0 <span style="color: #666666">=</span> <span style="color: #666666">50</span>
+A <span style="color: #666666">=</span> <span style="color: #666666">100</span>
+a <span style="color: #666666">=</span> <span style="color: #666666">0.5</span>
+r0 <span style="color: #666666">=</span> <span style="color: #666666">1.25</span>
+R <span style="color: #666666">=</span> r0<span style="color: #666666">*</span>A<span style="color: #666666">**</span>(<span style="color: #666666">0.3333</span>)
+x <span style="color: #666666">=</span> np<span style="color: #666666">.</span>linspace(<span style="color: #666666">0.0</span>, <span style="color: #666666">10.0</span>)
+y <span style="color: #666666">=</span> <span style="color: #666666">-</span>v0<span style="color: #666666">/</span>(<span style="color: #666666">1+</span>np<span style="color: #666666">.</span>exp((x<span style="color: #666666">-</span>R)<span style="color: #666666">/</span>a))
 
-plt.plot(x, y, 'b-')
-plt.title(r'{\bf Woods-Saxon potential}', fontsize=20)     
-plt.text(3, -40, r'Parameters: $A=20$, $V_0=50$ [MeV]', fontdict=font)
-plt.text(3, -44, r'$a=0.5$ [fm], $r_0=1.25$ [fm]', fontdict=font)
-plt.xlabel(r'$r$ [fm]',fontsize=20)
-plt.ylabel(r'$V(r)$ [MeV]',fontsize=20)
+plt<span style="color: #666666">.</span>plot(x, y, <span style="color: #BA2121">&#39;b-&#39;</span>)
+plt<span style="color: #666666">.</span>title(<span style="color: #BA2121">r&#39;{\bf Woods-Saxon potential}&#39;</span>, fontsize<span style="color: #666666">=20</span>)     
+plt<span style="color: #666666">.</span>text(<span style="color: #666666">3</span>, <span style="color: #666666">-40</span>, <span style="color: #BA2121">r&#39;Parameters: $A=20$, $V_0=50$ [MeV]&#39;</span>, fontdict<span style="color: #666666">=</span>font)
+plt<span style="color: #666666">.</span>text(<span style="color: #666666">3</span>, <span style="color: #666666">-44</span>, <span style="color: #BA2121">r&#39;$a=0.5$ [fm], $r_0=1.25$ [fm]&#39;</span>, fontdict<span style="color: #666666">=</span>font)
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">r&#39;$r$ [fm]&#39;</span>,fontsize<span style="color: #666666">=20</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">r&#39;$V(r)$ [MeV]&#39;</span>,fontsize<span style="color: #666666">=20</span>)
 
-# Tweak spacing to prevent clipping of ylabel
-plt.subplots_adjust(left=0.15)
-plt.savefig('woodsaxon.pdf', format='pdf')
-</code></pre>
-<!-- end verbatim block -->
+<span style="color: #408080; font-style: italic"># Tweak spacing to prevent clipping of ylabel</span>
+plt<span style="color: #666666">.</span>subplots_adjust(left<span style="color: #666666">=0.15</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;woodsaxon.pdf&#39;</span>, format<span style="color: #666666">=</span><span style="color: #BA2121">&#39;pdf&#39;</span>)
+</pre></div>
+<p>
 From the plot we notice that the potential
 
 <ul>
@@ -1586,7 +1585,7 @@ From the plot we notice that the potential
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec50">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1599,7 +1598,7 @@ $$
 
 with an external and central symmetric potential \( u_{\mathrm{ext}}(x_i) \), which is often 
 approximated by a harmonic oscillator potential or a Woods-Saxon potential. Being central symmetric leads to a degeneracy 
-in energy which is not observed experimentally. We see this from for example our discussion of separation energies and magic numbers. There are, in addition to the assumed magic numbers from a harmonic oscillator basis of \( 2,8,20,40,70\dots \) magic numbers like \( 28 \), \( 50 \), \( 82 \) and \( 126 \). 
+in energy which is not observed experimentally. We see this from for example our discussion of separation energies and magic numbers. There are, in addition to the assumed magic numbers from a harmonic oscillator basis of \( 2,8,20,40,70\dots \) magic numbers like \( 28 \), \( 50 \), \( 82 \) and \( 126 \).
 
 <p>
 To produce these additional numbers, we need to add a phenomenological spin-orbit force which lifts the degeneracy, that is
@@ -1610,7 +1609,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec51">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1639,7 +1638,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec52">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1667,7 +1666,7 @@ Later, we will see how this term arises from the two-nucleon force in a natural 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec53">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1695,7 +1694,7 @@ This will lead us to our first and simplest many-body theory, Hartree-Fock theor
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec54">Single-particle Hamiltonians and spin-orbit force  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1710,25 +1709,25 @@ For the harmonic oscillator in three dimensions we have closed-form expressions 
 with the latter given by either Hermite polynomials (cartesian coordinates) or Laguerre polynomials (spherical coordinates).
 
 <p>
-To solve the above equation is however rather straightforward numerically. 
+To solve the above equation is however rather straightforward numerically.
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec55">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 We will illustrate the numerical solution of Schroedinger's equation by solving it for the harmonic oscillator in three dimensions.
-It is straightforward to change the harmonic oscillator potential with a Woods-Saxon potential, or any other type of potentials. 
+It is straightforward to change the harmonic oscillator potential with a Woods-Saxon potential, or any other type of potentials.
 
 <p>
 We are interested in the solution of the radial part of Schroedinger's equation for one nucleon. 
-The angular momentum part  is given by the so-called Spherical harmonics. 
+The angular momentum part  is given by the so-called Spherical harmonics.
 
 <p>
 The radial equation reads
@@ -1751,7 +1750,7 @@ with \( n=0,1,2,\dots \) and \( l=0,1,2,\dots \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec56">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1772,7 +1771,7 @@ The boundary conditions are \( u(0)=0 \) and \( u(\infty)=0 \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec57">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1802,7 +1801,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec58">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1842,7 +1841,7 @@ the eigenvalues for \( l=0 \) are
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec59">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1853,7 +1852,7 @@ expression for the second derivative of a function \( u \)
 $$
 \begin{equation}
     u''=\frac{u(\rho+h) -2u(\rho) +u(\rho-h)}{h^2} +O(h^2),
-    \label{eq:diffoperation}
+\label{eq:diffoperation}
 \end{equation} 
 $$
 
@@ -1867,7 +1866,7 @@ You need to check your results for the energies against different values
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec60">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1899,7 +1898,7 @@ where \( V_i=\rho_i^2 \) is the harmonic oscillator potential.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec61">Numerical solution of the single-particle Schroedinger equation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1933,7 +1932,6 @@ $$
                                 \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
                                 0   & \dots & \dots & \dots  &\dots       &d_{n_{\mathrm{step}}-2} & e_{n_{\mathrm{step}}-1}\\
                                 0   & \dots & \dots & \dots  &\dots       &e_{n_{\mathrm{step}}-1} & d_{n_{\mathrm{step}}-1}
-
              \end{array} \right)      \left( \begin{array}{c} u_{1} \\
                                                               u_{2} \\
                                                               \dots\\ \dots\\ \dots\\
@@ -1943,7 +1941,7 @@ $$
                                                               \dots\\ \dots\\ \dots\\
                                                               u_{n_{\mathrm{step}}-1}
              \end{array} \right) 
-      \label{eq:sematrix}
+\label{eq:sematrix}
 \end{equation} 
 $$
 
@@ -1956,7 +1954,6 @@ $$
                                 \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
                                 0   & \dots & \dots & \dots  &\dots       &\frac{2}{h^2}+V_{n_{\mathrm{step}}-2} & -\frac{1}{h^2}\\
                                 0   & \dots & \dots & \dots  &\dots       &-\frac{1}{h^2} & \frac{2}{h^2}+V_{n_{\mathrm{step}}-1}
-
              \end{array} \right)  
 \label{eq:matrixse} 
 \end{equation} 
@@ -1969,7 +1966,7 @@ The solution is zero in both cases.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec62">Program to solve Schroedinger's equation  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1978,17 +1975,17 @@ The solution is zero in both cases.
 The following python program is an example of how one can obtain the eigenvalues for a single-nucleon moving in a harmonic oscillator potential. It is rather easy to change the onebody-potential with ones like a Woods-Saxon potential. 
 
 <ul>
-<li> The c++ and Fortran versions of this program can be found at <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_self"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>.</li> 
-<li> The c++  program uses the c++ library armadillo, see <a href="http://arma.sourceforge.net/" target="_self"><tt>http://arma.sourceforge.net/</tt></a>.</li> 
-<li> To install armadillo see the guidelines at <a href="http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/" target="_self"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/</tt></a>.</li> 
-<li> For mac users I recommend using <em>brew</em>, see <a href="http://brew.sh/" target="_self"><tt>http://brew.sh/</tt></a>.</li>
-<li> If you use ipython notebook, you can run c++ programs following the instructions at <a href="http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb" target="_self"><tt>http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb</tt></a></li>
+<li> The c++ and Fortran versions of this program can be found at <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>.</li> 
+<li> The c++  program uses the c++ library armadillo, see <a href="http://arma.sourceforge.net/" target="_blank"><tt>http://arma.sourceforge.net/</tt></a>.</li> 
+<li> To install armadillo see the guidelines at <a href="http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/" target="_blank"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/</tt></a>.</li> 
+<li> For mac users I recommend using <em>brew</em>, see <a href="http://brew.sh/" target="_blank"><tt>http://brew.sh/</tt></a>.</li>
+<li> If you use ipython notebook, you can run c++ programs following the instructions at <a href="http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb" target="_blank"><tt>http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb</tt></a></li>
 </ul>
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec63">Program to solve Schroedinger's equation  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1997,85 +1994,86 @@ The following python program is an example of how one can obtain the eigenvalues
 The code sets up the Hamiltonian matrix by defining the the minimun and maximum values of \( r \) with a
 maximum value of integration points.  These are set in the initialization function. It plots the 
 eigenfunctions of the three lowest eigenstates.
-<!-- begin verbatim block  pycod-->
-<pre><code>#Program which solves the one-particle Schrodinger equation 
-#for a potential specified in function
-#potential(). This example is for the harmonic oscillator in 3d
+<p>
 
-from  matplotlib import pyplot as plt
-import numpy as np
-#Function for initialization of parameters
-def initialize():
-    RMin = 0.0
-    RMax = 10.0
-    lOrbital = 0
-    Dim = 400
-    return RMin, RMax, lOrbital, Dim
-# Here we set up the harmonic oscillator potential
-def potential(r):
-    return r*r
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #408080; font-style: italic">#Program which solves the one-particle Schrodinger equation </span>
+<span style="color: #408080; font-style: italic">#for a potential specified in function</span>
+<span style="color: #408080; font-style: italic">#potential(). This example is for the harmonic oscillator in 3d</span>
 
-#Get the boundary, orbital momentum and number of integration points
-RMin, RMax, lOrbital, Dim = initialize()
+<span style="color: #008000; font-weight: bold">from</span>  <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> pyplot <span style="color: #008000; font-weight: bold">as</span> plt
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+<span style="color: #408080; font-style: italic">#Function for initialization of parameters</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">initialize</span>():
+    RMin <span style="color: #666666">=</span> <span style="color: #666666">0.0</span>
+    RMax <span style="color: #666666">=</span> <span style="color: #666666">10.0</span>
+    lOrbital <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+    Dim <span style="color: #666666">=</span> <span style="color: #666666">400</span>
+    <span style="color: #008000; font-weight: bold">return</span> RMin, RMax, lOrbital, Dim
+<span style="color: #408080; font-style: italic"># Here we set up the harmonic oscillator potential</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">potential</span>(r):
+    <span style="color: #008000; font-weight: bold">return</span> r<span style="color: #666666">*</span>r
 
-#Initialize constants
-Step    = RMax/(Dim+1)
-DiagConst = 2.0 / (Step*Step)
-NondiagConst =  -1.0 / (Step*Step)
-OrbitalFactor = lOrbital * (lOrbital + 1.0)
+<span style="color: #408080; font-style: italic">#Get the boundary, orbital momentum and number of integration points</span>
+RMin, RMax, lOrbital, Dim <span style="color: #666666">=</span> initialize()
 
-#Calculate array of potential values
-v = np.zeros(Dim)
-r = np.linspace(RMin,RMax,Dim)
-for i in xrange(Dim):
-    r[i] = RMin + (i+1) * Step;
-    v[i] = potential(r[i]) + OrbitalFactor/(r[i]*r[i]);
+<span style="color: #408080; font-style: italic">#Initialize constants</span>
+Step    <span style="color: #666666">=</span> RMax<span style="color: #666666">/</span>(Dim<span style="color: #666666">+1</span>)
+DiagConst <span style="color: #666666">=</span> <span style="color: #666666">2.0</span> <span style="color: #666666">/</span> (Step<span style="color: #666666">*</span>Step)
+NondiagConst <span style="color: #666666">=</span>  <span style="color: #666666">-1.0</span> <span style="color: #666666">/</span> (Step<span style="color: #666666">*</span>Step)
+OrbitalFactor <span style="color: #666666">=</span> lOrbital <span style="color: #666666">*</span> (lOrbital <span style="color: #666666">+</span> <span style="color: #666666">1.0</span>)
 
-#Setting up tridiagonal matrix and find eigenvectors and eigenvalues
-Hamiltonian = np.zeros((Dim,Dim))
-Hamiltonian[0,0] = DiagConst + v[0];
-Hamiltonian[0,1] = NondiagConst;
-for i in xrange(1,Dim-1):
-    Hamiltonian[i,i-1]  = NondiagConst;
-    Hamiltonian[i,i]    = DiagConst + v[i];
-    Hamiltonian[i,i+1]  = NondiagConst;
-Hamiltonian[Dim-1,Dim-2] = NondiagConst;
-Hamiltonian[Dim-1,Dim-1] = DiagConst + v[Dim-1];
-# diagonalize and obtain eigenvalues, not necessarily sorted
-EigValues, EigVectors = np.linalg.eig(Hamiltonian)
-# sort eigenvectors and eigenvalues
-permute = EigValues.argsort()
-EigValues = EigValues[permute]
-EigVectors = EigVectors[:,permute]
-# now plot the results for the three lowest lying eigenstates
-for i in xrange(3):
-    print EigValues[i]
-FirstEigvector = EigVectors[:,0]
-SecondEigvector = EigVectors[:,1]
-ThirdEigvector = EigVectors[:,2]
-plt.plot(r, FirstEigvector**2 ,'b-',r, SecondEigvector**2 ,'g-',r, ThirdEigvector**2 ,'r-')
-plt.axis([0,4.6,0.0, 0.025])
-plt.xlabel(r'$r$')
-plt.ylabel(r'Radial probability $r^2|R(r)|^2$')
-plt.title(r'Radial probability distributions for three lowest-lying states')
-plt.savefig('eigenvector.pdf')
-plt.savefig('eigenvector.png')
-plt.show()
+<span style="color: #408080; font-style: italic">#Calculate array of potential values</span>
+v <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros(Dim)
+r <span style="color: #666666">=</span> np<span style="color: #666666">.</span>linspace(RMin,RMax,Dim)
+<span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">xrange</span>(Dim):
+    r[i] <span style="color: #666666">=</span> RMin <span style="color: #666666">+</span> (i<span style="color: #666666">+1</span>) <span style="color: #666666">*</span> Step;
+    v[i] <span style="color: #666666">=</span> potential(r[i]) <span style="color: #666666">+</span> OrbitalFactor<span style="color: #666666">/</span>(r[i]<span style="color: #666666">*</span>r[i]);
 
-</code></pre>
-<!-- end verbatim block -->
+<span style="color: #408080; font-style: italic">#Setting up tridiagonal matrix and find eigenvectors and eigenvalues</span>
+Hamiltonian <span style="color: #666666">=</span> np<span style="color: #666666">.</span>zeros((Dim,Dim))
+Hamiltonian[<span style="color: #666666">0</span>,<span style="color: #666666">0</span>] <span style="color: #666666">=</span> DiagConst <span style="color: #666666">+</span> v[<span style="color: #666666">0</span>];
+Hamiltonian[<span style="color: #666666">0</span>,<span style="color: #666666">1</span>] <span style="color: #666666">=</span> NondiagConst;
+<span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">xrange</span>(<span style="color: #666666">1</span>,Dim<span style="color: #666666">-1</span>):
+    Hamiltonian[i,i<span style="color: #666666">-1</span>]  <span style="color: #666666">=</span> NondiagConst;
+    Hamiltonian[i,i]    <span style="color: #666666">=</span> DiagConst <span style="color: #666666">+</span> v[i];
+    Hamiltonian[i,i<span style="color: #666666">+1</span>]  <span style="color: #666666">=</span> NondiagConst;
+Hamiltonian[Dim<span style="color: #666666">-1</span>,Dim<span style="color: #666666">-2</span>] <span style="color: #666666">=</span> NondiagConst;
+Hamiltonian[Dim<span style="color: #666666">-1</span>,Dim<span style="color: #666666">-1</span>] <span style="color: #666666">=</span> DiagConst <span style="color: #666666">+</span> v[Dim<span style="color: #666666">-1</span>];
+<span style="color: #408080; font-style: italic"># diagonalize and obtain eigenvalues, not necessarily sorted</span>
+EigValues, EigVectors <span style="color: #666666">=</span> np<span style="color: #666666">.</span>linalg<span style="color: #666666">.</span>eig(Hamiltonian)
+<span style="color: #408080; font-style: italic"># sort eigenvectors and eigenvalues</span>
+permute <span style="color: #666666">=</span> EigValues<span style="color: #666666">.</span>argsort()
+EigValues <span style="color: #666666">=</span> EigValues[permute]
+EigVectors <span style="color: #666666">=</span> EigVectors[:,permute]
+<span style="color: #408080; font-style: italic"># now plot the results for the three lowest lying eigenstates</span>
+<span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">xrange</span>(<span style="color: #666666">3</span>):
+    <span style="color: #008000; font-weight: bold">print</span> EigValues[i]
+FirstEigvector <span style="color: #666666">=</span> EigVectors[:,<span style="color: #666666">0</span>]
+SecondEigvector <span style="color: #666666">=</span> EigVectors[:,<span style="color: #666666">1</span>]
+ThirdEigvector <span style="color: #666666">=</span> EigVectors[:,<span style="color: #666666">2</span>]
+plt<span style="color: #666666">.</span>plot(r, FirstEigvector<span style="color: #666666">**2</span> ,<span style="color: #BA2121">&#39;b-&#39;</span>,r, SecondEigvector<span style="color: #666666">**2</span> ,<span style="color: #BA2121">&#39;g-&#39;</span>,r, ThirdEigvector<span style="color: #666666">**2</span> ,<span style="color: #BA2121">&#39;r-&#39;</span>)
+plt<span style="color: #666666">.</span>axis([<span style="color: #666666">0</span>,<span style="color: #666666">4.6</span>,<span style="color: #666666">0.0</span>, <span style="color: #666666">0.025</span>])
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">r&#39;$r$&#39;</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">r&#39;Radial probability $r^2|R(r)|^2$&#39;</span>)
+plt<span style="color: #666666">.</span>title(<span style="color: #BA2121">r&#39;Radial probability distributions for three lowest-lying states&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;eigenvector.pdf&#39;</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;eigenvector.png&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
+
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec64">Exercise 1  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Masses and binding energies.</b>
 <p>
 The data on binding energies can be found in the file bedata.dat at the github address of the course, see
-<a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_self"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>
+<a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>
 
 <ul>
   <li> Write a small program which reads in the proton and neutron numbers and the binding energies</li> 
@@ -2108,19 +2106,19 @@ Analyze then the fluorine isotopes and find, where available the corresponding e
 Comment your results.
 
 <p>
-A program example in C++ and the input data file <em>bedata.dat</em> can be found found at the github repository for the course, see <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_self"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>
+A program example in C++ and the input data file <em>bedata.dat</em> can be found found at the github repository for the course, see <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec65">Exercise 2  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Masses and binding energies.</b>
 <p>
 The program for finding the eigenvalues of the harmonic oscillator are in the github folder
-<a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_self"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>.
+<a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>.
 
 <p>
 You can use this program to solve the exercises below, or write your own using your preferred programming language, be it python, fortran or c++ or other languages. Here I will mainly provide fortran, python and c++. 
@@ -2134,7 +2132,7 @@ You can use this program to solve the exercises below, or write your own using y
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec66">Exercise 3  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2182,7 +2180,7 @@ symmetry?
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec67">Exercise 4  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2234,7 +2232,7 @@ excitations from the ground state configuration, \( p=1 \) here.  The reliabilit
 with two particles in \( p=1 \),
 depends on the strength of the interaction \( g \) and the single-particle spacing \( d \).
 Finally, this model is a simple schematic ansatz for studies of pairing correlations and thereby superfluidity/superconductivity  
-in fermionic systems. 
+in fermionic systems.
 
 <p>
 <center> <!-- figure -->

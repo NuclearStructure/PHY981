@@ -11,32 +11,37 @@ Automatically generated HTML file from DocOnce source
 <title>Hartree-Fock methods</title>
 
 
-<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
-<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
 <style type="text/css">
-h1 {color: #b58900;}  /* yellow */
-/* h1 {color: #cb4b16;}  orange */
-/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
-code { padding: 0px; background-color: inherit; }
-pre {
-  border: 0pt solid #93a1a1;
-  box-shadow: none;
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
 }
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 .alert-text-small   { font-size: 80%;  }
 .alert-text-large   { font-size: 130%; }
 .alert-text-normal  { font-size: 90%;  }
 .alert {
   padding:8px 35px 8px 14px; margin-bottom:18px;
   text-shadow:0 1px 0 rgba(255,255,255,0.5);
-  border:1px solid #93a1a1;
+  border:1px solid #bababa;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   color: #555;
-  background-color: #eee8d5;
+  background-color: #f8f8f8;
   background-position: 10px 5px;
   background-repeat: no-repeat;
   background-size: 38px;
@@ -47,10 +52,10 @@ pre {
 .alert-block > p, .alert-block > ul {margin-bottom:1em}
 .alert li {margin-top: 1em}
 .alert-block p+p {margin-top:5px}
-.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
-.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
-.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
-.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
 
 div { text-align: justify; text-justify: inter-word; }
 </style>
@@ -60,191 +65,191 @@ div { text-align: justify; text-justify: inter-word; }
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [(' Why Hartree-Fock? Derivation of Hartree-Fock equations in coordinate space ',
+ 'sections': [('Why Hartree-Fock? Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec0'),
-              (' Why Hartree-Fock? Derivation of Hartree-Fock equations in coordinate space ',
+              ('Why Hartree-Fock? Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec1'),
-              (' Variational Calculus and Lagrangian Multipliers  ',
+              ('Variational Calculus and Lagrangian Multipliers',
                2,
                None,
                '___sec2'),
-              (' Variational Calculus and Lagrangian Multipliers  ',
+              ('Variational Calculus and Lagrangian Multipliers',
                2,
                None,
                '___sec3'),
-              (' Variational Calculus and Lagrangian Multipliers  ',
+              ('Variational Calculus and Lagrangian Multipliers',
                2,
                None,
                '___sec4'),
-              (' Variational Calculus and Lagrangian Multipliers  ',
+              ('Variational Calculus and Lagrangian Multipliers',
                2,
                None,
                '___sec5'),
-              (' Variational Calculus and Lagrangian Multipliers  ',
+              ('Variational Calculus and Lagrangian Multipliers',
                2,
                None,
                '___sec6'),
-              (' Definitions and notations ', 2, None, '___sec7'),
-              (' Definitions and notations ', 2, None, '___sec8'),
-              (' Definitions and notations ', 2, None, '___sec9'),
-              (' Definitions and notations ', 2, None, '___sec10'),
-              (' Definitions and notations ', 2, None, '___sec11'),
-              (' Definitions and notations ', 2, None, '___sec12'),
-              (' Definitions and notations ', 2, None, '___sec13'),
-              (' Definitions and notations ', 2, None, '___sec14'),
-              (' Definitions and notations ', 2, None, '___sec15'),
-              (' Definitions and notations ', 2, None, '___sec16'),
-              (' Definitions and notations ', 2, None, '___sec17'),
-              (' Definitions and notations ', 2, None, '___sec18'),
-              (' Definitions and notations ', 2, None, '___sec19'),
-              (' Definitions and notations ', 2, None, '___sec20'),
-              (' Definitions and notations ', 2, None, '___sec21'),
-              (' Definitions and notations ', 2, None, '___sec22'),
-              (' Derivation of Hartree-Fock equations in coordinate space ',
+              ('Definitions and notations', 2, None, '___sec7'),
+              ('Definitions and notations', 2, None, '___sec8'),
+              ('Definitions and notations', 2, None, '___sec9'),
+              ('Definitions and notations', 2, None, '___sec10'),
+              ('Definitions and notations', 2, None, '___sec11'),
+              ('Definitions and notations', 2, None, '___sec12'),
+              ('Definitions and notations', 2, None, '___sec13'),
+              ('Definitions and notations', 2, None, '___sec14'),
+              ('Definitions and notations', 2, None, '___sec15'),
+              ('Definitions and notations', 2, None, '___sec16'),
+              ('Definitions and notations', 2, None, '___sec17'),
+              ('Definitions and notations', 2, None, '___sec18'),
+              ('Definitions and notations', 2, None, '___sec19'),
+              ('Definitions and notations', 2, None, '___sec20'),
+              ('Definitions and notations', 2, None, '___sec21'),
+              ('Definitions and notations', 2, None, '___sec22'),
+              ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec23'),
-              (' Derivation of Hartree-Fock equations in coordinate space ',
+              ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec24'),
-              (' Derivation of Hartree-Fock equations in coordinate space ',
+              ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec25'),
-              (' Derivation of Hartree-Fock equations in coordinate space ',
+              ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec26'),
-              (' Derivation of Hartree-Fock equations in coordinate space ',
+              ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec27'),
-              (' Derivation of Hartree-Fock equations in coordinate space ',
+              ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec28'),
-              (' Derivation of Hartree-Fock equations in coordinate space ',
+              ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec29'),
-              (' Derivation of Hartree-Fock equations in coordinate space ',
+              ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec30'),
-              (' Derivation of Hartree-Fock equations in coordinate space ',
+              ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec31'),
-              (' Derivation of Hartree-Fock equations in coordinate space ',
+              ('Derivation of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec32'),
-              (' Analysis of Hartree-Fock equations in coordinate space ',
+              ('Analysis of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec33'),
-              (' Analysis of Hartree-Fock equations in coordinate space ',
+              ('Analysis of Hartree-Fock equations in coordinate space',
                2,
                None,
                '___sec34'),
-              (' Hartree-Fock by varying the coefficients of a wave function expansion ',
+              ('Hartree-Fock by varying the coefficients of a wave function expansion',
                2,
                None,
                '___sec35'),
-              (' Hartree-Fock by varying the coefficients of a wave function expansion ',
+              ('Hartree-Fock by varying the coefficients of a wave function expansion',
                2,
                None,
                '___sec36'),
-              (' Hartree-Fock by varying the coefficients of a wave function expansion ',
+              ('Hartree-Fock by varying the coefficients of a wave function expansion',
                2,
                None,
                '___sec37'),
-              (' Hartree-Fock by varying the coefficients of a wave function expansion ',
+              ('Hartree-Fock by varying the coefficients of a wave function expansion',
                2,
                None,
                '___sec38'),
-              (' Hartree-Fock by varying the coefficients of a wave function expansion ',
+              ('Hartree-Fock by varying the coefficients of a wave function expansion',
                2,
                None,
                '___sec39'),
-              (' Hartree-Fock by varying the coefficients of a wave function expansion ',
+              ('Hartree-Fock by varying the coefficients of a wave function expansion',
                2,
                None,
                '___sec40'),
-              (' Hartree-Fock by varying the coefficients of a wave function expansion ',
+              ('Hartree-Fock by varying the coefficients of a wave function expansion',
                2,
                None,
                '___sec41'),
-              (' Hartree-Fock by varying the coefficients of a wave function expansion ',
+              ('Hartree-Fock by varying the coefficients of a wave function expansion',
                2,
                None,
                '___sec42'),
-              (' Hartree-Fock by varying the coefficients of a wave function expansion ',
+              ('Hartree-Fock by varying the coefficients of a wave function expansion',
                2,
                None,
                '___sec43'),
-              (' Hartree-Fock algorithm ', 2, None, '___sec44'),
-              (' Hartree-Fock algorithm ', 2, None, '___sec45'),
-              (' Hartree-Fock algorithm ', 2, None, '___sec46'),
-              (' Hartree-Fock algorithm ', 2, None, '___sec47'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ('Hartree-Fock algorithm', 2, None, '___sec44'),
+              ('Hartree-Fock algorithm', 2, None, '___sec45'),
+              ('Hartree-Fock algorithm', 2, None, '___sec46'),
+              ('Hartree-Fock algorithm', 2, None, '___sec47'),
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec48'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec49'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec50'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec51'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec52'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec53'),
-              (" Analysis of Hartree-Fock equations, Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations, Koopman's theorem",
                2,
                None,
                '___sec54'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec55'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec56'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec57'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec58'),
-              (" Analysis of Hartree-Fock equations and Koopman's theorem ",
+              ("Analysis of Hartree-Fock equations and Koopman's theorem",
                2,
                None,
                '___sec59'),
-              (' Exercises: Derivation of Hartree-Fock equations  ',
+              ('Exercises: Derivation of Hartree-Fock equations',
                2,
                None,
                '___sec60'),
-              (' Exercises: Derivation of Hartree-Fock equations  ',
+              ('Exercises: Derivation of Hartree-Fock equations',
                2,
                None,
                '___sec61')]}
@@ -283,13 +288,15 @@ MathJax.Hub.Config({
 <b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
 </center>
 
-
 <p>
 <!-- institution(s) -->
+
+<br>
 <p>
-<center><h4>Spring 2015</h4></center> <!-- date -->
+<center><h4>Spring 2016</h4></center> <!-- date -->
+<br>
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec0">Why Hartree-Fock? Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -328,7 +335,7 @@ that is to find a local minimum with a Slater determinant \( \Phi_0 \) being the
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec1">Why Hartree-Fock? Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -349,14 +356,14 @@ The so-called Hartree-Fock potential \( \hat{u}^{\mathrm{HF}} \) brings an expli
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec2">Variational Calculus and Lagrangian Multipliers  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 The calculus of variations involves 
-problems where the quantity to be minimized or maximized is an integral. 
+problems where the quantity to be minimized or maximized is an integral.
 
 <p>
 In the general case we have an integral of the type
@@ -376,7 +383,7 @@ The constraints can be treated via the technique of Lagrangian multipliers
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec3">Variational Calculus and Lagrangian Multipliers  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -403,7 +410,7 @@ We will, for the sake of notational convenience,  skip the variables \( x,y,z \)
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec4">Variational Calculus and Lagrangian Multipliers  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -424,7 +431,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec5">Variational Calculus and Lagrangian Multipliers  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -451,7 +458,7 @@ where we have skipped the dependence on \( x,y,z \) and introduced the shorthand
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec6">Variational Calculus and Lagrangian Multipliers  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -475,7 +482,7 @@ a powerful method for obtaining approximate solutions of the wave function.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec7">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -507,7 +514,7 @@ one derived from the self-consistent solution of the Hartree-Fock equations to b
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec8">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -535,7 +542,7 @@ has to be antisymmetric, resulting in the eigenvalue \( \beta = -1 \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec9">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -559,7 +566,7 @@ are quantum numbers needed to describe remaining quantum numbers.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec10">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -583,7 +590,7 @@ many-body interactions are present.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec11">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -605,7 +612,7 @@ where we have used the shorthand \( d\mathbf{\tau}=dx_1dr_2\dots dr_A \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec12">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -624,7 +631,7 @@ summation over all possible permutations of two particles.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec13">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -649,7 +656,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec14">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -676,7 +683,7 @@ determinant reproduces it.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec15">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -707,7 +714,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec16">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -728,14 +735,14 @@ $$
   \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}
   = \sum_{\mu=1}^A \int \psi_{\mu}^*(x)\hat{h}_0\psi_{\mu}(x)dx
   d\mathbf{r}.
-  \label{H1Expectation}
+\label{H1Expectation}
 \end{equation}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec17">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -751,14 +758,14 @@ $$
 \begin{equation}
   \int \Phi^*\hat{H}_0\Phi  d\tau
   = \sum_{\mu=1}^A \langle \mu | \hat{h}_0 | \mu \rangle.
-  \label{H1Expectation1}
+\label{H1Expectation1}
 \end{equation}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec18">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -784,7 +791,7 @@ Hamiltonian.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec19">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -805,7 +812,7 @@ are orthogonal.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec20">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -837,7 +844,7 @@ all pairs twice.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec21">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -853,7 +860,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec22">Definitions and notations </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -875,7 +882,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec23">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -897,7 +904,7 @@ where we have used the shorthand \( d\mathbf{\tau}=dx_1dx_2\dots dx_A \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec24">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -927,7 +934,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec25">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -950,7 +957,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec26">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -969,7 +976,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec27">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -998,7 +1005,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec28">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1011,7 +1018,6 @@ $$
   = \frac{1}{2}\sum_{\mu=1}^A\sum_{\nu=1}^A \langle \mu\nu|\hat{v}|\mu\nu\rangle_{AS}. \label{H2Expectation2}
 \end{equation}
 $$
-
 
 <p>
 Adding the contribution from the one-body operator \( \hat{H}_0 \) to
@@ -1029,7 +1035,7 @@ In our coordinate space derivations below we will spell out the Hartree-Fock equ
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec29">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1052,7 +1058,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec30">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1083,7 +1089,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec31">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1111,7 +1117,7 @@ as summation indices, we obtain two identical terms.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec32">Derivation of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1124,7 +1130,7 @@ term includes the <em>self-interaction</em> of
 electrons when \( \mu=\nu \). The self-interaction is cancelled in the fourth
 term, or the <em>exchange</em> term. The exchange term results from our
 inclusion of the Pauli principle and the assumed determinantal form of
-the wave-function. Equation \eqref{eq:hartreefockcoordinatespace}, in addition to the kinetic energy and the attraction from the atomic nucleus that confines the motion of a single electron,   represents now the motion of a single-particle modified by the two-body interaction. The additional contribution to the Schroedinger equation due to the two-body interaction, represents a mean field set up by all the other bystanding electrons, the latter given by the sum over all single-particle states occupied by \( N \) electrons. 
+the wave-function. Equation \eqref{eq:hartreefockcoordinatespace}, in addition to the kinetic energy and the attraction from the atomic nucleus that confines the motion of a single electron,   represents now the motion of a single-particle modified by the two-body interaction. The additional contribution to the Schroedinger equation due to the two-body interaction, represents a mean field set up by all the other bystanding electrons, the latter given by the sum over all single-particle states occupied by \( N \) electrons.
 
 <p>
 The Hartree-Fock equation is an example of an integro-differential equation. These equations involve repeated calculations of integrals, in addition to the solution of a set of coupled differential equations. 
@@ -1134,7 +1140,7 @@ This alternative derivation of the Hartree-Fock equations is given below.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec33">Analysis of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1165,7 +1171,7 @@ respectively.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec34">Analysis of Hartree-Fock equations in coordinate space </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1203,7 +1209,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec35">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1226,7 +1232,7 @@ to truncate the above sum.  We assume that the basis \( \phi_{\lambda} \) is ort
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec36">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1247,7 +1253,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec37">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1260,7 +1266,7 @@ For general single-particle states we employ the labels \( pqrs\dots \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec38">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1289,7 +1295,7 @@ where \( \Phi^{HF} \) is the new Slater determinant defined by the new basis of 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec39">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1307,7 +1313,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec40">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1325,13 +1331,14 @@ which allows us to define a functional to be minimized that reads
 $$
 \begin{equation}
   F[\Phi^{HF}]=E[\Phi^{HF}] - \sum_{i=1}^A\epsilon_i\sum_{\alpha} C^*_{i\alpha}C_{i\alpha}.
+\label{_auto1}
 \end{equation}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec41">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1353,7 +1360,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec42">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1370,7 +1377,7 @@ Note that the sums over greek indices run over the number of basis set functions
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec43">Hartree-Fock by varying the coefficients of a wave function expansion </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1396,7 +1403,7 @@ It suffices to tabulate the matrix elements \( \langle \alpha | h | \beta \rangl
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec44">Hartree-Fock algorithm </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1414,7 +1421,7 @@ The Hartree-Fock equations are solved in an iterative waym starting with a guess
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec45">Hartree-Fock algorithm </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1440,7 +1447,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec46">Hartree-Fock algorithm </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1463,7 +1470,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec47">Hartree-Fock algorithm </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1492,7 +1499,7 @@ energies and \( m \) is the number of single-particle states.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec48">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1515,7 +1522,7 @@ Our single-particle states \( ijk\dots \) are now single-particle states obtaine
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec49">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1532,7 +1539,7 @@ This form will be used in our discussion of Koopman's theorem.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec50">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1559,7 +1566,7 @@ where we have removed a single-particle state \( k\le F \), that is a state belo
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec51">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1585,7 +1592,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec52">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1602,7 +1609,7 @@ Koopman's theorem states that for example the ionization energy of a closed-shel
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec53">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1611,7 +1618,7 @@ Koopman's theorem states that for example the ionization energy of a closed-shel
 As an example, consider a simple model for atomic sodium, Na. Neutral sodium has eleven electrons, 
 with the weakest bound one being confined the \( 3s \) single-particle quantum numbers. The energy needed to remove an electron from neutral sodium is rather small, 5.1391 eV, a feature which pertains to all alkali metals.
 Having performed a  Hartree-Fock calculation for neutral sodium would then allows us to compute the
-ionization energy by using the single-particle energy for the \( 3s \) states, namely \( \epsilon_{3s}^{\mathrm{HF}} \). 
+ionization energy by using the single-particle energy for the \( 3s \) states, namely \( \epsilon_{3s}^{\mathrm{HF}} \).
 
 <p>
 From these considerations, we see that Hartree-Fock theory allows us to make a connection between experimental 
@@ -1622,7 +1629,7 @@ in terms of the particles or degrees of freedom which we believe are the fundame
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec54">Analysis of Hartree-Fock equations, Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1649,7 +1656,7 @@ where we have removed a single-particle state \( k\le F \), that is a state belo
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec55">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1678,7 +1685,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec56">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1700,7 +1707,7 @@ define separation energies. We have thus our first link between nuclear forces (
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec57">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1730,7 +1737,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec58">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1753,7 +1760,7 @@ nucleus. Examples are \( {}^{22}\mbox{O} \), \( {}^{24}\mbox{O} \), \( {}^{40}\m
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec59">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1784,7 +1791,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec60">Exercises: Derivation of Hartree-Fock equations  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1805,14 +1812,14 @@ Show that the new basis is orthonormal.
 Show that the new Slater determinant constructed from the new single-particle wave functions can be
 written as the determinant based on the previous basis and the determinant of the matrix \( C \).
 Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
-(Hint, \( C \) is a unitary matrix). 
+(Hint, \( C \) is a unitary matrix).
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec61">Exercises: Derivation of Hartree-Fock equations  </h2>
 <div class="alert alert-block alert-block alert-text-normal">

@@ -11,32 +11,37 @@ Automatically generated HTML file from DocOnce source
 <title>Quantum numbers and nuclear forces</title>
 
 
-<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
-<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
 <style type="text/css">
-h1 {color: #b58900;}  /* yellow */
-/* h1 {color: #cb4b16;}  orange */
-/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
-code { padding: 0px; background-color: inherit; }
-pre {
-  border: 0pt solid #93a1a1;
-  box-shadow: none;
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
 }
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 .alert-text-small   { font-size: 80%;  }
 .alert-text-large   { font-size: 130%; }
 .alert-text-normal  { font-size: 90%;  }
 .alert {
   padding:8px 35px 8px 14px; margin-bottom:18px;
   text-shadow:0 1px 0 rgba(255,255,255,0.5);
-  border:1px solid #93a1a1;
+  border:1px solid #bababa;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   color: #555;
-  background-color: #eee8d5;
+  background-color: #f8f8f8;
   background-position: 10px 5px;
   background-repeat: no-repeat;
   background-size: 38px;
@@ -47,10 +52,10 @@ pre {
 .alert-block > p, .alert-block > ul {margin-bottom:1em}
 .alert li {margin-top: 1em}
 .alert-block p+p {margin-top:5px}
-.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
-.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
-.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
-.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
 
 div { text-align: justify; text-justify: inter-word; }
 </style>
@@ -60,461 +65,437 @@ div { text-align: justify; text-justify: inter-word; }
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [(' Quantum numbers and nuclear forces ', 2, None, '___sec0'),
-              (' Single-particle and two-particle quantum numbers ',
+ 'sections': [('Quantum numbers and nuclear forces', 2, None, '___sec0'),
+              ('Single-particle and two-particle quantum numbers',
                2,
                None,
                '___sec1'),
-              (' Single-particle and two-particle quantum numbers, brief review on angular momenta etc ',
+              ('Single-particle and two-particle quantum numbers, brief review on angular momenta etc',
                2,
                None,
                '___sec2'),
-              (' Single-particle and two-particle quantum numbers, brief review on angular momenta etc ',
+              ('Single-particle and two-particle quantum numbers, brief review on angular momenta etc',
                2,
                None,
                '___sec3'),
-              (' Single-particle and two-particle quantum numbers, brief review on angular momenta etc ',
+              ('Single-particle and two-particle quantum numbers, brief review on angular momenta etc',
                2,
                None,
                '___sec4'),
-              (' Single-particle and two-particle quantum numbers, brief review on angular momenta etc ',
+              ('Single-particle and two-particle quantum numbers, brief review on angular momenta etc',
                2,
                None,
                '___sec5'),
-              (' Single-particle and two-particle quantum numbers, brief review on angular momenta etc ',
+              ('Single-particle and two-particle quantum numbers, brief review on angular momenta etc',
                2,
                None,
                '___sec6'),
-              (' Single-particle and two-particle quantum numbers, brief review on angular momenta etc ',
+              ('Single-particle and two-particle quantum numbers, brief review on angular momenta etc',
                2,
                None,
                '___sec7'),
-              (' Single-particle and two-particle quantum numbers, brief review on angular momenta etc ',
+              ('Single-particle and two-particle quantum numbers, brief review on angular momenta etc',
                2,
                None,
                '___sec8'),
-              (' Single-particle and two-particle quantum numbers ',
+              ('Single-particle and two-particle quantum numbers',
                2,
                None,
                '___sec9'),
-              (' Single-particle and two-particle quantum numbers ',
+              ('Single-particle and two-particle quantum numbers',
                2,
                None,
                '___sec10'),
-              (' Single-particle and two-particle quantum numbers ',
+              ('Single-particle and two-particle quantum numbers',
                2,
                None,
                '___sec11'),
-              (' Single-particle and two-particle quantum numbers ',
+              ('Single-particle and two-particle quantum numbers',
                2,
                None,
                '___sec12'),
-              (' Single-particle and two-particle quantum numbers ',
+              ('Single-particle and two-particle quantum numbers',
                2,
                None,
                '___sec13'),
-              (' Single-particle and two-particle quantum numbers ',
+              ('Single-particle and two-particle quantum numbers',
                2,
                None,
                '___sec14'),
-              (' Single-particle and two-particle quantum numbers ',
+              ('Single-particle and two-particle quantum numbers',
                2,
                None,
                '___sec15'),
-              (' Clebsch-Gordan coefficients ', 2, None, '___sec16'),
-              (' Quantum numbers and the Schroeodinger equation in relative and CM coordinates ',
+              ('Clebsch-Gordan coefficients', 2, None, '___sec16'),
+              ('Quantum numbers and the Schroeodinger equation in relative and CM coordinates',
                2,
                None,
                '___sec17'),
-              (' Quantum numbers and the Schroedinger equation in relative and CM coordinates ',
+              ('Quantum numbers and the Schroedinger equation in relative and CM coordinates',
                2,
                None,
                '___sec18'),
-              (' Quantum numbers and the Schroedinger equation in relative and CM coordinates ',
+              ('Quantum numbers and the Schroedinger equation in relative and CM coordinates',
                2,
                None,
                '___sec19'),
-              (' Quantum numbers ', 2, None, '___sec20'),
-              (' Components of the force and isospin ', 2, None, '___sec21'),
-              (' Isospin ', 2, None, '___sec22'),
-              (' Isospin ', 2, None, '___sec23'),
-              (' Isospin ', 2, None, '___sec24'),
-              (' Isospin ', 2, None, '___sec25'),
-              (' Two-body matrix elements ', 2, None, '___sec26'),
-              (' Two-body matrix elementsin $m$-scheme ',
-               2,
-               None,
-               '___sec27'),
-              (' Two-body matrix elements in $m$-scheme ',
-               2,
-               None,
-               '___sec28'),
-              (' Two-body matrix elements in $J$-scheme ',
-               2,
-               None,
-               '___sec29'),
-              (' Two-body matrix elements in $J$-scheme ',
-               2,
-               None,
-               '___sec30'),
-              (' Two-body matrix elements in $J$-scheme ',
-               2,
-               None,
-               '___sec31'),
-              (' Two-body matrix elements in $J$-scheme ',
-               2,
-               None,
-               '___sec32'),
-              (' Two-body matrix elements in $J$-scheme ',
-               2,
-               None,
-               '___sec33'),
-              (' Two-body matrix elements in $J$-scheme ',
-               2,
-               None,
-               '___sec34'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec35'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec36'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec37'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec38'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec39'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec40'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec41'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec42'),
-              (' Symmetries of the Nucleon-Nucleon (NN) Force ',
+              ('Quantum numbers', 2, None, '___sec20'),
+              ('Components of the force and isospin', 2, None, '___sec21'),
+              ('Isospin', 2, None, '___sec22'),
+              ('Isospin', 2, None, '___sec23'),
+              ('Isospin', 2, None, '___sec24'),
+              ('Isospin', 2, None, '___sec25'),
+              ('Two-body matrix elements', 2, None, '___sec26'),
+              ('Two-body matrix elementsin $m$-scheme', 2, None, '___sec27'),
+              ('Two-body matrix elements in $m$-scheme', 2, None, '___sec28'),
+              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec29'),
+              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec30'),
+              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec31'),
+              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec32'),
+              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec33'),
+              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec34'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec35'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec36'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec37'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec38'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec39'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec40'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec41'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec42'),
+              ('Symmetries of the Nucleon-Nucleon (NN) Force',
                2,
                None,
                '___sec43'),
-              (' A typical form of the nuclear force ', 2, None, '___sec44'),
-              (' Nuclear forces ', 2, None, '___sec45'),
-              (' Dramatis Personae ', 2, None, '___sec46'),
-              (' Components of the force and quantum numbers ',
+              ('A typical form of the nuclear force', 2, None, '___sec44'),
+              ('Nuclear forces', 2, None, '___sec45'),
+              ('Dramatis Personae', 2, None, '___sec46'),
+              ('Components of the force and quantum numbers',
                2,
                None,
                '___sec47'),
-              (' Relative and CoM system, quantum numbers ',
+              ('Relative and CoM system, quantum numbers',
                2,
                None,
                '___sec48'),
-              (' Relative and CoM system, quantum numbers ',
+              ('Relative and CoM system, quantum numbers',
                2,
                None,
                '___sec49'),
-              (' Relative and CoM system, quantum numbers ',
+              ('Relative and CoM system, quantum numbers',
                2,
                None,
                '___sec50'),
-              (' Relative and CoM system, quantum numbers ',
+              ('Relative and CoM system, quantum numbers',
                2,
                None,
                '___sec51'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec52'),
-              (' Components of the force and quantum numbers ',
+              ('Phenomenology of nuclear forces', 2, None, '___sec52'),
+              ('Components of the force and quantum numbers',
                2,
                None,
                '___sec53'),
-              (' Components of the force and quantum numbers ',
+              ('Components of the force and quantum numbers',
                2,
                None,
                '___sec54'),
-              (' Components of the force and quantum numbers ',
+              ('Components of the force and quantum numbers',
                2,
                None,
                '___sec55'),
-              (' Components of the force and quantum numbers ',
+              ('Components of the force and quantum numbers',
                2,
                None,
                '___sec56'),
-              (' Components of the force and isospin ', 2, None, '___sec57'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec58'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec59'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec60'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec61'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec62'),
-              (' Phenomenology of nuclear forces ', 2, None, '___sec63'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Components of the force and isospin', 2, None, '___sec57'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec58'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec59'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec60'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec61'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec62'),
+              ('Phenomenology of nuclear forces', 2, None, '___sec63'),
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec64'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec65'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec66'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec67'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec68'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec69'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec70'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec71'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec72'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec73'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec74'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec75'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec76'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec77'),
-              (' Models for nuclear forces and derivation of non-relativistic expressions ',
+              ('Models for nuclear forces and derivation of non-relativistic expressions',
                2,
                None,
                '___sec78'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec79'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec80'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec81'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec82'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec83'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec84'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec85'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec86'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec87'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec88'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec89'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec90'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec91'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec92'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec93'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec94'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec95'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec96'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec97'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec98'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec99'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec100'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec101'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec102'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec103'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec104'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec105'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec106'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec107'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec108'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec109'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec110'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec111'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec112'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec113'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec114'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec115'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec116'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec117'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec118'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec119'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec120'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec121'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec122'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec123'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec124'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec125'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec126'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec127'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec128'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec129'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec130'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec131'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec132'),
-              (' The Lippman-Schwinger equation for two-nucleon scattering ',
+              ('The Lippman-Schwinger equation for two-nucleon scattering',
                2,
                None,
                '___sec133'),
-              (' Exercise 10 ', 2, None, '___sec134'),
-              (' Exercise 11 ', 2, None, '___sec135'),
-              (' Exercise 12 ', 2, None, '___sec136')]}
+              ('Exercise 10', 2, None, '___sec134'),
+              ('Exercise 11', 2, None, '___sec135'),
+              ('Exercise 12', 2, None, '___sec136')]}
 end of tocinfo -->
 
 <body>
@@ -550,13 +531,15 @@ MathJax.Hub.Config({
 <b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
 </center>
 
-
 <p>
 <!-- institution(s) -->
+
+<br>
 <p>
-<center><h4>Spring 2015</h4></center> <!-- date -->
+<center><h4>Spring 2016</h4></center> <!-- date -->
+<br>
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec0">Quantum numbers and nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -575,7 +558,7 @@ For a good discussion of isospin, see Alex Brown's lecture notes chapter 12, 13 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec1">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -592,7 +575,7 @@ In order to understand the basics of the nucleon-nucleon interaction, we need to
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec2">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 
@@ -617,7 +600,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec3">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -643,7 +626,7 @@ since we have that \( [\hat{L}_z,\hat{L}_x]=i\hbar\hat{L}_y \) and \( [\hat{L}_z
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec4">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -686,7 +669,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec5">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -710,7 +693,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec6">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -730,7 +713,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec7">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -756,7 +739,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec8">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -775,7 +758,7 @@ the orbital angular momenta \( \pi_l=(-1)^l \) . The total parity is the product
 \( \pi = \prod_i \pi_{\mathrm{intrinsic}}(i)\pi_l(i) = \prod_i (-1)^{l_i} \)
 
 <p>
-The basis states we deal with are constructed so that they conserve parity and have thus a definite parity. 
+The basis states we deal with are constructed so that they conserve parity and have thus a definite parity.
 
 <p>
 Note that we do have parity violating processes, more on this later although our focus will be mainly on non-parity viloating processes
@@ -783,7 +766,7 @@ Note that we do have parity violating processes, more on this later although our
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec9">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -806,7 +789,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec10">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -829,7 +812,7 @@ with \( P_l^{m_l} \) being the so-called associated Legendre polynomials.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec11">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -860,7 +843,7 @@ for \( l=2 \) and \( m_l=0 \) etc.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec12">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -888,7 +871,7 @@ on the latter state we will obtain admixtures from possible \( \phi_{nlm_lsm_s}(
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec13">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -923,7 +906,7 @@ in the functions \( \psi \) since
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec14">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -955,7 +938,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec15">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -980,7 +963,7 @@ where the coefficients \( \langle lm_lsm_s|jm_j\rangle \) are the so-called Cleb
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec16">Clebsch-Gordan coefficients </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1004,7 +987,7 @@ and many others. The latter will turn extremely useful when we are going to defi
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec17">Quantum numbers and the Schroeodinger equation in relative and CM coordinates </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1040,7 +1023,7 @@ use the angular momentum \( j \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec18">Quantum numbers and the Schroedinger equation in relative and CM coordinates </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1070,7 +1053,7 @@ It is thus normal to label a state with a given total angular momentum as
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec19">Quantum numbers and the Schroedinger equation in relative and CM coordinates </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1098,7 +1081,7 @@ We call the basis \( |(j_1j_2)JM_J\rangle \) for the <b>coupled basis</b>, or ju
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec20">Quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1129,7 +1112,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec21">Components of the force and isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1144,7 +1127,7 @@ the neutron to have isospin projection \( \tau_z=+1/2 \) and a proton to have \(
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec22">Isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1185,7 +1168,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec23">Isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1218,7 +1201,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec24">Isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1244,7 +1227,7 @@ as it should be.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec25">Isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1260,7 +1243,7 @@ $$
 \hat{T}_z=\sum_{i=1}^A\hat{\tau}_{z_i},
 $$
 
-with eigenvalues \( T(T+1) \) for \( \hat{T} \) and \( 1/2(N-Z) \) for \( \hat{T}_z \), where \( N \) is the number of neutrons and \( Z \) the number of protons. 
+with eigenvalues \( T(T+1) \) for \( \hat{T} \) and \( 1/2(N-Z) \) for \( \hat{T}_z \), where \( N \) is the number of neutrons and \( Z \) the number of protons.
 
 <p>
 If charge is conserved, the Hamiltonian \( \hat{H} \) commutes with \( \hat{T}_z \) and all members of a given isospin multiplet
@@ -1269,7 +1252,7 @@ If charge is conserved, the Hamiltonian \( \hat{H} \) commutes with \( \hat{T}_z
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec26">Two-body matrix elements </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1297,7 +1280,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec27">Two-body matrix elementsin \( m \)-scheme </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1316,7 +1299,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec28">Two-body matrix elements in \( m \)-scheme </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1350,7 +1333,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec29">Two-body matrix elements in \( J \)-scheme </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1376,7 +1359,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec30">Two-body matrix elements in \( J \)-scheme </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1398,7 +1381,7 @@ refers thus to the values of \( j_a \) and \( j_b \). If two identical particles
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec31">Two-body matrix elements in \( J \)-scheme </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1429,7 +1412,7 @@ This relation is important since we will need it when using anti-symmetrized mat
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec32">Two-body matrix elements in \( J \)-scheme </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1468,7 +1451,7 @@ where the last relations follows from the fact that \( J \) is an integer and \(
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec33">Two-body matrix elements in \( J \)-scheme </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1503,7 +1486,7 @@ we obtain
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec34">Two-body matrix elements in \( J \)-scheme </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1521,7 +1504,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec35">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1541,7 +1524,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec36">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1567,7 +1550,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec37">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1596,7 +1579,7 @@ Nucleon-nucleon interaction from Lattice QCD, final confirmation of meson hypoth
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec38">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1616,7 +1599,7 @@ The aim is to give you an overview over central features of the nucleon-nucleon 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec39">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1632,7 +1615,7 @@ The aim is to give you an overview over central features of the nucleon-nucleon 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec40">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1655,7 +1638,7 @@ attractive part.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec41">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1673,7 +1656,7 @@ attractive part.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec42">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1698,7 +1681,7 @@ Charge-independence breaking (CIB)
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec43">Symmetries of the Nucleon-Nucleon (NN) Force </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1718,7 +1701,7 @@ Charge-independence breaking (CIB)
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec44">A typical form of the nuclear force </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1742,7 +1725,7 @@ How do we derive such terms?  (Note: no isospin dependence and that the above is
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec45">Nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1751,15 +1734,15 @@ How do we derive such terms?  (Note: no isospin dependence and that the above is
 To derive the above famous form of the nuclear force using field theoretical concepts, we will need some 
 elements from relativistic quantum mechanics. These derivations will be given below. 
 The material here gives some background to this.
-I know that many of you have not taken a course in quantum field theory. I hope however that you can see the basic ideas leading to the famous non-relativistic expressions for the nuclear force. 
+I know that many of you have not taken a course in quantum field theory. I hope however that you can see the basic ideas leading to the famous non-relativistic expressions for the nuclear force.
 
 <p>
 <b>Furthermore, when we analyze nuclear data, we will actually try to explain properties like spectra, single-particle energies etc in terms of the various terms of the nuclear force. Moreover, many of you will hear about these terms at various talks, workshops, seminars etc. Then, it is good to have an idea of what people actually mean!!</b>
 </div>
-  
+
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec46">Dramatis Personae </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1787,7 +1770,7 @@ I know that many of you have not taken a course in quantum field theory. I hope 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec47">Components of the force and quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1810,7 +1793,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec48">Relative and CoM system, quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1820,7 +1803,7 @@ $$
 <p>
 When solving the scattering equation or solving the two-nucleon problem, it is convenient to rewrite the Schroedinger equation, due to
 the spherical symmetry of the Hamiltonian, in relative and center-of-mass coordinates. This will also define the quantum numbers of the relative and center-of-mass system and will aid us later in solving
-the so-called Lippman-Schwinger equation for the scattering problem. 
+the so-called Lippman-Schwinger equation for the scattering problem.
 
 <p>
 We define the center-of-mass (CoM)  momentum as
@@ -1839,7 +1822,7 @@ We will below skip the indices \( ij \) and simply write \( \mathbf{k} \)
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec49">Relative and CoM system, quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1860,7 +1843,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec50">Relative and CoM system, quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1886,7 +1869,7 @@ where \( m_n \) is the average of the proton and the neutron masses.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec51">Relative and CoM system, quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1923,7 +1906,7 @@ where \( { \cal J} \) is the total angular momentum of the relative motion.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec52">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1932,14 +1915,14 @@ where \( { \cal J} \) is the total angular momentum of the relative motion.
 
 <p>
 The total two-nucleon state function has to be anti-symmetric. The total function contains a spatial part, a spin part and an isospin part. If isospin is conserved, this leads to in case we have an \( s \)-wave with spin \( S=0 \) to an isospin 
-two-body state with \( T=1 \) since the spatial part is symmetric and the spin part is anti-symmetric. 
+two-body state with \( T=1 \) since the spatial part is symmetric and the spin part is anti-symmetric.
 
 <p>
 Since the projections for \( T \) are \( T_z=-1,0,1 \), we can have a \( pp \), an \( nn \) and a \( pn \) state.
 
 <p>
 For \( l=0 \) and \( S=1 \), a so-called triplet state, \( ^3S_1 \), we must have \( T=0 \), meaning that we have only one state, a \( pn \) state. For other partial waves, the following table lists states up to \( f \) waves.
-We can systemize this in a table as follows, recalling that \( |\mathbf{l}-\mathbf{S}| \le |\mathbf{J}| \le |\mathbf{l}+\mathbf{S}| \),  
+We can systemize this in a table as follows, recalling that \( |\mathbf{l}-\mathbf{S}| \le |\mathbf{J}| \le |\mathbf{l}+\mathbf{S}| \),
 
 <p>
 <table border="1">
@@ -1962,7 +1945,7 @@ We can systemize this in a table as follows, recalling that \( |\mathbf{l}-\math
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec53">Components of the force and quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1994,7 +1977,7 @@ obeying the commutation and anti-commutation relations \( \{\sigma_x,\sigma_y\} 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec54">Components of the force and quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2016,7 +1999,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec55">Components of the force and quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2039,13 +2022,13 @@ expectation value of the tensor force is also zero.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec56">Components of the force and quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
- For \( s=1/2 \) spin values only for two nucleons, the expectation value of the tensor force operator is 
+ For \( s=1/2 \) spin values only for two nucleons, the expectation value of the tensor force operator is
 
 <p>
 <table border="1">
@@ -2069,7 +2052,7 @@ We will derive these expressions after we have discussed the Wigner-Eckart theor
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec57">Components of the force and isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2103,7 +2086,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec58">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2122,21 +2105,21 @@ From 1950 till approximately 2000: One-Boson-Exchange (OBE) models dominate. The
 <li> A good historical reference: R.&nbsp;Machleidt, Adv.&nbsp;Nucl.&nbsp;Phys.  <b>19</b>, 189 (1989).</li>
 </ul>
 
-Now: models based on chiral perturbation theory. These are effective models with nucleons and pions as degrees of freedom only. The other mesons which appeared in standard one-boson model appear as multi-pion resonances. 
+Now: models based on chiral perturbation theory. These are effective models with nucleons and pions as degrees of freedom only. The other mesons which appeared in standard one-boson model appear as multi-pion resonances.
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec59">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 The total two-nucleon state function has to be anti-symmetric. The total function contains a spatial part, a spin part and an isospin part. If isospin is conserved, this leads to in case we have an \( s \)-wave with spin \( S=0 \) to an isospin 
-two-body state with \( T=1 \) since the spatial part is symmetric and the spin part is anti-symmetric. 
+two-body state with \( T=1 \) since the spatial part is symmetric and the spin part is anti-symmetric.
 
 <p>
 Since the projections for \( T \) are \( T_z=-1,0,1 \), we can have a \( pp \), an \( nn \) and a \( pn \) state.
@@ -2147,7 +2130,7 @@ For \( l=0 \) and \( S=1 \), a so-called triplet state, \( ^3S_1 \), we must hav
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec60">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2161,12 +2144,12 @@ V_{\pi}(\mathbf{r})= -\frac{f_{\pi}^{2}}{4\pi m_{\pi}^{2}}\mathbf{ \tau}_1\cdot\
 \frac{1}{3}\left\{\mathbf{ \sigma}_1\cdot\mathbf{ \sigma}_2+\left( 1 + {3\over m_\pi r} + {3\over\left(m_\pi r\right)^2}\right) S_{12} (\hat r)\right\} \frac{e^{-m_\pi r}}{m_\pi r}.
 $$
 
-Here the constant \( f_{\pi}^{2}/4\pi\approx 0.08 \) and the mass of the pion is \( m_\pi\approx 140 \) MeV/$\mbox{c}^2$.  
+Here the constant \( f_{\pi}^{2}/4\pi\approx 0.08 \) and the mass of the pion is \( m_\pi\approx 140 \) MeV/$\mbox{c}^2$.
 
 
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec61">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2185,7 +2168,7 @@ since \( \langle\mathbf{ \sigma}_1\cdot\mathbf{ \sigma}_2\rangle=-3 \), that is 
 
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec62">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2208,12 +2191,11 @@ V_{\pi}(\mathbf{r})= \frac{1}{3}\frac{f_{\pi}^{2}}{4\pi m_{\pi}^{2}}\left(1+( 1 
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec63">Phenomenology of nuclear forces </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2230,7 +2212,7 @@ it is repulsive. However, its overall strength is weak. This is discussed furthe
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec64">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2264,7 +2246,7 @@ and tensor coupling constants, respectively.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec65">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2292,7 +2274,7 @@ with \( a \) being a fermion annihilation operator.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec66">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2323,7 +2305,7 @@ where \( m_{\alpha} \) is the mass of the relevant meson and
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec67">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2351,7 +2333,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec68">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2371,7 +2353,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec69">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2396,7 +2378,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec70">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2429,7 +2411,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec71">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2459,7 +2441,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec72">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2488,7 +2470,7 @@ We have omitted exchange terms and the isospin term \( \mathbf{\tau}_1\cdot\math
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec73">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2515,7 +2497,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec74">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2525,7 +2507,6 @@ We obtain
 $$
 V^{pv}(r)=-\frac{f_{\pi}^{2}}{m_{\pi}^{2}}\sigma_{1}\cdot{\nabla}\sigma_{2}\cdot{\nabla}\frac{e^{-m_{\pi}r}}{r}.
 $$
-
 
 <p>
 Carrying out the differentation of
@@ -2543,7 +2524,7 @@ For the full potential add the exchange part and the \( \mathbf{\tau}_1\cdot\mat
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec75">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2563,7 +2544,7 @@ For the full potential add the exchange part and the isospin dependence as well.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec76">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2581,7 +2562,7 @@ For the full potential add the exchange part and the isospin dependence as well.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec77">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2599,7 +2580,7 @@ We note a tensor force with sign opposite to that of the pion. This term has  sh
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec78">Models for nuclear forces and derivation of non-relativistic expressions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2621,14 +2602,14 @@ We note a tensor force with sign opposite to that of the pion. This term has  sh
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec79">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 What follows now is a more technical discussion on how we can solve the two-nucleon problem.
-This will lead us to the so-called Lippman-Schwinger equation for the scattering problem and a rewrite of Schroedinger's equation in relative and center-of-mass coordinates. 
+This will lead us to the so-called Lippman-Schwinger equation for the scattering problem and a rewrite of Schroedinger's equation in relative and center-of-mass coordinates.
 
 <p>
 Before we break down the Schroedinger equation into a partial wave decomposition, we derive now the so-called Lippman-Schwinger equation. We will do this in an operator form first.
@@ -2652,7 +2633,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec80">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2679,7 +2660,7 @@ the so-called unperturbed problem. In our case, these will simply be the kinetic
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec81">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2709,7 +2690,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec82">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2734,7 +2715,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec83">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2763,7 +2744,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec84">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2789,13 +2770,13 @@ which is (when we specify the state \( \vert\phi_n \rangle \)) an integral equat
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec85">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-Now we wish to introduce a partial wave decomposition in order to solve the Lippman-Schwinger equation. With a partial wave decomposition we can reduce a three-dimensional integral equation to a one-dimensional one. 
+Now we wish to introduce a partial wave decomposition in order to solve the Lippman-Schwinger equation. With a partial wave decomposition we can reduce a three-dimensional integral equation to a one-dimensional one.
 
 <p>
 Let us continue with our Schroedinger equation in the abstract vector representation
@@ -2812,7 +2793,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec86">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2839,7 +2820,7 @@ which is a transformation function defining the mapping from the abstract
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec87">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2859,7 +2840,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec88">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2884,7 +2865,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec89">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2907,7 +2888,7 @@ expansion.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec90">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2917,7 +2898,7 @@ The wave function \( \psi_n(\mathbf{k}) \) can be expanded in a complete set of 
 $$
 \begin{equation}
   \psi_n(\mathbf{k}) = \sum _{lm} \psi_{nlm}(k)Y_{lm}(\hat{k}) \hspace{1cm} \psi_{nlm}(k) = \int d\hat{k} Y_{lm}^*(\hat{k})\psi_n(\mathbf{k}).   , 
-  \label{eq:part_wave1}
+\label{eq:part_wave1}
 \end{equation}
 $$
 
@@ -2927,7 +2908,7 @@ to an infinite set of  1-dimensional angular momentum coupled integral equations
 $$
 \begin{equation}
   \left( \frac{\hbar^2}{2\mu} k^2-E_{nlm}\right)\psi_{nlm}(k) = -\sum_{l'm'}\int_{0}^\infty dk' {k'}^2 V_{lm, l'm'}(k,k') \psi_{nl'm'}(k') 
-  \label{eq:part_wave2}
+\label{eq:part_wave2}
 \end{equation}
 $$
 
@@ -2935,7 +2916,7 @@ where the angular momentum projected potential takes the form,
 $$
 \begin{equation}
   V_{lm, l'm'}(k,k') = \int d{\hat{k}} \int d{\hat{k}'}Y_{lm}^*(\hat{k})V(\mathbf{k}\mathbf{k'})Y_{l'm'}(\hat{k}')
-  \label{eq:pot1}
+\label{eq:pot1}
 \end{equation}
 $$
 
@@ -2945,7 +2926,7 @@ Note that we discuss only the orbital momentum, we will include angular momentum
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec91">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2966,7 +2947,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec92">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2990,7 +2971,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec93">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3012,7 +2993,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec94">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3022,20 +3003,20 @@ The connection between the momentum- and position space angular momentum
 projected potentials are then given, 
 $$
   V_{lm, l'm'}(k,k')=\frac{2}{\pi}i^{l'-l}\int_0^\infty drr^2 \int_0^\infty dr'{r'}^2j_l(kr) V_{lm,l'm'}(r,r') j_{l'}(k'r')
-  \label{eq:pot3}
+\label{eq:pot3}
 $$
 
 which is known as a double Fourier-Bessel transform. The position space angular 
 momentum projected potential is given by
 $$
   V_{lm, l'm'}(r,r') = \int d{\hat{r}} \int d{\hat{r}'}Y_{lm}^*(\hat{r})V(\mathbf{r}, \mathbf{r'})Y_{l'm'}(\hat{r}').
-  \label{eq:pot4}
+\label{eq:pot4}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec95">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3059,14 +3040,14 @@ $$
 \begin{equation}
   V_{lm, l'm'}(r,r') = \frac{\delta({r}-{r}')}{r^2}\int d{\hat{r}}\:
   Y_{lm}^*(\hat{r})V(\mathbf{r})Y_{l'm'}(\hat{r}),
-  \label{eq:pot5}
+\label{eq:pot5}
 \end{equation}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec96">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3076,7 +3057,7 @@ and equation \eqref{eq:pot3} reduces to
 $$
 \begin{equation}
   V_{lm, l'm'}(k,k') = \frac{2}{\pi}i^{l' -l}\int_0^\infty drr^2j_l(kr) V_{lm,l'm'}(r) j_{l'}(k'r)
-  \label{eq:pot6}
+\label{eq:pot6}
 \end{equation}
 $$
 
@@ -3084,14 +3065,14 @@ where
 $$
 \begin{equation}
   V_{lm, l'm'}(r) = \int d{\hat{r}}Y_{lm}^*(\hat{r})V(\mathbf{r})Y_{l'm'}(\hat{r}),
-  \label{eq:pot10}
+\label{eq:pot10}
 \end{equation}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec97">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3101,7 +3082,7 @@ In the case that the interaction is central, \( V(\mathbf{r}) = V(r) \), then
 $$
 \begin{equation}
   V_{lm, l'm'}(r) = V(r) \int d{\hat{r}}Y_{lm}^*(\hat{r})Y_{l'm'}(\hat{r}) = V(r) \delta_{l,l'}\delta_{m,m'},
-  \label{eq:pot7}
+\label{eq:pot7}
 \end{equation}
 $$
 
@@ -3109,7 +3090,7 @@ and
 $$
 \begin{equation}
   V_{lm, l'm'}(k,k') = \frac{2}{\pi} \int_0^\infty drr^2j_l(kr) V(r) j_{l'}(k'r)\delta_{l,l'}\delta_{m,m'} = V_l(k,k') \delta_{l,l'}\delta_{m,m'}
-  \label{eq:pot8}
+\label{eq:pot8}
 \end{equation}
 $$
 
@@ -3118,14 +3099,14 @@ $$
 \begin{equation}
   V_{l}(k,k') = {2 \over \pi} \int_0^\infty dr\: r^2 \:
   j_l(kr) V(r) j_{l}(k'r).
-  \label{eq:pot9}
+\label{eq:pot9}
 \end{equation}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec98">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3138,7 +3119,7 @@ giving
 $$
 \begin{equation}
 \frac{\hbar^2}{2\mu} k^2 \psi_{n l}(k) +\int_{0}^\infty dk' {k'}^2 V_{l}(k,k') \psi_{n l }(k')=E_{n l} \psi_{n l}(k) 
-  \label{eq:momentum_space}
+\label{eq:momentum_space}
 \end{equation}   
 $$
 
@@ -3156,7 +3137,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec99">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3178,7 +3159,7 @@ spherical harmonics.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec100">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3206,7 +3187,7 @@ spherical harmonic.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec101">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3239,7 +3220,7 @@ in these variables.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec102">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3255,7 +3236,7 @@ How do we rewrite it in a partial wave expansion with momenta \( k \)?
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec103">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3274,14 +3255,14 @@ $$
    Y_{l''m_{l''}}(\hat{\mathbf{q}}) V_{ll''}^{\alpha}(kq)
    T_{l''l'}^{\alpha}(qk'K\omega)}
    {\omega -H_0}},
-   \label{eq:bspartial}
+\label{eq:bspartial}
 \end{equation}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec104">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3306,7 +3287,7 @@ Due to the nuclear tensor force, the interaction is not diagonal in \( ll' \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec105">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3337,7 +3318,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec106">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3370,7 +3351,7 @@ spin, respectively. We skip for the moment isospin.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec107">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3387,7 +3368,7 @@ $$
 \begin{equation}
     R_l(k,k') = V_l(k,k') +\frac{2}{\pi}{\cal P}
                 \int_0^{\infty}dqq^2V_l(k,q)\frac{1}{E-q^2/m}R_l(q,k').
-   \label{eq:ls1}
+\label{eq:ls1}
 \end{equation}
 $$
 
@@ -3397,7 +3378,7 @@ by  occupied states below the Fermi level.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec108">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3417,7 +3398,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec109">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3428,14 +3409,14 @@ the  phase shifts through its diagonal elements as
 $$
 \begin{equation}
      R_l(k_0,k_0)=-\frac{tan\delta_l}{mk_0}.
-     \label{eq:shifts}
+\label{eq:shifts}
 \end{equation}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec110">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3457,7 +3438,7 @@ where we have fixed \( N \) lattice points through the corresponding weights
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec111">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3481,7 +3462,7 @@ with MeV, set \( const\sim 200 \) (\( \hbar c=197 \) MeVfm).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec112">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3508,7 +3489,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec113">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3520,7 +3501,7 @@ $$
 \begin{equation}
   {\cal P}\int_{0}^{\infty} \frac{f(k)dk}{k^2-k_0^2} =
   \int_{0}^{\infty} \frac{(f(k)-f(k_0))dk}{k^2-k_0^2},
-   \label{eq:trick}
+\label{eq:trick}
 \end{equation}
 $$
 
@@ -3531,7 +3512,7 @@ and can be evaluated numerically as any other integral.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec114">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3544,7 +3525,7 @@ $$
                 \int_0^{\infty}dq
                 \frac{q^2V(k,q)R(q,k')-k_0^2V(k,k_0)R(k_0,k')  }
                      {(k_0^2-q^2)/m}.
-   \label{eq:ls2}
+\label{eq:ls2}
 \end{equation}
 $$
 
@@ -3555,7 +3536,7 @@ to calculate the phase shifts. We are interested in obtaining
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec115">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3578,7 +3559,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec116">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3594,24 +3575,23 @@ which contains the original mesh points \( k_j \) for \( j=1,N \)
 and the point which corresponds to the energy \( k_0 \).
 Consider the latter as the 'observable' point.
 The mesh points become then \( k_j \) for \( j=1,n \) and
-\( k_{N+1}=k_0 \). 
+\( k_{N+1}=k_0 \).
 
 <p>
 With these new mesh points we define the matrix
 $$
 \begin{equation}
       A_{i,j}=\delta_{i,j}-V(k_i,k_j)u_j,
-      \label{eq:aeq}
+\label{eq:aeq}
 \end{equation}
 $$
-
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec117">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3631,7 +3611,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec118">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3645,7 +3625,7 @@ observable values for the energy \( k_0^2/m \).
 {\em Note that all mesh points \( k_j \) for \( j=1,N \) must be
 different from \( k_0 \). Note also that
 \( V(k_i,k_j) \) is an
-\( (N+1)\times (N+1) \) matrix}. 
+\( (N+1)\times (N+1) \) matrix}.
 
 <p>
 With the matrix \( A \) we can rewrite the problem as a matrix problem of dimension \( (N+1)\times (N+1) \).
@@ -3662,7 +3642,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec119">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3675,7 +3655,7 @@ The final equation involves only the unknown
 $$
 \begin{equation}
     R=A^{-1}V.
-    \label{eq:final2}
+\label{eq:final2}
 \end{equation}
 $$
 
@@ -3687,7 +3667,7 @@ a matrix multiplication with \( V \) results in \( R \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec120">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3704,7 +3684,7 @@ where \( \delta \) are the phase shifts.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec121">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3723,7 +3703,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec122">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3749,7 +3729,7 @@ which can be simplified further by cancelling \( i^l \) with \( e^{-il\pi/2} \)
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec123">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3776,12 +3756,11 @@ f_l(\theta) = \frac{1}{k}\frac{1}{\cot \delta_l(k) - i}.
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec124">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3800,7 +3779,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec125">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3826,7 +3805,7 @@ Thus, the <b>total</b> cross section is the sum of the partial-wave cross sectio
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec126">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3853,7 +3832,7 @@ If the system contains a bound state, the scattering length will become positive
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec127">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3872,7 +3851,7 @@ If the system contains a bound state, the scattering length will become positive
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec128">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3901,7 +3880,7 @@ interaction in practice!
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec129">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3923,7 +3902,7 @@ The \( pp \)-data is more accurate than the \( np \)-data, and for \( nn \) ther
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec130">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3952,7 +3931,7 @@ The \( pp \)-data is more accurate than the \( np \)-data, and for \( nn \) ther
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec131">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3969,7 +3948,7 @@ $$
 </ul>
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec132">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3977,7 +3956,7 @@ $$
 <p>
 
 <p>
-Note that the Nijm93 PWA phase shift becomes negative at T$_{\mathrm{lab}}> 250$MeV. This indicates that the nucleon-nucleon potential is repulsive at short distances 
+Note that the Nijm93 PWA phase shift becomes negative at T$_{\mathrm{lab}}> 250$MeV. This indicates that the nucleon-nucleon potential is repulsive at short distances
 
 <p>
 <center> <!-- figure -->
@@ -3989,7 +3968,7 @@ Note that the Nijm93 PWA phase shift becomes negative at T$_{\mathrm{lab}}> 250$
 
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec133">The Lippman-Schwinger equation for two-nucleon scattering </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -4008,7 +3987,7 @@ Note that the Nijm93 PWA phase shift becomes negative at T$_{\mathrm{lab}}> 250$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec134">Exercise 10 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -4024,7 +4003,7 @@ has \( T_Z=-1 \), a proton-neutron state has \( T_z=0 \) and a neutron-neutron s
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec135">Exercise 11 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -4045,7 +4024,7 @@ contribution for \( S \)-waves (orbital angular momentum \( l=0 \)).   What is t
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec136">Exercise 12 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -4092,7 +4071,7 @@ $$
 \langle l {\cal J}S=1| S_{12} | l' {\cal J}S=1\rangle = 2 \hspace{0.5cm} l= {\cal J} \hspace{0.1cm}\mathrm{and} \hspace{0.1cm} l'={\cal J},
 $$
 
-and zero else.   
+and zero else.
 
 <p>
 In this exercise we will focus only on the one-pion exchange term of the nuclear force, namely
