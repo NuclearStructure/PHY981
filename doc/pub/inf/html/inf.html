@@ -11,32 +11,37 @@ Automatically generated HTML file from DocOnce source
 <title>Infinite matter</title>
 
 
-<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
-<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
 <style type="text/css">
-h1 {color: #b58900;}  /* yellow */
-/* h1 {color: #cb4b16;}  orange */
-/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
-code { padding: 0px; background-color: inherit; }
-pre {
-  border: 0pt solid #93a1a1;
-  box-shadow: none;
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
 }
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 .alert-text-small   { font-size: 80%;  }
 .alert-text-large   { font-size: 130%; }
 .alert-text-normal  { font-size: 90%;  }
 .alert {
   padding:8px 35px 8px 14px; margin-bottom:18px;
   text-shadow:0 1px 0 rgba(255,255,255,0.5);
-  border:1px solid #93a1a1;
+  border:1px solid #bababa;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   color: #555;
-  background-color: #eee8d5;
+  background-color: #f8f8f8;
   background-position: 10px 5px;
   background-repeat: no-repeat;
   background-size: 38px;
@@ -47,10 +52,10 @@ pre {
 .alert-block > p, .alert-block > ul {margin-bottom:1em}
 .alert li {margin-top: 1em}
 .alert-block p+p {margin-top:5px}
-.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
-.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
-.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
-.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
 
 div { text-align: justify; text-justify: inter-word; }
 </style>
@@ -60,176 +65,173 @@ div { text-align: justify; text-justify: inter-word; }
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [(' Studies of infinite matter ', 2, None, '___sec0'),
-              (' The infinite electron gas ', 2, None, '___sec1'),
-              (' The electron gas ', 2, None, '___sec2'),
-              (' The electron gas ', 2, None, '___sec3'),
-              (' The electron gas ', 2, None, '___sec4'),
-              (' The infinite electron gas as a homogenous system ',
+ 'sections': [('Studies of infinite matter', 2, None, '___sec0'),
+              ('The infinite electron gas', 2, None, '___sec1'),
+              ('The electron gas', 2, None, '___sec2'),
+              ('The electron gas', 2, None, '___sec3'),
+              ('The electron gas', 2, None, '___sec4'),
+              ('The infinite electron gas as a homogenous system',
                2,
                None,
                '___sec5'),
-              (' Periodic boundary conditions ', 2, None, '___sec6'),
-              (' Defining the Hamiltonian operator ', 2, None, '___sec7'),
-              (' Single-particle Hartree-Fock energy ', 2, None, '___sec8'),
-              (' Single-particle Hartree-Fock energy in a more compact form ',
+              ('Periodic boundary conditions', 2, None, '___sec6'),
+              ('Defining the Hamiltonian operator', 2, None, '___sec7'),
+              ('Single-particle Hartree-Fock energy', 2, None, '___sec8'),
+              ('Single-particle Hartree-Fock energy in a more compact form',
                2,
                None,
                '___sec9'),
-              (' Total Hartree-Fock energy ', 2, None, '___sec10'),
-              (' Exercises: Hartree-Fock single-particle solution for the electron gas  ',
+              ('Total Hartree-Fock energy', 2, None, '___sec10'),
+              ('Exercises: Hartree-Fock single-particle solution for the electron gas',
                2,
                None,
                '___sec11'),
-              (' Exercises: Hartree-Fock single-particle solution for the electron gas  ',
+              ('Exercises: Hartree-Fock single-particle solution for the electron gas',
                2,
                None,
                '___sec12'),
-              (' Exercises: Hartree-Fock single-particle solution for the electron gas  ',
+              ('Exercises: Hartree-Fock single-particle solution for the electron gas',
                2,
                None,
                '___sec13'),
-              (' Exercises: Hartree-Fock single-particle solution for the electron gas  ',
+              ('Exercises: Hartree-Fock single-particle solution for the electron gas',
                2,
                None,
                '___sec14'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec15'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec16'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec17'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec18'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec19'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec20'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec21'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec22'),
-              (' Hartree-Fock band gap for  the  electron gas in three dimensions ',
+              ('Hartree-Fock band gap for  the  electron gas in three dimensions',
                2,
                None,
                '___sec23'),
-              (' Plot of the Hartree-Fock single-particle energy for the three-dimensional electron gas  ',
+              ('Plot of the Hartree-Fock single-particle energy for the three-dimensional electron gas',
                2,
                None,
                '___sec24'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec25'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec26'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec27'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec28'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec29'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec30'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec31'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec32'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec33'),
-              (' Electron gas and HF solution ', 2, None, '___sec34'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Electron gas and HF solution', 2, None, '___sec34'),
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec35'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec36'),
-              (' Hartree-Fock ground state energy for the  electron gas in three dimensions ',
+              ('Hartree-Fock ground state energy for the  electron gas in three dimensions',
                2,
                None,
                '___sec37'),
-              (' Preparing the ground for numerical calculations; kinetic energy and Ewald term ',
+              ('Preparing the ground for numerical calculations; kinetic energy and Ewald term',
                2,
                None,
                '___sec38'),
-              (' Computing numerically properties of the electron gas ',
+              ('Computing numerically properties of the electron gas',
                2,
                None,
                '___sec39'),
-              (' Ewald correction term ', 2, None, '___sec40'),
-              (' Interaction in momentum space  ', 2, None, '___sec41'),
-              (' Ewald Effective interaction in two dimensions ',
+              ('Ewald correction term', 2, None, '___sec40'),
+              ('Interaction in momentum space', 2, None, '___sec41'),
+              ('Ewald Effective interaction in two dimensions',
                2,
                None,
                '___sec42'),
-              (' And in three dimensions ', 2, None, '___sec43'),
-              (' Antisymmetrized matrix elements in three dimensions ',
+              ('And in three dimensions', 2, None, '___sec43'),
+              ('Antisymmetrized matrix elements in three dimensions',
                2,
                None,
                '___sec44'),
-              (' Antisymmetrized matrix elements in two dimensions ',
+              ('Antisymmetrized matrix elements in two dimensions',
                2,
                None,
                '___sec45'),
-              (' Fock operator ', 2, None, '___sec46'),
-              (' Periodic boundary conditions and single-particle states ',
+              ('Fock operator', 2, None, '___sec46'),
+              ('Periodic boundary conditions and single-particle states',
                2,
                None,
                '___sec47'),
-              (' Single-particle states in two and three dimensions ',
+              ('Single-particle states in two and three dimensions',
                2,
                None,
                '___sec48'),
-              (' Setting up single-particle states ', 2, None, '___sec49'),
-              (' Magic number for the two-dimensional electron gas ',
+              ('Setting up single-particle states', 2, None, '___sec49'),
+              ('Magic number for the two-dimensional electron gas',
                2,
                None,
                '___sec50'),
-              (' Hartree-Fock benchmarks in two and three dimensions ',
+              ('Hartree-Fock benchmarks in two and three dimensions',
                2,
                None,
                '___sec51'),
-              (' Hartree-Fock energies ', 2, None, '___sec52'),
-              (' Simplifications to many-body theories ',
-               2,
-               None,
-               '___sec53'),
-              (' Specific tasks ', 2, None, '___sec54'),
-              (' Screened interactions and periodic boundary conditions ',
+              ('Hartree-Fock energies', 2, None, '___sec52'),
+              ('Simplifications to many-body theories', 2, None, '___sec53'),
+              ('Specific tasks', 2, None, '___sec54'),
+              ('Screened interactions and periodic boundary conditions',
                2,
                None,
                '___sec55')]}
@@ -268,13 +270,15 @@ MathJax.Hub.Config({
 <b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
 </center>
 
-
 <p>
 <!-- institution(s) -->
+
+<br>
 <p>
-<center><h4>Spring 2015</h4></center> <!-- date -->
+<center><h4>Spring 2016</h4></center> <!-- date -->
+<br>
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec0">Studies of infinite matter </h2>
 
@@ -292,7 +296,7 @@ Studies of infinite nuclear matter play an important role  in nuclear physics. T
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec1">The infinite electron gas </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -314,7 +318,7 @@ The assumptions are
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec2">The electron gas </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -334,8 +338,8 @@ Irrespective of this simplicity, this system, in both two and
 three-dimensions, has eluded a proper description of correlations in
 terms of various first principle methods, except perhaps for quantum
 Monte Carlo methods. In particular, the diffusion Monte Carlo
-calculations of <a href="http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.45.566" target="_self">Ceperley</a> 
-and <a href="http://journals.aps.org/prb/abstract/10.1103/PhysRevB.39.5005" target="_self">Ceperley and Tanatar</a> 
+calculations of <a href="http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.45.566" target="_blank">Ceperley</a> 
+and <a href="http://journals.aps.org/prb/abstract/10.1103/PhysRevB.39.5005" target="_blank">Ceperley and Tanatar</a> 
 are presently still considered as the
 best possible benchmarks for the two- and three-dimensional electron
 gas.
@@ -343,7 +347,7 @@ gas.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec3">The electron gas </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -367,7 +371,7 @@ electron gas.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec4">The electron gas </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -389,7 +393,7 @@ to the electron gas.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec5">The infinite electron gas as a homogenous system </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -408,12 +412,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec6">Periodic boundary conditions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -444,7 +447,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec7">Defining the Hamiltonian operator </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -478,7 +481,7 @@ is the interaction between the electrons and the positive background.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec8">Single-particle Hartree-Fock energy </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -504,12 +507,11 @@ k_{F}}{2\pi}
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec9">Single-particle Hartree-Fock energy in a more compact form </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -531,7 +533,7 @@ For most metals we have a relation \( r_s/a_0\sim 2-6 \).  The quantity \( r_s \
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec10">Total Hartree-Fock energy </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -548,12 +550,11 @@ E_0/N_e=\frac{e^2}{2a_0}\left[\frac{2.21}{r_s^2}-\frac{0.916}{r_s}\right].
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec11">Exercises: Hartree-Fock single-particle solution for the electron gas  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -590,14 +591,14 @@ $$
 n= \frac{k_F^3}{3\pi^2}=\frac{3}{4\pi r_s^3},
 $$
 
-where \( n=N/V \), \( N \) being the number of particles, and \( r_s \) is the radius of a sphere which represents the volum per conducting electron.  
+where \( n=N/V \), \( N \) being the number of particles, and \( r_s \) is the radius of a sphere which represents the volum per conducting electron.
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec12">Exercises: Hartree-Fock single-particle solution for the electron gas  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -618,7 +619,7 @@ Compare this results with the corresponding one for a free electron and comment 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec13">Exercises: Hartree-Fock single-particle solution for the electron gas  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -651,7 +652,7 @@ Compute \( m_{HF}^{*} \) and comment your results.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec14">Exercises: Hartree-Fock single-particle solution for the electron gas  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -670,7 +671,7 @@ Calculate \( n(\varepsilon_{F}^{HF}) \) and comment the results.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec15">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -696,12 +697,11 @@ k_{F}}{2\pi}
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec16">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -719,9 +719,11 @@ $$
 {V^{2}}\sum_{k'\leq
 k_{F}}\int d\mathbf{r}\exp{(i(\mathbf{k'}-\mathbf{k})\mathbf{r})}\int
 d\mathbf{r}'\frac{\exp{(i(\mathbf{k}-\mathbf{p})\mathbf{r}'})}
-{\vert\mathbf{r}-\mathbf{r'}\vert}= & \\
+{\vert\mathbf{r}-\mathbf{r'}\vert}= & 
+\label{_auto1}\\
 \frac{e^{2}}{V (2\pi)^3}  \int d\mathbf{r}\int
 \frac{d\mathbf{r}'}{\vert\mathbf{r}-\mathbf{r'}\vert}\exp{(-i\mathbf{k}(\mathbf{r}-\mathbf{r}'))}\int d\mathbf{p}\exp{(i\mathbf{p}(\mathbf{r}-\mathbf{r}'))},
+\label{_auto2}
 \end{align}
 $$
 
@@ -729,13 +731,14 @@ and introducing the abovementioned convergence factor we have
 $$
 \begin{align}
 \lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d\mathbf{r}\int d\mathbf{r}'\frac{\exp{(-\mu\vert\mathbf{r}-\mathbf{r}'\vert})}{\vert\mathbf{r}-\mathbf{r'}\vert}\int d\mathbf{p}\exp{(i(\mathbf{p}-\mathbf{k})(\mathbf{r}-\mathbf{r}'))}.
+\label{_auto3}
 \end{align}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec17">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -754,7 +757,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec18">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -764,6 +767,7 @@ We obtain
 $$
 \begin{align}
 4\pi \int dx \frac{ \sin{(\vert \mathbf{p}-\mathbf{k}\vert)x} }{\vert \mathbf{p}-\mathbf{k}\vert}{\exp{(-\mu x)}}= \frac{4\pi}{\mu^2+\vert \mathbf{p}-\mathbf{k}\vert^2}.
+\label{_auto4}
 \end{align}
 $$
 
@@ -771,6 +775,7 @@ This results gives us
 $$
 \begin{align}
 \lim_{\mu \to 0}\frac{e^{2}}{V (2\pi)^3}  \int d\mathbf{p}\int d\mathbf{y}\frac{4\pi}{\mu^2+\vert \mathbf{p}-\mathbf{k}\vert^2}=\lim_{\mu \to 0}\frac{e^{2}}{ 2\pi^2}  \int d\mathbf{p}\frac{1}{\mu^2+\vert \mathbf{p}-\mathbf{k}\vert^2},
+\label{_auto5}
 \end{align}
 $$
 
@@ -779,7 +784,7 @@ where we have used that the integrand on the left-hand side does not depend on \
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec19">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -788,8 +793,10 @@ where we have used that the integrand on the left-hand side does not depend on \
 Introducing spherical coordinates we can rewrite the integral as 
 $$
 \begin{align}
-\lim_{\mu \to 0}\frac{e^{2}}{ 2\pi^2}  \int d\mathbf{p}\frac{1}{\mu^2+\vert \mathbf{p}-\mathbf{k}\vert^2}=\frac{e^{2}}{ 2\pi^2}  \int d\mathbf{p}\frac{1}{\vert \mathbf{p}-\mathbf{k}\vert^2}=& \\
+\lim_{\mu \to 0}\frac{e^{2}}{ 2\pi^2}  \int d\mathbf{p}\frac{1}{\mu^2+\vert \mathbf{p}-\mathbf{k}\vert^2}=\frac{e^{2}}{ 2\pi^2}  \int d\mathbf{p}\frac{1}{\vert \mathbf{p}-\mathbf{k}\vert^2}=& 
+\label{_auto6}\\
 \frac{e^{2}}{\pi}  \int_0^{k_F} p^2dp\int_0^{\pi} d\theta\cos{(\theta)}\frac{1}{p^2+k^2-2pk\cos{(\theta)}},
+\label{_auto7}
 \end{align}
 $$
 
@@ -804,7 +811,7 @@ $$
 $$
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec20">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -823,7 +830,7 @@ which gives the abovementioned expression for the single-particle energy.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec21">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -855,7 +862,7 @@ where \( a_0=0.0529 \) nm is the Bohr radius, setting thereby a natural length s
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec22">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -878,7 +885,7 @@ with \( r_s \sim 2-6 \) for most metals.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec23">Hartree-Fock band gap for  the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -907,12 +914,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec24">Plot of the Hartree-Fock single-particle energy for the three-dimensional electron gas  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -921,45 +927,47 @@ $$
 The following python code produces a plot of the electron energy for a free electron (only kinetic energy) and 
 for the Hartree-Fock solution. We have chosen here a ratio \( r_s/a_0=4 \) and the equations are plotted as funtions
 of \( k/f_F \). 
-<!-- begin verbatim block  pycod-->
-<pre><code>import numpy as np
-from math import log
-from  matplotlib import pyplot as plt
-from matplotlib import rc, rcParams
-import matplotlib.units as units
-import matplotlib.ticker as ticker
-rc('text',usetex=True)
-rc('font',**{'family':'serif','serif':['Hartree-Fock energy']})
-font = {'family' : 'serif',
-        'color'  : 'darkred',
-        'weight' : 'normal',
-        'size'   : 16,
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">numpy</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">np</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">math</span> <span style="color: #008000; font-weight: bold">import</span> log
+<span style="color: #008000; font-weight: bold">from</span>  <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> pyplot <span style="color: #008000; font-weight: bold">as</span> plt
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> rc, rcParams
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">matplotlib.units</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">units</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">matplotlib.ticker</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">ticker</span>
+rc(<span style="color: #BA2121">&#39;text&#39;</span>,usetex<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+rc(<span style="color: #BA2121">&#39;font&#39;</span>,<span style="color: #666666">**</span>{<span style="color: #BA2121">&#39;family&#39;</span>:<span style="color: #BA2121">&#39;serif&#39;</span>,<span style="color: #BA2121">&#39;serif&#39;</span>:[<span style="color: #BA2121">&#39;Hartree-Fock energy&#39;</span>]})
+font <span style="color: #666666">=</span> {<span style="color: #BA2121">&#39;family&#39;</span> : <span style="color: #BA2121">&#39;serif&#39;</span>,
+        <span style="color: #BA2121">&#39;color&#39;</span>  : <span style="color: #BA2121">&#39;darkred&#39;</span>,
+        <span style="color: #BA2121">&#39;weight&#39;</span> : <span style="color: #BA2121">&#39;normal&#39;</span>,
+        <span style="color: #BA2121">&#39;size&#39;</span>   : <span style="color: #666666">16</span>,
         }
 
-N = 100
-x = np.linspace(0.0, 2.0,N)
-F = 0.5+np.log(abs((1.0+x)/(1.0-x)))*(1.0-x*x)*0.25/x
-y = x*x -4.0*0.663*F
+N <span style="color: #666666">=</span> <span style="color: #666666">100</span>
+x <span style="color: #666666">=</span> np<span style="color: #666666">.</span>linspace(<span style="color: #666666">0.0</span>, <span style="color: #666666">2.0</span>,N)
+F <span style="color: #666666">=</span> <span style="color: #666666">0.5+</span>np<span style="color: #666666">.</span>log(<span style="color: #008000">abs</span>((<span style="color: #666666">1.0+</span>x)<span style="color: #666666">/</span>(<span style="color: #666666">1.0-</span>x)))<span style="color: #666666">*</span>(<span style="color: #666666">1.0-</span>x<span style="color: #666666">*</span>x)<span style="color: #666666">*0.25/</span>x
+y <span style="color: #666666">=</span> x<span style="color: #666666">*</span>x <span style="color: #666666">-4.0*0.663*</span>F
 
-plt.plot(x, y, 'b-')
-plt.plot(x, x*x, 'r-')
-plt.title(r'{\bf Hartree-Fock single-particle energy for electron gas}', fontsize=20)     
-plt.text(3, -40, r'Parameters: $r_s/a_0=4$', fontdict=font)
-plt.xlabel(r'$k/k_F$',fontsize=20)
-plt.ylabel(r'$\varepsilon_k^{HF}/\varepsilon_0^F$',fontsize=20)
-# Tweak spacing to prevent clipping of ylabel
-plt.subplots_adjust(left=0.15)
-plt.savefig('hartreefockspelgas.pdf', format='pdf')
-plt.show()
-</code></pre>
-<!-- end verbatim block -->
+plt<span style="color: #666666">.</span>plot(x, y, <span style="color: #BA2121">&#39;b-&#39;</span>)
+plt<span style="color: #666666">.</span>plot(x, x<span style="color: #666666">*</span>x, <span style="color: #BA2121">&#39;r-&#39;</span>)
+plt<span style="color: #666666">.</span>title(<span style="color: #BA2121">r&#39;{\bf Hartree-Fock single-particle energy for electron gas}&#39;</span>, fontsize<span style="color: #666666">=20</span>)     
+plt<span style="color: #666666">.</span>text(<span style="color: #666666">3</span>, <span style="color: #666666">-40</span>, <span style="color: #BA2121">r&#39;Parameters: $r_s/a_0=4$&#39;</span>, fontdict<span style="color: #666666">=</span>font)
+plt<span style="color: #666666">.</span>xlabel(<span style="color: #BA2121">r&#39;$k/k_F$&#39;</span>,fontsize<span style="color: #666666">=20</span>)
+plt<span style="color: #666666">.</span>ylabel(<span style="color: #BA2121">r&#39;$\varepsilon_k^{HF}/\varepsilon_0^F$&#39;</span>,fontsize<span style="color: #666666">=20</span>)
+<span style="color: #408080; font-style: italic"># Tweak spacing to prevent clipping of ylabel</span>
+plt<span style="color: #666666">.</span>subplots_adjust(left<span style="color: #666666">=0.15</span>)
+plt<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&#39;hartreefockspelgas.pdf&#39;</span>, format<span style="color: #666666">=</span><span style="color: #BA2121">&#39;pdf&#39;</span>)
+plt<span style="color: #666666">.</span>show()
+</pre></div>
+<p>
 From the plot we notice that the exchange term increases considerably the band gap
 compared with the non-interacting gas of electrons.
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec25">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -989,7 +997,7 @@ interaction  \( V(r_{12}) \) with
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec26">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1012,7 +1020,7 @@ has to be written in  \( k \) space, even though \( V \) depends only on the rel
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec27">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1046,7 +1054,7 @@ is the interaction between the electrons and the positive background.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec28">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1065,7 +1073,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec29">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1094,7 +1102,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec30">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1119,7 +1127,7 @@ Here we have defined
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec31">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1143,7 +1151,7 @@ and comment your results.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec32">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1162,7 +1170,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec33">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1193,12 +1201,11 @@ a_{\mathbf{p}\sigma_{2}}a_{\mathbf{k}\sigma_{1}}.
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec34">Electron gas and HF solution </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1222,7 +1229,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec35">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1246,7 +1253,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec36">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1257,6 +1264,7 @@ $$
 \begin{align}
 \hat H_{el-b} = -\frac{e^2 N_e}{\Omega} \sum_{i = 1^N} \int \frac{e^{-\mu |\mathbf{y}|}}{|\mathbf{y}|} \, \mathrm{d}^3 \mathbf{y}
 =  -\frac{4\pi e^2 N_e}{\Omega} \sum_{i = 1}^N \int_0^\infty y e^{-\mu y} \mathrm{d} y. 
+\label{_auto8}
 \end{align}
 $$
 
@@ -1273,7 +1281,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec37">Hartree-Fock ground state energy for the  electron gas in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1298,7 +1306,7 @@ More material will be added here!
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec38">Preparing the ground for numerical calculations; kinetic energy and Ewald term </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1308,6 +1316,7 @@ The kinetic energy operator is
 $$
 \begin{align}
   \hat{H}_{\text{kin}} = -\frac{\hbar^{2}}{2m}\sum_{i=1}^{N}\nabla_{i}^{2},
+\label{_auto9}
 \end{align}
 $$
 
@@ -1318,19 +1327,20 @@ $$
 \begin{align}
   \hat{H}_{ee} = \sum_{i < j}^{N} v_{E}\left( \mathbf{r}_{i}-\mathbf{r}_{j}\right)
   + \frac{1}{2}Nv_{0},
+\label{_auto10}
 \end{align}
 $$
 
 where \( v_{E}(\mathbf{r}) \) is the effective two-body 
 interaction and \( v_{0} \) is the self-interaction, defined 
-as \( v_{0} = \lim_{\mathbf{r} \rightarrow 0} \left\{ v_{E}(\mathbf{r}) - 1/r\right\}  \). 
+as \( v_{0} = \lim_{\mathbf{r} \rightarrow 0} \left\{ v_{E}(\mathbf{r}) - 1/r\right\}  \).
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec39">Computing numerically properties of the electron gas </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1344,14 +1354,14 @@ electron-background and background-background terms,
 when using Ewald's interaction for the three-dimensional
 electron gas. Using the same arguments, one can show that
 these terms are also zero in the corresponding 
-two-dimensional system. 
+two-dimensional system.
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec40">Ewald correction term </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1368,6 +1378,7 @@ $$
     -\mathbf{R}\right| } \mathrm{erfc} \left( \frac{\left| 
     \mathbf{r}-\mathbf{R}\right|}{\eta }\right)
   - \frac{\pi \eta^{2}}{L^{3}},
+\label{_auto11}
 \end{align}
 $$
 
@@ -1379,7 +1390,7 @@ parameter that can take any value in the interval
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec41">Interaction in momentum space  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1390,6 +1401,7 @@ $$
 \begin{align}
   \mathbf{R} = L\left(n_{x}\mathbf{u}_{x} + n_{y}
   \mathbf{u}_{y} + n_{z}\mathbf{u}_{z}\right) ,
+\label{_auto12}
 \end{align}
 $$
 
@@ -1406,18 +1418,18 @@ accuracy depends on \( \eta  \), and \( \eta  \) is therefore
 often chosen to optimize the convergence as a function
 of the simulation-cell size. In
 our calculations, we choose \( \eta  \) to be an infinitesimally
-small positive number, similarly as was done by <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.86.035111" target="_self">Shepherd *et al.*</a> and <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.115138" target="_self">Roggero *et al.*</a>.
+small positive number, similarly as was done by <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.86.035111" target="_blank">Shepherd *et al.*</a> and <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.88.115138" target="_blank">Roggero *et al.*</a>.
 
 <p>
 This gives an interaction that is evaluated only in
-Fourier space. 
+Fourier space.
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec42">Ewald Effective interaction in two dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1441,20 +1453,21 @@ $$
     \right|}{\eta }\right) \nonumber \\
   & - \frac{2\pi}{L^{2}}\left\{ z\mathrm{erf} \left( \frac{z}{\eta }
   \right) + \frac{\eta }{\sqrt{\pi }}e^{-z^{2}/\eta^{2}}\right\},
+\label{_auto13}
 \end{align}
 $$
 
 where the Fourier vectors \( \mathbf{k} \) and the position vector
 \( \mathbf{r}_{xy} \) are defined in the \( (x,y) \) plane. When
 applying the interaction \( v_{E}(\mathbf{r}) \) to two-dimensional
-systems, we set \( z \) to zero. 
+systems, we set \( z \) to zero.
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec43">And in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1468,6 +1481,7 @@ $$
 \begin{align}
   v_{E}^{\eta = 0, z = 0}(\mathbf{r}) = \sum_{\mathbf{k} \neq \mathbf{0}} 
   \frac{2\pi }{L^{2}k}e^{i\mathbf{k}\cdot \mathbf{r}_{xy}}. 
+\label{_auto14}
 \end{align}
 $$
 
@@ -1479,7 +1493,7 @@ included in the reference energy.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec44">Antisymmetrized matrix elements in three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1502,6 +1516,7 @@ $$
   \left( 1 - \delta_{\mathbf{k}_{p}\mathbf{k}_{s}} \right)
   \frac{1}{|\mathbf{k}_{s}-\mathbf{k}_{p}|^{2}} 
   \right\} ,
+\label{_auto15}
 \end{align}
 $$
 
@@ -1513,7 +1528,7 @@ contribution with zero momentum transfer vanishes.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec45">Antisymmetrized matrix elements in two dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1538,6 +1553,7 @@ $$
   \frac{1}{ 
     |\mathbf{k}_{s}-\mathbf{k}_{p}|}
   \right\} ,
+\label{_auto16}
 \end{align}
 $$
 
@@ -1547,7 +1563,7 @@ are now defined in two dimensions.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec46">Fock operator </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1564,7 +1580,7 @@ $$
   \mathbf{k}_{q}} + \sum_{\mathbf{k}_{i}}\langle 
   \mathbf{k}_{p}\mathbf{k}_{i}|v|\mathbf{k}_{q}
   \mathbf{k}_{i}\rangle_{AS}.
-  \label{eq:fock_heg}
+\label{eq:fock_heg}
 \end{align}
 $$
 
@@ -1576,7 +1592,7 @@ elements with a gap constant.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec47">Periodic boundary conditions and single-particle states </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1594,6 +1610,7 @@ the single-particle energy
 $$
 \begin{align}
   \varepsilon_{n_{x}, n_{y}} = \frac{\hbar^{2}}{2m} \left( \frac{2\pi }{L}\right)^{2}\left( n_{x}^{2} + n_{y}^{2}\right)
+\label{_auto17}
 \end{align}
 $$
 
@@ -1603,6 +1620,7 @@ $$
   \varepsilon_{n_{x}, n_{y}, n_{z}} = \frac{\hbar^{2}}{2m}
   \left( \frac{2\pi }{L}\right)^{2}
   \left( n_{x}^{2} + n_{y}^{2} + n_{z}^{2}\right)
+\label{_auto18}
 \end{align} 
 $$
 
@@ -1611,7 +1629,7 @@ for three-dimensional systems.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec48">Single-particle states in two and three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1628,7 +1646,7 @@ and one spin-down electron.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec49">Setting up single-particle states </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1649,7 +1667,7 @@ The table illustrates  how single-particle energies
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec50">Magic number for the two-dimensional electron gas </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1690,7 +1708,7 @@ The table illustrates  how single-particle energies
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec51">Hartree-Fock benchmarks in two and three dimensions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1713,7 +1731,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec52">Hartree-Fock energies </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1737,7 +1755,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec53">Simplifications to many-body theories </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1759,7 +1777,7 @@ terms that involve single particle-hole excitations vanish.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec54">Specific tasks </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1769,7 +1787,7 @@ terms that involve single particle-hole excitations vanish.
 <ul>
 <li> Start by solving exercises 1 and 2 and convince yourself about the correctness of the expressions.</li>
 <li> Convince yourself about the Hartree-Fock results for the two-dimensional system.</li>
-<li> In order to start coding, you should read in parallel a text on <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf" target="_self">programming and numerical methods</a>.</li>
+<li> In order to start coding, you should read in parallel a text on <a href="http://www.uio.no/studier/emner/matnat/fys/FYS3150/h14/undervisningsmateriale/Lecture%20Notes/lecture2014.pdf" target="_blank">programming and numerical methods</a>.</li>
 <li> The first programming exercise is to set up the basis functions for two and three dimensions using periodic boundary conditions. Extend the table above to the three-dimensional case.</li> 
 <li> Compute thereafter the Hartree-Fock energy in two and three dimensions and make sure that your basis is large enough to reach the so-called Hartree-Fock limit.</li>
 </ul>
@@ -1777,7 +1795,7 @@ terms that involve single particle-hole excitations vanish.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec55">Screened interactions and periodic boundary conditions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1792,7 +1810,7 @@ where \( \mu \) plays the role of an effective range parameter with dimension in
 
 <ul>
 <li> Play around with different  values of \( \mu \) and check the stability of the Hartree-Fock results as function of the number of single-particle basis states.</li> 
-<li> Study thereafter the stability of the solutions (pick some selected values of \( \mu \) and study the Hartree-Fock results with standard periodic boundary conditions and so-called <a href="https://journals.aps.org/prc/abstract/10.1103/PhysRevC.89.014319" target="_self">twisted boundary conditions</a>.</li> 
+<li> Study thereafter the stability of the solutions (pick some selected values of \( \mu \) and study the Hartree-Fock results with standard periodic boundary conditions and so-called <a href="https://journals.aps.org/prc/abstract/10.1103/PhysRevC.89.014319" target="_blank">twisted boundary conditions</a>.</li> 
 </ul>
 </div>
 

@@ -11,32 +11,37 @@ Automatically generated HTML file from DocOnce source
 <title>Nuclear Shell Model</title>
 
 
-<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
-<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
 <style type="text/css">
-h1 {color: #b58900;}  /* yellow */
-/* h1 {color: #cb4b16;}  orange */
-/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
-code { padding: 0px; background-color: inherit; }
-pre {
-  border: 0pt solid #93a1a1;
-  box-shadow: none;
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
 }
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 .alert-text-small   { font-size: 80%;  }
 .alert-text-large   { font-size: 130%; }
 .alert-text-normal  { font-size: 90%;  }
 .alert {
   padding:8px 35px 8px 14px; margin-bottom:18px;
   text-shadow:0 1px 0 rgba(255,255,255,0.5);
-  border:1px solid #93a1a1;
+  border:1px solid #bababa;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   color: #555;
-  background-color: #eee8d5;
+  background-color: #f8f8f8;
   background-position: 10px 5px;
   background-repeat: no-repeat;
   background-size: 38px;
@@ -47,10 +52,10 @@ pre {
 .alert-block > p, .alert-block > ul {margin-bottom:1em}
 .alert li {margin-top: 1em}
 .alert-block p+p {margin-top:5px}
-.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
-.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
-.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
-.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
 
 div { text-align: justify; text-justify: inter-word; }
 </style>
@@ -60,326 +65,302 @@ div { text-align: justify; text-justify: inter-word; }
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [(' Nuclear shell model ', 2, None, '___sec0'),
-              (' Slater determinants as basis states, Repetition ',
+ 'sections': [('Nuclear shell model', 2, None, '___sec0'),
+              ('Slater determinants as basis states, Repetition',
                2,
                None,
                '___sec1'),
-              (' Slater determinants as basis states, repetition ',
+              ('Slater determinants as basis states, repetition',
                2,
                None,
                '___sec2'),
-              (' Slater determinants as basis states ', 2, None, '___sec3'),
-              (' Slater determinants as basis states ', 2, None, '___sec4'),
-              (' Quick repetition of the occupation representation ',
+              ('Slater determinants as basis states', 2, None, '___sec3'),
+              ('Slater determinants as basis states', 2, None, '___sec4'),
+              ('Quick repetition of the occupation representation',
                2,
                None,
                '___sec5'),
-              (' Quick repetition  of the occupation representation ',
+              ('Quick repetition  of the occupation representation',
                2,
                None,
                '___sec6'),
-              (' Quick repetition  of the occupation representation ',
+              ('Quick repetition  of the occupation representation',
                2,
                None,
                '___sec7'),
-              (' Full Configuration Interaction Theory ', 2, None, '___sec8'),
-              (' Full Configuration Interaction Theory ', 2, None, '___sec9'),
-              (' Full Configuration Interaction Theory ',
-               2,
-               None,
-               '___sec10'),
-              (' Full Configuration Interaction Theory ',
-               2,
-               None,
-               '___sec11'),
-              (' Full Configuration Interaction Theory ',
-               2,
-               None,
-               '___sec12'),
-              (' Full Configuration Interaction Theory ',
-               2,
-               None,
-               '___sec13'),
-              (' Full Configuration Interaction Theory ',
-               2,
-               None,
-               '___sec14'),
-              (' Full Configuration Interaction Theory ',
-               2,
-               None,
-               '___sec15'),
-              (' Full Configuration Interaction Theory ',
-               2,
-               None,
-               '___sec16'),
-              (' Full Configuration Interaction Theory ',
-               2,
-               None,
-               '___sec17'),
-              (' Building a many-body basis ', 2, None, '___sec18'),
-              (' Building a many-body basis ', 2, None, '___sec19'),
-              (' Building a many-body basis ', 2, None, '___sec20'),
-              (' Building a many-body basis ', 2, None, '___sec21'),
-              (' Building a many-body basis ', 2, None, '___sec22'),
-              (' Building a many-body basis ', 2, None, '___sec23'),
-              (' Building a many-body basis ', 2, None, '___sec24'),
-              (' Building a many-body basis ', 2, None, '___sec25'),
-              (' Building a many-body basis ', 2, None, '___sec26'),
-              (' Building a many-body basis ', 2, None, '___sec27'),
-              (' Building a many-body basis ', 2, None, '___sec28'),
-              (' Project ', 2, None, '___sec29'),
-              (' Project, step 1 ', 2, None, '___sec30'),
-              (' Project, step 1 ', 2, None, '___sec31'),
-              (' Project, step 1 ', 2, None, '___sec32'),
-              (' Project, step 1 ', 2, None, '___sec33'),
-              (' Project, step 1 ', 2, None, '___sec34'),
-              (' Project , step 1 ', 2, None, '___sec35'),
-              (' Project , step 1 ', 2, None, '___sec36'),
-              (' Project , step 1 ', 2, None, '___sec37'),
-              (' Project , step 1 ', 2, None, '___sec38'),
-              (' Project , step 1 ', 2, None, '___sec39'),
-              (' Project , step 1 ', 2, None, '___sec40'),
-              (' Project , step 1 ', 2, None, '___sec41'),
-              (' Project , step 1 ', 2, None, '___sec42'),
-              (' Project , step 1 ', 2, None, '___sec43'),
-              (' Project , step 1 ', 2, None, '___sec44'),
-              (' Project , step 1 ', 2, None, '___sec45'),
-              (' Example case: pairing Hamiltonian ', 2, None, '___sec46'),
-              (' Example case: pairing Hamiltonian ', 2, None, '___sec47'),
-              (' Example case: pairing Hamiltonian ', 2, None, '___sec48'),
-              (' Example case: pairing Hamiltonian ', 2, None, '___sec49'),
-              (' Example case: pairing Hamiltonian ', 2, None, '___sec50'),
-              (' Example case: pairing Hamiltonian ', 2, None, '___sec51'),
-              (' Example case: pairing Hamiltonian ', 2, None, '___sec52'),
-              (' Example case: pairing Hamiltonian ', 2, None, '___sec53'),
-              (' Example case: pairing Hamiltonian ', 2, None, '___sec54'),
-              (' Angular momentum algebra ', 2, None, '___sec55'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Full Configuration Interaction Theory', 2, None, '___sec8'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec9'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec10'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec11'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec12'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec13'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec14'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec15'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec16'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec17'),
+              ('Building a many-body basis', 2, None, '___sec18'),
+              ('Building a many-body basis', 2, None, '___sec19'),
+              ('Building a many-body basis', 2, None, '___sec20'),
+              ('Building a many-body basis', 2, None, '___sec21'),
+              ('Building a many-body basis', 2, None, '___sec22'),
+              ('Building a many-body basis', 2, None, '___sec23'),
+              ('Building a many-body basis', 2, None, '___sec24'),
+              ('Building a many-body basis', 2, None, '___sec25'),
+              ('Building a many-body basis', 2, None, '___sec26'),
+              ('Building a many-body basis', 2, None, '___sec27'),
+              ('Building a many-body basis', 2, None, '___sec28'),
+              ('Project', 2, None, '___sec29'),
+              ('Project, step 1', 2, None, '___sec30'),
+              ('Project, step 1', 2, None, '___sec31'),
+              ('Project, step 1', 2, None, '___sec32'),
+              ('Project, step 1', 2, None, '___sec33'),
+              ('Project, step 1', 2, None, '___sec34'),
+              ('Project , step 1', 2, None, '___sec35'),
+              ('Project , step 1', 2, None, '___sec36'),
+              ('Project , step 1', 2, None, '___sec37'),
+              ('Project , step 1', 2, None, '___sec38'),
+              ('Project , step 1', 2, None, '___sec39'),
+              ('Project , step 1', 2, None, '___sec40'),
+              ('Project , step 1', 2, None, '___sec41'),
+              ('Project , step 1', 2, None, '___sec42'),
+              ('Project , step 1', 2, None, '___sec43'),
+              ('Project , step 1', 2, None, '___sec44'),
+              ('Project , step 1', 2, None, '___sec45'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec46'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec47'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec48'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec49'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec50'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec51'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec52'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec53'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec54'),
+              ('Angular momentum algebra', 2, None, '___sec55'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec56'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec57'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec58'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec59'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec60'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec61'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec62'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec63'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec64'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec65'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec66'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec67'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec68'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec69'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec70'),
-              (' Angular momentum algebra, Wigner-Eckart theorem, Examples ',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec71'),
-              (' Angular momentum algebra, Wigner-Eckart theorem, Examples ',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec72'),
-              (' Angular momentum algebra, Wigner-Eckart theorem, Examples ',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec73'),
-              (' Angular momentum algebra, Wigner-Eckart theorem, Examples ',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec74'),
-              (' Angular momentum algebra, Wigner-Eckart theorem, Examples ',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec75'),
-              (' Angular momentum algebra, Wigner-Eckart theorem, Examples ',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec76'),
-              (' Angular momentum algebra, Wigner-Eckart theorem, Examples ',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec77'),
-              (' Angular momentum algebra, Wigner-Eckart theorem, Examples ',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec78'),
-              (' Angular momentum algebra, Wigner-Eckart theorem, Examples ',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec79'),
-              (' Angular momentum algebra, Wigner-Eckart theorem, Examples ',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec80'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec81'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec82'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec83'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec84'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec85'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec86'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec87'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec88'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec89'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec90'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec91'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec92'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec93'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec94'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec95'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec96'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec97'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec98'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec99'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec100'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec101'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec102'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec103'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec104'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec105'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec106'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec107'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec108'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec109'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec110'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec111'),
-              (' Angular momentum algebra, Wigner-Eckart theorem ',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec112')]}
@@ -418,13 +399,15 @@ MathJax.Hub.Config({
 <b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
 </center>
 
-
 <p>
 <!-- institution(s) -->
+
+<br>
 <p>
-<center><h4>Spring 2015</h4></center> <!-- date -->
+<center><h4>Spring 2016</h4></center> <!-- date -->
+<br>
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec0">Nuclear shell model </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -440,7 +423,7 @@ See also Suhonen's chapter's 2 and 5.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec1">Slater determinants as basis states, Repetition </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -455,7 +438,7 @@ $$
 because we are really only good  at thinking about one particle at a time. Such 
 product wavefunctions, without correlations, are easy to 
 work with; for example, if the single-particle states \( \phi_i(x) \) are orthonormal, then 
-the product wavefunctions are easy to orthonormalize.   
+the product wavefunctions are easy to orthonormalize.
 
 <p>
 Similarly, computing matrix elements of operators are relatively easy, because the 
@@ -469,7 +452,7 @@ difficult integrals versus easy integrals but many states required.)
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec2">Slater determinants as basis states, repetition </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -499,7 +482,7 @@ Product wavefunction + antisymmetry = Slater determinant.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec3">Slater determinants as basis states </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -530,14 +513,14 @@ two columns can be the same) lead to the Pauli principle:
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec4">Slater determinants as basis states </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 As a practical matter, however, Slater determinants beyond \( N=4 \) quickly become 
-unwieldy. Thus we turn to the <b>occupation representation</b> or <b>second quantization</b> to simplify calculations. 
+unwieldy. Thus we turn to the <b>occupation representation</b> or <b>second quantization</b> to simplify calculations.
 
 <p>
 The occupation representation, using fermion <b>creation</b> and <b>annihilation</b> 
@@ -553,7 +536,7 @@ determinants.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec5">Quick repetition of the occupation representation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -561,11 +544,11 @@ determinants.
 <p>
 We start with a set of orthonormal single-particle states \( \{ \phi_i(x) \} \). 
 (Note: this requirement, and others, can be relaxed, but leads to a 
-more involved formalism.) <b>Any</b> orthonormal set will do. 
+more involved formalism.) <b>Any</b> orthonormal set will do.
 
 <p>
 To each single-particle state \( \phi_i(x) \) we associate a creation operator 
-\( \hat{a}^\dagger_i \) and an annihilation operator \( \hat{a}_i \). 
+\( \hat{a}^\dagger_i \) and an annihilation operator \( \hat{a}_i \).
 
 <p>
 When acting on the vacuum state \( | 0 \rangle \), the creation operator \( \hat{a}^\dagger_i \) causes 
@@ -577,7 +560,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec6">Quick repetition  of the occupation representation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -588,7 +571,6 @@ $$
 \phi_i(x) \phi_j(x^\prime) \phi_k(x^{\prime \prime}) 
 \rightarrow \hat{a}^\dagger_i \hat{a}^\dagger_j \hat{a}^\dagger_k |0 \rangle.
 $$
-
 
 <p>
 Now we impose antisymmetry, by having the fermion operators satisfy  <b>anticommutation relations</b>:
@@ -606,7 +588,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec7">Quick repetition  of the occupation representation </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -624,7 +606,7 @@ each index \( i,j,k, \ldots \) must be unique.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec8">Full Configuration Interaction Theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -654,7 +636,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec9">Full Configuration Interaction Theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -686,7 +668,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec10">Full Configuration Interaction Theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -716,7 +698,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec11">Full Configuration Interaction Theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -746,7 +728,7 @@ C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle \delta[C_{H'}^{P'}]-
 \lambda( \delta[C_H^{*P}]C_{H'}^{P'}+C_H^{*P}\delta[C_{H'}^{P'}]\right\} = 0.
 $$
 
-Since the coefficients \( \delta[C_H^{*P}] \) and \( \delta[C_{H'}^{P'}] \) are complex conjugates it is necessary and sufficient to require the quantities that multiply with \( \delta[C_H^{*P}] \) to vanish.  
+Since the coefficients \( \delta[C_H^{*P}] \) and \( \delta[C_{H'}^{P'}] \) are complex conjugates it is necessary and sufficient to require the quantities that multiply with \( \delta[C_H^{*P}] \) to vanish.
 
 <p>
 This leads to 
@@ -772,7 +754,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec12">Full Configuration Interaction Theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -792,14 +774,14 @@ of Slater determinants), it can then serve as a benchmark for other many-body me
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec13">Full Configuration Interaction Theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 For reasons to come (links with Coupled-Cluster theory and Many-Body perturbation theory), 
-we will rewrite Eq.&nbsp;( ref{eq:fullci}) as a set of coupled non-linear equations in terms of the unknown coefficients \( C_H^P \). 
+we will rewrite Eq.&nbsp;( ref{eq:fullci}) as a set of coupled non-linear equations in terms of the unknown coefficients \( C_H^P \).
 
 <p>
 To see this, we look at the contributions arising from 
@@ -827,7 +809,7 @@ E-E_0 =\Delta E=\sum_{ai}\langle \Phi_0 | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}
 $$
 
 where the energy \( E_0 \) is the reference energy and \( \Delta E \) defines the so-called correlation energy.
-The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian. 
+The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian.
 
 <p>
 In our chapter on Hartree-Fock calculations, 
@@ -838,12 +820,11 @@ E-E_0 =\Delta E^{HF}=\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle 
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec14">Full Configuration Interaction Theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -873,7 +854,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec15">Full Configuration Interaction Theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -902,14 +883,14 @@ $$
 
 The observant reader will however see that we need an equation for \( C_{jk}^{bc} \) and \( C_{jkl}^{bcd} \) as well.
 To find equations for these coefficients we need then to continue our multiplications from the left with the various
-\( \Phi_{H}^P \) terms. 
+\( \Phi_{H}^P \) terms.
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec16">Full Configuration Interaction Theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -934,7 +915,7 @@ many-body perturbation theory. These theories will not be discussed in this cour
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec17">Full Configuration Interaction Theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -966,7 +947,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec18">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -977,14 +958,14 @@ $$
 In project 1 the plan  is to construct a working code that constructs the 
 many-body Hamiltonian matrix in a basis of Slater determinants and to find the low-lying eigenenergies. 
 This is referred to as the configuration-interaction method or shell-model diagonalization 
-(or the interacting shell model). 
+(or the interacting shell model).
 
 <p>
-The first step in such codes--and in your project--is to construct the many-body basis.  
+The first step in such codes--and in your project--is to construct the many-body basis.
 
 <p>
 While the formalism is independent of the choice of basis, the <b>effectiveness</b> of a calculation 
-will certainly be basis dependent. 
+will certainly be basis dependent.
 
 <p>
 Furthermore there are common conventions useful to know.
@@ -992,7 +973,7 @@ Furthermore there are common conventions useful to know.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec19">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1002,7 +983,7 @@ First, the single-particle basis has angular momentum as a good quantum number. 
 imagine the single-particle wavefunctions being generated by a one-body Hamiltonian, 
 for example a harmonic oscillator.  Modifications include harmonic oscillator plus 
 spin-orbit splitting, or self-consistent mean-field potentials, or the Woods-Saxon potential which mocks 
-up the self-consistent mean-field. 
+up the self-consistent mean-field.
 
 <p>
 For nuclei, the harmonic oscillator, modified by spin-orbit splitting, provides a useful language 
@@ -1022,7 +1003,7 @@ Each single-particle state is labeled by the following quantum numbers:
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec20">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1034,7 +1015,7 @@ In this format one labels states by \( n(l)_j \), with \( (l) \) replaced by a l
 <p>
  In practice the single-particle space has to be severely truncated.  This truncation is 
 typically based upon the single-particle energies, which is the effective energy 
-from a mean-field potential. 
+from a mean-field potential.
 
 <p>
 Sometimes we freeze the core and only consider a valence space. For example, one 
@@ -1044,7 +1025,7 @@ shell, and then only allow active particles in the \( 0p_{1/2} \) and \( 0p_{3/2
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec21">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1064,7 +1045,7 @@ So, for example, we call \( {}^{12}\mbox{C} \) a \( p \)-shell nucleus, while \(
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec22">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1081,14 +1062,14 @@ There are different kinds of truncations.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec23">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
  Here one works in a harmonic oscillator basis, with each major oscillator shell assigned 
-a principal quantum number \( N=0,1,2,3,... \). 
+a principal quantum number \( N=0,1,2,3,... \).
 
 <p>
 The \( N\hbar\Omega \) or \( N_{max} \) truncation: Any configuration is given an noninteracting energy, which is the sum 
@@ -1098,7 +1079,7 @@ spin-orbit splitting.)
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec24">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1116,7 +1097,7 @@ the center-of-mass wavefunction.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec25">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1124,15 +1105,15 @@ the center-of-mass wavefunction.
 <p>
 In almost all cases, the many-body Hamiltonian is rotationally invariant. This means 
 it commutes with the operators \( \hat{J}^2, \hat{J}_z \) and so eigenstates will have 
-good \( J,M \). Furthermore, the eigenenergies do not depend upon the orientation \( M \). 
+good \( J,M \). Furthermore, the eigenenergies do not depend upon the orientation \( M \).
 
 <p>
 Therefore we can choose to construct a many-body basis which has fixed \( M \); this is 
-called an \( M \)-scheme basis. 
+called an \( M \)-scheme basis.
 
 <p>
 Alternately, one can construct a many-body basis which has fixed \( J \), or a \( J \)-scheme 
-basis. 
+basis.
 
 <p>
 The Hamiltonian matrix will have smaller dimensions (a factor of 10 or more)
@@ -1146,7 +1127,7 @@ simpler \( M \)-scheme.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec26">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1179,7 +1160,7 @@ nonetheless degenerate.)
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec27">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1218,12 +1199,13 @@ which we list with the total \( M \):
 <tr><td align="center">   3,4         </td> <td align="center">   0          </td> </tr>
 </tbody>
 </table>
+There are 4 states with \( M= 0 \), 
 and 1 each with \( M = \pm 1 \).
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec28">Building a many-body basis </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1265,11 +1247,12 @@ which we list with the total \( M \):
 <tr><td align="center">   1,6         </td> <td align="center">   0          </td> <td align="center">   3,4         </td> <td align="center">   0          </td> <td align="center">   5,6         </td> <td align="center">   4          </td> </tr>
 </tbody>
 </table>
+There are 3 states with \( M= 0 \), 2 with \( M = 1 \), and so on.
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec29">Project </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1284,7 +1267,7 @@ be the most efficient.  Nonetheless it will be usable; most importantly, you wil
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec30">Project, step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1307,7 +1290,7 @@ The steps could be:
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec31">Project, step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1343,7 +1326,7 @@ angular momentum \( j \) and third component \( j_z \).  To keep everything as i
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec32">Project, step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1364,7 +1347,7 @@ To read in the single-particle states you need to:
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec33">Project, step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1376,7 +1359,7 @@ The next step is to read in the number of particles \( N \) and the fixed total 
 For this project we assume only a single species of particles, say neutrons, although this can be 
 relaxed. <b>Note</b>: Although it is often a good idea to try to write a more general code, given the 
 short time alloted we would suggest you keep your ambition in check, at least in the initial phases of the 
-project.  
+project.
 
 <p>
 You should probably write an error trap to make sure \( N \) and \( M \) are congruent; if \( N \) is even, then 
@@ -1385,7 +1368,7 @@ You should probably write an error trap to make sure \( N \) and \( M \) are con
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec34">Project, step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1406,7 +1389,7 @@ then \( sd(7,1) = 2 \), \( sd(7,2) = 3 \), and \( sd(7,3) = 9 \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec35">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1450,7 +1433,7 @@ and again increase the rightmost digit
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec36">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1461,7 +1444,7 @@ The first is simplest (and simplest is often best, at
 least in the first draft of a code): generate all possible Slater determinants, 
 and then extract from this initial list a list of those Slater determinants with a given 
 \( M \). (You will need to write a short function or routine that computes \( M \) for any 
-given occupation.)  
+given occupation.)
 
 <p>
 Alternately, and not too difficult, is to run the odometer routine twice: each time, as 
@@ -1474,7 +1457,7 @@ done with a simple logical flag).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec37">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1517,17 +1500,17 @@ Of these, there are only 3 states with \( M=0 \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec38">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 <em>You should try</em> by hand to show that in this same single-particle space, that for 
-\( N=3 \) there are 3 states with \( M=1/2 \) and for \( N= 4 \) there are also only 3 states with \( M=0 \). 
+\( N=3 \) there are 3 states with \( M=1/2 \) and for \( N= 4 \) there are also only 3 states with \( M=0 \).
 
 <p>
-<em>To test your code</em>, confirm the above. 
+<em>To test your code</em>, confirm the above.
 
 <p>
 Also, 
@@ -1539,7 +1522,7 @@ states with \( M=1/2 \), for \( N=4 \) there are 81 states with \( M=0 \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec39">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1561,14 +1544,14 @@ A simple space is the \( (1/2)^2 \) space with four single-particle states
 </tbody>
 </table>
 <p>
-For \( N=2 \) there are 4 states with \( M=0 \); show this by hand and confirm your code reproduces it. 
+For \( N=2 \) there are 4 states with \( M=0 \); show this by hand and confirm your code reproduces it.
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec40">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1600,7 +1583,7 @@ For \( N=2 \) there are 16 states with \( M=0 \); for \( N=3 \) there are 24 sta
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec41">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1613,7 +1596,7 @@ assign single-particle energies,  depending on the radial quantum number \( n \)
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec42">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1638,7 +1621,7 @@ six states:
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec43">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1648,9 +1631,9 @@ six states:
 <ul>
 <li> Write small modules (routines/functions) ; avoid big functions  that do everything. (But not too small.)</li>
 <li> Write lots of error traps, even for things that are `obvious.'</li>
-<li> Document as you go along.  For each function write a header that includes:</li> 
+<li> Document as you go along.  For each function write a header that includes: 
 
-<ol>
+<ol type="a"></li>
 <li> Main purpose of function</li>
 <li> names and  brief explanation of input variables, if any</li> 
 <li> names and brief explanation of output variables, if any</li>
@@ -1663,7 +1646,7 @@ six states:
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec44">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1688,7 +1671,7 @@ eight particles.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec45">Project , step 1 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1714,7 +1697,7 @@ This is left as a challenge for those of you who would like to study this topic 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec46">Example case: pairing Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1747,7 +1730,7 @@ exact results. Thereafter we will try again using the explicit Slater determinan
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec47">Example case: pairing Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1783,12 +1766,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec48">Example case: pairing Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1798,17 +1780,17 @@ $$
 <p>
 Because of the SU(2) algebra, we know that the eigenvalues of 
 \( \hat{P}^2 \) must be of the form \( p(p+1) \), with \( p \) either integer or half-integer, and the eigenvalues of \( \hat{P}_z \) 
-are \( m_p \) with \( p \geq | m_p| \), with \( m_p \) also integer or half-integer. 
+are \( m_p \) with \( p \geq | m_p| \), with \( m_p \) also integer or half-integer.
 
 <p>
 But because \( \hat{P}_z = (1/2)(\hat{N}-\Omega) \), we know that for \( N \) particles 
 the value \( m_p = (N-\Omega)/2 \). Furthermore, the values of \( m_p \) range from 
-\( -\Omega/2 \) (for \( N=0 \)) to \( +\Omega/2 \) (for \( N=2\Omega \), with all states filled). 
+\( -\Omega/2 \) (for \( N=0 \)) to \( +\Omega/2 \) (for \( N=2\Omega \), with all states filled).
 
 <p>
 We deduce the maximal \( p = \Omega/2 \) and for a given \( n \) the 
 values range of \( p \) range from \( |N-\Omega|/2 \) to \( \Omega/2 \) in steps of 1 
-(for an even number of particles) 
+(for an even number of particles)
 
 <p>
 Following Racah we introduce the notation
@@ -1824,7 +1806,7 @@ This also works for \( N \) odd, with \( v= 1,3,5, \dots \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec49">Example case: pairing Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1864,7 +1846,7 @@ are 9 states with \( M = +1/2 \), namely
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec50">Example case: pairing Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1890,7 +1872,7 @@ so those states all have eigenvalue 0.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec51">Example case: pairing Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1918,7 +1900,7 @@ without picking up a phase.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec52">Example case: pairing Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1953,7 +1935,7 @@ that there are 3 eigenvalues \( -2G \) and 6 with value zero.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec53">Example case: pairing Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1996,7 +1978,7 @@ determinants:
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec54">Example case: pairing Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2033,7 +2015,7 @@ H = \left (
 \end{array} \right )
 $$
 
-(You should check by hand that this is correct.) 
+(You should check by hand that this is correct.)
 
 <p>
 For \( \delta = 0 \) we have the closed form solution of  the g.s. energy given by \( -6G \).
@@ -2043,7 +2025,7 @@ For \( \delta = 0 \) we have the closed form solution of  the g.s. energy given 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec55">Angular momentum algebra </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2061,7 +2043,7 @@ Here you can look up Alex Brown's chapter 5 and Suhonen's chapters 1 and 2.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec56">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2081,7 +2063,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec57">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2092,7 +2074,7 @@ $$
 |(ab)JM\rangle  = \left\{a^{\dagger}_aa^{\dagger}_b\right\}^J_M|\Phi_0\rangle=N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ab}\rangle, 
 $$
 
-is a tensor of rank \( J \) with \( M \) components. Another well-known example is given by the spherical harmonics (see examples during today's lecture). 
+is a tensor of rank \( J \) with \( M \) components. Another well-known example is given by the spherical harmonics (see examples during today's lecture).
 
 <p>
 The product of two irreducible tensor operators
@@ -2105,7 +2087,7 @@ is also a tensor operator of rank \( \lambda_3 \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec58">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2130,7 +2112,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec59">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2152,7 +2134,7 @@ is independent of \( M \), we use the ladder operators for angular momentum.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec60">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2180,7 +2162,7 @@ The double bars indicate that this expectation value is independent of the proje
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec61">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2213,7 +2195,7 @@ with the condition \( \mu+M'-M=0 \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec62">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2236,7 +2218,7 @@ $$
 $$
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec63">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2252,7 +2234,7 @@ and
 \]
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec64">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2271,7 +2253,7 @@ $$
 where we used the orthogonality properties of the \( 3j \) symbols from the previous page.
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec65">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2288,7 +2270,7 @@ $$
 $$
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec66">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2312,7 +2294,7 @@ $$
 Before we proceed with further examples, we need some other properties of the Wigner-Eckart theorem plus some additional angular momenta relations.
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec67">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2337,7 +2319,7 @@ meaning that if we know the matrix elements for say some \( \mu=\mu_0 \), \( M'=
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec68">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2366,7 +2348,7 @@ Y^{l=1}_{m_l=-1}(\theta,\phi)=\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{-\imath\ph
 $$
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec69">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2392,7 +2374,7 @@ does satisfy the above commutation relations.
 
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec70">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2421,7 +2403,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec71">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2449,7 +2431,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec72">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2468,7 +2450,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec73">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2497,7 +2479,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec74">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2511,7 +2493,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec75">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2537,7 +2519,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec76">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2559,7 +2541,7 @@ refers thus to the values of \( j_a \) and \( j_b \). If two identical particles
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec77">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2587,12 +2569,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec78">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2613,7 +2594,7 @@ and note that of the four \( m \)-values in the above sum, only three are indepe
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec79">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2644,7 +2625,7 @@ where the last relations follows from the fact that \( J \) is an integer and \(
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec80">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2686,7 +2667,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec81">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2708,7 +2689,7 @@ We will come back later to how we split the above into a contribution that invol
 
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec82">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2729,7 +2710,7 @@ This equation is true for all values of \( \theta \) and \( \phi \). It must als
 
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec83">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2753,7 +2734,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec84">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2768,12 +2749,12 @@ $$
 |^{19}\mathrm{O}\rangle =|(abc)M\rangle  = a^{\dagger}_aa^{\dagger}_ba^{\dagger}_c|^{16}\mathrm{O}\rangle=|\Phi^{abc}\rangle.
 $$
 
-The Pauli principle is automagically implemented via the anti-commutation relations. 
+The Pauli principle is automagically implemented via the anti-commutation relations.
 
 
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec85">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2793,13 +2774,13 @@ that is, we couple first \( j_a \) to \( j_b \) to yield an intermediate angular
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec86">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-Now, nothing hinders us from recoupling this state by coupling \( j_b \) to \( j_c \), yielding an intermediate angular momentum \( J_{bc} \) and then couple this angular momentum to \( j_a \), resulting in the final angular momentum \( J' \). 
+Now, nothing hinders us from recoupling this state by coupling \( j_b \) to \( j_c \), yielding an intermediate angular momentum \( J_{bc} \) and then couple this angular momentum to \( j_a \), resulting in the final angular momentum \( J' \).
 
 <p>
 That is, we can have 
@@ -2819,12 +2800,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec87">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2849,12 +2829,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec88">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2871,12 +2850,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec89">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2894,12 +2872,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec90">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2919,12 +2896,12 @@ $$
 
 Can you find the inverse relation?  
 These relations can in turn be used to write out the fully anti-symmetrized three-body wave function in a \( J \)-scheme coupled basis. 
-If you opt then for a specific coupling order, say \( | ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle \), you need to express this representation in terms of the other coupling possibilities. 
+If you opt then for a specific coupling order, say \( | ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle \), you need to express this representation in terms of the other coupling possibilities.
 
 
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec91">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2947,7 +2924,7 @@ expression for the above three-body state using the coupling order \( | ([j_a\ri
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec92">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2960,7 +2937,7 @@ $$
 
 where we read the coupling order as \( j_a \) couples with \( j_b \) to given and intermediate angular momentum \( J_{ab} \). 
 Moreover, \( j_c \) couples with \( j_d \) to given and intermediate angular momentum \( J_{cd} \).  The two intermediate angular momenta \( J_{ab} \) and \( J_{cd} \)
-are in turn coupled to a final \( J \).  These operations involved three Clebsch-Gordan coefficients. 
+are in turn coupled to a final \( J \).  These operations involved three Clebsch-Gordan coefficients.
 
 <p>
 Alternatively, we could couple in the following order
@@ -2969,7 +2946,7 @@ $$
 $$
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec93">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2999,7 +2976,7 @@ involves six.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec94">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3021,12 +2998,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec95">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3040,7 +3016,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec96">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3063,7 +3039,7 @@ $$
 \end{array}
 $$
 
-and it is zero for the \( ^1S_0 \) wave. 
+and it is zero for the \( ^1S_0 \) wave.
 
 <p>
 How do we get here?
@@ -3071,7 +3047,7 @@ How do we get here?
 
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec97">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3101,7 +3077,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec98">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3128,14 +3104,14 @@ $$
 $$
 
 The complete set of states that was inserted between \( T \) and \( U \) reduces to \( |j_cm_cj_bm_b\rangle\langle j_cm_cj_bm_b| \)
-due to orthogonality of the states. 
+due to orthogonality of the states.
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec99">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3163,12 +3139,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec100">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3188,10 +3163,9 @@ $$
 $$
 
 
-
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec101">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3210,7 +3184,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec102">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3244,12 +3218,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec103">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3271,12 +3244,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec104">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3295,10 +3267,9 @@ Y_{l-m}(-1)^m.
 $$
 
 
-
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec105">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3322,12 +3293,11 @@ Y_{2-\mu}\\
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec106">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3347,12 +3317,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec107">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3390,7 +3359,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec108">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3411,7 +3380,7 @@ below.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec109">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3436,7 +3405,7 @@ The parameter \( \alpha \) is the chosen oscillator length.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec110">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3469,7 +3438,7 @@ is the so-called Moshinsky-Talmi transformation coefficient (see chapter 18 of A
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec111">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3497,7 +3466,7 @@ The factor \( F \) is defined as \( F=\frac{1-(-1)^{l+S+T}}{\sqrt{2}} \) if
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec112">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">

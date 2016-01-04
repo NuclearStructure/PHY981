@@ -11,32 +11,37 @@ Automatically generated HTML file from DocOnce source
 <title>Second Quantization</title>
 
 
-<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
-<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
 <style type="text/css">
-h1 {color: #b58900;}  /* yellow */
-/* h1 {color: #cb4b16;}  orange */
-/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
-code { padding: 0px; background-color: inherit; }
-pre {
-  border: 0pt solid #93a1a1;
-  box-shadow: none;
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
 }
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 .alert-text-small   { font-size: 80%;  }
 .alert-text-large   { font-size: 130%; }
 .alert-text-normal  { font-size: 90%;  }
 .alert {
   padding:8px 35px 8px 14px; margin-bottom:18px;
   text-shadow:0 1px 0 rgba(255,255,255,0.5);
-  border:1px solid #93a1a1;
+  border:1px solid #bababa;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   color: #555;
-  background-color: #eee8d5;
+  background-color: #f8f8f8;
   background-position: 10px 5px;
   background-repeat: no-repeat;
   background-size: 38px;
@@ -47,10 +52,10 @@ pre {
 .alert-block > p, .alert-block > ul {margin-bottom:1em}
 .alert li {margin-top: 1em}
 .alert-block p+p {margin-top:5px}
-.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
-.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
-.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
-.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
 
 div { text-align: justify; text-justify: inter-word; }
 </style>
@@ -60,175 +65,175 @@ div { text-align: justify; text-justify: inter-word; }
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [(' Second quantization ', 2, None, '___sec0'),
-              (' Second quantization ', 2, None, '___sec1'),
-              (' Second quantization ', 2, None, '___sec2'),
-              (' Second quantization ', 2, None, '___sec3'),
-              (' Second quantization ', 2, None, '___sec4'),
-              (' Second quantization ', 2, None, '___sec5'),
-              (' Second quantization ', 2, None, '___sec6'),
-              (' Second quantization ', 2, None, '___sec7'),
-              (' Second quantization ', 2, None, '___sec8'),
-              (' Second quantization ', 2, None, '___sec9'),
-              (' Second quantization ', 2, None, '___sec10'),
-              (' Second quantization ', 2, None, '___sec11'),
-              (' Second quantization ', 2, None, '___sec12'),
-              (' Second quantization ', 2, None, '___sec13'),
-              (' Second quantization ', 2, None, '___sec14'),
-              (' Second quantization ', 2, None, '___sec15'),
-              (' Second quantization ', 2, None, '___sec16'),
-              (' Second quantization ', 2, None, '___sec17'),
-              (' Second quantization ', 2, None, '___sec18'),
-              (' Second quantization ', 2, None, '___sec19'),
-              (' Second quantization ', 2, None, '___sec20'),
-              (' Second quantization ', 2, None, '___sec21'),
-              (' Second quantization ', 2, None, '___sec22'),
-              (' Second quantization ', 2, None, '___sec23'),
-              (' Second quantization ', 2, None, '___sec24'),
-              (' Second quantization ', 2, None, '___sec25'),
-              (' Second quantization ', 2, None, '___sec26'),
-              (' Second quantization ', 2, None, '___sec27'),
-              (' Second quantization ', 2, None, '___sec28'),
-              (' Two-body operators in second quantization ',
+ 'sections': [('Second quantization', 2, None, '___sec0'),
+              ('Second quantization', 2, None, '___sec1'),
+              ('Second quantization', 2, None, '___sec2'),
+              ('Second quantization', 2, None, '___sec3'),
+              ('Second quantization', 2, None, '___sec4'),
+              ('Second quantization', 2, None, '___sec5'),
+              ('Second quantization', 2, None, '___sec6'),
+              ('Second quantization', 2, None, '___sec7'),
+              ('Second quantization', 2, None, '___sec8'),
+              ('Second quantization', 2, None, '___sec9'),
+              ('Second quantization', 2, None, '___sec10'),
+              ('Second quantization', 2, None, '___sec11'),
+              ('Second quantization', 2, None, '___sec12'),
+              ('Second quantization', 2, None, '___sec13'),
+              ('Second quantization', 2, None, '___sec14'),
+              ('Second quantization', 2, None, '___sec15'),
+              ('Second quantization', 2, None, '___sec16'),
+              ('Second quantization', 2, None, '___sec17'),
+              ('Second quantization', 2, None, '___sec18'),
+              ('Second quantization', 2, None, '___sec19'),
+              ('Second quantization', 2, None, '___sec20'),
+              ('Second quantization', 2, None, '___sec21'),
+              ('Second quantization', 2, None, '___sec22'),
+              ('Second quantization', 2, None, '___sec23'),
+              ('Second quantization', 2, None, '___sec24'),
+              ('Second quantization', 2, None, '___sec25'),
+              ('Second quantization', 2, None, '___sec26'),
+              ('Second quantization', 2, None, '___sec27'),
+              ('Second quantization', 2, None, '___sec28'),
+              ('Two-body operators in second quantization',
                2,
                None,
                '___sec29'),
-              (' Operators in second quantization ', 2, None, '___sec30'),
-              (' Operators in second quantization ', 2, None, '___sec31'),
-              (' Operators in second quantization ', 2, None, '___sec32'),
-              (' Operators in second quantization ', 2, None, '___sec33'),
-              (' Operators in second quantization ', 2, None, '___sec34'),
-              (' Operators in second quantization ', 2, None, '___sec35'),
-              (' Operators in second quantization ', 2, None, '___sec36'),
-              (' Operators in second quantization ', 2, None, '___sec37'),
-              (' Operators in second quantization ', 2, None, '___sec38'),
-              (' Operators in second quantization ', 2, None, '___sec39'),
-              (' Operators in second quantization ', 2, None, '___sec40'),
-              (' Operators in second quantization ', 2, None, '___sec41'),
-              (' Particle-hole formalism ', 2, None, '___sec42'),
-              (' Particle-hole formalism ', 2, None, '___sec43'),
-              (' Particle-hole formalism ', 2, None, '___sec44'),
-              (' Particle-hole formalism ', 2, None, '___sec45'),
-              (' Particle-hole formalism ', 2, None, '___sec46'),
-              (' Particle-hole formalism ', 2, None, '___sec47'),
-              (' Particle-hole formalism ', 2, None, '___sec48'),
-              (' Particle-hole formalism ', 2, None, '___sec49'),
-              (' Particle-hole formalism ', 2, None, '___sec50'),
-              (' Particle-hole formalism ', 2, None, '___sec51'),
-              (' Particle-hole formalism ', 2, None, '___sec52'),
-              ('  Summarizing and defining a normal-ordered Hamiltonian ',
+              ('Operators in second quantization', 2, None, '___sec30'),
+              ('Operators in second quantization', 2, None, '___sec31'),
+              ('Operators in second quantization', 2, None, '___sec32'),
+              ('Operators in second quantization', 2, None, '___sec33'),
+              ('Operators in second quantization', 2, None, '___sec34'),
+              ('Operators in second quantization', 2, None, '___sec35'),
+              ('Operators in second quantization', 2, None, '___sec36'),
+              ('Operators in second quantization', 2, None, '___sec37'),
+              ('Operators in second quantization', 2, None, '___sec38'),
+              ('Operators in second quantization', 2, None, '___sec39'),
+              ('Operators in second quantization', 2, None, '___sec40'),
+              ('Operators in second quantization', 2, None, '___sec41'),
+              ('Particle-hole formalism', 2, None, '___sec42'),
+              ('Particle-hole formalism', 2, None, '___sec43'),
+              ('Particle-hole formalism', 2, None, '___sec44'),
+              ('Particle-hole formalism', 2, None, '___sec45'),
+              ('Particle-hole formalism', 2, None, '___sec46'),
+              ('Particle-hole formalism', 2, None, '___sec47'),
+              ('Particle-hole formalism', 2, None, '___sec48'),
+              ('Particle-hole formalism', 2, None, '___sec49'),
+              ('Particle-hole formalism', 2, None, '___sec50'),
+              ('Particle-hole formalism', 2, None, '___sec51'),
+              ('Particle-hole formalism', 2, None, '___sec52'),
+              ('Summarizing and defining a normal-ordered Hamiltonian',
                2,
                None,
                '___sec53'),
-              ('  Summarizing and defining a normal-ordered Hamiltonian ',
+              ('Summarizing and defining a normal-ordered Hamiltonian',
                2,
                None,
                '___sec54'),
-              ('  Summarizing and defining a normal-ordered Hamiltonian ',
+              ('Summarizing and defining a normal-ordered Hamiltonian',
                2,
                None,
                '___sec55'),
-              ('  Summarizing and defining a normal-ordered Hamiltonian ',
+              ('Summarizing and defining a normal-ordered Hamiltonian',
                2,
                None,
                '___sec56'),
-              (' Hartree-Fock in second quantization and stability of HF solution ',
+              ('Hartree-Fock in second quantization and stability of HF solution',
                2,
                None,
                '___sec57'),
-              (" Hartree-Fock in second quantization and Thouless' theorem ",
+              ("Hartree-Fock in second quantization and Thouless' theorem",
                2,
                None,
                '___sec58'),
-              (" Thouless' theorem ", 2, None, '___sec59'),
-              (" Thouless' theorem ", 2, None, '___sec60'),
-              (' New operators ', 2, None, '___sec61'),
-              (" Showing that $|\\tilde{c}\\rangle= |c'\\rangle$  ",
+              ("Thouless' theorem", 2, None, '___sec59'),
+              ("Thouless' theorem", 2, None, '___sec60'),
+              ('New operators', 2, None, '___sec61'),
+              ("Showing that $|\\tilde{c}\\rangle= |c'\\rangle$",
                2,
                None,
                '___sec62'),
-              (' Wrapping it up  ', 2, None, '___sec63'),
-              (" Thouless' theorem   ", 2, None, '___sec64'),
-              (' Hartree-Fock in second quantization and stability of HF solution ',
+              ('Wrapping it up', 2, None, '___sec63'),
+              ("Thouless' theorem", 2, None, '___sec64'),
+              ('Hartree-Fock in second quantization and stability of HF solution',
                2,
                None,
                '___sec65'),
-              (' Hartree-Fock in second quantization and stability of HF solution ',
+              ('Hartree-Fock in second quantization and stability of HF solution',
                2,
                None,
                '___sec66'),
-              (' Hartree-Fock in second quantization and stability of HF solution ',
+              ('Hartree-Fock in second quantization and stability of HF solution',
                2,
                None,
                '___sec67'),
-              (' Hartree-Fock in second quantization and stability of HF solution ',
+              ('Hartree-Fock in second quantization and stability of HF solution',
                2,
                None,
                '___sec68'),
-              (' Hartree-Fock in second quantization and stability of HF solution ',
+              ('Hartree-Fock in second quantization and stability of HF solution',
                2,
                None,
                '___sec69'),
-              (' Hartree-Fock in second quantization and stability of HF solution ',
+              ('Hartree-Fock in second quantization and stability of HF solution',
                2,
                None,
                '___sec70'),
-              (' Hartree-Fock in second quantization and stability of HF solution ',
+              ('Hartree-Fock in second quantization and stability of HF solution',
                2,
                None,
                '___sec71'),
-              (' Hartree-Fock in second quantization and stability of HF solution ',
+              ('Hartree-Fock in second quantization and stability of HF solution',
                2,
                None,
                '___sec72'),
-              (' Operators in second quantization ', 2, None, '___sec73'),
-              (' Operators in second quantization ', 2, None, '___sec74'),
-              (' Operators in second quantization ', 2, None, '___sec75'),
-              (' Operators in second quantization ', 2, None, '___sec76'),
-              (' Operators in second quantization ', 2, None, '___sec77'),
-              (' Operators in second quantization ', 2, None, '___sec78'),
-              (' Operators in second quantization ', 2, None, '___sec79'),
-              (' Operators in second quantization ', 2, None, '___sec80'),
-              (' Operators in second quantization ', 2, None, '___sec81'),
-              (' Exercises ', 2, None, '___sec82'),
-              (' Exercises ', 2, None, '___sec83'),
-              (' Exercises ', 2, None, '___sec84'),
-              (' Exercises ', 2, None, '___sec85'),
-              (' Exercises ', 2, None, '___sec86'),
-              (' Exercises ', 2, None, '___sec87'),
-              (' Exercises: Using sympy to compute matrix elements  ',
+              ('Operators in second quantization', 2, None, '___sec73'),
+              ('Operators in second quantization', 2, None, '___sec74'),
+              ('Operators in second quantization', 2, None, '___sec75'),
+              ('Operators in second quantization', 2, None, '___sec76'),
+              ('Operators in second quantization', 2, None, '___sec77'),
+              ('Operators in second quantization', 2, None, '___sec78'),
+              ('Operators in second quantization', 2, None, '___sec79'),
+              ('Operators in second quantization', 2, None, '___sec80'),
+              ('Operators in second quantization', 2, None, '___sec81'),
+              ('Exercises', 2, None, '___sec82'),
+              ('Exercises', 2, None, '___sec83'),
+              ('Exercises', 2, None, '___sec84'),
+              ('Exercises', 2, None, '___sec85'),
+              ('Exercises', 2, None, '___sec86'),
+              ('Exercises', 2, None, '___sec87'),
+              ('Exercises: Using sympy to compute matrix elements',
                2,
                None,
                '___sec88'),
-              (' Exercises: Using sympy to compute matrix elements  ',
+              ('Exercises: Using sympy to compute matrix elements',
                2,
                None,
                '___sec89'),
-              (' Exercises: Using sympy to compute matrix elements  ',
+              ('Exercises: Using sympy to compute matrix elements',
                2,
                None,
                '___sec90'),
-              (' Exercises: Using sympy to compute matrix elements  ',
+              ('Exercises: Using sympy to compute matrix elements',
                2,
                None,
                '___sec91'),
-              (' Exercises: Using sympy to compute matrix elements  ',
+              ('Exercises: Using sympy to compute matrix elements',
                2,
                None,
                '___sec92'),
-              (' Exercises: Using sympy to compute matrix elements  ',
+              ('Exercises: Using sympy to compute matrix elements',
                2,
                None,
                '___sec93'),
-              (' Exercises: Using sympy to compute matrix elements  ',
+              ('Exercises: Using sympy to compute matrix elements',
                2,
                None,
                '___sec94'),
-              (' Exercises: Derivation of Hartree-Fock equations  ',
+              ('Exercises: Derivation of Hartree-Fock equations',
                2,
                None,
                '___sec95'),
-              (' Exercises: Derivation of Hartree-Fock equations  ',
+              ('Exercises: Derivation of Hartree-Fock equations',
                2,
                None,
                '___sec96')]}
@@ -267,13 +272,15 @@ MathJax.Hub.Config({
 <b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
 </center>
 
-
 <p>
 <!-- institution(s) -->
+
+<br>
 <p>
-<center><h4>Spring 2015</h4></center> <!-- date -->
+<center><h4>Spring 2016</h4></center> <!-- date -->
+<br>
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec0">Second quantization </h2>
 
@@ -294,7 +301,7 @@ MathJax.Hub.Config({
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec1">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -322,7 +329,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec2">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -331,7 +338,7 @@ $$
 In Eq.&nbsp;\eqref{eq:2-1a} 
 the operator  \( a_\alpha^{\dagger} \)  acts on the vacuum state 
 \( |0\rangle \), which does not contain any particles. Alternatively, we could define  a closed-shell nucleus or atom as our new vacuum, but then
-we need to introduce the particle-hole  formalism, see the discussion to come. 
+we need to introduce the particle-hole  formalism, see the discussion to come.
 
 <p>
 In Eq.&nbsp;\eqref{eq:2-1b} \( a_\alpha^{\dagger} \) acts on an antisymmetric \( n \)-particle state and 
@@ -349,7 +356,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec3">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -375,7 +382,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec4">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -406,7 +413,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec5">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -429,7 +436,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec6">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -462,7 +469,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec7">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -482,7 +489,7 @@ Here we must have \( m = n+1 \) if Eq.&nbsp;\eqref{eq:2-10} has to be trivially 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec8">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -515,7 +522,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec9">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -540,7 +547,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec10">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -559,7 +566,7 @@ The next step is to establish the  commutator algebra of \( a_\alpha^{\dagger} \
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec11">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -581,7 +588,7 @@ if the single-particle state \( \alpha \) is not contained in the state.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec12">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -609,7 +616,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec13">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -623,7 +630,7 @@ The first case is a state vector which contains both \( \alpha \) and \( \beta \
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec14">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -651,7 +658,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec15">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -676,7 +683,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec16">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -710,7 +717,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec17">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -741,7 +748,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec18">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -760,7 +767,7 @@ state \( \alpha \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec19">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -777,6 +784,7 @@ $$
 		\\
 		|\alpha_1\alpha_2 \dots \alpha_{n}\rangle & \alpha \in \{\alpha_i\}
 	\end{cases}
+\label{_auto1}
 \end{equation}
 $$
 
@@ -791,7 +799,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec20">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -813,7 +821,7 @@ occupation number representation.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec21">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -838,7 +846,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec22">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -869,7 +877,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec23">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -892,7 +900,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec24">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -917,7 +925,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec25">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -953,7 +961,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec26">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -977,7 +985,7 @@ with a probability for the transition given by the expectation value \( \langle 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec27">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -995,7 +1003,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec28">Second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1025,7 +1033,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec29">Two-body operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1041,7 +1049,7 @@ $$
 $$
 
 where the summation runs over distinct pairs. The term \( V \) can be an interaction model for the nucleon-nucleon interaction
-or the interaction between two electrons. It can also include additional two-body interaction terms. 
+or the interaction between two electrons. It can also include additional two-body interaction terms.
 
 <p>
 The action of this operator on a product of 
@@ -1057,7 +1065,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec30">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1084,7 +1092,7 @@ where on the rhs we have a term for each distinct pairs.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec31">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1108,7 +1116,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec32">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1130,7 +1138,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec33">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1161,7 +1169,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec34">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1192,7 +1200,7 @@ where we  have used the anti-commutation rules.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec35">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1222,7 +1230,7 @@ where we sum freely over all single-particle states \( \alpha \),
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec36">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1244,7 +1252,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec37">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1272,7 +1280,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec38">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1294,7 +1302,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec39">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1315,7 +1323,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec40">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1337,14 +1345,14 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec41">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 The factors in front of the operator, either  \( \frac{1}{4} \) or 
-\( \frac{1}{2} \) tells whether we use antisymmetrized matrix elements or not. 
+\( \frac{1}{2} \) tells whether we use antisymmetrized matrix elements or not.
 
 <p>
 We can now express the Hamiltonian operator for a many-fermion system  in the occupation basis representation
@@ -1361,7 +1369,7 @@ This is the form we will use in the rest of these lectures, assuming that we wor
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec42">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1376,7 +1384,7 @@ The many-body equation is equally hard to solve, irrespective of representation.
 The cliche that 
 there is no free lunch brings us down to earth again.  
 Note however that a transformation to a particular
-basis, for cases where the interaction obeys specific symmetries, can ease the solution of Schroedinger's equation. 
+basis, for cases where the interaction obeys specific symmetries, can ease the solution of Schroedinger's equation.
 
 <p>
 But there is at least one important case where second quantization comes to our rescue.
@@ -1387,7 +1395,7 @@ considerably the complexity and thereby the dimensionality of the many-body prob
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec43">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1410,7 +1418,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec44">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1438,7 +1446,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec45">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1482,7 +1490,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec46">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1502,7 +1510,7 @@ $$
 $$
 
 where \( F \) is the Fermi level representing the last  occupied single-particle orbit 
-of the new reference state \( |c\rangle  \). 
+of the new reference state \( |c\rangle  \).
 
 <p>
 The annihilation is the hermitian conjugate of the creation operator
@@ -1529,7 +1537,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec47">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1585,7 +1593,7 @@ where \( n_{qp} = n_p + n_h \) is the total number of quasi-particles.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec48">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1612,7 +1620,7 @@ the third term is the contribution  from the vacuum state \( |c\rangle \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec49">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1631,14 +1639,14 @@ $$
 		\langle i|\hat{h}|a\rangle b_i  b_a \right] \nonumber \\
 	&+& \sum_{i} \langle i|\hat{h}|i\rangle - 
 		\sum_{ij} \langle j|\hat{h}|i\rangle
-		b_i^\dagger b_j \label{eq:2-63b}
+		b_i^\dagger b_j \label{eq:2-63c}
 \end{eqnarray} 
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec50">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1666,7 +1674,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec51">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1695,7 +1703,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec52">Particle-hole formalism </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1740,7 +1748,7 @@ from hole-hole correlations.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec53">Summarizing and defining a normal-ordered Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1772,7 +1780,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec54">Summarizing and defining a normal-ordered Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1799,7 +1807,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec55">Summarizing and defining a normal-ordered Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1823,7 +1831,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec56">Summarizing and defining a normal-ordered Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1839,13 +1847,14 @@ with the antisymmetrized matrix element
 $$
 \begin{align}
             \langle pqr|\hat{v}_3|stu\rangle_{AS} = \langle pqr|\hat{v}_3|stu\rangle + \langle pqr|\hat{v}_3|tus\rangle + \langle pqr|\hat{v}_3|ust\rangle- \langle pqr|\hat{v}_3|sut\rangle - \langle pqr|\hat{v}_3|tsu\rangle - \langle pqr|\hat{v}_3|uts\rangle.
+\label{_auto2}
 \end{align}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec57">Hartree-Fock in second quantization and stability of HF solution </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1858,7 +1867,7 @@ $$
 $$
 
 We wish to determine \( \hat{u}^{HF} \) so that 
-\( E_0^{HF}= \langle c|\hat{H}| c\rangle \) becomes a local minimum. 
+\( E_0^{HF}= \langle c|\hat{H}| c\rangle \) becomes a local minimum.
 
 <p>
 In our analysis here we will need Thouless' theorem, which states that
@@ -1872,7 +1881,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec58">Hartree-Fock in second quantization and Thouless' theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1892,12 +1901,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec59">Thouless' theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1905,7 +1913,7 @@ $$
 <p>
 
 <p>
-If the operators do not commute, we need to resort to the <a href="http://www.encyclopediaofmath.org/index.php/Campbell%E2%80%93Hausdorff_formula" target="_self">Baker-Campbell-Hauersdorf</a>. This relation states that
+If the operators do not commute, we need to resort to the <a href="http://www.encyclopediaofmath.org/index.php/Campbell%E2%80%93Hausdorff_formula" target="_blank">Baker-Campbell-Hauersdorf</a>. This relation states that
 $$
 \exp{\hat{C}}=\exp{\hat{A}}\exp{\hat{B}},
 $$
@@ -1927,12 +1935,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec60">Thouless' theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -1959,15 +1966,17 @@ $$
 The last equation can be written as
 $$
 \begin{align}
-|c'\rangle&=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle=\left(1+\sum_{a>F}C_{ai_1}a_{a}^{\dagger}a_{i_1}\right)a^{\dagger}_{i_1} \\
-& \left(1+\sum_{a>F}C_{ai_2}a_{a}^{\dagger}a_{i_2}\right)a^{\dagger}_{i_2} \dots |0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle.
+|c'\rangle&=\prod_{i}\left\{1+\sum_{a>F}C_{ai}a_{a}^{\dagger}a_{i}\right\}| a^{\dagger}_{i_1} a^{\dagger}_{i_2} \dots a^{\dagger}_{i_n}|0\rangle=\left(1+\sum_{a>F}C_{ai_1}a_{a}^{\dagger}a_{i_1}\right)a^{\dagger}_{i_1} 
+\label{_auto3}\\
+& \times\left(1+\sum_{a>F}C_{ai_2}a_{a}^{\dagger}a_{i_2}\right)a^{\dagger}_{i_2} \dots |0\rangle=\prod_{i}\left(a^{\dagger}_{i}+\sum_{a>F}C_{ai}a_{a}^{\dagger}\right)|0\rangle.
+\label{_auto4}
 \end{align}
 $$
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec61">New operators </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2000,12 +2009,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec62">Showing that \( |\tilde{c}\rangle= |c'\rangle \)  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2038,7 +2046,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec63">Wrapping it up  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2075,7 +2083,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec64">Thouless' theorem   </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2112,7 +2120,7 @@ With this as a background, we are now ready to study the stability of the Hartre
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec65">Hartree-Fock in second quantization and stability of HF solution </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2132,9 +2140,11 @@ $$
 Using Thouless' theorem we can write out \( {|c'\rangle} \) as
 $$
 \begin{align}
- {|c'\rangle}&=\exp\left\{\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle\\ 
+ {|c'\rangle}&=\exp\left\{\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}a_{i}\right\}| c\rangle
+\label{_auto5}\\ 
 &=\left\{1+\sum_{a > F}\sum_{i \le F}\delta C_{ai}a_{a}^{\dagger}
 a_{i}+\frac{1}{2!}\sum_{ab > F}\sum_{ij \le F}\delta C_{ai}\delta C_{bj}a_{a}^{\dagger}a_{i}a_{b}^{\dagger}a_{j}+\dots\right\}
+\label{_auto6}
 \end{align}
 $$
 
@@ -2145,7 +2155,7 @@ where the amplitudes \( \delta C \) are small.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec66">Hartree-Fock in second quantization and stability of HF solution </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2174,12 +2184,11 @@ $$
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec67">Hartree-Fock in second quantization and stability of HF solution </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2190,9 +2199,11 @@ $$
 \begin{align}
 \langle c | \left(\{a^\dagger_i a_a\} \hat{H} \{a^\dagger_b a_j\} \right) | c\rangle&=\sum_{pq} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle p|\hat{h}_0 |q\rangle 
             \langle c | \left(\{a^{\dagger}_i a_a\}\{a^{\dagger}_pa_q\} 
-             \{a^{\dagger}_b a_j\} \right)| c\rangle\\
+             \{a^{\dagger}_b a_j\} \right)| c\rangle
+\label{_auto7}\\
 & +\frac{1}{4} \sum_{pqrs} \sum_{ijab}\delta C_{ai}^*\delta C_{bj} \langle pq| \hat{v}|rs\rangle 
             \langle c | \left(\{a^\dagger_i a_a\}\{a^{\dagger}_p a^{\dagger}_q a_s  a_r\} \{a^{\dagger}_b a_j\} \right)| c\rangle ,
+\label{_auto8}
 \end{align}
 $$
 
@@ -2204,7 +2215,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec68">Hartree-Fock in second quantization and stability of HF solution </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2236,7 +2247,7 @@ due to the hermiticity of \( \hat{H} \) and \( \hat{V} \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec69">Hartree-Fock in second quantization and stability of HF solution </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2259,7 +2270,7 @@ both being anti-symmetrized.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec70">Hartree-Fock in second quantization and stability of HF solution </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2270,9 +2281,11 @@ both being anti-symmetrized.
 With these definitions we write out the energy as
 $$
 \begin{align}
-\langle c'|H|c'\rangle& = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a^{HF}-\varepsilon_i^{HF})+\sum_{ijab}A_{ai,bj}\delta C_{ai}^*\delta C_{bj}+\\
+\langle c'|H|c'\rangle& = \left(1+\sum_{ai}|\delta C_{ai}|^2\right)\langle c |H|c\rangle+\sum_{ai}|\delta C_{ai}|^2(\varepsilon_a^{HF}-\varepsilon_i^{HF})+\sum_{ijab}A_{ai,bj}\delta C_{ai}^*\delta C_{bj}+
+\label{_auto9}\\
 &\frac{1}{2} \sum_{ijab} B_{ai,bj}^*\delta C_{ai}\delta C_{bj}+\frac{1}{2} \sum_{ijab} B_{ai,bj}\delta C_{ai}^*\delta C_{bj}^*
 +O(\delta C_{ai}^3),
+\label{_auto10}
 \end{align}
 $$
 
@@ -2289,7 +2302,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec71">Hartree-Fock in second quantization and stability of HF solution </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2315,7 +2328,7 @@ with \( \Delta_{ai,bj} = (\varepsilon_a-\varepsilon_i)\delta_{ab}\delta_{ij} \).
 
 </div>
 
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec72">Hartree-Fock in second quantization and stability of HF solution </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2342,7 +2355,7 @@ This equation can be used as a first test of the stability of the Hartree-Fock e
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec73">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2367,7 +2380,7 @@ A practically useful way to implement this action is to encode a Slater determin
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec74">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2403,7 +2416,7 @@ We can thus encode a Slater determinant as a bit pattern.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec75">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2419,7 +2432,7 @@ The total number of bit patterns is \( 2^n \).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec76">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2451,7 +2464,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec77">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2477,7 +2490,7 @@ This gives a simple recipe:
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec78">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2504,7 +2517,7 @@ on the given Slater determinant representation?
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec79">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2533,7 +2546,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec80">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2553,7 +2566,7 @@ $$
 from \( \Phi_{0,3,6,10,13}= |1001001000100100\rangle \).
 
 <p>
-This operation gives \( |0001001000100100\rangle \). 
+This operation gives \( |0001001000100100\rangle \).
 
 <p>
 Similarly, we can form \( a^{\dagger}_{\alpha_4}a_{\alpha_0}\Phi_{0,3,6,10,13} \), say, by adding 
@@ -2563,7 +2576,7 @@ is zero in order to make sure that orbital \( \alpha_4 \) is not already occupie
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec81">Operators in second quantization </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2606,7 +2619,7 @@ which results in \( |0001000000000000\rangle \). Counting the number of $1-$bits
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec82">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2628,7 +2641,7 @@ Show that the new basis is orthonormal.
 Show that the new Slater determinant constructed from the new single-particle wave functions can be
 written as the determinant based on the previous basis and the determinant of the matrix \( C \).
 Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
-(Hint, \( C \) is a unitary matrix). 
+(Hint, \( C \) is a unitary matrix).
 
 <p>
 Starting with the second quantization representation of the Slater determinant 
@@ -2642,7 +2655,7 @@ use Wick's theorem to compute the normalization integral
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec83">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2690,7 +2703,7 @@ Compare these results with those from exercise 3c).
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec84">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2710,10 +2723,10 @@ $$
 Explain the meaning of the various symbols. Which reference 
 vacuum has been used?
 </div>
-  
+
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec85">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2745,7 +2758,7 @@ and specify the contributions to the twobody, onebody and the scalar part.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec86">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2788,10 +2801,10 @@ $$
 $$
 
 with \( g \) being invariant under the interchange of the coordinates of two particles.
-The single-particle states \( \psi_i \) are not necessarily eigenstates of \( \hat{f} \).  The curly brackets mean that the operators are normal-ordered with respect to the new vacuum reference state. 
+The single-particle states \( \psi_i \) are not necessarily eigenstates of \( \hat{f} \).  The curly brackets mean that the operators are normal-ordered with respect to the new vacuum reference state.
 
 <p>
-How would you write the above Slater determinants in a second quantization formalism, utilizing the fact that we have defined a new reference state? 
+How would you write the above Slater determinants in a second quantization formalism, utilizing the fact that we have defined a new reference state?
 
 <p>
 Use thereafter Wick's theorem to find the expectation values of 
@@ -2803,7 +2816,6 @@ and
 $$
 \langle \Phi_0\hat{G}_N|\Phi_0\rangle.
 $$
-
 
 <p>
 Find thereafter 
@@ -2838,7 +2850,7 @@ where the Slater determinant to the right of the operator differs by more than t
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec87">Exercises </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2849,124 +2861,125 @@ where the Slater determinant to the right of the operator differs by more than t
 Write a program which sets up all possible Slater determinants given \( N=4 \) eletrons which can occupy
 the atomic single-particle states defined by the \( 1s \), \( 2s2p \) and \( 3s3p3d \) shells. How many single-particle
 states \( n \) are there in total?  Include the spin degrees of freedom as well.
-We include here a python program which may aid in this direction. It uses bit manipulation functions from <a href="http://wiki.python.org/moin/BitManipulation" target="_self"><tt>http://wiki.python.org/moin/BitManipulation</tt></a>.
-<!-- begin verbatim block  pycod-->
-<pre><code>import math
+We include here a python program which may aid in this direction. It uses bit manipulation functions from <a href="http://wiki.python.org/moin/BitManipulation" target="_blank"><tt>http://wiki.python.org/moin/BitManipulation</tt></a>.
+<p>
 
-&quot;&quot;&quot;
-A simple Python class for Slater determinant manipulation
-Bit-manipulation stolen from:
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">math</span>
 
-http://wiki.python.org/moin/BitManipulation
-&quot;&quot;&quot;
+<span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">A simple Python class for Slater determinant manipulation</span>
+<span style="color: #BA2121; font-style: italic">Bit-manipulation stolen from:</span>
 
-# bitCount() counts the number of bits set (not an optimal function)
+<span style="color: #BA2121; font-style: italic">http://wiki.python.org/moin/BitManipulation</span>
+<span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
 
-def bitCount(int_type):
-    &quot;&quot;&quot; Count bits set in integer &quot;&quot;&quot;
-    count = 0
-    while(int_type):
-        int_type &amp;= int_type - 1
-        count += 1
-    return(count)
+<span style="color: #408080; font-style: italic"># bitCount() counts the number of bits set (not an optimal function)</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">bitCount</span>(int_type):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot; Count bits set in integer &quot;&quot;&quot;</span>
+    count <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+    <span style="color: #008000; font-weight: bold">while</span>(int_type):
+        int_type <span style="color: #666666">&amp;=</span> int_type <span style="color: #666666">-</span> <span style="color: #666666">1</span>
+        count <span style="color: #666666">+=</span> <span style="color: #666666">1</span>
+    <span style="color: #008000; font-weight: bold">return</span>(count)
 
 
-# testBit() returns a nonzero result, 2**offset, if the bit at 'offset' is one.
+<span style="color: #408080; font-style: italic"># testBit() returns a nonzero result, 2**offset, if the bit at &#39;offset&#39; is one.</span>
 
-def testBit(int_type, offset):
-    mask = 1 &lt;&lt; offset
-    return(int_type &amp; mask) &gt;&gt; offset
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">testBit</span>(int_type, offset):
+    mask <span style="color: #666666">=</span> <span style="color: #666666">1</span> <span style="color: #666666">&lt;&lt;</span> offset
+    <span style="color: #008000; font-weight: bold">return</span>(int_type <span style="color: #666666">&amp;</span> mask) <span style="color: #666666">&gt;&gt;</span> offset
 
-# setBit() returns an integer with the bit at 'offset' set to 1.
+<span style="color: #408080; font-style: italic"># setBit() returns an integer with the bit at &#39;offset&#39; set to 1.</span>
 
-def setBit(int_type, offset):
-    mask = 1 &lt;&lt; offset
-    return(int_type | mask)
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">setBit</span>(int_type, offset):
+    mask <span style="color: #666666">=</span> <span style="color: #666666">1</span> <span style="color: #666666">&lt;&lt;</span> offset
+    <span style="color: #008000; font-weight: bold">return</span>(int_type <span style="color: #666666">|</span> mask)
 
-# clearBit() returns an integer with the bit at 'offset' cleared.
+<span style="color: #408080; font-style: italic"># clearBit() returns an integer with the bit at &#39;offset&#39; cleared.</span>
 
-def clearBit(int_type, offset):
-    mask = ~(1 &lt;&lt; offset)
-    return(int_type &amp; mask)
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">clearBit</span>(int_type, offset):
+    mask <span style="color: #666666">=</span> <span style="color: #666666">~</span>(<span style="color: #666666">1</span> <span style="color: #666666">&lt;&lt;</span> offset)
+    <span style="color: #008000; font-weight: bold">return</span>(int_type <span style="color: #666666">&amp;</span> mask)
 
-# toggleBit() returns an integer with the bit at 'offset' inverted, 0 -&gt; 1 and 1 -&gt; 0.
+<span style="color: #408080; font-style: italic"># toggleBit() returns an integer with the bit at &#39;offset&#39; inverted, 0 -&gt; 1 and 1 -&gt; 0.</span>
 
-def toggleBit(int_type, offset):
-    mask = 1 &lt;&lt; offset
-    return(int_type ^ mask)
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">toggleBit</span>(int_type, offset):
+    mask <span style="color: #666666">=</span> <span style="color: #666666">1</span> <span style="color: #666666">&lt;&lt;</span> offset
+    <span style="color: #008000; font-weight: bold">return</span>(int_type <span style="color: #666666">^</span> mask)
 
-# binary string made from number
+<span style="color: #408080; font-style: italic"># binary string made from number</span>
 
-def bin0(s):
-    return str(s) if s&lt;=1 else bin0(s&gt;&gt;1) + str(s&amp;1)
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">bin0</span>(s):
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">str</span>(s) <span style="color: #008000; font-weight: bold">if</span> s<span style="color: #666666">&lt;=1</span> <span style="color: #008000; font-weight: bold">else</span> bin0(s<span style="color: #666666">&gt;&gt;1</span>) <span style="color: #666666">+</span> <span style="color: #008000">str</span>(s<span style="color: #666666">&amp;1</span>)
 
-def bin(s, L = 0):
-    ss = bin0(s)
-    if L &gt; 0:
-        return '0'*(L-len(ss)) + ss
-    else:
-        return ss
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">bin</span>(s, L <span style="color: #666666">=</span> <span style="color: #666666">0</span>):
+    ss <span style="color: #666666">=</span> bin0(s)
+    <span style="color: #008000; font-weight: bold">if</span> L <span style="color: #666666">&gt;</span> <span style="color: #666666">0</span>:
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #BA2121">&#39;0&#39;</span><span style="color: #666666">*</span>(L<span style="color: #666666">-</span><span style="color: #008000">len</span>(ss)) <span style="color: #666666">+</span> ss
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #008000; font-weight: bold">return</span> ss
     
     
 
-class Slater:
-    &quot;&quot;&quot; Class for Slater determinants &quot;&quot;&quot;
-    def __init__(self):
-        self.word = int(0)
+<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Slater</span>:
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot; Class for Slater determinants &quot;&quot;&quot;</span>
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>):
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>word <span style="color: #666666">=</span> <span style="color: #008000">int</span>(<span style="color: #666666">0</span>)
 
-    def create(self, j):
-        print &quot;c^+_&quot; + str(j) + &quot; |&quot; + bin(self.word) + &quot;&gt;  = &quot;,
-        # Assume bit j is set, then we return zero.
-        s = 0
-        # Check if bit j is set.
-        isset = testBit(self.word, j)
-        if isset == 0:
-            bits = bitCount(self.word &amp; ((1&lt;&lt;j)-1))
-            s = pow(-1, bits)
-            self.word = setBit(self.word, j)
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">create</span>(<span style="color: #008000">self</span>, j):
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;c^+_&quot;</span> <span style="color: #666666">+</span> <span style="color: #008000">str</span>(j) <span style="color: #666666">+</span> <span style="color: #BA2121">&quot; |&quot;</span> <span style="color: #666666">+</span> <span style="color: #008000">bin</span>(<span style="color: #008000">self</span><span style="color: #666666">.</span>word) <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;&gt;  = &quot;</span>,
+        <span style="color: #408080; font-style: italic"># Assume bit j is set, then we return zero.</span>
+        s <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+        <span style="color: #408080; font-style: italic"># Check if bit j is set.</span>
+        isset <span style="color: #666666">=</span> testBit(<span style="color: #008000">self</span><span style="color: #666666">.</span>word, j)
+        <span style="color: #008000; font-weight: bold">if</span> isset <span style="color: #666666">==</span> <span style="color: #666666">0</span>:
+            bits <span style="color: #666666">=</span> bitCount(<span style="color: #008000">self</span><span style="color: #666666">.</span>word <span style="color: #666666">&amp;</span> ((<span style="color: #666666">1&lt;&lt;</span>j)<span style="color: #666666">-1</span>))
+            s <span style="color: #666666">=</span> <span style="color: #008000">pow</span>(<span style="color: #666666">-1</span>, bits)
+            <span style="color: #008000">self</span><span style="color: #666666">.</span>word <span style="color: #666666">=</span> setBit(<span style="color: #008000">self</span><span style="color: #666666">.</span>word, j)
 
-        print str(s) + &quot; x |&quot; + bin(self.word) + &quot;&gt;&quot;
-        return s
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #008000">str</span>(s) <span style="color: #666666">+</span> <span style="color: #BA2121">&quot; x |&quot;</span> <span style="color: #666666">+</span> <span style="color: #008000">bin</span>(<span style="color: #008000">self</span><span style="color: #666666">.</span>word) <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;&gt;&quot;</span>
+        <span style="color: #008000; font-weight: bold">return</span> s
         
-    def annihilate(self, j):
-        print &quot;c_&quot; + str(j) + &quot; |&quot; + bin(self.word) + &quot;&gt;  = &quot;,
-        # Assume bit j is not set, then we return zero.
-        s = 0
-        # Check if bit j is set.
-        isset = testBit(self.word, j)
-        if isset == 1:
-            bits = bitCount(self.word &amp; ((1&lt;&lt;j)-1))
-            s = pow(-1, bits)
-            self.word = clearBit(self.word, j)
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">annihilate</span>(<span style="color: #008000">self</span>, j):
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;c_&quot;</span> <span style="color: #666666">+</span> <span style="color: #008000">str</span>(j) <span style="color: #666666">+</span> <span style="color: #BA2121">&quot; |&quot;</span> <span style="color: #666666">+</span> <span style="color: #008000">bin</span>(<span style="color: #008000">self</span><span style="color: #666666">.</span>word) <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;&gt;  = &quot;</span>,
+        <span style="color: #408080; font-style: italic"># Assume bit j is not set, then we return zero.</span>
+        s <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+        <span style="color: #408080; font-style: italic"># Check if bit j is set.</span>
+        isset <span style="color: #666666">=</span> testBit(<span style="color: #008000">self</span><span style="color: #666666">.</span>word, j)
+        <span style="color: #008000; font-weight: bold">if</span> isset <span style="color: #666666">==</span> <span style="color: #666666">1</span>:
+            bits <span style="color: #666666">=</span> bitCount(<span style="color: #008000">self</span><span style="color: #666666">.</span>word <span style="color: #666666">&amp;</span> ((<span style="color: #666666">1&lt;&lt;</span>j)<span style="color: #666666">-1</span>))
+            s <span style="color: #666666">=</span> <span style="color: #008000">pow</span>(<span style="color: #666666">-1</span>, bits)
+            <span style="color: #008000">self</span><span style="color: #666666">.</span>word <span style="color: #666666">=</span> clearBit(<span style="color: #008000">self</span><span style="color: #666666">.</span>word, j)
 
-        print str(s) + &quot; x |&quot; + bin(self.word) + &quot;&gt;&quot;
-        return s
-
-
-
-# Do some testing:
-
-phi = Slater()
-phi.create(0)
-phi.create(1)
-phi.create(2)
-phi.create(3)
-
-print
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #008000">str</span>(s) <span style="color: #666666">+</span> <span style="color: #BA2121">&quot; x |&quot;</span> <span style="color: #666666">+</span> <span style="color: #008000">bin</span>(<span style="color: #008000">self</span><span style="color: #666666">.</span>word) <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;&gt;&quot;</span>
+        <span style="color: #008000; font-weight: bold">return</span> s
 
 
-s = phi.annihilate(2)
-s = phi.create(7)
-s = phi.annihilate(0)
-s = phi.create(200)
 
-</code></pre>
-<!-- end verbatim block -->
+<span style="color: #408080; font-style: italic"># Do some testing:</span>
+
+phi <span style="color: #666666">=</span> Slater()
+phi<span style="color: #666666">.</span>create(<span style="color: #666666">0</span>)
+phi<span style="color: #666666">.</span>create(<span style="color: #666666">1</span>)
+phi<span style="color: #666666">.</span>create(<span style="color: #666666">2</span>)
+phi<span style="color: #666666">.</span>create(<span style="color: #666666">3</span>)
+
+<span style="color: #008000; font-weight: bold">print</span>
+
+
+s <span style="color: #666666">=</span> phi<span style="color: #666666">.</span>annihilate(<span style="color: #666666">2</span>)
+s <span style="color: #666666">=</span> phi<span style="color: #666666">.</span>create(<span style="color: #666666">7</span>)
+s <span style="color: #666666">=</span> phi<span style="color: #666666">.</span>annihilate(<span style="color: #666666">0</span>)
+s <span style="color: #666666">=</span> phi<span style="color: #666666">.</span>create(<span style="color: #666666">200</span>)
+</pre></div>
+
 </div>
-    
+
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec88">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2986,7 +2999,7 @@ representation.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec89">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -2996,47 +3009,51 @@ The last exercise can be solved using the symbolic Python package called <em>Sym
 package for general purpose symbolic algebra. There is a physics module with several interesting submodules.
 Among these, the submodule called <em>secondquant</em>, contains several  functionalities that allow us to test
 our algebraic manipulations using Wick's theorem and operators for second quantization.
-<!-- begin verbatim block  pycod-->
-<pre><code>from sympy import *
-from sympy.physics.secondquant import *
+<p>
 
-i, j = symbols('i,j', below_fermi=True)
-a, b = symbols('a,b', above_fermi=True)
-p, q = symbols('p,q')
-print simplify(wicks(Fd(i)*F(a)*Fd(p)*F(q)*Fd(b)*F(j), keep_only_fully_contracted=True))
-</code></pre>
-<!-- end verbatim block -->
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> <span style="color: #666666">*</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy.physics.secondquant</span> <span style="color: #008000; font-weight: bold">import</span> <span style="color: #666666">*</span>
+
+i, j <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;i,j&#39;</span>, below_fermi<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+a, b <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;a,b&#39;</span>, above_fermi<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+p, q <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;p,q&#39;</span>)
+<span style="color: #008000; font-weight: bold">print</span> simplify(wicks(Fd(i)<span style="color: #666666">*</span>F(a)<span style="color: #666666">*</span>Fd(p)<span style="color: #666666">*</span>F(q)<span style="color: #666666">*</span>Fd(b)<span style="color: #666666">*</span>F(j), keep_only_fully_contracted<span style="color: #666666">=</span><span style="color: #008000">True</span>))
+</pre></div>
+<p>
 The code defines single-particle states above and below the Fermi level, in addition to the genereal symbols
 \( pq \) which can refer to any type of state below or above the Fermi level. Wick's theorem is implemented between 
-the creation and annihilation operators <em>Fd</em> and <em>F</em>, respectively. Using the simplify option, one can lump together several Kronecker-\( \delta \) functions. 
+the creation and annihilation operators <em>Fd</em> and <em>F</em>, respectively. Using the simplify option, one can lump together several Kronecker-\( \delta \) functions.
 
 
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec90">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 We can expand the above Python code by defining one-body and two-body operators using  the following SymPy code 
-<!-- begin verbatim block  pycod-->
-<pre><code># This code sets up a two-body Hamiltonian for fermions
-from sympy import symbols, latex, WildFunction, collect, Rational
-from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO
+<p>
 
-# setup hamiltonian
-p,q,r,s = symbols('p q r s',dummy=True)
-f = AntiSymmetricTensor('f',(p,),(q,))
-pr = NO((Fd(p)*F(q)))
-v = AntiSymmetricTensor('v',(p,q),(r,s))
-pqsr = NO(Fd(p)*Fd(q)*F(s)*F(r))
-Hamiltonian=f*pr + Rational(1)/Rational(4)*v*pqsr
-print &quot;Hamiltonian defined as:&quot;, latex(Hamiltonian)
-</code></pre>
-<!-- end verbatim block -->
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #408080; font-style: italic"># This code sets up a two-body Hamiltonian for fermions</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> symbols, latex, WildFunction, collect, Rational
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy.physics.secondquant</span> <span style="color: #008000; font-weight: bold">import</span> F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO
+
+<span style="color: #408080; font-style: italic"># setup hamiltonian</span>
+p,q,r,s <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;p q r s&#39;</span>,dummy<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+f <span style="color: #666666">=</span> AntiSymmetricTensor(<span style="color: #BA2121">&#39;f&#39;</span>,(p,),(q,))
+pr <span style="color: #666666">=</span> NO((Fd(p)<span style="color: #666666">*</span>F(q)))
+v <span style="color: #666666">=</span> AntiSymmetricTensor(<span style="color: #BA2121">&#39;v&#39;</span>,(p,q),(r,s))
+pqsr <span style="color: #666666">=</span> NO(Fd(p)<span style="color: #666666">*</span>Fd(q)<span style="color: #666666">*</span>F(s)<span style="color: #666666">*</span>F(r))
+Hamiltonian<span style="color: #666666">=</span>f<span style="color: #666666">*</span>pr <span style="color: #666666">+</span> Rational(<span style="color: #666666">1</span>)<span style="color: #666666">/</span>Rational(<span style="color: #666666">4</span>)<span style="color: #666666">*</span>v<span style="color: #666666">*</span>pqsr
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Hamiltonian defined as:&quot;</span>, latex(Hamiltonian)
+</pre></div>
+<p>
 Here we have used the <em>AntiSymmetricTensor</em> functionality, together with normal-ordering defined by the <em>NO</em> function. 
 Using the <em>latex</em> option, this program produces the following output
 $$
@@ -3046,44 +3063,45 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec91">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 We can now use this code to compute the matrix elements between two two-body Slater determinants using Wick's theorem.
-<!-- begin verbatim block  pycod-->
-<pre><code>from sympy import symbols, latex, WildFunction, collect, Rational, simplify
-from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
-# setup hamiltonian
-p,q,r,s = symbols('p q r s',dummy=True)
-f = AntiSymmetricTensor('f',(p,),(q,))
-pr = NO((Fd(p)*F(q)))
-v = AntiSymmetricTensor('v',(p,q),(r,s))
-pqsr = NO(Fd(p)*Fd(q)*F(s)*F(r))
-Hamiltonian=f*pr + Rational(1)/Rational(4)*v*pqsr
-c,d = symbols('c, d',above_fermi=True)
-a,b = symbols('a, b',above_fermi=True)
+<p>
 
-expression = wicks(F(b)*F(a)*Hamiltonian*Fd(c)*Fd(d),keep_only_fully_contracted=True, simplify_kronecker_deltas=True)
-expression = evaluate_deltas(expression)
-expression = simplify(expression)
-print &quot;Hamiltonian defined as:&quot;, latex(expression)
-</code></pre>
-<!-- end verbatim block -->
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> symbols, latex, WildFunction, collect, Rational, simplify
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy.physics.secondquant</span> <span style="color: #008000; font-weight: bold">import</span> F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
+<span style="color: #408080; font-style: italic"># setup hamiltonian</span>
+p,q,r,s <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;p q r s&#39;</span>,dummy<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+f <span style="color: #666666">=</span> AntiSymmetricTensor(<span style="color: #BA2121">&#39;f&#39;</span>,(p,),(q,))
+pr <span style="color: #666666">=</span> NO((Fd(p)<span style="color: #666666">*</span>F(q)))
+v <span style="color: #666666">=</span> AntiSymmetricTensor(<span style="color: #BA2121">&#39;v&#39;</span>,(p,q),(r,s))
+pqsr <span style="color: #666666">=</span> NO(Fd(p)<span style="color: #666666">*</span>Fd(q)<span style="color: #666666">*</span>F(s)<span style="color: #666666">*</span>F(r))
+Hamiltonian<span style="color: #666666">=</span>f<span style="color: #666666">*</span>pr <span style="color: #666666">+</span> Rational(<span style="color: #666666">1</span>)<span style="color: #666666">/</span>Rational(<span style="color: #666666">4</span>)<span style="color: #666666">*</span>v<span style="color: #666666">*</span>pqsr
+c,d <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;c, d&#39;</span>,above_fermi<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+a,b <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;a, b&#39;</span>,above_fermi<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+
+expression <span style="color: #666666">=</span> wicks(F(b)<span style="color: #666666">*</span>F(a)<span style="color: #666666">*</span>Hamiltonian<span style="color: #666666">*</span>Fd(c)<span style="color: #666666">*</span>Fd(d),keep_only_fully_contracted<span style="color: #666666">=</span><span style="color: #008000">True</span>, simplify_kronecker_deltas<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+expression <span style="color: #666666">=</span> evaluate_deltas(expression)
+expression <span style="color: #666666">=</span> simplify(expression)
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Hamiltonian defined as:&quot;</span>, latex(expression)
+</pre></div>
+<p>
 The result is as expected,
 $$
 \delta_{a c} f^{b}_{d} - \delta_{a d} f^{b}_{c} - \delta_{b c} f^{a}_{d} + \delta_{b d} f^{a}_{c} + v^{ab}_{cd}.
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec92">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3091,27 +3109,29 @@ $$
 <p>
 We can continue along these lines and define a normal-ordered Hamiltonian with respect to a given reference state.
 In our first step we just define the Hamiltonian
-<!-- begin verbatim block  pycod-->
-<pre><code>from sympy import symbols, latex, WildFunction, collect, Rational, simplify
-from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
-# setup hamiltonian
-p,q,r,s = symbols('p q r s',dummy=True)
-f = AntiSymmetricTensor('f',(p,),(q,))
-pr = Fd(p)*F(q)
-v = AntiSymmetricTensor('v',(p,q),(r,s))
-pqsr = Fd(p)*Fd(q)*F(s)*F(r)
-#define the Hamiltonian
-Hamiltonian = f*pr + Rational(1)/Rational(4)*v*pqsr
-#define indices for states above and below the Fermi level
-index_rule = {
-     'below':  'kl',
-     'above':  'cd',
-     'general': 'pqrs'
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> symbols, latex, WildFunction, collect, Rational, simplify
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy.physics.secondquant</span> <span style="color: #008000; font-weight: bold">import</span> F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
+<span style="color: #408080; font-style: italic"># setup hamiltonian</span>
+p,q,r,s <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;p q r s&#39;</span>,dummy<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+f <span style="color: #666666">=</span> AntiSymmetricTensor(<span style="color: #BA2121">&#39;f&#39;</span>,(p,),(q,))
+pr <span style="color: #666666">=</span> Fd(p)<span style="color: #666666">*</span>F(q)
+v <span style="color: #666666">=</span> AntiSymmetricTensor(<span style="color: #BA2121">&#39;v&#39;</span>,(p,q),(r,s))
+pqsr <span style="color: #666666">=</span> Fd(p)<span style="color: #666666">*</span>Fd(q)<span style="color: #666666">*</span>F(s)<span style="color: #666666">*</span>F(r)
+<span style="color: #408080; font-style: italic">#define the Hamiltonian</span>
+Hamiltonian <span style="color: #666666">=</span> f<span style="color: #666666">*</span>pr <span style="color: #666666">+</span> Rational(<span style="color: #666666">1</span>)<span style="color: #666666">/</span>Rational(<span style="color: #666666">4</span>)<span style="color: #666666">*</span>v<span style="color: #666666">*</span>pqsr
+<span style="color: #408080; font-style: italic">#define indices for states above and below the Fermi level</span>
+index_rule <span style="color: #666666">=</span> {
+     <span style="color: #BA2121">&#39;below&#39;</span>:  <span style="color: #BA2121">&#39;kl&#39;</span>,
+     <span style="color: #BA2121">&#39;above&#39;</span>:  <span style="color: #BA2121">&#39;cd&#39;</span>,
+     <span style="color: #BA2121">&#39;general&#39;</span>: <span style="color: #BA2121">&#39;pqrs&#39;</span>
      }
-Hnormal = substitute_dummies(Hamiltonian,new_indices=True, pretty_indices=index_rule)
-print &quot;Hamiltonian defined as:&quot;, latex(Hnormal)
-</code></pre>
-<!-- end verbatim block -->
+Hnormal <span style="color: #666666">=</span> substitute_dummies(Hamiltonian,new_indices<span style="color: #666666">=</span><span style="color: #008000">True</span>, pretty_indices<span style="color: #666666">=</span>index_rule)
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Hamiltonian defined as:&quot;</span>, latex(Hnormal)
+</pre></div>
+<p>
 which results in
 $$
 f^{q}_{p} a^\dagger_{q} a_{p} + \frac{1}{4} v^{sr}_{qp} a^\dagger_{s} a^\dagger_{r} a_{p} a_{q}
@@ -3120,39 +3140,41 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec93">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 In our next step we define the reference energy \( E_0 \) and redefine the Hamiltonian by subtracting the reference energy and collecting the coefficients for all normal-ordered products (given by the <em>NO</em> function).
-<!-- begin verbatim block  pycod-->
-<pre><code>from sympy import symbols, latex, WildFunction, collect, Rational, simplify
-from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
-# setup hamiltonian
-p,q,r,s = symbols('p q r s',dummy=True)
-f = AntiSymmetricTensor('f',(p,),(q,))
-pr = Fd(p)*F(q)
-v = AntiSymmetricTensor('v',(p,q),(r,s))
-pqsr = Fd(p)*Fd(q)*F(s)*F(r)
-#define the Hamiltonian
-Hamiltonian=f*pr + Rational(1)/Rational(4)*v*pqsr
-#define indices for states above and below the Fermi level
-index_rule = {
-     'below':  'kl',
-     'above':  'cd',
-     'general': 'pqrs'
+<p>
+
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> symbols, latex, WildFunction, collect, Rational, simplify
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy.physics.secondquant</span> <span style="color: #008000; font-weight: bold">import</span> F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
+<span style="color: #408080; font-style: italic"># setup hamiltonian</span>
+p,q,r,s <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;p q r s&#39;</span>,dummy<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+f <span style="color: #666666">=</span> AntiSymmetricTensor(<span style="color: #BA2121">&#39;f&#39;</span>,(p,),(q,))
+pr <span style="color: #666666">=</span> Fd(p)<span style="color: #666666">*</span>F(q)
+v <span style="color: #666666">=</span> AntiSymmetricTensor(<span style="color: #BA2121">&#39;v&#39;</span>,(p,q),(r,s))
+pqsr <span style="color: #666666">=</span> Fd(p)<span style="color: #666666">*</span>Fd(q)<span style="color: #666666">*</span>F(s)<span style="color: #666666">*</span>F(r)
+<span style="color: #408080; font-style: italic">#define the Hamiltonian</span>
+Hamiltonian<span style="color: #666666">=</span>f<span style="color: #666666">*</span>pr <span style="color: #666666">+</span> Rational(<span style="color: #666666">1</span>)<span style="color: #666666">/</span>Rational(<span style="color: #666666">4</span>)<span style="color: #666666">*</span>v<span style="color: #666666">*</span>pqsr
+<span style="color: #408080; font-style: italic">#define indices for states above and below the Fermi level</span>
+index_rule <span style="color: #666666">=</span> {
+     <span style="color: #BA2121">&#39;below&#39;</span>:  <span style="color: #BA2121">&#39;kl&#39;</span>,
+     <span style="color: #BA2121">&#39;above&#39;</span>:  <span style="color: #BA2121">&#39;cd&#39;</span>,
+     <span style="color: #BA2121">&#39;general&#39;</span>: <span style="color: #BA2121">&#39;pqrs&#39;</span>
      }
-Hnormal = substitute_dummies(Hamiltonian,new_indices=True, pretty_indices=index_rule)
-E0 = wicks(Hnormal,keep_only_fully_contracted=True)
-Hnormal = Hnormal-E0
-w = WildFunction('w')
-Hnormal = collect(Hnormal, NO(w))
-Hnormal = evaluate_deltas(Hnormal)
-print latex(Hnormal)
-</code></pre>
-<!-- end verbatim block -->
+Hnormal <span style="color: #666666">=</span> substitute_dummies(Hamiltonian,new_indices<span style="color: #666666">=</span><span style="color: #008000">True</span>, pretty_indices<span style="color: #666666">=</span>index_rule)
+E0 <span style="color: #666666">=</span> wicks(Hnormal,keep_only_fully_contracted<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+Hnormal <span style="color: #666666">=</span> Hnormal<span style="color: #666666">-</span>E0
+w <span style="color: #666666">=</span> WildFunction(<span style="color: #BA2121">&#39;w&#39;</span>)
+Hnormal <span style="color: #666666">=</span> collect(Hnormal, NO(w))
+Hnormal <span style="color: #666666">=</span> evaluate_deltas(Hnormal)
+<span style="color: #008000; font-weight: bold">print</span> latex(Hnormal)
+</pre></div>
+<p>
 which gives us 
 $$
 - f^{i}_{i} + f^{q}_{p} a^\dagger_{q} a_{p} - \frac{1}{4} v^{ii}_{ii} - \frac{1}{4} v^{ii}_{ii} + \frac{1}{4} v^{sr}_{qp} a^\dagger_{r} a^\dagger_{s} a_{q} a_{p},
@@ -3163,42 +3185,43 @@ again as expected, with the reference energy to be subtracted.
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec94">Exercises: Using sympy to compute matrix elements  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 We can now go back to exercise 7 and define the Hamiltonian and the second-quantized representation of a  three-body Slater determinant. 
-<!-- begin verbatim block  pycod-->
-<pre><code>from sympy import symbols, latex, WildFunction, collect, Rational, simplify
-from sympy.physics.secondquant import F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
-# setup hamiltonian
-p,q,r,s = symbols('p q r s',dummy=True)
+<p>
 
-v = AntiSymmetricTensor('v',(p,q),(r,s))
-pqsr = NO(Fd(p)*Fd(q)*F(s)*F(r))
-Hamiltonian=Rational(1)/Rational(4)*v*pqsr
-a,b,c,d,e,f = symbols('a,b, c, d, e, f',above_fermi=True)
+<!-- code=python (!bc pycod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy</span> <span style="color: #008000; font-weight: bold">import</span> symbols, latex, WildFunction, collect, Rational, simplify
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sympy.physics.secondquant</span> <span style="color: #008000; font-weight: bold">import</span> F, Fd, wicks, AntiSymmetricTensor, substitute_dummies, NO, evaluate_deltas
+<span style="color: #408080; font-style: italic"># setup hamiltonian</span>
+p,q,r,s <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;p q r s&#39;</span>,dummy<span style="color: #666666">=</span><span style="color: #008000">True</span>)
 
-expression = wicks(F(c)*F(b)*F(a)*Hamiltonian*Fd(d)*Fd(e)*Fd(f),keep_only_fully_contracted=True, simplify_kronecker_deltas=True)
-expression = evaluate_deltas(expression)
-expression = simplify(expression)
-print latex(expression)
-</code></pre>
-<!-- end verbatim block -->
+v <span style="color: #666666">=</span> AntiSymmetricTensor(<span style="color: #BA2121">&#39;v&#39;</span>,(p,q),(r,s))
+pqsr <span style="color: #666666">=</span> NO(Fd(p)<span style="color: #666666">*</span>Fd(q)<span style="color: #666666">*</span>F(s)<span style="color: #666666">*</span>F(r))
+Hamiltonian<span style="color: #666666">=</span>Rational(<span style="color: #666666">1</span>)<span style="color: #666666">/</span>Rational(<span style="color: #666666">4</span>)<span style="color: #666666">*</span>v<span style="color: #666666">*</span>pqsr
+a,b,c,d,e,f <span style="color: #666666">=</span> symbols(<span style="color: #BA2121">&#39;a,b, c, d, e, f&#39;</span>,above_fermi<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+
+expression <span style="color: #666666">=</span> wicks(F(c)<span style="color: #666666">*</span>F(b)<span style="color: #666666">*</span>F(a)<span style="color: #666666">*</span>Hamiltonian<span style="color: #666666">*</span>Fd(d)<span style="color: #666666">*</span>Fd(e)<span style="color: #666666">*</span>Fd(f),keep_only_fully_contracted<span style="color: #666666">=</span><span style="color: #008000">True</span>, simplify_kronecker_deltas<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+expression <span style="color: #666666">=</span> evaluate_deltas(expression)
+expression <span style="color: #666666">=</span> simplify(expression)
+<span style="color: #008000; font-weight: bold">print</span> latex(expression)
+</pre></div>
+<p>
 resulting in nine terms (as expected), 
 $$
  - \delta_{a d} v^{cb}_{ef} - \delta_{a e} v^{cb}_{fd} + \delta_{a f} v^{cb}_{ed} - \delta_{b d} v^{ac}_{ef} - \delta_{b e} v^{ac}_{fd} + \delta_{b f} v^{ac}_{ed} + \delta_{c d} v^{ab}_{ef} + \delta_{c e} v^{ab}_{fd} - \delta_{c f} v^{ab}_{ed}
 $$
 
 
-
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec95">Exercises: Derivation of Hartree-Fock equations  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -3216,7 +3239,7 @@ $$
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec96">Exercises: Derivation of Hartree-Fock equations  </h2>
 <div class="alert alert-block alert-block alert-text-normal">

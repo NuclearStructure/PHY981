@@ -1,0 +1,3507 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Nuclear Shell Model">
+
+<title>Nuclear Shell Model</title>
+
+
+<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
+<style type="text/css">
+h1 {color: #b58900;}  /* yellow */
+/* h1 {color: #cb4b16;}  orange */
+/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
+code { padding: 0px; background-color: inherit; }
+pre {
+  border: 0pt solid #93a1a1;
+  box-shadow: none;
+}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #93a1a1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #eee8d5;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [('Nuclear shell model', 2, None, '___sec0'),
+              ('Slater determinants as basis states, Repetition',
+               2,
+               None,
+               '___sec1'),
+              ('Slater determinants as basis states, repetition',
+               2,
+               None,
+               '___sec2'),
+              ('Slater determinants as basis states', 2, None, '___sec3'),
+              ('Slater determinants as basis states', 2, None, '___sec4'),
+              ('Quick repetition of the occupation representation',
+               2,
+               None,
+               '___sec5'),
+              ('Quick repetition  of the occupation representation',
+               2,
+               None,
+               '___sec6'),
+              ('Quick repetition  of the occupation representation',
+               2,
+               None,
+               '___sec7'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec8'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec9'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec10'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec11'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec12'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec13'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec14'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec15'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec16'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec17'),
+              ('Building a many-body basis', 2, None, '___sec18'),
+              ('Building a many-body basis', 2, None, '___sec19'),
+              ('Building a many-body basis', 2, None, '___sec20'),
+              ('Building a many-body basis', 2, None, '___sec21'),
+              ('Building a many-body basis', 2, None, '___sec22'),
+              ('Building a many-body basis', 2, None, '___sec23'),
+              ('Building a many-body basis', 2, None, '___sec24'),
+              ('Building a many-body basis', 2, None, '___sec25'),
+              ('Building a many-body basis', 2, None, '___sec26'),
+              ('Building a many-body basis', 2, None, '___sec27'),
+              ('Building a many-body basis', 2, None, '___sec28'),
+              ('Project', 2, None, '___sec29'),
+              ('Project, step 1', 2, None, '___sec30'),
+              ('Project, step 1', 2, None, '___sec31'),
+              ('Project, step 1', 2, None, '___sec32'),
+              ('Project, step 1', 2, None, '___sec33'),
+              ('Project, step 1', 2, None, '___sec34'),
+              ('Project , step 1', 2, None, '___sec35'),
+              ('Project , step 1', 2, None, '___sec36'),
+              ('Project , step 1', 2, None, '___sec37'),
+              ('Project , step 1', 2, None, '___sec38'),
+              ('Project , step 1', 2, None, '___sec39'),
+              ('Project , step 1', 2, None, '___sec40'),
+              ('Project , step 1', 2, None, '___sec41'),
+              ('Project , step 1', 2, None, '___sec42'),
+              ('Project , step 1', 2, None, '___sec43'),
+              ('Project , step 1', 2, None, '___sec44'),
+              ('Project , step 1', 2, None, '___sec45'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec46'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec47'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec48'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec49'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec50'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec51'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec52'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec53'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec54'),
+              ('Angular momentum algebra', 2, None, '___sec55'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec56'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec57'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec58'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec59'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec60'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec61'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec62'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec63'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec64'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec65'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec66'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec67'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec68'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec69'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec70'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+               2,
+               None,
+               '___sec71'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+               2,
+               None,
+               '___sec72'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+               2,
+               None,
+               '___sec73'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+               2,
+               None,
+               '___sec74'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+               2,
+               None,
+               '___sec75'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+               2,
+               None,
+               '___sec76'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+               2,
+               None,
+               '___sec77'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+               2,
+               None,
+               '___sec78'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+               2,
+               None,
+               '___sec79'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+               2,
+               None,
+               '___sec80'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec81'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec82'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec83'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec84'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec85'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec86'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec87'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec88'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec89'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec90'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec91'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec92'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec93'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec94'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec95'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec96'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec97'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec98'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec99'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec100'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec101'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec102'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec103'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec104'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec105'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec106'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec107'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec108'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec109'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec110'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec111'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec112')]}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Slides for PHY981 -->
+
+
+<center><h1>Nuclear Shell Model</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway -->
+
+<center>
+<b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA &amp; Department of Physics, University of Oslo, Oslo, Norway</b> 
+</center>
+
+<p>
+<!-- institution(s) -->
+
+<br>
+<p>
+<center><h4>Spring 2016</h4></center> <!-- date -->
+<br>
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec0">Nuclear shell model </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+The topics covered in this and next week's lectures can be found in Alex Brown's lecture notes, chapters 5, 18, 21-22.
+See also Suhonen's chapter's 2 and 5.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec1">Slater determinants as basis states, Repetition </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The simplest possible choice for many-body wavefunctions are <b>product</b> wavefunctions.
+That is
+$$ 
+\Psi(x_1, x_2, x_3, \ldots, x_A) \approx \phi_1(x_1) \phi_2(x_2) \phi_3(x_3) \ldots
+$$
+
+because we are really only good  at thinking about one particle at a time. Such 
+product wavefunctions, without correlations, are easy to 
+work with; for example, if the single-particle states \( \phi_i(x) \) are orthonormal, then 
+the product wavefunctions are easy to orthonormalize.
+
+<p>
+Similarly, computing matrix elements of operators are relatively easy, because the 
+integrals factorize.
+
+<p>
+The price we pay is the lack of correlations, which we must build up by using many, many product 
+wavefunctions. (Thus we have a trade-off: compact representation of correlations but 
+difficult integrals versus easy integrals but many states required.)
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec2">Slater determinants as basis states, repetition </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Because we have fermions, we are required to have antisymmetric wavefunctions, e.g.
+$$
+\Psi(x_1, x_2, x_3, \ldots, x_A) = - \Psi(x_2, x_1, x_3, \ldots, x_A)
+$$
+
+etc. This is accomplished formally by using the determinantal formalism
+$$
+\Psi(x_1, x_2, \ldots, x_A) 
+= \frac{1}{\sqrt{A!}} 
+\det \left | 
+\begin{array}{cccc}
+\phi_1(x_1) & \phi_1(x_2) & \ldots & \phi_1(x_A) \\
+\phi_2(x_1) & \phi_2(x_2) & \ldots & \phi_2(x_A) \\
+ \vdots & & &  \\
+\phi_A(x_1) & \phi_A(x_2) & \ldots & \phi_A(x_A) 
+\end{array}
+\right |
+$$
+
+Product wavefunction + antisymmetry = Slater determinant.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec3">Slater determinants as basis states </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+$$
+\Psi(x_1, x_2, \ldots, x_A) 
+= \frac{1}{\sqrt{N!}} 
+\det \left | 
+\begin{array}{cccc}
+\phi_1(x_1) & \phi_1(x_2) & \ldots & \phi_1(x_A) \\
+\phi_2(x_1) & \phi_2(x_2) & \ldots & \phi_2(x_A) \\
+ \vdots & & &  \\
+\phi_A(x_1) & \phi_A(x_2) & \ldots & \phi_A(x_A) 
+\end{array}
+\right |
+$$
+
+Properties of the determinant (interchange of any two rows or 
+any two columns yields a change in sign; thus no two rows and no 
+two columns can be the same) lead to the Pauli principle:
+
+<ul>
+<li> No two particles can be at the same place (two columns the same); and</li>
+<li> No two particles can be in the same state (two rows the same).</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec4">Slater determinants as basis states </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+As a practical matter, however, Slater determinants beyond \( N=4 \) quickly become 
+unwieldy. Thus we turn to the <b>occupation representation</b> or <b>second quantization</b> to simplify calculations.
+
+<p>
+The occupation representation, using fermion <b>creation</b> and <b>annihilation</b> 
+operators, is compact and efficient. It is also abstract and, at first encounter, not easy to 
+internalize. It is inspired by other operator formalism, such as the ladder operators for 
+the harmonic oscillator or for angular momentum, but unlike those cases, the operators <b>do not have coordinate space representations</b>.
+
+<p>
+Instead, one can think of fermion creation/annihilation operators as a game of symbols that 
+compactly reproduces what one would do, albeit clumsily, with full coordinate-space Slater 
+determinants.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec5">Quick repetition of the occupation representation </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We start with a set of orthonormal single-particle states \( \{ \phi_i(x) \} \). 
+(Note: this requirement, and others, can be relaxed, but leads to a 
+more involved formalism.) <b>Any</b> orthonormal set will do.
+
+<p>
+To each single-particle state \( \phi_i(x) \) we associate a creation operator 
+\( \hat{a}^\dagger_i \) and an annihilation operator \( \hat{a}_i \).
+
+<p>
+When acting on the vacuum state \( | 0 \rangle \), the creation operator \( \hat{a}^\dagger_i \) causes 
+a particle to occupy the single-particle state \( \phi_i(x) \):
+$$
+\phi_i(x) \rightarrow \hat{a}^\dagger_i |0 \rangle
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec6">Quick repetition  of the occupation representation </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+But with multiple creation operators we can occupy multiple states:
+$$
+\phi_i(x) \phi_j(x^\prime) \phi_k(x^{\prime \prime}) 
+\rightarrow \hat{a}^\dagger_i \hat{a}^\dagger_j \hat{a}^\dagger_k |0 \rangle.
+$$
+
+<p>
+Now we impose antisymmetry, by having the fermion operators satisfy  <b>anticommutation relations</b>:
+$$
+\hat{a}^\dagger_i \hat{a}^\dagger_j + \hat{a}^\dagger_j \hat{a}^\dagger_i
+= [ \hat{a}^\dagger_i ,\hat{a}^\dagger_j ]_+ 
+= \{ \hat{a}^\dagger_i ,\hat{a}^\dagger_j \} = 0
+$$
+
+so that 
+$$
+\hat{a}^\dagger_i \hat{a}^\dagger_j = - \hat{a}^\dagger_j \hat{a}^\dagger_i
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec7">Quick repetition  of the occupation representation </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Because of this property, automatically \( \hat{a}^\dagger_i \hat{a}^\dagger_i = 0 \), 
+enforcing the Pauli exclusion principle.  Thus when writing a Slater determinant 
+using creation operators, 
+$$
+\hat{a}^\dagger_i \hat{a}^\dagger_j \hat{a}^\dagger_k \ldots |0 \rangle
+$$
+
+each index \( i,j,k, \ldots \) must be unique.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec8">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We have defined the ansatz for the ground state as 
+$$
+|\Phi_0\rangle = \left(\prod_{i\le F}\hat{a}_{i}^{\dagger}\right)|0\rangle,
+$$
+
+where the index \( i \) defines different single-particle states up to the Fermi level. We have assumed that we have \( N \) fermions. 
+A given one-particle-one-hole (\( 1p1h \)) state can be written as
+$$
+|\Phi_i^a\rangle = \hat{a}_{a}^{\dagger}\hat{a}_i|\Phi_0\rangle,
+$$
+
+while a \( 2p2h \) state can be written as
+$$
+|\Phi_{ij}^{ab}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i|\Phi_0\rangle,
+$$
+
+and a general \( NpNh \) state as 
+$$
+|\Phi_{ijk\dots}^{abc\dots}\rangle = \hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_{c}^{\dagger}\dots\hat{a}_k\hat{a}_j\hat{a}_i|\Phi_0\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec9">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can then expand our exact state function for the ground state 
+as
+$$
+|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots
+=(C_0+\hat{C})|\Phi_0\rangle,
+$$
+
+where we have introduced the so-called correlation operator 
+$$
+\hat{C}=\sum_{ai}C_i^a\hat{a}_{a}^{\dagger}\hat{a}_i  +\sum_{abij}C_{ij}^{ab}\hat{a}_{a}^{\dagger}\hat{a}_{b}^{\dagger}\hat{a}_j\hat{a}_i+\dots
+$$
+
+Since the normalization of \( \Psi_0 \) is at our disposal and since \( C_0 \) is by hypothesis non-zero, we may arbitrarily set \( C_0=1 \) with 
+corresponding proportional changes in all other coefficients. Using this so-called intermediate normalization we have
+$$
+\langle \Psi_0 | \Phi_0 \rangle = \langle \Phi_0 | \Phi_0 \rangle = 1, 
+$$
+
+resulting in 
+$$
+|\Psi_0\rangle=(1+\hat{C})|\Phi_0\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec10">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We rewrite 
+$$
+|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots,
+$$
+
+in a more compact form as 
+$$
+|\Psi_0\rangle=\sum_{PH}C_H^P\Phi_H^P=\left(\sum_{PH}C_H^P\hat{A}_H^P\right)|\Phi_0\rangle,
+$$
+
+where \( H \) stands for \( 0,1,\dots,n \) hole states and \( P \) for \( 0,1,\dots,n \) particle states. 
+Our requirement of unit normalization gives
+$$
+\langle \Psi_0 | \Phi_0 \rangle = \sum_{PH}|C_H^P|^2= 1,
+$$
+
+and the energy can be written as 
+$$
+E= \langle \Psi_0 | \hat{H} |\Phi_0 \rangle= \sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec11">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Normally 
+$$
+E= \langle \Psi_0 | \hat{H} |\Phi_0 \rangle= \sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'},
+$$
+
+is solved by diagonalization setting up the Hamiltonian matrix defined by the basis of all possible Slater determinants. A diagonalization
+<!-- to do: add text about Rayleigh-Ritz -->
+is equivalent to finding the variational minimum   of 
+$$
+ \langle \Psi_0 | \hat{H} |\Phi_0 \rangle-\lambda \langle \Psi_0 |\Phi_0 \rangle,
+$$
+
+where \( \lambda \) is a variational multiplier to be identified with the energy of the system.
+The minimization process results in 
+$$
+\delta\left[ \langle \Psi_0 | \hat{H} |\Phi_0 \rangle-\lambda \langle \Psi_0 |\Phi_0 \rangle\right]=
+$$
+
+$$
+\sum_{P'H'}\left\{\delta[C_H^{*P}]\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}+
+C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle \delta[C_{H'}^{P'}]-
+\lambda( \delta[C_H^{*P}]C_{H'}^{P'}+C_H^{*P}\delta[C_{H'}^{P'}]\right\} = 0.
+$$
+
+Since the coefficients \( \delta[C_H^{*P}] \) and \( \delta[C_{H'}^{P'}] \) are complex conjugates it is necessary and sufficient to require the quantities that multiply with \( \delta[C_H^{*P}] \) to vanish.
+
+<p>
+This leads to 
+$$
+\sum_{P'H'}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}-\lambda C_H^{P}=0,
+$$
+
+for all sets of \( P \) and \( H \).
+
+<p>
+If we then multiply by the corresponding \( C_H^{*P} \) and sum over \( PH \) we obtain
+$$ 
+\sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}-\lambda\sum_{PH}|C_H^P|^2=0,
+$$
+
+leading to the identification \( \lambda = E \). This means that we have for all \( PH \) sets
+$$
+\begin{equation}
+\sum_{P'H'}\langle \Phi_H^P | \hat{H} -E|\Phi_{H'}^{P'} \rangle = 0. \label{eq:fullci}
+\end{equation}
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec12">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+An alternative way to derive the last equation is to start from 
+$$
+(\hat{H} -E)|\Psi_0\rangle = (\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0, 
+$$
+
+and if this equation is successively projected against all \( \Phi_H^P \) in the expansion of \( \Psi \), then the last equation on the previous slide
+results.   As stated previously, one solves this equation normally by diagonalization. If we are able to solve this equation exactly (that is
+numerically exactly) in a large Hilbert space (it will be truncated in terms of the number of single-particle states included in the definition
+of Slater determinants), it can then serve as a benchmark for other many-body methods which approximate the correlation operator
+\( \hat{C} \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec13">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+For reasons to come (links with Coupled-Cluster theory and Many-Body perturbation theory), 
+we will rewrite Eq.&nbsp;( ref{eq:fullci}) as a set of coupled non-linear equations in terms of the unknown coefficients \( C_H^P \).
+
+<p>
+To see this, we look at the contributions arising from 
+$$
+\langle \Phi_H^P | = \langle \Phi_0|
+$$
+
+in  Eq.&nbsp;\eqref{eq:fullci}, that is we multiply with \( \langle \Phi_0 | \)
+from the left in 
+$$
+(\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0. 
+$$
+
+If we assume that we have a two-body operator at most, Slater's rule gives then an equation for the 
+correlation energy in terms of \( C_i^a \) and \( C_{ij}^{ab} \) only.  We get then
+$$
+\langle \Phi_0 | \hat{H} -E| \Phi_0\rangle + \sum_{ai}\langle \Phi_0 | \hat{H} -E|\Phi_{i}^{a} \rangle C_{i}^{a}+
+\sum_{abij}\langle \Phi_0 | \hat{H} -E|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}=0,
+$$
+
+or 
+$$
+E-E_0 =\Delta E=\sum_{ai}\langle \Phi_0 | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+
+\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab},
+$$
+
+where the energy \( E_0 \) is the reference energy and \( \Delta E \) defines the so-called correlation energy.
+The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian.
+
+<p>
+In our chapter on Hartree-Fock calculations, 
+we have already computed the matrix \( \langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle  \) and \( \langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab}\rangle \).  If we are using a Hartree-Fock basis, then the matrix elements
+\( \langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle  \) and we are left with a correlation energy given by
+$$
+E-E_0 =\Delta E^{HF}=\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}. 
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec14">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Inserting the various matrix elements we can rewrite the previous equation as
+$$
+\Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
+\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
+$$
+
+This equation determines the correlation energy but not the coefficients \( C \). 
+We need more equations. Our next step is to set up
+$$
+\langle \Phi_i^a | \hat{H} -E| \Phi_0\rangle + \sum_{bj}\langle \Phi_i^a | \hat{H} -E|\Phi_{j}^{b} \rangle C_{j}^{b}+
+\sum_{bcjk}\langle \Phi_i^a | \hat{H} -E|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
+\sum_{bcdjkl}\langle \Phi_i^a | \hat{H} -E|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=0,
+$$
+
+as this equation will allow us to find an expression for the coefficents \( C_i^a \) since we can rewrite this equation as 
+$$
+\langle i | \hat{f}| a\rangle +\langle \Phi_i^a | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+ \sum_{bj\ne ai}\langle \Phi_i^a | \hat{H}|\Phi_{j}^{b} \rangle C_{j}^{b}+
+\sum_{bcjk}\langle \Phi_i^a | \hat{H}|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
+\sum_{bcdjkl}\langle \Phi_i^a | \hat{H}|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=0.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec15">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We rewrite this equation as
+$$
+C_{i}^{a}=-(\langle \Phi_i^a | \hat{H}|\Phi_{i}^{a})^{-1}
+$$
+
+$$
+\times\left(\langle i | \hat{f}| a\rangle+ \sum_{bj\ne ai}\langle \Phi_i^a | \hat{H}|\Phi_{j}^{b} \rangle C_{j}^{b}+\sum_{bcjk}\langle \Phi_i^a | \hat{H}|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
+\sum_{bcdjkl}\langle \Phi_i^a | \hat{H}|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}\right).
+$$
+
+Since these equations are solved iteratively ( that is we can start with a guess for the coefficients \( C_i^a \)), it is common to start the  iteration 
+by setting 
+$$
+ C_{i}^{a}=-\frac{\langle i | \hat{f}| a\rangle}{\langle \Phi_i^a | \hat{H}|\Phi_{i}^{a}\rangle},
+$$
+
+and the denominator can be written as
+$$
+  C_{i}^{a}=\frac{\langle i | \hat{f}| a\rangle}{\langle i | \hat{f}| i\rangle-\langle a | \hat{f}| a\rangle+\langle ai | \hat{v}| ai\rangle}.
+$$
+
+The observant reader will however see that we need an equation for \( C_{jk}^{bc} \) and \( C_{jkl}^{bcd} \) as well.
+To find equations for these coefficients we need then to continue our multiplications from the left with the various
+\( \Phi_{H}^P \) terms.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec16">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+For \( C_{jk}^{bc} \) we need then
+$$
+\langle \Phi_{ij}^{ab} | \hat{H} -E| \Phi_0\rangle + \sum_{kc}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{k}^{c} \rangle C_{k}^{c}+
+$$
+
+$$
+\sum_{cdkl}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{kl}^{cd} \rangle C_{kl}^{cd}+\sum_{cdeklm}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klm}^{cde} \rangle C_{klm}^{cde}+\sum_{cdefklmn}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klmn}^{cdef} \rangle C_{klmn}^{cdef}=0,
+$$
+
+and we can isolate the coefficients \( C_{kl}^{cd} \) in a similar way as we did for the coefficients \( C_{i}^{a} \). 
+At the end we can rewrite our solution of the Schr\"odinger equation in terms of \( n \) coupled equations for the coefficients \( C_H^P \).
+This is a very cumbersome way of solving the equation. However, by using this iterative scheme we can illustrate how we can compute the
+various terms in the wave operator or correlation operator \( \hat{C} \). We will later identify the calculation of the various terms \( C_H^P \)
+as parts of different many-body approximations to full CI. In particular, ww can  relate this non-linear scheme with Coupled Cluster theory and
+many-body perturbation theory. These theories will not be discussed in this course.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec17">Full Configuration Interaction Theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+If we use a Hartree-Fock basis, we simplify this equation
+$$
+\Delta E=\sum_{ai}\langle i| \hat{f}|a \rangle C_{i}^{a}+
+\sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
+$$
+
+What about
+$$
+\langle \Phi_i^a | \hat{H} -E| \Phi_0\rangle + \sum_{bj}\langle \Phi_i^a | \hat{H} -E|\Phi_{j}^{b} \rangle C_{j}^{b}+
+\sum_{bcjk}\langle \Phi_i^a | \hat{H} -E|\Phi_{jk}^{bc} \rangle C_{jk}^{bc}+
+\sum_{bcdjkl}\langle \Phi_i^a | \hat{H} -E|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=0,
+$$
+
+and
+$$
+\langle \Phi_{ij}^{ab} | \hat{H} -E| \Phi_0\rangle + \sum_{kc}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{k}^{c} \rangle C_{k}^{c}+
+\sum_{cdkl}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{kl}^{cd} \rangle C_{kl}^{cd}+
+$$
+
+$$
+\sum_{cdeklm}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klm}^{cde} \rangle C_{klm}^{cde}+\sum_{cdefklmn}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klmn}^{cdef} \rangle C_{klmn}^{cdef}=0?
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec18">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+In project 1 the plan  is to construct a working code that constructs the 
+many-body Hamiltonian matrix in a basis of Slater determinants and to find the low-lying eigenenergies. 
+This is referred to as the configuration-interaction method or shell-model diagonalization 
+(or the interacting shell model).
+
+<p>
+The first step in such codes--and in your project--is to construct the many-body basis.
+
+<p>
+While the formalism is independent of the choice of basis, the <b>effectiveness</b> of a calculation 
+will certainly be basis dependent.
+
+<p>
+Furthermore there are common conventions useful to know.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec19">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+First, the single-particle basis has angular momentum as a good quantum number.  You can 
+imagine the single-particle wavefunctions being generated by a one-body Hamiltonian, 
+for example a harmonic oscillator.  Modifications include harmonic oscillator plus 
+spin-orbit splitting, or self-consistent mean-field potentials, or the Woods-Saxon potential which mocks 
+up the self-consistent mean-field.
+
+<p>
+For nuclei, the harmonic oscillator, modified by spin-orbit splitting, provides a useful language 
+for describing single-particle states.
+
+<p>
+Each single-particle state is labeled by the following quantum numbers: 
+
+<ul>
+<li> Orbital angular momentum \( l \)</li>
+<li> Intrinsic spin \( s \) = 1/2 for protons and neutrons</li>
+<li> Angular momentum \( j = l \pm 1/2 \)</li>
+<li> \( z \)-component \( j_z \) (or \( m \))</li>
+<li> Some labeling of the radial wavefunction, typically \( n \) the number of nodes in  the radial wavefunction, but in the case of harmonic oscillator one can also use the principal quantum number \( N \), where the harmonic oscillator energy is \( (N+3/2)\hbar \omega \).</li> 
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec20">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In this format one labels states by \( n(l)_j \), with \( (l) \) replaced by a letter:
+\( s \) for \( l=0 \), \( p \) for \( l=1 \), \( d \) for \( l=2 \), \( f \) for \( l=3 \), and thenceforth alphabetical.
+
+<p>
+ In practice the single-particle space has to be severely truncated.  This truncation is 
+typically based upon the single-particle energies, which is the effective energy 
+from a mean-field potential.
+
+<p>
+Sometimes we freeze the core and only consider a valence space. For example, one 
+may assume a frozen \( {}^{4}\mbox{He} \) core, with two protons and two neutrons in the \( 0s_{1/2} \) 
+shell, and then only allow active particles in the \( 0p_{1/2} \) and \( 0p_{3/2} \) orbits.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec21">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Another example is a frozen \( {}^{16}\mbox{O} \) core, with eight protons and eight neutrons filling the 
+\( 0s_{1/2} \),  \( 0p_{1/2} \) and \( 0p_{3/2} \) orbits, with valence particles in the 
+\( 0d_{5/2}, 1s_{1/2} \) and \( 0d_{3/2} \) orbits.
+
+<p>
+Sometimes we refer to nuclei by the valence space where their last nucleons go.  
+So, for example, we call \( {}^{12}\mbox{C} \) a \( p \)-shell nucleus, while \( {}^{26}\mbox{Al} \) is an 
+\( sd \)-shell nucleus and \( {}^{56}\mbox{Fe} \) is a \( pf \)-shell nucleus.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec22">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+There are different kinds of truncations.
+
+<ul>
+<li> For example, one can start with `filled' orbits (almost always the lowest), and then  allow one, two, three... particles excited out of those filled orbits. These are called  1p-1h, 2p-2h, 3p-3h excitations.</li> 
+<li> Alternately, one can state a maximal orbit and allow all possible configurations with  particles occupying states up to that maximum. This is called <em>full configuration</em>.</li>
+<li> Finally, for particular use in nuclear physics, there is the <em>energy</em> truncation, also  called the \( N\hbar\Omega \) or \( N_{max} \) truncation.</li> 
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec23">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+ Here one works in a harmonic oscillator basis, with each major oscillator shell assigned 
+a principal quantum number \( N=0,1,2,3,... \).
+
+<p>
+The \( N\hbar\Omega \) or \( N_{max} \) truncation: Any configuration is given an noninteracting energy, which is the sum 
+of the single-particle harmonic oscillator energies. (Thus this ignores 
+spin-orbit splitting.)
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec24">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Excited state are labeled relative to the lowest configuration by the 
+number of harmonic oscillator quanta.
+
+<p>
+This truncation is useful because: if one includes <em>all</em> configuration up to 
+some \( N_{max} \), and has a translationally invariant interaction, then the intrinsic 
+motion and the center-of-mass motion factor. In other words, we can know exactly 
+the center-of-mass wavefunction.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec25">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In almost all cases, the many-body Hamiltonian is rotationally invariant. This means 
+it commutes with the operators \( \hat{J}^2, \hat{J}_z \) and so eigenstates will have 
+good \( J,M \). Furthermore, the eigenenergies do not depend upon the orientation \( M \).
+
+<p>
+Therefore we can choose to construct a many-body basis which has fixed \( M \); this is 
+called an \( M \)-scheme basis.
+
+<p>
+Alternately, one can construct a many-body basis which has fixed \( J \), or a \( J \)-scheme 
+basis.
+
+<p>
+The Hamiltonian matrix will have smaller dimensions (a factor of 10 or more)
+ in the \( J \)-scheme than in the \( M \)-scheme. 
+On the other hand, as we'll show in the next slide, the \( M \)-scheme is very easy to 
+construct with Slater determinants, while the \( J \)-scheme basis states, and thus the 
+matrix elements, are more complicated, almost always being linear combinations of 
+\( M \)-scheme states. \( J \)-scheme bases are important and useful, but we'll focus on the 
+simpler \( M \)-scheme.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec26">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The quantum number \( m \) is additive (because the underlying group is Abelian): 
+if a Slater determinant \( \hat{a}_i^\dagger \hat{a}^\dagger_j \hat{a}^\dagger_k \ldots | 0 \rangle \) 
+is built from single-particle states all with good \( m \), then the total 
+$$
+M = m_i + m_j + m_k + \ldots
+$$
+
+This is <em>not</em> true of \( J \), because the angular momentum group SU(2) is not Abelian.
+
+<p>
+The upshot is that 
+
+<ul>
+<li> It is easy to construct a Slater determinant with good total \( M \);</li>
+<li> It is trivial to calculate \( M \) for each Slater determinant;</li>
+<li> So it is easy to construct an \( M \)-scheme basis with fixed total \( M \).</li>
+</ul>
+
+Note that the individual \( M \)-scheme basis states will <em>not</em>, in general, 
+have good total \( J \). 
+Because the Hamiltonian is rotationally invariant, however, the eigenstates will 
+have good \( J \). (The situation is muddied when one has states of different \( J \) that are 
+nonetheless degenerate.)
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec27">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Example: two \( j=1/2 \) orbits
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Index</th> <td align="center">\( n \)</td> <td align="center">\( l \)</td> <td align="center">\( j \)</td> <td align="center">\( m_j \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   1        </td> <td align="center">   0          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   2        </td> <td align="center">   0          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+<tr><td align="center">   3        </td> <td align="center">   1          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   4        </td> <td align="center">   1          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+</tbody>
+</table>
+<p>
+Note: the order is arbitrary.
+There are \( \left ( \begin{array}{c} 4 \\ 2 \end{array} \right) = 6 \) two-particle states, 
+which we list with the total \( M \):
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Occupied</th> <td align="center">\( M \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   1,2         </td> <td align="center">   0          </td> </tr>
+<tr><td align="center">   1,3         </td> <td align="center">   -1         </td> </tr>
+<tr><td align="center">   1,4         </td> <td align="center">   0          </td> </tr>
+<tr><td align="center">   2,3         </td> <td align="center">   0          </td> </tr>
+<tr><td align="center">   2,4         </td> <td align="center">   1          </td> </tr>
+<tr><td align="center">   3,4         </td> <td align="center">   0          </td> </tr>
+</tbody>
+</table>
+There are 4 states with \( M= 0 \), 
+and 1 each with \( M = \pm 1 \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec28">Building a many-body basis </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Example: consider using only single particle states from the \( 0d_{5/2} \) space. 
+They have the following quantum numbers
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Index</th> <td align="center">\( n \)</td> <td align="center">\( l \)</td> <td align="center">\( j \)</td> <td align="center">\( m_j \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   1        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   -5/2         </td> </tr>
+<tr><td align="center">   2        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   -3/2         </td> </tr>
+<tr><td align="center">   3        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   4        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   1/2          </td> </tr>
+<tr><td align="center">   5        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   3/2          </td> </tr>
+<tr><td align="center">   6        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   5/2          </td> </tr>
+</tbody>
+</table>
+<p>
+There are \( \left ( \begin{array}{c} 6 \\ 2 \end{array} \right) = 15 \) two-particle states, 
+which we list with the total \( M \):
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Occupied</th> <td align="center">\( M \)</td> <th align="center">Occupied</th> <td align="center">\( M \)</td> <th align="center">Occupied</th> <td align="center">\( M \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   1,2         </td> <td align="center">   -4         </td> <td align="center">   2,3         </td> <td align="center">   -2         </td> <td align="center">   3,5         </td> <td align="center">   1          </td> </tr>
+<tr><td align="center">   1,3         </td> <td align="center">   -3         </td> <td align="center">   2,4         </td> <td align="center">   -1         </td> <td align="center">   3,6         </td> <td align="center">   2          </td> </tr>
+<tr><td align="center">   1,4         </td> <td align="center">   -2         </td> <td align="center">   2,5         </td> <td align="center">   0          </td> <td align="center">   4,5         </td> <td align="center">   2          </td> </tr>
+<tr><td align="center">   1,5         </td> <td align="center">   -1         </td> <td align="center">   2,6         </td> <td align="center">   1          </td> <td align="center">   4,6         </td> <td align="center">   3          </td> </tr>
+<tr><td align="center">   1,6         </td> <td align="center">   0          </td> <td align="center">   3,4         </td> <td align="center">   0          </td> <td align="center">   5,6         </td> <td align="center">   4          </td> </tr>
+</tbody>
+</table>
+There are 3 states with \( M= 0 \), 2 with \( M = 1 \), and so on.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec29">Project </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The basic goal of the project is for you to build your own configuration-interaction  shell-model 
+code. The code will be fairly basic; it will assume that we have 
+a single species of particles, e.g. only neutrons, 
+and you could, if you wish to,  read in uncoupled two-body matrix elements.  Furthermore the pieces of the code will not 
+be the most efficient.  Nonetheless it will be usable; most importantly, you will gain a good idea of what goes into a many-body shell-model code.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec30">Project, step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+The first step  is to construct the \( M \)-scheme basis of Slater determinants.
+Here \( M \)-scheme means the total \( J_z \) of the many-body states is fixed.
+
+<p>
+The steps could be:
+
+<ul>
+<li> Read in a user-supplied file of single-particle states (examples can be given) or just code these internally;</li>
+<li> Ask for the total \( M \) of the system and the number of particles \( N \);</li>
+<li> Construct all the \( N \)-particle states with given \( M \).  You will validate the code by  comparing both the number of states and specific states.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec31">Project, step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The format of a possible input  file could be
+<table border="1">
+<thead>
+<tr><th align="center">Index</th> <td align="center">\( n \)</td> <td align="center">\( l \)</td> <td align="center">\( 2j \)</td> <td align="center">\( 2m_j \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   1        </td> <td align="center">   1          </td> <td align="center">   0          </td> <td align="center">   1           </td> <td align="center">   -1            </td> </tr>
+<tr><td align="center">   2        </td> <td align="center">   1          </td> <td align="center">   0          </td> <td align="center">   1           </td> <td align="center">   1             </td> </tr>
+<tr><td align="center">   3        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   3           </td> <td align="center">   -3            </td> </tr>
+<tr><td align="center">   4        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   3           </td> <td align="center">   -1            </td> </tr>
+<tr><td align="center">   5        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   3           </td> <td align="center">   1             </td> </tr>
+<tr><td align="center">   6        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   3           </td> <td align="center">   3             </td> </tr>
+<tr><td align="center">   7        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5           </td> <td align="center">   -5            </td> </tr>
+<tr><td align="center">   8        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5           </td> <td align="center">   -3            </td> </tr>
+<tr><td align="center">   9        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5           </td> <td align="center">   -1            </td> </tr>
+<tr><td align="center">   10       </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5           </td> <td align="center">   1             </td> </tr>
+<tr><td align="center">   11       </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5           </td> <td align="center">   3             </td> </tr>
+<tr><td align="center">   12       </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5           </td> <td align="center">   5             </td> </tr>
+</tbody>
+</table>
+<p>
+This represents the \( 1s_{1/2}0d_{3/2}0d_{5/2} \) valence space, or just the \( sd \)-space.  There are 
+twelve single-particle states, labeled by an overall index, and which have associated quantum 
+numbers the number of radial nodes, the orbital angular momentum \( l \), and the 
+angular momentum \( j \) and third component \( j_z \).  To keep everything as integers, we could store \( 2 \times j \) and 
+\( 2 \times j_z \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec32">Project, step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+To read in the single-particle states you need to:
+
+<ul>
+<li> Open the file</li> 
+
+<ul>
+ <li> Read the number of single-particle states (in the above example, 12);  allocate memory; all you need is a single array storing \( 2\times j_z \) for each state, labeled by the index.</li>
+</ul>
+
+<li> Read in the quantum numbers and store \( 2 \times j_z \) (and anything else you happen to want).</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec33">Project, step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+The next step is to read in the number of particles \( N \) and the fixed total \( M \) (or, actually, \( 2 \times M \)). 
+For this project we assume only a single species of particles, say neutrons, although this can be 
+relaxed. <b>Note</b>: Although it is often a good idea to try to write a more general code, given the 
+short time alloted we would suggest you keep your ambition in check, at least in the initial phases of the 
+project.
+
+<p>
+You should probably write an error trap to make sure \( N \) and \( M \) are congruent; if \( N \) is even, then 
+\( 2 \times M \) should be even, and if \( N \) is odd then \( 2\times M \) should be odd.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec34">Project, step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The final step is to generate the set of \( N \)-particle Slater determinants with fixed \( M \). 
+The Slater determinants will be stored in occupation representation.  Although in many codes
+this representation is done compactly in bit notation with ones and zeros, but for 
+greater transparency and simplicity we will list the occupied single particle states.
+
+<p>
+ Hence we can 
+store the Slater determinant basis states as \( sd(i,j) \), that is an 
+array of dimension \( N_{SD} \), the number of Slater determinants, by \( N \), the number of occupied 
+state. So if for the 7th Slater determinant the 2nd, 3rd, and 9th single-particle states are occupied, 
+then \( sd(7,1) = 2 \), \( sd(7,2) = 3 \), and \( sd(7,3) = 9 \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec35">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+We can construct an occupation representation of Slater determinants by the <em>odometer</em>
+method.  Consider \( N_{sp} = 12 \) and \( N=4 \). 
+Start with the first 4 states occupied, that is:
+
+<ul>
+<li> \( sd(1,:)= 1,2,3,4 \) (also written as \( |1,2,3,4 \rangle \))</li>
+</ul>
+
+Now increase the last occupancy recursively:
+
+<ul>
+<li> \( sd(2,:)= 1,2,3,5 \)</li>
+<li> \( sd(3,:)= 1,2,3,6 \)</li>
+<li> \( sd(4,:)= 1,2,3,7 \)</li>
+<li> \( \ldots \)</li>
+<li> \( sd(9,:)= 1,2,3,12 \)</li>
+</ul>
+
+Then start over with 
+
+<ul>
+<li> \( sd(10,:)= 1,2,4,5 \)</li>
+</ul>
+
+and again increase the rightmost digit
+
+<ul>
+<li> \( sd(11,:)= 1,2,4,6 \)</li>
+<li> \( sd(12,:)= 1,2,4,7 \)</li>
+<li> \( \ldots \)</li>
+<li> \( sd(17,:)= 1,2,4,12 \)</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec36">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+When we restrict ourselves to an \( M \)-scheme basis, we could choose two paths. 
+The first is simplest (and simplest is often best, at 
+least in the first draft of a code): generate all possible Slater determinants, 
+and then extract from this initial list a list of those Slater determinants with a given 
+\( M \). (You will need to write a short function or routine that computes \( M \) for any 
+given occupation.)
+
+<p>
+Alternately, and not too difficult, is to run the odometer routine twice: each time, as 
+as a Slater determinant is calculated, compute \( M \), but do not store the Slater determinants 
+except the current one. You can then count up the number of Slater determinants with a 
+chosen \( M \).  Then allocated storage for the Slater determinants, and run the odometer 
+algorithm again, this time storing Slater determinants with the desired \( M \) (this can be 
+done with a simple logical flag).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec37">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+<em>Some example solutions</em>:  Let's begin with a simple case, the \( 0d_{5/2} \) space containing six single-particle states
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Index</th> <td align="center">\( n \)</td> <td align="center">\( l \)</td> <td align="center">\( j \)</td> <td align="center">\( m_j \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   1        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   -5/2         </td> </tr>
+<tr><td align="center">   2        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   -3/2         </td> </tr>
+<tr><td align="center">   3        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   4        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   1/2          </td> </tr>
+<tr><td align="center">   5        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   3/2          </td> </tr>
+<tr><td align="center">   6        </td> <td align="center">   0          </td> <td align="center">   2          </td> <td align="center">   5/2        </td> <td align="center">   5/2          </td> </tr>
+</tbody>
+</table>
+<p>
+For two particles, there are a total of 15 states, which we list here with the total \( M \):
+
+<ul>
+<li> \( | 1,2 \rangle \), \( M= -4 \),  \( | 1,3 \rangle \), \( M= -3 \)</li>
+<li> \( | 1,4 \rangle \), \( M= -2 \), \( | 1,5 \rangle \), \( M= -1 \)</li>
+<li> \( | 1,5 \rangle \), \( M= 0 \), \( | 2,3 \rangle \), \( M= -2 \)</li>
+<li> \( | 2,4 \rangle \), \( M= -1 \), \( | 2,5 \rangle \), \( M= 0 \)</li>
+<li> \( | 2,6 \rangle \), \( M= 1 \), \( | 3,4 \rangle \), \( M= 0 \)</li>
+<li> \( | 3,5 \rangle \), \( M= 1 \), \( | 3,6 \rangle \), \( M= 2 \)</li>
+<li> \( | 4,5 \rangle \), \( M= 2 \), $ | 4,6 \rangle$, \( M= 3 \)</li>
+<li> \( | 5,6 \rangle \), \( M= 4 \)</li>
+</ul>
+
+Of these, there are only 3 states with \( M=0 \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec38">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<em>You should try</em> by hand to show that in this same single-particle space, that for 
+\( N=3 \) there are 3 states with \( M=1/2 \) and for \( N= 4 \) there are also only 3 states with \( M=0 \).
+
+<p>
+<em>To test your code</em>, confirm the above.
+
+<p>
+Also, 
+for the \( sd \)-space given above, for \( N=2 \) there are 14 states with \( M=0 \), for \( N=3 \) there are 37 
+states with \( M=1/2 \), for \( N=4 \) there are 81 states with \( M=0 \).
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec39">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+For our project, we will only consider the pairing model.
+A simple space is the \( (1/2)^2 \) space with four single-particle states
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Index</th> <td align="center">\( n \)</td> <td align="center">\( l \)</td> <td align="center">\( s \)</td> <td align="center">\( m_s \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   1        </td> <td align="center">   0          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   2        </td> <td align="center">   0          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+<tr><td align="center">   3        </td> <td align="center">   1          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   4        </td> <td align="center">   1          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+</tbody>
+</table>
+<p>
+For \( N=2 \) there are 4 states with \( M=0 \); show this by hand and confirm your code reproduces it.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec40">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Another, slightly more challenging space is the \( (1/2)^4 \) space, that is, 
+with eight  single-particle states we have
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Index</th> <td align="center">\( n \)</td> <td align="center">\( l \)</td> <td align="center">\( s \)</td> <td align="center">\( m_s \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   1        </td> <td align="center">   0          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   2        </td> <td align="center">   0          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+<tr><td align="center">   3        </td> <td align="center">   1          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   4        </td> <td align="center">   1          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+<tr><td align="center">   5        </td> <td align="center">   2          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   6        </td> <td align="center">   2          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+<tr><td align="center">   7        </td> <td align="center">   3          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   8        </td> <td align="center">   3          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+</tbody>
+</table>
+<p>
+For \( N=2 \) there are 16 states with \( M=0 \); for \( N=3 \) there are 24 states with \( M=1/2 \), and for 
+\( N=4 \) there are 36 states with \( M=0 \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec41">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In the shell-model context we can interpret this as 4 \( s_{1/2} \) levels, with \( m = \pm 1/2 \), we can also think of these are simple four pairs,  \( \pm k, k = 1,2,3,4 \). Later on we will 
+assign single-particle energies,  depending on the radial quantum number \( n \), that is, 
+\( \epsilon_k = |k| \delta \) so that they are equally spaced.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec42">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+For application in the pairing model we can go further and consider only states with 
+no &quot;broken pairs,&quot; that is, if \( +k \) is filled (or \( m = +1/2 \), so is \( -k \) (\( m=-1/2 \)). 
+If you want, you can write your code to accept only these, and obtain the following 
+six states:
+
+<ul>
+<li> \( |           1,           2 ,          3         ,       4  \rangle ,  \)</li>
+<li> \( |            1      ,     2        ,        5         ,       6 \rangle ,  \)</li>
+<li> \( |            1         ,       2     ,           7         ,       8  \rangle ,  \)</li>
+<li> \( |            3        ,        4      ,          5          ,      6  \rangle ,  \)</li>
+<li> \( |            3        ,        4      ,          7         ,       8  \rangle ,  \)</li>
+<li> \( |            5        ,        6     ,           7     ,           8  \rangle  \)</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec43">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Hints for coding.</b>
+<p>
+
+<ul>
+<li> Write small modules (routines/functions) ; avoid big functions  that do everything. (But not too small.)</li>
+<li> Write lots of error traps, even for things that are `obvious.'</li>
+<li> Document as you go along.  For each function write a header that includes: 
+
+<ol type="a"></li>
+<li> Main purpose of function</li>
+<li> names and  brief explanation of input variables, if any</li> 
+<li> names and brief explanation of output variables, if any</li>
+<li> functions called by this function</li>
+<li> called by which functions</li>
+</ol>
+
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec44">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Hints for coding
+
+<ul>
+<li> When debugging, print out intermediate values. It's almost impossible to debug a  code by looking at it--the code will almost always win a `staring contest.'</li>
+<li> Validate code with SIMPLE CASES. Validate early and often.</li>   
+</ul>
+
+The number one mistake is using a too complex a system to test. For example ,
+if you are computing particles in a potential in a box, try removing the potential--you should get 
+particles in a box. And start with one particle, then two, then three... Don't start with 
+eight particles.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec45">Project , step 1 </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Our recommended occupation representation, e.g. \( | 1,2,4,8 \rangle \), is 
+easy to code, but numerically inefficient when one has hundreds of 
+millions of Slater determinants.
+
+<p>
+In state-of-the-art shell-model codes, one generally uses bit 
+representation, i.e. \( |1101000100... \rangle \) where one stores 
+the Slater determinant as a single (or a small number of) integer.
+
+<p>
+This is much more compact, but more intricate to code with considerable 
+more overhead. There exist 
+bit-manipulation functions. 
+This is left as a challenge for those of you who would like to study this topic further for the final project to be presented for the oral examination.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec46">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+We consider a space with \( 2\Omega \) single-particle states, with each 
+state labeled by 
+\( k = 1, 2, 3, \Omega \) and \( m = \pm 1/2 \). The convention is that 
+the state with \( k>0 \) has \( m = + 1/2 \) while \( -k \) has \( m = -1/2 \).
+
+<p>
+The Hamiltonian we consider is 
+$$
+\hat{H} = -G \hat{P}_+ \hat{P}_-,
+$$
+
+where
+$$
+\hat{P}_+ = \sum_{k > 0} \hat{a}^\dagger_k \hat{a}^\dagger_{-{k}}.
+$$
+
+and \( \hat{P}_- = ( \hat{P}_+)^\dagger \).
+
+<p>
+This problem can be solved using what is called the quasi-spin formalism to obtain the 
+exact results. Thereafter we will try again using the explicit Slater determinant formalism.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec47">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+One can show (and this is part of the project) that
+$$
+\left [ \hat{P}_+, \hat{P}_- \right ] = \sum_{k> 0} \left( \hat{a}^\dagger_k \hat{a}_k 
++ \hat{a}^\dagger_{-{k}} \hat{a}_{-{k}} - 1 \right) = \hat{N} - \Omega.
+$$
+
+Now define 
+$$
+\hat{P}_z = \frac{1}{2} ( \hat{N} -\Omega).
+$$
+
+Finally you can show
+$$
+\left [ \hat{P}_z , \hat{P}_\pm \right ] = \pm \hat{P}_\pm.
+$$
+
+This means the operators \( \hat{P}_\pm, \hat{P}_z \) form a so-called  \( SU(2) \) algebra, and we can 
+use all our insights about angular momentum, even though there is no actual 
+angular momentum involved (this is similar to project 1).
+
+<p>
+So we rewrite the Hamiltonian to make this explicit:
+$$
+\hat{H} = -G \hat{P}_+ \hat{P}_- 
+= -G \left( \hat{P}^2 - \hat{P}_z^2 + \hat{P}_z\right)
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec48">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Because of the SU(2) algebra, we know that the eigenvalues of 
+\( \hat{P}^2 \) must be of the form \( p(p+1) \), with \( p \) either integer or half-integer, and the eigenvalues of \( \hat{P}_z \) 
+are \( m_p \) with \( p \geq | m_p| \), with \( m_p \) also integer or half-integer.
+
+<p>
+But because \( \hat{P}_z = (1/2)(\hat{N}-\Omega) \), we know that for \( N \) particles 
+the value \( m_p = (N-\Omega)/2 \). Furthermore, the values of \( m_p \) range from 
+\( -\Omega/2 \) (for \( N=0 \)) to \( +\Omega/2 \) (for \( N=2\Omega \), with all states filled).
+
+<p>
+We deduce the maximal \( p = \Omega/2 \) and for a given \( n \) the 
+values range of \( p \) range from \( |N-\Omega|/2 \) to \( \Omega/2 \) in steps of 1 
+(for an even number of particles)
+
+<p>
+Following Racah we introduce the notation
+\( p = (\Omega - v)/2 \)
+where \( v = 0, 2, 4,..., \Omega - |N-\Omega| \) 
+With this it is easy to deduce that the eigenvalues of the pairing Hamiltonian are
+$$
+-G(N-v)(2\Omega +2-N-v)/4
+$$
+
+This also works for \( N \) odd, with \( v= 1,3,5, \dots \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec49">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Let's take a specific example: \( \Omega = 3 \) so there are 6 single-particle states, 
+and \( N = 3 \), with \( v= 1,3 \). Therefore there are two distinct eigenvalues, 
+$$
+E = -2G, 0
+$$
+
+Now let's work this out explicitly. The single particle degrees of freedom are defined as
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Index</th> <td align="center">\( k \)</td> <td align="center">\( m \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   1        </td> <td align="center">   1          </td> <td align="center">   -1/2       </td> </tr>
+<tr><td align="center">   2        </td> <td align="center">   -1         </td> <td align="center">   1/2        </td> </tr>
+<tr><td align="center">   3        </td> <td align="center">   2          </td> <td align="center">   -1/2       </td> </tr>
+<tr><td align="center">   4        </td> <td align="center">   -2         </td> <td align="center">   1/2        </td> </tr>
+<tr><td align="center">   5        </td> <td align="center">   3          </td> <td align="center">   -1/2       </td> </tr>
+<tr><td align="center">   6        </td> <td align="center">   -3         </td> <td align="center">   1/2        </td> </tr>
+</tbody>
+</table>
+<p>
+ There are  \( \left( \begin{array}{c}6 \\ 3 \end{array} \right) = 20 \) three-particle states, but there 
+are 9 states with \( M = +1/2 \), namely
+\( | 1,2,3 \rangle, |1,2,5\rangle, | 1,4,6 \rangle, | 2,3,4 \rangle, |2,3,6 \rangle, | 2,4,5 \rangle, | 2, 5, 6 \rangle, |3,4,6 \rangle, | 4,5,6 \rangle \).
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec50">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+In this basis, the operator 
+$$
+\hat{P}_+
+= \hat{a}^\dagger_1 \hat{a}^\dagger_2 + \hat{a}^\dagger_3 \hat{a}^\dagger_4 +
+\hat{a}^\dagger_5 \hat{a}^\dagger_6 
+$$
+
+From this we can determine that 
+$$
+\hat{P}_- | 1, 4, 6 \rangle = \hat{P}_- | 2, 3, 6 \rangle
+= \hat{P}_- | 2, 4, 5 \rangle = 0
+$$
+
+so those states all have eigenvalue 0.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec51">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Now for further example, 
+$$
+\hat{P}_- | 1,2,3 \rangle = | 3 \rangle
+$$
+
+so
+$$
+\hat{P}_+ \hat{P}_- | 1,2,3\rangle = | 1,2,3\rangle+ | 3,4,3\rangle + | 5,6,3\rangle
+$$
+
+The second term vanishes because state 3 is occupied twice, and reordering the last 
+term we
+get
+$$
+\hat{P}_+ \hat{P}_- | 1,2,3\rangle = | 1,2,3\rangle+ |3, 5,6\rangle
+$$
+
+without picking up a phase.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec52">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Continuing in this fashion, with the previous ordering of the many-body states
+(  \( | 1,2,3 \rangle, |1,2,5\rangle, | 1,4,6 \rangle, | 2,3,4 \rangle, |2,3,6 \rangle, | 2,4,5 \rangle, | 2, 5, 6 \rangle, |3,4,6 \rangle, | 4,5,6 \rangle \)) the 
+Hamiltonian matrix of this system is 
+$$
+H = -G\left( 
+\begin{array}{ccccccccc}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1  \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0  \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0  \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0  \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0  \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1  
+\end{array} \right )
+$$
+
+This is useful for our project.  One can by hand confirm 
+that there are 3 eigenvalues \( -2G \) and 6 with value zero.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec53">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Another example
+Using the \( (1/2)^4 \) single-particle space, resulting in eight single-particle states
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Index</th> <td align="center">\( n \)</td> <td align="center">\( l \)</td> <td align="center">\( s \)</td> <td align="center">\( m_s \)</td> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   1        </td> <td align="center">   0          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   2        </td> <td align="center">   0          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+<tr><td align="center">   3        </td> <td align="center">   1          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   4        </td> <td align="center">   1          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+<tr><td align="center">   5        </td> <td align="center">   2          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   6        </td> <td align="center">   2          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+<tr><td align="center">   7        </td> <td align="center">   3          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   -1/2         </td> </tr>
+<tr><td align="center">   8        </td> <td align="center">   3          </td> <td align="center">   0          </td> <td align="center">   1/2        </td> <td align="center">   1/2          </td> </tr>
+</tbody>
+</table>
+<p>
+and then taking only 4-particle, \( M=0 \) states that have no `broken pairs', there are six basis Slater 
+determinants:
+
+<ul>
+<li> \( |           1,           2 ,          3         ,       4  \rangle ,  \)</li>
+<li> \( |            1      ,     2        ,        5         ,       6 \rangle ,  \)</li>
+<li> \( |            1         ,       2     ,           7         ,       8  \rangle ,  \)</li>
+<li> \( |            3        ,        4      ,          5          ,      6  \rangle ,  \)</li>
+<li> \( |            3        ,        4      ,          7         ,       8  \rangle ,  \)</li>
+<li> \( |            5        ,        6     ,           7     ,           8  \rangle  \)</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec54">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>
+Now we take the following Hamiltonian
+$$
+\hat{H} = \sum_n n \delta \hat{N}_n  - G \hat{P}^\dagger \hat{P}
+$$
+
+where 
+$$
+\hat{N}_n = \hat{a}^\dagger_{n, m=+1/2} \hat{a}_{n, m=+1/2} +
+\hat{a}^\dagger_{n, m=-1/2} \hat{a}_{n, m=-1/2}
+$$
+
+and
+$$
+\hat{P}^\dagger = \sum_{n} \hat{a}^\dagger_{n, m=+1/2} \hat{a}^\dagger_{n, m=-1/2} 
+$$
+
+We can write down the $ 6 \times 6$  Hamiltonian in the basis from the prior slide:
+$$
+H = \left ( 
+\begin{array}{cccccc}
+2\delta -2G & -G & -G & -G & -G & 0 \\
+ -G & 4\delta -2G & -G & -G & -0 & -G \\
+-G & -G & 6\delta -2G & 0 & -G & -G \\
+ -G & -G & 0 & 6\delta-2G & -G & -G \\
+ -G & 0 & -G & -G & 8\delta-2G & -G \\
+0 & -G & -G & -G & -G & 10\delta -2G 
+\end{array} \right )
+$$
+
+(You should check by hand that this is correct.)
+
+<p>
+For \( \delta = 0 \) we have the closed form solution of  the g.s. energy given by \( -6G \).
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec55">Angular momentum algebra </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> We need to define the so-called \( 6j \) and \( 9j \) symbols</li>
+<li> The Wigner-Eckart theorem</li>
+<li> We will also study  some specific examples, like the calculation of the tensor force.</li>
+</ul>
+
+Here you can look up Alex Brown's chapter 5 and Suhonen's chapters 1 and 2.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec56">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We define an irreducible  spherical tensor \( T^{\lambda}_{\mu} \) of rank \( \lambda \) as an operator with \( 2\lambda+1 \) components \( \mu \) 
+that satisfies the commutation relations (\( \hbar=1 \))
+$$
+[J_{\pm}, T^{\lambda}_{\mu}]= \sqrt{(\lambda\mp \mu)(\lambda\pm \mu+1)}T^{\lambda}_{\mu\pm 1},
+$$
+
+and
+$$
+[J_{z}, T^{\lambda}_{\mu}]=\mu T^{\lambda}_{\mu}.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec57">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Our angular momentum coupled two-body wave function obeys clearly this definition, namely
+$$
+|(ab)JM\rangle  = \left\{a^{\dagger}_aa^{\dagger}_b\right\}^J_M|\Phi_0\rangle=N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ab}\rangle, 
+$$
+
+is a tensor of rank \( J \) with \( M \) components. Another well-known example is given by the spherical harmonics (see examples during today's lecture).
+
+<p>
+The product of two irreducible tensor operators
+$$
+T^{\lambda_3}_{\mu_3}=\sum_{\mu_1\mu_2}\langle \lambda_1\mu_1\lambda_2\mu_2|\lambda_3\mu_3\rangle T^{\lambda_1}_{\mu_1}T^{\lambda_2}_{\mu_2}
+$$
+
+is also a tensor operator of rank \( \lambda_3 \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec58">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We wish to apply the above definitions to the computations of a matrix element
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle,
+$$
+
+where we have skipped a reference to specific single-particle states. This is the expectation value for two specific states, labelled by angular momenta \( J' \) and \( J \). These states form an orthonormal basis.
+Using the properties of the Clebsch-Gordan coefficients we can write 
+$$
+T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle=\sum_{J''M''}\langle \lambda \mu J'M'|J''M''\rangle|\Psi^{J''}_{M''}\rangle,
+$$
+
+and assuming that states with different \( J \) and \( M \) are orthonormal we arrive at
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle= \langle \lambda \mu J'M'|JM\rangle \langle \Phi^J_M|\Psi^{J}_{M}\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec59">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We need to show that 
+$$
+\langle \Phi^J_M|\Psi^{J}_{M}\rangle,
+$$
+
+is independent of \( M \).
+To show that 
+$$
+\langle \Phi^J_M|\Psi^{J}_{M}\rangle,
+$$
+
+is independent of \( M \), we use the ladder operators for angular momentum.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec60">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+ We have that
+$$
+\langle \Phi^J_{M+1}|\Psi^{J}_{M+1}\rangle=\left((J-M)(J+M+1)\right)^{-1/2}\langle \hat{J}_{+}\Phi^J_{M}|\Psi^{J}_{M+1}\rangle,
+$$
+
+but this is also equal to 
+$$
+\langle \Phi^J_{M+1}|\Psi^{J}_{M+1}\rangle=\left((J-M)(J+M+1)\right)^{-1/2}\langle \Phi^J_{M}|\hat{J}_{-}\Psi^{J}_{M+1}\rangle,
+$$
+
+meaning that
+$$
+\langle \Phi^J_{M+1}|\Psi^{J}_{M+1}\rangle=\langle \Phi^J_M|\Psi^{J}_{M}\rangle\equiv\langle \Phi^J_{M}||T^{\lambda}||\Phi^{J'}_{M'}\rangle.
+$$
+
+The double bars indicate that this expectation value is independent of the projection \( M \).
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec61">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The Wigner-Eckart theorem for an expectation value can then be written as 
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv\langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle.
+$$
+
+The double bars indicate that this expectation value is independent of the projection \( M \).
+We can manipulate the Clebsch-Gordan coefficients using the relations
+$$
+\langle \lambda \mu J'M'|JM\rangle= (-1)^{\lambda+J'-J}\langle J'M'\lambda \mu |JM\rangle 
+$$
+
+and
+$$
+\langle J'M'\lambda \mu |JM\rangle =(-1)^{J'-M'}\frac{\sqrt{2J+1}}{\sqrt{2\lambda+1}}\langle J'M'J-M |\lambda-\mu\rangle,
+$$
+
+together with the so-called \( 3j \) symbols.
+It is then normal to encounter the Wigner-Eckart theorem in the form 
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv(-1)^{J-M}\left(\begin{array}{ccc}  J & \lambda & J' \\ -M & \mu & M'\end{array}\right)\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle,
+$$
+
+with the condition \( \mu+M'-M=0 \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec62">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The \( 3j \) symbols obey the symmetry relation
+$$
+\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_1 & m_2 & m_3\end{array}\right)=(-1)^{p}\left(\begin{array}{ccc}  j_a & j_b & j_c \\ m_a & m_b & m_c\end{array}\right),
+$$
+
+with \( (-1)^p=1 \) when the columns \( a,b, c \) are even permutations of the columns \( 1,2,3 \), \( p=j_1+j_2+j_3 \) when the columns \( a,b,c \) are odd permtations of the
+columns \( 1,2,3 \) and \( p=j_1+j_2+j_3 \) when all the magnetic quantum numbers \( m_i \) change sign. Their orthogonality is given by
+$$
+\sum_{j_3m_3}(2j_3+1)\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_1 & m_2 & m_3\end{array}\right)\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_{1'} & m_{2'} & m_3\end{array}\right)=\delta_{m_1m_{1'}}\delta_{m_2m_{2'}},
+$$
+
+and 
+$$
+\sum_{m_1m_2}\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_1 & m_2 & m_3\end{array}\right)\left(\begin{array}{ccc}  j_1 & j_2 & j_{3'} \\ m_{1} & m_{2} & m_{3'}\end{array}\right)=\frac{1}{(2j_3+1)}\delta_{j_3j_{3'}}\delta_{m_3m_{3'}}.
+$$
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec63">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+For later use, the following special cases for the Clebsch-Gordan and \( 3j \) symbols are rather useful
+\[
+\langle JM J'M' |00\rangle =\frac{(-1)^{J-M}}{\sqrt{2J+1}}\delta_{JJ'}\delta_{MM'}.
+\] 
+and 
+\[
+\left(\begin{array}{ccc}  J &amp; 1 & J \\ -M &amp; 0 & M'\end{array}\right)=(-1)^{J-M}\frac{M}{\sqrt{(2J+1)(J+1)}}\delta_{MM'}.
+\]
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec64">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Using \( 3j \) symbols we rewrote the Wigner-Eckart theorem as
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv(-1)^{J-M}\left(\begin{array}{ccc}  J & \lambda & J' \\ -M & \mu & M'\end{array}\right)\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle.
+$$
+
+Multiplying from the left with the same \( 3j \) symbol and summing over \( M,\mu,M' \) we obtain the equivalent relation 
+$$
+\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle\equiv\sum_{M,\mu,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & \lambda & J' \\ -M & \mu & M'\end{array}\right)\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle,
+$$
+
+where we used the orthogonality properties of the \( 3j \) symbols from the previous page.
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec65">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+This relation can in turn be used to compute the expectation value of some simple reduced matrix elements like
+$$
+\langle \Phi^J||{\bf 1}||\Phi^{J'}\rangle=\sum_{M,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & 0 & J' \\ -M & 0 & M'\end{array}\right)\langle \Phi^J_M|1|\Phi^{J'}_{M'}\rangle=\sqrt{2J+1}\delta_{JJ'}\delta_{MM'},
+$$
+
+where we used
+$$
+\langle JM J'M' |00\rangle =\frac{(-1)^{J-M}}{\sqrt{2J+1}}\delta_{JJ'}\delta_{MM'}.
+$$
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec66">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Similarly, using 
+$$
+\left(\begin{array}{ccc}  J & 1 & J \\ -M & 0 & M'\end{array}\right)=(-1)^{J-M}\frac{M}{\sqrt{(2J+1)(J+1)}}\delta_{MM'},
+$$
+
+we have that 
+$$
+\langle \Phi^J||{\bf J}||\Phi^{J}\rangle=\sum_{M,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & 1 & J' \\ -M & 0 & M'\end{array}\right)\langle \Phi^J_M|j_Z|\Phi^{J'}_{M'}\rangle=\sqrt{J(J+1)(2J+1)}
+$$
+
+With the Pauli spin matrices \( \sigma \) and a state with \( J=1/2 \), the reduced matrix element
+$$
+\langle \frac{1}{2}||{\bf \sigma}||\frac{1}{2}\rangle=\sqrt{6}.
+$$
+
+Before we proceed with further examples, we need some other properties of the Wigner-Eckart theorem plus some additional angular momenta relations.
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec67">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The Wigner-Eckart theorem states that the  expectation value for an irreducible spherical tensor can be written as
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv\langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle.
+$$
+
+Since the Clebsch-Gordan coefficients themselves are easy to evaluate, the interesting quantity is the reduced matrix element. Note also that 
+the Clebsch-Gordan coefficients limit via the triangular relation among \( \lambda \), \( J \) and \( J' \) the possible non-zero values.
+
+<p>
+From the theorem we see also that 
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle=\frac{\langle \lambda \mu J'M'|JM\rangle\langle }{\langle \lambda \mu_0 J'M'_0|JM_0\rangle\langle }\langle \Phi^J_{M_0}|T^{\lambda}_{\mu_0}|\Phi^{J'}_{M'_0}\rangle,
+$$
+
+meaning that if we know the matrix elements for say some \( \mu=\mu_0 \), \( M'=M'_0 \) and \( M=M_0 \) we can calculate all other.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec68">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+If we look at the hermitian adjoint of the operator \( T^{\lambda}_{\mu} \), 
+we see via the commutation relations that \( (T^{\lambda}_{\mu})^{\dagger} \) is not an irreducible tensor, that is
+$$
+[J_{\pm}, (T^{\lambda}_{\mu})^{\dagger}]= -\sqrt{(\lambda\pm \mu)(\lambda\mp \mu+1)}(T^{\lambda}_{\mu\mp 1})^{\dagger},
+$$
+
+and 
+$$
+[J_{z}, (T^{\lambda}_{\mu})^{\dagger}]=-\mu (T^{\lambda}_{\mu})^{\dagger}.
+$$
+
+The hermitian adjoint \( (T^{\lambda}_{\mu})^{\dagger} \) is not an irreducible tensor. As an example, consider the spherical harmonics for 
+\( l=1 \) and \( m_l=\pm 1 \). These functions are 
+$$
+Y^{l=1}_{m_l=1}(\theta,\phi)=-\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{\imath\phi},
+$$
+
+and
+$$
+Y^{l=1}_{m_l=-1}(\theta,\phi)=\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{-\imath\phi},
+$$
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec69">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+It is easy to see that the Hermitian adjoint of these two functions
+$$
+\left[Y^{l=1}_{m_l=1}(\theta,\phi)\right]^{\dagger}=-\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{-\imath\phi},
+$$
+
+and 
+$$
+\left[Y^{l=1}_{m_l=-1}(\theta,\phi)\right]^{\dagger}=\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{\imath\phi},
+$$
+
+do not behave as a spherical tensor. However, the modified quantity 
+$$
+\tilde{T}^{\lambda}_{\mu}=(-1)^{\lambda+\mu}(T^{\lambda}_{-\mu})^{\dagger},
+$$
+
+does satisfy the above commutation relations.
+
+
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec70">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+With the modified quantity 
+$$
+\tilde{T}^{\lambda}_{\mu}=(-1)^{\lambda+\mu}(T^{\lambda}_{-\mu})^{\dagger},
+$$
+
+we can then define the expectation value
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle^{\dagger} = \langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle^*,
+$$
+
+since the Clebsch-Gordan coefficients are real. The rhs is equivalent with 
+$$
+\langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle^*=\langle \Phi^{J'}_{M'}|(T^{\lambda}_{\mu})^{\dagger}|\Phi^{J}_{M}\rangle,
+$$
+
+which is equal to 
+$$
+\langle \Phi^{J'}_{M'}|(T^{\lambda}_{\mu})^{\dagger}|\Phi^{J}_{M}\rangle=(-1)^{-\lambda+\mu}\langle \lambda -\mu JM|J'M'\rangle\langle \Phi^{J'}||\tilde{T}^{\lambda}||\Phi^{J}\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec71">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We have till now seen the following definitions of a two-body matrix elements 
+with quantum numbers \( p=j_pm_p \) etc we have a two-body state defined as
+$$
+|(pq)M\rangle  = a^{\dagger}_pa^{\dagger}_q|\Phi_0\rangle,
+$$
+
+where \( |\Phi_0\rangle \) is a chosen reference state, say for example the Slater determinant which approximates 
+\( {}^{16}\mbox{O} \) with the \( 0s \) and the \( 0p \) shells being filled, and \( M=m_p+m_q \). Recall that we label single-particle states above the Fermi level as \( abcd\dots \) and states below the Fermi level for \( ijkl\dots \).  
+In case of two-particles in the single-particle states \( a \) and \( b \) outside \( {}^{16}\mbox{O} \) as a closed shell core, say \( {}^{18}\mbox{O} \), 
+we would write the representation of the Slater determinant as
+$$
+|^{18}\mathrm{O}\rangle =|(ab)M\rangle  = a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle=|\Phi^{ab}\rangle.
+$$
+
+In case of two-particles removed from say \( {}^{16}\mbox{O} \), for example two neutrons in the single-particle states \( i \) and \( j \), we would write this as
+$$
+|^{14}\mathrm{O}\rangle =|(ij)M\rangle  = a_ja_i|^{16}\mathrm{O}\rangle=|\Phi_{ij}\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec72">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+For a one-hole-one-particle state we have
+$$
+|^{16}\mathrm{O}\rangle_{1p1h} =|(ai)M\rangle  = a_a^{\dagger}a_i|^{16}\mathrm{O}\rangle=|\Phi_{i}^a\rangle,
+$$
+
+and finally for a two-particle-two-hole state we 
+$$
+|^{16}\mathrm{O}\rangle_{2p2h} =|(abij)M\rangle  = a_a^{\dagger}a_b^{\dagger}a_ja_i|^{16}\mathrm{O}\rangle=|\Phi_{ij}^{ab}\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec73">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Let us go back to the case of two-particles in the single-particle states \( a \) and \( b \) outside \( {}^{16}\mbox{O} \) as a closed shell core, say \( {}^{18}\mbox{O} \).
+The representation of the Slater determinant is 
+$$
+|^{18}\mathrm{O}\rangle =|(ab)M\rangle  = a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle=|\Phi^{ab}\rangle.
+$$
+
+The anti-symmetrized matrix element is detailed as 
+$$
+\langle (ab) M | \hat{V} | (cd) M \rangle = \langle (j_am_aj_bm_b)M=m_a+m_b |  \hat{V} | (j_cm_cj_dm_d)M=m_a+m_b \rangle,
+$$
+
+and note that anti-symmetrization means 
+$$
+\langle (ab) M | \hat{V} | (cd) M \rangle =-\langle (ba) M | \hat{V} | (cd) M \rangle =\langle (ba) M | \hat{V} | (dc) M \rangle,
+$$
+
+$$
+\langle (ab) M | \hat{V} | (cd) M \rangle =-\langle (ab) M | \hat{V} | (dc) M \rangle. 
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec74">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+This matrix element is the expectation value of 
+$$
+\langle ^{16}\mathrm{O}|a_ba_a\frac{1}{4}\sum_{pqrs}\langle (pq) M | \hat{V} | (rs) M' \rangle a^{\dagger}_pa^{\dagger}_qa_sa_r a^{\dagger}_ca^{\dagger}_c|^{16}\mathrm{O}\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec75">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We have also defined matrix elements in the coupled basis, the so-called \( J \)-coupled scheme.
+In this case the two-body wave function for two neutrons outside \( {}^{16}\mbox{O} \) is written as 
+$$
+|^{18}\mathrm{O}\rangle_J =|(ab)JM\rangle  = \left\{a^{\dagger}_aa^{\dagger}_b\right\}^J_M|^{16}\mathrm{O}\rangle=N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ab}\rangle, 
+$$
+
+with 
+$$
+|\Phi^{ab}\rangle=a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle.
+$$
+
+We have now an explicit coupling order, where the angular momentum \( j_a \) is coupled to the angular momentum \( j_b \) to yield a final two-body angular momentum \( J \). 
+The normalization factor is
+$$
+N_{ab}=\frac{\sqrt{1+\delta_{ab}\times (-1)^J}}{1+\delta_{ab}}.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec76">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The implementation of the Pauli principle looks different in the \( J \)-scheme compared with the \( m \)-scheme. In the latter, no two fermions or more can have the same set of quantum numbers. In the \( J \)-scheme, when we write a state with the shorthand 
+$$
+|^{18}\mathrm{O}\rangle_J =|(ab)JM\rangle,
+$$
+
+we do refer to the angular momenta only. This means that another way of writing the last state is
+$$
+|^{18}\mathrm{O}\rangle_J =|(j_aj_b)JM\rangle.
+$$
+
+We will use this notation throughout when we refer to a two-body state in \( J \)-scheme. The Kronecker \( \delta \) function in the normalization factor 
+refers thus to the values of \( j_a \) and \( j_b \). If two identical particles are in a state with the same \( j \)-value, then only even values of the total angular momentum apply.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec77">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Note also that, using the anti-commuting 
+properties of the creation operators, we obtain
+$$
+N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM>|\Phi^{ab}\rangle=-N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ba}\rangle.
+$$
+
+Furthermore, using the property of the Clebsch-Gordan coefficient
+$$
+\langle j_am_aj_bm_b|JM>=(-1)^{j_a+j_b-J}\langle j_bm_bj_am_a|JM\rangle,
+$$
+
+which can be used to show that
+$$
+|(j_bj_a)JM\rangle  = \left\{a^{\dagger}_ba^{\dagger}_a\right\}^J_M|^{16}\mathrm{O}\rangle=N_{ab}\sum_{m_am_b}\langle j_bm_bj_am_a|JM\rangle|\Phi^{ba}\rangle, 
+$$
+
+is equal to 
+$$
+|(j_bj_a)JM\rangle=(-1)^{j_a+j_b-J+1}|(j_aj_b)JM\rangle.
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec78">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The two-body matrix element is a scalar and since it obeys rotational symmetry, it is diagonal in \( J \), 
+meaning that the corresponding matrix element in \( J \)-scheme is 
+$$
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_bm_cm_d}\langle j_am_aj_bm_b|JM\rangle
+$$
+
+$$
+\times \langle j_cm_cj_dm_d|JM\rangle\langle (j_am_aj_bm_b)M |  \hat{V} | (j_cm_cj_dm_d)M \rangle,
+$$
+
+and note that of the four \( m \)-values in the above sum, only three are independent due to the constraint \( m_a+m_b=M=m_c+m_d \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec79">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Since
+$$
+|(j_bj_a)JM\rangle=(-1)^{j_a+j_b-J+1}|(j_aj_b)JM\rangle,
+$$
+
+the anti-symmetrized matrix elements need now to obey the following relations
+$$
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_a+j_b-J+1}\langle (j_bj_a) JM | \hat{V} | (j_cj_d) JM \rangle,
+$$
+
+$$
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_c+j_d-J+1}\langle (j_aj_b) JM | \hat{V} | (j_dj_c) JM \rangle,
+$$
+
+$$
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_a+j_b+j_c+j_d}\langle (j_bj_a) JM | \hat{V} | (j_dj_c) JM \rangle=\langle (j_bj_a) JM | \hat{V} | (j_dj_c) JM \rangle,
+$$
+
+where the last relations follows from the fact that \( J \) is an integer and \( 2J \) is always an even number.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec80">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Using the orthogonality properties of the Clebsch-Gordan coefficients,
+$$
+\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle\langle j_am_aj_bm_b|J'M'\rangle=\delta_{JJ'}\delta_{MM'},
+$$
+
+and
+$$
+\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_am_a'j_bm_b'|JM\rangle=\delta_{m_am_a'}\delta_{m_bm_b'},
+$$
+
+we can also express the two-body matrix element in \( m \)-scheme in terms of that in \( J \)-scheme, that is, if we multiply with 
+$$
+\sum_{JMJ'M'}\langle j_am_a'j_bm_b'|JM\rangle\langle j_cm_c'j_dm_d'|J'M'\rangle
+$$
+
+from left in
+$$
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_bm_cm_d}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle
+$$
+
+$$
+\times \langle (j_am_aj_bm_b)M|  \hat{V} | (j_cm_cj_dm_d)M\rangle,
+$$
+
+we obtain
+$$
+\langle (j_am_aj_bm_b)M |  \hat{V} | (j_cm_cj_dm_d)M\rangle=\frac{1}{N_{ab}N_{cd}}\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle
+$$
+
+$$
+\times \langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec81">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Let us now apply the theorem to some selected expectation values.
+In several of the expectation values we will meet when evaluating explicit matrix elements, we will have to deal with expectation values involving spherical harmonics. A general central interaction can be expanded in a complete set of functions like the Legendre polynomials, that is, we have an interaction, with \( r_{ij}=|{\bf r}_i-{\bf r}_j| \),
+$$
+v(r_{ij})=\sum_{\nu=0}^{\infty}v_{\nu}(r_{ij})P_{\nu}(\cos{(\theta_{ij})},
+$$
+
+with \( P_{\nu} \) being a Legendre polynomials
+$$
+P_{\nu}(\cos{(\theta_{ij})}=\sum_{\mu}\frac{4\pi}{2\mu+1}Y_{\mu}^{\nu *}(\Omega_{i})Y_{\mu}^{\nu}(\Omega_{j}).
+$$
+
+We will come back later to how we split the above into a contribution that involves only one of the coordinates.
+
+
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec82">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+This means that we will need matrix elements of the type
+$$
+\langle Y^{l'}||Y^{\lambda}|| Y^{l}\rangle.
+$$
+
+We can rewrite the Wigner-Eckart theorem as 
+$$
+\langle Y^{l'}||Y^{\lambda}|| Y^{l}\rangle=\sum_{m\mu}\langle \lambda\mu lm|l'm'\rangle Y^{\lambda}_{\mu}Y^l_m,
+$$
+
+This equation is true for all values of \( \theta \) and \( \phi \). It must also hold for \( \theta=0 \).
+
+
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec83">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We have 
+$$
+\langle Y^{l'}||Y^{\lambda}|| Y^{l}\rangle=\sum_{m\mu}\langle \lambda\mu lm|l'm'\rangle Y^{\lambda}_{\mu}Y^l_m,
+$$
+
+and for \( \theta=0 \), the spherical harmonic
+$$
+Y_m^l(\theta=0,\phi)=\sqrt{\frac{2l+1}{4\pi}}\delta_{m0}, 
+$$
+
+which results in 
+$$
+\langle Y^{l'}||Y^{\lambda}|| Y^{l}\rangle=\left\{\frac{(2l+1)(2\lambda+1)}{4\pi(2l'+1)}\right\}^{1/2}\langle \lambda0 l0|l'0\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec84">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Till now we have mainly been concerned with the coupling of two angular momenta $j_aj_b$to a final angular momentum \( J \).
+If we wish to describe a three-body state with a final angular momentum \( J \), we need to couple three angular momenta, say 
+the two momenta \( j_a,j_b \) to a third one \( j_c \). The coupling order is important and leads to a less trivial implementation of the 
+Pauli principle. With three angular momenta there are obviously \( 3! \) ways by which we can combine the angular momenta. 
+In \( m \)-scheme a three-body Slater determinant is represented as (say for the case of $^{19}$O, three neutrons outside the core of $^{16}$O),
+$$
+|^{19}\mathrm{O}\rangle =|(abc)M\rangle  = a^{\dagger}_aa^{\dagger}_ba^{\dagger}_c|^{16}\mathrm{O}\rangle=|\Phi^{abc}\rangle.
+$$
+
+The Pauli principle is automagically implemented via the anti-commutation relations.
+
+
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec85">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+However, when we deal the same state in an angular momentum coupled basis, we need to be a little bit more careful. We can namely couple the states
+as follows
+$$
+| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) J\rangle= \sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle|j_am_a\rangle\otimes |j_bm_b\rangle \otimes |j_cm_c\rangle \ , 
+\label{eq:fabc}
+$$
+
+that is, we couple first \( j_a \) to \( j_b \) to yield an intermediate angular momentum \( J_{ab} \), then to \( j_c \) yielding the final angular momentum \( J \).
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec86">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Now, nothing hinders us from recoupling this state by coupling \( j_b \) to \( j_c \), yielding an intermediate angular momentum \( J_{bc} \) and then couple this angular momentum to \( j_a \), resulting in the final angular momentum \( J' \).
+
+<p>
+That is, we can have 
+$$
+| (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) J\rangle = \sum_{m_a'm_b'm_c'}\langle j_bm_b'j_cm_c'|J_{bc}M_{bc}\rangle \langle j_am_a'J_{bc}M_{bc}|J'M'\rangle|\Phi^{abc}\rangle .
+$$
+
+We will always assume that we work with orthornormal states, this means that when we compute the overlap betweem these two possible ways of coupling angular momenta, we get 
+$$
+\begin{eqnarray}
+\nonumber
+\lefteqn{ \langle (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) J'M'| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle = } \\
+\nonumber
+& & \delta_{JJ'}\delta_{MM'}\sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle \\
+& & \times \langle j_bm_bj_cm_c|J_{bc}M_{bc}\rangle \langle j_am_aJ_{bc}M_{bc}|JM\rangle . \nonumber
+\end{eqnarray}
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec87">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We use then the latter equation to define the so-called \( 6j \)-symbols
+$$
+\begin{eqnarray}
+\nonumber
+\lefteqn{ \langle (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) J'M'| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle } \\ \nonumber
+&= & \delta_{JJ'}\delta_{MM'}\sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle \\ \nonumber
+& &  \times \langle j_bm_bj_cm_c|J_{bc}M_{bc}\rangle \langle j_am_aJ_{bc}M_{bc}|JM\rangle  \\ \nonumber
+&= & (-1)^{j_a+j_b+j_c+J}\sqrt{(2J_{ab}+1)(2J_{bc}+1)}\left\{\begin{array}{ccc} j_a & j_b& J_{ab} \\ j_c & J & J_{bc} \end{array}\right\}
+, \nonumber
+\end{eqnarray}
+$$
+
+where the symbol in curly brackets \( \{\} \) is the \( 6j \) symbol. 
+A specific coupling order has to be respected in the symbol, that is, the so-called triangular relations between three angular momenta needs to be respected, that is 
+$$
+\left\{\begin{array}{ccc} x & x& x \\  &  &  \end{array}\right\}\hspace{0.1cm}\left\{\begin{array}{ccc}  & & x \\  x& x &  \end{array}\right\}\hspace{0.1cm}\left\{\begin{array}{ccc}  & x&  \\ x &  &x  \end{array}\right\}\hspace{0.1cm}\left\{\begin{array}{ccc} x & &  \\  & x &x  \end{array}\right\}\hspace{0.1cm}
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec88">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The \( 6j \) symbol is invariant under the permutation of any two columns
+$$
+    \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6 \end{Bmatrix} = \begin{Bmatrix} j_2 & j_1 & j_3\\ j_5 & j_4 & j_6 \end{Bmatrix} = \begin{Bmatrix} j_1 & j_3 & j_2\\ j_4 & j_6 & j_5 \end{Bmatrix} = \begin{Bmatrix} j_3 & j_2 & j_1\\ j_6 & j_5 & j_4 \end{Bmatrix}. 
+$$
+
+The \( 6j \) symbol is also invariant if upper and lower arguments are interchanged in any two columns
+$$
+    \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6 \end{Bmatrix} = \begin{Bmatrix} j_4 & j_5 & j_3\\ j_1 & j_2 & j_6 \end{Bmatrix} = \begin{Bmatrix} j_1 & j_5 & j_6\\ j_4 & j_2 & j_3 \end{Bmatrix} = \begin{Bmatrix} j_4 & j_2 & j_6\\ j_1 & j_5 & j_3 \end{Bmatrix}. 
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec89">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The \( 6j \) symbols satisfy this orthogonality relation
+$$
+    \sum_{j_3} (2j_3+1) \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6 \end{Bmatrix} \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6' \end{Bmatrix} = \frac{\delta_{j_6^{}j_6'}}{2j_6+1} \{j_1,j_5,j_6\} \{j_4,j_2,j_6\}. 
+$$
+
+The symbol \( \{j_1j_2j_3\} \) (called the triangular delta) is equal to one if the triad \( (j_1j_2j_3) \) satisfies the triangular conditions and zero otherwise.
+A useful value is given when say one of the angular momenta are zero, say \( J_{bc}=0 \), then we have
+$$
+\left\{\begin{array}{ccc} j_a & j_b& J_{ab} \\ j_c & J & 0 \end{array}\right\}=\frac{(-1)^{j_a+j_b+J_{ab}}\delta_{Jj_a}\delta_{j_cj_b} }{\sqrt{(2j_{a}+1)(2j_{b}+1)}}
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec90">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+With the \( 6j \) symbol defined, we can go back and and rewrite the overlap between the two ways of recoupling angular momenta in terms of the \( 6j \) symbol.
+That is, we can have  
+$$
+\begin{eqnarray}
+\nonumber
+\lefteqn{| (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) JM\rangle = } \\
+\nonumber
+& &\sum_{J_{ab}}(-1)^{j_a+j_b+j_c+J}\sqrt{(2J_{ab}+1)(2J_{bc}+1)}\left\{\begin{array}{ccc} j_a & j_b& J_{ab} \\ j_c & J & J_{bc} \end{array}\right\}| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle
+. \nonumber
+\end{eqnarray}
+$$
+
+Can you find the inverse relation?  
+These relations can in turn be used to write out the fully anti-symmetrized three-body wave function in a \( J \)-scheme coupled basis. 
+If you opt then for a specific coupling order, say \( | ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle \), you need to express this representation in terms of the other coupling possibilities.
+
+
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec91">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Note that the two-body intermediate state is assumed to be antisymmetric but
+not normalized, that is, the state which involves the quantum numbers 
+\( j_a \) and \( j_b \). Assume that the intermediate 
+two-body state is antisymmetric. With this coupling order, we can 
+rewrite ( in a schematic way) the general three-particle Slater determinant as 
+$$
+\Phi(a,b,c) = {\cal A} | ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) J\rangle, 
+$$
+
+with an implicit sum over \( J_{ab} \).  The antisymmetrization operator \( {\cal A} \) is used here to indicate that we need to antisymmetrize the state. <b>Challenge</b>: Use the definition of the \( 6j \) symbol and find an explicit 
+expression for the above three-body state using the coupling order \( | ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) J\rangle \).
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec92">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can also coupled together four angular momenta. Consider two four-body states, with single-particle angular momenta \( j_a \), \( j_b \), \( j_c \) and \( j_d \) we can have a state with final \( J \)
+$$
+|\Phi(a,b,c,d)\rangle_1 = | ([j_a\rightarrow j_b]J_{ab}\times [j_c\rightarrow j_d]J_{cd}) JM\rangle, 
+$$
+
+where we read the coupling order as \( j_a \) couples with \( j_b \) to given and intermediate angular momentum \( J_{ab} \). 
+Moreover, \( j_c \) couples with \( j_d \) to given and intermediate angular momentum \( J_{cd} \).  The two intermediate angular momenta \( J_{ab} \) and \( J_{cd} \)
+are in turn coupled to a final \( J \).  These operations involved three Clebsch-Gordan coefficients.
+
+<p>
+Alternatively, we could couple in the following order
+$$
+|\Phi(a,b,c,d)\rangle_2 = | ([j_a\rightarrow j_c]J_{ac}\times [j_b\rightarrow j_d]J_{bd}) JM\rangle, 
+$$
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec93">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The overlap between these two states
+$$
+\langle([j_a\rightarrow j_c]J_{ac}\times [j_b\rightarrow j_d]J_{bd}) JM| ([j_a\rightarrow j_b]J_{ab}\times [j_c\rightarrow j_d]J_{cd}) JM\rangle, 
+$$
+
+is equal to 
+$$
+\begin{eqnarray}
+\nonumber
+& & \sum_{m_iM_{ij}}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle j_cm_cj_dm_d|J_{cd}M_{cd}\rangle \langle J_{ab}M_{ab}J_{cd}M_{cd}|JM\rangle \\
+& & \times\langle j_am_aj_cm_c|J_{ac}M_{ac}\rangle \langle j_bm_bj_dm_d|J_{cd}M_{bd}\rangle \langle J_{ac}M_{ac}J_{bd}M_{bd}|JM\rangle \\  \nonumber
+&= & \sqrt{(2J_{ab}+1)(2J_{cd}+1)(2J_{ac}+1)(2J_{bd}+1)}\left\{\begin{array}{ccc} j_a & j_b& J_{ab} \\ j_c & j_d& J_{cd} \\J_{ac} & J_{bd}& J\end{array}\right\}
+, \nonumber
+\end{eqnarray}
+$$
+
+with the symbol in curly brackets \( \{\} \) being the \( 9j \)-symbol. We see  that a \( 6j \) symbol  involves four Clebsch-Gordan coefficients, while the \( 9j \) symbol
+involves six.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec94">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+A \( 9j \) symbol is invariant under reflection in either diagonal
+$$
+    \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6\\ j_7 & j_8 & j_9 \end{Bmatrix} = \begin{Bmatrix} j_1 & j_4 & j_7\\ j_2 & j_5 & j_8\\ j_3 & j_6 & j_9 \end{Bmatrix} = \begin{Bmatrix} j_9 & j_6 & j_3\\ j_8 & j_5 & j_2\\ j_7 & j_4 & j_1 \end{Bmatrix}. 
+$$
+
+The permutation of any two rows or any two columns yields a phase factor \( (-1)^S \), where
+$$
+    S=\sum_{i=1}^9 j_i. 
+$$
+
+As an  example we have
+$$
+    \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6\\ j_7 & j_8 & j_9 \end{Bmatrix} = (-1)^S \begin{Bmatrix} j_4 & j_5 & j_6\\ j_1 & j_2 & j_3\\ j_7 & j_8 & j_9 \end{Bmatrix} = (-1)^S \begin{Bmatrix} j_2 & j_1 & j_3\\ j_5 & j_4 & j_6\\ j_8 & j_7 & j_9 \end{Bmatrix}. 
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec95">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+A useful case is when say \( J=0 \) in 
+$$
+\left\{\begin{array}{ccc} j_a & j_b& J_{ab} \\ j_c & j_d & J_{cd} \\ J_{ac} & J_{bd}& 0\end{array}\right\}=\frac{\delta_{J_{ab}J_{cd}} \delta_{J_{ac}J_{bd}}}{\sqrt{(2J_{ab}+1)(2J_{ac}+1)}} (-1)^{j_b+J_{ab}+j_c+J_{ac}} \begin{Bmatrix} j_a & j_b & J_{ab}\\ j_d & j_c & J_{ac} \end{Bmatrix}. 
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec96">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The tensor operator in the nucleon-nucleon potential
+is given by
+$$
+\begin{array}{ll}
+&\\
+\langle lSJ\vert S_{12}\vert l'S'J\rangle =&
+(-)^{S+J}\sqrt{30(2l+1)(2l'+1)(2S+1)(2S'+1)}\\
+&\times\left\{\begin{array}{ccc}J&S'&l'\\2&l&S\end{array}\right\}
+\left(\begin{array}{ccc}l'&2&l\\0&0&0\end{array}\right)
+\left\{\begin{array}{ccc}s_{1}&s_{2}&S\\s_{3}&s_{4}&S'\\
+1&1&2\end{array}
+\right\}\\
+&\times\langle s_{1}\vert\vert \sigma_{1}\vert\vert s_{3}\rangle
+\langle s_{2}\vert\vert \sigma_{2}\vert \vert s_{4}\rangle,
+\end{array}
+$$
+
+and it is zero for the \( ^1S_0 \) wave.
+
+<p>
+How do we get here?
+
+
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec97">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+To derive the expectation value of the nuclear tensor force, we recall that 
+the product of two irreducible tensor operators is
+$$
+W^{r}_{m_r}=\sum_{m_pm_q}\langle pm_pqm_q|rm_r\rangle T^{p}_{m_p}U^{q}_{m_q},
+$$
+
+and using the orthogonality properties of the Clebsch-Gordan coefficients we can rewrite the above as
+$$
+T^{p}_{m_p}U^{q}_{m_q}=\sum_{m_pm_q}\langle pm_pqm_q|rm_r\rangle W^{r}_{m_r}.
+$$
+
+Assume now that the operators \( T \) and \( U \) act on different parts of say a wave function. The operator \( T \) could act on the spatial part only while the operator \( U \) acts only on the spin part. This means also that these operators commute.
+The reduced matrix element of this operator is thus, using the Wigner-Eckart theorem,
+$$
+\langle (j_aj_b)J||W^{r}||(j_cj_d)J'\rangle\equiv\sum_{M,m_r,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & r & J' \\ -M & m_r & M'\end{array}\right)
+$$
+
+$$
+\times\langle (j_aj_bJM|\left[ T^{p}_{m_p}U^{q}_{m_q} \right]^{r}_{m_r}|(j_cj_d)J'M'\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec98">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Starting with
+$$
+\langle (j_aj_b)J||W^{r}||(j_cj_d)J'\rangle\equiv\sum_{M,m_r,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & r & J' \\ -M & m_r & M'\end{array}\right)
+$$
+
+$$
+\times\langle (j_aj_bJM|\left[ T^{p}_{m_p}U^{q}_{m_q} \right]^{r}_{m_r}|(j_cj_d)J'M'\rangle,
+$$
+
+we assume now that \( T \) acts only on \( j_a \) and \( j_c \) and that \( U \) acts only on \( j_b \) and \( j_d \). 
+The matrix element \( \langle (j_aj_bJM|\left[ T^{p}_{m_p}U^{q}_{m_q} \right]^{r}_{m_r}|(j_cj_d)J'M'\rangle \) can be written out,
+when we insert a complete set of states \( |j_im_ij_jm_j\rangle\langle j_im_ij_jm_j| \) between \( T \) and \( U \) as
+$$
+\langle (j_aj_bJM|\left[ T^{p}_{m_p}U^{q}_{m_q} \right]^{r}_{m_r}|(j_cj_d)J'M'\rangle=\sum_{m_i}\langle pm_pqm_q|rm_r\rangle\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|J'M'\rangle
+$$
+
+$$
+\times \langle (j_am_aj_bm_b|\left[ T^{p}_{m_p}\right]^{r}_{m_r}|(j_cm_cj_bm_b)\rangle\langle (j_cm_cj_bm_b|\left[ U^{q}_{m_q}\right]^{r}_{m_r}|(j_cm_cj_dm_d)\rangle.
+$$
+
+The complete set of states that was inserted between \( T \) and \( U \) reduces to \( |j_cm_cj_bm_b\rangle\langle j_cm_cj_bm_b| \)
+due to orthogonality of the states.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec99">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Combining the last two equations from the previous slide and 
+and applying the Wigner-Eckart theorem, we arrive at (rearranging phase factors)
+$$
+\langle (j_aj_b)J||W^{r}||(j_cj_d)J'\rangle=\sqrt{(2J+1)(2r+1)(2J'+1)}\sum_{m_iM,M'}\left(\begin{array}{ccc}  J & r & J' \\ -M & m_r & M'\end{array}\right)
+$$
+
+$$
+\times\left(\begin{array}{ccc} j_a  &j_b  & J \\ m_a &m_b &-M \end{array}\right)
+\left(\begin{array}{ccc} j_c  &j_d  &J'  \\ -m_c &-m_d &M' \end{array}\right)
+\left(\begin{array}{ccc} p  & q & r \\  -m_p&-m_q &m_r \end{array}\right)
+$$
+
+$$
+\times\left(\begin{array}{ccc} j_a  &j_c  &p  \\ m_a &-m_c &-m_p \end{array}\right)\left(\begin{array}{ccc} j_b  &j_d  &q  \\ m_b &-m_d &-m_q \end{array}\right)\langle j_a||T^p||j_c\rangle \times \langle j_b||U^q||j_d\rangle
+$$
+
+which can be rewritten in terms of a \( 9j \) symbol as 
+$$
+\langle (j_aj_b)J||W^{r}||(j_cj_d)J'\rangle=\sqrt{(2J+1)(2r+1)(2J'+1)}\langle j_a||T^p||j_c\rangle  \langle j_b||U^q||j_d\rangle\left\{\begin{array}{ccc} j_a & j_b& J \\ j_c & j_d & J' \\ p & q& r\end{array}\right\}.
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec100">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+From this expression we can in turn compute for example the spin-spin operator of the tensor force.
+
+<p>
+In case \( r=0 \), that is we two tensor operators coupled to a scalar, we can use (with \( p=q \)) 
+$$
+\left\{\begin{array}{ccc} j_a & j_b& J \\ j_c & j_d & J' \\ p &p & 0\end{array}\right\}=\frac{\delta_{JJ'} \delta_{pq}}{\sqrt{(2J+1)(2J+1)}} (-1)^{j_b+j_c+2J} \begin{Bmatrix} j_a & j_b & J\\ j_d & j_c & p \end{Bmatrix},
+$$
+
+and obtain
+$$
+\langle (j_aj_b)J||W^{0}||(j_cj_d)J'\rangle=(-1)^{j_b+j_c+2J}\langle j_a||T^p||j_c\rangle\langle j_b||U^p||j_d\rangle \begin{Bmatrix} j_a & j_b & J\\ j_d & j_c & p \end{Bmatrix}.
+$$
+
+
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec101">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Another very useful expression is the case where the operators act in just one space. We state here without 
+showing that the reduced matrix element
+$$
+\langle j_a||W^{r}||j_b\rangle=\langle j_a||\left[T^p\times T^q\right]^{r}||j_b\rangle= (-1)^{j_a+j_b+r}\sqrt{2r+1} \sum_{j_c}\begin{Bmatrix} j_b & j_a & r\\ p & q & j_c \end{Bmatrix}
+$$
+
+$$
+\times \langle j_a||T^p||j_c\rangle \langle j_c||T^q||j_b\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec102">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The tensor operator in 
+the nucleon-nucleon potential can be written as  
+$$
+V=\frac{3}{r^{2}}\left[ \left[ {\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^
+{(2)} \otimes\left[{\bf r} \otimes {\bf r} \right]^{(2)}\right]^{(0)}_0
+$$
+
+Since the irreducible tensor  
+\( \left[{\bf r} \otimes {\bf r} \right]^{(2)} \)
+operates  only on the angular quantum numbers and
+\( \left[{\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^{(2)} \) 
+operates  only on 
+the spin states we can write the matrix element 
+$$
+\begin{eqnarray*}
+\langle lSJ\vert V\vert lSJ\rangle & = &
+\langle lSJ \vert\left[ \left[{\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^{(2)} \otimes
+\left[{\bf r} \otimes {\bf r} \right]^{(2)}\right]^{(0)}_0\vert l'S'J\rangle \\
+&  = &
+(-1)^{J+l+S}
+\left\{\begin{array}{ccc} l&S&J \\ l'&S'&2\end{array}\right\}
+\langle l \vert\vert\left[{\bf r} \otimes {\bf r} \right]^{(2)} \vert \vert l'\rangle\\
+& &
+\times \langle S\vert\vert\left[{\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^{(2)} \vert\vert S'\rangle
+\end{eqnarray*}
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec103">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We need that
+the coordinate vector \( {\bf r} \) can be written in terms of spherical 
+components as 
+$$
+{\bf r}_\alpha = r\sqrt{\frac{4\pi}{3}} Y_{1\alpha}
+$$
+
+Using this expression we get 
+$$
+\begin{eqnarray*}
+\left[{\bf r} \otimes {\bf r} \right]^{(2)}_\mu &=& \frac{4\pi}{3}r^2
+\sum_{\alpha ,\beta}\langle 1\alpha 1\beta\vert 2\mu \rangle Y_{1\alpha} Y_{1\beta}
+\end{eqnarray*}
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec104">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The product of two spherical harmonics can be written
+as
+$$
+Y_{l_1m_1} Y_{l_2m_2}=\sum_{lm}\sqrt{\frac{(2l_1+1)(2l_2+1)(2l+1)}{4\pi}}
+\left(\begin{array}{ccc} l_1&l_2&l \\ m_1&m_2&m\end{array}\right)
+$$
+
+$$
+\times \left(\begin{array}{ccc} l_1&l_2&l \\ 0  &0  &0\end{array}\right)
+Y_{l-m}(-1)^m.
+$$
+
+
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec105">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Using this relation we get  
+$$
+\begin{eqnarray*}
+\left[{\bf r} \otimes {\bf r} \right]^{(2)}_\mu &=& 
+\sqrt{4\pi}r^2
+\sum_{lm}
+\sum_{\alpha ,\beta}   \langle 1\alpha 1\beta\vert 2\mu \rangle \\
+&&\times \langle 1\alpha 1\beta\vert l-m \rangle
+\frac{(-1)^{1-1-m}}{\sqrt{2l+1}} 
+\left(\begin{array}{ccc} 1&1&l \\ 0  &0  &0\end{array}\right)Y_{l-m}(-1)^m\\
+&=& \sqrt{4\pi}r^2
+\left(\begin{array}{ccc} 1&1&2 \\ 0  &0  &0\end{array}\right)
+Y_{2-\mu}\\
+&=& \sqrt{4\pi}r^2 \sqrt{\frac{2}{15}}Y_{2-\mu}
+\end{eqnarray*}
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec106">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can then  use this relation to rewrite the reduced matrix element containing the 
+position vector as  
+$$
+\begin{eqnarray*}
+\langle l \vert\vert\left[{\bf r} \otimes {\bf r} \right]^{(2)} \vert \vert l'\rangle
+& = & 
+\sqrt{4\pi}\sqrt{ \frac{2}{15}}r^2 \langle l \vert\vert Y_2 \vert \vert l'\rangle \\
+& = &\sqrt{4\pi}\sqrt{ \frac{2}{15}}  r^2 (-1)^l
+\sqrt{\frac{(2l+1)5(2l'+1)}{4\pi}}
+\left(\begin{array}{ccc} l&2&l' \\ 0&0&0\end{array}\right)
+\end{eqnarray*}
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec107">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Using the  reduced matrix element of the spin 
+operators defined as
+$$
+\begin{eqnarray*}
+\langle S\vert \vert\left[{\bf \sigma}_1 \otimes {\bf \sigma}_2\right]^{(2)} \vert \vert S' \rangle
+& = & 
+\sqrt{(2S+1)(2S'+1)5}
+\left\{\begin{array}{ccc} s_1&s_2&S \\s_3&s_4&S' \\ 1&1&2\end{array}\right\}\\
+&\times& 
+\langle s_1 \vert \vert {\bf \sigma}_1 \vert \vert s_3\rangle
+\langle s_2 \vert\vert {\bf \sigma}_2 \vert \vert s_4\rangle
+\end{eqnarray*}
+$$
+
+and inserting  these expressions for the two reduced matrix elements we get 
+$$
+\begin{array}{ll}
+&\\
+\langle lSJ\vert V\vert l'S'J\rangle =&(-1)^{S+J}\sqrt{30(2l+1)(2l'+1)(2S+1)(2S'+1)}\\
+&\times\left\{\begin{array}{ccc}l&S &J \\l'&S&2\end{array}\right\}
+\left(\begin{array}{ccc}l&2&l'\\0&0&0\end{array}\right)
+\left\{\begin{array}{ccc}s_{1}&s_{2}&S\\s_{3}&s_{4}&S'\\
+1&1&2\end{array}
+\right\}\\
+&\times\langle s_{1}\vert\vert \sigma_{1}\vert\vert s_{3}\rangle
+\langle s_{2}\vert\vert \sigma_{2}\vert \vert s_{4}\rangle.
+\end{array}
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec108">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Normally, we start we a nucleon-nucleon interaction fitted to reproduce scattering data.
+It is common then to represent this interaction in terms relative momenta \( k \), the center-of-mass momentum \( K \)
+and various partial wave quantum numbers like the spin \( S \), the total relative angular  momentum \( {\cal J} \), isospin \( T \) and relative orbital momentum \( l \) and finally the corresponding center-of-mass \( L \).  
+We can then write the  free interaction matrix \( V \) as
+$$
+    \langle kKlL{\cal J}ST\vert\hat{V}\vert k'Kl'L{\cal J}S'T\rangle.
+$$
+
+Transformations from the relative and center-of-mass motion
+system to the lab system will be discussed
+below.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec109">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+To obtain a \( V \)-matrix in a h.o.&nbsp;basis, we need  
+the transformation
+$$
+     \langle nNlL{\cal J}ST\vert\hat{V}\vert n'N'l'L'{\cal J}S'T\rangle,
+$$
+
+with \( n \) and \( N \) the principal quantum numbers of the relative and
+center-of-mass motion, respectively.
+$$
+   \vert nlNL{\cal J}ST\rangle= \int k^{2}K^{2}dkdKR_{nl}(\sqrt{2}\alpha k)
+R_{NL}(\sqrt{1/2}\alpha K)
+\vert klKL{\cal J}ST\rangle.
+$$
+
+The parameter \( \alpha \) is the chosen oscillator length.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec110">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The most commonly employed sp basis is the harmonic oscillator, which
+in turn means that
+a two-particle wave function with total angular momentum \( J \)
+and isospin \( T \)
+can be expressed as 
+$$
+\begin{array}{ll}
+\vert (n_{a}l_{a}j_{a})(n_{b}l_{b}j_{b})JT\rangle =&
+{\displaystyle
+\frac{1}{\sqrt{(1+\delta_{12})}}
+\sum_{\lambda S{\cal J}}\sum_{nNlL}}
+F\times \langle ab|\lambda SJ \rangle\\
+&\times (-1)^{\lambda +{\cal J}-L-S}\hat{\lambda}
+\left\{\begin{array}{ccc}L&l&\lambda\\S&J&{\cal J}
+\end{array}\right\}\\
+&\times \left\langle nlNL| n_al_an_bl_b\right\rangle
+\vert nlNL{\cal J}ST\rangle ,\end{array}
+\label{eq:hoho}
+$$
+
+where the term
+\( \left\langle nlNL| n_al_an_bl_b\right\rangle \)
+is the so-called Moshinsky-Talmi transformation coefficient (see chapter 18 of Alex Brown's notes).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec111">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The term \( \langle ab|LSJ \rangle  \) is a shorthand
+for the \( LS-jj \) transformation coefficient,
+$$
+     \langle ab|\lambda SJ \rangle = \hat{j_{a}}\hat{j_{b}}
+     \hat{\lambda}\hat{S}
+     \left\{
+    \begin{array}{ccc}
+       l_{a}&s_a&j_{a}\\
+       l_{b}&s_b&j_{b}\\
+       \lambda    &S          &J
+    \end{array}
+    \right\}.
+$$
+
+Here
+we use \( \hat{x} = \sqrt{2x +1} \).
+The factor \( F \) is defined as \( F=\frac{1-(-1)^{l+S+T}}{\sqrt{2}} \) if
+\( s_a = s_b \) and we .
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec112">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The \( \hat{V} \)-matrix in terms of harmonic oscillator wave functions reads
+$$
+  \langle (ab)JT|\hat{V}|(cd)JT\rangle=
+  {\displaystyle \sum_{\lambda \lambda ' SS' {\cal J}}\sum_{nln'l'NN'L}
+  \frac{\left(1-(-1)^{l+S+T}\right)}{\sqrt{(1+\delta_{ab})
+  (1+\delta_{cd})}}}
+$$
+
+$$
+  \times\langle ab|\lambda SJ\rangle \langle cd|\lambda 'S'J\rangle
+  \left\langle nlNL| n_{a}l_{a}n_{b}l_{b}\lambda\right\rangle
+  \left\langle n'l'NL| n_{c}l_{c}n_{d}l_{d}\lambda ' \right\rangle
+$$
+
+$$
+ \times \hat{{\cal J}}(-1)^{\lambda + \lambda ' +l +l'}
+  \left\{\begin{array}{ccc}L&l&\lambda\\S&J&{\cal J}
+  \end{array}\right\}
+  \left\{\begin{array}{ccc}L&l'&\lambda '\\S&J&{\cal J}
+  \end{array}\right\}
+$$
+
+$$
+ \times\langle nNlL{\cal J}ST\vert\hat{V}\vert n'N'l'L'{\cal J}S'T\rangle.
+$$
+
+The label \( a \) represents here all the single particle quantum numbers  
+\( n_{a}l_{a}j_{a} \).
+</div>
+
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+

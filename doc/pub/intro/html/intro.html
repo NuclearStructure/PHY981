@@ -11,32 +11,37 @@ Automatically generated HTML file from DocOnce source
 <title>Nuclear Structure, PHY981  Lectures, Spring semester 2015</title>
 
 
-<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
-<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
 <style type="text/css">
-h1 {color: #b58900;}  /* yellow */
-/* h1 {color: #cb4b16;}  orange */
-/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
-code { padding: 0px; background-color: inherit; }
-pre {
-  border: 0pt solid #93a1a1;
-  box-shadow: none;
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
 }
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
 .alert-text-small   { font-size: 80%;  }
 .alert-text-large   { font-size: 130%; }
 .alert-text-normal  { font-size: 90%;  }
 .alert {
   padding:8px 35px 8px 14px; margin-bottom:18px;
   text-shadow:0 1px 0 rgba(255,255,255,0.5);
-  border:1px solid #93a1a1;
+  border:1px solid #bababa;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   color: #555;
-  background-color: #eee8d5;
+  background-color: #f8f8f8;
   background-position: 10px 5px;
   background-repeat: no-repeat;
   background-size: 38px;
@@ -47,10 +52,10 @@ pre {
 .alert-block > p, .alert-block > ul {margin-bottom:1em}
 .alert li {margin-top: 1em}
 .alert-block p+p {margin-top:5px}
-.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
-.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
-.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
-.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
 
 div { text-align: justify; text-justify: inter-word; }
 </style>
@@ -60,22 +65,22 @@ div { text-align: justify; text-justify: inter-word; }
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [(' Overview of first week  ', 2, None, '___sec0'),
-              (' Overview of first week  ', 2, None, '___sec1'),
-              (' Lectures, exercise sessions and syllabus ',
+ 'sections': [('Overview of first week', 2, None, '___sec0'),
+              ('Overview of first week', 2, None, '___sec1'),
+              ('Lectures, exercise sessions and syllabus',
                2,
                None,
                '___sec2'),
-              (' Main themes and reading suggestions ', 2, None, '___sec3'),
-              (' Plan for the semester ', 2, None, '___sec4'),
-              (' Selected Texts on Nuclear Structure and Many-body theory ',
+              ('Main themes and reading suggestions', 2, None, '___sec3'),
+              ('Plan for the semester', 2, None, '___sec4'),
+              ('Selected Texts on Nuclear Structure and Many-body theory',
                2,
                None,
                '___sec5'),
-              (' Links and useful software ', 2, None, '___sec6'),
-              (' Links and useful software ', 2, None, '___sec7'),
-              (' Background enquiry ', 2, None, '___sec8'),
-              ('  First exercise: Exercise 1  ', 2, None, '___sec9')]}
+              ('Links and useful software', 2, None, '___sec6'),
+              ('Links and useful software', 2, None, '___sec7'),
+              ('Background enquiry', 2, None, '___sec8'),
+              ('First exercise: Exercise 1', 2, None, '___sec9')]}
 end of tocinfo -->
 
 <body>
@@ -111,13 +116,15 @@ MathJax.Hub.Config({
 <b>Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA and Department of Physics, University of Oslo, Oslo, Norway</b> 
 </center>
 
-
 <p>
 <!-- institution(s) -->
+
+<br>
 <p>
-<center><h4>Spring 2015 </h4></center> <!-- date -->
+<center><h4>Spring 2016 </h4></center> <!-- date -->
+<br>
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec0">Overview of first week  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -125,7 +132,7 @@ MathJax.Hub.Config({
 <p>
 
 <ul>
-<li> Thursday only first week:</li>
+<li> First week:</li>
 
 <ul>
  <li> Presentation of topics to be covered and introduction to nuclear structure physics</li>
@@ -141,22 +148,22 @@ MathJax.Hub.Config({
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec1">Overview of first week  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 As a reading assignment, chapters 1-4 of Alex Brown's text are rather useful.
-You can fetch JS's book from <a href="http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1" target="_self"><tt>http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1</tt></a>
+You can fetch JS's book from <a href="http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1" target="_blank"><tt>http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1</tt></a>
 You can find these texts at the webpage of the course as well.
-The webpage of the course is at <a href="http://nuclearstructure.github.io/PHY981/doc/web/course.html" target="_self"><tt>http://nuclearstructure.github.io/PHY981/doc/web/course.html</tt></a>.
-All material can be downloaded from <a href="http://nuclearstructure.github.io/PHY981/doc/web/index.html" target="_self"><tt>http://nuclearstructure.github.io/PHY981/doc/web/index.html</tt></a>.
+The webpage of the course is at <a href="http://nuclearstructure.github.io/PHY981/doc/web/course.html" target="_blank"><tt>http://nuclearstructure.github.io/PHY981/doc/web/course.html</tt></a>.
+All material can be downloaded from <a href="http://nuclearstructure.github.io/PHY981/doc/web/index.html" target="_blank"><tt>http://nuclearstructure.github.io/PHY981/doc/web/index.html</tt></a>.
 </div>
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec2">Lectures, exercise sessions and syllabus </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -164,8 +171,8 @@ All material can be downloaded from <a href="http://nuclearstructure.github.io/P
 <p>
 
 <ul>
-<li> Lectures: Tuesdays (3pm-5.50pm, BPS 1300 ) and Thursdays (3pm-5.50pm, BPS 1300)</li>
-<li> Detailed lecture notes, all exercises presented and projects can be found at the homepage of the course, <a href="https://github.com/NuclearStructure/PHY981" target="_self"><tt>https://github.com/NuclearStructure/PHY981</tt></a>.</li>
+<li> Lectures: Tuesdays (2pm-3.50pm, Theory trailer, conference room)</li>
+<li> Detailed lecture notes, all exercises presented and projects can be found at the homepage of the course, <a href="https://github.com/NuclearStructure/PHY981" target="_blank"><tt>https://github.com/NuclearStructure/PHY981</tt></a>.</li>
 <li> Exercises: No allocated time (but a given time can be determined)</li>
 <li> Weekly plans and all other information are on the webpage of the course.</li>
 <li> Syllabus: Lecture notes, exercises and projects. Relevant chapters of Suhonen's text that cover parts of the material are chapters 3-9 and 11. Chapters 1-2 on angular momentum will be used as references for various derivations and only parts of these two chapters will be used. Alex Brown's lecture notes from 2011 can also be used, and the relevant chapters are 1-4, 6-29. Chapter 5 of Brown on angular momentum plays the same role as chapters 1-2 of Suhonen.</li> 
@@ -175,7 +182,7 @@ All material can be downloaded from <a href="http://nuclearstructure.github.io/P
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec3">Main themes and reading suggestions </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -197,7 +204,7 @@ To understand how these topics are linked will provide us with fundamental insig
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec4">Plan for the semester </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -215,7 +222,7 @@ Duration of the examination is 45 minutes. The remaining 15-20 minutes are for q
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec5">Selected Texts on Nuclear Structure and Many-body theory </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -245,7 +252,7 @@ Duration of the examination is 45 minutes. The remaining 15-20 minutes are for q
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec6">Links and useful software </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -256,9 +263,9 @@ Duration of the examination is 45 minutes. The remaining 15-20 minutes are for q
 <li> PHY981 on github</li>
 
 <ul>
- <li> All material is at  <a href="https://github.com/NuclearStructure/PHY981/" target="_self"><tt>https://github.com/NuclearStructure/PHY981/</tt></a></li>
- <li> The following link gives you a quick way to download everything, see <a href="http://nuclearstructure.github.io/PHY981/doc/web/index.html" target="_self"><tt>http://nuclearstructure.github.io/PHY981/doc/web/index.html</tt></a></li>
- <li> And this link <a href="http://nuclearstructure.github.io/PHY981/doc/web/course.html" target="_self"><tt>http://nuclearstructure.github.io/PHY981/doc/web/course.html</tt></a> gives direct access to html, ipython notebooks and pdf files of the lectures.</li>
+ <li> All material is at  <a href="https://github.com/NuclearStructure/PHY981/" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/</tt></a></li>
+ <li> The following link gives you a quick way to download everything, see <a href="http://nuclearstructure.github.io/PHY981/doc/web/index.html" target="_blank"><tt>http://nuclearstructure.github.io/PHY981/doc/web/index.html</tt></a></li>
+ <li> And this link <a href="http://nuclearstructure.github.io/PHY981/doc/web/course.html" target="_blank"><tt>http://nuclearstructure.github.io/PHY981/doc/web/course.html</tt></a> gives direct access to html, ipython notebooks and pdf files of the lectures.</li>
 </ul>
 
 </ul>
@@ -266,7 +273,7 @@ Duration of the examination is 45 minutes. The remaining 15-20 minutes are for q
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec7">Links and useful software </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -277,12 +284,12 @@ Duration of the examination is 45 minutes. The remaining 15-20 minutes are for q
 <li> Useful links</li>
 
 <ul>
- <li> When I write code in C++ I tend to recommend to use the linear algebra library armadillo, see <a href="http://arma.sourceforge.net/" target="_self"><tt>http://arma.sourceforge.net/</tt></a>.</li> 
- <li> To install armadillo see the guidelines at <a href="http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/" target="_self"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/</tt></a>.</li> 
- <li> For mac users I recommend using <em>brew</em>, see <a href="http://brew.sh/" target="_self"><tt>http://brew.sh/</tt></a>.</li>
- <li> If you use ipython notebook and want to run a c++ program, follow the instructions at <a href="http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb" target="_self"><tt>http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb</tt></a></li>
- <li> To set up git, look at <a href="http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/setting-up-git/" target="_self"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/setting-up-git/</tt></a></li>
- <li> An excellent IDE for c++ programmers is Qt Creator, see <a href="http://www.uio.no/studier/emner/matnat/fys/FYS4411/v13/guides/installing-qt-creator/" target="_self"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS4411/v13/guides/installing-qt-creator/</tt></a>.</li>
+ <li> When I write code in C++ I tend to recommend to use the linear algebra library armadillo, see <a href="http://arma.sourceforge.net/" target="_blank"><tt>http://arma.sourceforge.net/</tt></a>.</li> 
+ <li> To install armadillo see the guidelines at <a href="http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/" target="_blank"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/</tt></a>.</li> 
+ <li> For mac users I recommend using <em>brew</em>, see <a href="http://brew.sh/" target="_blank"><tt>http://brew.sh/</tt></a>.</li>
+ <li> If you use ipython notebook and want to run a c++ program, follow the instructions at <a href="http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb" target="_blank"><tt>http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb</tt></a></li>
+ <li> To set up git, look at <a href="http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/setting-up-git/" target="_blank"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/setting-up-git/</tt></a></li>
+ <li> An excellent IDE for c++ programmers is Qt Creator, see <a href="http://www.uio.no/studier/emner/matnat/fys/FYS4411/v13/guides/installing-qt-creator/" target="_blank"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS4411/v13/guides/installing-qt-creator/</tt></a>.</li>
 </ul>
 
 </ul>
@@ -290,7 +297,7 @@ Duration of the examination is 45 minutes. The remaining 15-20 minutes are for q
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec8">Background enquiry </h2>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -309,14 +316,14 @@ One of my aims is to be able to tailor this course as close as possible to your 
 
 
 <p>
-<!-- !split -->
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec9">First exercise: Exercise 1  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Masses and binding energies.</b>
 <p>
 The data on binding energies can be found in the file bedata.dat at the github address of the course, see
-<a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_self"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>
+<a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>
 
 <ul>
   <li> Write a small program which reads in the proton and neutron numbers and the binding energies</li> 
@@ -349,7 +356,7 @@ Analyze then the fluorine isotopes and find, where available the corresponding e
 Comment your results.
 
 <p>
-A program example in C++ and the input data file <em>bedata.dat</em> can be found found at the github repository for the course, see <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_self"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>
+A program example in C++ and the input data file <em>bedata.dat</em> can be found found at the github repository for the course, see <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>
 
 <p>
 Deadline for this exercise is <b>January 26, at noon</b>.  You can hand in electronically by just sending me your github link, or just the file. I digest most formats, from scans to ipython notebooks. The choice is yours.
