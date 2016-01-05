@@ -1,0 +1,406 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="PHY 981 Nuclear Structure">
+
+<title>PHY 981 Nuclear Structure</title>
+
+
+<style type="text/css">
+/* bloodish style */
+
+body {
+  font-family: Helvetica, Verdana, Arial, Sans-serif;
+  color: #404040;
+  background: #ffffff;
+}
+h1 { font-size: 1.8em;  color: #8A0808; }
+h2 { font-size: 1.6em;  color: #8A0808; }
+h3 { font-size: 1.4em;  color: #8A0808; }
+h4 { color: #8A0808; }
+a { color: #8A0808; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [('Overview of first week', 2, None, '___sec0'),
+              ('Overview of first week', 2, None, '___sec1'),
+              ('Lectures, exercise sessions and syllabus',
+               2,
+               None,
+               '___sec2'),
+              ('Lectures, exercise sessions and syllabus',
+               2,
+               None,
+               '___sec3'),
+              ('Links to all course material', 2, None, '___sec4'),
+              ('Main themes and reading suggestions', 2, None, '___sec5'),
+              ('Plan for the semester', 2, None, '___sec6'),
+              ('Selected Texts on Nuclear Structure and Many-body theory',
+               2,
+               None,
+               '___sec7'),
+              ('Background enquiry, first exercise', 2, None, '___sec8'),
+              ('First (real) exercise: Exercise 1', 2, None, '___sec9'),
+              ('First (real) exercise: Exercise 1, continues',
+               2,
+               None,
+               '___sec10'),
+              ('Links and useful software', 2, None, '___sec11')]}
+end of tocinfo -->
+
+<body>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Slides for PHY981 Nuclear Structure -->
+
+
+<center><h1>PHY 981 Nuclear Structure</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): <a href="https://github.com/mhjgit" target="_blank">Morten Hjorth-Jensen</a>  Email hjensen@msu.edu -->
+
+<center>
+<b><a href="https://github.com/mhjgit" target="_blank">Morten Hjorth-Jensen</a>  Email hjensen@msu.edu</b> 
+</center>
+
+<p>
+<!-- institution -->
+
+<center><b><a href="http://www.nscl.msu.edu/" target="_blank">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
+<br>
+<p>
+<center><h4>Spring 2016 </h4></center> <!-- date -->
+<br>
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec0">Overview of first week  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> First two weeks:</li>
+
+<ul>
+ <li> Presentation of topics to be covered and introduction to nuclear structure physics</li>
+ <li> Discussion of quantities like binding energies, masses, radii, separation energies, see chapters 1-4 of Alex Brown's (AB) 2011 lectures</li>
+ <li> Single-particle degrees of freedom, discussion of data</li>
+ <li> Hamiltonians and single-particle fields, see  Suhonen (JS) chapter 3  and AB chapters 9 and 10.</li>
+</ul>
+
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec1">Overview of first week  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+As a reading assignment, chapters 1-4 of Alex Brown's text are rather useful.
+You can fetch Suhonen's book <a href="http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1" target="_blank">online</a> using your MSU library <a href="https://www.lib.msu.edu/general/account/" target="_blank">access</a>.
+You can find these texts at the webpage of the course as well.
+The <a href="http://nuclearstructure.github.io/PHY981/doc/web/course.html" target="_blank">course</a> link contains 
+all material from the lectures in various formats (html, ipython notebooks and PDF).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec2">Lectures, exercise sessions and syllabus </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Lectures: Tuesdays (2pm-3.50pm, Theory trailer, conference room)</li>
+<li> Detailed lecture notes, all exercises presented and projects can be found at the homepage of the course, <a href="https://github.com/NuclearStructure/PHY981" target="_blank"><tt>https://github.com/NuclearStructure/PHY981</tt></a>.</li>
+<li> Exercises: No allocated time (but a given time can be determined)</li>
+<li> Weekly plans and all other information are on the webpage of the course.</li>
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec3">Lectures, exercise sessions and syllabus </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Syllabus: Lecture notes, exercises and projects. Relevant chapters of Suhonen's text that cover parts of the material are chapters 3-9 and 11. Chapters 1-2 on angular momentum will be used as references for various derivations and only parts of these two chapters will be used. Alex Brown's lecture notes from 2011 can also be used, and the relevant chapters are 1-4, 6-29. Chapter 5 of Brown on angular momentum plays the same role as chapters 1-2 of Suhonen.</li> 
+<li> A weekly mail will be sent to all participants.</li> 
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec4">Links to all course material </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> PHY981 on github</li>
+
+<ul>
+ <li> All material is at  <a href="https://github.com/NuclearStructure/PHY981/" target="_blank"><tt>https://github.com/NuclearStructure/PHY981/</tt></a></li>
+ <li> The link <a href="http://nuclearstructure.github.io/PHY981/doc/web/course.html" target="_blank"><tt>http://nuclearstructure.github.io/PHY981/doc/web/course.html</tt></a> gives direct access to html, ipython notebooks and pdf files of the lectures.</li>
+</ul>
+
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec5">Main themes and reading suggestions </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The various observables we will discuss in the course are thought to be understood via the following five 
+major topics
+
+<ul>
+<li> Single  particle properties and mean-field models, lecture notes, JS chapters 3-5 and AB chapters 7-10 and 14</li>
+<li> Nuclear forces, covered by lecture notes</li>
+<li> The nuclear shell-model, lecture notes, JS chapter 8 and AB chapters 11-22.</li>
+<li> Particle-hole excitations, random-phase approximation and pairing (and perhaps something on collective models), lecture notes and JS chapters 9 and 11.</li>
+<li> Decays and one and two-body transition probabilities, lecture notes, JS chapters 6 and 7, AB chapters 23-29.</li>
+</ul>
+
+To understand how these topics are linked will provide us with fundamental insights about the laws of motion that govern nuclear physics.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec6">Plan for the semester </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Projects, weekly exercises, deadlines and final oral exam.</b>
+<p>
+
+<ul>
+<li> Two  projects with a possible numerical content that count 25% each of the final mark, weekly exercises  that count 20% and a final oral exam which counts 30% of the final grade.</li> 
+<li> Project 1 will be available in week 6 (begins with February 8) and to be handed in before spring break (March 4)</li>
+<li> Project 2 will be available in week 13 (begins with March 28) with deadline April 18.</li>
+<li> For the final oral exam you have to prepare a 25-30 minutes talk based on either a topic chosen by you or a topic defined towards the end of the semester.</li>
+</ul>
+
+Duration of the examination is 45 minutes.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec7">Selected Texts on Nuclear Structure and Many-body theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Nuclear structure</li>
+
+<ul>
+ <li> Heyde, <em>The Nuclear Shell Model</em>, Springer 1990</li>
+ <li> Lawson, <em>Theory of the Nuclear Shell Model</em>, Oxford 1980</li>
+ <li> Ring and Schuck, <em>Nuclear Many-Body Theory</em>, Springer 1980</li>
+ <li> Talmi, <em>Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model</em>, Harwood Academic Publishers 1993.</li>
+</ul>
+
+<li> Many-body theories</li>
+
+<ul>
+ <li> Blaizot and Ripka, <em>Quantum Theory of Finite systems</em>, MIT press 1986</li>
+ <li> Fetter and Walecka, <em>Quantum Theory of Many-Particle Systems</em>, McGraw-Hill, 1971.</li>
+ <li> Dickhoff and Van Neck, <em>Many-Body Theory Exposed</em>, World Scientific, 2006.</li>
+</ul>
+
+</ul>
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec8">Background enquiry, first exercise </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Write a small summary of what you do.</b>
+<p>
+You can send the answer as an email to hjensen@msu.edu
+
+<ul>
+<li> What is your background in nuclear physics, courses taken or attending this semester?</li> 
+<li> If you have defined a thesis topic, please send me some details of your thesis project, your interests etc.</li>
+<li> What is your background in computing? And, if you have programmed, which programming language(s) and environments  are you  most familiar with?</li>  
+<li> Also, if you have specific wishes with respect to this course, expectations, topics you'd like me to cover or other things, please feel free to write them down, or swing by my office for a chat.</li> 
+</ul>
+
+One of my aims is to be able to tailor this course as close as possible to your specific scientific interests (as far as possible obviously).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec9">First (real) exercise: Exercise 1  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Masses and binding energies.</b>
+<p>
+The data on binding energies can be found in the file bedata.dat at the github address of the <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank">course</a>
+
+<ul>
+  <li> Write a small program which reads in the proton and neutron numbers and the binding energies</li> 
+</ul>
+
+and make a plot of all neutron separation energies for the chain of oxygen (O), calcium (Ca), nickel (Ni), tin (Sn) and lead (Pb) isotopes, that is you need to plot
+$$
+S_n= BE(N,Z)-BE(N-1,Z).
+$$
+
+Comment your results. 
+
+<ul>
+ <li> In the same figures, you should also include the liquid drop model results of Eq.&nbsp;(2.17) of Alex Brown's text, namely</li>
+</ul>
+
+$$
+BE(N,Z)= \alpha_1A-\alpha_2A^{2/3}-\alpha_3\frac{Z^2}{A^{1/3}}-\alpha_4\frac{(N-Z)^2}{A},
+$$
+
+with \( \alpha_1=15.49 \) MeV, \( \alpha_2=17.23 \) MeV, \( \alpha_3=0.697 \) MeV and \( \alpha_4=22.6 \) MeV.
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec10">First (real) exercise: Exercise 1, continues  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Masses and binding energies.</b>
+<p>
+
+<ul>
+ <li> Make a plot of the binding energies as function of the number of nucleons \( A \) using the data in the file on bindingenergies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters \( \alpha_i=0 \). Comment your results.</li> 
+ <li> Use the liquid drop model to find the neutron drip lines   for Z values up to 120.</li>
+</ul>
+
+Analyze then the fluorine isotopes and find, where available the corresponding experimental data, and compare the liquid drop model predicition with experiment. 
+Comment your results.
+
+<p>
+A program example in C++ and the input data file <em>bedata.dat</em> can be found found at the github repository for the <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_blank">course</a>
+
+<p>
+Deadline for this exercise is <b>January 22, 5pm</b>.  You can hand in electronically by just sending me your github link, or just the file. I digest most formats, from scans to ipython notebooks. The choice is yours.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec11">Links and useful software </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Useful links</li>
+
+<ul>
+ <li> When I write code in C++ I tend to recommend to use the linear algebra library <a href="http://arma.sourceforge.net/" target="_blank">armadillo</a>.</li> 
+ <li> For OS X users I recommend using <a href="http://brew.sh/" target="_blank">brew</a>.</li>
+ <li> To set up github, use the <a href="https://guides.github.com/" target="_blank">guides</a> and/or the github <a href="https://github.com/" target="_blank">link</a>.</li> 
+ <li> An excellent IDE for c++ programmers is <a href="http://www.qt.io/ide/" target="_blank">Qt Creator</a></li>
+</ul>
+
+</ul>
+</div>
+
+
+<!-- ------------------- end of main content --------------- -->
+
+
+<center style="font-size:80%">
+<!-- copyright --> &copy; 2013-2016, "Morten Hjorth-Jensen":"https://github.com/mhjgit"  Email hjensen@msu.edu. Released under CC Attribution-NonCommercial 4.0 license
+</center>
+
+
+</body>
+</html>
+    
+
