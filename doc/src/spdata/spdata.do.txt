@@ -3,8 +3,8 @@ AUTHOR: Morten Hjorth-Jensen {copyright, 2013-present|CC BY-NC} at "National Sup
 DATE:  Spring 2016
 
 !split 
-===== Motivation ===== 
-!bblock Stability of matter
+===== Stability of matter ===== 
+!bblock 
 To understand why matter is stable, and thereby shed light on the limits of 
 nuclear stability, is one of the 
 overarching aims and intellectual challenges 
@@ -21,7 +21,7 @@ away from  the valley of stability.
 !eblock
 
 !split 
-===== Motivation ===== 
+===== Drip lines ===== 
 !bblock 
 
 Neutron-rich nuclei are particularly interesting for the above endeavour. As a particular chain
@@ -33,7 +33,14 @@ can thence be probed via investigations of quantities like  the binding energy
 or the charge radii and neutron rms radii of neutron-rich nuclei. 
 These quantities have in turn important 
 consequences for theoretical models of nuclear structure and their application in astrophysics.
-For example, the neutron radius of ${}^{208}\mbox{Pb}$, recently extracted from the PREX 
+!eblock
+
+!split 
+===== More on "Neutron-rich nuclei":"http://iopscience.iop.org/1402-4896/2013/T152" ===== 
+!bblock 
+
+
+Neutron radius of ${}^{208}\mbox{Pb}$, recently extracted from the PREX 
 experiment at Jefferson Laboratory  can be used to constrain the equation of state of 
 neutron matter. A related quantity to the
 neutron rms radius $r_n^{\mathrm{rms}}=\langle r^2\rangle_n^{1/2}$ is the neutron skin 
@@ -43,8 +50,10 @@ There are several properties which relate the thickness of the neutron skin to q
 nuclear matter, such as the symmetry energy at the saturation point for nuclear matter, the slope
 of the equation of state for neutron matter
 or the low-energy electric dipole strength due to the pigmy dipole resonance. 
-See Ref.~URL:"http://iopscience.iop.org/1402-4896/2013/T152" for several interesting discussions of these topics. 
+
 !eblock
+
+
 
 !split 
 ===== Motivation ===== 
@@ -67,7 +76,7 @@ and continuum effects are considered.
 !eblock
 
 !split 
-===== Motivation ===== 
+===== FRIB limits  ===== 
 !bblock 
 
 FIGURE: [figslides/careach.png, width=500 frac=0.6] Expected experimental information on the calcium isotopes that can be obtained at FRIB. The limits for detailed spectroscopic information are around $A\sim 60$.
@@ -75,52 +84,112 @@ FIGURE: [figslides/careach.png, width=500 frac=0.6] Expected experimental inform
 
 
 !split 
-===== Motivation ===== 
+===== Motivation and aims ===== 
 !bblock 
 
-The aim of this first section is to present some of the experimental data which can be used to extract 
-information about correlations in nuclear systems. In particular, we will start with a theoretical analysis of a quantity called the separation energy for neutrons or protons. This quantity, to be discussed below, is defined as the difference between two binding energies (masses) of neighboring nuclei. As we will see from various figures below and exercises as well, the separation energies display a varying behavior as function of the number of neutrons or protons. These variations from one nucleus to another one, laid the foundation for the introduction of so-called magic numbers and a mean-field picture in order to describe nuclei theoretically.
+The aim of the first part of this course is to present some of the
+experimental data which can be used to extract information about
+correlations in nuclear systems. In particular, we will start with a
+theoretical analysis of a quantity called the separation energy for
+neutrons or protons. This quantity, to be discussed below, is defined
+as the difference between two binding energies (masses) of neighboring
+nuclei. As we will see from various figures below and exercises as
+well, the separation energies display a varying behavior as function
+of the number of neutrons or protons. These variations from one
+nucleus to another one, laid the foundation for the introduction of
+so-called magic numbers and a mean-field picture in order to describe
+nuclei theoretically.
 
 !eblock
 
 
 
 !split 
-===== Motivation ===== 
+===== Mean-field picture ===== 
 !bblock 
 
 With a mean- or average-field picture we mean that a given nucleon (either a proton or a neutron) moves in an average potential field which is set up by all other nucleons in the system. Consider for example a nucleus like ${}^{17}\mbox{O}$ with nine neutrons and eight protons. Many properties  of this nucleus can be interpreted in terms of a picture where we can view it as
 one neutron on top of ${}^{16}\mbox{O}$. We infer from data and our theoretical interpretations that this additional neutron behaves almost as an individual neutron which *sees* an average interaction set up by the remaining 16 nucleons in   ${}^{16}\mbox{O}$. A nucleus like ${}^{16}\mbox{O}$ is an example of what we in this course will denote as a good closed-shell nucleus. We will come back to what this means later.
 
-Since we want to develop a theory capable of interpreting data in terms of our laws of motion and the pertinent forces,
-we can think of this neutron as a particle which moves in a potential field. We can hence attempt at solving our equations of motion (Schroedinger's equation in our case) for this system along the same lines as we did in atomic physics when we solved Schroedinger's equation for the hydrogen atom. We just need to define a model for our effective single-particle potential. 
-
-A simple potential model which enjoys quite some popularity in nuclear physics, is the three-dimensional harmonic oscillator. This potential model captures some of the physics of deeply bound single-particle states but fails in reproducing 
-the less bound single-particle states. A parametrized, and more realistic,  potential model which is widely used in nuclear physics, is the so-called Woods-Saxon potential. Both the harmonic oscillator and the Woods-Saxon potential models define computational problems that can easily be solved (see below), resulting (with the appropriate parameters) in a rather good reproduction of experiment for nuclei which can be approximated as one nucleon on top (or one nucleon removed) of a so-called closed-shell system.
 
 !eblock
 
 
 !split 
-===== Motivation ===== 
+===== Mean-field picture, which potential do we opt for?  ===== 
 !bblock 
 
-To be able to interpret a nucleus in such  a way requires at least that we are capable of parametrizing the abovementioned
-interactions in order to reproduce say the excitation spectrum of a nucleus like ${}^{17}\mbox{O}$. 
 
-With such a parametrized interaction we are able to solve Schroedinger's equation for the motion of one nucleon in a given field. A nucleus is however a true and complicated many-nucleon system, with extremely many degrees of freedom and complicated correlations, rendering the ideal solution of the many-nucleon Schroedinger equation an impossible enterprise. It is much easier to solve a single-particle problem with say a Woods-Saxon potential. Using such a potential hides however many of the complicated correlations and interactions which we see in nuclei. Such an effective single-nucleon potential is for example not capable of 
-describing properties like the binding energy or the rms radius of a given nucleus. 
+A simple potential model which enjoys quite some popularity in nuclear
+physics, is the _three-dimensional harmonic oscillator_. This potential
+model captures some of the physics of deeply bound single-particle
+states but fails in reproducing the less bound single-particle
+states. 
 
-An improvement to these simpler single-nucleon potentials is given by the Hartree-Fock method, where the variational principle is used to define a mean-field which the nucleons move in. There are many different classes of mean-field methods.
-An important difference between these methods and the simpler parametrized mean-field potentials like the harmonic oscillator and the Woods-Saxon potentials, is that the resulting equations contain information about the nuclear forces present in our models for solving Schroedinger's equation. Hartree-Fock and other mean-field methods like density functional theory form core topics in later lectures.
+A parametrized, and more realistic, potential model which is
+widely used in nuclear physics, is the so-called _Woods-Saxon_
+potential. Both the harmonic oscillator and the Woods-Saxon potential
+models define computational problems that can easily be solved (see
+below), resulting (with the appropriate parameters) in a rather good
+reproduction of experiment for nuclei which can be approximated as one
+nucleon on top (or one nucleon removed) of a so-called closed-shell
+system.
 
 !eblock
 
 
+
 !split 
-===== Motivation ===== 
+===== Too simple? ===== 
 !bblock 
-The aim of this section is to present some of the experimental data we will confront theory with. In particular, we will focus on separation and shell-gap energies and use these to build a picture of nuclei in terms of (from a philosophical stand we would call this  a reductionist approach) a single-particle picture. The harmonic oscillator will serve as an excellent starting point in building nuclei from the bottom and up. Here we will neglect nuclear forces, these are introduced in the next section when we discuss the Hartree-Fock method. 
+
+To be able to interpret a nucleus in such a way requires at least that
+we are capable of parametrizing the abovementioned interactions in
+order to reproduce say the excitation spectrum of a nucleus like
+${}^{17}\mbox{O}$.
+
+With such a parametrized interaction we are able to solve
+Schroedinger's equation for the motion of one nucleon in a given
+field. A nucleus is however a true and complicated many-nucleon
+system, with extremely many degrees of freedom and complicated
+correlations, rendering the ideal solution of the many-nucleon
+Schroedinger equation an impossible enterprise. It is much easier to
+solve a single-particle problem with say a Woods-Saxon
+potential. 
+
+!eblock
+!split 
+===== Motivation, better mean-fields ===== 
+!bblock 
+
+An improvement to these simpler single-nucleon potentials is given by
+the Hartree-Fock method, where the variational principle is used to
+define a mean-field which the nucleons move in. There are many
+different classes of mean-field methods.  An important difference
+between these methods and the simpler parametrized mean-field
+potentials like the harmonic oscillator and the Woods-Saxon
+potentials, is that the resulting equations contain information about
+the nuclear forces present in our models for solving Schroedinger's
+equation. Hartree-Fock and other mean-field methods like density
+functional theory form core topics in later lectures.
+
+!eblock
+
+
+
+!split 
+===== Aims here ===== 
+!bblock 
+
+The aim here is to present some of the experimental data we
+will confront theory with. In particular, we will focus on separation
+and shell-gap energies and use these to build a picture of nuclei in
+terms of (from a philosophical stand we would call this a reductionist
+approach) a single-particle picture. The harmonic oscillator will
+serve as an excellent starting point in building nuclei from the
+bottom and up. Here we will neglect nuclear forces, these are
+introduced in the next section when we discuss the Hartree-Fock
+method.
 
 The aim of this course is to develop our physics intuition of nuclear systems using  a theoretical approach  where we describe data in terms of 
 the motion of individual nucleons and their mutual interactions. 
@@ -130,17 +199,64 @@ _How our theoretical pictures and models can be used to interpret data is in ess
 !eblock
 
 
+!split 
+===== Aims of this course ===== 
+!bblock 
+
+
+
+The aims of this course are to develop our physics intuition of nuclear
+systems using a theoretical approach where we describe data in terms
+of the motion of individual nucleons and their mutual interactions.
+
+_How our theoretical pictures and models can be used to interpret data is in essence what this course is about_. Our narrative will lead us
+along a path where we start with single-particle models and end with
+the theory of the nuclear shell-model. The latter will be used to
+understand and analyze excitation spectra and decay patterns of
+nuclei, linking our theoretical understanding with interpretations of
+experiment. The way we build up our theoretical descriptions and
+interpretations follows what we may call a standard reductionistic
+approach, that is we start with what we believe are our effective
+degrees of freedom (nucleons in our case) and interactions amongst
+these and solve thereafter the underlying equations of motions. This
+defines the nuclear many-body problem, and mean-field approaches like
+Hartree-Fock theory and the nuclear shell-model represent different
+approaches to our solutions of Schroedinger's equation.
+
+!eblock
+
+
+
 
 
 !split 
-===== Motivation ===== 
+===== Back to the stability of matter questions  ===== 
 !bblock Do we understand the physics of dripline systems?
 
-We start our tour of experimental data and our interpretations by considering the chain of oxygen isotopes. In the exercises below you will be asked to perform similar analyses for other chains of isotopes.
+We start our tour of experimental data and our interpretations by
+considering the chain of oxygen isotopes. In the exercises below you
+will be asked to perform similar analyses for other chains of
+isotopes.
 
-The oxygen isotopes are the heaviest isotopes for which the drip line is well established.  The drip line is defined as the point where adding one more nucleon leads to an unbound nucleus. Below we will see that we can define the dripline by studying the separation energy. Where the neutron (proton) separation energy changes sign as a function of the number of neutrons (protons) defines the neutron (proton) drip line.
+The oxygen isotopes are the heaviest isotopes for which the drip line
+is well established.  The drip line is defined as the point where
+adding one more nucleon leads to an unbound nucleus. Below we will see
+that we can define the dripline by studying the separation
+energy. Where the neutron (proton) separation energy changes sign as a
+function of the number of neutrons (protons) defines the neutron
+(proton) drip line.
 
-The oxygen isotopes are simple enough to be described by some few selected single-particle degrees of freedom.  
+
+!eblock
+
+
+!split 
+===== Back to the stability of matter questions  ===== 
+!bblock Do we understand the physics of dripline systems?
+
+
+The oxygen isotopes are simple enough to be described by some few
+selected single-particle degrees of freedom.
 
 * Two out of four stable even-even isotopes exhibit a doubly magic nature, namely ${}^{22}\mbox{O}$ ($Z=8$, $N=14$) and ${}^{24}\mbox{O}$ ($Z=8$, $N=16$).
 * The structure of ${}^{22}\mbox{O}$ and ${}^{24}\mbox{O}$ is assumed to be governed by the evolution of the $1s_{1/2}$ and $0d_{5/2}$  one-quasiparticle states.
@@ -148,10 +264,11 @@ The oxygen isotopes are simple enough to be described by some few selected singl
 !eblock
 
 
+
+
 !split 
 ===== Recent articles on Oxygen isotopes ===== 
-!bblock Many experiments worldwide!
-These isotopes have been studied in series of recent experiments. Some of these experiments and theoretical interpretations are discussed in the following articles:
+!bblock Many experiments and theoretical calculations worldwide!
  
 * ${}^{24}\mbox{O}$ and lighter:  C.~R.~Hoffman *et al.*, Phys.~Lett.~B _672_, 17 (2009); R.~Kanungo *et al*., Phys.~Rev.~Lett.~_102_, 152501 (2009); C.~R.~Hoffman *et al*., Phys.~Rev.~C _83_, 031303(R) (2011); Stanoiu *et al*., Phys. Rev. C _69_, 034312 (2004)
 * ${}^{25}\mbox{O}$: C.~R.~Hoffman *et al*., Phys.~Rev.~Lett. _102_,152501  (2009). 
@@ -162,8 +279,8 @@ These isotopes have been studied in series of recent experiments. Some of these 
 
 
 !split 
-===== Motivation ===== 
-!bblock Do we understand the physics of dripline systems?
+===== Do we understand the physics of dripline systems? ===== 
+!bblock 
 Our first approach in analyzing data theoretically, is to see if we can use experimental information to 
 
 * Extract information about a *so-called* single-particle  behavior
@@ -192,7 +309,7 @@ u = M(^{12}\mathrm{C})/12 = 931.49386 \hspace{0.1cm} \mathrm{MeV}/c^2.
 \]
 !et
 In this course we will mainly use 
-data from the 2003 compilation of Audi, Wapstra and Thibault, see URL: "http://www.sciencedirect.com/science/journal/03759474/729/1".
+data from the 2003 compilation of "Audi, Wapstra and Thibault":"http://www.sciencedirect.com/science/journal/03759474/729/1".
 !eblock
 
 !split 
@@ -242,7 +359,7 @@ where $\Delta_H c^2 = 7.2890$ MeV and $\Delta_n c^2 = 8.0713$ MeV.
 ===== Masses and Binding energies ===== 
 !bblock
 The following python program reads in the experimental data on binding energies and, stored in the file bindingenergies.dat,  plots them as function of the mass number $A$. One notices clearly a saturation of the binding energy per nucleon at $A\approx 56$.
-!bc pycod
+!bc pyscpro
 import numpy as np
 from  matplotlib import pyplot as plt
 # Load in data file
@@ -289,6 +406,11 @@ To arrive at the above expression we have assumed that we can make the following
 
  * There is a surface energy term $a_2A^{2/3}$. The assumption here is that a nucleon at the surface of a nucleus interacts with fewer other nucleons than one in the interior of the nucleus and hence its binding energy is less. This surface energy term takes that into account and is therefore negative and is proportional to the surface area.
 
+!eblock
+
+!split
+===== Liquid drop model as a simple parametrization of binding energies, continues  =====
+!bblock 
 
  * There is a Coulomb energy term $a_3\frac{Z^2}{A^{1/3}}$. The electric repulsion between each pair of protons in a nucleus yields less binding. 
 
@@ -303,14 +425,15 @@ Performing a least-square fit to data, we obtain the following numerical values 
 * $a_3=0.697$ MeV
 * $a_4=22.6$ MeV
 
-The python below here allows you to perform a fit of teh above parameters using nonlinear least squares curvefitting.
 !eblock
+
+
 
 !split 
 ===== Masses and Binding energies ===== 
 !bblock
 The following python program reads now in the experimental data on binding energies as well as the results from the above liquid drop model and plots these energies as function of the mass number $A$. One sees that for larger values of $A$, there is a better agreement with data. 
-!bc pycod
+!bc pyscpro
 import numpy as np
 from  matplotlib import pyplot as plt
 # Load in data file
@@ -336,8 +459,14 @@ plt.show()
 !split 
 ===== Masses and Binding energies ===== 
 !bblock
-This  python program reads now in the experimental data on binding energies and performs a nonlinear least square fitting of the data. In the example here we use only the parameters $a_1$ and $a_2$, leaving it as an exercise to the reader to perform the fit for all four paramters. The results are plotted and compared with the experimental values.  To read more about non-linear least square methods, see for example the text of M.J. Box, D. Davies and W.H. Swann, Non-Linear optimisation Techniques, Oliver & Boyd, 1969.
-!bc pycod
+The   python program on the next slide reads now in the experimental data on binding energies and performs a nonlinear least square fitting of the data. In the example here we use only the parameters $a_1$ and $a_2$, leaving it as an exercise to the reader to perform the fit for all four paramters. The results are plotted and compared with the experimental values.  To read more about non-linear least square methods, see for example the text of M.J. Box, D. Davies and W.H. Swann, Non-Linear optimisation Techniques, Oliver & Boyd, 1969.
+!eblock
+
+
+!split 
+===== Masses and Binding energies, the code ===== 
+!bblock
+!bc pyscpro
 import numpy as np
 from scipy.optimize import curve_fit
 from  matplotlib import pyplot as plt
@@ -387,6 +516,11 @@ or the decay of nucleus $c$ into two other nuclei $a$ and $b$
 ^{N_c+Z_c}c \rightarrow  ^{N_a+Z_a}a+ ^{N_b+Z_b}b
 \]
 !et
+!eblock
+
+!split 
+===== $Q$-values and separation energies ===== 
+!bblock
 In general we have the reactions
 !bt
 \[
@@ -401,6 +535,8 @@ We require also that the number of protons and neutrons (the total number of nuc
 !et
 
 !eblock
+
+
 
 !split 
 ===== Motivation ===== 
@@ -455,7 +591,7 @@ S_{2n}= -Q_{2n}= BE(N,Z)-BE(N-2,Z),
 and  the two-proton separation energy is given by
 !bt
 \[
-S_{2p}= -Q_{2p}= BE(N,Z)-BE(N,Z-2),
+S_{2p}= -Q_{2p}= BE(N,Z)-BE(N,Z-2).
 \]
 !et
 !eblock
@@ -497,7 +633,7 @@ We leave it as an exercise to the reader to define and interpret the two-neutron
 =====  Separation energies for oxygen isotopes ===== 
 !bblock
 The following python programs can now be used to plot the separation energies and the energy gaps for the oxygen isotopes.  The following python code reads the separation energies from file for all oxygen isotopes from $A=13$ to $A=25$, The data are taken from the file *snox.dat*.  This files contains the separation energies and the shell gap energies.
-!bc pycod
+!bc pyscpro
 
 import numpy as np
 from  matplotlib import pyplot as plt
@@ -524,7 +660,7 @@ plt.show()
 =====  Energy gaps for oxygen isotopes ===== 
 !bblock
 Here we display the python program for plotting the corresponding results for shell gaps for the oyxgen isotopes. 
-!bc pycod
+!bc pyscpro
 
 import numpy as np
 from  matplotlib import pyplot as plt
@@ -559,11 +695,19 @@ start with nuclear forces and many-body approaches like the nuclear shell-model,
 * In the discussion of the liquid drop model and binding energies, we note that the total binding energy is not that different from the sum of the individual neutron and proton masses. 
 One may thus infer that intrinsic properties of nucleons in a nucleus are close to those of free nucleons.
 * In the discussion of the neutron separation energies for the oxygen isotopes, we note  a clear staggering effect between odd and even isotopes with the even ones being more bound (larger separation energies). We will later link this to strong pairing correlations in nuclei.
-* The neutron separation energy becomes negative at ${}^{25}\mbox{O}$, making this nucleus unstable with respect to the emission of one neutron. A nucleus like ${}^{24}\mbox{O}$ is thus the last stable oxygen isotopes which has been observed. Oyxgen-26 has been found to be unbound with respect to ${}^{24}\mbox{O}$, see URL: "ournals.aps.org/prl/abstract/10.1103/PhysRevLett.108.142503" .
+
+!eblock 
+
+
+!split
+===== Features to be noted, continues  =====
+!bblock
+* The neutron separation energy becomes negative at ${}^{25}\mbox{O}$, making this nucleus unstable with respect to the emission of one neutron. A nucleus like ${}^{24}\mbox{O}$ is thus the last stable oxygen isotopes which has been observed. Oyxgen-26 has been found to be unbound with respect to "${}^{24}\mbox{O}$":"journals.aps.org/prl/abstract/10.1103/PhysRevLett.108.142503" .
 * We note also that there are large shell-gaps for some nuclei, meaning that more energy is needed to remove one nucleon. These gaps are used to define so-called magic numbers. For the oxygen isotopes we see a clear gap for ${}^{16}\mbox{O}$. We will interpret this gap as one of several experimental properties that define so-called magic numbers. In our discussion below we will make a first interpretation using  single-particle states from the harmonic oscillator and the Woods-Saxon potential. 
 
 In the exercises below you will be asked to perform a similar analysis for other chains of isotopes and interpret the results. 
 !eblock 
+
 
 
 !split
@@ -611,8 +755,7 @@ R_{\mathrm{op}}= 0.875(7) \mathrm{fm}.
 \]
 !et  
 is the rms radius of the proton, $R^2_{\mathrm{on}} = 0.116(2)$ $\mbox{fm}^{2}$ is the
-mean-square radius of the neutron and $R^2_{\mathrm{rel}} = 0.033$ $\mbox{fm}^{2}$ is the relativistic Darwin-Foldy correction. There are also smaller nucleus-dependent relativistic spin-orbit and
-mesonic-exchange corrections that should be included.
+mean-square radius of the neutron and $R^2_{\mathrm{rel}} = 0.033$ $\mbox{fm}^{2}$ is the relativistic Darwin-Foldy correction. There are additional  smaller nucleus-dependent corrections.
 !eblock
 
 
@@ -660,13 +803,7 @@ with $d=1,2,3$ represents the spatial coordinates and $\sigma$ is the eigenspin 
 and the integral
 !bt
 \[
-\int dx = \sum_{\sigma}\int d^dr = \sum_{\sigma}\int d\bm{r},
-\]
-!et
-and
-!bt
-\[
-\int d^Ax= \int dx_1\int dx_2\dots\int dx_A.
+\int dx = \sum_{\sigma}\int d^dr = \sum_{\sigma}\int d\bm{r}.
 \]
 !et
 Since we are dealing with protons and neutrons we need to add isospin as a new degree of freedom.
@@ -853,6 +990,12 @@ In a non-relativistic approach to atomic  physics, this external potential is gi
 	\hat{V} = \sum_{ij}^A v(x_i,x_j)+\sum_{ijk}^Av(x_i,x_j,x_k)+\dots
 \]
 !et
+!eblock
+
+
+!split
+===== Definitions and notations, more complicated forces =====
+!bblock
 Three-body and more  complicated forces arise since we are dealing with protons and neutrons as effective degrees of freedom. We will come back to this topic later. Furthermore, in large parts of these lectures we will assume that the potential energy can be approximated by a two-body interaction only. Our Hamiltonian reads then
 !bt
 \begin{equation}
@@ -950,6 +1093,13 @@ where $C_{\tau\alpha}$ represents the overlap between the two basis sets.
 !bblock
 The harmonic oscillator (a shifted one by a negative constant) provides also a very good approximation to most bound single-particle states. Furthermore, it serves as a starting point in building up our picture of nuclei, in particular how we define magic numbers and systems with one nucleon added to (or removed from) a closed-shell core nucleus. The figure here shows 
 the various harmonic oscillator states, with those obtained with a Woods-Saxon potential as well, including a spin-orbit splitting (to be discussed below).
+!eblock
+
+
+
+!split
+===== A modified Hamiltonian, harmonic oscillator spectrum  =====
+!bblock
 FIGURE: [figslides/singleparticle.png, width=500 frac=0.6] Single-particle spectrum and quantum numbers for a harmonic oscillator potential and a Woods-Saxon potential with and without a spin-orbit force.
 !eblock
 
@@ -1056,6 +1206,12 @@ This is ok if the number of nucleons is large, but still with this Hamiltonian, 
  \]
 !et
 
+!eblock
+
+
+!split
+===== The harmonic oscillator Hamiltonian  =====
+!bblock
 Alternatively, we could write it as	
 !bt 
 \[
@@ -1116,7 +1272,7 @@ The parametrization is
 !et
 with $V_0\approx 50$ MeV representing the potential well depth, $a\approx 0.5$ fm 
 length representing the "surface thickness" of the nucleus and $R=r_0A^{1/3}$, with $r_0=1.25$ fm and $A$ the number of nucleons.
-The value for $r_0$ can be extracted from a fit to data, see for example M.~Kirson, URL: "http://www.sciencedirect.com/science/article/pii/S037594740600769X".
+The value for $r_0$ can be extracted from a fit to data, see for example "M. Kirson's article":"http://www.sciencedirect.com/science/article/pii/S037594740600769X".
 !eblock
 
 
@@ -1125,7 +1281,7 @@ The value for $r_0$ can be extracted from a fit to data, see for example M.~Kirs
 !bblock
 The following python code produces a plot of the Woods-Saxon potential with the above parameters. 
 
-!bc pycod
+!bc pyscpro
 import numpy as np
 from  matplotlib import pyplot as plt
 from matplotlib import rc, rcParams
@@ -1263,10 +1419,24 @@ where we have
 f_{so}(r) = \frac{1}{1+\exp{(r-R_{so})/a_{so}}}.
 \]
 !et
-We can also add, in case of proton, a Coulomb potential. The Woods-Saxon potential has been widely used in parametrizations of
-effective single-particle potentials. _However, as was the case with the harmonic oscillator, none of these potentials are linked directly to the nuclear forces_. Our next step is to build a mean field based on the nucleon-nucleon interaction.
-This will lead us to our first and simplest many-body theory, Hartree-Fock theory.  
 !eblock
+
+!split ===== Single-particle Hamiltonians and spin-orbit force =====
+!bblock 
+We can also add, in case of proton, a Coulomb potential. The
+Woods-Saxon potential has been widely used in parametrizations of
+effective single-particle potentials. 
+
+_However, as was the case with
+the harmonic oscillator, none of these potentials are linked directly
+to the nuclear forces_. 
+
+Our next step is to build a mean field based
+on the nucleon-nucleon interaction.  This will lead us to our first
+and simplest many-body theory, Hartree-Fock theory.  
+!eblock
+
+
 
 
 !split
@@ -1302,6 +1472,11 @@ The radial equation reads
      + V(r) R(r) = E R(r).
 \]
 !et
+!eblock
+
+!split
+===== Numerical solution of the single-particle Schroedinger equation =====
+!bblock 
 In our case $V(r)$ is the harmonic oscillator potential $(1/2)kr^2$ with
 $k=m\omega^2$ and $E$ is
 the energy of the harmonic oscillator in three dimensions.
@@ -1313,6 +1488,7 @@ E_{nl}=  \hbar \omega \left(2n+l+\frac{3}{2}\right),
 !et
 with $n=0,1,2,\dots$ and $l=0,1,2,\dots$.
 !eblock
+
 
 
 !split
@@ -1386,6 +1562,12 @@ or
 \alpha = \left(\frac{\hbar^2}{mk}\right)^{1/4}.
 \]
 !et
+!eblock
+
+
+!split
+=====  Numerical solution of the single-particle Schroedinger equation =====
+!bblock 
 Defining
 !bt 
 \[
@@ -1402,6 +1584,7 @@ This is the first equation to solve numerically. In three dimensions
 the eigenvalues for $l=0$ are 
 $\lambda_0=3,\lambda_1=7,\lambda_2=11,\dots .$
 !eblock
+
 
 
 !split
@@ -1449,10 +1632,9 @@ we can rewrite the Schroedinger equation for $\rho_i$ as
 or in  a more compact way
 !bt
 \[
--\frac{u_{i+1} -2u_i +u_{i-1}}{h^2}+\rho_i^2u_i=-\frac{u_{i+1} -2u_i +u_{i-1} }{h^2}+V_iu_i  = \lambda u_i,
+-\frac{u_{i+1} -2u_i +u_{i-1}}{h^2}+\rho_i^2u_i=-\frac{u_{i+1} -2u_i +u_{i-1} }{h^2}+V_iu_i  = \lambda u_i.
 \]
 !et
-where $V_i=\rho_i^2$ is the harmonic oscillator potential.
 !eblock
 
 
@@ -1473,6 +1655,12 @@ and the non-diagonal matrix element
 !et
 In this case the non-diagonal matrix elements are given by a mere constant. *All non-diagonal matrix elements are equal*.
 
+!eblock
+
+
+!split
+=====  Numerical solution of the single-particle Schroedinger equation =====
+!bblock 
 With these definitions the Schroedinger equation takes the following form
 !bt
 \[
@@ -1502,7 +1690,14 @@ latter equation as a matrix eigenvalue problem
       label{eq:sematrix}
 \end{equation} 
 !et
-or if we wish to be more detailed, we can write the tridiagonal matrix as
+!eblock
+
+
+!split
+=====  Numerical solution of the single-particle Schroedinger equation =====
+!bblock 
+
+To be more detailed we have
 !bt
 \begin{equation}
     \left( \begin{array}{ccccccc} \frac{2}{h^2}+V_1 & -\frac{1}{h^2} & 0   & 0    & \dots  &0     & 0 \\
@@ -1522,6 +1717,7 @@ The solution is zero in both cases.
 !eblock
 
 
+
 !split
 =====  Program to solve Schroedinger's equation  =====
 !bblock 
@@ -1531,9 +1727,6 @@ The following python program is an example of how one can obtain the eigenvalues
 * The c++ and Fortran versions of this program can be found at URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs". 
 
 * The c++  program uses the c++ library armadillo, see URL: "http://arma.sourceforge.net/". 
-* To install armadillo see the guidelines at URL: "http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/". 
-* For mac users I recommend using *brew*, see URL: "http://brew.sh/".
-* If you use ipython notebook, you can run c++ programs following the instructions at URL: "http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb"
 !eblock
 
 
@@ -1543,7 +1736,7 @@ The following python program is an example of how one can obtain the eigenvalues
 The code sets up the Hamiltonian matrix by defining the the minimun and maximum values of $r$ with a
 maximum value of integration points.  These are set in the initialization function. It plots the 
 eigenfunctions of the three lowest eigenstates.
-!bc pycod
+!bc pyscpro
 #Program which solves the one-particle Schrodinger equation 
 #for a potential specified in function
 #potential(). This example is for the harmonic oscillator in 3d
