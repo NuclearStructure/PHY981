@@ -254,7 +254,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._spdata-bs065.html#___sec64" style="font-size: 80%;">Exercise 1</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs066.html#___sec65" style="font-size: 80%;">Exercise 2</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs067.html#___sec66" style="font-size: 80%;">Exercise 3</a></li>
-     <!-- navigation toc: --> <li><a href="._spdata-bs068.html#___sec67" style="font-size: 80%;">Exercise 4</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec67" style="font-size: 80%;">Exercise 4</a></li>
 
         </ul>
       </li>
@@ -267,46 +267,87 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0068"></a>
+<!-- !split -->
+
+<h2 id="___sec67">Exercise 4  </h2>
+<div class="panel panel-default">
+<div class="panel-body">
+We will now consider a simple three-level problem, depicted in the figure below. This is our first and very simple model of a possible many-nucleon (or just fermion) problem and the shell-model.
+The single-particle states are labelled by the quantum number \( p \) and can accomodate up to two single particles,  viz., every single-particle state  is doubly degenerate (you could think of this as one state having spin up and the other spin down). 
+We let the spacing between the doubly degenerate single-particle states be constant, with value \( d \).  The first state
+has energy \( d \). There are only three available single-particle states, \( p=1 \), \( p=2 \) and \( p=3 \), as illustrated
+in the figure. 
+
+<ul>
+<li> How many two-particle Slater determinants can we construct in this space?</li> 
+</ul>
+
+We limit ourselves to a system with only the two lowest single-particle orbits and two particles, \( p=1 \) and \( p=2 \). We assume that we can write the Hamiltonian as
+$$
+       \hat{H}=\hat{H}_0+\hat{H}_I,
+$$
+
+and that the onebody part of the Hamiltonian with single-particle operator \( \hat{h}_0 \) has the property
+$$
+\hat{h}_0\psi_{p\sigma} = p\times d \psi_{p\sigma},
+$$
+
+where we have added a spin quantum number \( \sigma \). 
+We assume also that the only two-particle states that can exist are those where two particles are in the 
+same state \( p \), as shown by the two possibilities to the left in the figure.
+The two-particle matrix elements of \( \hat{H}_I \) have all a constant value, \( -g \).
+
+<ul>
+<li> Show then that the Hamiltonian matrix can be written as</li> 
+</ul>
+
+$$
+\left(\begin{array}{cc}2d-g &-g \\
+-g &4d-g \end{array}\right),
+$$
 
 
+<ul>
+<li> Find the eigenvalues and eigenvectors.  What is mixing of the state with two particles in \( p=2 \)  to the wave function with two-particles in \( p=1 \)? Discuss your results in terms of a linear combination of Slater determinants.</li> 
+<li> Add the possibility that the two particles can be in the state with \( p=3 \) as well and find the Hamiltonian matrix, the eigenvalues and the eigenvectors. We still insist that we only have two-particle states composed of two particles being in the same level \( p \). You can diagonalize numerically your \( 3\times 3 \) matrix.</li>
+</ul>
 
-<div class="jumbotron">
-<center><h1>PHY 981 Nuclear Structure: Single-particle properties and nuclear data</h1></center>  <!-- document title -->
+This simple model catches several birds with a stone. It demonstrates how we can build linear combinations
+of Slater determinants and interpret these as different admixtures to a given state. It represents also the way we are going to interpret these contributions.  The two-particle states above \( p=1 \) will be interpreted as 
+excitations from the ground state configuration, \( p=1 \) here.  The reliability of this ansatz for the ground state, 
+with two particles in \( p=1 \),
+depends on the strength of the interaction \( g \) and the single-particle spacing \( d \).
+Finally, this model is a simple schematic ansatz for studies of pairing correlations and thereby superfluidity/superconductivity  
+in fermionic systems.
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> 
+<center> <!-- figure -->
+<hr class="figure">
+<center><p class="caption">Figure 4:  Schematic plot of the possible single-particle levels with double degeneracy. The filled circles indicate occupied particle states. The spacing between each level \( p \) is constant in this picture. We show some possible two-particle states. </p></center>
+<p><img src="figslides/simplemodel.png" align="bottom" width=500></p>
 </center>
 
 <p>
-<!-- institution -->
+</div>
+</div>
 
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
-<p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
-<p>
+
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._spdata-bs000.html">1</a></li>
-  <li><a href="._spdata-bs001.html">2</a></li>
-  <li><a href="._spdata-bs002.html">3</a></li>
-  <li><a href="._spdata-bs003.html">4</a></li>
-  <li><a href="._spdata-bs004.html">5</a></li>
-  <li><a href="._spdata-bs005.html">6</a></li>
-  <li><a href="._spdata-bs006.html">7</a></li>
-  <li><a href="._spdata-bs007.html">8</a></li>
-  <li><a href="._spdata-bs008.html">9</a></li>
-  <li><a href="._spdata-bs009.html">10</a></li>
+<li><a href="._spdata-bs067.html">&laquo;</a></li>
+  <li><a href="._spdata-bs000.html">1</a></li>
   <li><a href="">...</a></li>
-  <li><a href="._spdata-bs068.html">69</a></li>
-  <li><a href="._spdata-bs001.html">&raquo;</a></li>
+  <li><a href="._spdata-bs060.html">61</a></li>
+  <li><a href="._spdata-bs061.html">62</a></li>
+  <li><a href="._spdata-bs062.html">63</a></li>
+  <li><a href="._spdata-bs063.html">64</a></li>
+  <li><a href="._spdata-bs064.html">65</a></li>
+  <li><a href="._spdata-bs065.html">66</a></li>
+  <li><a href="._spdata-bs066.html">67</a></li>
+  <li><a href="._spdata-bs067.html">68</a></li>
+  <li class="active"><a href="._spdata-bs068.html">69</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -323,7 +364,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 

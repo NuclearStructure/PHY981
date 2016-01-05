@@ -253,7 +253,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._spdata-bs064.html#___sec63" style="font-size: 80%;">Program to solve Schroedinger's equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs065.html#___sec64" style="font-size: 80%;">Exercise 1</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs066.html#___sec65" style="font-size: 80%;">Exercise 2</a></li>
-     <!-- navigation toc: --> <li><a href="._spdata-bs067.html#___sec66" style="font-size: 80%;">Exercise 3</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec66" style="font-size: 80%;">Exercise 3</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs068.html#___sec67" style="font-size: 80%;">Exercise 4</a></li>
 
         </ul>
@@ -267,46 +267,72 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0067"></a>
+<!-- !split -->
+
+<h2 id="___sec66">Exercise 3  </h2>
+<div class="panel panel-default">
+<div class="panel-body">
+Consider the Slater determinant
+$$
+\Phi_{\lambda}^{AS}(x_{1}x_{2}\dots x_{N};\alpha_{1}\alpha_{2}\dots\alpha_{N})
+=\frac{1}{\sqrt{N!}}\sum_{p}(-)^{p}P\prod_{i=1}^{N}\psi_{\alpha_{i}}(x_{i}).
+$$
+
+where \( P \) is an operator which permutes the coordinates of two particles. We have assumed here that the 
+number of particles is the same as the number of available single-particle states, represented by the
+greek letters \( \alpha_{1}\alpha_{2}\dots\alpha_{N} \).
+
+<ul>
+ <li> Write  out \( \Phi^{AS} \) for \( N=3 \).</li>  
+ <li> Show that</li>
+</ul>
+
+$$
+\int dx_{1}dx_{2}\dots dx_{N}\left\vert
+\Phi_{\lambda}^{AS}(x_{1}x_{2}\dots x_{N};\alpha_{1}\alpha_{2}\dots\alpha_{N})
+\right\vert^{2} = 1.
+$$
 
 
+<ul>
+ <li> Define a general onebody operator \( \hat{F} = \sum_{i}^N\hat{f}(x_{i}) \) and a general  twobody operator \( \hat{G}=\sum_{i>j}^N\hat{g}(x_{i},x_{j}) \) with \( g \) being invariant under the interchange of the coordinates of particles \( i \) and \( j \). Calculate the matrix elements for a two-particle Slater determinant</li>
+</ul>
 
-<div class="jumbotron">
-<center><h1>PHY 981 Nuclear Structure: Single-particle properties and nuclear data</h1></center>  <!-- document title -->
+$$
+\langle\Phi_{\alpha_{1}\alpha_{2}}^{AS}|\hat{F}|\Phi_{\alpha_{1}\alpha_{2}}^{AS}\rangle,
+$$
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
+and
+$$
+\langle\Phi_{\alpha_{1}\alpha_{2}}^{AS}|\hat{G}|\Phi_{\alpha_{1}\alpha_{2}}^{AS}\rangle.
+$$
 
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
+Explain the short-hand notation for the Slater determinant.
+Which properties do you expect these operators to have in addition to an eventual permutation
+symmetry?
+</div>
+</div>
 
-<p>
-<!-- institution -->
 
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
-<p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
 <p>
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._spdata-bs000.html">1</a></li>
-  <li><a href="._spdata-bs001.html">2</a></li>
-  <li><a href="._spdata-bs002.html">3</a></li>
-  <li><a href="._spdata-bs003.html">4</a></li>
-  <li><a href="._spdata-bs004.html">5</a></li>
-  <li><a href="._spdata-bs005.html">6</a></li>
-  <li><a href="._spdata-bs006.html">7</a></li>
-  <li><a href="._spdata-bs007.html">8</a></li>
-  <li><a href="._spdata-bs008.html">9</a></li>
-  <li><a href="._spdata-bs009.html">10</a></li>
+<li><a href="._spdata-bs066.html">&laquo;</a></li>
+  <li><a href="._spdata-bs000.html">1</a></li>
   <li><a href="">...</a></li>
+  <li><a href="._spdata-bs059.html">60</a></li>
+  <li><a href="._spdata-bs060.html">61</a></li>
+  <li><a href="._spdata-bs061.html">62</a></li>
+  <li><a href="._spdata-bs062.html">63</a></li>
+  <li><a href="._spdata-bs063.html">64</a></li>
+  <li><a href="._spdata-bs064.html">65</a></li>
+  <li><a href="._spdata-bs065.html">66</a></li>
+  <li><a href="._spdata-bs066.html">67</a></li>
+  <li class="active"><a href="._spdata-bs067.html">68</a></li>
   <li><a href="._spdata-bs068.html">69</a></li>
-  <li><a href="._spdata-bs001.html">&raquo;</a></li>
+  <li><a href="._spdata-bs068.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -323,7 +349,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 

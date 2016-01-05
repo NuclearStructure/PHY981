@@ -249,7 +249,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._spdata-bs060.html#___sec59" style="font-size: 80%;">Numerical solution of the single-particle Schroedinger equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs061.html#___sec60" style="font-size: 80%;">Numerical solution of the single-particle Schroedinger equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs062.html#___sec61" style="font-size: 80%;">Numerical solution of the single-particle Schroedinger equation</a></li>
-     <!-- navigation toc: --> <li><a href="._spdata-bs063.html#___sec62" style="font-size: 80%;">Program to solve Schroedinger's equation</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec62" style="font-size: 80%;">Program to solve Schroedinger's equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs064.html#___sec63" style="font-size: 80%;">Program to solve Schroedinger's equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs065.html#___sec64" style="font-size: 80%;">Exercise 1</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs066.html#___sec65" style="font-size: 80%;">Exercise 2</a></li>
@@ -267,46 +267,47 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0063"></a>
+<!-- !split -->
+
+<h2 id="___sec62">Program to solve Schroedinger's equation  </h2>
+<div class="panel panel-default">
+<div class="panel-body">
+The following python program is an example of how one can obtain the eigenvalues for a single-nucleon moving in a harmonic oscillator potential. It is rather easy to change the onebody-potential with ones like a Woods-Saxon potential. 
+
+<ul>
+<li> The c++ and Fortran versions of this program can be found at <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs" target="_self"><tt>https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs</tt></a>.</li> 
+<li> The c++  program uses the c++ library armadillo, see <a href="http://arma.sourceforge.net/" target="_self"><tt>http://arma.sourceforge.net/</tt></a>.</li> 
+<li> To install armadillo see the guidelines at <a href="http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/" target="_self"><tt>http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/</tt></a>.</li> 
+<li> For mac users I recommend using <em>brew</em>, see <a href="http://brew.sh/" target="_self"><tt>http://brew.sh/</tt></a>.</li>
+<li> If you use ipython notebook, you can run c++ programs following the instructions at <a href="http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb" target="_self"><tt>http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb</tt></a></li>
+</ul>
+</div>
+</div>
 
 
-
-<div class="jumbotron">
-<center><h1>PHY 981 Nuclear Structure: Single-particle properties and nuclear data</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
-
-<p>
-<!-- institution -->
-
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
-<p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
 <p>
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._spdata-bs000.html">1</a></li>
-  <li><a href="._spdata-bs001.html">2</a></li>
-  <li><a href="._spdata-bs002.html">3</a></li>
-  <li><a href="._spdata-bs003.html">4</a></li>
-  <li><a href="._spdata-bs004.html">5</a></li>
-  <li><a href="._spdata-bs005.html">6</a></li>
-  <li><a href="._spdata-bs006.html">7</a></li>
-  <li><a href="._spdata-bs007.html">8</a></li>
-  <li><a href="._spdata-bs008.html">9</a></li>
-  <li><a href="._spdata-bs009.html">10</a></li>
+<li><a href="._spdata-bs062.html">&laquo;</a></li>
+  <li><a href="._spdata-bs000.html">1</a></li>
   <li><a href="">...</a></li>
+  <li><a href="._spdata-bs055.html">56</a></li>
+  <li><a href="._spdata-bs056.html">57</a></li>
+  <li><a href="._spdata-bs057.html">58</a></li>
+  <li><a href="._spdata-bs058.html">59</a></li>
+  <li><a href="._spdata-bs059.html">60</a></li>
+  <li><a href="._spdata-bs060.html">61</a></li>
+  <li><a href="._spdata-bs061.html">62</a></li>
+  <li><a href="._spdata-bs062.html">63</a></li>
+  <li class="active"><a href="._spdata-bs063.html">64</a></li>
+  <li><a href="._spdata-bs064.html">65</a></li>
+  <li><a href="._spdata-bs065.html">66</a></li>
+  <li><a href="._spdata-bs066.html">67</a></li>
+  <li><a href="._spdata-bs067.html">68</a></li>
   <li><a href="._spdata-bs068.html">69</a></li>
-  <li><a href="._spdata-bs001.html">&raquo;</a></li>
+  <li><a href="._spdata-bs064.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -323,7 +324,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 

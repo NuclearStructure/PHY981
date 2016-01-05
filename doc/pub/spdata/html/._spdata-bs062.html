@@ -248,7 +248,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._spdata-bs059.html#___sec58" style="font-size: 80%;">Numerical solution of the single-particle Schroedinger equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs060.html#___sec59" style="font-size: 80%;">Numerical solution of the single-particle Schroedinger equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs061.html#___sec60" style="font-size: 80%;">Numerical solution of the single-particle Schroedinger equation</a></li>
-     <!-- navigation toc: --> <li><a href="._spdata-bs062.html#___sec61" style="font-size: 80%;">Numerical solution of the single-particle Schroedinger equation</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec61" style="font-size: 80%;">Numerical solution of the single-particle Schroedinger equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs063.html#___sec62" style="font-size: 80%;">Program to solve Schroedinger's equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs064.html#___sec63" style="font-size: 80%;">Program to solve Schroedinger's equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs065.html#___sec64" style="font-size: 80%;">Exercise 1</a></li>
@@ -267,46 +267,97 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0062"></a>
+<!-- !split -->
 
+<h2 id="___sec61">Numerical solution of the single-particle Schroedinger equation </h2>
+<div class="panel panel-default">
+<div class="panel-body">
+Define first the diagonal matrix element
+$$
+   d_i=\frac{2}{h^2}+V_i,
+$$
 
+and the non-diagonal matrix element 
+$$
+   e_i=-\frac{1}{h^2}.
+$$
 
-<div class="jumbotron">
-<center><h1>PHY 981 Nuclear Structure: Single-particle properties and nuclear data</h1></center>  <!-- document title -->
+In this case the non-diagonal matrix elements are given by a mere constant. <em>All non-diagonal matrix elements are equal</em>.
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+With these definitions the Schroedinger equation takes the following form
+$$
+d_iu_i+e_{i-1}u_{i-1}+e_{i+1}u_{i+1}  = \lambda u_i,
+$$
 
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
+where \( u_i \) is unknown. We can write the 
+latter equation as a matrix eigenvalue problem 
+$$
+\begin{equation}
+    \left( \begin{array}{ccccccc} d_1 & e_1 & 0   & 0    & \dots  &0     & 0 \\
+                                e_1 & d_2 & e_2 & 0    & \dots  &0     &0 \\
+                                0   & e_2 & d_3 & e_3  &0       &\dots & 0\\
+                                \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
+                                0   & \dots & \dots & \dots  &\dots       &d_{n_{\mathrm{step}}-2} & e_{n_{\mathrm{step}}-1}\\
+                                0   & \dots & \dots & \dots  &\dots       &e_{n_{\mathrm{step}}-1} & d_{n_{\mathrm{step}}-1}
+             \end{array} \right)      \left( \begin{array}{c} u_{1} \\
+                                                              u_{2} \\
+                                                              \dots\\ \dots\\ \dots\\
+                                                              u_{n_{\mathrm{step}}-1}
+             \end{array} \right)=\lambda \left( \begin{array}{c} u_{1} \\
+                                                              u_{2} \\
+                                                              \dots\\ \dots\\ \dots\\
+                                                              u_{n_{\mathrm{step}}-1}
+             \end{array} \right) 
+\tag{7}
+\end{equation} 
+$$
 
-<p>
-<!-- institution -->
+or if we wish to be more detailed, we can write the tridiagonal matrix as
+$$
+\begin{equation}
+    \left( \begin{array}{ccccccc} \frac{2}{h^2}+V_1 & -\frac{1}{h^2} & 0   & 0    & \dots  &0     & 0 \\
+                                -\frac{1}{h^2} & \frac{2}{h^2}+V_2 & -\frac{1}{h^2} & 0    & \dots  &0     &0 \\
+                                0   & -\frac{1}{h^2} & \frac{2}{h^2}+V_3 & -\frac{1}{h^2}  &0       &\dots & 0\\
+                                \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
+                                0   & \dots & \dots & \dots  &\dots       &\frac{2}{h^2}+V_{n_{\mathrm{step}}-2} & -\frac{1}{h^2}\\
+                                0   & \dots & \dots & \dots  &\dots       &-\frac{1}{h^2} & \frac{2}{h^2}+V_{n_{\mathrm{step}}-1}
+             \end{array} \right)  
+\tag{8} 
+\end{equation} 
+$$
 
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
-<p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
+Recall that the solutions are known via the boundary conditions at
+\( i=n_{\mathrm{step}} \) and at the other end point, that is for  \( \rho_0 \).
+The solution is zero in both cases.
+</div>
+</div>
+
+
 <p>
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._spdata-bs000.html">1</a></li>
-  <li><a href="._spdata-bs001.html">2</a></li>
-  <li><a href="._spdata-bs002.html">3</a></li>
-  <li><a href="._spdata-bs003.html">4</a></li>
-  <li><a href="._spdata-bs004.html">5</a></li>
-  <li><a href="._spdata-bs005.html">6</a></li>
-  <li><a href="._spdata-bs006.html">7</a></li>
-  <li><a href="._spdata-bs007.html">8</a></li>
-  <li><a href="._spdata-bs008.html">9</a></li>
-  <li><a href="._spdata-bs009.html">10</a></li>
+<li><a href="._spdata-bs061.html">&laquo;</a></li>
+  <li><a href="._spdata-bs000.html">1</a></li>
   <li><a href="">...</a></li>
+  <li><a href="._spdata-bs054.html">55</a></li>
+  <li><a href="._spdata-bs055.html">56</a></li>
+  <li><a href="._spdata-bs056.html">57</a></li>
+  <li><a href="._spdata-bs057.html">58</a></li>
+  <li><a href="._spdata-bs058.html">59</a></li>
+  <li><a href="._spdata-bs059.html">60</a></li>
+  <li><a href="._spdata-bs060.html">61</a></li>
+  <li><a href="._spdata-bs061.html">62</a></li>
+  <li class="active"><a href="._spdata-bs062.html">63</a></li>
+  <li><a href="._spdata-bs063.html">64</a></li>
+  <li><a href="._spdata-bs064.html">65</a></li>
+  <li><a href="._spdata-bs065.html">66</a></li>
+  <li><a href="._spdata-bs066.html">67</a></li>
+  <li><a href="._spdata-bs067.html">68</a></li>
   <li><a href="._spdata-bs068.html">69</a></li>
-  <li><a href="._spdata-bs001.html">&raquo;</a></li>
+  <li><a href="._spdata-bs063.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -323,7 +374,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 
