@@ -36,7 +36,7 @@ chapters = {
      * "standard Beamer format": "${pub_url}/${name}/pdf/${name}-beamer.pdf"
  * HTML:
    * "Plain html style": "${pub_url}/${name}/html/${name}.html"
-   * "reveal.js beige slide style": "${pub_url}/${name}/html/${name}-reveal.html"
+   * "Bootstrap style for easy reading on mobile devices": "${pub_url}/${name}/html/${name}-bs.html"
  * iPython notebook:
    * "ipynb file": "${pub_url}/${name}/ipynb/${name}.ipynb"
 
@@ -59,7 +59,7 @@ files if you find missing or incorrectly rendered
 formulas in HTML or ipython notebook files.
 
 
-======= PHY981: Nuclear Structure notes =======
+======= PHY 981: Nuclear Structure notes =======
 
 % for ch in published:
 ===== ${chapters[ch]} =====
