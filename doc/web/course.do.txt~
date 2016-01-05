@@ -9,7 +9,7 @@ AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 # #endif
 
 <%
-pub_url = ' http://nuclearstructure.github.io/PHY981/doc/pub'
+pub_url = 'http://nuclearstructure.github.io/PHY981/doc/pub'
 published = ['intro', 'spdata', 'hfock', 'secondquant', 'forces', 'fci', 'decays', 'simplemodels', 'mbpt', 'cc', 'srg', 'gf', 'mc', 'inf',]
 chapters = {
  'intro': 'Introduction to nuclear structure',
