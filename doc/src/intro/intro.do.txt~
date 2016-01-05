@@ -1,6 +1,6 @@
 # Slides for PHY981 Nuclear Structure
-TITLE: Nuclear Structure, PHY981  Lectures, Spring semester 2015
-AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA and Department of Physics, University of Oslo, Oslo, Norway 
+TITLE: PHY 981 Nuclear Structure
+AUTHOR: "Morten Hjorth-Jensen":"https://github.com/mhjgit" {copyright, 2013-present|CC BY-NC} Email hjensen@msu.edu at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
 DATE:  Spring 2016 
 
 
@@ -8,11 +8,9 @@ DATE:  Spring 2016
 ===== Overview of first week  =====
 !bblock 
 
-* First week:
+* First two weeks:
  * Presentation of topics to be covered and introduction to nuclear structure physics
  * Discussion of quantities like binding energies, masses, radii, separation energies, see chapters 1-4 of Alex Brown's (AB) 2011 lectures
- * Single-particle degrees of freedom, discussion of data
-#* Thursday:
  * Single-particle degrees of freedom, discussion of data
  * Hamiltonians and single-particle fields, see  Suhonen (JS) chapter 3  and AB chapters 9 and 10.
 !eblock
@@ -22,10 +20,10 @@ DATE:  Spring 2016
 ===== Overview of first week  =====
 !bblock 
 As a reading assignment, chapters 1-4 of Alex Brown's text are rather useful.
-You can fetch JS's book from URL: "http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1"
+You can fetch Suhonen's book "online":"http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1" using your MSU library "access":"https://www.lib.msu.edu/general/account/".
 You can find these texts at the webpage of the course as well.
-The webpage of the course is at URL: "http://nuclearstructure.github.io/PHY981/doc/web/course.html".
-All material can be downloaded from URL: "http://nuclearstructure.github.io/PHY981/doc/web/index.html".
+The "course":"http://nuclearstructure.github.io/PHY981/doc/web/course.html" link contains 
+all material from the lectures in various formats (html, ipython notebooks and PDF).
 !eblock
 
 
@@ -38,9 +36,25 @@ All material can be downloaded from URL: "http://nuclearstructure.github.io/PHY9
 * Detailed lecture notes, all exercises presented and projects can be found at the homepage of the course, URL: "https://github.com/NuclearStructure/PHY981".
 * Exercises: No allocated time (but a given time can be determined)
 * Weekly plans and all other information are on the webpage of the course.
+!eblock
+
+
+!split
+===== Lectures, exercise sessions and syllabus =====
+!bblock
 * Syllabus: Lecture notes, exercises and projects. Relevant chapters of Suhonen's text that cover parts of the material are chapters 3-9 and 11. Chapters 1-2 on angular momentum will be used as references for various derivations and only parts of these two chapters will be used. Alex Brown's lecture notes from 2011 can also be used, and the relevant chapters are 1-4, 6-29. Chapter 5 of Brown on angular momentum plays the same role as chapters 1-2 of Suhonen. 
 * A weekly mail will be sent to all participants. 
 !eblock
+
+
+!split
+===== Links to all course material =====
+!bblock
+* PHY981 on github
+ * All material is at  URL: "https://github.com/NuclearStructure/PHY981/"
+ * The link URL: "http://nuclearstructure.github.io/PHY981/doc/web/course.html" gives direct access to html, ipython notebooks and pdf files of the lectures.
+!eblock
+
 
 
 !split
@@ -61,10 +75,11 @@ To understand how these topics are linked will provide us with fundamental insig
 !split
 ===== Plan for the semester =====
 !bblock Projects, weekly exercises, deadlines and final oral exam
-* One  project with a possible numerical content that counts 30%, weekly exercises  that count 30% and a final oral exam which counts 40% of the final grade. 
-* Project 1 will be available mid February and to be handed in before spring break (exact dates to be determined)
-* For the final oral exam (after spring break, time to be determined) you have to prepare a 25-30 minutes talk based on either a topic chosen by you or a topic defined towards the end of the semester.
-Duration of the examination is 45 minutes. The remaining 15-20 minutes are for questions from other topics as well. 
+* Two  projects with a possible numerical content that count 25% each of the final mark, weekly exercises  that count 20% and a final oral exam which counts 30% of the final grade. 
+* Project 1 will be available in week 6 (begins with February 8) and to be handed in before spring break (March 4)
+* Project 2 will be available in week 13 (begins with March 28) with deadline April 18.
+* For the final oral exam you have to prepare a 25-30 minutes talk based on either a topic chosen by you or a topic defined towards the end of the semester.
+Duration of the examination is 45 minutes. 
 !eblock
 
 
@@ -83,34 +98,15 @@ Duration of the examination is 45 minutes. The remaining 15-20 minutes are for q
 !eblock
 
 
-!split
-===== Links and useful software =====
-!bblock
-* PHY981 on github
- * All material is at  URL: "https://github.com/NuclearStructure/PHY981/"
- * The following link gives you a quick way to download everything, see URL: "http://nuclearstructure.github.io/PHY981/doc/web/index.html"
- * And this link URL: "http://nuclearstructure.github.io/PHY981/doc/web/course.html" gives direct access to html, ipython notebooks and pdf files of the lectures.
-!eblock
 
-
-!split
-===== Links and useful software =====
-!bblock
-* Useful links
- * When I write code in C++ I tend to recommend to use the linear algebra library armadillo, see URL: "http://arma.sourceforge.net/". 
- * To install armadillo see the guidelines at URL: "http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/installing-armadillo/". 
- * For mac users I recommend using *brew*, see URL: "http://brew.sh/".
- * If you use ipython notebook and want to run a c++ program, follow the instructions at URL: "http://nbviewer.ipython.org/github/dragly/cppmagic/blob/master/example.ipynb"
- * To set up git, look at URL: "http://www.uio.no/studier/emner/matnat/fys/FYS4411/v14/guides/setting-up-git/"
- * An excellent IDE for c++ programmers is Qt Creator, see URL: "http://www.uio.no/studier/emner/matnat/fys/FYS4411/v13/guides/installing-qt-creator/".
-!eblock
 
 
 
 !split
-===== Background enquiry =====
+===== Background enquiry, first exercise =====
 !bblock Write a small summary of what you do
 You can send the answer as an email to hjensen@msu.edu
+* What is your background in nuclear physics, courses taken or attending this semester? 
 * If you have defined a thesis topic, please send me some details of your thesis project, your interests etc.
 * What is your background in computing? And, if you have programmed, which programming language(s) and environments  are you  most familiar with?  
 * Also, if you have specific wishes with respect to this course, expectations, topics you'd like me to cover or other things, please feel free to write them down, or swing by my office for a chat. 
@@ -119,10 +115,9 @@ One of my aims is to be able to tailor this course as close as possible to your 
 !eblock
 
 !split
-=====  First exercise: Exercise 1  =====
+=====  First (real) exercise: Exercise 1  =====
 !bblock Masses and binding energies
-The data on binding energies can be found in the file bedata.dat at the github address of the course, see
-URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs"
+The data on binding energies can be found in the file bedata.dat at the github address of the "course":"https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs"
 
  *  Write a small program which reads in the proton and neutron numbers and the binding energies 
 and make a plot of all neutron separation energies for the chain of oxygen (O), calcium (Ca), nickel (Ni), tin (Sn) and lead (Pb) isotopes, that is you need to plot
@@ -139,14 +134,33 @@ BE(N,Z)= \alpha_1A-\alpha_2A^{2/3}-\alpha_3\frac{Z^2}{A^{1/3}}-\alpha_4\frac{(N-
 \]
 !et
 with $\alpha_1=15.49$ MeV, $\alpha_2=17.23$ MeV, $\alpha_3=0.697$ MeV and $\alpha_4=22.6$ MeV.
-Again, comment your results. 
- * Make also a plot of the binding energies as function of $A$ using the data in the file on bindingenergies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters $\alpha_i=0$. Comment your results. 
+
+!eblock
+
+
+
+!split
+=====  First (real) exercise: Exercise 1, continues  =====
+!bblock Masses and binding energies
+ * Make a plot of the binding energies as function of the number of nucleons $A$ using the data in the file on bindingenergies and the above liquid drop model.  Make a figure similar to figure 2.5 of Alex Brown where you set the various parameters $\alpha_i=0$. Comment your results. 
  * Use the liquid drop model to find the neutron drip lines   for Z values up to 120.
 Analyze then the fluorine isotopes and find, where available the corresponding experimental data, and compare the liquid drop model predicition with experiment. 
 Comment your results.
 
-A program example in C++ and the input data file *bedata.dat* can be found found at the github repository for the course, see URL: "https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs"
+A program example in C++ and the input data file *bedata.dat* can be found found at the github repository for the "course":"https://github.com/NuclearStructure/PHY981/tree/master/doc/pub/spdata/programs"
 
-Deadline for this exercise is _January 26, at noon_.  You can hand in electronically by just sending me your github link, or just the file. I digest most formats, from scans to ipython notebooks. The choice is yours. 
+Deadline for this exercise is _January 22, 5pm_.  You can hand in electronically by just sending me your github link, or just the file. I digest most formats, from scans to ipython notebooks. The choice is yours. 
 !eblock
 
+
+
+
+!split
+===== Links and useful software =====
+!bblock
+* Useful links
+ * When I write code in C++ I tend to recommend to use the linear algebra library "armadillo":"http://arma.sourceforge.net/". 
+ * For OS X users I recommend using "brew":"http://brew.sh/".
+ * To set up github, use the "guides":"https://guides.github.com/" and/or the github "link":"https://github.com/". 
+ * An excellent IDE for c++ programmers is "Qt Creator":"http://www.qt.io/ide/"
+!eblock
