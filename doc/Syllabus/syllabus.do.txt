@@ -1,28 +1,54 @@
-TITLE: PHY 480 and PHY 905 Computational Physics,  Syllabus/achievement requirements 
-AUTHOR: Department of Physics and Astronomy, Michigan State University
+TITLE: PHY 981 Nuclear Structure,  Syllabus/achievement requirements 
+AUTHOR: National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University
 DATE: Spring 2016
 
 
 ===== Basic Syllabus =====
+* Syllabus: Lecture notes, exercises and projects. Relevant chapters of Suhonen's text that cover parts of the material are chapters 3-9 and 11. Chapters 1-2 on angular momentum will be used as references for various derivations and only parts of these two chapters will be used. Alex Brown's lecture notes from 2011 can also be used, and the relevant chapters are 1-4, 6-29. Chapter 5 of Brown on angular momentum plays the same role as chapters 1-2 of Suhonen. 
 
-The syllabus for this course consists of the lecture notes on the webpage (chapters 2-15) and 4 compulsory projects. The projects will be graded and count xxx each of the final mark. A final oral exam/presentation which counts xxx is also part of the total evaluation.
+===== Main themes and reading suggestions =====
+The various observables we will discuss in the course are thought to be understood via the following five major topics
+* Single  particle properties and mean-field models, lecture notes, Suhonen chapters 3-5 and Brown chapters 7-10 and 14
+* Nuclear forces, covered by lecture notes
+* The nuclear shell-model, lecture notes, Suhonen chapter 8 and Brown chapters 11-22.
+* Decays and one and two-body transition probabilities, lecture notes, Suhonen chapters 6 and 7, Brown chapters 23-29.
+* If time allows, Particle-hole excitations, random-phase approximation and pairing (and perhaps something on collective models), lecture notes and Suhonen chapters 9 and 11.
 
- * Monte Carlo methods in physics ("Lecture notes chapters 12 and 13":"https://github.com/CompPhysics/ComputationalPhysics1/tree/master/doc/Lectures")
 
- * Partial differential equations ("Lecture notes chapter 10":"https://github.com/CompPhysics/ComputationalPhysics1/tree/master/doc/Lectures")
+===== Links to all course material =====
+* PHY981 on github
+ * All material is at  URL: "https://github.com/NuclearStructure/PHY981/"
+ * The link URL: "http://nuclearstructure.github.io/PHY981/doc/web/course.html" gives direct access to html, ipython notebooks and pdf files of the lectures.
 
- * Ordinary differential equations ("Lecture notes chapter 8":"https://github.com/CompPhysics/ComputationalPhysics1/tree/master/doc/Lectures")
 
- * Numerical integration, standard methods and Monte Carlo methods ("Lecture notes chapters 5.1-5.5 and 11":"https://github.com/CompPhysics/ComputationalPhysics1/tree/master/doc/Lectures")
 
- * Linear algebra and eigenvalue problems. ("Lecture notes chapters 6 and 7":"https://github.com/CompPhysics/ComputationalPhysics1/tree/master/doc/Lectures")
 
-A good text that can be used (with more math plus much material on parallelization) is "Parallel Scientific Computing in C++ and MPI, of Karniadakis and Kirby III":"http://www.cambridge.org/us/academic/subjects/computer-science/scientific-computing-scientific-software/parallel-scientific-computing-c-and-mpi-seamless-approach-parallel-algorithms-and-their-implementation".
+===== Projects, exercises and final oral exam =====
+!bblock Projects, weekly exercises, deadlines and final oral exam
+* Two  projects with a possible numerical content that count 25% each of the final mark, weekly exercises  that count 20% and a final oral exam which counts 30% of the final grade. 
+* Project 1 will be available in week 6 (begins with February 8) and to be handed in before spring break (March 4)
+* Project 2 will be available in week 13 (begins with March 28) with deadline April 18.
+* For the final oral exam you have to prepare a 25-30 minutes talk based on either a topic chosen by you or a topic defined towards the end of the semester.
+Duration of the examination is 45 minutes. 
+!eblock
 
- 
 
-===== Additional literature =====
-In addition we recommend highly the texts on Numerical Recipes in C++ or Fortran90 by Press et al. The C, F77 and
-Fortran90 can be downloaded down for free, follow the links at "Numerical Recipes":"http://www.nr.com/".
+===== Selected Texts on Nuclear Structure and Many-body theory =====
+!bblock
+* Nuclear structure
+ * Heyde, *The Nuclear Shell Model*, Springer 1990
+ * Lawson, *Theory of the Nuclear Shell Model*, Oxford 1980
+ * Ring and Schuck, *Nuclear Many-Body Theory*, Springer 1980
+ * Talmi, *Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model*, Harwood Academic Publishers 1993.
+* Many-body theories
+ * Blaizot and Ripka, *Quantum Theory of Finite systems*, MIT press 1986
+ * Fetter and Walecka, *Quantum Theory of Many-Particle Systems*, McGraw-Hill, 1971.
+ * Dickhoff and Van Neck, *Many-Body Theory Exposed*, World Scientific, 2006.
+!eblock
 
-The program library in C++ and Fortran2008 used in this course is a rewritten version of the Numerical Recipes codes.
+===== Links and useful software =====
+* Useful links
+ * When I write code in C++ I tend to recommend to use the linear algebra library "armadillo":"http://arma.sourceforge.net/". 
+ * For OS X users I recommend using "brew":"http://brew.sh/".
+ * To set up github, use the "guides":"https://guides.github.com/" and/or the github "link":"https://github.com/". 
+ * An excellent IDE for c++ programmers is "Qt Creator":"http://www.qt.io/ide/"
