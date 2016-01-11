@@ -213,10 +213,22 @@ $(function () {
                2,
                None,
                '___sec79'),
-              ('Exercise 1', 2, None, '___sec80'),
-              ('Exercise 2', 2, None, '___sec81'),
-              ('Exercise 3', 2, None, '___sec82'),
-              ('Exercise 4', 2, None, '___sec83')]}
+              ('Exercise 1: Masses and binding energies',
+               2,
+               None,
+               '___sec80'),
+              ('Exercise 2: Eigenstates and eigenvalues of single-particle problems',
+               2,
+               None,
+               '___sec81'),
+              ('Exercise 3: Operators and Slater determinants',
+               2,
+               None,
+               '___sec82'),
+              ('Exercise 4: First simple shell-model calculation',
+               2,
+               None,
+               '___sec83')]}
 end of tocinfo -->
 
 <body>
@@ -334,10 +346,10 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._spdata-bs079.html#___sec77" style="font-size: 80%;">Numerical solution of the single-particle Schroedinger equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs080.html#___sec78" style="font-size: 80%;">Program to solve Schroedinger's equation</a></li>
      <!-- navigation toc: --> <li><a href="._spdata-bs081.html#___sec79" style="font-size: 80%;">Program to solve Schroedinger's equation</a></li>
-     <!-- navigation toc: --> <li><a href="._spdata-bs082.html#___sec80" style="font-size: 80%;">Exercise 1</a></li>
-     <!-- navigation toc: --> <li><a href="._spdata-bs083.html#___sec81" style="font-size: 80%;">Exercise 2</a></li>
-     <!-- navigation toc: --> <li><a href="._spdata-bs084.html#___sec82" style="font-size: 80%;">Exercise 3</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec83" style="font-size: 80%;">Exercise 4</a></li>
+     <!-- navigation toc: --> <li><a href="._spdata-bs082.html#___sec80" style="font-size: 80%;">Exercise 1: Masses and binding energies</a></li>
+     <!-- navigation toc: --> <li><a href="._spdata-bs083.html#___sec81" style="font-size: 80%;">Exercise 2: Eigenstates and eigenvalues of single-particle problems</a></li>
+     <!-- navigation toc: --> <li><a href="._spdata-bs084.html#___sec82" style="font-size: 80%;">Exercise 3: Operators and Slater determinants</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec83" style="font-size: 80%;">Exercise 4: First simple shell-model calculation</a></li>
 
         </ul>
       </li>
@@ -353,19 +365,21 @@ MathJax.Hub.Config({
 <a name="part0085"></a>
 <!-- !split -->
 
-<h2 id="___sec83">Exercise 4  </h2>
-<div class="panel panel-default">
-<div class="panel-body">
+<p>
+<!-- --- begin exercise --- -->
+
+<h2 id="___sec83">Exercise 4: First simple shell-model calculation </h2>
+
+<p>
 We will now consider a simple three-level problem, depicted in the figure below. This is our first and very simple model of a possible many-nucleon (or just fermion) problem and the shell-model.
 The single-particle states are labelled by the quantum number \( p \) and can accomodate up to two single particles,  viz., every single-particle state  is doubly degenerate (you could think of this as one state having spin up and the other spin down). 
 We let the spacing between the doubly degenerate single-particle states be constant, with value \( d \).  The first state
 has energy \( d \). There are only three available single-particle states, \( p=1 \), \( p=2 \) and \( p=3 \), as illustrated
-in the figure. 
+in the figure.
 
-<ul>
-<li> How many two-particle Slater determinants can we construct in this space?</li> 
-</ul>
-
+<p>
+<b>a)</b>
+How many two-particle Slater determinants can we construct in this space?
 We limit ourselves to a system with only the two lowest single-particle orbits and two particles, \( p=1 \) and \( p=2 \). We assume that we can write the Hamiltonian as
 $$
        \hat{H}=\hat{H}_0+\hat{H}_I,
@@ -381,21 +395,23 @@ We assume also that the only two-particle states that can exist are those where 
 same state \( p \), as shown by the two possibilities to the left in the figure.
 The two-particle matrix elements of \( \hat{H}_I \) have all a constant value, \( -g \).
 
-<ul>
-<li> Show then that the Hamiltonian matrix can be written as</li> 
-</ul>
-
+<p>
+<b>b)</b>
+Show then that the Hamiltonian matrix can be written as 
 $$
 \left(\begin{array}{cc}2d-g &-g \\
 -g &4d-g \end{array}\right),
 $$
 
+<p>
+<b>c)</b>
+Find the eigenvalues and eigenvectors.  What is mixing of the state with two particles in \( p=2 \)  to the wave function with two-particles in \( p=1 \)? Discuss your results in terms of a linear combination of Slater determinants.
 
-<ul>
-<li> Find the eigenvalues and eigenvectors.  What is mixing of the state with two particles in \( p=2 \)  to the wave function with two-particles in \( p=1 \)? Discuss your results in terms of a linear combination of Slater determinants.</li> 
-<li> Add the possibility that the two particles can be in the state with \( p=3 \) as well and find the Hamiltonian matrix, the eigenvalues and the eigenvectors. We still insist that we only have two-particle states composed of two particles being in the same level \( p \). You can diagonalize numerically your \( 3\times 3 \) matrix.</li>
-</ul>
+<p>
+<b>d)</b>
+Add the possibility that the two particles can be in the state with \( p=3 \) as well and find the Hamiltonian matrix, the eigenvalues and the eigenvectors. We still insist that we only have two-particle states composed of two particles being in the same level \( p \). You can diagonalize numerically your \( 3\times 3 \) matrix.
 
+<p>
 This simple model catches several birds with a stone. It demonstrates how we can build linear combinations
 of Slater determinants and interpret these as different admixtures to a given state. It represents also the way we are going to interpret these contributions.  The two-particle states above \( p=1 \) will be interpreted as 
 excitations from the ground state configuration, \( p=1 \) here.  The reliability of this ansatz for the ground state, 
@@ -412,9 +428,7 @@ in fermionic systems.
 </center>
 
 <p>
-</div>
-</div>
-
+<!-- --- end exercise --- -->
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
