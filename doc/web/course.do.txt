@@ -74,4 +74,113 @@ ${text_types(ch)}
 
 % endfor
 
+===== Schedule Spring 2016 =====
+
+All lectures are in the main conference room of the theory trailer.
+
+
+|----------------------------------------------------------------------------------------------------------------------------|
+|  Week and days  |  Topics to be covered | Exercises and projects | Reading assignments|  Additional activities             |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 2 January 11-15| Introduction          |   "Exercise set 1":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise1"                    |  "Chapters 1-4 of Brown":"https://github.com/NuclearStructure/PHY981/tree/master/doc/literature"                   |                                  |
+|                      | Observables, masses, radii and definitions          |  "Lecture notes":"http://nuclearstructure.github.io/PHY981/doc/pub/spdata/html/spdata-bs.html"                     |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 3 January 18-22| Single particle properties          | "Exercise 1":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise1"                      |                    |  |
+|                      | Definitions, basis sets and begin Hartree-Fock          | "Lecture notes":"http://nuclearstructure.github.io/PHY981/doc/pub/hfock/html/hfock-bs.html"                      |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 4 January 25-29|  Hartree-Fock          |   "Exercise set 2":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise2"                    |                    |                                  |
+|                      | Single-particle quantum numbers, second quantization          |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 5 February 1-5| Second quantization           | "Exercise set 3":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise3"                      |                    |                                  |
+|                      | Hartree-Fock final          |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 6 February 8-12 | Second quantization           | "Project 1":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/projects/2016/Project1"                      |                    |                                  |
+|                      |          |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 7 February 15-19 |Nuclear forces          |  Work on project 1                      |                    |                                  |
+|                      |           |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 8 February 22-26| Nuclear forces           | Work on project 1                      |                    |                                  |
+|                      |           |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 9 February 29 -March 4|  Nuclear shell model         | Work on project 1                       |                    | Deadline for project 1 is March 4                                 |
+|                      |           |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 10 March 7-11 |  Spring break            |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 11 March 14-18 | Nuclear shell model        |  "Exercise set 4":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise4"                      |                    |                                  |
+|                      | Effective Hamiltonians          |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 12 March 21-25 | Nuclear shell model        |  "Exercise set 5":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise5"                     |                    |                                  |
+|                      | Effective Hamiltonians and operators          |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 13 March 28 -April 1| Effective Hamiltonians and operators        | "Project 2":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/projects/2016/Project2"                      |                    |                                  |
+|                      | Nuclear decays           |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 14 April 4-8| Nuclear decays         | Work on project 2                      |                    |                                  |
+|                      | Electromagnetic decays          |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 15 April 11-15| Nuclear decays         |  Work on project 2                       |                    |                                  |
+|                      | Electromagnetic and Electroweak decays          |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 16 April 18-22|  Nuclear decays       |   Work on project 2                    |                    |  Deadline for project 2 April 18                                  |
+|                      | Electroweak decays          |                       |                    |   Presentation of projects for final oral exam                               |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 17 April 25-29| Nuclear decays          |  Work on final oral exam project                       |                    |                                  |
+|                      | Summary of course          |                       |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 18  May 2-6| Finals week              |   Time and schedule TBA                    |                    |                                  |
+|----------------------------------------------------------------------------------------------------------------------------|
+
+
+
+===== Basic Syllabus =====
+* Syllabus: Lecture notes, exercises and projects. Relevant chapters of Suhonen's text that cover parts of the material are chapters 3-9 and 11. Chapters 1-2 on angular momentum will be used as references for various derivations and only parts of these two chapters will be used. Alex Brown's lecture notes from 2011 can also be used, and the relevant chapters are 1-4, 6-29. Chapter 5 of Brown on angular momentum plays the same role as chapters 1-2 of Suhonen. 
+
+===== Main themes and reading suggestions =====
+The various observables we will discuss in the course are thought to be understood via the following five major topics
+* Single  particle properties and mean-field models, lecture notes, Suhonen chapters 3-5 and Brown chapters 7-10 and 14
+* Nuclear forces, covered by lecture notes
+* The nuclear shell-model, lecture notes, Suhonen chapter 8 and Brown chapters 11-22.
+* Decays and one and two-body transition probabilities, lecture notes, Suhonen chapters 6 and 7, Brown chapters 23-29.
+* If time allows, Particle-hole excitations, random-phase approximation and pairing (and perhaps something on collective models), lecture notes and Suhonen chapters 9 and 11.
+
+
+===== Links to all course material =====
+* PHY981 on github
+ * All material is at  URL: "https://github.com/NuclearStructure/PHY981/"
+ * The link URL: "http://nuclearstructure.github.io/PHY981/doc/web/course.html" gives direct access to html, ipython notebooks and pdf files of the lectures.
+
+
+
+
+===== Projects, exercises and final oral exam =====
+!bblock Projects, weekly exercises, deadlines and final oral exam
+* Two  projects with a possible numerical content that count 25% each of the final mark, weekly exercises  that count 20% and a final oral exam which counts 30% of the final grade. 
+* Project 1 will be available in week 6 (begins with February 8) and to be handed in before spring break (March 4)
+* Project 2 will be available in week 13 (begins with March 28) with deadline April 18.
+* For the final oral exam you have to prepare a 25-30 minutes talk based on either a topic chosen by you or a topic defined towards the end of the semester.
+Duration of the examination is 45 minutes. 
+!eblock
+
+
+===== Selected Texts on Nuclear Structure and Many-body theory =====
+!bblock
+* Nuclear structure
+ * Heyde, *The Nuclear Shell Model*, Springer 1990
+ * Lawson, *Theory of the Nuclear Shell Model*, Oxford 1980
+ * Ring and Schuck, *Nuclear Many-Body Theory*, Springer 1980
+ * Talmi, *Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model*, Harwood Academic Publishers 1993.
+* Many-body theories
+ * Blaizot and Ripka, *Quantum Theory of Finite systems*, MIT press 1986
+ * Fetter and Walecka, *Quantum Theory of Many-Particle Systems*, McGraw-Hill, 1971.
+ * Dickhoff and Van Neck, *Many-Body Theory Exposed*, World Scientific, 2006.
+!eblock
+
+===== Links and useful software =====
+* Useful links
+ * When I write code in C++ I tend to recommend to use the linear algebra library "armadillo":"http://arma.sourceforge.net/". 
+ * For OS X users I recommend using "brew":"http://brew.sh/".
+ * To set up github, use the "guides":"https://guides.github.com/" and/or the github "link":"https://github.com/". 
+ * An excellent IDE for c++ programmers is "Qt Creator":"http://www.qt.io/ide/"
 

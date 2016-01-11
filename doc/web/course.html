@@ -25,6 +25,32 @@ pre {
   border: 0pt solid #93a1a1;
   box-shadow: none;
 }
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #93a1a1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #eee8d5;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
 
 div { text-align: justify; text-justify: inter-word; }
 </style>
@@ -66,7 +92,20 @@ div { text-align: justify; text-justify: inter-word; }
               ('From nuclei to stars, properties of infinite nuclear matter, symmetric and neutron rich',
                2,
                None,
-               '___sec14')]}
+               '___sec14'),
+              ('Schedule Spring 2016', 2, None, '___sec15'),
+              ('Basic Syllabus', 2, None, '___sec16'),
+              ('Main themes and reading suggestions', 2, None, '___sec17'),
+              ('Links to all course material', 2, None, '___sec18'),
+              ('Projects, exercises and final oral exam',
+               2,
+               None,
+               '___sec19'),
+              ('Selected Texts on Nuclear Structure and Many-body theory',
+               2,
+               None,
+               '___sec20'),
+              ('Links and useful software', 2, None, '___sec21')]}
 end of tocinfo -->
 
 <body>
@@ -594,6 +633,138 @@ formulas in HTML or ipython notebook files.
 
 <ul>
    <li> <a href="http://nuclearstructure.github.io/PHY981/doc/pub/inf/ipynb/inf.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec15">Schedule Spring 2016 </h2>
+
+<p>
+All lectures are in the main conference room of the theory trailer.
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">       Week and days       </th> <th align="center">                Topics to be covered                </th> <th align="center">                                                              Exercises and projects                                                             </th> <th align="center">                                                  Reading assignments                                                   </th> <th align="center">           Additional activities            </th> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   Week 2 January 11-15           </td> <td align="center">   Introduction                                            </td> <td align="center">   <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise1" target="_self">Exercise set 1</a>    </td> <td align="center">   <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/literature" target="_self">Chapters 1-4 of Brown</a>    </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Observables, masses, radii and definitions              </td> <td align="center">   <a href="http://nuclearstructure.github.io/PHY981/doc/pub/spdata/html/spdata-bs.html" target="_self">Lecture notes</a>                               </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 3 January 18-22           </td> <td align="center">   Single particle properties                              </td> <td align="center">   <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise1" target="_self">Exercise 1</a>        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Definitions, basis sets and begin Hartree-Fock          </td> <td align="center">   <a href="http://nuclearstructure.github.io/PHY981/doc/pub/hfock/html/hfock-bs.html" target="_self">Lecture notes</a>                                 </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 4 January 25-29           </td> <td align="center">   Hartree-Fock                                            </td> <td align="center">   <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise2" target="_self">Exercise set 2</a>    </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Single-particle quantum numbers, second quantization    </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 5 February 1-5            </td> <td align="center">   Second quantization                                     </td> <td align="center">   <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise3" target="_self">Exercise set 3</a>    </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Hartree-Fock final                                      </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 6 February 8-12           </td> <td align="center">   Second quantization                                     </td> <td align="center">   <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/projects/2016/Project1" target="_self">Project 1</a>           </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">                                                           </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 7 February 15-19          </td> <td align="center">   Nuclear forces                                          </td> <td align="center">   Work on project 1                                                                                                                                    </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">                                                           </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 8 February 22-26          </td> <td align="center">   Nuclear forces                                          </td> <td align="center">   Work on project 1                                                                                                                                    </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">                                                           </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 9 February 29 -March 4    </td> <td align="center">   Nuclear shell model                                     </td> <td align="center">   Work on project 1                                                                                                                                    </td> <td align="center">                                                                                                                               </td> <td align="center">   Deadline for project 1 is March 4               </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">                                                           </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 10 March 7-11             </td> <td align="center">   Spring break                                            </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 11 March 14-18            </td> <td align="center">   Nuclear shell model                                     </td> <td align="center">   <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise4" target="_self">Exercise set 4</a>    </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Effective Hamiltonians                                  </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 12 March 21-25            </td> <td align="center">   Nuclear shell model                                     </td> <td align="center">   <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise5" target="_self">Exercise set 5</a>    </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Effective Hamiltonians and operators                    </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 13 March 28 -April 1      </td> <td align="center">   Effective Hamiltonians and operators                    </td> <td align="center">   <a href="https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/projects/2016/Project2" target="_self">Project 2</a>           </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Nuclear decays                                          </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 14 April 4-8              </td> <td align="center">   Nuclear decays                                          </td> <td align="center">   Work on project 2                                                                                                                                    </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Electromagnetic decays                                  </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 15 April 11-15            </td> <td align="center">   Nuclear decays                                          </td> <td align="center">   Work on project 2                                                                                                                                    </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Electromagnetic and Electroweak decays                  </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 16 April 18-22            </td> <td align="center">   Nuclear decays                                          </td> <td align="center">   Work on project 2                                                                                                                                    </td> <td align="center">                                                                                                                               </td> <td align="center">   Deadline for project 2 April 18                 </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Electroweak decays                                      </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">   Presentation of projects for final oral exam    </td> </tr>
+<tr><td align="center">   Week 17 April 25-29            </td> <td align="center">   Nuclear decays                                          </td> <td align="center">   Work on final oral exam project                                                                                                                      </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">                                  </td> <td align="center">   Summary of course                                       </td> <td align="center">                                                                                                                                                        </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+<tr><td align="center">   Week 18  May 2-6               </td> <td align="center">   Finals week                                             </td> <td align="center">   Time and schedule TBA                                                                                                                                </td> <td align="center">                                                                                                                               </td> <td align="center">                                                   </td> </tr>
+</tbody>
+</table>
+
+<h2 id="___sec16">Basic Syllabus </h2>
+
+<ul>
+<li> Syllabus: Lecture notes, exercises and projects. Relevant chapters of Suhonen's text that cover parts of the material are chapters 3-9 and 11. Chapters 1-2 on angular momentum will be used as references for various derivations and only parts of these two chapters will be used. Alex Brown's lecture notes from 2011 can also be used, and the relevant chapters are 1-4, 6-29. Chapter 5 of Brown on angular momentum plays the same role as chapters 1-2 of Suhonen.</li> 
+</ul>
+
+<h2 id="___sec17">Main themes and reading suggestions </h2>
+The various observables we will discuss in the course are thought to be understood via the following five major topics
+
+<ul>
+<li> Single  particle properties and mean-field models, lecture notes, Suhonen chapters 3-5 and Brown chapters 7-10 and 14</li>
+<li> Nuclear forces, covered by lecture notes</li>
+<li> The nuclear shell-model, lecture notes, Suhonen chapter 8 and Brown chapters 11-22.</li>
+<li> Decays and one and two-body transition probabilities, lecture notes, Suhonen chapters 6 and 7, Brown chapters 23-29.</li>
+<li> If time allows, Particle-hole excitations, random-phase approximation and pairing (and perhaps something on collective models), lecture notes and Suhonen chapters 9 and 11.</li>
+</ul>
+
+<h2 id="___sec18">Links to all course material </h2>
+
+<ul>
+<li> PHY981 on github</li>
+
+<ul>
+ <li> All material is at  <a href="https://github.com/NuclearStructure/PHY981/" target="_self"><tt>https://github.com/NuclearStructure/PHY981/</tt></a></li>
+ <li> The link <a href="http://nuclearstructure.github.io/PHY981/doc/web/course.html" target="_self"><tt>http://nuclearstructure.github.io/PHY981/doc/web/course.html</tt></a> gives direct access to html, ipython notebooks and pdf files of the lectures.</li>
+</ul>
+
+</ul>
+
+<h2 id="___sec19">Projects, exercises and final oral exam </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Projects, weekly exercises, deadlines and final oral exam.</b>
+<p>
+
+<ul>
+<li> Two  projects with a possible numerical content that count 25% each of the final mark, weekly exercises  that count 20% and a final oral exam which counts 30% of the final grade.</li> 
+<li> Project 1 will be available in week 6 (begins with February 8) and to be handed in before spring break (March 4)</li>
+<li> Project 2 will be available in week 13 (begins with March 28) with deadline April 18.</li>
+<li> For the final oral exam you have to prepare a 25-30 minutes talk based on either a topic chosen by you or a topic defined towards the end of the semester.</li>
+</ul>
+
+Duration of the examination is 45 minutes.
+</div>
+
+
+<h2 id="___sec20">Selected Texts on Nuclear Structure and Many-body theory </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<ul>
+<li> Nuclear structure</li>
+
+<ul>
+ <li> Heyde, <em>The Nuclear Shell Model</em>, Springer 1990</li>
+ <li> Lawson, <em>Theory of the Nuclear Shell Model</em>, Oxford 1980</li>
+ <li> Ring and Schuck, <em>Nuclear Many-Body Theory</em>, Springer 1980</li>
+ <li> Talmi, <em>Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model</em>, Harwood Academic Publishers 1993.</li>
+</ul>
+
+<li> Many-body theories</li>
+
+<ul>
+ <li> Blaizot and Ripka, <em>Quantum Theory of Finite systems</em>, MIT press 1986</li>
+ <li> Fetter and Walecka, <em>Quantum Theory of Many-Particle Systems</em>, McGraw-Hill, 1971.</li>
+ <li> Dickhoff and Van Neck, <em>Many-Body Theory Exposed</em>, World Scientific, 2006.</li>
+</ul>
+
+</ul>
+</div>
+
+
+<h2 id="___sec21">Links and useful software </h2>
+
+<ul>
+<li> Useful links</li>
+
+<ul>
+ <li> When I write code in C++ I tend to recommend to use the linear algebra library <a href="http://arma.sourceforge.net/" target="_self">armadillo</a>.</li> 
+ <li> For OS X users I recommend using <a href="http://brew.sh/" target="_self">brew</a>.</li>
+ <li> To set up github, use the <a href="https://guides.github.com/" target="_self">guides</a> and/or the github <a href="https://github.com/" target="_self">link</a>.</li> 
+ <li> An excellent IDE for c++ programmers is <a href="http://www.qt.io/ide/" target="_self">Qt Creator</a></li>
 </ul>
 
 </ul>
