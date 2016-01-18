@@ -206,7 +206,7 @@ MathJax.Hub.Config({
         <ul class="dropdown-menu">
      <!-- navigation toc: --> <li><a href="._hfock-bs001.html#___sec0" style="font-size: 80%;">Why Hartree-Fock?</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs002.html#___sec1" style="font-size: 80%;">Why Hartree-Fock?</a></li>
-     <!-- navigation toc: --> <li><a href="._hfock-bs003.html#___sec2" style="font-size: 80%;">Definitions and notations</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec2" style="font-size: 80%;">Definitions and notations</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs004.html#___sec3" style="font-size: 80%;">Definitions and notations</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs005.html#___sec4" style="font-size: 80%;">Definitions and notations</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs006.html#___sec5" style="font-size: 80%;">Definitions and notations</a></li>
@@ -271,53 +271,59 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0003"></a>
+<!-- !split -->
 
+<h2 id="___sec2">Definitions and notations </h2>
+<div class="panel panel-default">
+<div class="panel-body">
+Before we proceed we need some definitions.
+We will assume that the interacting part of the Hamiltonian
+can be approximated by a two-body interaction.
+This means that our Hamiltonian is written as the sum of some onebody part and a twobody part
+$$
+\begin{equation}
+    \hat{H} = \hat{H}_0 + \hat{H}_I 
+    = \sum_{i=1}^A \hat{h}_0(x_i) + \sum_{i < j}^A \hat{v}(r_{ij}),
+\tag{1}
+\end{equation}
+$$
 
+with 
+$$
+\begin{equation}
+  H_0=\sum_{i=1}^A \hat{h}_0(x_i).
+\tag{2}
+\end{equation}
+$$
 
-<div class="jumbotron">
-<center><h1>PHY 981 Nuclear Structure:  Hartree-Fock methods</h1></center>  <!-- document title -->
+The onebody part \( u_{\mathrm{ext}}(x_i) \) is normally approximated by a harmonic oscillator potential or the Coulomb interaction an electron feels from the nucleus. However, other potentials are fully possible, such as 
+one derived from the self-consistent solution of the Hartree-Fock equations to be discussed here.
+</div>
+</div>
+
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
-
-<p>
-<!-- institution -->
-
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
-<p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
-<p>
-
-
-<p><a href="._hfock-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
-
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._hfock-bs000.html">1</a></li>
+<li><a href="._hfock-bs002.html">&laquo;</a></li>
+  <li><a href="._hfock-bs000.html">1</a></li>
   <li><a href="._hfock-bs001.html">2</a></li>
   <li><a href="._hfock-bs002.html">3</a></li>
-  <li><a href="._hfock-bs003.html">4</a></li>
+  <li class="active"><a href="._hfock-bs003.html">4</a></li>
   <li><a href="._hfock-bs004.html">5</a></li>
   <li><a href="._hfock-bs005.html">6</a></li>
   <li><a href="._hfock-bs006.html">7</a></li>
   <li><a href="._hfock-bs007.html">8</a></li>
   <li><a href="._hfock-bs008.html">9</a></li>
   <li><a href="._hfock-bs009.html">10</a></li>
+  <li><a href="._hfock-bs010.html">11</a></li>
+  <li><a href="._hfock-bs011.html">12</a></li>
+  <li><a href="._hfock-bs012.html">13</a></li>
   <li><a href="">...</a></li>
   <li><a href="._hfock-bs055.html">56</a></li>
-  <li><a href="._hfock-bs001.html">&raquo;</a></li>
+  <li><a href="._hfock-bs004.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -334,7 +340,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 

@@ -521,27 +521,6 @@ In our coordinate space derivations below we will spell out the Hartree-Fock equ
 
 
 !split
-===== Derivation of Hartree-Fock equations in coordinate space =====
-!bblock
-If we generalize the Euler-Lagrange equations to more variables 
-and introduce $N^2$ Lagrange multipliers which we denote by 
-$\epsilon_{\mu\nu}$, we can write the variational equation for the functional of $E$
-!bt
-\[
-  \delta E - \sum_{\mu\nu}^A \epsilon_{\mu\nu} \delta
-  \int \psi_{\mu}^* \psi_{\nu} = 0.
-\]
-!et
-For the orthogonal wave functions $\psi_{i}$ this reduces to
-!bt
-\[
-  \delta E - \sum_{\mu=1}^A \epsilon_{\mu} \delta
-  \int \psi_{\mu}^* \psi_{\mu} = 0.
-\]
-!et
-!eblock
-
-!split
 ===== Reminder on Variational Calculus and Lagrangian Multipliers  =====
 !bblock 
 The calculus of variations involves 
@@ -565,7 +544,7 @@ The constraints can be treated via the technique of Lagrangian multipliers
 
 
 !split
-===== Variational Calculus and Lagrangian Multipliers  =====
+===== Variational Calculus and Lagrangian Multipliers, simple example  =====
 !bblock 
 Let us specialize to the expectation value of the energy for one particle in three-dimensions.
 This expectation value reads
@@ -590,7 +569,7 @@ We will, for the sake of notational convenience,  skip the variables $x,y,z$ bel
 !eblock
 
 !split
-===== Variational Calculus and Lagrangian Multipliers  =====
+===== Manipulating terms  =====
 !bblock 
 The integral involving the kinetic energy can be written as, with the function $\psi$ vanishing
 strongly for large values of $x,y,z$ (given here by the limits $a$ and $b$), 
@@ -609,7 +588,7 @@ Inserting this expression into the expectation value for the energy and taking t
 !eblock
 
 !split
-===== Variational Calculus and Lagrangian Multipliers  =====
+===== Adding the Lagrangian multiplier  =====
 !bblock 
 The constraint appears in integral form as 
 !bt
@@ -634,7 +613,7 @@ where we have skipped the dependence on $x,y,z$ and introduced the shorthand $\p
 !eblock
 
 !split
-===== Variational Calculus and Lagrangian Multipliers  =====
+===== And with the Euler-Lagrange equations we get?  =====
 !bblock 
 For $\psi^*$ the Euler-Lagrange  equations yield
 !bt

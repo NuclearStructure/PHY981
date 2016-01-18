@@ -219,7 +219,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._hfock-bs013.html#___sec12" style="font-size: 80%;">Definitions and notations</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs014.html#___sec13" style="font-size: 80%;">Definitions and notations</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs015.html#___sec14" style="font-size: 80%;">Definitions and notations</a></li>
-     <!-- navigation toc: --> <li><a href="._hfock-bs016.html#___sec15" style="font-size: 80%;">Definitions and notations</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec15" style="font-size: 80%;">Definitions and notations</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs017.html#___sec16" style="font-size: 80%;">Definitions and notations</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs018.html#___sec17" style="font-size: 80%;">Definitions and notations</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs019.html#___sec18" style="font-size: 80%;">Derivation of Hartree-Fock equations in coordinate space</a></li>
@@ -271,53 +271,65 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0016"></a>
+<!-- !split -->
 
+<h2 id="___sec15">Definitions and notations </h2>
+<div class="panel panel-default">
+<div class="panel-body">
+We obtain
+$$
+\begin{align}
+  \int \Phi^*\hat{H}_I\Phi d\mathbf{\tau} 
+  = \frac{1}{2}\sum_{\mu=1}^A\sum_{\nu=1}^A
+    &\left[ \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)\hat{v}(r_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
+    dx_idx_j \right.
+\tag{9}\\
+  &\left.
+  - \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)
+  \hat{v}(r_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
+  dx_idx_j
+  \right]. \tag{10}
+\end{align}
+$$
 
+The first term is the so-called direct term. It gives rise to the  Hartree term in Hartree-Fock theory, 
+while the second is due to the Pauli principle and is called
+the exchange term and gives rise to the Fock term in the Hartree-Fock equations.
+The factor  \( 1/2 \) is introduced because we now run over
+all pairs twice.
+</div>
+</div>
 
-<div class="jumbotron">
-<center><h1>PHY 981 Nuclear Structure:  Hartree-Fock methods</h1></center>  <!-- document title -->
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
-
-<p>
-<!-- institution -->
-
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
-<p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
-<p>
-
-
-<p><a href="._hfock-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
-
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._hfock-bs000.html">1</a></li>
-  <li><a href="._hfock-bs001.html">2</a></li>
-  <li><a href="._hfock-bs002.html">3</a></li>
-  <li><a href="._hfock-bs003.html">4</a></li>
-  <li><a href="._hfock-bs004.html">5</a></li>
-  <li><a href="._hfock-bs005.html">6</a></li>
-  <li><a href="._hfock-bs006.html">7</a></li>
-  <li><a href="._hfock-bs007.html">8</a></li>
+<li><a href="._hfock-bs015.html">&laquo;</a></li>
+  <li><a href="._hfock-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
   <li><a href="._hfock-bs008.html">9</a></li>
   <li><a href="._hfock-bs009.html">10</a></li>
+  <li><a href="._hfock-bs010.html">11</a></li>
+  <li><a href="._hfock-bs011.html">12</a></li>
+  <li><a href="._hfock-bs012.html">13</a></li>
+  <li><a href="._hfock-bs013.html">14</a></li>
+  <li><a href="._hfock-bs014.html">15</a></li>
+  <li><a href="._hfock-bs015.html">16</a></li>
+  <li class="active"><a href="._hfock-bs016.html">17</a></li>
+  <li><a href="._hfock-bs017.html">18</a></li>
+  <li><a href="._hfock-bs018.html">19</a></li>
+  <li><a href="._hfock-bs019.html">20</a></li>
+  <li><a href="._hfock-bs020.html">21</a></li>
+  <li><a href="._hfock-bs021.html">22</a></li>
+  <li><a href="._hfock-bs022.html">23</a></li>
+  <li><a href="._hfock-bs023.html">24</a></li>
+  <li><a href="._hfock-bs024.html">25</a></li>
+  <li><a href="._hfock-bs025.html">26</a></li>
   <li><a href="">...</a></li>
   <li><a href="._hfock-bs055.html">56</a></li>
-  <li><a href="._hfock-bs001.html">&raquo;</a></li>
+  <li><a href="._hfock-bs017.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -334,7 +346,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 
