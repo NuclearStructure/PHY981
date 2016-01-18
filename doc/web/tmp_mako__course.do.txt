@@ -39,7 +39,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/pdf/intro-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/html/intro.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/html/intro-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/html/intro-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/html/intro-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/intro/ipynb/intro.ipynb"
 
@@ -56,7 +57,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/pdf/spdata-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/html/spdata.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/html/spdata-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/html/spdata-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/html/spdata-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/spdata/ipynb/spdata.ipynb"
 
@@ -73,7 +75,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/pdf/hfock-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/html/hfock.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/html/hfock-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/html/hfock-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/html/hfock-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/hfock/ipynb/hfock.ipynb"
 
@@ -90,7 +93,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/pdf/secondquant-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/html/secondquant.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/html/secondquant-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/html/secondquant-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/html/secondquant-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/secondquant/ipynb/secondquant.ipynb"
 
@@ -107,7 +111,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/pdf/forces-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/html/forces.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/html/forces-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/html/forces-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/html/forces-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/forces/ipynb/forces.ipynb"
 
@@ -124,7 +129,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/pdf/fci-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/html/fci.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/html/fci-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/html/fci-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/html/fci-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/fci/ipynb/fci.ipynb"
 
@@ -141,7 +147,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/pdf/decays-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/html/decays.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/html/decays-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/html/decays-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/html/decays-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/decays/ipynb/decays.ipynb"
 
@@ -158,7 +165,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/pdf/simplemodels-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/html/simplemodels.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/html/simplemodels-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/html/simplemodels-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/html/simplemodels-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/simplemodels/ipynb/simplemodels.ipynb"
 
@@ -175,7 +183,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/pdf/mbpt-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/html/mbpt.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/html/mbpt-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/html/mbpt-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/html/mbpt-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/mbpt/ipynb/mbpt.ipynb"
 
@@ -192,7 +201,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/pdf/cc-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/html/cc.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/html/cc-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/html/cc-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/html/cc-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/cc/ipynb/cc.ipynb"
 
@@ -209,7 +219,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/pdf/srg-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/html/srg.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/html/srg-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/html/srg-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/html/srg-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/srg/ipynb/srg.ipynb"
 
@@ -226,7 +237,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/pdf/gf-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/html/gf.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/html/gf-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/html/gf-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/html/gf-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/gf/ipynb/gf.ipynb"
 
@@ -243,7 +255,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/pdf/mc-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/html/mc.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/html/mc-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/html/mc-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/html/mc-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/mc/ipynb/mc.ipynb"
 
@@ -260,7 +273,8 @@ formulas in HTML or ipython notebook files.
      * "standard Beamer format": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/pdf/inf-beamer.pdf"
  * HTML:
    * "Plain html style": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/html/inf.html"
-   * "Bootstrap style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/html/inf-bs.html"
+   * "Reveal html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/html/inf-reveal.html"
+   * "Bootstrap html style for easy reading on mobile devices": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/html/inf-bs.html"
  * iPython notebook:
    * "ipynb file": "http://nuclearstructure.github.io/PHY981/doc/pub/inf/ipynb/inf.ipynb"
 
