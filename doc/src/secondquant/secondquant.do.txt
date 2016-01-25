@@ -1,18 +1,18 @@
-# Slides for PHY981
-TITLE: Second Quantization
-AUTHOR: Morten Hjorth-Jensen, National Superconducting Cyclotron Laboratory and Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA & Department of Physics, University of Oslo, Oslo, Norway 
-DATE: Spring 2016
+#* TO DO: add material about Wick's theorem and diagrammatic representation
+
+TITLE: PHY 981 Nuclear Structure: Second Quantization
+AUTHOR: Morten Hjorth-Jensen {copyright, 2013-present|CC BY-NC} at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
+DATE:  Spring 2016
+
 
 !split
 ===== Second quantization =====
 
 !bblock Second quantization
 * Second quantization and operators, two-body operator with examples 
-* Wick's theorem (missing in html and ipython notebook but in pdf files)
+* Wick's theorem 
 * Thouless' theorem and analysis of the Hartree-Fock equations using second quantization
 * Examples on how to use bit representations for Slater determinants
-* TO DO: add material about Wick's theorem and diagrammatic representation
-* TO DO: Link determinantal analysis with Thouless' theorem
 !eblock
 
 
