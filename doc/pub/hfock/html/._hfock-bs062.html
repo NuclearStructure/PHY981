@@ -287,9 +287,9 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._hfock-bs057.html#___sec56" style="font-size: 80%;">Analysis of Hartree-Fock equations, Koopman's theorem</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs058.html#___sec57" style="font-size: 80%;">Analysis of Hartree-Fock equations and Koopman's theorem</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs059.html#___sec58" style="font-size: 80%;">Analysis of Hartree-Fock equations and Koopman's theorem</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec59" style="font-size: 80%;">Analysis of Hartree-Fock equations and Koopman's theorem</a></li>
+     <!-- navigation toc: --> <li><a href="._hfock-bs060.html#___sec59" style="font-size: 80%;">Analysis of Hartree-Fock equations and Koopman's theorem</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs061.html#___sec60" style="font-size: 80%;">Analysis of Hartree-Fock equations and Koopman's theorem</a></li>
-     <!-- navigation toc: --> <li><a href="._hfock-bs062.html#___sec61" style="font-size: 80%;">Analysis of Hartree-Fock equations and Koopman's theorem</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec61" style="font-size: 80%;">Analysis of Hartree-Fock equations and Koopman's theorem</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs063.html#___sec62" style="font-size: 80%;">Exercise 1: Hartree-Fock Slater determinant</a></li>
      <!-- navigation toc: --> <li><a href="._hfock-bs064.html#___sec63" style="font-size: 80%;">Exercise 2: Matrix elements for the Hartree-Fock method and the nuclear shell model</a></li>
 
@@ -304,31 +304,32 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0060"></a>
+<a name="part0062"></a>
 <!-- !split -->
 
-<h2 id="___sec59">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
+<h2 id="___sec61">Analysis of Hartree-Fock equations and Koopman's theorem </h2>
 <div class="panel panel-default">
 <div class="panel-body">
-We have thus the following interpretations (if the single-particle field do not change)
+We can thus make our first interpretation of the separation energies in terms of the simplest
+possible many-body theory. 
+If we also recall that the so-called energy gap for neutrons (or protons) is defined as
 $$
-BE(A)-BE(A-1)\approx  E[\Phi^{\mathrm{HF}}(A)]-   E[\Phi^{\mathrm{HF}}(A-1)] 
-  = \epsilon_k^{\mathrm{HF}}, 
-$$
-
-and
-$$
-BE(A+1)-BE(A)\approx  E[\Phi^{\mathrm{HF}}(A+1)]-   E[\Phi^{\mathrm{HF}}(A)] =  \epsilon_a^{\mathrm{HF}}. 
+\Delta S_n= 2BE(N,Z)-BE(N-1,Z)-BE(N+1,Z),
 $$
 
-If  we use \( {}^{16}\mbox{O} \) as our closed-shell nucleus, we could then interpret the separation energy
+for neutrons and the corresponding gap for protons
 $$
-BE(^{16}\mathrm{O})-BE(^{15}\mathrm{O})\approx \epsilon_{0p^{\nu}_{1/2}}^{\mathrm{HF}}, 
+\Delta S_p= 2BE(N,Z)-BE(N,Z-1)-BE(N,Z+1),
 $$
 
-and
+we can define the neutron and proton energy gaps for \( {}^{16}\mbox{O} \) as
 $$
-BE(^{16}\mathrm{O})-BE(^{15}\mathrm{N})\approx \epsilon_{0p^{\pi}_{1/2}}^{\mathrm{HF}}.
+\Delta S_{\nu}=\epsilon_{0d^{\nu}_{5/2}}^{\mathrm{HF}}-\epsilon_{0p^{\nu}_{1/2}}^{\mathrm{HF}}, 
+$$
+
+and 
+$$
+\Delta S_{\pi}=\epsilon_{0d^{\pi}_{5/2}}^{\mathrm{HF}}-\epsilon_{0p^{\pi}_{1/2}}^{\mathrm{HF}}. 
 $$
 </div>
 </div>
@@ -338,23 +339,21 @@ $$
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-<li><a href="._hfock-bs059.html">&laquo;</a></li>
+<li><a href="._hfock-bs061.html">&laquo;</a></li>
   <li><a href="._hfock-bs000.html">1</a></li>
   <li><a href="">...</a></li>
-  <li><a href="._hfock-bs052.html">53</a></li>
-  <li><a href="._hfock-bs053.html">54</a></li>
   <li><a href="._hfock-bs054.html">55</a></li>
   <li><a href="._hfock-bs055.html">56</a></li>
   <li><a href="._hfock-bs056.html">57</a></li>
   <li><a href="._hfock-bs057.html">58</a></li>
   <li><a href="._hfock-bs058.html">59</a></li>
   <li><a href="._hfock-bs059.html">60</a></li>
-  <li class="active"><a href="._hfock-bs060.html">61</a></li>
+  <li><a href="._hfock-bs060.html">61</a></li>
   <li><a href="._hfock-bs061.html">62</a></li>
-  <li><a href="._hfock-bs062.html">63</a></li>
+  <li class="active"><a href="._hfock-bs062.html">63</a></li>
   <li><a href="._hfock-bs063.html">64</a></li>
   <li><a href="._hfock-bs064.html">65</a></li>
-  <li><a href="._hfock-bs061.html">&raquo;</a></li>
+  <li><a href="._hfock-bs063.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
