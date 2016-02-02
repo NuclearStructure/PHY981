@@ -72,7 +72,7 @@ with
 label{hinuclei}
 \end{equation}
 !et
-The onebody part $u_{\mathrm{ext}}(x_i)$ is normally approximated by a harmonic oscillator potential or the Coulomb interaction an electron feels from the nucleus. However, other potentials are fully possible, such as 
+The onebody part $u_{\mathrm{ext}}(x_i)$ is normally approximated by a harmonic oscillator or Woods-Saxon potential or for electronic systems the Coulomb interaction an electron feels from the nucleus. However, other potentials are fully possible, such as 
 one derived from the self-consistent solution of the Hartree-Fock equations to be discussed here.
 !eblock
 
@@ -161,8 +161,101 @@ where we have used the shorthand $d\mathbf{\tau}=dx_1dr_2\dots dr_A$.
 !eblock
 
 !split
+===== Brief reminder on some linear algebra properties =====
+!bblock
+Before we proceed with a more compact representation of a Slater determinant, we would like to repeat some linear algebra properties which will be useful for our derivations of the energy as function of a Slater determinant, Hartree-Fock theory and later the nuclear shell model.
+
+The inverse of a matrix is defined by
+
+!bt
+\[
+\mathbf{A}^{-1} \cdot \mathbf{A} = I
+\]
+!et
+A unitary matrix $\mathbf{A}$ is one whose inverse is its adjoint
+!bt
+\[
+\mathbf{A}^{-1}=\mathbf{A}^{\dagger}
+\]
+!et
+A real unitary matrix is called orthogonal and its inverse is equal to its transpose.
+A hermitian matrix is its own self-adjoint, that  is
+!bt
+\[
+\mathbf{A}=\mathbf{A}^{\dagger}. 
+\]
+!et
+!eblock
+
+
+!split
+===== Basic Matrix Features =====
+
+!bblock Matrix Properties Reminder
+
+|----------------------------------------------------------------------|
+|       Relations      |       Name      | matrix elements             |
+|----------------------------------------------------------------------|
+| $A = A^{T}$         | symmetric       | $a_{ij} = a_{ji}$            |
+| $A = \left (A^{T} \right )^{-1}$ | real orthogonal | $\sum_k a_{ik} a_{jk} = \sum_k a_{ki} a_{kj} = \delta_{ij}$ |
+| $A = A^{ * }$          | real matrix     | $a_{ij} = a_{ij}^{ * }$       |
+| $A = A^{\dagger}$     |  hermitian      | $a_{ij} = a_{ji}^{ * }$       |
+| $A = \left (A^{\dagger} \right )^{-1}$ | unitary | $\sum_k a_{ik} a_{jk}^{ * } = \sum_k a_{ki}^{ * } a_{kj} = \delta_{ij}$ |
+|----------------------------------------------------------------------|
+
+!eblock
+
+
+
+!split
+===== Basic Matrix Features =====
+!bblock
+Since we will deal with Fermions (identical and indistinguishable particles) we will 
+form an ansatz for a given state in terms of so-called Slater determinants determined
+by a chosen basis of single-particle functions. 
+
+For a given $n\times n$ matrix $\mathbf{A}$ we can write its determinant
+!bt
+\[
+   det(\mathbf{A})=|\mathbf{A}|=
+\left| \begin{array}{ccccc} a_{11}& a_{12}& \dots & \dots & a_{1n}\\
+                            a_{21}&a_{22}& \dots & \dots & a_{2n}\\  
+                            \dots & \dots & \dots & \dots & \dots \\
+                            \dots & \dots & \dots & \dots & \dots \\
+                            a_{n1}& a_{n2}& \dots & \dots & a_{nn}\end{array} \right|,
+\]
+!et
+in a more compact form as 
+!bt
+\[
+|\mathbf{A}|= \sum_{i=1}^{n!}(-1)^{p_i}\hat{P}_i a_{11}a_{22}\dots a_{nn},
+\]
+!et
+where $\hat{P}_i$ is a permutation operator which permutes the column indices $1,2,3,\dots,n$
+and the sum runs over all $n!$ permutations.  The quantity $p_i$ represents the number of transpositions of column indices that are needed in order to bring a given permutation back to its initial ordering, in our case given by $a_{11}a_{22}\dots a_{nn}$ here.
+!eblock
+
+
+!split
+===== Basic Matrix Features, simple $2 \times 2$ determinant  =====
+!bblock
+A simple $2\times 2$ determinant illustrates this. We have
+!bt
+\[
+   det(\mathbf{A})=
+\left| \begin{array}{cc} a_{11}& a_{12}\\
+                            a_{21}&a_{22}\end{array} \right|= (-1)^0a_{11}a_{22}+(-1)^1a_{12}a_{21},
+\]
+!et
+where in the last term we have interchanged the column indices $1$ and $2$. The natural ordering we have chosen is $a_{11}a_{22}$. 
+!eblock
+
+
+
+!split
 ===== Definitions and notations =====
 !bblock
+With the above we can rewrite our Slater determinant in a more compact form.
 In the Hartree-Fock method the trial function is the Slater
 determinant of Eq.~(ref{eq:HartreeFockDet}) which can be rewritten as 
 !bt
@@ -387,61 +480,12 @@ and
 !eblock
 
 
-!split
-===== Derivation of Hartree-Fock equations in coordinate space =====
-!bblock
-Let us denote the ground state energy by $E_0$. According to the
-variational principle we have
-!bt
-\[
-  E_0 \le E[\Phi] = \int \Phi^*\hat{H}\Phi d\mathbf{\tau}
-\]
-!et
-where $\Phi$ is a trial function which we assume to be normalized
-!bt
-\[
-  \int \Phi^*\Phi d\mathbf{\tau} = 1,
-\]
-!et
-where we have used the shorthand $d\mathbf{\tau}=dx_1dx_2\dots dx_A$.
-!eblock
-
-!split
-===== Derivation of Hartree-Fock equations in coordinate space =====
-!bblock
-In the Hartree-Fock method the trial function is a Slater
-determinant which can be rewritten as 
-!bt
-\[
-  \Psi(x_1,x_2,\dots,x_A,\alpha,\beta,\dots,\nu) = \frac{1}{\sqrt{A!}}\sum_{P} (-)^PP\psi_{\alpha}(x_1)
-    \psi_{\beta}(x_2)\dots\psi_{\nu}(x_A)=\sqrt{A!}\hat{A}\Phi_H,
-\]
-!et
-where we have introduced the anti-symmetrization operator $\hat{A}$ defined by the 
-summation over all possible permutations *p* of two fermions.
-It is defined as
-!bt
-\[
-  \hat{A} = \frac{1}{A!}\sum_{p} (-)^p\hat{P},
-\]
-!et
-with the the Hartree-function given by the simple product of all possible single-particle function
-!bt
-\[
-  \Phi_H(x_1,x_2,\dots,x_A,\alpha,\beta,\dots,\nu) =
-  \psi_{\alpha}(x_1)
-    \psi_{\beta}(x_2)\dots\psi_{\nu}(x_A).
-\]
-!et
-!eblock
-
-
 
 
 !split
 ===== Compact functional =====
 !bblock
-Our functional is written in a compact version as
+Our functional can then be  written in a compact version as
 !bt
 \[
   E[\Phi] 
@@ -613,7 +657,7 @@ where we have skipped the dependence on $x,y,z$ and introduced the shorthand $\p
 !eblock
 
 !split
-===== And with the Euler-Lagrange equations we get?  =====
+===== And with the Euler-Lagrange equations we get  =====
 !bblock 
 For $\psi^*$ the Euler-Lagrange  equations yield
 !bt
@@ -651,6 +695,153 @@ on our previous basis (labelled with greek indices) as
 In this case we vary the coefficients $C_{p\lambda}$. If the basis has infinitely many solutions, we need
 to truncate the above sum.  We assume that the basis $\phi_{\lambda}$ is orthogonal. A unitary transformation keeps the orthogonality, as discussed in exercise 1 below.  
 !eblock
+
+!split
+===== More on linear algebra  =====
+!bblock
+In the previous slide we stated that a unitary transformation keeps the orthogonality, as discussed in exercise 1 below.  To see this consider first a basis of vectors $\mathbf{v}_i$,
+!bt
+\[
+\mathbf{v}_i = \begin{bmatrix} v_{i1} \\ \dots \\ \dots \\v_{in} \end{bmatrix}
+\]
+!et
+We assume that the basis is orthogonal, that is 
+!bt
+\[
+\mathbf{v}_j^T\mathbf{v}_i = \delta_{ij}.
+\]
+!et
+An orthogonal or unitary transformation
+!bt
+\[
+\mathbf{w}_i=\mathbf{U}\mathbf{v}_i,
+\]
+!et
+preserves the dot product and orthogonality since
+!bt
+\[
+\mathbf{w}_j^T\mathbf{w}_i=(\mathbf{U}\mathbf{v}_j)^T\mathbf{U}\mathbf{v}_i=\mathbf{v}_j^T\mathbf{U}^T\mathbf{U}\mathbf{v}_i= \mathbf{v}_j^T\mathbf{v}_i = \delta_{ij}.
+\]
+!et
+!eblock
+!split
+=====  Coefficients of a wave function expansion =====
+!bblock
+This means that if the coefficients $C_{p\lambda}$ belong to a unitary or orthogonal trasformation (using the Dirac bra-ket notation)
+!bt
+\[
+\vert p\rangle  = \sum_{\lambda} C_{p\lambda}\vert\lambda\rangle,
+\]
+!et
+orthogonality is preserved, that is $\langle \alpha \vert \beta\rangle = \delta_{\alpha\beta}$
+and $\langle p \vert q\rangle = \delta_{pq}$. 
+
+This propertry is extremely useful when we build up a basis of many-body Stater determinant based states. 
+
+_Note also that although a basis $\vert \alpha\rangle$ contains an infinity of states, for practical calculations we have always to make some truncations._ 
+!eblock
+
+
+
+!split
+===== More Basic Matrix Features, simple $2 \times 2$ determinant, useful property of determinants  =====
+!bblock
+Before we develop the Hartree-Fock equations, there is another very useful property of determinants that we will use both in connection with Hartree-Fock calculations and later shell-model calculations.  
+
+Consider the following determinant
+!bt
+\[
+\left| \begin{array}{cc} \alpha_1b_{11}+\alpha_2sb_{12}& a_{12}\\
+                         \alpha_1b_{21}+\alpha_2b_{22}&a_{22}\end{array} \right|=\alpha_1\left|\begin{array}{cc} b_{11}& a_{12}\\
+                         b_{21}&a_{22}\end{array} \right|+\alpha_2\left| \begin{array}{cc} b_{12}& a_{12}\\b_{22}&a_{22}\end{array} \right|
+\]
+!et
+
+!eblock
+
+
+
+
+!split
+===== More Basic Matrix Features, $n \times n$ determinant =====
+!bblock
+We can generalize this to  an $n\times n$ matrix and have 
+!bt
+\[
+\left| \begin{array}{cccccc} a_{11}& a_{12} & \dots & \sum_{k=1}^n c_k b_{1k} &\dots & a_{1n}\\
+a_{21}& a_{22} & \dots & \sum_{k=1}^n c_k b_{2k} &\dots & a_{2n}\\
+\dots & \dots & \dots & \dots & \dots & \dots \\
+\dots & \dots & \dots & \dots & \dots & \dots \\
+a_{n1}& a_{n2} & \dots & \sum_{k=1}^n c_k b_{nk} &\dots & a_{nn}\end{array} \right|=
+\sum_{k=1}^n c_k\left| \begin{array}{cccccc} a_{11}& a_{12} & \dots &  b_{1k} &\dots & a_{1n}\\
+a_{21}& a_{22} & \dots &  b_{2k} &\dots & a_{2n}\\
+\dots & \dots & \dots & \dots & \dots & \dots\\
+\dots & \dots & \dots & \dots & \dots & \dots\\
+a_{n1}& a_{n2} & \dots &  b_{nk} &\dots & a_{nn}\end{array} \right| .
+\]
+!et
+This is a property we will use in our Hartree-Fock discussions. 
+
+
+
+!eblock
+
+
+!split
+===== More Basic Matrix Features, a general $n \times n$ determinant =====
+!bblock
+We can generalize the previous results, now 
+with all elements $a_{ij}$  being given as functions of 
+linear combinations  of various coefficients $c$ and elements $b_{ij}$,
+!bt
+\[
+\left| \begin{array}{cccccc} \sum_{k=1}^n b_{1k}c_{k1}& \sum_{k=1}^n b_{1k}c_{k2} & \dots & \sum_{k=1}^n b_{1k}c_{kj}  &\dots & \sum_{k=1}^n b_{1k}c_{kn}\\
+\sum_{k=1}^n b_{2k}c_{k1}& \sum_{k=1}^n b_{2k}c_{k2} & \dots & \sum_{k=1}^n b_{2k}c_{kj} &\dots & \sum_{k=1}^n b_{2k}c_{kn}\\
+\dots & \dots & \dots & \dots & \dots & \dots \\
+\dots & \dots & \dots & \dots & \dots &\dots \\
+\sum_{k=1}^n b_{nk}c_{k1}& \sum_{k=1}^n b_{nk}c_{k2} & \dots & \sum_{k=1}^n b_{nk}c_{kj} &\dots & \sum_{k=1}^n b_{nk}c_{kn}\end{array} \right|=det(\mathbf{C})det(\mathbf{B}),
+\]
+!et
+where $det(\mathbf{C})$ and $det(\mathbf{B})$ are the determinants of $n\times n$ matrices
+with elements $c_{ij}$ and $b_{ij}$ respectively.  
+This is a property we will use in our Hartree-Fock discussions. Convince yourself about the correctness of the above expression by setting $n=2$. 
+
+!eblock
+
+
+
+!split
+===== A general Slater determinant =====
+!bblock
+With our definition of the new basis in terms of an orthogonal basis we have
+!bt
+\[
+\psi_p(x)  = \sum_{\lambda} C_{p\lambda}\phi_{\lambda}(x).
+\]
+!et
+If the coefficients $C_{p\lambda}$ belong to an orthogonal or unitary matrix, the new basis
+is also orthogonal. 
+Our Slater determinant in the new basis $\psi_p(x)$ is written as
+!bt
+\[
+\frac{1}{\sqrt{A!}}
+\left| \begin{array}{ccccc} \psi_{p}(x_1)& \psi_{p}(x_2)& \dots & \dots & \psi_{p}(x_A)\\
+                            \psi_{q}(x_1)&\psi_{q}(x_2)& \dots & \dots & \psi_{q}(x_A)\\  
+                            \dots & \dots & \dots & \dots & \dots \\
+                            \dots & \dots & \dots & \dots & \dots \\
+                     \psi_{t}(x_1)&\psi_{t}(x_2)& \dots & \dots & \psi_{t}(x_A)\end{array} \right|=\frac{1}{\sqrt{A!}}
+\left| \begin{array}{ccccc} \sum_{\lambda} C_{p\lambda}\phi_{\lambda}(x_1)& \sum_{\lambda} C_{p\lambda}\phi_{\lambda}(x_2)& \dots & \dots & \sum_{\lambda} C_{p\lambda}\phi_{\lambda}(x_A)\\
+                            \sum_{\lambda} C_{q\lambda}\phi_{\lambda}(x_1)&\sum_{\lambda} C_{q\lambda}\phi_{\lambda}(x_2)& \dots & \dots & \sum_{\lambda} C_{q\lambda}\phi_{\lambda}(x_A)\\  
+                            \dots & \dots & \dots & \dots & \dots \\
+                            \dots & \dots & \dots & \dots & \dots \\
+                     \sum_{\lambda} C_{t\lambda}\phi_{\lambda}(x_1)&\sum_{\lambda} C_{t\lambda}\phi_{\lambda}(x_2)& \dots & \dots & \sum_{\lambda} C_{t\lambda}\phi_{\lambda}(x_A)\end{array} \right|,
+\]
+!et
+which is nothing but $det(\mathbf{C})det(\Phi)$, with $det(\Phi)$ being the determinant given by the basis functions $\phi_{\lambda}(x)$. 
+!eblock
+
+
+
 
 !split
 ===== Hartree-Fock by varying the coefficients of a wave function expansion =====
@@ -788,9 +979,9 @@ we can rewrite the new equations as
 \sum_{\gamma}h_{\alpha\beta}^{HF}C_{i\beta}=\epsilon_i^{HF}C_{i\alpha}. label{eq:newhf}
 \end{equation}
 !et
-The latter is nothing but a standard eigenvalue problem. Compared with Eq.~(ref{eq:hartreefockcoordinatespace}),
-we see that we do not need to compute any integrals in an iterative procedure for solving the equations.
-It suffices to tabulate the matrix elements $\langle \alpha | h | \beta \rangle$ and $\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}$ once and for all. Successive iterations require thus only a look-up in tables over one-body and two-body matrix elements. These details will be discussed below when we solve the Hartree-Fock equations numerical. 
+The latter is nothing but a standard eigenvalue problem. 
+
+It suffices to tabulate the matrix elements $\langle \alpha | h | \beta \rangle$ and $\langle \alpha\gamma|\hat{v}|\beta\delta\rangle_{AS}$ once and for all. Successive iterations require thus only a look-up in tables over one-body and two-body matrix elements. These details will be discussed below when we solve the Hartree-Fock equations numerically. 
 !eblock
 
 !split
@@ -1134,10 +1325,10 @@ and
 
 
 !split
-===== Exercise: Derivation of Hartree-Fock equations  =====
+===== Exercise: Hartree-Fock Slater determinant  =====
 !bblock  
-Consider a Slater determinant built up of single-particle orbitals $\psi_{\lambda}$, 
-with $\lambda = 1,2,\dots,N$.
+Consider a Slater determinant built up of orthogonal single-particle orbitals $\psi_{\lambda}$, 
+with $\lambda = 1,2,\dots,A$.
 
 The unitary transformation
 !bt
@@ -1146,9 +1337,9 @@ The unitary transformation
 \]
 !et
 brings us into the new basis.  
-The new basis has quantum numbers $a=1,2,\dots,N$.
+The new basis has quantum numbers $a=1,2,\dots,A$.
 !bsubex
-Show that the new basis is orthonormal.
+Show that the new basis is orthogonal.
 !esubex
 !bsubex
 Show that the new Slater determinant constructed from the new single-particle wave functions can be
@@ -1163,6 +1354,94 @@ Hint: $C$ is a unitary matrix.
 !eblock
 
 
+
+!split
+===== Exercise: Matrix elements for the Hartree-Fock method and the nuclear shell model  =====
+
+We will assume that we can build various Slater determinants using an orthogonal  single-particle basis $\psi_{\lambda}$, 
+with $\lambda = 1,2,\dots,A$. 
+
+
+The aim of this exercise is to set up specific matrix elements that will turn useful when we start our discussions of the nuclear shell model. In particular you will notice, depending on the character of the operator, that many matrix elements will actually be zero.
+
+Consider three $A$-particle  Slater determinants  $|\Phi_0$, $|\Phi_i^a\rangle$ and $|\Phi_{ij}^{ab}\rangle$, where the notation means that 
+Slater determinant $|\Phi_i^a\rangle$ differs from $|\Phi_0\rangle$ by one single-particle state, that is a single-particle
+state $\psi_i$ is replaced by a single-particle state $\psi_a$. 
+It will later be interpreted as a so-called one-particle-one-hole excitation.
+Similarly, the Slater determinant $|\Phi_{ij}^{ab}\rangle$
+differs by two single-particle states from $|\Phi_0\rangle$ and is normally thought of as a two-particle-two-hole excitation.
+
+Define a general onebody operator $\hat{F} = \sum_{i}^A\hat{f}(x_{i})$ and a general  twobody operator $\hat{G}=\sum_{i>j}^A\hat{g}(x_{i},x_{j})$ with $g$ being invariant under the interchange of the coordinates of particles $i$ and $j$. You can use here the results from the second exercise set, exercise 3.
+!bsubex
+Calculate
+!bt
+\[
+\langle \Phi_0 \vert\hat{F}\vert\Phi_0\rangle,
+\]
+!et
+and
+!bt
+\[
+\langle \Phi_0\hat{G}|\Phi_0\rangle.
+\]
+!et
+!esubex
+
+!bsubex
+Find thereafter 
+!bt
+\[
+\langle \Phi_0 |\hat{F}|\Phi_i^a\rangle,
+\]
+!et
+and
+!bt
+\[
+\langle \Phi_0|\hat{G}|\Phi_i^a\rangle,
+\]
+!et
+!esubex
+!bsubex
+Finally, find
+!bt
+\[
+\langle \Phi_0 |\hat{F}|\Phi_{ij}^{ab}\rangle,
+\]
+!et
+and
+!bt
+\[
+\langle \Phi_0|\hat{G}|\Phi_{ij}^{ab}\rangle.
+\]
+!et
+What happens with the two-body operator if we have a transition probability  of the type
+!bt
+\[
+\langle \Phi_0|\hat{G}|\Phi_{ijk}^{abc}\rangle,
+\]
+!et
+where the Slater determinant to the right of the operator differs by more than two single-particle states?
+!esubex
+!bsubex
+With an orthogonal basis of Slater determinants $\Phi_{\lambda}$, we can now construct an exact many-body state as a linear expansion of Slater determinants, that is, a given exact state
+!bt
+\[
+\Psi_i = \sum_{\lambda =0}^{\infty}C_{i\lambda}\Phi_{\lambda}.
+\]
+!et
+In all practical calculations the infinity is replaced by a given truncation in the sum. 
+
+If you are to compute the expectation value of (at most) a two-body Hamiltonian for the above
+exact state
+!bt
+\[
+\langle \Psi_i \vert \hat{H} \vert \Psi_i\rangle,
+\]
+!et
+based on the calculations above, which are the only elements which will contribute?  (there is no need to perform any calculation here, use your results from exercises a), b), and c)).
+
+These results simplify to a large extent shell-model calculations. 
+!esubex
 
 
 
