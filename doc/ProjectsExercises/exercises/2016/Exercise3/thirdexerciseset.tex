@@ -1,0 +1,147 @@
+\documentclass[prc]{revtex4}
+\usepackage[dvips]{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{lscape}
+
+\usepackage{epic,eepic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvips]{epsfig}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{bezier}
+\usepackage{pstricks}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{braket}
+\usepackage[dvips]{graphicx}
+\usepackage{pst-plot}
+
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]
+    {\bra{#1}#2\ket{#3}}
+
+\newcommand{\normord}[1]{
+    \left\{#1\right\}
+}
+
+\usepackage{amsmath}
+\begin{document}
+
+\title{Exercises PHY981 Spring 2016, deadline February 8}
+%\author{}
+\maketitle
+You can hand in the exercise  electronically by sending your github link or by sending a scan of your notes, a pdf or postscript file, or ipython notebook or any format you prefer,  by email to 
+hjensen@nscl.msu.edu. 
+
+
+\subsection*{Exercise 5}
+This exercise serves to convince you about the relation between
+two different single-particle bases, where one could be our new Hartree-Fock basis and the other a harmonic oscillator basis.
+\begin{enumerate}
+\item[a)]
+Consider a Slater determinant built up of orthogonal single-particle orbitals $\psi_{\lambda}$, 
+with $\lambda = 1,2,\dots,A$.
+
+The unitary transformation
+\[
+\psi_a  = \sum_{\lambda} C_{a\lambda}\phi_{\lambda},
+\]
+brings us into the new basis.  
+The new basis has quantum numbers $a=1,2,\dots,A$.
+Show that the new basis is orthogonal.
+\item[b)]  
+Show that the new Slater determinant constructed from the new single-particle wave functions can be
+written as the determinant based on the previous basis and the determinant of the matrix $C$.
+\item[c)]  
+Show that the old and the new Slater determinants are equal up to a complex constant with absolute value unity.
+(Hint, $C$ is a unitary matrix). 
+\end{enumerate}
+
+
+
+
+
+\subsection*{Exercise 6: Matrix elements for the Hartree-Fock method and the nuclear shell model}
+
+
+We will assume that we can build various Slater determinants using an orthogonal  single-particle basis $\psi_{\lambda}$, 
+with $\lambda = 1,2,\dots,A$. 
+
+
+The aim of this exercise is to set up specific matrix elements that will turn useful when we start our discussions of the nuclear shell model. In particular you will notice, depending on the character of the operator, that many matrix elements will actually be zero.
+
+Consider three $A$-particle  Slater determinants  $|\Phi_0$, $|\Phi_i^a\rangle$ and $|\Phi_{ij}^{ab}\rangle$, where the notation means that 
+Slater determinant $|\Phi_i^a\rangle$ differs from $|\Phi_0\rangle$ by one single-particle state, that is a single-particle
+state $\psi_i$ is replaced by a single-particle state $\psi_a$. 
+It will later be interpreted as a so-called one-particle-one-hole excitation.
+Similarly, the Slater determinant $|\Phi_{ij}^{ab}\rangle$
+differs by two single-particle states from $|\Phi_0\rangle$ and is normally thought of as a two-particle-two-hole excitation.
+
+Define a general onebody operator $\hat{F} = \sum_{i}^A\hat{f}(x_{i})$ and a general  twobody operator $\hat{G}=\sum_{i>j}^A\hat{g}(x_{i},x_{j})$ with $g$ being invariant under the interchange of the coordinates of particles $i$ and $j$. You can use here the results from the second exercise set, exercise 3.
+
+\begin{enumerate}
+\item[a)]
+Calculate
+\[
+\langle \Phi_0 \vert\hat{F}\vert\Phi_0\rangle,
+\]
+and
+\[
+\langle \Phi_0\hat{G}|\Phi_0\rangle.
+\]
+
+\item[b)]
+Find thereafter 
+\[
+\langle \Phi_0 |\hat{F}|\Phi_i^a\rangle,
+\]
+and
+\[
+\langle \Phi_0|\hat{G}|\Phi_i^a\rangle,
+\]
+
+\item[c)]
+Finally, find
+\[
+\langle \Phi_0 |\hat{F}|\Phi_{ij}^{ab}\rangle,
+\]
+and
+\[
+\langle \Phi_0|\hat{G}|\Phi_{ij}^{ab}\rangle.
+\]
+What happens with the two-body operator if we have a transition probability  of the type
+\[
+\langle \Phi_0|\hat{G}|\Phi_{ijk}^{abc}\rangle,
+\]
+where the Slater determinant to the right of the operator differs by more than two single-particle states?
+
+\item[d)]
+With an orthogonal basis of Slater determinants $\Phi_{\lambda}$, we can now construct an exact many-body state as a linear expansion of Slater determinants, that is, a given exact state
+\[
+\Psi_i = \sum_{\lambda =0}^{\infty}C_{i\lambda}\Phi_{\lambda}.
+\]
+In all practical calculations the infinity is replaced by a given truncation in the sum. 
+
+If you are to compute the expectation value of (at most) a two-body Hamiltonian for the above
+exact state
+\[
+\langle \Psi_i \vert \hat{H} \vert \Psi_i\rangle,
+\]
+based on the calculations above, which are the only elements which will contribute?  (there is no need to perform any calculation here, use your results from exercises a), b), and c)).
+
+These results simplify to a large extent shell-model calculations.
+\end{enumerate}
+
+
+\end{document}
