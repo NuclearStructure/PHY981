@@ -1,0 +1,175 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{amsmath}           % Include AMSTeX style
+\usepackage{amsfonts}
+\usepackage{graphicx}          % Include figure files
+\usepackage{dcolumn}           % Align table columns on decimal point
+\usepackage{bm}
+\usepackage{array}
+
+\newcommand{\gras}[1]{\boldsymbol{#1}}
+
+% Page size customizations
+
+\setlength{\parskip}{0.3cm}
+\setlength{\parindent}{0.0cm}
+\setlength{\fboxrule}{0.025cm}
+\setlength{\fboxsep}{0.25cm}
+
+\addtolength{\headsep}{1.0cm}
+\addtolength{\voffset}{-1.0cm}
+\addtolength{\textheight}{2.0cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\oddsidemargin}{-1.25cm}
+\addtolength{\evensidemargin}{-1.25cm}
+
+\setcounter{MaxMatrixCols}{25}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{15}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%
+% BEGINNING
+%
+\begin{document}
+
+\begin{center}
+{\large\bf Hartree-Fock Calculations of Neutron Drops} \bigskip\\
+
+\parbox{0.9\textwidth}{\footnotesize
+Neutron drops are a powerful theoretical laboratory for testing, validating and improving nuclear structure models. Indeed, all approaches to nuclear structure, from ab initio theory to shell model to density functional theory are applicable in such systems. We  will, therefore, use neutron drops to analyze some of the techniques that will be presented in this course. The starting point of nearly all quantum many-body techniques is the Hartree-Fock equations (HF). We will, therefore, develop a computer program to solve the HF equations by expanding the solutions in the Harmonic Oscillator basis.}
+
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The Microscopic Neutron Drop Hamiltonian}
+
+The Hamiltonian for a system of $N$ neutron drops confined in a harmonic potential reads
+\begin{equation}
+\hat{H} 
+= 
+\sum_{i=1}^{N} \frac{\hat{\gras{p}}_{i}^{2}}{2m}
++
+\sum_{i=1}^{N} \frac{1}{2} m\omega \gras{r}_{i}^{2}
++
+\sum_{i<j} \hat{V}_{ij},
+\end{equation}
+with $\hbar^{2}/2m = 20.73$ fm$^{2}$, $mc^{2} = 938.90590$ MeV, and $\hat{V}_{ij}$ is the two-body, local, finite-range Minnesota interaction potential
+\begin{multline}
+\hat{V}(\gras{r}_{1},\gras{r}_{2}) = 
+\left[ 
+\hat{V}_{R}(\gras{r}_{1},\gras{r}_{2}) 
++ 
+\frac{1}{2}\left( 1 + \hat{P}_{\sigma}\right) \hat{V}_{t}(\gras{r}_{1},\gras{r}_{2})
++ 
+\frac{1}{2}\left( 1 - \hat{P}_{\sigma}\right) \hat{V}_{s}(\gras{r}_{1},\gras{r}_{2})
+\right] \\
+\times\frac{1}{2}\left( 1 + \hat{P}_{r}\right),
+\end{multline}
+with $\hat{P}_{\sigma}$ the spin-exchange operator, and $\hat{P}_{r}$ the space-exchange operator. The spatial form-factors are
+\begin{eqnarray}
+\hat{V}_{R}(\gras{r}_{1},\gras{r}_{2})  & = & + V_{0,R} e^{-\kappa_{R}(\gras{r}_{1} - \gras{r}_{2})^{2}}, \\
+\hat{V}_{t}(\gras{r}_{1},\gras{r}_{2})  & = & - V_{0,t} e^{-\kappa_{t}(\gras{r}_{1} - \gras{r}_{2})^{2}}, \\
+\hat{V}_{s}(\gras{r}_{1},\gras{r}_{2})  & = & - V_{0,s} e^{-\kappa_{s}(\gras{r}_{1} - \gras{r}_{2})^{2}}.
+\end{eqnarray}
+The numerical parameters for the range of the Gaussians and the energy scales are listed in the table below.
+\begin{table}[h]
+\caption{Parameters defining the Minnesota potential}
+\begin{center}
+\begin{tabular}{crcc}
+$V$ & Value & $\kappa$ & Value \\
+\hline
+$V_{0,R}$ & 200.00 MeV & $\kappa_{R}$ & 1.487 fm$^{-2}$ \\
+$V_{0,t}$ & 178.00 MeV & $\kappa_{t}$ & 0.639 fm$^{-2}$ \\
+$V_{0,t}$ &  91.85 MeV & $\kappa_{s}$ & 0.465 fm$^{-2}$ \\
+\end{tabular}
+\end{center}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hartree-Fock Equations in the s-wave Model Space}
+
+\begin{enumerate}
+\item Ground-work
+\begin{enumerate}
+\item Write the Hamiltonian in second quantization form
+\item We will assume spherical symmetry is conserved. Hence the basis states $|a\rangle$ are eigenstates of the $\hat{J}^{2}$ and $\hat{J}_{z}$ operators, $|a\rangle \equiv |n_{a}, \ell_{a}, j_{a}, m_{a}\rangle$. 
+\begin{enumerate}
+\item Give the generic expression of the basis states $\langle \gras{r}\sigma | a\rangle \equiv \langle \gras{r}\sigma | n_{a}, \ell_{a}, j_{a}, m_{a}\rangle$ using spherical  coordinate, radial wave functions, spherical harmonics, spin functions, etc.
+$$
+[
+\langle \gras{r}\sigma | a\rangle 
+= R_{n_{a}\ell_{a}}(r)\mathfrak{Y}_{j_{a}m_{a}}(\theta,\varphi)
+= R_{n_{a}\ell_{a}}(r)\sum_{m_{s}=\pm 1/2} Y_{\ell_{a}m_{\ell, a}}(\theta,\varphi)\chi_{s_{a}m_{s,a}}
+]
+$$
+\item The local density matrix in $r$-space is denoted by $\rho(\gras{r},\sigma)$, and $\rho_{ac}$ in configuration space. Use the relations between the two representations to obtain conditions on the labels $n_{a}, \ell_{a}, j_{a}, m_{a}$ and $n_{c}, \ell_{c}, j_{c}, m_{c}$.
+$$
+[
+\rho_{ac} = \rho_{n_{a}n_{c}}^{\ell_{a}j_{a}m_{a}}\delta_{\ell_{a}\ell_{c}}\delta_{j_{a}j_{c}}\delta_{m_{a}m_{c}}
+]
+$$
+\item Does the density matrix depend on the quantum number $m_{a}$? 
+[No, because of spherical symmetry]
+\end{enumerate}
+\end{enumerate}
+\item One-body potential
+\begin{enumerate}
+\item Write down the matrix elements of the one-body term of the Hamiltonian in the HO basis.
+$$
+[
+\langle n_{a}, \ell_{a}, j_{a}, m_{a} | \hat{h}_{0} | n_{c}, \ell_{c}, j_{c}, m_{c}\rangle
+=
+\hbar\omega\left( 2n_{a} + \ell_{a} + \frac{3}{2} \right)
+\delta_{n_{a}n_{c}}\delta_{\ell_{a}\ell_{c}}\delta_{j_{a}j_{c}}\delta_{m_{a}m_{c}}
+]
+$$
+\end{enumerate}
+\item Minnesota Potential
+\begin{enumerate}
+\item Write the antisymmetrized Minnesota potential in the form $\hat{V}^{D} + \hat{V}^{E}\hat{P}_{r}$\
+$$
+[
+\hat{V}^{D} = \hat{V}^{E} = \frac{1}{2} ( V_{R} + V_{S} )(1 - \hat{P}_{\sigma})
+]
+$$
+\item Recall the definition of the Hartree-Fock potential $\Gamma_{ac}$ and the total HF potential energy as a function of the antisymmetrized two-body matrix elements (TBME) and the density matrix.
+$$
+[
+\Gamma_{ac} = \sum_{bd} \bar{v}_{abcd}\rho_{db},\ \ \ E = \frac{1}{2}\sum_{ac} \Gamma_{ac}\rho_{ca}
+]
+$$
+\item Based on the symmetry properties of the density matrix derived in 1.b.ii and 1.b.iii, what TBME do you need to compute?
+[ Only $\langle n_{a} \ell_{a} j_{a} m_{a}, n_{b} \ell_{b} j_{b} m_{b} |\hat{v} | n_{c} \ell_{a} j_{a} m_{a}, n_{d}\ell_{b} j_{b} m_{b} \rangle$]
+\item Now and in the following, we will only take $\ell = 0$ states in our basis. Compute the (non-antisymmetrized) matrix elements of a generic Gaussian $e^{-(r_{1} - r_{2})^{2}/\mu^{2}}$ (compute only the matrix elements needed based on the results of the previous question).
+$$
+[
+( n_{a} n_{b} |\hat{v} | n_{c}  n_{d} )
+=
+\int r_{1}^{2}dr_{1} \int r_{2}^{2}dr_{2}\; 
+R_{n_{a}0}(r_{1})R_{n_{b}0}(r_{2})
+e^{-(r_{1} - r_{2})^{2}/\mu_{2}}
+R_{n_{c}0}(r_{1})R_{n_{d}0}(r_{2})
+]
+$$
+\item Compute the direct and exchange matrix elements of the Minnesota interaction. [Hint: Use the result that $ \sum_{m_{b}} \langle n_{a} a n_{b}b | \gras{\sigma}_{1}\cdot\gras{\sigma}_{2} | n_{c}a n_{d}b\rangle = 0 $. If you want to have fun with angular momentum algebra, you can demonstrate this result...]
+$$
+[
+\langle \hat{V}^{D} \rangle = \langle \hat{V}^{E} \rangle = \frac{1}{4} \langle V_{R} + V_{S} \rangle
+]
+$$
+\end{enumerate}
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,289 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,array,theorem,amssymb,mathrsfs}
+\usepackage{graphicx} 
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+
+\newtheorem{convention}{Convention}
+\newtheorem{propriete}{Property}
+\theorembodyfont{\sf}
+\theoremheaderfont{\scshape}
+
+\newcommand{\gras}[1]{\boldsymbol{#1}}
+
+\setlength{\parskip}{0.3cm}
+\setlength{\parindent}{0.0cm}
+\setlength{\fboxrule}{0.03cm}
+\setlength{\fboxsep}{0.25cm}
+\addtolength{\voffset}{-2.5cm} 
+\addtolength{\textwidth}{2.5cm} 
+\addtolength{\textheight}{4.5cm} 
+\addtolength{\oddsidemargin}{-1.5cm}
+
+\setcounter{MaxMatrixCols}{25}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{15}
+\setcounter{tocdepth}{6}
+\setcounter{secnumdepth}{6}
+
+\title{Working in the Spherical Harmonic Oscillator Basis}
+\author{Nicolas Schunck}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The purpose of these notes is to help you computing the matrix elements of the 
+Minnesota potential in the harmonic oscillator basis. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The Spherical Harmonic Oscillator Basis}
+
+In this section, we look at the eigenstates of the spherical quantum harmonic 
+oscillator 
+\begin{equation}
+\hat{H}_{0} = \frac{\gras{p}^{2}}{2m} + \frac{1}{2}m\omega\gras{r}^{2}
+\end{equation}
+in the special case of spherical symmetry.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Eigenstates of the Harmonic Oscillator}
+
+{\bf General Form - } The solutions to the Schr\"{o}dinger equation for an 
+arbitrary central potential in spherical symmetry are entirely characterized by 
+the quantum numbers $n$, $\ell$, $j$ and $m$; the wave-functions factorize 
+according to
+\begin{equation}
+\boxed{
+\psi_{n\ell jm}(r,\theta, \varphi) 
+= 
+R_{n\ell}(r)\mathfrak{Y}_{\ell jm}(\theta, \varphi)
+      }
+\label{A-wave-wf}
+\end{equation}
+where $R_{n\ell}(r)$ is the radial wave-function and $\mathfrak{Y}_{\ell
+jm}(\theta, \varphi)$ are the solid harmonics. The solid harmonics $\ell, j,m$
+correspond to the tensor product of the spherical harmonics $Y_{\ell
+m_{\ell}}(\theta, \varphi)$ with the spin functions $\chi_{s m_{s}}$,
+\begin{equation}
+\mathfrak{Y}_{\ell jm}(\theta, \varphi) 
+= 
+\left[Y_{\ell m_{\ell}} (\theta, \varphi) \otimes \chi_{s m_{s}} \right]_{jm}.
+\end{equation}
+More explicitely, this can be re-written
+\begin{equation}
+\mathfrak{Y}_{\ell jm}(\theta, \varphi) 
+= 
+\sum_{m_{s}=\pm 1/2} 
+C_{\ell m_{\ell},s m_{s}}^{jm} Y_{\ell m_{\ell}}(\theta, \varphi),
+\chi_{s m_{s}}
+\end{equation}
+where the symbols $C_{\ell m_{\ell},s m_{s}}^{jm}$ are the Clebsch-Gordan
+coefficients.
+
+{\bf Radial Function for the Harmonic Oscillator - } In the case where the 
+potential is the harmonic oscillator, the radial wave function $R_{n\ell}(r)$ 
+becomes
+\begin{equation}
+\boxed{
+R_{n\ell}(r) = \frac{A_{n\ell}}{b^{3/2}} \xi^{\ell}e^{-\xi^{2}/2} L_{n}^{\ell+1/2}(\xi^{2})
+      }
+\label{A-wave-radial}
+\end{equation}
+where $\xi = r/b$ is a dimensionless variable and $b = \sqrt{\hbar/(m\omega)}$ 
+is the oscillator length (in fm). The quantities $L_{n}^{\ell+1/2}$ are the generalized 
+Laguerre polynomials. In Eq.~(\ref{A-wave-radial}), $A_{n\ell}$ is a 
+normalization constant. To determine it, we use the orthonormality of the 
+wave functions $\psi_{n\ell j m}$ and find
+\begin{equation}
+\boxed{
+A_{n\ell} = \sqrt{\frac{2^{n+\ell+2}n!}{\pi^{1/2}(2n + 2\ell + 1)!!} }
+      }
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Generalized Laguerre Polynomials}
+
+{\bf Recurrence Relation} - The generalized Laguerre polynomials verify the
+following recurrence relations (Abramowitz, 22.7.29, 22.7.30)
+\begin{eqnarray}
+\displaystyle L_{n}^{(\alpha +1)}(x) & = &
+\frac{1}{x}\left[ (x-n)L_{n}^{(\alpha)}(x) + (\alpha+n)L_{n-1}^{(\alpha)}(x) 
+           \right]
+\label{A-wave-inter1}\medskip\\
+\displaystyle L_{n}^{(\alpha-1)}(x) & = & L_{n}^{(\alpha)}(x) 
+            - L_{n-1}^{(\alpha)}(x),
+\label{A-wave-inter2}
+\end{eqnarray} 
+where $n$ is an integer, $n\in\mathbb{N}$, and $\alpha$ is a real number. In the
+following, we will only need $\alpha$ half-integer. The two relations
+(\ref{A-wave-inter1})-(\ref{A-wave-inter2}) are equivalent to
+\begin{equation}
+L_{n}^{(\alpha +1)}(x) = \frac{1}{x}\left[ (x+\alpha)L_{n}^{(\alpha)}(x) -
+(\alpha+n)L_{n}^{(\alpha -1)}(x) \right].
+\end{equation}
+The first two polynoms are obtained from
+\begin{eqnarray}
+\displaystyle L_{n}^{(-1/2)}(x) & = &
+\frac{(-1)^{n}}{n!2^{n}}H_{2n}(\sqrt{x})\medskip\\
+\displaystyle L_{n}^{(+1/2)}(x) & = & 
+              \frac{(-1)^{n}}{n!2^{n+1}}H_{2n+1}(\sqrt{x})
+\end{eqnarray} 
+where $H_{n}(x)$ is the Hermite polynomials of order $n$.
+
+{\bf Orthonormality} - The generalized Laguerre polynomials verify the 
+following orthonormality condition
+\begin{equation}
+\boxed{
+\int_{0}^{+\infty}e^{-u}u^{\alpha} L_{n}^{(\alpha)}(u)L_{n'}^{(\alpha)}(u)du 
+=
+\delta_{nn'}\frac{\Gamma(n+\alpha+1)}{n!}},
+\label{A-wave-ortho-lag}
+\end{equation}
+for $\alpha> -1$ and $n\in\mathbb{N}$. The Gamma function is, for any integer 
+$k$ (Abramowitz, 6.1.12),
+\begin{equation}
+\Gamma\left(k + \frac{1}{2}\right) 
+= 
+\frac{1\times 3\times\dots\times (2k-1)}{2^{k}}\Gamma\left(\frac{1}{2}\right)
+\end{equation}
+which can be recast into
+\begin{equation}
+\Gamma\left(k + \frac{1}{2}\right) = \frac{(2k)!}{2^{2k}p!}
+\Gamma\left(\frac{1}{2}\right)
+\end{equation}
+with $\Gamma(1/2) = \sqrt{\pi}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Matrix Elements of the Hamiltonian}
+
+We now move to the problem of computing the matrix elements of the Minnesota 
+Hamiltonian in the HO basis. Recall that the Hamiltonian reads
+\begin{equation}
+\hat{H} 
+= 
+\sum_{ab} t_{ab} c_{a}^{\dagger}c_{b} 
++ 
+\frac{1}{2}\sum_{abcd}\bar{v}_{abcd} c_{a}^{\dagger}c_{b}^{\dagger}c_{d}c_{c},
+\end{equation}
+with the antisymmetrized matrix elements defined by
+\begin{equation}
+\bar{v}_{abcd} 
+= 
+\int d^{3}\gras{r}_{1}\int d^{3}\gras{r}_{2}\;
+\phi_{a}^{*}(x_{1})\phi_{b}^{*}(x_{2})
+\hat{V}\left( 1 - \hat{P}_{\sigma}\hat{P}_{r} \right)
+\phi_{c}^{*}(x_{1})\phi_{d}(x_{2})
+\end{equation}
+with $a$ a generic notation for $a \equiv (n_{a},\ell_{a}, j_{a}, m_{a})$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Matrix of the Kinetic Energy Operator}
+
+We give below, without demonstration, the matrix elements of the kinetic 
+energy operator, i.e., the elements $t_{ac}$. By virtue of the spherical 
+symmetry, we have
+\begin{equation}
+t_{ac} 
+= \langle a | \hat{T} | c \rangle 
+= \langle n_{a} \ell_{a} j_{a} m_{a}| \hat{T} | n_{c} \ell_{c} j_{c} m_{c} \rangle
+= \delta_{\ell_{a}\ell_{c}}\delta_{j_{a}j_{c}}\delta_{m_{a}m_{c}}
+\langle n_{a} \ell_{a} j_{a} m_{a}| \hat{T} | n_{c} \ell_{a} j_{a} m_{a} \rangle
+\end{equation}
+In practice, straightforward but somewhat lengthy calculations (involving 
+various tricks from angular momentum algebra) give
+\begin{equation*}
+\boxed{
+\begin{array}{ll}
+\langle n_{a} \ell_{a} j_{a} m_{a}| \hat{T} | n_{c} \ell_{a} j_{a} m_{a} \rangle
+= \displaystyle
+\frac{1}{2}\hbar\omega \left( N + \frac{3}{2} \right) 
+& \text{for}\ n_{a} = n_{c} 
+\medskip\\
+\langle n_{a} \ell_{a} j_{a} m_{a} | \hat{T} | n_{c} \ell_{a} j_{a} m_{a} \rangle
+= \displaystyle
+\frac{1}{2}\hbar\omega
+\sqrt{
+n_{c}(n_{c} + \ell_{a} + 1/2)
+     }
+& \text{for}\ n_{a} = n_{c} - 1 
+\medskip\\
+\langle n_{a} \ell_{a} j_{a} m_{a}  | \hat{T} | n_{c} \ell_{a} j_{a} m_{a} \rangle
+=\displaystyle
+\frac{1}{2}\hbar\omega
+\sqrt{
+n_{a}(n_{a} + \ell_{a} + 1/2)
+     }
+& \text{for}\ n_{a} = n_{c} + 1
+\end{array}
+}
+\end{equation*}
+In this expression, $N = 2n + \ell$ is the main oscillator number.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Gauss-Laguerre Quadratures}
+
+{\bf Presentation - } Gauss quadratures are general mathematical methods used to compute integrals of a function. They are based on the properties of orthogonal polynomials and come in several variants. The Gauss-Laguerre quadrature formula reads
+\begin{equation}
+\int_{0}^{+\infty} x^{\alpha}e^{-x}f(x)dx = \sum_{n=1}^{N_{q}} w_{n}f(x_n) + R_{N_{q}},
+\end{equation}
+where the weights $w_{n}$ are given by
+\begin{equation}
+w_{n} = \frac{\Gamma(n+\alpha+1)x_{n}}{n!(n+1)^2\left[L_{n+1}^{\alpha}(x_{n})\right]^{2}},
+\end{equation}
+the nodes $x_n$ are the zeros of the generalized Laguerre polynomials, and $R_{N_{q}}$ is a remainder. The integer $N_{q}$ is the order of the quadrature.
+
+\fbox{
+\parbox{\textwidth}{
+{\em The essential property of all types of Gauss quadrature is that the quadrature formula is {\em exact} if $f(x)$ is a polynomial of order $p \leq 2N_{q}-1$, that is:
+\begin{equation*}
+\int_{0}^{+\infty} x^{\alpha}e^{-x}f(x)dx = \sum_{n=1}^{N_{q}} w_{n}f(x_n).
+\end{equation*}
+}
+}
+}
+
+{\bf Example - } To illustrate how useful quadrature formula can be in practice, consider the calculation of the radial integral giving the matrix element of some operator $\hat{O}(r)$ in spherical symmetry. For the sake of simplicity, let us assume that $\hat{O}(r)$ does not contain differential operators for the time being. We have to compute something like
+\begin{equation}
+\langle n_{a} | \hat{O}(r) | n_{c} \rangle 
+\propto
+\int_{0}^{+\infty} r^{2}dr  \times
+e^{-\xi^{2}/2} \xi^{\ell_{a}} L_{n_{a}}^{\ell_{a}+1/2}(\xi^{2}) \times
+\hat{O}(r) \times
+e^{-\xi^{2}/2} \xi^{\ell_{a}} L_{n_{c}}^{\ell_{a}+1/2}(\xi^{2}),
+\end{equation}
+which can be simplified into something like
+\begin{equation}
+\langle n_{a} | \hat{O}(r) | n_{c} \rangle 
+\propto
+\int_{0}^{+\infty}   
+u^{\alpha}e^{-u}
+\hat{O}(u) L_{n_{a}}^{\alpha}(u) L_{n_{c}}^{\alpha}(u) du, \ \ \ \alpha=\ell_{a}+1/2
+\end{equation}
+Depending on the properties of the operator $\hat{O}(r)$, we can try to choose the order of the quadrature $N_{q}$ such that these integrations are exact.
+
+
+
+\end{document}

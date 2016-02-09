@@ -1,0 +1,156 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{amsmath}           % Include AMSTeX style
+\usepackage{amsfonts}
+\usepackage{graphicx}          % Include figure files
+\usepackage{dcolumn}           % Align table columns on decimal point
+\usepackage{bm}
+\usepackage{array}
+\usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{pst-plot}
+\usepackage{colortbl}
+\usepackage{listings}
+\usepackage{simplewick}
+
+\newcommand{\gras}[1]{\boldsymbol{#1}}
+
+% Page size customizations
+
+\setlength{\parskip}{0.3cm}
+\setlength{\parindent}{0.0cm}
+\setlength{\fboxrule}{0.025cm}
+\setlength{\fboxsep}{0.25cm}
+
+\addtolength{\headsep}{1.0cm}
+\addtolength{\voffset}{-1.0cm}
+\addtolength{\textheight}{2.0cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\oddsidemargin}{-1.25cm}
+\addtolength{\evensidemargin}{-1.25cm}
+
+\setcounter{MaxMatrixCols}{25}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{15}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%
+% BEGINNING
+%
+
+
+\lstset{language=c++}
+\lstset{basicstyle=\small}
+%\lstset{backgroundcolor=\color{white}}
+%\lstset{frame=single}
+\lstset{stringstyle=\ttfamily}
+%\lstset{keywordstyle=\color{red}\bfseries}
+%\lstset{commentstyle=\itshape\color{blue}}
+\lstset{showspaces=false}
+\lstset{showstringspaces=false}
+\lstset{showtabs=false}
+\lstset{breaklines}
+
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]
+    {\bra{#1}#2\ket{#3}}
+
+\newcommand{\normord}[1]{
+    \left\{#1\right\}
+}
+
+
+\begin{document}
+
+
+\title{Hartree-Fock Calculations of Neutron Drops\\
+\Large{Phase 3: Development of Extensions Beyond Hartree-Fock}}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+The HF solver that you have developed is the starting point to study a number 
+of different approximations to the many-body problem. In phase III of the 
+computational projects, we propose that you try and implement one of the 
+following extensions beyond HF.
+\begin{itemize}
+\item Implement the density matrix expansion of the Minnesota potential. The 
+goal here is to benchmark the DME -- which produces a functional of the local 
+density -- against the exact result.
+\item Solve the HFB equations in spherical symmetry. The level of difficulty 
+should not be too high if you understand your HF solver well. In addition to 
+doubling the size of the matrix to diagonalize and dealing with the pairing 
+tensor, one technical difficulty is to determine the Fermi energy by solving a 
+Newton-like method.
+\item Solve the RPA equations in spherical symmetry. It is also relatively 
+simple, but you will need to pay attention to your implementation, since naive 
+brute force could make your code very slow.
+\item Solve the deformed HF equations. This is probably the most ambitious
+project: you need to set up new quadrature rules and basis functions, and put 
+up some significant work into designing your implementation, else your code 
+will run for ever...
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Density matrix expansion of the Minnesota potential}
+
+%\input{DME}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Building EDFs at the LDA and DME level}
+\input{DME}
+\section{HFB equations in spherical symmetry}
+
+\input{HFB}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{RPA equations in spherical symmetry}
+
+\input{RPA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Deformed HF equations}
+
+\input{deformed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}

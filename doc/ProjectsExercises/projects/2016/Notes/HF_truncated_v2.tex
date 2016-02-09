@@ -1,0 +1,381 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{amsmath}           % Include AMSTeX style
+\usepackage{amsfonts}
+\usepackage{graphicx}          % Include figure files
+\usepackage{dcolumn}           % Align table columns on decimal point
+\usepackage{bm}
+\usepackage{array}
+\usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{pst-plot}
+\usepackage{colortbl}
+\usepackage{listings}
+
+\newcommand{\gras}[1]{\boldsymbol{#1}}
+
+% Page size customizations
+
+\setlength{\parskip}{0.3cm}
+\setlength{\parindent}{0.0cm}
+\setlength{\fboxrule}{0.025cm}
+\setlength{\fboxsep}{0.25cm}
+
+\addtolength{\headsep}{1.0cm}
+\addtolength{\voffset}{-1.0cm}
+\addtolength{\textheight}{2.0cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\oddsidemargin}{-1.25cm}
+\addtolength{\evensidemargin}{-1.25cm}
+
+\setcounter{MaxMatrixCols}{25}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{15}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%
+% BEGINNING
+%
+
+
+\lstset{language=c++}
+\lstset{basicstyle=\small}
+%\lstset{backgroundcolor=\color{white}}
+%\lstset{frame=single}
+\lstset{stringstyle=\ttfamily}
+%\lstset{keywordstyle=\color{red}\bfseries}
+%\lstset{commentstyle=\itshape\color{blue}}
+\lstset{showspaces=false}
+\lstset{showstringspaces=false}
+\lstset{showtabs=false}
+\lstset{breaklines}
+
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]
+    {\bra{#1}#2\ket{#3}}
+
+\newcommand{\normord}[1]{
+    \left\{#1\right\}
+}
+
+
+\usepackage{amsmath}
+
+
+\begin{document}
+
+
+\title{Hartree-Fock Calculations of Neutron Drops\\
+\Large{Phase 1: Development of a generic HF solver
+}}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Neutron drops are a powerful theoretical laboratory for testing, validating and improving nuclear structure models. Indeed, all approaches to nuclear structure, from ab initio theory to shell model to density functional theory are applicable in such systems. We  will, therefore, use neutron drops to analyze some of the techniques that will be presented in this course. Since Hartree-Fock theory is the starting point for most of these techniques (BCS, HFB, RPA, DME, etc.), the first phase of the computational project is to develop a computer program to solve the HF equations in a given s.p. basis (e.g., HO basis). 
+
+Rather than attacking the full neutron drop problem head-on, in the first phase we will solve a simplified, somewhat contrived version of the problem in order to get a working HF implementation as quickly as possible.   As we will discuss below, a well-designed HF code is split into two components
+\begin{enumerate}
+\item A {\bf Solver class} (or Fortran module) that solves the HF equations independent of the details of the physical system (e.g., neutron drops, nuclei, quantum dots, atoms, choice of s.p. basis, calculation of two-body matrix elements, etc.). 
+\item A {\bf System class} (or Fortran module) that implements/administers all the details specific to the particular system.  
+\end{enumerate} 
+
+In the first phase we will work with a simplified picture of neutron drops in which only $S$-wave ($l=0$) single particle basis states are considered. This will allow us to focus on developing the HF solver without getting bogged down with technical details (angular momentum recoupling, Talmi-Moshinsky transformation brackets, etc.) associated with generating the input two-body matrix elements for the general case.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hartree Fock Equations}
+
+As shown in the lectures, the Hartree-Fock equations can be written as a matrix diagonalization problem in a given basis $|\alpha\rangle$ as
+\begin{equation}
+\sum_{\beta}h_{\alpha\beta} D_{\beta q} = \epsilon_q D_{\alpha q}\,.  
+\end{equation}
+The  HF hamiltonian is defined as
+\begin{equation}
+h_{\alpha\beta} = t_{\alpha\beta} + \Gamma_{\alpha\beta}\,,
+\end{equation} 
+where the single-particle potential $\Gamma_{\alpha\beta}$ is  
+\begin{equation}
+\Gamma_{\alpha\beta}\equiv \sum_{\mu\nu}v_{\alpha\nu\beta\mu}\rho_{\mu\nu}\,,
+\end{equation}
+$v_{\alpha\beta\gamma\delta}$ are antisymmetrized two-body matrix elements (TBMEs), 
+\begin{equation}
+v_{\alpha\beta\gamma\delta} = \langle\alpha\beta|V|\gamma\delta\rangle = (\alpha\beta|V|\gamma\delta) - (\alpha\beta|V|\delta\gamma)\,,
+\end{equation}
+and the density matrix is given by
+\begin{equation}
+\rho_{\mu\nu}=\sum_{i=1}^{N}\langle\mu|i\rangle\langle i|\nu\rangle = \sum_{i=1}^{N}D_{\mu i}D^*_{\nu i}\,.
+\end{equation}
+Note that $t_{\alpha\beta}$ denotes the matrix elements of the 1-body part of the starting hamiltonian. For self-bound nuclei $t_{\alpha\beta}$ is the kinetic energy, whereas for neutron drops, $t_{\alpha\beta}$ represents the harmonic oscillator hamiltonian since the system is confined in a harmonic trap. If we are working in a harmonic oscillator basis with the same $\omega$ as the trapping potential, then $t_{\alpha\beta}$ is diagonal. 
+
+The HF equations need to be solved iteratively, since $h_{\alpha\beta}$ depends on the eigenvectors $D_{\alpha q}$ via the density matrix. Therefore, one typically follows the following procedure
+\begin{enumerate}
+\item Start with an initial guess for $D^{(0)}_{\alpha q}$ and construct $\rho^{(0)}_{\nu\mu}$, $h^{(0)}_{\alpha\beta}$.
+\item Diagonalize $h^{(0)}_{\alpha\beta}$ and use the lowest $N$ eigenvectors $D^{(1)}_{\alpha i}$ to construct the next iteration for $\rho^{(1)}_{\nu\mu}$, $h^{(1)}_{\alpha\beta}$. 
+\item Continue the process until things don't change above some threshold from one iteration to the next.  For instance, one could iterate until the change in the HF eigenvalues obeys
+\[
+\frac{\sum_{p} |\epsilon_p^{(n)}-\epsilon_p^{(n-1)}|}{m}\le \lambda,  
+\]
+where $\lambda$ is a user prefixed quantity ($\lambda \sim 10^{-8}$ or smaller) and $p$ runs over all calculated single-particle
+energies and $m$ is the number of single-particle states. 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Code Example}
+  
+An example of a function in C++ which performs the Hartree-Fock calculation is shown here. In setting up your code you will need to write a function which sets up the single-particle basis, the matrix elements $t_{\alpha\gamma}$ of the one-body operator (called $h0$ in the function below) and the antisymmetrized TBMEs (called {\em matrixElement} below) and the density matrix elements $\rho_{\beta\delta}$ (called {\em densityMatrix} below). 
+
+\begin{lstlisting}
+void hartreeFock::run() {
+    double spPot;
+    // --------------- Setting up the HF-hamiltonian using D = 1 as guess, Armadillo is used for vectors
+    mat h;
+    vec E = zeros(nStates, 1);
+    vec ePrev = zeros(nStates, 1);
+    mat D = eye(nStates, nStates);
+    vec diff;
+
+    // Hartree-Fock loop
+    int hfIt = 0;
+    while (hfIt < HFIterations) {
+        cout << "iteration = " << hfIt << endl;
+
+        h = zeros(nStates, nStates);
+        for (int alpha = 0; alpha < nStates; alpha++) {
+            for (int gamma = 0; gamma < nStates; gamma++) {
+                spPot = 0;
+                    for (int beta = 0; beta < nStates; beta++) {
+                        for (int delta = 0; delta < nStates; delta++) {
+                            spPot += densityMatrix(beta,delta,D) * matrixElement(alpha, beta, gamma, delta);
+                        }
+                    }
+                
+                h(alpha, gamma) = h(gamma, alpha) = h0(alpha, gamma) + spPot;
+            }
+        }
+        //Computing the HF one-body energies
+        eig_sym(E, D, h);
+        // Transposing the vectors
+        D = trans(D);
+        hfIt++;
+        // Convergence test
+        diff = E - ePrev;
+        if (abs(diff.max()) < threshold)
+            break;
+        ePrev = E;
+    }
+    double E0 = calcEnergy(D);
+    cout << "Final energy E = " << E0 << " after " << hfIt << " iterations, error < " << threshold << endl;
+}
+\end{lstlisting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Project work plan}
+
+Each group should start discussing and working on the following tasks.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{ Statement of the model problem}
+
+To bypass complications associated with calculating the input $v_{\alpha\beta\gamma\delta}$  (angular momentum coupling, Talmi-Moshinsky transformation, etc.), we start with a simplified version of neutron drops in which our single-particle model space is comprised entirely of $S$-wave HO wave functions. 
+\begin{equation}
+|\alpha\rangle = |n,l,m,\sigma\rangle \quad\Rightarrow\quad |n,0,0,\sigma\rangle\,. 
+\end{equation} 
+In this restricted model space, we will start with the lightest ``closed-shell'' neutron drop, $N=2$. (What are the other possible closed-shell drops in this model space?)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{HF Solver}
+
+\begin{enumerate}
+\item Write ``pseudo-code'' for your HF solver. Feel free to refer to the C++ listing above for guidance.  
+\item Start translating your pseudo-code into an actual implementation. 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Groundwork for computing the TBMEs}
+
+\begin{enumerate}
+\item {\bf Two-dimensional radial integrals.} Before you tackle the Minnesota potential, with all the complications arising from it's spin-dependent terms and exchange forces (i.e., terms like $V(r)P_r$, where $P_r$ exchanges the spacial positions of particles 1 and 2.), consider a simple spin-independent local potential of gaussian form $V(r)=V_0e^{-\mu|{\bf r}_1-{\bf r}_2|^2}$. Evaluate the expression for the non-antisymmetrized matrix elements 
+\begin{equation}
+\label{eq:nonsymmetrized}
+(n_100\sigma_1,n_200\sigma_2|V|n_300\sigma_3n_400\sigma_4)\,,
+\end{equation}
+and reduce it to a two-dimensional radial integral. One way to see that the angular integrals are trivial is to perform a multipole expansion of the potential
+\begin{eqnarray}
+V(|{\bf r}_1-{\bf r}_2|) &=& \sum_{l} (2l+1)V_l(r_1,r_2) P_l(\hat{{\bf r}}_1\cdot\hat{{\bf r}}_2)\\
+&=& 4\pi\sum_{l}\sum_{m=-l}^{l}V_l(r_1,r_2)Y_{lm}(\hat{{\bf r}}_1)Y^*_{lm}(\hat{{\bf r}}_2)\,, 
+\end{eqnarray}
+where 
+\begin{equation}
+V_l(r_1,r_2)=\frac{1}{2}\int d(\cos\theta) V(|{\bf r}_1-{\bf r}_2|)P_l(\cos\theta)\,.
+\end{equation}
+The angular integrals are now easy; you should find that they pick out the $l=0$ term in the multipole expansion, leaving for the spatial part of the matrix element (check the numerical pre factor!)
+\begin{eqnarray}
+\label{eq:2dintegral}
+ (n_10n_20|V|n_30n_40)
+ \sim \int\! r_1^2dr_1\int\! r_2^2dr_2 R_{n_10}(r_1)R_{n_20}(r_2)V_{l=0}(r_1,r_2)R_{n_30}(r_1)R_{n_40}(r_2),\nonumber\\
+ \end{eqnarray}
+where 
+\begin{equation}
+V_{l=0}(r_1,r_2) = \frac{1}{2}\int d(\cos\theta)V_0 e^{-\mu(r_1^2+r_2^2 -2r_1r_2\cos\theta)} \,
+\end{equation}
+can be integrated analytically. 
+
+It might be possible to simplify the 2-dimensional radial integral further (e.g., reduce it to a 1-dimensional integral or even integrate it analytically), but we have not checked this.  As it is, the 2-dimensional integral is easily evaluated using Gaussian quadrature. Therefore, in your {\bf System class/module}, you should set up a function that, given some $V(r)$, computes the radial integrals of the form in Eq.~\ref{eq:2dintegral}. We will outline next how to take care of spin and antisymmetrization.
+
+\item {\bf Antisymmetrized matrix elements.} The basic inputs to the HF calculation are the antisymmetrized matrix elements. One straightforward approach is to calculate the non-symmetrized matrix elements in Eq.~\ref{eq:nonsymmetrized} and then explicitly anti-symmetrize in the ket or bra indices. A more elegant approach is to apply the anti-symmetrizer to the potential {\em operator}, 
+\begin{eqnarray}
+\langle \alpha\beta|V|\gamma\delta\rangle &=& (\alpha\beta|V\mathcal{A}_{12}|\gamma\delta) \nonumber\\
+&\equiv& (\alpha\beta|\mathcal{V}|\gamma\delta)
+\end{eqnarray}
+where the anti-symmetrized potential operator is defined as
+\begin{equation}
+\mathcal{V} = V\mathcal{A}_{12} = V(1-P_{12}) = V(1-P_{\sigma}P_{r})\,,
+\end{equation}
+where $P_{\sigma}$ and $P_r$ are spin- and space-exchange operators, respectively. Recall that they are defined as
+\begin{equation}
+\label{eq:exchangeops}
+P_{\sigma}|\sigma\sigma') = |\sigma'\sigma) \quad {\rm and}\quad P_{r}|{\bf r}_1{\bf r_2}) = |{\bf r}_2{\bf r}_1)\,, 
+\end{equation}
+with the simple expression for $P_{\sigma}$ 
+\begin{equation}
+P_{\sigma}=\frac{1+{\bf\sigma}_1\cdot{\bf\sigma}_2}{2}\,.
+\end{equation}
+There is no simple expression for $P_r$, though for our purposes the definition in Eq.~\ref{eq:exchangeops} is sufficient. 
+
+Using the expression for the Minnesota potential given in the Appendix, show that the anti-symmetrized potential operator takes the form
+
+\begin{equation}
+\mathcal{V} = V^D + V^EP_r\,,               
+\end{equation}
+where
+\begin{equation}
+V^D=V^E =\frac{1}{2}(V_R+V_S)(1-P_{\sigma}) \equiv v(1-P_{\sigma})\,,
+\end{equation}
+and $v\equiv \frac{1}{2}(V_R+V_S)$. Finally, show that we have 
+\begin{eqnarray}
+(n_1\sigma_1n_2\sigma_2|V^D|n_3\sigma_3n_4\sigma_4) &=& (\delta_{\sigma_1\sigma_3}\delta_{\sigma_2\sigma_4}-\delta_{\sigma_1\sigma_4}\delta_{\sigma_2\sigma_3})(n_1n_2|v|n_3n_4)\\
+(n_1\sigma_1n_2\sigma_2|V^EP_r|n_3\sigma_3n_4\sigma_4) &=& (\delta_{\sigma_1\sigma_3}\delta_{\sigma_2\sigma_4}-\delta_{\sigma_1\sigma_4}\delta_{\sigma_2\sigma_3})(n_1n_2|v|n_4n_3)\,,
+\end{eqnarray}
+where we've suppressed the angular momentum quantum numbers $l_im_i$ since they are all zero in the present model. The radial integrals $(n_1n_2|v|n_3n_4)$ are the same form as in Eq. \ref{eq:2dintegral}. The fully antisymmetrized TBMEs are then given by
+\begin{eqnarray}
+\langle n_1\sigma_1n_2\sigma_2|V|n_3\sigma_3n_4\sigma_4\rangle &=& (n_1\sigma_1n_2\sigma_2|V^D|n_3\sigma_3n_4\sigma_4) + (n_1\sigma_1n_2\sigma_2|V^EP_r|n_3\sigma_3n_4\sigma_4)\nonumber\,.\\ 
+\end{eqnarray}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Structure of the HF equations for the simplified model space}
+
+Once the antisymmetrized TBMEs are in hand, the HF calculation can be done using the algorithm in the snippet of code provided above. Note, however, that this implementation doesn't exploit any symmetries of the problem. One should therefore think of refining the algorithm to take advantage 
+of all possible symmetries.
+\begin{enumerate}
+\item Starting from the expression for the density matrix elements
+\begin{equation}
+\langle n_1\sigma_1|\rho|n_3\sigma_3\rangle = \sum_{i=1}^{N}\langle n_1\sigma_1|\phi_{i}\rangle\langle \phi_i|n_3\sigma_3\rangle\,,
+\end{equation}
+where $|\phi_i\rangle$ are the HF s.p. orbitals, convince yourself that the density matrix is diagonal in spin (and independent of it). 
+\item Now consider the HF single-particle field matrix elements,
+\begin{equation}
+\langle n_2\sigma_2|\Gamma|n_4\sigma_4\rangle = \sum_{\sigma_1\sigma_3}\sum_{n_1n_3}\langle n_1\sigma_1n_2\sigma_2|V|n_3\sigma_3n_4\sigma_4\rangle \langle n_3\sigma_3|\rho|n_1\sigma_1\rangle\,.
+\end{equation}
+Using the result that the density matrix is diagonal in spin, convince yourself that this implies $\Gamma$ (and hence the HF hamiltonian $h$) is diagonal in spin (and independent of it).  
+\item Because of the previous two simplifications, the HF hamiltonian is block-diagonal in spin projection. Moreover, the spin up and spin down blocks are the same. Therefore, one only needs to set up the HF matrix for one spin projection (say, $\sigma$)
+\begin{equation}
+\langle n_2\sigma|h|n_4\sigma\rangle = (2n_2+3/2)\hbar\omega \delta_{n_2n_4} + \sum_{\sigma'}\sum_{n_1n_3}\langle n_1\sigma'n_2\sigma|V|n_3\sigma'n_4\sigma\rangle\rho_{n_3n_1}\,.
+\end{equation}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\begin{appendix}
+
+\section{The Microscopic Neutron Drop Hamiltonian}
+
+The Hamiltonian for a system of $N$ neutron drops confined in a harmonic potential reads
+\begin{equation}
+\hat{H} 
+= 
+\sum_{i=1}^{N} \frac{\hat{\gras{p}}_{i}^{2}}{2m}
++
+\sum_{i=1}^{N} \frac{1}{2} m\omega \gras{r}_{i}^{2}
++
+\sum_{i<j} \hat{V}_{ij},
+\end{equation}
+with $\hbar^{2}/2m = 20.73$ fm$^{2}$, $mc^{2} = 938.90590$ MeV, and $\hat{V}_{ij}$ is the two-body, local, finite-range Minnesota interaction potential
+\begin{multline}
+\hat{V}(\gras{r}_{1},\gras{r}_{2}) = 
+\left[ 
+\hat{V}_{R}(\gras{r}_{1},\gras{r}_{2}) 
++ 
+\frac{1}{2}\left( 1 + \hat{P}_{\sigma}\right) \hat{V}_{t}(\gras{r}_{1},\gras{r}_{2})
++ 
+\frac{1}{2}\left( 1 - \hat{P}_{\sigma}\right) \hat{V}_{s}(\gras{r}_{1},\gras{r}_{2})
+\right] \\
+\times\frac{1}{2}\left( 1 + \hat{P}_{r}\right),
+\end{multline}
+with $\hat{P}_{\sigma}$ the spin-exchange operator, and $\hat{P}_{r}$ the space-exchange operator. The spatial form-factors are
+\begin{eqnarray}
+\hat{V}_{R}(\gras{r}_{1},\gras{r}_{2})  & = & + V_{0,R} e^{-\kappa_{R}(\gras{r}_{1} - \gras{r}_{2})^{2}}, \\
+\hat{V}_{t}(\gras{r}_{1},\gras{r}_{2})  & = & - V_{0,t} e^{-\kappa_{t}(\gras{r}_{1} - \gras{r}_{2})^{2}}, \\
+\hat{V}_{s}(\gras{r}_{1},\gras{r}_{2})  & = & - V_{0,s} e^{-\kappa_{s}(\gras{r}_{1} - \gras{r}_{2})^{2}}.
+\end{eqnarray}
+The numerical parameters for the range of the Gaussians and the energy scales are listed in the table below.
+\begin{table}[h]
+\caption{Parameters defining the Minnesota potential}
+\begin{center}
+\begin{tabular}{crcc}
+$V$ & Value & $\kappa$ & Value \\
+\hline
+$V_{0,R}$ & 200.00 MeV & $\kappa_{R}$ & 1.487 fm$^{-2}$ \\
+$V_{0,t}$ & 178.00 MeV & $\kappa_{t}$ & 0.639 fm$^{-2}$ \\
+$V_{0,t}$ &  91.85 MeV & $\kappa_{s}$ & 0.465 fm$^{-2}$ \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\end{appendix}
+
+\end{document}

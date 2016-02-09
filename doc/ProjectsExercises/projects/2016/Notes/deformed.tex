@@ -1,0 +1,268 @@
+In principle, one could solve the deformed HF equations in the spherical basis 
+by ``simply'' adding several loops over $l_{c}$, $j_{c}$, $l_{d}$, $j_{d}$ 
+instead of assuming a block diagonal structure of the HF matrix. However, since 
+our neutrons are confined in a {\em spherical} trap, one would probably never 
+be able to observe symmetry breaking and deformation for the HF potential 
+and/or the density. To avoid this, we will introduce the Cartesian version of 
+the HO oscillator basis functions and solve the HF functions in this basis. To 
+make calculations doable, we also need to explicitly introduce the Moshinsky 
+transformation, which, luckily, is simpler in Cartesian coordinates than it is 
+in spherical coordinates.
+
+In the following, we will see how to compute the matrix elements of a general 
+Gaussian potential in the Cartesian deformed HO basis. The potential is defined 
+as
+\begin{equation}
+\hat{V}(\gras{r}_{1}, \gras{r}_{2}) = 
+\sum_{w=1}^{N_{w}} \alpha_{w} e^{-\beta_{w}(\gras{r}_{1} - \gras{r}_{2})^{2}},
+\end{equation}
+where the dimensions are $[\alpha_{w}] = \text{MeV}$ and 
+$[\beta_{w}] = \text{fm}^{-2}$.
+
+{\bf Harmonic Oscillator Basis in Cartesian Coordinates - } The eigenfunctions 
+of a spin-less three-dimensional harmonic oscillator (HO) are given by
+\begin{equation}
+\varphi^{(\gras{b})}_{\gras{n}}(\gras{r}) = \langle \gras{r} | \gras{n} \rangle
+\end{equation}
+with $\varphi^{(\gras{b})}_{\gras{n}}(\gras{r}) = 
+\varphi^{(\gras{b})}_{\gras{n}}(x,y,z)$ and
+\begin{equation}
+\varphi^{(\gras{b})}_{\gras{n}}(x,y,z) =
+\left(\sqrt{b_{x}}e^{-\frac{1}{2}\xi_{x}^{2}}H^{(0)}_{n_{x}}(\xi_{x})\right)
+\left(\sqrt{b_{y}}e^{-\frac{1}{2}\xi_{y}^{2}}H^{(0)}_{n_{y}}(\xi_{y})\right)
+\left(\sqrt{b_{z}}e^{-\frac{1}{2}\xi_{z}^{2}}H^{(0)}_{n_{z}}(\xi_{z})\right)
+\label{HO-3D}
+\end{equation}
+where
+\begin{itemize}
+\item The variables in the Hermite polynomials are dimensionless and are 
+defined as
+\begin{equation}
+\xi_{\mu} = b_{\mu}x_{\mu},\ \ \ \ \mu=x,y,z\ \text{and}\ x_{\mu} = x,y,z,
+\end{equation}
+with the oscillator scales $\gras{b} \equiv (b_{x},b_{y}, b_{z}) $ given by
+\begin{equation}
+b_{\mu} = \sqrt{\frac{m\omega_{\mu}}{\hbar}},\ \ \ \mu = x,y,z.
+\end{equation}
+The oscillator scales have dimensions $[ b_{\mu} ] = [\text{fm}]^{-1}$.
+\item The Hermite polynomials are normalized
+\begin{equation}
+H^{(0)}_{n_{\mu}}(\xi_{\mu}) =
+\frac{1}{\left( \sqrt{\pi}2^{n_{\mu}}n_{\mu}! \right)^{1/2} }H_{n_{\mu}}(\xi_{\mu}),
+\end{equation}
+and the $H_{n_{\mu}}(\xi_{\mu})$ are the standard Hermite polynomials as can be 
+found, e.g., in Abramovitz \& Stegun, {\em Handbook of mathematical functions}, 
+Chapter 22, Eq. 22.2.14. 
+\item The spatial quantum numbers are $\gras{n} = ( n_{x}, n_{y}, n_{z})$, and 
+the energy of the HO is given by
+\begin{equation}
+E^{\text{HO}}_{\gras{n}} = 
+\hbar\omega_{x}\left( n_{x} + \frac{1}{2} \right)
++
+\hbar\omega_{y}\left( n_{y} + \frac{1}{2} \right)
++
+\hbar\omega_{z}\left( n_{z} + \frac{1}{2} \right)
+\end{equation}
+\end{itemize}
+
+{\bf Matrix Elements of the Potential - } The matrix elements of the Gaussian 
+potential in the HO basis are
+\begin{equation}
+\langle \gras{n}'\gras{m}' | \hat{V} | \gras{n}\gras{m}\rangle
+=
+\langle \gras{n}'\gras{m}' | 
+\sum_{w} \alpha_{w} e^{-\beta_{w}(\gras{r}_{1} - \gras{r}_{2})^{2}} 
+| \gras{n}\gras{m}\rangle.
+\end{equation}
+Explicitly, they read
+\begin{equation}
+\langle \gras{n}'\gras{m}' | \hat{V} | \gras{n}\gras{m}\rangle
+= \sum_{w} \prod_{\mu=x,y,z}
+\iint dx_{\mu}dx'_{\mu} \; \varphi^{(b_{\mu})}_{n'_{\mu}}(x_{\mu})\varphi^{(b_{\mu})}_{m'_{\mu}}(x'_{\mu})
+\alpha_{w}^{1/3} e^{-\beta_{w}(x_{\mu} - x'_{\mu})^{2}} 
+\varphi^{(b_{\mu})}_{n_{\mu}}(x_{\mu})\varphi^{(b_{\mu})}_{m_{\mu}}(x'_{\mu})
+\end{equation}
+In the following, we will focus on the generic matrix elements
+\begin{equation}
+v_{n'm'nm}^{w}
+= \iint dxdx' \; \varphi^{(b)}_{n'}(x)\varphi^{(b)}_{m'}(x)
+\alpha_{w}^{1/3} e^{-\beta_{w}(x - x')^{2}} 
+\varphi^{(b)}_{n}(x)\varphi^{(b)}_{m}(x')
+\label{eq:1DME}
+\end{equation}
+
+{\bf Expansion of Hermite Polynomials - } We search for an expansion of the 
+product of two Hermite functions in the form
+\begin{equation}
+\varphi^{(b)}_{n'}(x)\varphi^{(b)}_{n}(x) = \sum_{A=0}^{n'+n} C_{n'n}^{A} \varphi^{(b')}_{A}(x).
+\label{eq:2Hermites}
+\end{equation}
+After some not-so-lengthy algebra, we find
+\begin{equation}
+C_{n'n}^{A} = 
+\sum_{i=1}^{N} w_{i}
+\varphi_{n'}^{(b/\sqrt{\alpha})}(x_{i}) 
+\varphi_{n}^{(b/\sqrt{\alpha})} (x_{i}) 
+\varphi_{A}^{(b'/\sqrt{\alpha})}(x_{i}) 
+\alpha^{1/4}
+e^{x_{i}^{2}}.
+\end{equation}
+At this point, we choose $b' = b\sqrt{2}$, hence $\alpha = 2b^{2}$ (and 
+$b' = \sqrt{\alpha}$). Our coefficients read
+\begin{equation}
+C_{n'n}^{A} = 
+\sum_{i=1}^{N} \left( b\sqrt{2} \right)^{1/2} w_{i} e^{x_{i}^{2}}\;
+\varphi_{n'}^{(1/\sqrt{2})}(x_{i}) 
+\varphi_{n}^{(1/\sqrt{2})} (x_{i}) 
+\varphi_{A}^{(1)}(x_{i}) .
+\end{equation}
+Let us then rescale the Gauss-Hermite nodes and weights in the following way:
+\begin{equation}
+w_{i} \rightarrow \omega_{i} = \frac{w_{i}}{b\sqrt{2}}e^{x_{i}^{2}}, \ \ \ \ 
+x_{i} \rightarrow X_{i} = \frac{x_{i}}{b\sqrt{2}}.
+\end{equation}
+We have
+\begin{equation}
+\left\{
+\begin{array}{l}
+\varphi_{n}^{(1/\sqrt{2})}(x_{i}) 
+= \displaystyle 
+\frac{1}{2^{1/4}} H_{n}^{(0)}\left(\frac{x_{i}}{\sqrt{2}}\right) e^{-\frac{1}{2}\left(\frac{x_{i}}{\sqrt{2}} \right)^{2}}
+= \frac{1}{\sqrt{b\sqrt{2}}} \varphi_{n}^{(b)}(X_{i}) \medskip\\
+\varphi_{B}^{(1)}(x_{i}) 
+= \displaystyle 
+H_{B}^{(0)}(x_{i}) e^{-\frac{1}{2}x_{i}^{2}}
+= \frac{1}{\sqrt{b\sqrt{2}}} \varphi_{B}^{(b\sqrt{2})}(X_{i}) \medskip\\
+\end{array}
+\right.
+\end{equation}
+After these simplifications, we find
+\begin{equation}
+C_{n'n}^{A} = 
+\sum_{i=1}^{N} \omega_{i}
+\varphi_{n'}^{(b)}(X_{i}) 
+\varphi_{n}^{(b)} (X_{i}) 
+\varphi_{A}^{(b\sqrt{2})}(X_{i}).
+\end{equation}
+
+{\bf Moshinsky Transformation - } After introducing the expansion 
+(\ref{eq:2Hermites}) of the two product of two Hermite functions in the matrix 
+element (\ref{eq:1DME}), we arrive at
+\begin{equation}
+v_{n'm'nm}^{w}
+= \alpha_{w}^{1/3} \sum_{AB} C_{n'n}^{A}C_{m'm'}^{B} \iint dxdx' \; 
+\varphi^{(b\sqrt{2})}_{A}(x)e^{-\beta_{w}(x - x')^{2}} 
+\varphi^{(b\sqrt{2})}_{B}(x').
+\end{equation}
+The Moshinsky transformation consists in introducing the variables
+\begin{equation}
+\left\{
+\begin{array}{l}
+U = \displaystyle\frac{1}{\sqrt{2}} (x + x') \medskip\\
+u = \displaystyle\frac{1}{\sqrt{2}} (x - x')
+\end{array}
+\right.
+\end{equation}
+The Jacobian of this transformation is 1. Note that, in our case, since $x$ and 
+$x'$ are in fermis, so are the $U$ and $u$ variables. In fact, the Moshinsky 
+transformation below can be applied either on the normalized Hermite 
+polynomials, $H_{n}^{(0)}$, or on the Hermite functions, $\varphi_{n}$, 
+irrespective of whether the latter are properly normalized by the $\sqrt{b}$ 
+scale, in exactly the same way. The new variables $(U,u)$ have always the same 
+units as the old one $(x,x')$. In our case, we apply the transformation on the 
+fully normalized Hermite functions to find
+\begin{equation}
+\varphi^{(b\sqrt{2})}_{A}(x)\varphi^{(b\sqrt{2})}_{B}(x')
+=
+\sum_{N,n} D_{AB}^{Nn}\; \varphi^{(b\sqrt{2})}_{N}(U)\varphi^{(b\sqrt{2})}_{n}(u).
+\end{equation}
+Hence, our matrix element becomes
+\begin{equation}
+v_{n'm'nm}^{w}
+= \alpha_{w}^{1/3} \sum_{AB} C_{n'n}^{A}C_{m'm'}^{B} \sum_{N,n} D_{AB}^{Nn}
+I_{N} J_{n}
+\end{equation}
+with
+\begin{equation}
+\begin{array}{l}
+I_{N} = \displaystyle\int dU\; \varphi^{(b\sqrt{2})}_{N}(U) \medskip\\
+J_{n} = \displaystyle\int du\; e^{-2\beta_{w}u^{2}} \varphi^{(b\sqrt{2})}_{n}(u).
+\end{array}
+\end{equation}
+
+{\bf Calculation of the integrals - } We give below the analytical results for 
+the integrals [You can calculate them yourselves as a very simple and very 
+boring little exercise]. We have
+\begin{equation}
+I_{N} 
+= (-1)^{N}\left( \frac{\sqrt{2}}{b} \right)^{1/2}
+\frac{\sqrt{N!}}{2^{N/2}(N/2)!}.
+\end{equation}
+and
+\begin{equation}
+J_{n} 
+= \frac{1}{\sqrt{\alpha}}\sum_{n'} D_{nn'}\left( \frac{1}{\alpha} \right)  I_{n'}
+\end{equation}
+where the $D_{nn'}$ matrices are defined by
+\begin{equation}
+H_{n}^{(0)}\left(\frac{x}{b}\right) =
+\sqrt{\frac{b}{b'}} \sum_{n'} D_{nn'}\left( \frac{b'}{b} \right) 
+H_{n}^{(0)}\left(\frac{x}{b'}\right)
+\end{equation}
+
+{\bf Summary - } We define the auxiliary integral $G_{AB}$ as
+\begin{equation}
+G_{AB}^{w}
+= \alpha_{w}^{1/3}\sum_{Nn} D_{AB}^{Nn} I_{N} J_{n}
+= \alpha_{w}^{1/3}\frac{1}{\sqrt{\alpha}} \sum_{Nn} D_{AB}^{Nn} I_{N} 
+\sum_{n'} D_{nn'}\left( \frac{1}{\alpha} \right)  I_{n'}
+\label{eq:G}
+\end{equation}
+The matrix element of a single Gaussian $w$ in one-dimension reads
+\begin{equation}
+v^{w}_{n'm'nm} = \sum_{AB} C_{n'n}^{A}C_{m'm'}^{B} G_{AB}^{w}
+\end{equation}
+In three dimensions, we have
+\begin{equation}
+V^{w}_{\gras{n'}\gras{m'}\gras{n}\gras{m}} = 
+v^{w}_{n'_{x}m'_{x}n_{x}m_{x}}
+v^{w}_{n'_{y}m'_{y}n_{y}m_{y}}
+v^{w}_{n'_{z}m'_{z}n_{z}m_{z}},
+\end{equation}
+which expands into
+\begin{equation}
+V^{w}_{\gras{n'}\gras{m'}\gras{n}\gras{m}} 
+=
+\sum_{A_{x}B_{x}} C_{n'_{x}n_{x}}^{A_{x}}C_{m'_{x}m_{x}}^{B_{x}} G_{A_{x}B_{x}}^{w}
+\sum_{A_{y}B_{y}} C_{n'_{y}n_{y}}^{A_{y}}C_{m'_{y}m_{y}}^{B_{y}} G_{A_{y}B_{y}}^{w}
+\sum_{A_{z}B_{z}} C_{n'_{z}n_{z}}^{A_{z}}C_{m'_{z}m_{z}}^{B_{z}} G_{A_{z}B_{z}}^{w}
+\label{eq:TBME}
+\end{equation}
+
+{\bf Practical implementation}
+\begin{enumerate}
+\item Set up a new module/class/set of routines to compute Gauss-Hermite 
+quadratures and the HO functions in Cartesian coordinates. Some unit tests 
+to check the accuracy of GH quadratures would be welcome.
+\item In the next step, you should compute the various coefficients appearing 
+in Eqs.(\ref{eq:G})-(\ref{eq:TBME}). The coefficients $D_{AB}^{Nn}$ and 
+$C_{n'n}^{A}$, and the integrals $I_{N}$ and $J_{n}$ can be precalculated once 
+and for all.
+\item In Cartesian coordinates, pre-computing all matrix elements and storing 
+them on disk (or in memory) is {\em not a viable option}. There are 12 indices 
+involved, the $n_{\mu}, \mu = x, y,z $ for each of the 4 s.p. states $a$, $b$, 
+$c$ and $d$, and both the CPU time and the disk space needed to store all 
+matrix elements would be prohibitive. In current DFT solvers implementing a 
+finite-range force (such as Gogny) in the Cartesian HO basis, the {\em HF 
+potential and two-body matrix elements are computed on the fly} at each 
+iteration as 
+\begin{equation}
+\Gamma_{ac} = \sum_{bd} \bar{v}_{abcd}\rho_{db}
+\end{equation}
+Even then, you need to carefully think of how you will set up your loops in 
+order to obtain a reasonable compute time.
+\item The rest of the HF loop is no different from the spherical case. Note 
+that each HF state is not characterized by any particular quantum number.
+\end{enumerate}
+
+
