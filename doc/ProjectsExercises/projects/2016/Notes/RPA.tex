@@ -1,0 +1,112 @@
+{\bf RPA equations - } Recall that the RPA equations for channel $\nu$ read
+\begin{equation}
+\left(
+\begin{array}{cc}
+A & B \\
+-B & -A
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+X^{(\nu)} \\
+Y^{(\nu)} 
+\end{array}
+\right)
+=
+E_{\nu}
+\left(
+\begin{array}{c}
+X^{(\nu)} \\
+Y^{(\nu)}
+\end{array}
+\right)
+\end{equation}
+with
+\begin{eqnarray}
+A_{mi,nj} & = & (\epsilon_{m} - \epsilon_{i})\delta_{mn}\delta_{ij} + 
+\underset{J}{
+\overset{J}{
+\acontraction{\langle }{m }{j | \hat{V}^{\text{res}} | }{i}
+\bcontraction{\langle m }{j}{| \hat{V}^{\text{res}} i | }{n}
+\langle m j | \hat{V}^{\text{res}} | i n \rangle
+}
+}
+\label{eq:A}
+\\
+B_{mi,nj} & = & 
+\underset{J}{
+\overset{J}{
+\acontraction{\langle }{m }{j | \hat{V}^{\text{res}} | }{i}
+\bcontraction{\langle m }{j}{| \hat{V}^{\text{res}} i | }{n}
+\langle m j | \hat{V}^{\text{res}} | i n \rangle
+}
+}
+\label{eq:B}
+\end{eqnarray}
+where
+\begin{itemize}
+\item As before, labels $m, n, \dots$ refer to particle states (above the Fermi 
+level) and labels $i,j, \dots$ refer to hole states (below the Fermi level)
+\item $\epsilon_{i}$ are the eigenvalues of the HF equations
+\item $\hat{V}_{\text{res}}$ is the residual interaction; in your project, you 
+will take the same interaction as for the HF equations, i.e., 
+$\hat{V}^{\text{res}}$ will be the Minnesota potential
+\end{itemize}
+
+{\bf Matrix elements - } The notation for the matrix elements indicates that 
+they are computed in the $J$-scheme; since the couping is between {\em particle 
+and holes of the HF states}, you do not have access to these matrix elements: 
+the ones that you obtain from Morten's code are matrix elements {\em in the HO 
+basis}, and the coupling is between s.p. states of the bra and kets. 
+
+The simplest way to proceed is the brute force method (as usual). The coupled 
+matrix elements for the RPA are defined from the uncoupled ones as
+\begin{multline}
+\underset{J}{
+\overset{J}{
+\acontraction{\langle }{m }{j | \hat{V}^{\text{res}} | }{i}
+\bcontraction{\langle m }{j}{| \hat{V}^{\text{res}} i | }{n}
+\langle m j | \hat{V}^{\text{res}} | i n \rangle
+}
+}
+=
+\sum_{\text{all\ m}} (-1)^{j_{b}-m_{b}+j_{c}-m_{c}}
+(j_{a}j_{c}m_{a}-m_{c}|JM)(j_{b}j_{d}m_{b}-m_{d}|JM) \\
+\times\langle j_{a}m_{a},j_{b}m_{b} | \hat{V}^{\text{res}} | j_{c}m_{c},j_{d}m_{d}\rangle
+\label{eq:matV}
+\end{multline}
+Now, the matrix elements $V^{\text{res}}_{abcd} = \langle j_{a}m_{a},j_{b}m_{b} | \hat{V}_{\text{res}} | j_{c}m_{c},j_{d}m_{d}\rangle$ 
+are uncoupled (in terms of angular momentum), but the states are still HF 
+states. However, from the diagonalization of the HF Hamiltonian, you get the 
+expansion of these states as function of HO states,
+\begin{equation}
+|\bar{n}ljm\rangle_{HF} = \sum_{n'} D^{lj}_{n'\bar{n}} |n'ljm\rangle_{HO}
+\end{equation}
+You can, therefore, express all the matrix elements $V^{\text{res}}_{abcd}$ as 
+a function of the original matrix elements of the potential in the HO basis. 
+
+{\bf Practical implementation}
+\begin{enumerate}
+\item For a given $J$ and parity $\pi$, define the basis of coupled 
+particle-hole excitations, i.e., the states $|mi\rangle$ by taking all hole 
+states below the Fermi level, and all the particle states up to a cut-off 
+$E_{\text{cut}}$ that should be an input of your code. Note that in the various 
+expressions given above, I dropped the indices related to the $n$ and $l$ 
+quantum numbers. In practice, the HF states coming out as eigenstates of the 
+HF matrix are
+\begin{eqnarray*}
+k=0: & |0,0,1/2\rangle \equiv 0s1/2 \\
+k=1: & |0,1,3/2\rangle \equiv 0p3/2 \\
+k=2: & |0,1,1/2\rangle \equiv 0p1/2 \\
+k=3: & |0,2,3/2\rangle \equiv 0d3/2 \\
+k=4: & |0,2,5/2\rangle \equiv 0d5/2 \\
+k=5: & |2,0,1/2\rangle \equiv 1s1/2 \\
+\vdots & \vdots
+\end{eqnarray*}
+The first step is, therefore, to set up some bookkeeping mechanism to keep 
+track of your s.p. states and compute the p.h. two-body states.
+\item Compute the $JJ$ matrix elements according to Eq.(\ref{eq:matV})
+\item Compute the matrix elements of your RPA matrix according to 
+Eqs.(\ref{eq:A})-(\ref{eq:B})
+\item Diagonalize the RPA matrix
+\end{enumerate}

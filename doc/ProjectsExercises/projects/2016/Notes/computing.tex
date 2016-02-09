@@ -1,0 +1,510 @@
+\documentclass[mode=present,paper=screen,size=12pt,style=paintings]{powerdot}
+
+% Useful packages
+\usepackage{amsmath,array,theorem,amssymb,mathrsfs}
+\usepackage{empheq}
+\usepackage{graphicx}
+\usepackage{cprotect}
+\usepackage{listings}
+\lstset{
+    language=C,
+    basicstyle=\scriptsize,
+    frame=single
+}
+% Useful commands
+\newcommand{\gras}[1]{\boldsymbol{#1}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\boite}[1]{\fbox{\parbox{\textwidth}{{\tt\color{blue} #1}}}}
+\newcommand{\cc}[1]{{\tt\color{blue} #1}}
+
+\renewcommand{\arraystretch}{0.5}
+
+
+
+\pdsetup{method=direct,palette=MayThird,lf={Computing Environment},rf=\thepage}
+
+\title{Programming Environment for the TALENT School}
+\author{N. Schunck}
+\date{July 15, 2014}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{slide}{General Requirements for Computational Projects}
+
+\begin{itemize}
+\item All programs must be controlled with the git control version system;
+\item All programs must be compiled with a Makefile;
+\item Your programs must be {\em modular} as much and as reasonably as possible;
+\item We ask that you try to use concepts of {\em object-oriented programming (OOP)}. If you use languages like C++ or Python, this is easy; in Fortran or C, it is less obvious but still doable;
+\item Fortran 77 is prohibited;
+\item As much as possible, try to use {\em libraries} such as BLAS, LAPACK (Fortran), Armadillo (C/C++), etc.;
+\item As much as possible, try to use {\em dynamic memory allocation};
+\item All codes must be fully {\em documented}, both in the source code and in the form of a short manual -- or a long README, explaining how to build and run the code.
+\end{itemize}
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Makefiles}
+
+
+\begin{slide}{Introducing Makefiles}
+
+Our (sensible) requirement that your project must be modular implies that you will have several files to compile, some possibly depending on one or several of the others. The \cc{make} utility is an excellent way to automatize the compilation of such complex projects. \medskip
+
+First things first: \cc{make} may not be installed by default in your system, so start by installing it. \medskip
+
+We will assume a simple C program composed of 3 files
+\begin{itemize}
+\item the file \cc{main.c} containing the \cc{main()} function
+\item the file \cc{hello.c} containing a function displaying {\em Hello, World!}
+\item the file \cc{hello.h} containing a header
+\end{itemize}
+
+Without any Makefile, the program could be compiled by 
+
+\boite{gcc -o main main.c hello.c -I.}
+
+\end{slide}
+
+
+\begin{slide}{C Programs Illustrating the Makefile}
+
+\begin{tabular}[t]{p{0.45\textwidth}p{0.45\textwidth}}
+\cc{main.c} & \cc{hello.c} \\
+\begin{lstlisting}
+#include 
+int main() 
+{
+  // call the function
+  myPrintHelloMake();
+
+  return(0);
+}
+\end{lstlisting}
+&
+\begin{lstlisting}
+#include 
+#include 
+
+void myPrintHelloMake(void) {
+
+  printf("Hello makefiles!\n");
+
+  return;
+}
+\end{lstlisting}
+\\
+\cc{hello.h} & \\
+\begin{lstlisting}
+/*
+example include file
+*/
+
+void myPrintHelloMake(void);
+\end{lstlisting}
+&
+\end{tabular}
+
+\end{slide}
+
+
+\begin{slide}{General Structure of a Makefile}
+
+The general command of a \cc{Makefile} is 
+
+\boite{Target : Dependency\\ \lbrack Tabulation\rbrack Command} \medskip
+
+The \cc{Target} is a {\em label} that you choose to define a target, i.e., something that you want to obtain. In our example, the executable \cc{main} would be our target. \medskip
+
+The \cc{Dependency} is anything that is required to ``reach'' the target. In our example, the executable \cc{main} depends on some object files: these are our dependencies. \medskip
+
+The target is then produced by executing the \cc{Command}. In our example, the command would be the C compiler on our system. \medskip
+
+Dependencies are often also targets. Again, in our example, the object file \cc{hello.o} needed to produce the target \cc{main} can be thought of a target, which will be produced by the C compiler.
+
+\end{slide}
+
+
+\begin{slide}{Simple Makefile}
+
+Below is the simplest Makefile we could make out of our example:
+
+\begin{lstlisting}
+hello: hello.o main.o
+	gcc -o hello hello.o main.o
+
+hello.o: hello.c
+	gcc -o hello.o -c hello.c -W -Wall -ansi -pedantic
+
+main.o: main.c hello.h
+	gcc -o main.o -c main.c -W -Wall -ansi -pedantic
+\end{lstlisting}
+
+If you save this code into a file \cc{Makefile}, you can compile the project by simply typing 
+
+\boite{make}\medskip
+
+This will produce the executable \cc{hello} (the primary target). This primary target has two dependencies, \cc{main.o} and \cc{hello.o}. Each of them is the target of another command, with \cc{main.o} depending on \cc{hello.h}.
+
+\end{slide}
+
+
+\begin{slide}{More Advanced Makefile}
+
+We add three more rules to: (i) list of the executables to produce (\cc{all}), (ii) delete intermediate object files (\cc{clean}), and (iii) remove the executable to force a complete rebuild (\cc{mrproper}).
+
+\begin{lstlisting}
+all: hello
+
+hello: hello.o main.o
+	gcc -o hello hello.o main.o
+
+hello.o: hello.c
+	gcc -o hello.o -c hello.c -W -Wall -ansi -pedantic
+
+main.o: main.c hello.h
+	gcc -o main.o -c main.c -W -Wall -ansi -pedantic
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+	rm -rf hello
+\end{lstlisting}
+
+\end{slide}
+
+
+\begin{slide}{User Variables}
+
+Instead of repeating the same command for compilation, we define our own variables.
+
+\begin{lstlisting}
+CC      = gcc
+CFLAGS  = -W -Wall -ansi -pedantic
+LDFLAGS =
+EXEC    = hello
+
+all: $(EXEC)
+
+hello: hello.o main.o
+	$(CC) -o hello hello.o main.o $(LDFLAGS)
+
+hello.o: hello.c
+	$(CC) -o hello.o -c hello.c $(CFLAGS)
+
+main.o: main.c hello.h
+	$(CC) -o main.o -c main.c $(CFLAGS)
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+	rm -rf $(EXEC)
+\end{lstlisting}
+
+\end{slide}
+
+
+\begin{slide}{Combining Internal and User Variables}
+
+There are pre-defined variables that come handy:
+\begin{tabular}{ll}
+\$@  & Name of the target \\
+\$\textless & The name of the first dependency \\
+\$\^ & The list of all dependencies \\
+\$?  & The list of all dependencies that are more recent than the target \\
+\$*  & The name of the file without the extension
+\end{tabular}
+
+\lstset{
+    language=C,
+    basicstyle=\tiny,
+    frame=single
+}
+\begin{lstlisting}
+CC      = gcc
+CFLAGS  = -W -Wall -ansi -pedantic
+LDFLAGS =
+EXEC    = hello
+
+all: $(EXEC)
+
+hello: hello.o main.o
+	$(CC) -o $@ $^ $(LDFLAGS)
+
+hello.o: hello.c
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+main.o: main.c hello.h
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+	rm -rf $(EXEC)
+\end{lstlisting}
+
+\end{slide}
+
+
+\begin{slide}{Inference Rule}
+
+We now define generic rules to build all object files (extension .o) from source files (extension .c in our C programs). This is done with the inference rule
+
+\boite{\%.o : \%.c}\medskip
+
+We also add the requirement that object files depend on the header files (only one in our case, but they could be more).
+
+\lstset{
+    language=C,
+    basicstyle=\tiny,
+    frame=single
+}
+\begin{lstlisting}
+CC      = gcc
+CFLAGS  = -W -Wall -ansi -pedantic
+LDFLAGS =
+EXEC    = hello
+DEPS    = hello.h
+
+all: $(EXEC)
+
+hello: hello.o main.o
+	$(CC) -o $@ $^ $(LDFLAGS)
+
+%.o: %.c $(DEPS)
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+	rm -rf $(EXEC)
+\end{lstlisting}
+
+\end{slide}
+
+
+\begin{slide}{Automatic Generation of Object Files}
+
+Finally, we define the list of all sources files that need be compiled, put it in a variable \cc{SRC}, and automatically define the corresponding list of object files through
+
+\boite{OBJ= \$(SRC:.c=.o)}\medskip
+
+The final Makefile looks like
+
+\lstset{
+    language=C,
+    basicstyle=\tiny,
+    frame=single
+}
+\begin{lstlisting}
+CC      = gcc
+CFLAGS  = -W -Wall -ansi -pedantic
+LDFLAGS =
+EXEC    = hello
+DEPS    = hello.h
+SRC     = hello.c main.c
+OBJ     = $(SRC:.c=.o)
+
+all: $(EXEC)
+
+hello: $(OBJ)
+	$(CC) -o $@ $^ $(LDFLAGS)
+
+%.o: %.c $(DEPS)
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+	rm -rf $(EXEC)
+\end{lstlisting}
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{The Git Version Control System}
+
+
+\begin{slide}{Introducing Version Control System}
+
+Git is an open source version control software (VCS). \medskip
+
+Advantages of VCS:
+\begin{itemize}
+\item Keep a record of the entire development history of a project (can be a code or anything else, for example the versions of your Ph.D. thesis...)
+\item Each snapshot of the project (list and content of all files and directories) is recorded with a mandatory comment describing it
+\item Considerably improves the maintenance of projects involving several people
+\end{itemize}
+
+Disadvantages: None... (OK, there is a learning curve)
+
+\end{slide}
+
+
+\begin{slide}{Installing Git}
+
+Start with downloading the software:
+\begin{itemize}
+\item Linux: use your distribution package manager to install it
+\item Windows: go to http://git-scm.com/downloads and download the client
+\item MacOs: it is a good idea to install it via Homebrew or Macports. Ask if you are not familiar with these softwares
+\end{itemize}
+
+You may want to use a GUI client. One possible choice is git-cola, available at https://git-cola.github.io/. Its main advantage is that it is multi-platform, i.e., it will work on Linux, Windows and MacOS equally well.\medskip
+
+In a terminal window, you can access the documentation with
+
+\boite{git --help}\medskip
+
+and the documentation on a specific topic with, e.g., 
+
+\boite{git branch --help}
+
+\end{slide}
+
+
+\begin{slide}{First Git Project (1/2)}
+
+In the following, we will illustrate most basic features of git using the command line. We assume that you want to create a folder \cc{dir/} that will contain a bunch of files, and you want the entire \cc{dir/} folder to be under git control. \medskip
+
+In the folder that contains dir/, type: 
+
+\boite{git init dir}\medskip
+
+While still in the directory \cc{dir/} create the file \cc{hello.f90} and write the Fortran 90 code needed to display the usual {\em Hello World!} message. The content of the directory has been changed, since you have added a new file. \medskip
+
+Take a snapshot of the directory with
+
+\boite{git add .}\medskip
+
+and record this snapshot with
+
+\boite{git commit} 
+
+\end{slide}
+
+
+\begin{slide}{First Git Project (2/2)}
+
+Note that when you commit your project, you have to type in a commit message. Be serious about it: in complex projects, commit messages are invaluable sources of information! \medskip
+
+Under Linux, it is very likely that the commit message has to be entered with the \cc{vi} editor: first press \cc{i} to enter the edit mode, then type your comments, then type \cc{ZZ} to record and close. \medskip
+
+The initial commit creates a new {\em branch} in the git repository, named {\em master} (all git repositories have a master branch). \medskip
+
+If you add a file to the directory, or if you remove a file, or if you modify an existing file (by editing it for instance, or by changing its attribute), you are modifying the active branch -- in our simple example, \cc{master}.
+
+\end{slide}
+
+
+\begin{slide}{Useful Git Commands}
+
+To see if there is anything that has been modified since your last commit
+
+\boite{git status}\medskip
+
+To see the history of the versions of your project
+
+\boite{git log}\medskip
+
+To list all branches of your project
+
+\boite{git branch}\medskip
+
+The asterisk lists the branch that is currently active, i.e., the branch you are ``sitting on'' (think ot the branches of the tree, really).\medskip
+
+Commits are referenced with some crazy labels. You can view the difference between the current branch and a former commit with commands such as 
+
+\boite{git diff 655987702ea15b9daa12dc8bc37023b35fc4eb50}
+
+\end{slide}
+
+
+\begin{slide}{Branches}
+
+So far, the \cc{master} branch of our git project is made of a directory \cc{dir} with a file called \cc{hello.f90}. \medskip
+
+Create a new branch with
+
+\boite{git branch C++}\medskip
+
+List the branches...
+
+\boite{git branch}\medskip
+
+Checkout the new branch, i.e., if your git project is a tree, you are now moving to a new branch, the one named \cc{C++}
+
+\boite{git checkout C++}\medskip
+
+Now, delete the file \cc{hello.f90}, and create a new one called \cc{hello.cc} with the code to display {\em Hello, World!} in C++.\medskip 
+
+After checking the status of the git repository, add and commit the new file; check the history of the repository. What happens if you now checkout the \cc{master} branch?
+
+\end{slide}
+
+
+\begin{slide}{To go Further on Git}
+
+This short introduction should allow you to get started with Git. The topics that have not been covered:
+\begin{itemize}
+\item How to import, export and backup a Git repository on some online servers such as Bitbicket or Github, where you can create accounts for free.
+\item How to merge branches and resolve conflicts: this is especially important if you use Git as part of a team.
+\end{itemize}
+
+Documentation:
+\begin{itemize}
+\item http://git-scm.com/docs/gittutorial: This is a good starting point if you are totally unfamiliar with Git and version control system. In fact, I used the material in these slides as inspiration.
+\item http://nvie.com/posts/a-successful-git-branching-model/: For the more advanced users, this blog entry discusses a possible Git strategy for a project development.
+\end{itemize}
+
+\end{slide}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Workplan}
+
+
+\begin{slide}{Today}
+
+The goal of the first session is to write a short program (in your favorite language) that achieves the following
+\begin{itemize}
+\item Read as input an integer $N$ giving the dimension of a matrix
+\item Set up a matrix of real numbers and dimension $N\times N$
+\item Diagonalize the matrix using a call to a library
+\item Display the first 10 eigenvalues
+\end{itemize}
+
+If you think this is so easy that it makes you ashamed of even contemplating doing this, we suggest you start developing a module (in your favorite language) implementing Gauss-Laguerre quadrature. In particular, you could try to very numerically the orthonormality of HO radial wave functions.
+
+\end{slide}
+
+
+\end{document}

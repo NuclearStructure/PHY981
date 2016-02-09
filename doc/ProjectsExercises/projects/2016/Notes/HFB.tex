@@ -1,0 +1,196 @@
+{\bf HFB equations - } Remember that the most general form of the HFB equations 
+is
+\begin{equation}
+\left( \begin{array}{cc}
+h - \lambda & \Delta \\
+-\Delta^{*} & -h^{*} + \lambda
+\end{array} \right)
+\left( \begin{array}{cc} 
+U & V^{*} \\ 
+V & U^{*} 
+\end{array} \right)
+=
+\left( \begin{array}{cc} 
+U & V^{*} \\ 
+V & U^{*} 
+\end{array} \right)
+\left( \begin{array}{cc}
+E & 0 \\
+0 & -E
+\end{array} \right)
+\end{equation}
+In this expression, $h$ and $\Delta$ are matrices of size $n\times n$, with $n$ 
+the size of the single-particle basis (i.e. the total number of states in the 
+HO basis in our example). $\lambda$ is a shorthand notation for $\lambda I$, 
+with $I$ the $n\times n$ identity matrix; $\lambda$ is the Fermi level 
+introduced to constrain the average value of the particle number to its actual 
+value. For each of the $n$ eigenvectors of energy $E_{\mu}$, there is one with 
+eigenvector $-E_{\mu}$. 
+
+{\bf Bogoliubov transformation - } In spherical symmetry, the conjugate 
+single-particle states $a$ and $\bar{a}$ are characterized by 
+$|a\rangle \equiv |n_{a} l_{a} j_{a} m_{a}\rangle$ and 
+$|\bar{a}\rangle \equiv |n_{a} l_{a} j_{a} -m_{a}\rangle$. As Peter discussed 
+in this lecture on pairing, $a$ and $\bar{a}$ are related by the time-reversal 
+operator. Just as in the HF case, the $U$ and $V$ matrices are block diagonal, 
+i.e., they take the generic form
+\begin{equation}
+U_{ab} \equiv \delta_{l_{a}l_{b}} \delta_{j_{a}j_{b}} U^{(l_{a}j_{a})}, 
+\ \ \ 
+V_{ab} \equiv \delta_{l_{a}l_{b}} \delta_{j_{a}j_{b}} V^{(l_{a}j_{a})}. 
+\end{equation}
+The difference with the HF case is that things are not entirely independent of 
+the projection $m$. Suppose we reorder the labelling of the $2j_{a}+1$ 
+$m$-projections in each $(l_{a},j_{a})$ block according to
+\begin{equation}
+m = -j, -j+1, \dots, +j \rightarrow m = +j,-j, +j-1, -j+1, \dots, +1/2, -1/2.
+\end{equation}
+In other words, we form pairs of states $(+m,-m)$; there are $j+1/2$ such 
+pairs in each block $j$. Spherical symmetry imposes that the $U$ and $V$ 
+matrices are block diagonal in each of these $j+1/2$ blocks. Denoting 
+generically $U^{(lj)}_{|m|}$ and $V^{(lj)}_{|m|}$ such blocks, we find
+\begin{equation}
+U^{(lj)}_{|m|} =
+\left(
+\begin{array}{cc}
+u & 0 \\
+0 & u
+\end{array}
+\right),
+\ \ \ \ \ 
+V^{(lj)}_{|m|} =
+\left(
+\begin{array}{cc}
+0 & v\\
+\bar{v} & 0 \\
+\end{array}
+\right).
+\end{equation}
+For each s.p. state $a$, we will note
+\begin{equation}
+u \equiv u^{(a)}, 
+\ \ \ 
+v \equiv (-1)^{j_{a}-m_{a}} v^{(a)},
+\ \ \ 
+\bar{v} \equiv (-1)^{j_{a}+m_{a}} v^{(a)},
+\end{equation}
+The dimension of the block matrices $u^{(a)}$ and $v^{(a)}$ is 
+$(N_{0} - l_{a})/2$, where $N_{0}$ is the 
+number of oscillator shells.
+
+{\bf Densities - } From these relations, it is straightforward to compute the 
+density matrix $\rho$ and pairing tensor $\kappa$. Remember the general 
+definition,
+\begin{equation}
+\rho_{ab} = (V^{*}V^{T})_{ab}, \ \ \ \ \kappa_{ab} = (V^{*}U^{T})_{ab}
+\end{equation}
+The density matrix and pairing tensor have a similar block structure as the 
+$U$ and $V$ in the (reordered) s.p. basis. We find
+\begin{equation}
+\rho^{(lj)}_{|m|} = 
+\left(
+\begin{array}{cc}
+\rho & 0 \\
+0 & \rho
+\end{array}
+\right),\ \ \ \ 
+\kappa^{(lj)}_{|m|} = 
+\left(
+\begin{array}{cc}
+0 & \kappa \\
+\bar{\kappa} & 0
+\end{array}
+\right),
+\end{equation}
+with 
+\begin{equation}
+\rho \equiv v^{(a)}v^{(a)T}, 
+\ \ \ 
+\kappa \equiv (-1)^{j_{a}-m_{a}} v^{(a)}u^{(a)T},
+\ \ \ 
+\bar{\kappa} \equiv (-1)^{j_{a}+m_{a}} v^{(a)}u^{(a)T},
+\end{equation}
+
+{\bf HFB equations - } Based on the previous remarks, one can show (i) first 
+that the HFB equations can also be reduced to a block diagonal form in each of 
+the $j+1/2$ blocks characterized by $l$, $j$ and $|m|$, (ii) then that these 
+new equations can be further reduced so that they also become block-diagonal in 
+the subspace of $(+m,-m)$. The end result is that the HFB equations take the 
+following form
+\begin{equation}
+\left( \begin{array}{cc}
+h^{(a)} - \lambda & -\Delta^{(a)} \\
+-\Delta^{(a)} & -h^{(a)} + \lambda
+\end{array} \right)
+\left( \begin{array}{cc} 
+u^{(a)} \\ 
+v^{(a)} 
+\end{array} \right)
+= E^{(a)}
+\left( \begin{array}{c} 
+u^{(a)} \\ 
+v^{(a)} 
+\end{array} \right)
+\end{equation}
+where the $u^{(a)}$ and $v^{(a)}$ have been introduced before. Denoting
+\begin{equation}
+\rho^{(a)} = v^{(a)}v^{(a)T}, \ \ \ \kappa^{(a)} = v^{(a)}u^{(a)T}
+\end{equation}
+we find the mean-field,
+\begin{equation}
+h_{n_{a}n_{c}}^{(a)} = t_{n_{a}n_{c}}^{(a)} + \Gamma_{n_{a}n_{c}}^{(a)} 
+\end{equation}
+the HF potential,
+\begin{equation}
+\Gamma_{n_{a}n_{c}}^{(a)} =
+\sum_{n_{b}n_{d}} 
+\langle n_{a}m_{a} n_{b}m_{a} | \bar{v} | n_{c}m_{a} n_{d}m_{a}\rangle
+\rho^{(a)}_{n_{d}n_{a}}
+\end{equation}
+and the pairing field
+\begin{equation}
+\Delta_{n_{a}n_{c}}^{(a)} =
+\sum_{n_{b}n_{d}} 
+\langle n_{a}m_{a} n_{b}-m_{a} | \bar{v} | n_{c}m_{a} n_{d}-m_{a}\rangle
+\kappa^{(a)}_{n_{d}n_{a}}
+\end{equation}
+
+
+{\bf Practical implementation}
+\begin{enumerate}
+\item In your HF code, you were already dealing with the blocks of the density 
+matrix, which I denoted by $\rho^{(a)}$; you must now introduce another such 
+object that will contain the pairing tensor $\kappa^{(a)}$. This object will 
+also have to be initialized before to start the HFB iterations [See what 
+happens if you initialize it with zeros only].
+\item The number of particles is not conserved in HFB. You must, therefore, not 
+forget to readjust $\lambda$ at each iteration. This is done by requesting that 
+\begin{equation}
+\text{Tr} \rho = A
+\end{equation}
+where $A$ is your input particle number. The simplest way to do this is to use  
+a BCS-like expression for quasiparticle occupations. At a given iteration, we 
+thus define $\bar{\varepsilon}_{n}$ and $\bar{\Delta}_{n}$ 
+according to
+\begin{eqnarray}
+\displaystyle E_{n} &=& \displaystyle \sqrt{ (\bar{\varepsilon}_{n} - \lambda)^{2} + \bar{\Delta}_{n}^{2} } \medskip \\
+\displaystyle N_{n} &=& \displaystyle \frac{1}{2} \left[ 1 - \frac{\bar{\varepsilon}_{n} - \lambda}{\sqrt{ (\bar{\varepsilon}_{n} - \lambda)^{2} + \bar{\Delta}_{n}^{2} }} \right]
+\end{eqnarray}
+where $E_{n}$ is the energy of quasiparticle number $n$, 
+$E_{n} \equiv E^{(l_{a}j_{a})}$, and $N_{n}$ is the norm of the $V$ matrix for 
+this q.p.
+\begin{equation}
+N_{n} \equiv N^{(l_{a}j_{a})}= \sum_{n'} |v^{(a)}_{n'n}|^{2}
+\end{equation}
+[recall that you should get 
+$\sum_{n'} |u^{(a)}_{n'n}|^{2} + |v^{(a)}_{n'n}|^{2} = 1$ from the 
+diagonalization of the HFB matrix]. By computing the particle number as
+\begin{equation}
+A(\lambda) = \sum_{l_{a}j_{a}} (2j_{a}+1) N^{(l_{a}j_{a})}
+\end{equation}
+we can set up a Newton-like method to obtain $\lambda$.
+\item The corollary of the previous steps is that you do not need to impose 
+that only the first $n_{occ}$ occupied states are included when defining the 
+density matrix.
+\end{enumerate}
+

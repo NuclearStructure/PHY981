@@ -1,0 +1,72 @@
+As discussed in the lectures, the density matrix expansion (DME) is a promising technique to build a quasi-local EDF starting from the underlying NN and NNN interactions, working either at the Hartree-Fock (HF) or Brueckner-Hartree-Fock (BHF) level.  In the following, we outline the basic steps to derive and implement quasi-local EDF approximations to the fully non-local HF calculations you implemented in the first two phases of the project. 
+
+{\bf Local Density Approximation to Hartree-Fock } The LDA gives the simplest path for deriving a local EDF starting from a microscopic hamiltonian. In the most sophisticated implementation, one only applies the LDA to the non-local exchange (Fock) energy, treating the finite-range Hartree contribution exactly since it only probes the diagonal densities.  With your HF code, it is no problem in principle to treat the Hartree term exactly. However, this requires that one treats the direct and exchange matrix elements of the anti-symmetrized NN potential separately.  Unfortunately, the ``black box'' code used to generate the m-scheme and J-scheme matrix elements has the antisymmetry built in, making it hard to separate the direct and exchange contributions without digging deep into the workings of the code. Therefore, for the present problem you will apply the LDA to both the Hartree and Fock energy contributions to avoid this technicality.
+
+At the heart of the LDA is a calculation of the energy/particle of the infinite homogenous system-- pure neutron matter in the present problem.  Here is an outline of the steps you need to do this. 
+\begin{enumerate}
+\item Starting from the general expression for the HF interaction energy, show that one gets the following expression for the Minnesota potential for spin-saturated systems (i.e., systems with vanishing spin-vector density matrices)
+\begin{eqnarray}
+E^{HF}_{int} &=& E_H + E_F\\
+\label{eq:HF}
+E_H &=& \frac{1}{2}\int d{\bf R}\!\int  d{\bf r}\, V_C(r)\rho({\bf R}+{\bf r}/2)\rho({\bf R}-{\bf r}/2) \nonumber\\
+E_F &=&  \frac{1}{2}\int d{\bf R}\!\int  d{\bf r}\, V_C(r)\rho({\bf R}+{\bf r}/2,{\bf R}-{\bf r}/2)\rho({\bf R}-{\bf r}/2,{\bf R}+{\bf r}/2)\,, \nonumber
+\end{eqnarray}
+where $V_C = \frac{1}{4}(V_R + V_S)$.  
+
+\item Now apply this to the system of infinite homogenous neutron matter ($A\rightarrow\infty$, $V\rightarrow \infty$, $\rho\rightarrow const$), remembering that $\rho({\bf r}_1,{\bf r}_2) = \rho\, \rho_{SL}(k_Fr)$, where $\rho_{SL}(x) = 3j_1(x)/x$. This gives the following expression for the HF interaction energy per particle 
+
+\begin{equation}
+\frac{E^{HF}_{int}}{A} \equiv e_{HF}(\rho) = \frac{1}{2}\rho \int d{\bf r} V_C(r)  + \frac{1}{2}\rho \int d{\bf r}\rho_{SL}^2(k_Fr)V_C(r)\,.
+\end{equation}
+
+\item Now that you have the HF energy for the infinite system, the LDA amounts to defining the interaction energy piece of the EDF as 
+\begin{equation}
+E_{int}[\rho] \equiv \int d{\bf r} \rho({\bf r}) e_{HF}(\rho({\bf r}))\,. 
+\end{equation}
+The LDA approximation to the HF s.p. hamiltonian is then purely local, and is given by
+\begin{equation}
+h({\bf r}) = h_0({\bf r}) + \frac{\delta}{\delta\rho({\bf r})} E_{int}[\rho]\equiv h_0({\bf r}) + \Gamma_{LDA}({\bf r})\,,
+\end{equation}
+where $h_0$ is the HO hamiltonian and the s.p. field $\Gamma_{LDA}$ is given by
+\begin{equation}
+\Gamma_{LDA}({\bf r}) = \frac{\delta}{\delta\rho({\bf r})} E_{int}[\rho] = e_{HF}(\rho({\bf r})) + \rho({\bf r})\frac{\partial}{\partial \rho}e_{HF}(\rho)|_{\rho({\bf r})}
+\end{equation}
+  Note that $\Gamma_{LDA}({\bf r})$ depends on the density, so the resulting s.p. equations need to be solved self-consistently as in the original HF calculations.  You can use your existing HF code to do this, once you have implemented functions to calculate $e_{HF}(\rho)$ and $\Gamma_{LDA}({\bf r})$, and to take matrix elements of  $\Gamma_{LDA}({\bf r})$ on the HO basis
+\begin{equation}
+\langle nljm|\Gamma_{LDA}|n'ljm\rangle = \int r^2dr R_{nl}(r) \Gamma_{LDA}(r)R_{n'l}(r)
+\end{equation}
+\item Once you have reached self-consistency, the LDA approximation to the HF energy is evaluated as 
+\begin{equation}
+E^{HF}_{LDA} = \sum_{i=1}^{A} \langle \phi_i|h_0|\phi_i\rangle + E_{int}[\rho]\,, 
+\end{equation}
+where $\phi_i$ are the self-consistent HF-LDA orbitals and $\rho$ is the self-consistent density
+\begin{equation}
+\rho({\bf r}) = \sum_{i=1}^{A} \phi^*_i({\bf r})\phi_i({\bf r})
+\end{equation}
+\end{enumerate}
+{\bf Density Matrix Expansion -  }  The DME approximation to HF looks very similar to the simple LDA outlined above, but now with explicit gradient corrections and dependence on the local kinetic energy density, $\tau({\bf R}) = \nabla_1\cdot\nabla_2\rho({\bf r}_1,{\bf r}_2)\big|_{{\bf r}_1={\bf r}_2={\bf R}}$. As with the LDA calculation, we will not treat the full finite-range Hartree energy exactly. Rather, we will apply a naive Taylor expansion to map the Hartree energy into a Skyrme-like form. Here are the steps to implement the DME approximation to HF:
+
+\begin{enumerate}
+\item In the non-local Fock energy expression, plug in the DME expression for the density matrix
+\begin{eqnarray}
+\rho({\bf R}+{\bf r}/2,{\bf R}-{\bf r}/2) \approx \pi_0(k_Fr)\rho({\bf R}) + \frac{r^2}{6}\pi_2(k_Fr)\bigl[\frac{1}{4}\nabla^2\rho - \tau + \frac{3}{5}k_F^2\rho\bigr]\,,
+\end{eqnarray}
+keeping only terms to 2nd-order in small quantities (i.e., treat the terms involving $\pi_2$ as 2nd-order), so that
+\begin{equation}
+\rho^2({\bf R}+{\bf r}/2,{\bf R}-{\bf r}/2) \approx \pi_0^2\rho^2 + \frac{r^2\pi_0\pi_2}{3}\biggl[\frac{\rho\nabla^2\rho}{4} - \rho\tau + \frac{3}{5}k_F^2\rho^2\biggr]
+\end{equation}
+ \item Simplify your expression for $E_{F}[\rho,\tau,\nabla^2\rho]$ to get it into the form
+ \begin{equation}
+ E_{F} \approx \int d{\bf R} \biggl\{ C^{\rho\rho}\rho^2 + C^{\rho\tau}\rho\tau + C^{\rho\nabla^2\rho}\rho\nabla^2\rho\biggr\}\,.
+ \end{equation}
+ Your expressions for the density-dependent couplings should take the form as integrals of the $\pi$-functions over the finite range NN potential.  For example, you should find
+ \begin{equation}
+ C^{\rho\rho} = \int d{\bf r} V_C(r)\bigl[\pi_0^2(k_Fr) + \frac{1}{5}(k_Fr)^2\pi_0(k_Fr)\pi_2(k_Fr)\bigr]
+ \end{equation}
+ In both Negele-Vautherin and PSA flavors of the DME, you should be able to get analytical expressions  for all couplings. As a reminder, the PSA $\pi$-functions are all equal to $\rho_{SL}$, while the NV ones are given by $\pi_0(x) = \rho_{SL}(x)$, $\pi_2(x) = 105j_3(x)/x^3$.
+
+\end{enumerate}
+
+
+
+

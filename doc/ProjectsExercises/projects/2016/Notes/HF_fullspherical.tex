@@ -1,0 +1,151 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{amsmath}           % Include AMSTeX style
+\usepackage{amsfonts}
+\usepackage{graphicx}          % Include figure files
+\usepackage{dcolumn}           % Align table columns on decimal point
+\usepackage{bm}
+\usepackage{array}
+\usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{pst-plot}
+\usepackage{colortbl}
+\usepackage{listings}
+
+\newcommand{\gras}[1]{\boldsymbol{#1}}
+
+% Page size customizations
+
+\setlength{\parskip}{0.3cm}
+\setlength{\parindent}{0.0cm}
+\setlength{\fboxrule}{0.025cm}
+\setlength{\fboxsep}{0.25cm}
+
+\addtolength{\headsep}{1.0cm}
+\addtolength{\voffset}{-1.0cm}
+\addtolength{\textheight}{2.0cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\oddsidemargin}{-1.25cm}
+\addtolength{\evensidemargin}{-1.25cm}
+
+\setcounter{MaxMatrixCols}{25}
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{15}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%
+% BEGINNING
+%
+
+
+\lstset{language=c++}
+\lstset{basicstyle=\small}
+%\lstset{backgroundcolor=\color{white}}
+%\lstset{frame=single}
+\lstset{stringstyle=\ttfamily}
+%\lstset{keywordstyle=\color{red}\bfseries}
+%\lstset{commentstyle=\itshape\color{blue}}
+\lstset{showspaces=false}
+\lstset{showstringspaces=false}
+\lstset{showtabs=false}
+\lstset{breaklines}
+
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]
+    {\bra{#1}#2\ket{#3}}
+
+\newcommand{\normord}[1]{
+    \left\{#1\right\}
+}
+
+
+\begin{document}
+
+
+\title{Hartree-Fock Calculations of Neutron Drops\\
+\Large{Phase 2: Extension to non $S$-wave basis states
+}}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+In the first phase of the project, we considered a simplified model of neutron drops in which we only allowed $S$-wave single particle states in our HO basis. We did this so you could have the satisfaction of generating your own input TBMEs without going thru the pain of dealing with technical details (angular momentum recoupling, Talmi-Moshinsky brackets, etc.) one uses to generate matrix elements for the general case.  In this way, you could focus on getting a working HF code as quickly as possible. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{HF equations for the general spherical case}
+
+Now let us consider the general case. Our HO single particle basis  states are labeled as $|nljm\rangle$.  {\bf The HF states are denoted $|\bar{n}ljm\rangle$, where I will put aways put a bar over the principle quantum numbers to distinguish them from HO states.}  Expanding the HF states in the oscillator basis gives
+
+\begin{equation}
+|\bar{n}ljm\rangle =\sum_{n'}|n'ljm\rangle\langle n'ljm|\bar{n}ljm\rangle \equiv \sum_{n'} |n'jlm\rangle D^{lj}_{n'\bar{n}} \,.
+\end{equation}
+We have made use of the fact that only HO states with the same $ljm$ values as the HF state contribute, and the overlap $D$-matrix is independent of $m$-value.  
+
+It is a good exercise (try it!) to show that the HF s.p. hamiltonian is diagonal in $ljm$ (and independent of $m$), and that the HF equations can be written as
+\begin{equation}
+\sum_{n_3} h^{lj}_{n_1n_3}D^{lj}_{n_3\bar{n}} = \epsilon_{\bar{n}lj}D^{lj}_{n_3\bar{n}}\,.
+\end{equation} 
+ where the s.p. HF hamiltonian matrix elements are 
+\begin{equation}
+h^{lj}_{n_1n_3} = \delta_{n_3 n_1}(2n_1+l + 3/2)\hbar\omega + \sum_{n_2n_4}\sum_{l'j'}^{occ}\langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle\rho^{l'j'}_{n_4n_2}\,.
+\end{equation}
+The $occ$ on the second summation is to remind you that the sum is over $l'j'$ values of occupied HF states only-- this follows from the fact that the density matrix is diagonal in this quantum numbers. Note that the main difference with the Phase I of the projects ($l=0, j=1/2$) is this additional summation over $l'$, $j'$.
+
+The $m,m'$-averaged matrix element (note the lack of $m$,$m'$ in the above TBME is not a typo) is given by
+\begin{equation}
+\label{eq:mavgTBME}
+\langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle \equiv \frac{1}{(2j+1)(2j'+1)}\sum_{mm'}  \langle n_1ljmn_2l'j'm'|V|n_3ljmn_4l'j'm'\rangle\,.
+\end{equation}
+
+Finally, note we have defined
+\begin{equation}
+\rho^{lj}_{n_4n_2} \equiv \sum_{\bar{n'}} O^{\bar{n}l'j'}D^{l'j'}_{n_4,\bar{n'}}D^{*l'j'}_{n_2\bar{n'}}\,,
+\end{equation}
+where $O^{\bar{n'}l'j'}$ is the number of occupied HF states with quantum numbers $\bar{n'}l'j'$, which is $2j'+1$ for closed-shell systems. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{J-coupled scheme}
+
+The above formulation of the HF equations, in which the basic TBMEs appearing in the right-hand side of Eq.~\ref{eq:mavgTBME} aren't coupled to good total momentum $J$, is called an $m$-scheme calculation. This is the simplest conceptually to understand and implement, but a moment's thought quickly reveals that the number of TBMEs explodes as we go to larger systems/model spaces. A way around this is to use $J$-coupled two-body matrix elements. In this case, we have for the $m,m'$-averaged matrix elements of Eq.~\ref{eq:mavgTBME}
+\begin{equation}
+\langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle = \sum_J \frac{2J+1}{(2j+1)(2j'+1)} \langle n_1ljn_2l'j';J|V|n_3ljn_4l'j';J\rangle
+\end{equation}
+Since the $J$-coupled TBME's are independent of total $M$, we only compute 1 of them (hence the factor of $2J+1$). The uploaded ``black box'' TBME code also outputs matrix elements in this format. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Input TBMEs}
+
+The are provided in the F90 package uploaded to the course Wiki. To avoid conflicts with C++ users, we recommend breaking the calculation in two steps. In the first step, you run the black box TBME codes which output the matrix elements to disk.  In the second step, you read these in feed to your HF code. 
+
+\end{document}
