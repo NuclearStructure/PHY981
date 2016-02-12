@@ -81,7 +81,7 @@ will end up developing here can be used in later projects, with simple
 extensions.  Since Hartree-Fock theory is the starting point for
 several many-body techniques (density functional theory, random-phase
 approximation, shell-model etc), the aim here is to develop a computer
-program to solve the HF equations in a given single-particle basis,
+program to solve the Hartree-Fock equations in a given single-particle basis,
 here the harmonic oscillator.
 
 You are encouraged to collaborate and working groups of 2-3 people are
@@ -188,10 +188,10 @@ energies and $m$ is the number of single-particle states.
 
 
 
-\subsection*{Outline of a HF Solver}
+\subsection*{Outline of a Hartree-Fock Solver}
 When setting up the Hartree-Fock code, we normally recommend to 
 \begin{enumerate}
-\item Write first a ``pseudo-code'' for your HF solver. Feel free to refer to the C++ listing below for guidance.  
+\item Write first a ``pseudo-code'' for your Hartree-Fock solver. Feel free to refer to the C++ listing below for guidance.  
 \item Start translating your pseudo-code into an actual implementation. 
 \end{enumerate}
 
@@ -256,24 +256,32 @@ You will need to read these two files and set up arrays which store the matrix e
 
 
 
-Now let us consider the general case. Our HO single particle basis  states are labeled as $|nljm\rangle$.  {\bf The HF states are denoted $|\bar{n}ljm\rangle$, where we will put aways put a bar over the principle quantum numbers to distinguish them from HO states.}  Expanding the HF states in the oscillator basis gives
-
-\begin{equation}
+Our HO single particle basis states are labeled as $|nljm\rangle$.
+{\bf The Hartree-Fock states are denoted $|\bar{n}ljm\rangle$, where
+  we will put aways put a bar over the principle quantum numbers to
+  distinguish them from HO states.}  Expanding the Hartree-Fock states
+in the oscillator basis gives
+\[
 |\bar{n}ljm\rangle =\sum_{n'}|n'ljm\rangle\langle n'ljm|\bar{n}ljm\rangle \equiv \sum_{n'} |n'jlm\rangle C^{lj}_{n'\bar{n}} \,.
-\end{equation}
-We have made use of the fact that only HO states with the same $ljm$ values as the HF state contribute, and the overlap $C$-matrix is independent of $m$-value.  
+\]
+We have made use of the fact that only HO states with the same $ljm$
+values as the Hartree-Fock state contribute, and the overlap $C$-matrix is
+independent of $m$-value.
 
-It is a good exercise (try it!) to show that the HF s.p. hamiltonian is diagonal in $ljm$ (and independent of $m$), and that the HF equations can be written as
-\begin{equation}
+The Hartree-Fock single-particle Hamiltonian is diagonal in
+  $ljm$ (and independent of $m$), and that the HF equations can be
+  written as
+\[
 \sum_{n_3} h^{lj}_{n_1n_3}C^{lj}_{n_3\bar{n}} = \epsilon_{\bar{n}lj}C^{lj}_{n_3\bar{n}}\,.
-\end{equation} 
- where the s.p. HF hamiltonian matrix elements are 
-\begin{equation}
-h^{lj}_{n_1n_3} = \delta_{n_3 n_1}(2n_1+l + 3/2)\hbar\omega + \sum_{n_2n_4}\sum_{l'j'}^{occ}\langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle\rho^{l'j'}_{n_4n_2}\,.
-\end{equation}
-The $occ$ on the second summation is to remind you that the sum is over $l'j'$ values of occupied HF states only-- this follows from the fact that the density matrix is diagonal in this quantum numbers. Note well that we need to do the additional summation over $l'$, $j'$.
+\]
+ where the single-particle Hartree-Fock  Hamiltonian matrix elements are 
+\[
+h^{lj}_{n_1n_3} = \delta_{n_3 n_1}(2n_1+l + 3/2)\hbar\omega + \sum_{n_2n_4}\sum_{l'j'}^{occ}\langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle\rho^{l'j'}_{n_4n_2}.
+\]
+The $occ$ on the second summation is to remind you that the sum is over $l'j'$ values of occupied Hartree-Fock states only-- this follows from the fact that the density matrix is diagonal in this quantum numbers. Note well that we need to do the additional summation over $l'$, $j'$.
 
-The $m,m'$-averaged matrix element (note the lack of $m$,$m'$ in the above TBME is not a typo) is given by
+
+The $m,m'$-averaged matrix element (note the lack of $m$,$m'$ in the above two-body matrix elements  is given by
 \begin{equation}
 \label{eq:mavgTBME}
 \langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle \equiv \frac{1}{(2j+1)(2j'+1)}\sum_{mm'}  \langle n_1ljmn_2l'j'm'|V|n_3ljmn_4l'j'm'\rangle\,.
@@ -283,10 +291,54 @@ Finally,we have defined
 \begin{equation}
 \rho^{lj}_{n_4n_2} \equiv \sum_{\bar{n'}} O^{\bar{n}l'j'}C^{l'j'}_{n_4,\bar{n'}}C^{*l'j'}_{n_2\bar{n'}}\,,
 \end{equation}
-where $O^{\bar{n'}l'j'}$ is the number of occupied HF states with quantum numbers $\bar{n'}l'j'$, which is $2j'+1$ for closed-shell systems. 
+where $O^{\bar{n'}l'j'}$ is the number of occupied Hartree-Fock states with
+quantum numbers $\bar{n'}l'j'$, which is $2j'+1$ for closed-shell
+systems.
 
-A first useful test of your code is to run the HF calculations without the two-body force. You should then just get the harmonic oscillator single-particle energies.
 
+\subsection*{Specific tasks}
+
+\begin{enumerate} 
+\item[a)] Set up a Hartree-Fock program which uses first only the
+  Harmonic oscillator single-particle Hamiltonian for for eight,
+  $N=8$, neutrons in an oscillator potential with an oscillator
+  energy $\hbar\omega =10$ MeV. Use the single-particle states
+  defined in the file {\em spdata.dat}. This serves as a useful test
+  of your calculations since the result should be the harmonic
+  oscillator single-particle energies.
+\item[b)] Show that the Hartree-Fock single-particle hamiltonian is diagonal in
+  $ljm$ (and independent of $m$), and that the Hartree-Fock equations can be
+  written as
+\[
+\sum_{n_3} h^{lj}_{n_1n_3}C^{lj}_{n_3\bar{n}} = \epsilon_{\bar{n}lj}C^{lj}_{n_3\bar{n}}\,.
+\]
+ where the single-particle Hartree-Fock Hamiltonian matrix elements are 
+\[
+h^{lj}_{n_1n_3} = \delta_{n_3 n_1}(2n_1+l + 3/2)\hbar\omega + \sum_{n_2n_4}\sum_{l'j'}^{occ}\langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle\rho^{l'j'}_{n_4n_2}.
+\]
+The $occ$ on the second summation is to remind you that the sum is
+over $l'j'$ values of occupied Hartree-Fock states only-- this follows from the
+fact that the density matrix is diagonal in this quantum numbers. Note
+well that we need to do the additional summation over $l'$, $j'$.
+\item[c)] Include thereafter the nucleon-nucleon interaction from the
+  file {\em twobody.dat} and perform Hartree-Fock calculations for
+  neutrons only using the single-particle states that comprise four
+  major shells only, that is the $0s$, $0p$, $1s0d$ and $1p0f$ shells.
+  The occupied single-particle states are those of the $0s$ and $0p$
+  shells, having in total eight neutrons.  Compute the Hartree-Fock
+  single-particle energies and compare the final results with the
+  harmonic oscillator energies. Comment your results.
+\item[d)] Challenge and optional exercise. With a working program, add
+  now eight protons and compute the Hartree-Fock single-particle
+  energies for $^{16}$O, that is both protons and neutrons. Compare
+  the proton and neutron single-particle energies for the
+  $\varepsilon^{HF}_{0p_{1/2}}$ and $\varepsilon^{HF}_{0d_{5/2}}$ with
+  their corresponding separation energies. Which separation energies
+  would you compare them with?  This additional exercise gives you 30
+  more points, that is you can achieve a total score of 130 instead of
+  100.
+
+\end{enumerate}
 \end{document}
 
 
