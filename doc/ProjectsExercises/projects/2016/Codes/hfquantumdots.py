@@ -7,15 +7,6 @@ def onebody(i, n, ml):
 	omega = 1
 	return hbar*omega*(2*n[i] + abs(ml[i]) + 1)
 
-# get energy from eigenvalues
-def get_energy(epsilon):
-	return np.sum(epsilon)
-
-# map electron number to state (two electrons per state from spin)
-def state(alpha):
-	return np.floor(alpha/2.)
-
-
 if __name__ == '__main__':
 	
 	Norbitals = 2 # number of electrons
@@ -24,19 +15,19 @@ if __name__ == '__main__':
 	""" Read quantum numbers from file """
 	n = []
 	ml = []
-	states = 0
-	with open("qnumbers.dat", "r") as qnumfile:
+	spOrbitals = 0
+	with open("qdspnumbers.dat", "r") as qnumfile:
 		for line in qnumfile:
 			nums = line.split()
 			if len(nums) != 0:
 				n.append(int(nums[0]))
 				ml.append(int(nums[1]))
-				states += 1
-	print states, " states"
+				spOrbitals += 1
+	print spOrbitals, " spOrbitals"
 
 	""" Read two-electron integrals from file """
-	two_electron_I = np.zeros([states, states, states, states])
-	with open("matrixelements.dat", "r") as infile:
+	two_electron_I = np.zeros([spOrbitals, spOrbitals, spOrbitals, spOrbitals])
+	with open("qdtwobody.dat", "r") as infile:
 		for line in infile:
 			l = line.split()
 			a = int(l[0]) - 1
@@ -48,63 +39,43 @@ if __name__ == '__main__':
 	#raw_input("") 
 
 	""" Calculate one-electron integral """
-	one_electron_I = np.zeros(states)
-	for i in range(states):
-		one_electron_I[i] = onebody(i, n, ml)
-		#print one_electron_I[i]
-	#raw_input("")
-	
-	#startTime = time.time()
+	singleparticleH = np.zeros(spOrbitals)
+	for i in range(spOrbitals):
+		singleparticleH[i] = onebody(i, n, ml)
+		print singleparticleH[i]
+
 	""" Run HF-iterations """
+        Nparticles = 2
+	C = np.ones([spOrbitals, spOrbitals]) # HF coefficients
+        maxHFiter = 100
+        epsilon =  1.0e-10 
+        diff = 1.0
 	hf_count = 0
-	E_old = 0
-	E_new = 1
-	C = np.ones([Norbitals, Norbitals]) # HF coefficients
-
-	while hf_count < 5:
+	oldenergies = np.zeros(spOrbitals)
+	newenergies = np.zeros(spOrbitals)
+	while diff > epsilon and hf_count < maxHFiter:
 		print "############### Iteration %i ###############" % hf_count
-
-		h = np.zeros([Norbitals, Norbitals])
-		F = np.zeros([Norbitals, Norbitals])
-		
-		for i in range(Norbitals):
-			h[i][i] = C[i][i]*one_electron_I[state(i)] 
-			for j in range(Norbitals):
-				
-				# F[i][j] += C[i][j]*(two_electron_I[state(i)][state(j)][state(i)][state(j)] - \
-				# 							two_electron_I[state(i)][state(j)][state(j)][state(i)])
-
-				alpha = i
-				gamma = j
-
-				for p in range(Norbitals):
-					for beta in range(Norbitals):
-						for delta in range(Norbitals):
-							a, b, d, g = state(alpha), state(beta), state(delta), state(gamma)
-
-							F[alpha][gamma] += C[p][beta]*C[p][delta]* \
-									(two_electron_I[a][b][g][d] - two_electron_I[a][b][d][g])
-
-
-
-		print "F:"
-		print F
-		print "h:"
-		print h
-		
-		epsilon, C = np.linalg.eigh(h + F)
-		E_old = E_new
-		E_new = get_energy(epsilon)
-
-		print "new eps"
-		print epsilon
-		print "new C"
-		print C
-		print 
-		print "dE = ", abs(E_new - E_old)
-		print "Energy = ", E_new
-		print
-		print
-
+		h = np.zeros([spOrbitals, spOrbitals])
+   	        HFmatrix = np.zeros([spOrbitals,spOrbitals])		
+		for alpha in range(spOrbitals):
+			for beta in range(spOrbitals):
+                            if alpha == beta:   HFmatrix[alpha][beta] += singleparticleH[alpha]
+     		            FockTermSum = 0.0
+                            for p in range(Nparticles):
+				for gamma in range(spOrbitals):
+                                    for delta in range(spOrbitals):
+                                        FockTermSum += C[p][gamma]*C[p][delta]*(two_electron_I[alpha][gamma][beta][delta]-two_electron_I[alpha][gamma][delta][beta])
+                        print " Fock term"
+                        print alpha, beta, FockTermSum
+                        HFmatrix[alpha][beta] += FockTermSum
+  		   
+                print " Hartree-Fock Matrix" 
+                print HFmatrix
+		spenergies, C = np.linalg.eigh(HFmatrix)
+		newenergies = spenergies
+		diff = sum(abs(newenergies-oldenergies))/spOrbitals
+                oldenergies = newenergies
+                print "Single-particle energies"
+		print oldenergies
 		hf_count += 1
 
