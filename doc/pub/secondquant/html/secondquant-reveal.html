@@ -457,7 +457,7 @@ $$
 <b></b>
 <p>
 The action of the operator 
-\( a_\alpha \) from the left on a state vector  is to to remove  one particle in the state
+\( a_\alpha \) from the left on a state vector  is to  remove  one particle in the state
 \( \alpha \). 
 If the state vector does not contain the single-particle state \( \alpha \), the outcome of the operation is zero.
 The operator  \( a_\alpha \) is normally called for a destruction or annihilation operator.
@@ -558,7 +558,7 @@ $$
 	 a_\alpha^{\dagger} a_\beta |\beta \underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle &=& 
 	 	|\alpha \underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq  \alpha}\rangle \nonumber \\
 	a_\beta a_\alpha^{\dagger} |\beta \underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle &=&
-		a_\beta |\alpha\beta\underbrace{\beta \alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle \nonumber \\
+		a_\beta |\alpha\underbrace{\beta \alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle \nonumber \\
 	&=& - |\alpha\underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle \tag{24}
 \end{eqnarray}
 $$
@@ -609,7 +609,7 @@ $$
 $$
 <p>&nbsp;<br>
 
-with  \( \delta_{\alpha\beta} \) is the Kroenecker \( \delta \)-symbol.
+with  \( \delta_{\alpha\beta} \) is the Kronecker \( \delta \)-symbol.
 
 <p>
 The properties of the creation and annihilation operators can be summarized as (for fermions)
@@ -741,7 +741,7 @@ $$
 $$
 <p>&nbsp;<br>
 
-is called the number operator since it counts the number of particles in a give state vector when it acts 
+is called the number operator since it counts the number of particles in a given state vector when it acts 
 on the different single-particle states.  It acts on one single-particle state at the time and falls 
 therefore under category one-body operators.
 Next we look at another important one-body operator, namely \( \hat{H}_0 \) and study its operator form in the 
@@ -821,7 +821,7 @@ If we interchange particles \( 1 \) and \( 2 \)  we obtain
 <p>&nbsp;<br>
 $$
 \begin{eqnarray}
-	&& \left( \sum_i \hat{h}_0(x_i) \right) \psi_{\alpha_1}(x_2)\psi_{\alpha_1}(x_2) \dots \psi_{\alpha_n}(x_n) \nonumber \\
+	&& \left( \sum_i \hat{h}_0(x_i) \right) \psi_{\alpha_1}(x_1)\psi_{\alpha_1}(x_2) \dots \psi_{\alpha_n}(x_n) \nonumber \\
 	& =&\sum_{\alpha_2'} \langle \alpha_2'|\hat{h}_0|\alpha_2\rangle 
 		\psi_{\alpha_1}(x_2)\psi_{\alpha_2'}(x_1) \dots \psi_{\alpha_n}(x_n) \nonumber \\
 	&+&\sum_{\alpha_1'} \langle \alpha_1'|\hat{h}_0|\alpha_1\rangle
