@@ -215,7 +215,7 @@ and thus
 ===== Second quantization =====
 !bblock
 The action of the operator 
-$a_\alpha$ from the left on a state vector  is to to remove  one particle in the state
+$a_\alpha$ from the left on a state vector  is to  remove  one particle in the state
 $\alpha$. 
 If the state vector does not contain the single-particle state $\alpha$, the outcome of the operation is zero.
 The operator  $a_\alpha$ is normally called for a destruction or annihilation operator.
@@ -291,7 +291,7 @@ while the second case gives
 	 a_\alpha^{\dagger} a_\beta |\beta \underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle &=& 
 	 	|\alpha \underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq  \alpha}\rangle \nonumber \\
 	a_\beta a_\alpha^{\dagger} |\beta \underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle &=&
-		a_\beta |\alpha\beta\underbrace{\beta \alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle \nonumber \\
+		a_\beta |\alpha\underbrace{\beta \alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle \nonumber \\
 	&=& - |\alpha\underbrace{\alpha_1\alpha_2 \dots \alpha_{n-1}}_{\neq \alpha}\rangle label{eq:2-18b}
 \end{eqnarray}
 !et
@@ -327,7 +327,7 @@ We can summarize  our findings in Eqs.~(ref{eq:2-17}) and (ref{eq:2-19}) as
 	\{a_\alpha^{\dagger},a_\beta \} = \delta_{\alpha\beta} label{eq:2-20}
 \end{equation}
 !et
-with  $\delta_{\alpha\beta}$ is the Kroenecker $\delta$-symbol.
+with  $\delta_{\alpha\beta}$ is the Kronecker $\delta$-symbol.
 
 The properties of the creation and annihilation operators can be summarized as (for fermions)
 !bt
@@ -433,7 +433,7 @@ The operator
 	\hat{N} = \sum_\alpha a_\alpha^{\dagger} a_\alpha label{eq:2-22}
 \end{equation}
 !et
-is called the number operator since it counts the number of particles in a give state vector when it acts 
+is called the number operator since it counts the number of particles in a given state vector when it acts 
 on the different single-particle states.  It acts on one single-particle state at the time and falls 
 therefore under category one-body operators.
 Next we look at another important one-body operator, namely $\hat{H}_0$ and study its operator form in the 
@@ -494,7 +494,7 @@ From Eq.~(ref{eq:2-25})  we obtain the following result without  permuting any p
 If we interchange particles $1$ and $2$  we obtain
 !bt
 \begin{eqnarray}
-	&& \left( \sum_i \hat{h}_0(x_i) \right) \psi_{\alpha_1}(x_2)\psi_{\alpha_1}(x_2) \dots \psi_{\alpha_n}(x_n) \nonumber \\
+	&& \left( \sum_i \hat{h}_0(x_i) \right) \psi_{\alpha_1}(x_1)\psi_{\alpha_1}(x_2) \dots \psi_{\alpha_n}(x_n) \nonumber \\
 	& =&\sum_{\alpha_2'} \langle \alpha_2'|\hat{h}_0|\alpha_2\rangle 
 		\psi_{\alpha_1}(x_2)\psi_{\alpha_2'}(x_1) \dots \psi_{\alpha_n}(x_n) \nonumber \\
 	&+&\sum_{\alpha_1'} \langle \alpha_1'|\hat{h}_0|\alpha_1\rangle
