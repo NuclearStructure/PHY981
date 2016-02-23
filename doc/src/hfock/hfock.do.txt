@@ -1531,53 +1531,68 @@ harmonic oscillator basis with the same $\omega$ as the trapping
 potential, then $\langle \alpha\vert\hat{h}_0 \vert \beta \rangle$ is
 diagonal.
 
+An example of a function written in python (see also the exercises below)  which performs the Hartree-Fock calculation is shown here. In setting up your code you will need to write a function which sets up the single-particle basis, the matrix elements $t_{\alpha\gamma}$ of the one-body operator (called $h0$ in the function below) and the antisymmetrized TBMEs (called *matrixElement* below) and the density matrix elements $\rho_{\beta\delta}$ (called *densityMatrix* below). 
+The python "program":"https://github.com/NuclearStructure/PHY981/blob/master/doc/ProjectsExercises/projects/2016/Codes/hfnuclei.py"  shows how one can, in a brute force way read in matrix elements in $m$-scheme and compute the Hartree-Fock single-particle energies for four major shells. The interaction which has been used is the so-called N3LO interaction of "Machleidt and Entem":"http://journals.aps.org/prc/abstract/10.1103/PhysRevC.68.041001"
+using the "Similarity Renormalization Group":"http://journals.aps.org/prc/abstract/10.1103/PhysRevC.75.061001" approach method to renormalize the interaction, using an oscillator energy $\hbar\omega=10$ MeV. 
 
+The nucleon-nucleon two-body matrix elements are in $m$-scheme and are fully anti-symmetrized. The Hartree-Fock programs uses the density matrix discussed above in order to compute the Hartree-Fock matrix.
+Here we display the Hartree-Fock part only, assuming that single-particle data and two-body matrix elements have already been read in. 
+!bc pycod
+	""" Star HF-iterations, preparing variables and density matrix """
 
-An example of a function in C++ which performs the Hartree-Fock calculation is shown here. In setting up your code you will need to write a function which sets up the single-particle basis, the matrix elements $t_{\alpha\gamma}$ of the one-body operator (called $h0$ in the function below) and the antisymmetrized TBMEs (called *matrixElement* below) and the density matrix elements $\rho_{\beta\delta}$ (called *densityMatrix* below). 
+        """ Coefficients for setting up density matrix, assuming only one along the diagonals """
+	C = np.eye(spOrbitals) # HF coefficients
+        DensityMatrix = np.zeros([spOrbitals,spOrbitals])
+        for gamma in range(spOrbitals):
+            for delta in range(spOrbitals):
+                sum = 0.0
+                for i in range(Nparticles):
+                    sum += C[gamma][i]*C[delta][i]
+                DensityMatrix[gamma][delta] = Decimal(sum)
+        maxHFiter = 100
+        epsilon =  1.0e-10 
+        difference = 1.0
+	hf_count = 0
+	oldenergies = np.zeros(spOrbitals)
+	newenergies = np.zeros(spOrbitals)
+	while hf_count < maxHFiter and difference > epsilon:
+		print "############### Iteration %i ###############" % hf_count
+   	        HFmatrix = np.zeros([spOrbitals,spOrbitals])		
+		for alpha in range(spOrbitals):
+			for beta in range(spOrbitals):
+                            """  If tests for three-dimensional systems, including isospin conservation """
+                            if l[alpha] != l[beta] and j[alpha] != j[beta] and mj[alpha] != mj[beta] and tz[alpha] != tz[beta]: continue
+                            """  Setting up the Fock matrix using the density matrix and antisymmetrized NN interaction in m-scheme """
+     		            sumFockTerm = 0.0
+                            for gamma in range(spOrbitals):
+                                for delta in range(spOrbitals):
+                                    if (mj[alpha]+mj[gamma]) != (mj[beta]+mj[delta]) and (tz[alpha]+tz[gamma]) != (tz[beta]+tz[delta]): continue
+                                    sumFockTerm += DensityMatrix[gamma][delta]*nninteraction[alpha][gamma][beta][delta]
+                            HFmatrix[alpha][beta] = Decimal(sumFockTerm)
+                            """  Adding the one-body term, here plain harmonic oscillator """
+                            if beta == alpha:   HFmatrix[alpha][alpha] += singleparticleH[alpha]
+		spenergies, C = np.linalg.eigh(HFmatrix)
+                """ Setting up new density matrix in m-scheme """
+                DensityMatrix = np.zeros([spOrbitals,spOrbitals])
+                for gamma in range(spOrbitals):
+                    for delta in range(spOrbitals):
+                        sum = 0.0
+                        for i in range(Nparticles):
+                            sum += C[gamma][i]*C[delta][i]
+                        DensityMatrix[gamma][delta] = Decimal(sum)
+		newenergies = spenergies
+                """ Brute force computation of difference between previous and new sp HF energies """
+                sum =0.0
+                for i in range(spOrbitals):
+                    sum += (abs(newenergies[i]-oldenergies[i]))/spOrbitals
+                difference = sum
+                oldenergies = newenergies
+                print "Single-particle energies, ordering may have changed "
+                for i in range(spOrbitals):
+                    print('{0:4d}  {1:.4f}'.format(i, Decimal(oldenergies[i])))
+		hf_count += 1
+!ec  
 
-!bc cppcod
-void hartreeFock::run() {
-    double spPot;
-    // Setting up the HF-hamiltonian using D = 1 as guess, Armadillo is used for vectors
-    mat h;
-    vec E = zeros(nStates, 1);
-    vec ePrev = zeros(nStates, 1);
-    mat C = eye(nStates, nStates);
-    vec diff;
-
-    // Hartree-Fock loop
-    int hfIt = 0;
-    while (hfIt < HFIterations) {
-        cout << "iteration = " << hfIt << endl;
-
-        h = zeros(nStates, nStates);
-        for (int alpha = 0; alpha < nStates; alpha++) {
-            for (int beta = 0; beta < nStates; beta++) {
-                spPot = 0;
-                    for (int gamma = 0; gamma < nStates; gamma++) {
-                        for (int delta = 0; delta < nStates; delta++) {
-                            spPot += densityMatrix(gamma,delta,D) * matrixElement(alpha, gamma, beta, delta);
-                        }
-                    }
-                
-                h(alpha, beta) = h(beta, alpha) = h0(alpha, beta) + spPot;
-            }
-        }
-        //Computing the HF one-body energies
-        eig_sym(E, C, h);
-        // Transposing the vectors
-        C = trans(C);
-        hfIt++;
-        // Convergence test
-        diff = E - ePrev;
-        if (abs(diff.max()) < threshold)
-            break;
-        ePrev = E;
-    }
-    double E0 = calcEnergy(C);
-    cout << "Final energy E = " << E0 << " after " << hfIt << " iterations, error < " << threshold << endl;
-}
-!ec
 
 
 We will perform Hartree-Fock calculations for eight, $N=8$, neutrons in an oscillator potentials with an oscillator frequency $\hbar\omega =10$ MeV. This means that we are filling the $0s$ and the $0p$ shells and that these single-particle states define the reference state, or our ansatz for the ground state.
@@ -1636,53 +1651,163 @@ quantum numbers $\bar{n'}l'j'$, which is $2j'+1$ for closed-shell
 systems.
 
 
-!bsubex
+!bsubex 
 Set up a Hartree-Fock program which uses first only the
-  Harmonic oscillator single-particle Hamiltonian for for eight,
-  $N=8$, neutrons in an oscillator potential with an oscillator
-  energy $\hbar\omega =10$ MeV. Use the single-particle states
-  defined in the file spdata.dat. This serves as a useful test
-  of your calculations since the result should be the harmonic
-  oscillator single-particle energies.
-!esubex
-!bsubex
-Show that the Hartree-Fock single-particle hamiltonian is diagonal in
-  $ljm$ (and independent of $m$), and that the Hartree-Fock equations can be
-  written as
-!bt
+Harmonic oscillator single-particle Hamiltonian for for eight, $N=8$,
+neutrons in an oscillator potential with an oscillator energy
+$\hbar\omega =10$ MeV. Use the single-particle states defined in the
+file spdata.dat. This serves as a useful test of your calculations
+since the result should be the harmonic oscillator single-particle
+energies.  
+!esubex 
+!bsubex Show that the Hartree-Fock single-particle
+hamiltonian is diagonal in $ljm$ (and independent of $m$), and that
+the Hartree-Fock equations can be written as 
+!bt 
+\[ \sum_{n_3}
+h^{lj}_{n_1n_3}C^{lj}_{n_3\bar{n}} =
+\epsilon_{\bar{n}lj}C^{lj}_{n_3\bar{n}}.  
+\] 
+!et 
+where the
+single-particle Hartree-Fock Hamiltonian matrix elements are 
+!bt 
 \[
-\sum_{n_3} h^{lj}_{n_1n_3}C^{lj}_{n_3\bar{n}} = \epsilon_{\bar{n}lj}C^{lj}_{n_3\bar{n}}.
-\]
-!et
- where the single-particle Hartree-Fock Hamiltonian matrix elements are 
-!bt
-\[
-h^{lj}_{n_1n_3} = \delta_{n_3 n_1}(2n_1+l + 3/2)\hbar\omega + \sum_{n_2n_4}\sum_{l'j'}^{occ}\langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle\rho^{l'j'}_{n_4n_2}.
-\]
-!et
-The $occ$ on the second summation is to remind you that the sum is
-over $l'j'$ values of occupied Hartree-Fock states only. This follows from the
-fact that the density matrix is diagonal in these quantum numbers. Note
-well that we need to do the additional summation over $l'$, $j'$.
+h^{lj}_{n_1n_3} = \delta_{n_3 n_1}(2n_1+l + 3/2)\hbar\omega +
+\sum_{n_2n_4}\sum_{l'j'}^{occ}\langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle\rho^{l'j'}_{n_4n_2}.  
+\] 
+!et 
+The
+$occ$ on the second summation is to remind you that the sum is over
+$l'j'$ values of occupied Hartree-Fock states only. This follows from
+the fact that the density matrix is diagonal in these quantum
+numbers. Note well that we need to do the additional summation over
+$l'$, $j'$.  
+!esubex 
+!bsubex 
+Include thereafter the nucleon-nucleon
+interaction from the file twobody.dat and perform Hartree-Fock
+calculations for neutrons only using the single-particle states that
+comprise four major shells only, that is the $0s$, $0p$, $1s0d$ and
+$1p0f$ shells.  The occupied single-particle states are those of the
+$0s$ and $0p$ shells, having in total eight neutrons.  Compute the
+Hartree-Fock single-particle energies and compare the final results
+with the harmonic oscillator energies. Comment your results.  
 !esubex
-!bsubex
-Include thereafter the nucleon-nucleon interaction from the
-  file twobody.dat and perform Hartree-Fock calculations for
-  neutrons only using the single-particle states that comprise four
-  major shells only, that is the $0s$, $0p$, $1s0d$ and $1p0f$ shells.
-  The occupied single-particle states are those of the $0s$ and $0p$
-  shells, having in total eight neutrons.  Compute the Hartree-Fock
-  single-particle energies and compare the final results with the
-  harmonic oscillator energies. Comment your results.
-!esubex
-!bsubex
-With a working program, add
-  now eight protons and compute the Hartree-Fock single-particle
-  energies for $^{16}$O, that is both protons and neutrons. Compare
-  the proton and neutron single-particle energies for the
-  $\varepsilon^{HF}_{0p_{1/2}}$ and $\varepsilon^{HF}_{0d_{5/2}}$ with
-  their corresponding separation energies. Which separation energies
-  would you compare them with?  
-!esubex
+!bsubex 
+With a working program, add now eight protons and compute the
+Hartree-Fock single-particle energies for ${}^{16}\mbox{O}$, that is both
+protons and neutrons. Compare the proton and neutron single-particle
+energies for the $\varepsilon^{HF}_{0p_{1/2}}$ and
+$\varepsilon^{HF}_{0d_{5/2}}$ with their corresponding separation
+energies. Which separation energies would you compare them with?
 
+The python
+"program":"https://github.com/NuclearStructure/PHY981/blob/master/doc/ProjectsExercises/projects/2016/Codes/hfnuclei.py"
+shows how one can, in a brute force way read in matrix elements in
+$m$-scheme and compute the Hartree-Fock single-particle energies for
+four major shells. The interaction which has been used is the
+so-called N3LO interaction of "Machleidt and
+Entem":"http://journals.aps.org/prc/abstract/10.1103/PhysRevC.68.041001"
+using the "Similarity Renormalization
+Group":"http://journals.aps.org/prc/abstract/10.1103/PhysRevC.75.061001"
+approach method to renormalize the interaction, using an oscillator
+energy $\hbar\omega=10$ MeV.
+
+The nucleon-nucleon two-body matrix elements are in $m$-scheme and are fully anti-symmetrized. The Hartree-Fock programs uses the density matrix discussed above in order to compute the Hartree-Fock matrix.
+Here we display the Hartree-Fock part only, assuming that single-particle data and two-body matrix elements have already been read in. 
+!bc pycod
+	""" Star HF-iterations, preparing variables and density matrix """
+
+        """ Coefficients for setting up density matrix, assuming only one along the diagonals """
+	C = np.eye(spOrbitals) # HF coefficients
+        DensityMatrix = np.zeros([spOrbitals,spOrbitals])
+        for gamma in range(spOrbitals):
+            for delta in range(spOrbitals):
+                sum = 0.0
+                for i in range(Nparticles):
+                    sum += C[gamma][i]*C[delta][i]
+                DensityMatrix[gamma][delta] = Decimal(sum)
+        maxHFiter = 100
+        epsilon =  1.0e-10 
+        difference = 1.0
+	hf_count = 0
+	oldenergies = np.zeros(spOrbitals)
+	newenergies = np.zeros(spOrbitals)
+	while hf_count < maxHFiter and difference > epsilon:
+		print "############### Iteration %i ###############" % hf_count
+   	        HFmatrix = np.zeros([spOrbitals,spOrbitals])		
+		for alpha in range(spOrbitals):
+			for beta in range(spOrbitals):
+                            """  If tests for three-dimensional systems, including isospin conservation """
+                            if l[alpha] != l[beta] and j[alpha] != j[beta] and mj[alpha] != mj[beta] and tz[alpha] != tz[beta]: continue
+                            """  Setting up the Fock matrix using the density matrix and antisymmetrized NN interaction in m-scheme """
+     		            sumFockTerm = 0.0
+                            for gamma in range(spOrbitals):
+                                for delta in range(spOrbitals):
+                                    if (mj[alpha]+mj[gamma]) != (mj[beta]+mj[delta]) and (tz[alpha]+tz[gamma]) != (tz[beta]+tz[delta]): continue
+                                    sumFockTerm += DensityMatrix[gamma][delta]*nninteraction[alpha][gamma][beta][delta]
+                            HFmatrix[alpha][beta] = Decimal(sumFockTerm)
+                            """  Adding the one-body term, here plain harmonic oscillator """
+                            if beta == alpha:   HFmatrix[alpha][alpha] += singleparticleH[alpha]
+		spenergies, C = np.linalg.eigh(HFmatrix)
+                """ Setting up new density matrix in m-scheme """
+                DensityMatrix = np.zeros([spOrbitals,spOrbitals])
+                for gamma in range(spOrbitals):
+                    for delta in range(spOrbitals):
+                        sum = 0.0
+                        for i in range(Nparticles):
+                            sum += C[gamma][i]*C[delta][i]
+                        DensityMatrix[gamma][delta] = Decimal(sum)
+		newenergies = spenergies
+                """ Brute force computation of difference between previous and new sp HF energies """
+                sum =0.0
+                for i in range(spOrbitals):
+                    sum += (abs(newenergies[i]-oldenergies[i]))/spOrbitals
+                difference = sum
+                oldenergies = newenergies
+                print "Single-particle energies, ordering may have changed "
+                for i in range(spOrbitals):
+                    print('{0:4d}  {1:.4f}'.format(i, Decimal(oldenergies[i])))
+		hf_count += 1
+
+!ec  
+Running the program, one finds that the lowest-lying states for a nucleus like ${}^{16}\mbox{O}$, we see that the nucleon-nucleon force brings a natural spin-orbit splitting for the $0p$ states (or other states except the $s$-states).
+Since we are using the $m$-scheme for our calculations, we observe that there are several states with the same
+eigenvalues. The number of eigenvalues corresponds to the degeneracy $2j+1$ and is well respected in our calculations, as see from the table here.
+
+The values of the lowest-lying states are ($\pi$ for protons and $\nu$ for neutrons)
+|--------------------------------------------|
+|   Quantum numbers      |    Energy [MeV]   | 
+|--------------------------------------------|
+|   $0s_{1/2}^{\pi}$  | -40.4602                      |
+|   $0s_{1/2}^{\pi}$  | -40.4602                      |
+|   $0s_{1/2}^{\nu}$  | -40.6426                      |
+|   $0s_{1/2}^{\nu}$  | -40.6426                      |
+|   $0p_{1/2}^{\pi}$  | -6.7133                      |
+|   $0p_{1/2}^{\pi}$  | -6.7133                      |
+|   $0p_{1/2}^{\nu}$  |  -6.8403                       |
+|   $0p_{1/2}^{\nu}$  |  -6.8403                     |
+|   $0p_{3/2}^{\pi}$  |  -11.5886                       |
+|   $0p_{3/2}^{\pi}$  |  -11.5886                     |
+|   $0p_{3/2}^{\pi}$  |  -11.5886                     |
+|   $0p_{3/2}^{\pi}$  |  -11.5886                     |
+|   $0p_{3/2}^{\nu}$  | -11.7201                      |
+|   $0p_{3/2}^{\nu}$  | -11.7201                      |
+|   $0p_{3/2}^{\nu}$  | -11.7201                      |
+|   $0p_{3/2}^{\nu}$  | -11.7201                      |
+|   $0p_{5/2}^{\pi}$  | 18.7589                      |
+|   $0p_{5/2}^{\nu}$  | 18.8082                      |
+|--------------------------------------------|
+
+We can use these results to attempt our first link with experimental data, namely to compute the shell gap or the separation energies. The shell gap for neutrons is given by
+!bt
+\[
+\Delta S_n= 2BE(N,Z)-BE(N-1,Z)-BE(N+1,Z).
+\]
+!et
+For ${}^{16}\mbox{O}$  we have an experimental value for the  shell gap of $11.51$ MeV for neutrons, while our Hartree-Fock calculations result in $25.65$ MeV. This means that correlations beyond a simple Hartree-Fock calculation with a two-body force play an important role in nuclear physics.
+The splitting between the $0p_{3/2}^{\nu}$ and the $0p_{1/2}^{\nu}$ state is 4.88 MeV, while the experimental value for the gap between the ground state $1/2^{-}$ and the first excited $3/2^{-}$ states is 6.08 MeV. The two-nucleon spin-orbit force place a central role here. In our discussion of nuclear forces we will see how the spin-orbit force comes into play here.
+
+!esubex
 
