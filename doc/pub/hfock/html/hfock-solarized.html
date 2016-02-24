@@ -2027,70 +2027,14 @@ potential, then \( \langle \alpha\vert\hat{h}_0 \vert \beta \rangle \) is
 diagonal.
 
 <p>
-An example of a function written in python (see also the exercises below)  which performs the Hartree-Fock calculation is shown here. In setting up your code you will need to write a function which sets up the single-particle basis, the matrix elements \( t_{\alpha\gamma} \) of the one-body operator (called \( h0 \) in the function below) and the antisymmetrized TBMEs (called <em>matrixElement</em> below) and the density matrix elements \( \rho_{\beta\delta} \) (called <em>densityMatrix</em> below). 
+An example of a function written in python (see also the exercises below)  which performs the Hartree-Fock calculation is shown here. In setting up your code you will need to write a function which sets up the single-particle basis, the matrix elements \( t_{\alpha\gamma} \) of the one-body operator (called \( h0 \) in the function below) and the antisymmetrized TBMEs (called <em>nninteraction</em> in the code link below) and the density matrix elements \( \rho_{\beta\delta} \) (called <em>densityMatrix</em> below). 
 The python <a href="https://github.com/NuclearStructure/PHY981/blob/master/doc/ProjectsExercises/projects/2016/Codes/hfnuclei.py" target="_blank">program</a>  shows how one can, in a brute force way read in matrix elements in \( m \)-scheme and compute the Hartree-Fock single-particle energies for four major shells. The interaction which has been used is the so-called N3LO interaction of <a href="http://journals.aps.org/prc/abstract/10.1103/PhysRevC.68.041001" target="_blank">Machleidt and Entem</a>
 using the <a href="http://journals.aps.org/prc/abstract/10.1103/PhysRevC.75.061001" target="_blank">Similarity Renormalization Group</a> approach method to renormalize the interaction, using an oscillator energy \( \hbar\omega=10 \) MeV.
 
 <p>
 The nucleon-nucleon two-body matrix elements are in \( m \)-scheme and are fully anti-symmetrized. The Hartree-Fock programs uses the density matrix discussed above in order to compute the Hartree-Fock matrix.
-Here we display the Hartree-Fock part only, assuming that single-particle data and two-body matrix elements have already been read in. 
-<p>
+Here we display the Hartree-Fock part only, assuming that single-particle data and two-body matrix elements have already been read in.
 
-<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">	<span style="color: #CD5555">&quot;&quot;&quot; Star HF-iterations, preparing variables and density matrix &quot;&quot;&quot;</span>
-
-        <span style="color: #CD5555">&quot;&quot;&quot; Coefficients for setting up density matrix, assuming only one along the diagonals &quot;&quot;&quot;</span>
-	C = np.eye(spOrbitals) <span style="color: #228B22"># HF coefficients</span>
-        DensityMatrix = np.zeros([spOrbitals,spOrbitals])
-        <span style="color: #8B008B; font-weight: bold">for</span> gamma <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(spOrbitals):
-            <span style="color: #8B008B; font-weight: bold">for</span> delta <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(spOrbitals):
-                <span style="color: #658b00">sum</span> = <span style="color: #B452CD">0.0</span>
-                <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(Nparticles):
-                    <span style="color: #658b00">sum</span> += C[gamma][i]*C[delta][i]
-                DensityMatrix[gamma][delta] = Decimal(<span style="color: #658b00">sum</span>)
-        maxHFiter = <span style="color: #B452CD">100</span>
-        epsilon =  <span style="color: #B452CD">1.0e-10</span> 
-        difference = <span style="color: #B452CD">1.0</span>
-	hf_count = <span style="color: #B452CD">0</span>
-	oldenergies = np.zeros(spOrbitals)
-	newenergies = np.zeros(spOrbitals)
-	<span style="color: #8B008B; font-weight: bold">while</span> hf_count &lt; maxHFiter <span style="color: #8B008B">and</span> difference &gt; epsilon:
-		<span style="color: #8B008B; font-weight: bold">print</span> <span style="color: #CD5555">&quot;############### Iteration %i ###############&quot;</span> % hf_count
-   	        HFmatrix = np.zeros([spOrbitals,spOrbitals])		
-		<span style="color: #8B008B; font-weight: bold">for</span> alpha <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(spOrbitals):
-			<span style="color: #8B008B; font-weight: bold">for</span> beta <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(spOrbitals):
-                            <span style="color: #CD5555">&quot;&quot;&quot;  If tests for three-dimensional systems, including isospin conservation &quot;&quot;&quot;</span>
-                            <span style="color: #8B008B; font-weight: bold">if</span> l[alpha] != l[beta] <span style="color: #8B008B">and</span> j[alpha] != j[beta] <span style="color: #8B008B">and</span> mj[alpha] != mj[beta] <span style="color: #8B008B">and</span> tz[alpha] != tz[beta]: <span style="color: #8B008B; font-weight: bold">continue</span>
-                            <span style="color: #CD5555">&quot;&quot;&quot;  Setting up the Fock matrix using the density matrix and antisymmetrized NN interaction in m-scheme &quot;&quot;&quot;</span>
-     		            sumFockTerm = <span style="color: #B452CD">0.0</span>
-                            <span style="color: #8B008B; font-weight: bold">for</span> gamma <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(spOrbitals):
-                                <span style="color: #8B008B; font-weight: bold">for</span> delta <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(spOrbitals):
-                                    <span style="color: #8B008B; font-weight: bold">if</span> (mj[alpha]+mj[gamma]) != (mj[beta]+mj[delta]) <span style="color: #8B008B">and</span> (tz[alpha]+tz[gamma]) != (tz[beta]+tz[delta]): <span style="color: #8B008B; font-weight: bold">continue</span>
-                                    sumFockTerm += DensityMatrix[gamma][delta]*nninteraction[alpha][gamma][beta][delta]
-                            HFmatrix[alpha][beta] = Decimal(sumFockTerm)
-                            <span style="color: #CD5555">&quot;&quot;&quot;  Adding the one-body term, here plain harmonic oscillator &quot;&quot;&quot;</span>
-                            <span style="color: #8B008B; font-weight: bold">if</span> beta == alpha:   HFmatrix[alpha][alpha] += singleparticleH[alpha]
-		spenergies, C = np.linalg.eigh(HFmatrix)
-                <span style="color: #CD5555">&quot;&quot;&quot; Setting up new density matrix in m-scheme &quot;&quot;&quot;</span>
-                DensityMatrix = np.zeros([spOrbitals,spOrbitals])
-                <span style="color: #8B008B; font-weight: bold">for</span> gamma <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(spOrbitals):
-                    <span style="color: #8B008B; font-weight: bold">for</span> delta <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(spOrbitals):
-                        <span style="color: #658b00">sum</span> = <span style="color: #B452CD">0.0</span>
-                        <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(Nparticles):
-                            <span style="color: #658b00">sum</span> += C[gamma][i]*C[delta][i]
-                        DensityMatrix[gamma][delta] = Decimal(<span style="color: #658b00">sum</span>)
-		newenergies = spenergies
-                <span style="color: #CD5555">&quot;&quot;&quot; Brute force computation of difference between previous and new sp HF energies &quot;&quot;&quot;</span>
-                <span style="color: #658b00">sum</span> =<span style="color: #B452CD">0.0</span>
-                <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(spOrbitals):
-                    <span style="color: #658b00">sum</span> += (<span style="color: #658b00">abs</span>(newenergies[i]-oldenergies[i]))/spOrbitals
-                difference = <span style="color: #658b00">sum</span>
-                oldenergies = newenergies
-                <span style="color: #8B008B; font-weight: bold">print</span> <span style="color: #CD5555">&quot;Single-particle energies, ordering may have changed &quot;</span>
-                <span style="color: #8B008B; font-weight: bold">for</span> i <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(spOrbitals):
-                    <span style="color: #8B008B; font-weight: bold">print</span>(<span style="color: #CD5555">&#39;{0:4d}  {1:.4f}&#39;</span>.format(i, Decimal(oldenergies[i])))
-		hf_count += <span style="color: #B452CD">1</span>
-</pre></div>
 <p>
 We will perform Hartree-Fock calculations for eight, \( N=8 \), neutrons in an oscillator potentials with an oscillator frequency \( \hbar\omega =10 \) MeV. This means that we are filling the \( 0s \) and the \( 0p \) shells and that these single-particle states define the reference state, or our ansatz for the ground state.
 The total set of single-particle states will comprise four major shells only, that is the \( 0s \), \( 0p \), \( 1s0d \) and \( 1p0f \) shells.
@@ -2101,55 +2045,6 @@ The input file spdata.dat contains the information of all single-particle quantu
 
 <p>
 You will need to read these two files and set up arrays which store the matrix elements while running the program.
-
-<p>
-Our HO single particle basis states are labeled as \( |nljm\rangle \). The Hartree-Fock states are denoted \( |\bar{n}ljm\rangle \), where
-  we will put aways put a bar over the principle quantum numbers to
-  distinguish them from HO states.  Expanding the Hartree-Fock states
-in the oscillator basis gives
-$$
-|\bar{n}ljm\rangle =\sum_{n'}|n'ljm\rangle\langle n'ljm|\bar{n}ljm\rangle \equiv \sum_{n'} |n'jlm\rangle C^{lj}_{n'\bar{n}}.
-$$
-
-We have made use of the fact that only HO states with the same \( ljm \)
-values as the Hartree-Fock state contribute, and the overlap \( C \)-matrix is
-independent of \( m \)-value.
-
-<p>
-The Hartree-Fock single-particle Hamiltonian is diagonal in
-  \( ljm \) (and independent of \( m \)), and that the HF equations can be
-  written as
-$$
-\sum_{n_3} h^{lj}_{n_1n_3}C^{lj}_{n_3\bar{n}} = \epsilon_{\bar{n}lj}C^{lj}_{n_3\bar{n}}\,.
-$$
-
- where the single-particle Hartree-Fock  Hamiltonian matrix elements are 
-$$
-h^{lj}_{n_1n_3} = \delta_{n_3 n_1}(2n_1+l + 3/2)\hbar\omega + \sum_{n_2n_4}\sum_{l'j'}^{occ}\langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle\rho^{l'j'}_{n_4n_2}.
-$$
-
-The \( occ \) on the second summation is to remind you that the sum is over \( l'j' \) values of occupied Hartree-Fock states only. This follows from the fact that the density matrix is diagonal in this quantum numbers. Note well that we need to do the additional summation over \( l' \), \( j' \).
-
-<p>
-The \( m,m' \)-averaged matrix element (note the lack of \( m \),$m'$ in the above two-body matrix elements  is given by
-$$
-\begin{equation}
-\label{eq:mavgTBME}
-\langle n_1ljn_2l'j'|V|n_3ljn_4l'j'\rangle \equiv \frac{1}{(2j+1)(2j'+1)}\sum_{mm'}  \langle n_1ljmn_2l'j'm'|V|n_3ljmn_4l'j'm'\rangle .
-\end{equation}
-$$
-
-Finally,we have defined
-$$
-\begin{equation}
-\rho^{lj}_{n_4n_2} \equiv \sum_{\bar{n'}} O^{\bar{n}l'j'}C^{l'j'}_{n_4,\bar{n'}}C^{*l'j'}_{n_2\bar{n'}},
-\label{_auto4}
-\end{equation}
-$$
-
-where \( O^{\bar{n'}l'j'} \) is the number of occupied Hartree-Fock states with
-quantum numbers \( \bar{n'}l'j' \), which is \( 2j'+1 \) for closed-shell
-systems.
 
 <p>
 <b>a)</b>
