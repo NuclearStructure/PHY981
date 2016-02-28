@@ -4,12 +4,13 @@ AUTHOR: Morten Hjorth-Jensen  Email:hjensen@nscl.msu.edu
 
 <%
 pub_url = 'http://nuclearstructure.github.io/PHY981/doc/pub'
-published = ['intro', 'spdata', 'hfock', 'secondquant', 'forces', 'fci', 'decays', 'simplemodels', 'mbpt', 'cc', 'srg', 'gf', 'mc', 'inf',]
+published = ['intro', 'spdata', 'hfock', 'secondquant', 'angmom', 'forces', 'fci', 'decays', 'simplemodels', 'mbpt', 'cc', 'srg', 'gf', 'mc', 'inf',]
 chapters = {
  'intro': 'Introduction to nuclear structure',
  'spdata': 'Single-particle data, experimental information and simple models',
  'hfock': 'Mean-field theories',
  'secondquant': 'Second quantization',
+ 'angmom': 'Angular momentum algebra',
  'forces': 'Models for nuclear forces',
  'fci': 'The nuclear shell model and full configuration interaction theory',
  'decays': 'Nuclear decays',
@@ -89,36 +90,36 @@ All lectures are in the main conference room of the theory trailer.
 | Week 5 February 1-5| Second quantization           | "Exercise set 3":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise3"                      |                    |                                  |
 |                      | Hartree-Fock final          |                       |                    |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 6 February 8-12 | Second quantization           | "Project 1":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/projects/2016/Project1"                      |                    |                                  |
+| Week 6 February 8-12 | Second quantization           | "Project 1":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/projects/2016"                      |                    |                                  |
 |                      |          |                       |                    |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 7 February 15-19 |Nuclear forces          |  Work on project 1                      |                    |                                  |
+| Week 7 February 15-19 |Second quantization          |  Work on project 1                      |                    |                                  |
 |                      |           |                       |                    |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 8 February 22-26| Nuclear forces           | Work on project 1                      |                    |                                  |
-|                      |           |                       |                    |                                  |
+| Week 8 February 22-26| Second quantization            | Work on project 1                      |                    |                                  |
+|                      | Angular momentum algebra          |                       |    "Lecture notes":"http://nuclearstructure.github.io/PHY981/doc/pub/angmom/html/angmom-bs.html"                |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 9 February 29 -March 4|  Nuclear shell model         | Work on project 1                       |                    | Deadline for project 1 is March 4                                 |
-|                      |           |                       |                    |                                  |
+| Week 9 February 29 -March 4|  Nuclear shell model         | Work on project 1                       | "Lecture notes":"http://nuclearstructure.github.io/PHY981/doc/pub/fci/html/fci-bs.html"                   | Deadline for project 1 is March 4                                 |
+|                      | Angular momentum algebra          |                       |  "Lecture notes":"http://nuclearstructure.github.io/PHY981/doc/pub/angmom/html/angmom-bs.html"                  |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 10 March 7-11 |  Spring break            |                       |                    |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 11 March 14-18 | Nuclear shell model        |  "Exercise set 4":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise4"                      |                    |                                  |
-|                      | Effective Hamiltonians          |                       |                    |                                  |
+| Week 11 March 14-18 | Nuclear shell model        | "Presentation of project 2":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/projects/2016/Project"  |                    |                                  |
+|                      |           |                       |                    |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 12 March 21-25 | Nuclear shell model        |  "Exercise set 5":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise5"                     |                    |                                  |
-|                      | Effective Hamiltonians and operators          |                       |                    |                                  |
+| Week 12 March 21-25 | Nuclear shell model        |  Work on project 2                     |                    |                                  |
+|                      | Nuclear forces         |                       |                    |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 13 March 28 -April 1| Effective Hamiltonians and operators        | "Project 2":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/projects/2016/Project2"                      |                    |                                  |
+| Week 13 March 28 -April 1| Effective Hamiltonians and operators        | Work on project 2                      |                    |                                  |
 |                      | Nuclear decays           |                       |                    |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 14 April 4-8| Nuclear decays         | Work on project 2                      |                    |                                  |
+| Week 14 April 4-8| Nuclear decays         | Work on project 2                      |                    |   Deadline for project 2 April 8                               |
 |                      | Electromagnetic decays          |                       |                    |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 15 April 11-15| Nuclear decays         |  Work on project 2                       |                    |                                  |
+| Week 15 April 11-15| Nuclear decays         |  "Exercise set 4":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise4"                       |                    |                                  |
 |                      | Electromagnetic and Electroweak decays          |                       |                    |                                  |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 16 April 18-22|  Nuclear decays       |   Work on project 2                    |                    |  Deadline for project 2 April 18                                  |
+| Week 16 April 18-22|  Nuclear decays       | "Exercise set 5":"https://github.com/NuclearStructure/PHY981/tree/master/doc/ProjectsExercises/exercises/2016/Exercise5"                   |                    |                   |
 |                      | Electroweak decays          |                       |                    |   Presentation of projects for final oral exam                               |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 17 April 25-29| Nuclear decays          |  Work on final oral exam project                       |                    |                                  |
