@@ -28,6 +28,7 @@ if __name__ == '__main__':
 				tz.append(int(nums[5]))
 				spOrbitals += 1
 
+
 	""" Read two-nucleon interaction elements (integrals) from file, brute force 4-dim array """
 	nninteraction = np.zeros([spOrbitals, spOrbitals, spOrbitals, spOrbitals])
 	with open("nucleitwobody.dat", "r") as infile:
