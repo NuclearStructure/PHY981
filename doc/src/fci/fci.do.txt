@@ -285,6 +285,13 @@ C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle \delta[C_{H'}^{P'}]-
 \]
 !et
 Since the coefficients $\delta[C_H^{*P}]$ and $\delta[C_{H'}^{P'}]$ are complex conjugates it is necessary and sufficient to require the quantities that multiply with $\delta[C_H^{*P}]$ to vanish.  
+!eblock
+
+
+
+!split
+===== Full Configuration Interaction Theory =====
+!bblock
 
 This leads to 
 !bt
@@ -308,6 +315,8 @@ leading to the identification $\lambda = E$. This means that we have for all $PH
 !et
 !eblock
 
+
+
 !split
 ===== Full Configuration Interaction Theory =====
 !bblock
@@ -327,7 +336,7 @@ $\hat{C}$.
 
 !split
 =====  Example of a Hamiltonian matrix =====
-
+!bblock
 Suppose, as an example, that we have six fermions below the Fermi level.
 This means that we can make at most $6p-6h$ excitations. If we have an infinity of single particle states above the Fermi level, we will obviously have an infinity of say $2p-2h$ excitations. Each such way to configure the particles is called a _configuration_. We will always have to truncate in the basis of single-particle states.
 This gives us a finite number of possible Slater determinants. Our Hamiltonian matrix would then look like (where each block can have a large dimensionalities):
@@ -345,10 +354,11 @@ This gives us a finite number of possible Slater determinants. Our Hamiltonian m
 |---------------------------------------------------------------|
 
 with a two-body force. Why are there non-zero blocks of elements? 
-
+!eblock
 
 !split
 =====  Example of a Hamiltonian matrix with a Hartree-Fock basis =====
+!bblock
 If we use a Hartree-Fock basis, this corresponds to a particular unitary transformation where matrix elements of the type $\langle 0p-0h \vert \hat{H} \vert 1p-1h\rangle =\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle=0$ and our Hamiltonian matrix becomes 
 
 |---------------------------------------------------------------|
@@ -363,12 +373,13 @@ If we use a Hartree-Fock basis, this corresponds to a particular unitary transfo
 |$6p-6h$  |  0   |  0      |  0    |  0   |   $\tilde{x}$   |  $\tilde{x}$    |  $\tilde{x}$    |
 |---------------------------------------------------------------|
 
+!eblock
 
 
 !split
 =====  Shell-model jargon =====
-If we do not make any truncations in the possible sets of Slater determinants (many-body states) we can make by distributing $A$ nucleons among $n$ single-particle states, we call such a calculation for 
-* Full configuration interaction theory
+!bblock
+If we do not make any truncations in the possible sets of Slater determinants (many-body states) we can make by distributing $A$ nucleons among $n$ single-particle states, we call such a calculation for _Full configuration interaction theory_
 
 If we make truncations, we have different possibilities
 
@@ -377,10 +388,11 @@ If we make truncations, we have different possibilities
 * We can limit the number of excitations in terms of the excitation energies. If we do not define a core, this defines normally what is called the no-core shell-model approach. 
 
 What happens if we have a three-body interaction and a Hartree-Fock basis? 
-
+!eblock
 
 !split
 =====  FCI and the exponential growth =====
+!bblock
 Full configuration interaction theory calculations provide in principle, if we can diagonalize numerically, all states of interest. The dimensionality of the problem explodes however quickly.
 
 The total number of Slater determinants which can be built with say $N$ neutrons distributed among $n$ single particle states is
@@ -397,23 +409,22 @@ For a model space which comprises the first for major shells only $0s$, $0p$, $1
 \]
 !et
 and multiplying this with the number of proton Slater determinants we end up with approximately witha dimensionality $d$ of $d\sim 10^{18}$.
+!eblock
 
 
 !split
 =====  Exponential wall =====
-
+!bblock
 This number can be reduced if we look at specific symmetries only. However, the dimensionality explodes quickly!
 
 * For Hamiltonian matrices of dimensionalities  which are smaller than $d\sim 10^5$, we would use so-called direct methods for diagonalizing the Hamiltonian matrix
 * For larger dimensionalities iterative eigenvalue solvers like Lanczos' method are used. The most efficient codes at present can handle matrices of $d\sim 10^{10}$. 
+!eblock
+
 
 !split 
 ===== A non-practical way of solving the eigenvalue problem =====
-
-For reasons to come (links with Coupled-Cluster theory and Many-Body perturbation theory), 
-we will rewrite Eq.~(ref{eq:fullci}) as a set of coupled non-linear equations in terms of the unknown coefficients $C_H^P$. 
-To obtain the eigenstates and eigenvalues in terms of non-linear equations is not a very practical approach. However, it serves the scope of linking FCI theory with approximative solutions to the many-body problem.
-
+!bblock
 To see this, we look at the contributions arising from 
 !bt
 \[
@@ -444,9 +455,55 @@ E-E_0 =\Delta E=\sum_{ai}\langle \Phi_0 | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}
 !et
 where the energy $E_0$ is the reference energy and $\Delta E$ defines the so-called correlation energy.
 The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian. 
+!eblock
+
+
+!split 
+===== A non-practical way of solving the eigenvalue problem =====
+!bblock
+To see this, we look at the contributions arising from 
+!bt
+\[
+\langle \Phi_H^P | = \langle \Phi_0|
+\]
+!et
+in  Eq.~(ref{eq:fullci}), that is we multiply with $\langle \Phi_0 |$
+from the left in 
+!bt
+\[
+(\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0. 
+\]
+!et
+!eblock
+
+
+!split 
+===== A non-practical way of solving the eigenvalue problem =====
+!bblock
+If we assume that we have a two-body operator at most, Slater's rule gives then an equation for the 
+correlation energy in terms of $C_i^a$ and $C_{ij}^{ab}$ only.  We get then
+!bt
+\[
+\langle \Phi_0 | \hat{H} -E| \Phi_0\rangle + \sum_{ai}\langle \Phi_0 | \hat{H} -E|\Phi_{i}^{a} \rangle C_{i}^{a}+
+\sum_{abij}\langle \Phi_0 | \hat{H} -E|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}=0,
+\]
+!et
+or 
+!bt
+\[
+E-E_0 =\Delta E=\sum_{ai}\langle \Phi_0 | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+
+\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab},
+\]
+!et
+where the energy $E_0$ is the reference energy and $\Delta E$ defines the so-called correlation energy.
+The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian. 
+!eblock
+
+
 
 !split
 =====  Rewriting the FCI equation  =====
+!bblock
 In our notes on Hartree-Fock calculations, 
 we have already computed the matrix $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle $ and $\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab}\rangle$.  If we are using a Hartree-Fock basis, then the matrix elements
 $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle=0$ and we are left with a *correlation energy* given by
@@ -455,9 +512,11 @@ $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle=0$ and we are left with a *correla
 E-E_0 =\Delta E^{HF}=\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}. 
 \]
 !et
+!eblock
  
 !split
 =====  Rewriting the FCI equation  =====
+!bblock
 Inserting the various matrix elements we can rewrite the previous equation as
 !bt
 \[
@@ -466,10 +525,11 @@ Inserting the various matrix elements we can rewrite the previous equation as
 \]
 !et
 This equation determines the correlation energy but not the coefficients $C$. 
-
+!eblock
 
 !split
 =====  Rewriting the FCI equation, does not stop here  =====
+!bblock
 We need more equations. Our next step is to set up
 !bt
 \[
@@ -486,7 +546,11 @@ as this equation will allow us to find an expression for the coefficents $C_i^a$
 \sum_{bcdjkl}\langle \Phi_i^a | \hat{H}|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=EC_i^a.
 \]
 !et
+!eblock
 
+!split
+=====  Rewriting the FCI equation, please stop here  =====
+!bblock
 We see that on the right-hand side we have the energy $E$. This leads to a non-linear equation in the unknown coefficients. 
 These equations are normally solved iteratively ( that is we can start with a guess for the coefficients $C_i^a$). A common choice is to use perturbation theory for the first guess, setting thereby
 !bt
@@ -494,9 +558,11 @@ These equations are normally solved iteratively ( that is we can start with a gu
  C_{i}^{a}=\frac{\langle i | \hat{f}| a\rangle}{\epsilon_i-\epsilon_a}.
 \]
 !et
+!eblock
 
 !split
 =====  Rewriting the FCI equation, more to add  =====
+!bblock
 The observant reader will however see that we need an equation for $C_{jk}^{bc}$ and $C_{jkl}^{bcd}$ as well.
 To find equations for these coefficients we need then to continue our multiplications from the left with the various
 $\Phi_{H}^P$ terms. 
@@ -514,6 +580,13 @@ For $C_{jk}^{bc}$ we need then
 \]
 !et
 and we can isolate the coefficients $C_{kl}^{cd}$ in a similar way as we did for the coefficients $C_{i}^{a}$. 
+!eblock
+
+
+
+!split
+=====  Rewriting the FCI equation, more to add  =====
+!bblock
 A standard choice for the first iteration is to set 
 !bt
 \[
@@ -525,19 +598,23 @@ This is a very cumbersome way of solving the equation. However, by using this it
 various terms in the wave operator or correlation operator $\hat{C}$. We will later identify the calculation of the various terms $C_H^P$
 as parts of different many-body approximations to full CI. In particular, we can  relate this non-linear scheme with Coupled Cluster theory and
 many-body perturbation theory.
+!eblock
+
 
 !split
 ===== Summarizing FCI and bringing in approximative methods =====
-
+!bblock
 
 If we can diagonalize large matrices, FCI is the method of choice since:
 * It gives all eigenvalues, ground state and excited states
 * The eigenvectors are obtained directly from the coefficients $C_H^P$ which result from the diagonalization
 * We can compute easily expectation values of other operators, as well as transition probabilities
 * Correlations are easy to understand in terms of contributions to a given operator beyond the Hartree-Fock contribution. This is the standard approach in  many-body theory. 
+!eblock
 
 !split
 =====  Definition of the correlation energy  =====
+!bblock
 The correlation energy is defined as, with a two-body Hamiltonian,  
 !bt
 \[
@@ -545,10 +622,6 @@ The correlation energy is defined as, with a two-body Hamiltonian,
 \sum_{abij}\langle ij | \hat{v}| ab \rangle C_{ij}^{ab}.
 \]
 !et
-
-
-!split
-===== FCI equation and the coefficients  =====
 The coefficients $C$ result from the solution of the eigenvalue problem. 
 The energy of say the ground state is then
 !bt
@@ -563,27 +636,36 @@ E_{ref}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0 \rangle.
 \]
 !et
 
+!eblock
+
+!split
+===== FCI equation and the coefficients  =====
+!bblock
+
 However, as we have seen, even for a small case like the four first major shells and a nucleus like oxygen-16, the dimensionality becomes quickly intractable. If we wish to include single-particle states that reflect weakly bound systems, we need a much larger single-particle basis. We need thus approximative methods that sum specific correlations to infinite order. 
 
 Popular methods are
-* Many-body perturbation theory (in essence a Taylor expansion)
-* Coupled cluster theory (coupled non-linear equations)
+* "Many-body perturbation theory (in essence a Taylor expansion)":"http://www.sciencedirect.com/science/article/pii/0370157395000126"
+* "Coupled cluster theory (coupled non-linear equations)":"http://iopscience.iop.org/article/10.1088/0034-4885/77/9/096302/meta"
 * Green's function approaches (matrix inversion)
-* Similarity group transformation methods (coupled ordinary differential equations
+* "Similarity group transformation methods (coupled ordinary differential equations)":"http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.106.222502"
 
 All these methods start normally with a Hartree-Fock basis as the calculational basis. 
+!eblock
 
 !split
 ===== Building a many-body basis =====
-
+!bblock
 Here we will discuss how we can set up a single-particle basis which we can use in the various parts of our projects, from the simple pairing model to infinite nuclear matter. We will use here the simple pairing model to illustrate in particular how to set up a single-particle basis. We will also use this do discuss standard FCI approaches like:
   o Standard shell-model basis in one or two major shells
   o Full CI in a given basis and no truncations
   o CISD and CISDT approximations
   o No-core shell model and truncation in excitation energy
+!eblock
 
 !split
 ===== Building a many-body basis =====
+!bblock
 An important step in an FCI code  is to construct the many-body basis.  
 
 While the formalism is independent of the choice of basis, the _effectiveness_ of a calculation 
@@ -598,10 +680,11 @@ spin-orbit splitting, or self-consistent mean-field potentials, or the Woods-Sax
 up the self-consistent mean-field. 
 For nuclei, the harmonic oscillator, modified by spin-orbit splitting, provides a useful language 
 for describing single-particle states.
-
+!eblock
 
 !split
 ===== Building a many-body basis =====
+!bblock
 Each single-particle state is labeled by the following quantum numbers: 
 
 * Orbital angular momentum $l$
@@ -618,9 +701,11 @@ in three-dimensional cartesian basis, see the relevante "lectures":"https://gith
 
 In this format one labels states by $n(l)_j$, with $(l)$ replaced by a letter:
 $s$ for $l=0$, $p$ for $l=1$, $d$ for $l=2$, $f$ for $l=3$, and thenceforth alphabetical.
+!eblock
 
 !split
 ===== Building a many-body basis =====
+!bblock
  In practice the single-particle space has to be severely truncated.  This truncation is 
 typically based upon the single-particle energies, which is the effective energy 
 from a mean-field potential. 
@@ -638,12 +723,12 @@ $0d_{5/2}, 1s_{1/2}$ and $0d_{3/2}$ orbits.
 Sometimes we refer to nuclei by the valence space where their last nucleons go.  
 So, for example, we call ${}^{12}\mbox{C}$ a $p$-shell nucleus, while ${}^{26}\mbox{Al}$ is an 
 $sd$-shell nucleus and ${}^{56}\mbox{Fe}$ is a $pf$-shell nucleus.
-
+!eblock
 
 
 !split
 ===== Building a many-body basis =====
-
+!bblock
 There are different kinds of truncations.
 
 * For example, one can start with `filled' orbits (almost always the lowest), and then  allow one, two, three... particles excited out of those filled orbits. These are called  1p-1h, 2p-2h, 3p-3h excitations. 
@@ -651,10 +736,11 @@ There are different kinds of truncations.
 * Alternately, one can state a maximal orbit and allow all possible configurations with  particles occupying states up to that maximum. This is called *full configuration*.
 
 * Finally, for particular use in nuclear physics, there is the *energy* truncation, also  called the $N\hbar\Omega$ or $N_{max}$ truncation. 
-
+!eblock
 
 !split
 ===== Building a many-body basis =====
+!bblock
 Here one works in a harmonic oscillator basis, with each major oscillator shell assigned  a principal quantum number $N=0,1,2,3,...$. 
 The $N\hbar\Omega$ or $N_{max}$ truncation: Any configuration is given an noninteracting energy, which is the sum 
 of the single-particle harmonic oscillator energies. (Thus this ignores 
@@ -679,9 +765,11 @@ called an $M$-scheme basis.
 
 Alternately, one can construct a many-body basis which has fixed $J$, or a $J$-scheme 
 basis. 
+!eblock
 
 !split
 ===== Building a many-body basis =====
+!bblock
 The Hamiltonian matrix will have smaller dimensions (a factor of 10 or more) in the $J$-scheme than in the $M$-scheme. 
 On the other hand, as we'll show in the next slide, the $M$-scheme is very easy to 
 construct with Slater determinants, while the $J$-scheme basis states, and thus the 
@@ -711,11 +799,12 @@ have good total $J$.
 Because the Hamiltonian is rotationally invariant, however, the eigenstates will 
 have good $J$. (The situation is muddied when one has states of different $J$ that are 
 nonetheless degenerate.) 
-
+!eblock
 
 
 !split
 ===== Building a many-body basis =====
+!bblock
 Example: two $j=1/2$ orbits
 
 |-----------------------------------|
@@ -728,9 +817,11 @@ Example: two $j=1/2$ orbits
 |-----------------------------------|
 
 Note that the order is arbitrary.
+!eblock
 
 !split
 ===== Building a many-body basis =====
+!bblock
 There are $\left ( \begin{array}{c} 4 \\ 2 \end{array} \right) = 6$ two-particle states, 
 which we list with the total $M$:
 
@@ -746,11 +837,12 @@ which we list with the total $M$:
 |----------------|
 There are 4 states with $M= 0$, 
 and 1 each with $M = \pm 1$.
-
+!eblock
 
 
 !split
 ===== Building a many-body basis =====
+!bblock
 As another example, consider using only single particle states from the $0d_{5/2}$ space. 
 They have the following quantum numbers
 
@@ -765,8 +857,11 @@ They have the following quantum numbers
 |6 | 0 | 2 | 5/2 |  5/2 | 
 |------------------------------------|
 
+!eblock
+
 !split
 ===== Building a many-body basis =====
+!bblock
 There are $\left ( \begin{array}{c} 6 \\ 2 \end{array} \right) = 15$ two-particle states, 
 which we list with the total $M$:
 
@@ -779,8 +874,9 @@ which we list with the total $M$:
 |1,5 | -1  |  2,6 | 1 |     4,6 | 3          |
 |1,6 | 0  |  3,4 | 0 |      5,6 | 4         |
 |------------------------------------|
-There are 3 states with $M= 0$, 2 with $M = 1$, and so on.
 
+There are 3 states with $M= 0$, 2 with $M = 1$, and so on.
+!eblock
 
 
 
