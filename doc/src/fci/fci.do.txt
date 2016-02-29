@@ -695,8 +695,7 @@ Each single-particle state is labeled by the following quantum numbers:
 
 * $z$-component $j_z$ (or $m$)
 
-* Some labeling of the radial wavefunction, typically $n$ the number of nodes in  the radial wavefunction, but in the case of harmonic oscillator one can also use the principal quantum number $N$, where the harmonic oscillator energy is $(N+3/2)\hbar \omega$.  For our nuclear matter projects, you will need to change the quantum numbers to those relevant for calculations
-in three-dimensional cartesian basis, see the relevante "lectures":"https://github.com/NuclearTalent/Course2ManyBodyMethods/blob/master/doc/pub/cc/pdf/Lectures1-2_TALENT_NuclearMatter_GH.pdf".
+* Some labeling of the radial wavefunction, typically $n$ the number of nodes in  the radial wavefunction, but in the case of harmonic oscillator one can also use the principal quantum number $N$, where the harmonic oscillator energy is $(N+3/2)\hbar \omega$.  
 
 
 In this format one labels states by $n(l)_j$, with $(l)$ replaced by a letter:
@@ -787,6 +786,13 @@ M = m_i + m_j + m_k + \ldots
 !et
 This is *not* true of $J$, because the angular momentum group SU(2) is not Abelian.
 
+!eblock
+
+
+!split
+===== Building a many-body basis =====
+!bblock
+
 The upshot is that 
 * It is easy to construct a Slater determinant with good total $M$;
 
@@ -800,6 +806,8 @@ Because the Hamiltonian is rotationally invariant, however, the eigenstates will
 have good $J$. (The situation is muddied when one has states of different $J$ that are 
 nonetheless degenerate.) 
 !eblock
+
+
 
 
 !split
@@ -900,7 +908,7 @@ be the most efficient.  Nonetheless it will be usable; most importantly, you wil
 
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 
 The first step  is to construct the $M$-scheme basis of Slater determinants.
@@ -916,7 +924,7 @@ The steps could be:
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 The format of a possible input  file could be
 |----------------------------------------------|
@@ -944,7 +952,7 @@ $2 \times j_z$.
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 To read in the single-particle states you need to:
 * Open the file 
@@ -955,7 +963,7 @@ To read in the single-particle states you need to:
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 
 The next step is to read in the number of particles $N$ and the fixed total $M$ (or, actually, $2 \times M$). 
@@ -970,7 +978,7 @@ $2 \times M$ should be even, and if $N$ is odd then $2\times M$ should be odd.
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 The final step is to generate the set of $N$-particle Slater determinants with fixed $M$. 
 The Slater determinants will be stored in occupation representation.  Although in many codes
@@ -985,7 +993,7 @@ then $sd(7,1) = 2$, $sd(7,2) = 3$, and $sd(7,3) = 9$.
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 
 We can construct an occupation representation of Slater determinants by the *odometer*
@@ -1012,7 +1020,7 @@ and again increase the rightmost digit
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 When we restrict ourselves to an $M$-scheme basis, we could choose two paths. 
 The first is simplest (and simplest is often best, at 
@@ -1032,7 +1040,7 @@ done with a simple logical flag).
 
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 
 *Some example solutions*:  Let's begin with a simple case, the $0d_{5/2}$ space containing six single-particle states
@@ -1062,7 +1070,7 @@ Of these, there are only 3 states with $M=0$.
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 *You should try* by hand to show that in this same single-particle space, that for 
 $N=3$ there are 3 states with $M=1/2$ and for $N= 4$ there are also only 3 states with $M=0$. 
@@ -1076,7 +1084,7 @@ states with $M=1/2$, for $N=4$ there are 81 states with $M=0$.
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 For our project, we will only consider the pairing model.
 A simple space is the $(1/2)^2$ space with four single-particle states
@@ -1095,7 +1103,7 @@ For $N=2$ there are 4 states with $M=0$; show this by hand and confirm your code
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 Another, slightly more challenging space is the $(1/2)^4$ space, that is, 
 with eight  single-particle states we have
@@ -1118,7 +1126,7 @@ $N=4$ there are 36 states with $M=0$.
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 In the shell-model context we can interpret this as 4 $s_{1/2}$ levels, with $m = \pm 1/2$, we can also think of these are simple four pairs,  $\pm k, k = 1,2,3,4$. Later on we will 
 assign single-particle energies,  depending on the radial quantum number $n$, that is, 
@@ -1126,7 +1134,7 @@ $\epsilon_k = |k| \delta$ so that they are equally spaced.
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
  
 For application in the pairing model we can go further and consider only states with 
@@ -1150,7 +1158,7 @@ six states:
 
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock Hints for coding
 
 
@@ -1166,7 +1174,7 @@ six states:
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 
 Hints for coding
@@ -1184,7 +1192,7 @@ eight particles.
 !eblock
 
 !split
-===== Project 2, step 1 =====
+===== Shell-model project  =====
 !bblock
 
 Our recommended occupation representation, e.g. $| 1,2,4,8 \rangle$, is 
