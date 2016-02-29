@@ -4,6 +4,7 @@ AUTHOR: Morten Hjorth-Jensen {copyright, 2013-present|CC BY-NC} at "National Sup
 DATE:  Spring 2016
 
 
+!split
 =======  Introduction =======
 Coester and Kummel first developed the ideas that led to coupled-cluster
 theory in the late 1950s. The basic idea is that the correlated wave function
@@ -19,8 +20,10 @@ We will discuss how to define the operators later in this work. This simple
 ansatz carries enormous power. It leads to a non-perturbative many-body
 theory that includes summation of ladder diagrams , ring
 diagrams, and an infinite-order
-generalization of many-body perturbation theory..
+generalization of many-body perturbation theory.
 
+!split
+=======  Introduction =======
 Developments and applications
 of coupled-cluster theory took different routes in chemistry
 and nuclear physics. In quantum chemistry,
@@ -30,7 +33,7 @@ textbook by "Shavitt and Barrett":"http://www.cambridge.org/fr/academic/subjects
 theory is one of the computational methods of preference for doing nuclear physics, with applications ranging from light nuclei to medium-heavy nuclei,
 see for example the recent review by "Hagen, Papenbrock, Hjorth-Jensen and Dean":"http://iopscience.iop.org/0034-4885/77/9/096302". 
 
- 
+!split 
 ===== A non-practical way of solving the eigenvalue problem =====
 
 Before we proceed with the derivation of the Coupled cluster equations, let us repeat some of the arguments we presented during our FCI lectures. 
@@ -38,6 +41,8 @@ In our FCI discussions, we rewrote the solution of the Schroedinger equation as 
 To obtain the eigenstates and eigenvalues in terms of non-linear equations is not a very practical approach. However, it serves the scope of linking FCI theory with approximative solutions to the many-body problem
 like Coupled cluster (CC) theory 
 
+!split 
+===== A non-practical way of solving the eigenvalue problem =====
 If we assume that we have a two-body operator at most, the Slater-Condon rule 
 gives then an equation for the 
 correlation energy in terms of $C_i^a$ and $C_{ij}^{ab}$ only.  We get then
@@ -57,6 +62,8 @@ E-E_0 =\Delta E=\sum_{ai}\langle \Phi_0 | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}
 where the energy $E_0$ is the reference energy and $\Delta E$ defines the so-called correlation energy.
 The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian. 
 
+!split 
+===== A non-practical way of solving the eigenvalue problem =====
 In our notes on Hartree-Fock calculations, 
 we have already computed the matrix $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle $ and $\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab}\rangle$.  If we are using a Hartree-Fock basis, then the matrix elements
 $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle=0$ and we are left with a *correlation energy* given by
@@ -66,7 +73,8 @@ E-E_0 =\Delta E^{HF}=\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle 
 \]
 !et
  
-
+!split 
+===== A non-practical way of solving the eigenvalue problem =====
 Inserting the various matrix elements we can rewrite the previous equation as
 !bt
 \[
@@ -92,6 +100,8 @@ as this equation will allow us to find an expression for the coefficents $C_i^a$
 \]
 !et
 
+!split 
+===== A non-practical way of solving the eigenvalue problem =====
 We see that on the right-hand side we have the energy $E$. This leads to a non-linear equation in the unknown coefficients. 
 These equations are normally solved iteratively ( that is we can start with a guess for the coefficients $C_i^a$). A common choice is to use perturbation theory for the first guess, setting thereby
 !bt
@@ -104,7 +114,8 @@ The observant reader will however see that we need an equation for $C_{jk}^{bc}$
 To find equations for these coefficients we need then to continue our multiplications from the left with the various
 $\Phi_{H}^P$ terms. 
 
-
+!split 
+===== A non-practical way of solving the eigenvalue problem =====
 For $C_{jk}^{bc}$ we need then
 !bt
 \[
@@ -123,22 +134,25 @@ A standard choice for the first iteration is to set
 C_{ij}^{ab} =\frac{\langle ij \vert \hat{v} \vert ab \rangle}{\epsilon_i+\epsilon_j-\epsilon_a-\epsilon_b}.
 \]
 !et
+
+!split 
+===== A non-practical way of solving the eigenvalue problem =====
 At the end we can rewrite our solution of the Schroedinger equation in terms of $n$ coupled equations for the coefficients $C_H^P$.
 This is a very cumbersome way of solving the equation. However, by using this iterative scheme we can illustrate how we can compute the
 various terms in the wave operator or correlation operator $\hat{C}$. We will later identify the calculation of the various terms $C_H^P$
 as parts of different many-body approximations to full CI. In particular, we can  relate this non-linear scheme with Coupled Cluster theory and
 many-body perturbation theory.
 
-
+!split
 ===== Summarizing FCI and bringing in approximative methods =====
-
-
 If we can diagonalize large matrices, FCI is the method of choice since:
 * It gives all eigenvalues, ground state and excited states
 * The eigenvectors are obtained directly from the coefficients $C_H^P$ which result from the diagonalization
 * We can compute easily expectation values of other operators, as well as transition probabilities
 * Correlations are easy to understand in terms of contributions to a given operator beyond the Hartree-Fock contribution. This is the standard approach in  many-body theory. 
 
+!split
+===== Summarizing FCI and bringing in approximative methods =====
 The correlation energy is defined as, with a two-body Hamiltonian,  
 !bt
 \[
@@ -161,6 +175,8 @@ E_{ref}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0 \rangle.
 \]
 !et
 
+!split
+===== Summarizing FCI and bringing in approximative methods =====
 However, as we have seen, even for a small case like the four first major shells and a nucleus like oxygen-16, the dimensionality becomes quickly intractable. If we wish to include single-particle states that reflect weakly bound systems, we need a much larger single-particle basis. We need thus approximative methods that sum specific correlations to infinite order. 
 
 Popular methods are
@@ -171,7 +187,7 @@ Popular methods are
 
 All these methods start normally with a Hartree-Fock basis as the calculational basis. 
 
-
+!split
 ===== A quick tour of Coupled Cluster theory =====
 
 The ansatz for the wavefunction (ground state) is given by
@@ -192,7 +208,10 @@ where $A$ represents the maximum number of particle-hole excitations and $\hat{T
                 t_{i_1i_2\ldots i_n}^{a_1a_2\ldots a_n} a_{a_1}^\dagger a_{a_2}^\dagger \ldots a_{a_n}^\dagger a_{i_n} \ldots a_{i_2} a_{i_1}.
         \end{align*}
 !et
-    The energy is given by
+
+!split
+===== A quick tour of Coupled Cluster theory =====
+The energy is given by
 !bt
     \begin{equation*}
         E_{\mathrm{CC}} = \langle\Phi_0\vert  \overline{H}\vert \Phi_0\rangle,
@@ -206,7 +225,9 @@ where $A$ represents the maximum number of particle-hole excitations and $\hat{T
     \end{align*}
 !et
 
-    The coupled cluster energy is a function of the unknown cluster amplitudes $t_{i_1i_2\ldots i_n}^{a_1a_2\ldots a_n}$,
+!split
+===== A quick tour of Coupled Cluster theory =====
+The coupled cluster energy is a function of the unknown cluster amplitudes $t_{i_1i_2\ldots i_n}^{a_1a_2\ldots a_n}$,
 given by the solutions to the amplitude equations
 !bt
     \begin{equation*}
@@ -229,6 +250,8 @@ and simplified using the connected cluster theorem
     \end{equation*}
 !et
 
+!split
+===== A quick tour of Coupled Cluster theory =====
 A much used approximation is to  truncate the cluster operator $\hat{T}$ at the $n=2$ level. This defines the so-called singes and doubles approximation to the Coupled Cluster wavefunction, normally shortened to CCSD..
     
 The coupled cluster wavefunction is now given by
@@ -249,6 +272,8 @@ where
         \end{align*}
 !et
 
+!split
+===== A quick tour of Coupled Cluster theory =====
 The amplutudes $t$ play a role similar to the coefficients $C$ in the shell-model calculations. They are obtained by solving a set of non-linear equations
 similar to those discussed above in connection withe FCI discussion.
 
@@ -267,7 +292,8 @@ If we truncate our equations at the CCSD level, it corresponds to performing a t
 |---------------------------------------------------------------|
 
 
-
+!split
+===== A quick tour of Coupled Cluster theory =====
 In our FCI discussion the correlation energy is defined as, with a two-body Hamiltonian,  
 !bt
 \[
@@ -284,6 +310,8 @@ In Coupled cluster theory it becomes (irrespective of level of truncation of $T$
 \]
 !et
 
+!split
+===== A quick tour of Coupled Cluster theory =====
 Coupled cluster theory has several interesting computational features and is the method of choice in quantum chemistry. The method was originally proposed by Coester and Kummel, two nuclear physicists (way back in the fifties). It came back in full strength in nuclear physics during the last decade. 
 
 There are several interesting features:
@@ -296,6 +324,7 @@ However, Coupled Cluster theory is
 * if correlations are strong, a single-reference ansatz may not be the best starting point
 * we cannot quantify properly the error we make when truncations are made in the cluster operator
 
+!split
 =====  The CCD approximation =====
 
 We will now approximate the cluster operator $\hat{T}$ to include only $2p-2h$ correlations. This leads to the so-called CCD approximation, that is
@@ -311,6 +340,8 @@ meaning that we have
 \]
 !et
 
+!split
+=====  The CCD approximation =====
 Inserting these equations in the expression for the computation of the energy we have,
 with a Hamiltonian defined with respect to a general vacuum (see the exercises in the second quantization part)
 !bt
@@ -331,6 +362,9 @@ we obtain that the energy can be written as
 \langle \Phi_0 \vert \hat{H}_N(1+\hat{T}_2)\vert \Phi_0\rangle = E_{CCD}.
 \]
 !et
+
+!split
+=====  The CCD approximation =====
 This quantity becomes 
 !bt
 \[
@@ -344,6 +378,9 @@ Similarly, the expression for the amplitudes reads
 \langle \Phi_{ij}^{ab} \vert \exp{-\left(\hat{T}_2\right)}\hat{H}_N\exp{\left(\hat{T}_2\right)}\vert \Phi_0\rangle = 0.
 \]
 !et
+
+!split
+=====  The CCD approximation =====
 These equations can be reduced to (after several applications of Wick's theorem) to, for all $i > j$ and all $a  > b$,
 !bt
 \begin{align}
@@ -361,6 +398,9 @@ where we have defined
 \]
 !et
 where $\hat{P}_{ab}$ interchanges two particles occupying the quantum numbers $a$ and $b$. 
+
+!split
+=====  The CCD approximation =====
 The operator $\hat{P}(ij\vert ab)$  is defined as
 !bt
 \[
@@ -382,7 +422,8 @@ The two-body matrix elements are also anti-symmetrized, meaning that
 !et
 The non-linear equations for the unknown amplitudes  $t_{ij}^{ab}$ are solved iteratively. We discuss the implementation of these equations below.
 
-=== Approximations to the full CCD equations ===
+!split
+===== Approximations to the full CCD equations =====
 
 It is useful to make approximations to the equations for the amplitudes. The standard method for solving these equations is to set up an iterative scheme where method's like Newton's method or similar root searching methods are used to find the amplitudes. 
 Itreative solvers need a guess for the amplitudes. A good starting point is to use the correlated wave operator from perturbation theory to
@@ -400,6 +441,8 @@ leading to our first approximation for the correlation energy at the CCD level t
 \]
 !et
 
+!split
+===== Approximations to the full CCD equations =====
 With this starting point, we are now ready to solve Eq. (ref{eq:ccd}) iteratively. Before we attack the full equations, it is however instructive to study a truncated version of the equations. We will first study the following approximation where we take away all terms except the linear terms that involve the single-particle energies and the the two-particle intermediate excitations, that is
 !bt
 \begin{equation}
@@ -408,6 +451,8 @@ label{eq:ccd1}
 \end{equation}
 !et
 
+!split
+===== Approximations to the full CCD equations =====
 Setting the single-particle energies for the hole states equal to an energy variable $\omega = \epsilon_i+\epsilon_j$, Eq. (ref{eq:ccd1}) reduces to the
 well-known equations for the so-called $G$-matrix, widely used in "infinite matter and finite nuclei studies":"http://www.sciencedirect.com/science/journal/03701573/261/3-4". The equation can then be reordered and solved by matrix inversion.  To see this let us define the following quantity
 !bt
@@ -429,12 +474,16 @@ in the intermediate sums over $cd$ in Eq. (ref{eq:ccd1}), we can rewrite the lat
 !et
 where we have indicated an explicit energy dependence. This equation, transforming a two-particle configuration into a single index, can be transformed into a matrix inversion problem.  Solving the equations for a fixed energy $\omega$ allows us to compare directly with results from Green's function theory when only two-particle intermediate states are included. 
 
+!split
+===== Approximations to the full CCD equations =====
 To solve Eq. (ref{eq:ccd1}), we would thus start with a guess for the unknown amplitudes, typically using the wave operator defined by first order in perturbation theory, leading to a zeroth approximation to the energy given by second-order perturbation theory for the correlation energy.
 A simple approach to the solution of  Eq. (ref{eq:ccd1}), is to thus to
  o Start with a guess for the amplitudes and compute the zeroth approximation to the correlation energy
  o Use the ansatz for the amplitudes to solve Eq. (ref{eq:ccd1}) via for example your root-finding method of choice (Newton's method or modifications thereof can be used) and continue these iterations till the correlation energy does not change more than a prefixed quantity $\lambda$; $\Delta E_{\mathrm{CCD}}^{(i)}-\Delta E_{\mathrm{CCD}}^{(i-1)} \le \lambda$.
  o It is common during the iterations to scale the amplitudes with a parameter $\alpha$, with $\alpha \in (0,1]$ as  $t^{(i)}=\alpha t^{(i)}+(1-\alpha)t^{(i-1)}$.
 
+!split
+===== Approximations to the full CCD equations =====
 The next approximation is to include the two-hole term in Eq. (ref{eq:ccd}), a term which allow us to make a link with Green's function theory with two-particle and two-hole correlations. This means that we solve
 !bt
 \begin{equation}

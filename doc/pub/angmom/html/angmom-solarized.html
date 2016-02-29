@@ -56,16 +56,28 @@ div { text-align: justify; text-justify: inter-word; }
 </style>
 
 
+<script src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="http://sagecell.sagemath.org/embedded_sagecell.js"></script>
+<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+<script>
+$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+});
+</script>
+
 </head>
 
 <!-- tocinfo
 {'highest level': 2,
  'sections': [('Quantum numbers', 2, None, '___sec0'),
+              ('Motivation', 2, None, '___sec1'),
               ('Single-particle and two-particle quantum numbers',
-               2,
-               None,
-               '___sec1'),
-              ('Single-particle and two-particle quantum numbers, brief review on angular momenta etc',
                2,
                None,
                '___sec2'),
@@ -93,7 +105,7 @@ div { text-align: justify; text-justify: inter-word; }
                2,
                None,
                '___sec8'),
-              ('Single-particle and two-particle quantum numbers',
+              ('Single-particle and two-particle quantum numbers, brief review on angular momenta etc',
                2,
                None,
                '___sec9'),
@@ -121,36 +133,66 @@ div { text-align: justify; text-justify: inter-word; }
                2,
                None,
                '___sec15'),
-              ('Clebsch-Gordan coefficients', 2, None, '___sec16'),
-              ('Quantum numbers and the Schroeodinger equation in relative and CM coordinates',
+              ('Single-particle and two-particle quantum numbers',
                2,
                None,
-               '___sec17'),
-              ('Quantum numbers and the Schroedinger equation in relative and CM coordinates',
+               '___sec16'),
+              ('Clebsch-Gordan coefficients', 2, None, '___sec17'),
+              ('Clebsch-Gordan coefficients, testing the orthogonality relations',
                2,
                None,
                '___sec18'),
-              ('Quantum numbers and the Schroedinger equation in relative and CM coordinates',
+              ('Quantum numbers and the Schroeodinger equation in relative and CM coordinates',
                2,
                None,
                '___sec19'),
-              ('Quantum numbers', 2, None, '___sec20'),
-              ('Components of the force and isospin', 2, None, '___sec21'),
-              ('Isospin', 2, None, '___sec22'),
-              ('Isospin', 2, None, '___sec23'),
+              ('Quantum numbers and the Schroedinger equation in relative and CM coordinates',
+               2,
+               None,
+               '___sec20'),
+              ('Quantum numbers and the Schroedinger equation in relative and CM coordinates',
+               2,
+               None,
+               '___sec21'),
+              ('Quantum numbers', 2, None, '___sec22'),
+              ('Components of the force and isospin', 2, None, '___sec23'),
               ('Isospin', 2, None, '___sec24'),
               ('Isospin', 2, None, '___sec25'),
-              ('Two-body matrix elements', 2, None, '___sec26'),
-              ('Two-body matrix elementsin $m$-scheme', 2, None, '___sec27'),
-              ('Two-body matrix elements in $m$-scheme', 2, None, '___sec28'),
-              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec29'),
-              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec30'),
-              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec31'),
-              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec32'),
-              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec33'),
-              ('Two-body matrix elements in $J$-scheme', 2, None, '___sec34'),
-              ('Exercise 12', 2, None, '___sec35'),
-              ('Angular momentum algebra', 2, None, '___sec36'),
+              ('Isospin', 2, None, '___sec26'),
+              ('Isospin', 2, None, '___sec27'),
+              ('Angular momentum algebra', 2, None, '___sec28'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec29'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec30'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec31'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec32'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec33'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec34'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec35'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec36'),
               ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
@@ -179,35 +221,35 @@ div { text-align: justify; text-justify: inter-word; }
                2,
                None,
                '___sec43'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec44'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec45'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec46'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec47'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec48'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec49'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec50'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec51'),
@@ -219,35 +261,23 @@ div { text-align: justify; text-justify: inter-word; }
                2,
                None,
                '___sec53'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
-               2,
-               None,
-               '___sec54'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
-               2,
-               None,
-               '___sec55'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
-               2,
-               None,
-               '___sec56'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
-               2,
-               None,
-               '___sec57'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('The Hartree-Fock potential', 2, None, '___sec54'),
+              ('The Hartree-Fock potential', 2, None, '___sec55'),
+              ('The Hartree-Fock potential', 2, None, '___sec56'),
+              ('First order in the potential energy', 2, None, '___sec57'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec58'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec59'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec60'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec61'),
@@ -267,10 +297,7 @@ div { text-align: justify; text-justify: inter-word; }
                2,
                None,
                '___sec65'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
-               2,
-               None,
-               '___sec66'),
+              ('Testing properties of $6j$ symbols', 2, None, '___sec66'),
               ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
@@ -366,19 +393,7 @@ div { text-align: justify; text-justify: inter-word; }
               ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
-               '___sec90'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
-               2,
-               None,
-               '___sec91'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
-               2,
-               None,
-               '___sec92'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
-               2,
-               None,
-               '___sec93')]}
+               '___sec90')]}
 end of tocinfo -->
 
 <body>
@@ -432,23 +447,59 @@ MathJax.Hub.Config({
 
 <ul>
 <li> Discussion of single-particle and two-particle quantum numbers, uncoupled and coupled schemes</li>
-<li> Discussion of nuclear forces and models thereof (this material will not be covered in depth this spring)</li>
+<li> Discussion of angular momentum recouplings and the Wigner-Eckart theorem</li>
+<li> Applications to specific operators like the nuclear two-body tensor force</li>
 </ul>
 
-For quantum numbers, chapter 1 on angular momentum and chapter 5 of Suhonen.
-See also chapters 5, 12 and 13 of Alex Brown. For models of the nuclear forces, see present lectures and pdf files.
-For a good discussion of isospin, see Alex Brown's lecture notes chapter 12, 13 and 19.
+For quantum numbers, chapter 1 on angular momentum and chapter 5 of Suhonen and chapters 5, 12 and 13 of Alex Brown. 
+For a good discussion of isospin, see for example Alex Brown's lecture notes chapter 12, 13 and 19.
 </div>
 
 
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec1">Single-particle and two-particle quantum numbers </h2>
+<h2 id="___sec1">Motivation </h2>
+When solving the Hartree-Fock project using a nucleon-nucleon interaction in an uncoupled basis (m-scheme), we found a high level of degeneracy. One sees clear from the table here that we have a  degeneracy in the angular momentum \( j \), resulting in \( 2j+1 \) states with the same energy. This reflects the rotational symmetry and spin symmetry of the nuclear forces.
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">  Quantum numbers   </th> <th align="center">Energy [MeV]</th> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   \( 0s_{1/2}^{\pi} \)    </td> <td align="center">   -40.4602        </td> </tr>
+<tr><td align="center">   \( 0s_{1/2}^{\pi} \)    </td> <td align="center">   -40.4602        </td> </tr>
+<tr><td align="center">   \( 0s_{1/2}^{\nu} \)    </td> <td align="center">   -40.6426        </td> </tr>
+<tr><td align="center">   \( 0s_{1/2}^{\nu} \)    </td> <td align="center">   -40.6426        </td> </tr>
+<tr><td align="center">   \( 0p_{1/2}^{\pi} \)    </td> <td align="center">   -6.7133         </td> </tr>
+<tr><td align="center">   \( 0p_{1/2}^{\pi} \)    </td> <td align="center">   -6.7133         </td> </tr>
+<tr><td align="center">   \( 0p_{1/2}^{\nu} \)    </td> <td align="center">   -6.8403         </td> </tr>
+<tr><td align="center">   \( 0p_{1/2}^{\nu} \)    </td> <td align="center">   -6.8403         </td> </tr>
+<tr><td align="center">   \( 0p_{3/2}^{\pi} \)    </td> <td align="center">   -11.5886        </td> </tr>
+<tr><td align="center">   \( 0p_{3/2}^{\pi} \)    </td> <td align="center">   -11.5886        </td> </tr>
+<tr><td align="center">   \( 0p_{3/2}^{\pi} \)    </td> <td align="center">   -11.5886        </td> </tr>
+<tr><td align="center">   \( 0p_{3/2}^{\pi} \)    </td> <td align="center">   -11.5886        </td> </tr>
+<tr><td align="center">   \( 0p_{3/2}^{\nu} \)    </td> <td align="center">   -11.7201        </td> </tr>
+<tr><td align="center">   \( 0p_{3/2}^{\nu} \)    </td> <td align="center">   -11.7201        </td> </tr>
+<tr><td align="center">   \( 0p_{3/2}^{\nu} \)    </td> <td align="center">   -11.7201        </td> </tr>
+<tr><td align="center">   \( 0p_{3/2}^{\nu} \)    </td> <td align="center">   -11.7201        </td> </tr>
+</tbody>
+</table>
+<p>
+We observe that with increasing value of \( j \) the degeneracy increases. For \( j=3/2 \) we end up diagonalizing
+the same matrix four times. With increasing value of \( j \), it is rather obvious that our insistence on using
+an uncoupled scheme (or just m-scheme) will lead to unnecessary labor from our side (or more precisely, for the computer).   The obvious question we should pose ourselves then is whether we can use 
+the underlying symmetries of the nuclear forces in order to reduce our efforts.
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec2">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-In order to understand the basics of the nucleon-nucleon interaction, we need to define the relevant quantum numbers and how we build up a single-particle state and a two-body state. 
+In order to understand the basics of the nucleon-nucleon interaction and the pertaining symmetries, we need to define the relevant quantum numbers and how we build up a single-particle state and a two-body state, and obviously our final holy grail, a many-boyd state. 
 
 <ul>
 <li> For the single-particle states, due to the fact that we have the spin-orbit force, the quantum numbers for the projection of orbital momentum \( l \), that is \( m_l \), and for spin \( s \), that is \( m_s \), are no longer so-called good quantum numbers. The total angular momentum \( j \) and its projection \( m_j \) are then  so-called <em>good quantum numbers</em>.</li>
@@ -461,7 +512,7 @@ In order to understand the basics of the nucleon-nucleon interaction, we need to
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec2">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
+<h2 id="___sec3">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 
 <p>
 <div class="alert alert-block alert-block alert-text-normal">
@@ -486,7 +537,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec3">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
+<h2 id="___sec4">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -512,7 +563,7 @@ since we have that \( [\hat{L}_z,\hat{L}_x]=i\hbar\hat{L}_y \) and \( [\hat{L}_z
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec4">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
+<h2 id="___sec5">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -555,7 +606,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec5">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
+<h2 id="___sec6">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -579,7 +630,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec6">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
+<h2 id="___sec7">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -599,7 +650,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec7">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
+<h2 id="___sec8">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -625,7 +676,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec8">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
+<h2 id="___sec9">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -652,7 +703,7 @@ Note that we do have parity violating processes, more on this later although our
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec9">Single-particle and two-particle quantum numbers </h2>
+<h2 id="___sec10">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -675,7 +726,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec10">Single-particle and two-particle quantum numbers </h2>
+<h2 id="___sec11">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -698,7 +749,7 @@ with \( P_l^{m_l} \) being the so-called associated Legendre polynomials.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec11">Single-particle and two-particle quantum numbers </h2>
+<h2 id="___sec12">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -729,7 +780,7 @@ for \( l=2 \) and \( m_l=0 \) etc.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec12">Single-particle and two-particle quantum numbers </h2>
+<h2 id="___sec13">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -757,7 +808,7 @@ on the latter state we will obtain admixtures from possible \( \phi_{nlm_lsm_s}(
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec13">Single-particle and two-particle quantum numbers </h2>
+<h2 id="___sec14">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -792,7 +843,7 @@ in the functions \( \psi \) since
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec14">Single-particle and two-particle quantum numbers </h2>
+<h2 id="___sec15">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -824,12 +875,12 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec15">Single-particle and two-particle quantum numbers </h2>
+<h2 id="___sec16">Single-particle and two-particle quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 This means that the eigenvectors \( \phi_{n=0l=2m_l=2s=1/2m_s=-1/2} \) etc are not eigenvectors of \( \hat{j}^2 \). The above problems gives a \( 2\times2 \) matrix that mixes the vectors \( \psi_{n=0j=5/2m_j3/2;l=2m_ls=1/2m_s} \) and \( \psi_{n=0j=3/2m_j3/2;l=2m_ls=1/2m_s} \) with the states  \( \phi_{n=0l=2m_l=2s=1/2m_s=-1/2} \) and
-\( \phi_{n=0l=2m_l=1s=1/2m_s=1/2} \). The unknown coefficients \( \alpha \) and \( \beta \) results from eigenvectors of this matrix. That is, inserting all values \( m_l,l,m_s,s \) we obtain the matrix 
+\( \phi_{n=0l=2m_l=1s=1/2m_s=1/2} \). The unknown coefficients \( \alpha \) and \( \beta \) are the  eigenvectors of this matrix. That is, inserting all values \( m_l,l,m_s,s \) we obtain the matrix 
 $$
 \left[ \begin{array} {cc} 19/4 & 2 \\ 2 & 31/4 \end{array} \right]$$
 
@@ -849,7 +900,7 @@ where the coefficients \( \langle lm_lsm_s|jm_j\rangle \) are the so-called Cleb
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec16">Clebsch-Gordan coefficients </h2>
+<h2 id="___sec17">Clebsch-Gordan coefficients </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -873,7 +924,48 @@ and many others. The latter will turn extremely useful when we are going to defi
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec17">Quantum numbers and the Schroeodinger equation in relative and CM coordinates </h2>
+<h2 id="___sec18">Clebsch-Gordan coefficients, testing the orthogonality relations </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The orthogonality relation can be tested using the symbolic python package <b>wigner</b>. 
+Let us test
+$$
+\sum_{m_1m_2}\langle j_1m_1j_2m_2|JM\rangle\langle j_1m_1j_2m_2|J'M'\rangle=\delta_{J,J'}\delta_{M,M'},
+$$
+
+The following program tests this relation for the case of \( j_1=3/2 \) and \( j_2=3/2 \) meaning that \( m_1 \) and \( m_2 \) 
+run from \( -3/2 \) to \( 3/2 \). 
+<p>
+
+
+<div class="compute"><script type="text/x-sage">
+from sympy import S
+from sympy.physics.wigner import clebsch_gordan
+# Twice the values of j1 and j2
+j1 = 3
+j2 = 3
+J = 2
+Jp = 2
+M = 2
+Mp = 3
+sum = 0.0
+for m1 in range(-j1, j1+2, 2):
+    for m2 in range(-j2, j2+2, 2):
+        M = (m1+m2)/2.
+        """ Call j1, j2, J, m1, m2, m1+m2 """
+        sum += clebsch_gordan(S(j1)/2, S(j2)/2, J, S(m1)/2, S(m2)/2, M)*clebsch_gordan(S(j1)/2, S(j2)/2, Jp, S(m1)/2, S(m2)/2, Mp)
+print sum
+
+</script></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec19">Quantum numbers and the Schroeodinger equation in relative and CM coordinates </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -909,7 +1001,7 @@ use the angular momentum \( j \).
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec18">Quantum numbers and the Schroedinger equation in relative and CM coordinates </h2>
+<h2 id="___sec20">Quantum numbers and the Schroedinger equation in relative and CM coordinates </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -939,7 +1031,7 @@ It is thus normal to label a state with a given total angular momentum as
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec19">Quantum numbers and the Schroedinger equation in relative and CM coordinates </h2>
+<h2 id="___sec21">Quantum numbers and the Schroedinger equation in relative and CM coordinates </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -967,7 +1059,7 @@ We call the basis \( |(j_1j_2)JM_J\rangle \) for the <b>coupled basis</b>, or ju
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec20">Quantum numbers </h2>
+<h2 id="___sec22">Quantum numbers </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -998,7 +1090,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec21">Components of the force and isospin </h2>
+<h2 id="___sec23">Components of the force and isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1013,7 +1105,7 @@ the neutron to have isospin projection \( \tau_z=+1/2 \) and a proton to have \(
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec22">Isospin </h2>
+<h2 id="___sec24">Isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1054,7 +1146,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec23">Isospin </h2>
+<h2 id="___sec25">Isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1087,7 +1179,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec24">Isospin </h2>
+<h2 id="___sec26">Isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1113,7 +1205,7 @@ as it should be.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec25">Isospin </h2>
+<h2 id="___sec27">Isospin </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1138,343 +1230,25 @@ If charge is conserved, the Hamiltonian \( \hat{H} \) commutes with \( \hat{T}_z
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec26">Two-body matrix elements </h2>
+<h2 id="___sec28">Angular momentum algebra </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-Till now we have not said anything about the explicit calculation of two-body matrix elements. It is time to amend this deficiency.
-We have till now seen the following definitions of a two-body matrix elements. In \( m \)-scheme
-with quantum numbers \( p=j_pm_p \) etc we have a two-body state defined as
-$$
-|(pq)M\rangle  = a^{\dagger}_pa^{\dagger}_q|\Phi_0\rangle,
-$$
-
-where \( |\Phi_0\rangle \) is a chosen reference state, say for example the Slater determinant which approximates \( {}^{16}\mbox{O} \) with the \( 0s \) and the \( 0p \) shells being filled, and \( M=m_p+m_q \). Recall that we label single-particle states above the Fermi level as \( abcd\dots \) and states below the Fermi level for \( ijkl\dots \).  
-In case of two-particles in the single-particle states \( a \) and \( b \) outside \( {}^{16}\mbox{O} \) as a closed shell core, say \( {}^{18}\mbox{O} \), 
-we would write the representation of the Slater determinant as
-$$
-|^{18}\mathrm{O}\rangle =|(ab)M\rangle  = a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle=|\Phi^{ab}\rangle.
-$$
-
-In case of two-particles removed from say \( {}^{16}\mbox{O} \), for example two neutrons in the single-particle states \( i \) and \( j \), we would write this as
-$$
-|^{14}\mathrm{O}\rangle =|(ij)M\rangle  = a_ja_i|^{16}\mathrm{O}\rangle=|\Phi_{ij}\rangle.
-$$
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec27">Two-body matrix elementsin \( m \)-scheme </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-For a one-hole-one-particle state we have
-$$
-|^{16}\mathrm{O}\rangle_{1p1h} =|(ai)M\rangle  = a_a^{\dagger}a_i|^{16}\mathrm{O}\rangle=|\Phi_{i}^a\rangle,
-$$
-
-and finally for a two-particle-two-hole state we 
-$$
-|^{16}\mathrm{O}\rangle_{2p2h} =|(abij)M\rangle  = a_a^{\dagger}a_b^{\dagger}a_ja_i|^{16}\mathrm{O}\rangle=|\Phi_{ij}^{ab}\rangle.
-$$
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec28">Two-body matrix elements in \( m \)-scheme </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-Let us go back to the case of two-particles in the single-particle states \( a \) and \( b \) outside \( {}^{16}\mbox{O} \) as a closed shell core, say \( {}^{18}\mbox{O} \).
-The representation of the Slater determinant is 
-$$
-|^{18}\mathrm{O}\rangle =|(ab)M\rangle  = a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle=|\Phi^{ab}\rangle.
-$$
-
-The anti-symmetrized matrix element is detailed as 
-$$
-\langle (ab) M | \hat{V} | (cd) M \rangle = \langle (j_am_aj_bm_b)M=m_a+m_b |  \hat{V} | (j_cm_cj_dm_d)M=m_a+m_b \rangle,
-$$
-
-and note that anti-symmetrization means 
-$$
-\langle (ab) M | \hat{V} | (cd) M \rangle =-\langle (ba) M | \hat{V} | (cd) M \rangle =\langle (ba) M | \hat{V} | (dc) M \rangle,
-$$
-
-$$
-\langle (ab) M | \hat{V} | (cd) M \rangle =-\langle (ab) M | \hat{V} | (dc) M \rangle. 
-$$
-
-This matrix element is the expectation value of 
-$$
-\langle ^{16}\mathrm{O}|a_ba_a\frac{1}{4}\sum_{pqrs}\langle (pq) M | \hat{V} | (rs) M' \rangle a^{\dagger}_pa^{\dagger}_qa_sa_r a^{\dagger}_ca^{\dagger}_c|^{16}\mathrm{O}\rangle.
-$$
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec29">Two-body matrix elements in \( J \)-scheme </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-We have also defined matrix elements in the coupled basis, the so-called \( J \)-coupled scheme.
-In this case the two-body wave function for two neutrons outside \( {}^{16}\mbox{O} \) is written as 
-$$
-|^{18}\mathrm{O}\rangle_J =|(ab)JM\rangle  = \left\{a^{\dagger}_aa^{\dagger}_b\right\}^J_M|^{16}\mathrm{O}\rangle=N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ab}\rangle, 
-$$
-
-with
-$$
-|\Phi^{ab}\rangle=a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle.
-$$
-
-We have now an explicit coupling order, where the angular momentum \( j_a \) is coupled to the angular momentum \( j_b \) to yield a final two-body angular momentum \( J \). 
-The normalization factor (to be derived below) is
-$$
-N_{ab}=\frac{\sqrt{1+\delta_{ab}\times (-1)^J}}{1+\delta_{ab}}.
-$$
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec30">Two-body matrix elements in \( J \)-scheme </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-The implementation of the Pauli principle looks different in the \( J \)-scheme compared with the \( m \)-scheme. In the latter, no two fermions or more can have the same set of quantum numbers. In the \( J \)-scheme, when we write a state with the shorthand 
-$$
-|^{18}\mathrm{O}\rangle_J =|(ab)JM\rangle,
-$$
-
-we do refer to the angular momenta only. This means that another way of writing the last state is
-$$
-|^{18}\mathrm{O}\rangle_J =|(j_aj_b)JM\rangle.
-$$
-
-We will use this notation throughout when we refer to a two-body state in \( J \)-scheme. The Kronecker \( \delta \) function in the normalization factor 
-refers thus to the values of \( j_a \) and \( j_b \). If two identical particles are in a state with the same \( j \)-value, then only even values of the total angular momentum apply.
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec31">Two-body matrix elements in \( J \)-scheme </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-Note also that, using the anti-commuting properties of the creation operators, we obtain
-$$
-N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM>|\Phi^{ab}\rangle=-N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ba}\rangle.
-$$
-
-Furthermore, using the property of the Clebsch-Gordan coefficient
-$$
-\langle j_am_aj_bm_b|JM>=(-1)^{j_a+j_b-J}\langle j_bm_bj_am_a|JM\rangle,
-$$
-
-which can be used to show that
-$$
-|(j_bj_a)JM\rangle  = \left\{a^{\dagger}_ba^{\dagger}_a\right\}^J_M|^{16}\mathrm{O}\rangle=N_{ab}\sum_{m_am_b}\langle j_bm_bj_am_a|JM\rangle|\Phi^{ba}\rangle, 
-$$
-
-is equal to 
-$$
-|(j_bj_a)JM\rangle=(-1)^{j_a+j_b-J+1}|(j_aj_b)JM\rangle.
-$$
-
-This relation is important since we will need it when using anti-symmetrized matrix elements in \( J \)-scheme.
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec32">Two-body matrix elements in \( J \)-scheme </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-The two-body matrix element is a scalar and since it obeys rotational symmetry, it is diagonal in \( J \), 
-meaning that the corresponding matrix element in \( J \)-scheme is 
-$$
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_b m_cm_d}\langle j_am_aj_bm_b|JM\rangle
-$$
-
-$$\times \langle j_cm_cj_dm_d|JM\rangle\langle (j_am_aj_bm_b)M |  \hat{V} | (j_cm_cj_dm_d)M \rangle,
-$$
-
-and note that of the four \( m \)-values in the above sum, only three are independent due to the constraint \( m_a+m_b=M=m_c+m_d \).
-Since
-$$
-|(j_bj_a)JM\rangle=(-1)^{j_a+j_b-J+1}|(j_aj_b)JM\rangle,
-$$
-
-the anti-symmetrized matrix elements need now to obey the following relations
-$$
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_a+j_b-J+1}\langle (j_bj_a) JM | \hat{V} | (j_cj_d) JM \rangle,
-$$
-
-$$
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_c+j_d-J+1}\langle (j_aj_b) JM | \hat{V} | (j_dj_c) JM \rangle,
-$$
-
-$$
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_a+j_b+j_c+j_d}\langle (j_bj_a) JM | \hat{V} | (j_dj_c) JM \rangle=\langle (j_bj_a) JM | \hat{V} | (j_dj_c) JM \rangle,
-$$
-
-where the last relations follows from the fact that \( J \) is an integer and \( 2J \) is always an even number.
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec33">Two-body matrix elements in \( J \)-scheme </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-Using the orthogonality properties of the Clebsch-Gordan coefficients,
-$$
-\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle\langle j_am_aj_bm_b|J'M'\rangle=\delta_{JJ'}\delta_{MM'},
-$$
-
-and
-$$
-\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_am_a'j_bm_b'|JM\rangle=\delta_{m_am_a'}\delta_{m_bm_b'},
-$$
-
-we can also express the two-body matrix element in \( m \)-scheme in terms of that in \( J \)-scheme, that is, if we multiply with 
-$$
-\sum_{JMJ'M'}\langle j_am_a'j_bm_b'|JM\rangle\langle j_cm_c'j_dm_d'|J'M'\rangle
-$$
-
-from left in
-$$
-\langle (j_a j_b) JM | \hat{V} | (j_c j_d) JM \rangle = N_{ab}N_{cd}\sum_{m_a m_b m_c m_d}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle
-$$
-
-$$
-\times \langle (j_am_aj_bm_b)M|  \hat{V} | (j_cm_cj_dm_d)M\rangle,
-$$
-
-we obtain
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec34">Two-body matrix elements in \( J \)-scheme </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-we obtain
-$$
-\langle (j_am_aj_bm_b)M |  \hat{V} | (j_cm_cj_dm_d)M\rangle=\frac{1}{N_{ab}N_{cd}}\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle
-$$
-
-$$
-\times \langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle.
-$$
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec35">Exercise 12 </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-A simple parametrization of the nucleon-nucleon force is given by what is called the \( V_8 \) potential model,
-where we have kept eight different operators. These operators contain a central force, a spin-orbit force,
-a spin-spin force and a tensor force. Several features of the nuclei can be explained in terms of these four components. Without the Pauli matrices for isospin the final form of such an interaction model results in the following form: 
-$$
-V(\mathbf{r})= \left\{ C_c + C_\mathbf{\sigma} \mathbf{\sigma}_1\cdot\mathbf{\sigma}_2
- + C_T \left( 1 + {3\over m_\alpha r} + {3\over\left(m_\alpha r\right)^2}\right) S_{12} (\hat r)\right. 
-$$
-
-$$
-\left. + C_{SL} \left( {1\over m_\alpha r} + {1\over \left( m_\alpha r\right)^2}
-\right) \mathbf{L}\cdot \mathbf{S}
-\right\} \frac{e^{-m_\alpha r}}{m_\alpha r}
-$$
-
-where \( m_{\alpha} \) is the mass of the relevant meson and
-\( S_{12} \) is the familiar tensor term. The various coefficients \( C_i \) are normally fitted so that the potential reproduces experimental scattering cross sections. By adding terms which include the isospin Pauli matrices 
-results in an interaction model with eight operators.
-
-<p>
-The expectaction value of the tensor operator is non-zero only for \( S=1 \). We will show this in a forthcoming lecture, after that we have derived the Wigner-Eckart theorem. 
-Here it suffices to know that the expectaction value of the tensor force for different partial values is  (with \( l \) the orbital angular momentum and \( {\cal J} \) the total angular momentum in the relative and center-of-mass frame of motion)
-$$
-\langle l {\cal J}S=1| S_{12} | l' {\cal J}S=1\rangle = -\frac{2{\cal J}({\cal J}+2)}{2{\cal J}+1} \hspace{0.5cm} l= {\cal J}+1 \hspace{0.1cm}\mathrm{and} \hspace{0.1cm} l'={\cal J}+1,
-$$
-
-$$
-\langle l {\cal J}S=1| S_{12} | l' {\cal J}S=1\rangle = \frac{6\sqrt{{\cal J}({\cal J}+1)}}{2{\cal J}+1} \hspace{0.5cm} l= {\cal J}+1 \hspace{0.1cm}\mathrm{and} \hspace{0.1cm} l'={\cal J}-1,
-$$
-
-$$
-\langle l {\cal J}S=1| S_{12} | l' {\cal J}S=1\rangle = \frac{6\sqrt{{\cal J}({\cal J}+1)}}{2{\cal J}+1} \hspace{0.5cm} l= {\cal J}-1 \hspace{0.1cm}\mathrm{and} \hspace{0.1cm} l'={\cal J}+1,
-$$
-
-$$
-\langle l {\cal J}S=1| S_{12} | l' {\cal J}S=1\rangle = -\frac{2({\cal J}-1)}{2{\cal J}+1} \hspace{0.5cm} l= {\cal J}-1 \hspace{0.1cm}\mathrm{and} \hspace{0.1cm} l'={\cal J}-1,
-$$
-
-$$
-\langle l {\cal J}S=1| S_{12} | l' {\cal J}S=1\rangle = 2 \hspace{0.5cm} l= {\cal J} \hspace{0.1cm}\mathrm{and} \hspace{0.1cm} l'={\cal J},
-$$
-
-and zero else.
-
-<p>
-In this exercise we will focus only on the one-pion exchange term of the nuclear force, namely
-$$
-V_{\pi}(\mathbf{r})= -\frac{f_{\pi}^{2}}{4\pi m_{\pi}^{2}}\mathbf{ \tau}_1\cdot\mathbf{\tau}_2
-\frac{1}{3}\left\{\mathbf{ \sigma}_1\cdot\mathbf{ \sigma}_2+\left( 1 + {3\over m_\pi r} + {3\over\left(m_\pi r\right)^2}\right) S_{12} (\hat r)\right\} \frac{e^{-m_\pi r}}{m_\pi r}.
-$$
-
-Here the constant \( f_{\pi}^{2}/4\pi\approx 0.08 \) and the mass of the pion is \( m_\pi\approx 140 \) MeV/c${}^{2}$. 
-
-<ol>
-<li> Compute the expectation value of the tensor force and the spin-spin  and isospin operators for the one-pion exchange potential for all partial waves you found in exercise 9. Comment your results. How does the one-pion exchange part behave as function of different \( l \), \( {\cal J} \) and \( S \) values? Do you see some patterns?</li>
-<li> For the binding energy of the deuteron, with the ground state defined by the quantum numbers \( l=0 \), \( S=1 \) and \( {\cal J}=1 \), the tensor force plays an important role due to the admixture from the \( l=2 \) state. Use the expectation values of the different operators of the one-pion exchange potential and plot the ratio of the tensor force component over the spin-spin component of the one-pion exchange part as function of \( x=m_\pi r \) for the \( l=2 \) state (that is the case \( l,l'={\cal J}+1 \)). Comment your results.</li> 
-</ol>
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec36">Angular momentum algebra </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+We are now going to define two-body and many-body states in an angular momentum coupled basis, the so-called \( j \)-scheme basis.  In this connection
 
 <ul>
-<li> We need to define the so-called \( 6j \) and \( 9j \) symbols</li>
-<li> The Wigner-Eckart theorem</li>
-<li> We will also study  some specific examples, like the calculation of the tensor force.</li>
+<li> we need to define the so-called \( 6j \) and \( 9j \) symbols</li>
+<li> as well as the the Wigner-Eckart theorem</li>
 </ul>
 
-Here you can look up Alex Brown's chapter 5 and Suhonen's chapters 1 and 2.
+We will also study  some specific examples, like the calculation of the tensor force.
 </div>
 
 
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec37">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec29">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1494,7 +1268,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec38">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec30">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1518,7 +1292,7 @@ is also a tensor operator of rank \( \lambda_3 \).
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec39">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec31">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1543,7 +1317,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec40">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec32">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1565,7 +1339,7 @@ is independent of \( M \), we use the ladder operators for angular momentum.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec41">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec33">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1593,7 +1367,7 @@ The double bars indicate that this expectation value is independent of the proje
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec42">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec34">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1626,7 +1400,7 @@ with the condition \( \mu+M'-M=0 \).
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec43">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec35">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1649,7 +1423,7 @@ $$
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec44">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec36">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1665,7 +1439,7 @@ and
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec45">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec37">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1684,7 +1458,7 @@ where we used the orthogonality properties of the \( 3j \) symbols from the prev
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec46">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec38">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1701,7 +1475,7 @@ $$
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec47">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec39">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1725,7 +1499,7 @@ Before we proceed with further examples, we need some other properties of the Wi
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec48">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec40">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1750,7 +1524,7 @@ meaning that if we know the matrix elements for say some \( \mu=\mu_0 \), \( M'=
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec49">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec41">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1779,7 +1553,7 @@ $$
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec50">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec42">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1805,7 +1579,7 @@ does satisfy the above commutation relations.
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec51">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec43">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1834,7 +1608,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec52">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec44">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1862,7 +1636,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec53">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec45">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1881,7 +1655,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec54">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec46">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1910,7 +1684,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec55">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec47">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1924,7 +1698,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec56">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec48">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1950,7 +1724,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec57">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec49">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1972,7 +1746,7 @@ refers thus to the values of \( j_a \) and \( j_b \). If two identical particles
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec58">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec50">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2004,7 +1778,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec59">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec51">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2025,7 +1799,7 @@ and note that of the four \( m \)-values in the above sum, only three are indepe
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec60">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec52">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2056,7 +1830,7 @@ where the last relations follows from the fact that \( J \) is an integer and \(
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec61">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec53">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2098,7 +1872,113 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec62">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec54">The Hartree-Fock potential </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We can now use the above relations to compute the Hartre-Fock energy in \( j \)-scheme. 
+In \( m \)-scheme we defined the Hartree-Fock energy as 
+$$
+\varepsilon_{pq}^{\mathrm{HF}}=\delta_{pq}\varepsilon_p+  \sum_{i\le F} \langle pi \vert \hat{V} \vert qi\rangle_{AS},
+$$
+
+where the single-particle states \( pqi \) point to the quantum numbers in \( m \)-scheme. For a state with for example \( j=5/2 \), this results in six identical values for the above potential. We would obviously like to reduce this to one only by rewriting our equations in \( j \)-scheme.
+
+<p>
+Our Hartree-Fock basis is orthogonal by definition, meaning that we have
+$$
+\varepsilon_{p}^{\mathrm{HF}}=\varepsilon_p+  \sum_{i\le F} \langle pi \vert \hat{V} \vert pi\rangle_{AS},
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec55">The Hartree-Fock potential </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We have
+$$
+\varepsilon_{p}^{\mathrm{HF}}=\varepsilon_p+  \sum_{i\le F} \langle pi \vert \hat{V} \vert pi\rangle_{AS},
+$$
+
+where the single-particle  states \( p=[n_p,j_p,m_p,t_{z_{p}}] \). Let us assume that \( p \) is a state above the Fermi level. The quantity \( \varepsilon_p \) could represent the harmonic oscillator single-particle energies.
+
+<p>
+Let  \( p\rightarrow a \).
+
+<p>
+The energies, as we have seen, are independent of \( m_a \) and \( m_i \). 
+We sum now over all \( m_a \) on both sides of the above equation and divide by \( 2j_a+1 \), recalling that \( \sum_{m_a}=2j_a+1 \).  This results in 
+$$
+\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{i\le F}\sum_{m_a} \langle ai \vert \hat{V}\vert ai\rangle_{AS},
+$$
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec56">The Hartree-Fock potential </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We rewrite 
+$$
+\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{i\le F}\sum_{m_a} \langle ai \vert \hat{V} \vert ai\rangle_{AS},
+$$
+
+as
+$$
+\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{n_i,j_i,t_{z_{i}}\le F}\sum_{m_im_a} 
+\langle (j_am_aj_im_i)M |  \hat{V} | (j_am_aj_im_i)M\rangle_{AS},
+$$
+
+where we have suppressed  the dependence on \( n_p \) and \( t_z \) in the matrix element. 
+Using the definition
+$$
+\langle (j_am_aj_bm_b)M \vert  \hat{V} \vert (j_cm_cj_dm_d)M\rangle=\frac{1}{N_{ab}N_{cd}}\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle,
+$$
+
+with the orthogonality properties of Glebsch-Gordan coefficients and that the  \( j \)-coupled two-body matrix element is a scalar and independent of \( M \) we arrive at 
+$$
+\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{n_i,j_i,t_{z_{i}}\le F}\sum_J (2J+1)
+\langle (j_aj_i)J \vert \hat{V} \vert (j_aj_i)M\rangle_{AS},
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec57">First order in the potential energy </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In a similar way it is easy to show that the potential energy contribution to the ground state energy in \( m \)-scheme
+$$
+\frac{1}{2}\sum_{n_i,j_i,m_i,t_{z_{i}}\le F}\sum_{n_j,j_j,m_j,t_{z_{j}}\le F}
+\langle (j_im_ij_jm_j)M |  \hat{V} | (j_im_ij_jm_j)M\rangle_{AS},
+$$
+
+can be rewritten as
+$$
+\frac{1}{2}\sum_{n_i,j_i,t_{z_{i}}\le F}\sum_{n_j,j_j,t_{z_{j}}\le F}\sum_J(2J+1)
+\langle (j_ij_j)J |  \hat{V} | (j_ij_j)J\rangle_{AS},
+$$
+
+This reduces the number of floating point operations with an order of magnitude on average.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec58">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2120,7 +2000,7 @@ We will come back later to how we split the above into a contribution that invol
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec63">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec59">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2141,7 +2021,7 @@ This equation is true for all values of \( \theta \) and \( \phi \). It must als
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec64">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec60">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2165,11 +2045,11 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec65">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec61">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-Till now we have mainly been concerned with the coupling of two angular momenta $j_aj_b$to a final angular momentum \( J \).
+Till now we have mainly been concerned with the coupling of two angular momenta \( j_{a} \) and \( j_{b} \) to a final angular momentum \( J \).
 If we wish to describe a three-body state with a final angular momentum \( J \), we need to couple three angular momenta, say 
 the two momenta \( j_a,j_b \) to a third one \( j_c \). The coupling order is important and leads to a less trivial implementation of the 
 Pauli principle. With three angular momenta there are obviously \( 3! \) ways by which we can combine the angular momenta. 
@@ -2185,14 +2065,14 @@ The Pauli principle is automagically implemented via the anti-commutation relati
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec66">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec62">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 However, when we deal the same state in an angular momentum coupled basis, we need to be a little bit more careful. We can namely couple the states
 as follows
 $$
-| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) J\rangle= \sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle|j_am_a\rangle\otimes |j_bm_b\rangle \otimes |j_cm_c\rangle \ , 
+\vert([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) J\rangle= \sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle|j_am_a\rangle\otimes |j_bm_b\rangle \otimes |j_cm_c\rangle \ , 
 \label{eq:fabc}
 $$
 
@@ -2205,7 +2085,7 @@ that is, we couple first \( j_a \) to \( j_b \) to yield an intermediate angular
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec67">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec63">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2214,18 +2094,18 @@ Now, nothing hinders us from recoupling this state by coupling \( j_b \) to \( j
 <p>
 That is, we can have 
 $$
-| (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) J\rangle = \sum_{m_a'm_b'm_c'}\langle j_bm_b'j_cm_c'|J_{bc}M_{bc}\rangle \langle j_am_a'J_{bc}M_{bc}|J'M'\rangle|\Phi^{abc}\rangle .
+\vert(j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) J\rangle = \sum_{m_a'm_b'm_c'}\langle j_bm_b'j_cm_c'|J_{bc}M_{bc}\rangle \langle j_am_a'J_{bc}M_{bc}|J'M'\rangle|\Phi^{abc}\rangle .
 $$
 
 We will always assume that we work with orthornormal states, this means that when we compute the overlap betweem these two possible ways of coupling angular momenta, we get 
 $$
-\begin{eqnarray}
-\nonumber
-\lefteqn{ \langle (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) J'M'| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle = } \\
-\nonumber
-& & \delta_{JJ'}\delta_{MM'}\sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle \\
-& & \times \langle j_bm_bj_cm_c|J_{bc}M_{bc}\rangle \langle j_am_aJ_{bc}M_{bc}|JM\rangle . \nonumber
-\end{eqnarray}
+\begin{align}
+\langle (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) J'M'| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle = &
+\delta_{JJ'}\delta_{MM'}\sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle 
+\label{_auto1}\\
+& \times \langle j_bm_bj_cm_c|J_{bc}M_{bc}\rangle \langle j_am_aJ_{bc}M_{bc}|JM\rangle . 
+\label{_auto2}
+\end{align}
 $$
 
 
@@ -2235,23 +2115,21 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec68">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec64">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 We use then the latter equation to define the so-called \( 6j \)-symbols
 $$
 \begin{eqnarray}
-\nonumber
-\lefteqn{ \langle (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) J'M'| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle } \\ \nonumber
-&= & \delta_{JJ'}\delta_{MM'}\sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle \\ \nonumber
-& &  \times \langle j_bm_bj_cm_c|J_{bc}M_{bc}\rangle \langle j_am_aJ_{bc}M_{bc}|JM\rangle  \\ \nonumber
-&= & (-1)^{j_a+j_b+j_c+J}\sqrt{(2J_{ab}+1)(2J_{bc}+1)}\left\{\begin{array}{ccc} j_a & j_b& J_{ab} \\ j_c & J & J_{bc} \end{array}\right\}
-, \nonumber
+\langle (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) J'M'| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle & = & \delta_{JJ'}\delta_{MM'}\sum_{m_am_bm_c}\langle j_am_aj_bm_b|J_{ab}M_{ab}\rangle \langle J_{ab}M_{ab}j_cm_c|JM\rangle \\ \nonumber
+& & \times \langle j_bm_bj_cm_c|J_{bc}M_{bc}\rangle \langle j_am_aJ_{bc}M_{bc}|JM\rangle  \\ \nonumber
+& =&(-1)^{j_a+j_b+j_c+J}\sqrt{(2J_{ab}+1)(2J_{bc}+1)}\left\{\begin{array}{ccc} j_a & j_b& J_{ab} \\ j_c & J & J_{bc} \end{array}\right\} , 
 \end{eqnarray}
 $$
 
-where the symbol in curly brackets \( \{\} \) is the \( 6j \) symbol. 
+<p>
+where the symbol in curly brackets is the \( 6j \) symbol. 
 A specific coupling order has to be respected in the symbol, that is, the so-called triangular relations between three angular momenta needs to be respected, that is 
 $$
 \left\{\begin{array}{ccc} x & x& x \\  &  &  \end{array}\right\}\hspace{0.1cm}\left\{\begin{array}{ccc}  & & x \\  x& x &  \end{array}\right\}\hspace{0.1cm}\left\{\begin{array}{ccc}  & x&  \\ x &  &x  \end{array}\right\}\hspace{0.1cm}\left\{\begin{array}{ccc} x & &  \\  & x &x  \end{array}\right\}\hspace{0.1cm}
@@ -2264,7 +2142,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec69">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec65">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2285,7 +2163,45 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec70">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec66">Testing properties of \( 6j \) symbols </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The above properties of \( 6j \) symbols can again be tested using the symbolic python package <b>wigner</b>. 
+Let us test the invariance
+$$
+    \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6 \end{Bmatrix} = \begin{Bmatrix} j_2 & j_1 & j_3\\ j_5 & j_4 & j_6 \end{Bmatrix}. . 
+$$
+
+<p>
+The following program tests this relation for the case of \( j_1=3/2 \), \( j_2=3/2 \), \( j_3=3 \), \( j_4=1/2 \), \( j_5=1/2 \), \( j_6=1 \)
+<p>
+
+
+<div class="compute"><script type="text/x-sage">
+from sympy import S
+from sympy.physics.wigner import wigner_6j
+# Twice the values of all js
+j1 = 3
+j2 = 5
+j3 = 2
+j4 = 3
+j5 = 5
+j6 = 1
+""" The triangular relation has to be fulfilled """
+print wigner_6j(S(j1)/2, S(j2)/2, j3, S(j4)/2, S(j5)/2, j6)
+""" Swapping columns 1 <==> 2 """
+print wigner_6j(S(j2)/2, S(j1)/2, j3, S(j5)/2, S(j4)/2, j6)
+
+</script></div>
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec67">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2307,20 +2223,14 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec71">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec68">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 With the \( 6j \) symbol defined, we can go back and and rewrite the overlap between the two ways of recoupling angular momenta in terms of the \( 6j \) symbol.
 That is, we can have  
 $$
-\begin{eqnarray}
-\nonumber
-\lefteqn{| (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) JM\rangle = } \\
-\nonumber
-& &\sum_{J_{ab}}(-1)^{j_a+j_b+j_c+J}\sqrt{(2J_{ab}+1)(2J_{bc}+1)}\left\{\begin{array}{ccc} j_a & j_b& J_{ab} \\ j_c & J & J_{bc} \end{array}\right\}| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle
-. \nonumber
-\end{eqnarray}
+\vert (j_a\rightarrow [j_b\rightarrow j_c]J_{bc}) JM\rangle =\sum_{J_{ab}}(-1)^{j_a+j_b+j_c+J}\sqrt{(2J_{ab}+1)(2J_{bc}+1)}\left\{\begin{array}{ccc} j_a & j_b& J_{ab} \\ j_c & J & J_{bc} \end{array}\right\}| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle.
 $$
 
 Can you find the inverse relation?  
@@ -2332,7 +2242,7 @@ If you opt then for a specific coupling order, say \( | ([j_a\rightarrow j_b]J_{
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec72">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec69">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2355,7 +2265,7 @@ expression for the above three-body state using the coupling order \( | ([j_a\ri
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec73">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec70">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2377,7 +2287,7 @@ $$
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec74">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec71">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2407,7 +2317,7 @@ involves six.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec75">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec72">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2433,7 +2343,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec76">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec73">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2447,7 +2357,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec77">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec74">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2478,7 +2388,7 @@ How do we get here?
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec78">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec75">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2508,7 +2418,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec79">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec76">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2542,7 +2452,7 @@ due to orthogonality of the states.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec80">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec77">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2574,7 +2484,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec81">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec78">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2596,7 +2506,7 @@ $$
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec82">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec79">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2615,7 +2525,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec83">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec80">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2653,7 +2563,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec84">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec81">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2679,7 +2589,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec85">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec82">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2700,7 +2610,7 @@ $$
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec86">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec83">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2728,7 +2638,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec87">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec84">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2752,7 +2662,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec88">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec85">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2790,7 +2700,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec89">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec86">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2811,7 +2721,7 @@ below.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec90">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec87">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2836,7 +2746,7 @@ The parameter \( \alpha \) is the chosen oscillator length.
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec91">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec88">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2869,7 +2779,7 @@ is the so-called Moshinsky-Talmi transformation coefficient (see chapter 18 of A
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec92">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec89">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2897,7 +2807,7 @@ The factor \( F \) is defined as \( F=\frac{1-(-1)^{l+S+T}}{\sqrt{2}} \) if
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec93">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<h2 id="___sec90">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>

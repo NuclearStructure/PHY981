@@ -1,17 +1,9 @@
 # Slides for PHY981
-TITLE: Nuclear Shell Model
+TITLE: Nuclear Shell Model, how to develop a shell-model code
 AUTHOR: Morten Hjorth-Jensen {copyright, 2013-present|CC BY-NC} at "National Superconducting Cyclotron Laboratory":"http://www.nscl.msu.edu/" and "Department of Physics and Astronomy":"https://www.pa.msu.edu/", "Michigan State University":"http://www.msu.edu/", East Lansing, MI 48824, USA
 DATE:  Spring 2016
 
 
-!split
-===== Nuclear shell model =====
-!bblock 
-
-The topics covered in this and next week's lectures can be found in Alex Brown's lecture notes, chapters 5, 18, 21-22.
-See also Suhonen's chapter's 2 and 5.
-
-!eblock
 
 !split
 ===== Slater determinants as basis states, Repetition =====
