@@ -6,9 +6,9 @@ Automatically generated HTML file from DocOnce source
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
-<meta name="description" content="Nuclear Shell Model, how to develop a shell-model code">
+<meta name="description" content="Nuclear Shell Model">
 
-<title>Nuclear Shell Model, how to develop a shell-model code</title>
+<title>Nuclear Shell Model</title>
 
 <!-- Bootstrap style: bootstrap -->
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -31,21 +31,18 @@ Automatically generated HTML file from DocOnce source
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [('Slater determinants as basis states, Repetition',
-               2,
-               None,
-               '___sec0'),
-              ('Slater determinants as basis states, repetition',
+ 'sections': [('Nuclear shell model', 2, None, '___sec0'),
+              ('Slater determinants as basis states, Repetition',
                2,
                None,
                '___sec1'),
-              ('Slater determinants as basis states', 2, None, '___sec2'),
-              ('Slater determinants as basis states', 2, None, '___sec3'),
-              ('Quick repetition of the occupation representation',
+              ('Slater determinants as basis states, repetition',
                2,
                None,
-               '___sec4'),
-              ('Quick repetition  of the occupation representation',
+               '___sec2'),
+              ('Slater determinants as basis states', 2, None, '___sec3'),
+              ('Slater determinants as basis states', 2, None, '___sec4'),
+              ('Quick repetition of the occupation representation',
                2,
                None,
                '___sec5'),
@@ -53,40 +50,43 @@ Automatically generated HTML file from DocOnce source
                2,
                None,
                '___sec6'),
-              ('Full Configuration Interaction Theory', 2, None, '___sec7'),
+              ('Quick repetition  of the occupation representation',
+               2,
+               None,
+               '___sec7'),
               ('Full Configuration Interaction Theory', 2, None, '___sec8'),
               ('Full Configuration Interaction Theory', 2, None, '___sec9'),
               ('Full Configuration Interaction Theory', 2, None, '___sec10'),
               ('Full Configuration Interaction Theory', 2, None, '___sec11'),
-              ('Example of a Hamiltonian matrix', 2, None, '___sec12'),
+              ('Full Configuration Interaction Theory', 2, None, '___sec12'),
+              ('Example of a Hamiltonian matrix', 2, None, '___sec13'),
               ('Example of a Hamiltonian matrix with a Hartree-Fock basis',
                2,
                None,
-               '___sec13'),
-              ('Shell-model jargon', 2, None, '___sec14'),
-              ('FCI and the exponential growth', 2, None, '___sec15'),
-              ('Exponential wall', 2, None, '___sec16'),
+               '___sec14'),
+              ('Shell-model jargon', 2, None, '___sec15'),
+              ('FCI and the exponential growth', 2, None, '___sec16'),
+              ('Exponential wall', 2, None, '___sec17'),
               ('A non-practical way of solving the eigenvalue problem',
                2,
                None,
-               '___sec17'),
-              ('Rewriting the FCI equation', 2, None, '___sec18'),
+               '___sec18'),
               ('Rewriting the FCI equation', 2, None, '___sec19'),
+              ('Rewriting the FCI equation', 2, None, '___sec20'),
               ('Rewriting the FCI equation, does not stop here',
                2,
                None,
-               '___sec20'),
+               '___sec21'),
               ('Rewriting the FCI equation, more to add',
                2,
                None,
-               '___sec21'),
+               '___sec22'),
               ('Summarizing FCI and bringing in approximative methods',
                2,
                None,
-               '___sec22'),
-              ('Definition of the correlation energy', 2, None, '___sec23'),
-              ('FCI equation and the coefficients', 2, None, '___sec24'),
-              ('Building a many-body basis', 2, None, '___sec25'),
+               '___sec23'),
+              ('Definition of the correlation energy', 2, None, '___sec24'),
+              ('FCI equation and the coefficients', 2, None, '___sec25'),
               ('Building a many-body basis', 2, None, '___sec26'),
               ('Building a many-body basis', 2, None, '___sec27'),
               ('Building a many-body basis', 2, None, '___sec28'),
@@ -97,8 +97,8 @@ Automatically generated HTML file from DocOnce source
               ('Building a many-body basis', 2, None, '___sec33'),
               ('Building a many-body basis', 2, None, '___sec34'),
               ('Building a many-body basis', 2, None, '___sec35'),
-              ('Project 2', 2, None, '___sec36'),
-              ('Project 2, step 1', 2, None, '___sec37'),
+              ('Building a many-body basis', 2, None, '___sec36'),
+              ('Project 2', 2, None, '___sec37'),
               ('Project 2, step 1', 2, None, '___sec38'),
               ('Project 2, step 1', 2, None, '___sec39'),
               ('Project 2, step 1', 2, None, '___sec40'),
@@ -114,7 +114,7 @@ Automatically generated HTML file from DocOnce source
               ('Project 2, step 1', 2, None, '___sec50'),
               ('Project 2, step 1', 2, None, '___sec51'),
               ('Project 2, step 1', 2, None, '___sec52'),
-              ('Example case: pairing Hamiltonian', 2, None, '___sec53'),
+              ('Project 2, step 1', 2, None, '___sec53'),
               ('Example case: pairing Hamiltonian', 2, None, '___sec54'),
               ('Example case: pairing Hamiltonian', 2, None, '___sec55'),
               ('Example case: pairing Hamiltonian', 2, None, '___sec56'),
@@ -122,7 +122,8 @@ Automatically generated HTML file from DocOnce source
               ('Example case: pairing Hamiltonian', 2, None, '___sec58'),
               ('Example case: pairing Hamiltonian', 2, None, '___sec59'),
               ('Example case: pairing Hamiltonian', 2, None, '___sec60'),
-              ('Example case: pairing Hamiltonian', 2, None, '___sec61')]}
+              ('Example case: pairing Hamiltonian', 2, None, '___sec61'),
+              ('Example case: pairing Hamiltonian', 2, None, '___sec62')]}
 end of tocinfo -->
 
 <body>
@@ -152,7 +153,7 @@ MathJax.Hub.Config({
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="fci-bs.html">Nuclear Shell Model, how to develop a shell-model code</a>
+    <a class="navbar-brand" href="fci-bs.html">Nuclear Shell Model</a>
   </div>
 
   <div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -160,32 +161,32 @@ MathJax.Hub.Config({
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="._fci-bs001.html#___sec0" style="font-size: 80%;">Slater determinants as basis states, Repetition</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs002.html#___sec1" style="font-size: 80%;">Slater determinants as basis states, repetition</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs003.html#___sec2" style="font-size: 80%;">Slater determinants as basis states</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs001.html#___sec0" style="font-size: 80%;">Nuclear shell model</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs002.html#___sec1" style="font-size: 80%;">Slater determinants as basis states, Repetition</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs003.html#___sec2" style="font-size: 80%;">Slater determinants as basis states, repetition</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs004.html#___sec3" style="font-size: 80%;">Slater determinants as basis states</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs005.html#___sec4" style="font-size: 80%;">Quick repetition of the occupation representation</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs006.html#___sec5" style="font-size: 80%;">Quick repetition  of the occupation representation</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs005.html#___sec4" style="font-size: 80%;">Slater determinants as basis states</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs006.html#___sec5" style="font-size: 80%;">Quick repetition of the occupation representation</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs007.html#___sec6" style="font-size: 80%;">Quick repetition  of the occupation representation</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs008.html#___sec7" style="font-size: 80%;">Full Configuration Interaction Theory</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs008.html#___sec7" style="font-size: 80%;">Quick repetition  of the occupation representation</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs009.html#___sec8" style="font-size: 80%;">Full Configuration Interaction Theory</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs010.html#___sec9" style="font-size: 80%;">Full Configuration Interaction Theory</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs011.html#___sec10" style="font-size: 80%;">Full Configuration Interaction Theory</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs012.html#___sec11" style="font-size: 80%;">Full Configuration Interaction Theory</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs013.html#___sec12" style="font-size: 80%;">Example of a Hamiltonian matrix</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs014.html#___sec13" style="font-size: 80%;">Example of a Hamiltonian matrix with a Hartree-Fock basis</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs015.html#___sec14" style="font-size: 80%;">Shell-model jargon</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs016.html#___sec15" style="font-size: 80%;">FCI and the exponential growth</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs017.html#___sec16" style="font-size: 80%;">Exponential wall</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs018.html#___sec17" style="font-size: 80%;">A non-practical way of solving the eigenvalue problem</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs019.html#___sec18" style="font-size: 80%;">Rewriting the FCI equation</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs013.html#___sec12" style="font-size: 80%;">Full Configuration Interaction Theory</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs014.html#___sec13" style="font-size: 80%;">Example of a Hamiltonian matrix</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs015.html#___sec14" style="font-size: 80%;">Example of a Hamiltonian matrix with a Hartree-Fock basis</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs016.html#___sec15" style="font-size: 80%;">Shell-model jargon</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs017.html#___sec16" style="font-size: 80%;">FCI and the exponential growth</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs018.html#___sec17" style="font-size: 80%;">Exponential wall</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs019.html#___sec18" style="font-size: 80%;">A non-practical way of solving the eigenvalue problem</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs020.html#___sec19" style="font-size: 80%;">Rewriting the FCI equation</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs021.html#___sec20" style="font-size: 80%;">Rewriting the FCI equation, does not stop here</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs022.html#___sec21" style="font-size: 80%;">Rewriting the FCI equation, more to add</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs023.html#___sec22" style="font-size: 80%;">Summarizing FCI and bringing in approximative methods</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs024.html#___sec23" style="font-size: 80%;">Definition of the correlation energy</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs025.html#___sec24" style="font-size: 80%;">FCI equation and the coefficients</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs026.html#___sec25" style="font-size: 80%;">Building a many-body basis</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs021.html#___sec20" style="font-size: 80%;">Rewriting the FCI equation</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs022.html#___sec21" style="font-size: 80%;">Rewriting the FCI equation, does not stop here</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs023.html#___sec22" style="font-size: 80%;">Rewriting the FCI equation, more to add</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs024.html#___sec23" style="font-size: 80%;">Summarizing FCI and bringing in approximative methods</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs025.html#___sec24" style="font-size: 80%;">Definition of the correlation energy</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs026.html#___sec25" style="font-size: 80%;">FCI equation and the coefficients</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs027.html#___sec26" style="font-size: 80%;">Building a many-body basis</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs028.html#___sec27" style="font-size: 80%;">Building a many-body basis</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs029.html#___sec28" style="font-size: 80%;">Building a many-body basis</a></li>
@@ -196,8 +197,8 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._fci-bs034.html#___sec33" style="font-size: 80%;">Building a many-body basis</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs035.html#___sec34" style="font-size: 80%;">Building a many-body basis</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs036.html#___sec35" style="font-size: 80%;">Building a many-body basis</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs037.html#___sec36" style="font-size: 80%;">Project 2</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs038.html#___sec37" style="font-size: 80%;">Project 2, step 1</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs037.html#___sec36" style="font-size: 80%;">Building a many-body basis</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs038.html#___sec37" style="font-size: 80%;">Project 2</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs039.html#___sec38" style="font-size: 80%;">Project 2, step 1</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs040.html#___sec39" style="font-size: 80%;">Project 2, step 1</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs041.html#___sec40" style="font-size: 80%;">Project 2, step 1</a></li>
@@ -213,7 +214,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._fci-bs051.html#___sec50" style="font-size: 80%;">Project 2, step 1</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs052.html#___sec51" style="font-size: 80%;">Project 2, step 1</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs053.html#___sec52" style="font-size: 80%;">Project 2, step 1</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs054.html#___sec53" style="font-size: 80%;">Example case: pairing Hamiltonian</a></li>
+     <!-- navigation toc: --> <li><a href="._fci-bs054.html#___sec53" style="font-size: 80%;">Project 2, step 1</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs055.html#___sec54" style="font-size: 80%;">Example case: pairing Hamiltonian</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs056.html#___sec55" style="font-size: 80%;">Example case: pairing Hamiltonian</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs057.html#___sec56" style="font-size: 80%;">Example case: pairing Hamiltonian</a></li>
@@ -222,6 +223,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._fci-bs060.html#___sec59" style="font-size: 80%;">Example case: pairing Hamiltonian</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs061.html#___sec60" style="font-size: 80%;">Example case: pairing Hamiltonian</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs062.html#___sec61" style="font-size: 80%;">Example case: pairing Hamiltonian</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec62" style="font-size: 80%;">Example case: pairing Hamiltonian</a></li>
 
         </ul>
       </li>
@@ -234,54 +236,70 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0063"></a>
+<!-- !split -->
 
-<!-- Slides for PHY981 -->
-
-
-<div class="jumbotron">
-<center><h1>Nuclear Shell Model, how to develop a shell-model code</h1></center>  <!-- document title -->
+<h2 id="___sec62">Example case: pairing Hamiltonian </h2>
+<div class="panel panel-default">
+<div class="panel-body">
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+Now we take the following Hamiltonian
+$$
+\hat{H} = \sum_n n \delta \hat{N}_n  - G \hat{P}^\dagger \hat{P}
+$$
 
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
+where 
+$$
+\hat{N}_n = \hat{a}^\dagger_{n, m=+1/2} \hat{a}_{n, m=+1/2} +
+\hat{a}^\dagger_{n, m=-1/2} \hat{a}_{n, m=-1/2}
+$$
+
+and
+$$
+\hat{P}^\dagger = \sum_{n} \hat{a}^\dagger_{n, m=+1/2} \hat{a}^\dagger_{n, m=-1/2} 
+$$
+
+We can write down the $ 6 \times 6$  Hamiltonian in the basis from the prior slide:
+$$
+H = \left ( 
+\begin{array}{cccccc}
+2\delta -2G & -G & -G & -G & -G & 0 \\
+ -G & 4\delta -2G & -G & -G & -0 & -G \\
+-G & -G & 6\delta -2G & 0 & -G & -G \\
+ -G & -G & 0 & 6\delta-2G & -G & -G \\
+ -G & 0 & -G & -G & 8\delta-2G & -G \\
+0 & -G & -G & -G & -G & 10\delta -2G 
+\end{array} \right )
+$$
+
+(You should check by hand that this is correct.)
 
 <p>
-<!-- institution -->
+For \( \delta = 0 \) we have the closed form solution of  the g.s. energy given by \( -6G \).
 
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
 <p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
+</div>
+</div>
+
+
 <p>
-
-
-<p><a href="._fci-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._fci-bs000.html">1</a></li>
-  <li><a href="._fci-bs001.html">2</a></li>
-  <li><a href="._fci-bs002.html">3</a></li>
-  <li><a href="._fci-bs003.html">4</a></li>
-  <li><a href="._fci-bs004.html">5</a></li>
-  <li><a href="._fci-bs005.html">6</a></li>
-  <li><a href="._fci-bs006.html">7</a></li>
-  <li><a href="._fci-bs007.html">8</a></li>
-  <li><a href="._fci-bs008.html">9</a></li>
-  <li><a href="._fci-bs009.html">10</a></li>
+<li><a href="._fci-bs062.html">&laquo;</a></li>
+  <li><a href="._fci-bs000.html">1</a></li>
   <li><a href="">...</a></li>
+  <li><a href="._fci-bs055.html">56</a></li>
+  <li><a href="._fci-bs056.html">57</a></li>
+  <li><a href="._fci-bs057.html">58</a></li>
+  <li><a href="._fci-bs058.html">59</a></li>
+  <li><a href="._fci-bs059.html">60</a></li>
+  <li><a href="._fci-bs060.html">61</a></li>
+  <li><a href="._fci-bs061.html">62</a></li>
   <li><a href="._fci-bs062.html">63</a></li>
-  <li><a href="._fci-bs001.html">&raquo;</a></li>
+  <li class="active"><a href="._fci-bs063.html">64</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -298,7 +316,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 

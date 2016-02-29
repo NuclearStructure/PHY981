@@ -175,7 +175,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._fci-bs013.html#___sec12" style="font-size: 80%;">Example of a Hamiltonian matrix</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs014.html#___sec13" style="font-size: 80%;">Example of a Hamiltonian matrix with a Hartree-Fock basis</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs015.html#___sec14" style="font-size: 80%;">Shell-model jargon</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs016.html#___sec15" style="font-size: 80%;">FCI and the exponential growth</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec15" style="font-size: 80%;">FCI and the exponential growth</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs017.html#___sec16" style="font-size: 80%;">Exponential wall</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs018.html#___sec17" style="font-size: 80%;">A non-practical way of solving the eigenvalue problem</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs019.html#___sec18" style="font-size: 80%;">Rewriting the FCI equation</a></li>
@@ -234,54 +234,54 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0016"></a>
+<!-- !split -->
 
-<!-- Slides for PHY981 -->
-
-
-<div class="jumbotron">
-<center><h1>Nuclear Shell Model, how to develop a shell-model code</h1></center>  <!-- document title -->
+<h2 id="___sec15">FCI and the exponential growth </h2>
+Full configuration interaction theory calculations provide in principle, if we can diagonalize numerically, all states of interest. The dimensionality of the problem explodes however quickly.
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
+The total number of Slater determinants which can be built with say \( N \) neutrons distributed among \( n \) single particle states is
+$$
+\left (\begin{array}{c} n \\ N\end{array} \right) =\frac{n!}{(n-N)!N!}. 
+$$
 
 <p>
-<!-- institution -->
+For a model space which comprises the first for major shells only \( 0s \), \( 0p \), \( 1s0d \) and \( 1p0f \) we have \( 40 \) single particle states for neutrons and protons.  For the eight neutrons of oxygen-16 we would then have
+$$
+\left (\begin{array}{c} 40 \\ 8\end{array} \right) =\frac{40!}{(32)!8!}\sim 10^{9}, 
+$$
 
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
+and multiplying this with the number of proton Slater determinants we end up with approximately witha dimensionality \( d \) of \( d\sim 10^{18} \).
+
 <p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
-<p>
-
-
-<p><a href="._fci-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
-
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._fci-bs000.html">1</a></li>
-  <li><a href="._fci-bs001.html">2</a></li>
-  <li><a href="._fci-bs002.html">3</a></li>
-  <li><a href="._fci-bs003.html">4</a></li>
-  <li><a href="._fci-bs004.html">5</a></li>
-  <li><a href="._fci-bs005.html">6</a></li>
-  <li><a href="._fci-bs006.html">7</a></li>
-  <li><a href="._fci-bs007.html">8</a></li>
+<li><a href="._fci-bs015.html">&laquo;</a></li>
+  <li><a href="._fci-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
   <li><a href="._fci-bs008.html">9</a></li>
   <li><a href="._fci-bs009.html">10</a></li>
+  <li><a href="._fci-bs010.html">11</a></li>
+  <li><a href="._fci-bs011.html">12</a></li>
+  <li><a href="._fci-bs012.html">13</a></li>
+  <li><a href="._fci-bs013.html">14</a></li>
+  <li><a href="._fci-bs014.html">15</a></li>
+  <li><a href="._fci-bs015.html">16</a></li>
+  <li class="active"><a href="._fci-bs016.html">17</a></li>
+  <li><a href="._fci-bs017.html">18</a></li>
+  <li><a href="._fci-bs018.html">19</a></li>
+  <li><a href="._fci-bs019.html">20</a></li>
+  <li><a href="._fci-bs020.html">21</a></li>
+  <li><a href="._fci-bs021.html">22</a></li>
+  <li><a href="._fci-bs022.html">23</a></li>
+  <li><a href="._fci-bs023.html">24</a></li>
+  <li><a href="._fci-bs024.html">25</a></li>
+  <li><a href="._fci-bs025.html">26</a></li>
   <li><a href="">...</a></li>
   <li><a href="._fci-bs062.html">63</a></li>
-  <li><a href="._fci-bs001.html">&raquo;</a></li>
+  <li><a href="._fci-bs017.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -298,7 +298,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 

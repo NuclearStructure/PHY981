@@ -174,7 +174,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._fci-bs012.html#___sec11" style="font-size: 80%;">Full Configuration Interaction Theory</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs013.html#___sec12" style="font-size: 80%;">Example of a Hamiltonian matrix</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs014.html#___sec13" style="font-size: 80%;">Example of a Hamiltonian matrix with a Hartree-Fock basis</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs015.html#___sec14" style="font-size: 80%;">Shell-model jargon</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec14" style="font-size: 80%;">Shell-model jargon</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs016.html#___sec15" style="font-size: 80%;">FCI and the exponential growth</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs017.html#___sec16" style="font-size: 80%;">Exponential wall</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs018.html#___sec17" style="font-size: 80%;">A non-practical way of solving the eigenvalue problem</a></li>
@@ -234,54 +234,54 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0015"></a>
+<!-- !split -->
 
-<!-- Slides for PHY981 -->
+<h2 id="___sec14">Shell-model jargon </h2>
+If we do not make any truncations in the possible sets of Slater determinants (many-body states) we can make by distributing \( A \) nucleons among \( n \) single-particle states, we call such a calculation for 
 
+<ul>
+<li> Full configuration interaction theory</li>
+</ul>
 
-<div class="jumbotron">
-<center><h1>Nuclear Shell Model, how to develop a shell-model code</h1></center>  <!-- document title -->
+If we make truncations, we have different possibilities
+
+<ul>
+<li> The standard nuclear shell-model. Here we define an effective Hilbert space with respect to a given core. The calculations are normally then performed for all many-body states that can be constructed from the effective Hilbert spaces. This approach requires a properly defined effective Hamiltonian</li>
+<li> We can truncate in the number of excitations. For example, we can limit the possible Slater determinants to only \( 1p-1h \) and \( 2p-2h \) excitations. This is called a configuration interaction calculation at the level of singles and doubles excitations, or just CISD.</li> 
+<li> We can limit the number of excitations in terms of the excitation energies. If we do not define a core, this defines normally what is called the no-core shell-model approach.</li> 
+</ul>
+
+What happens if we have a three-body interaction and a Hartree-Fock basis?
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
-
-<p>
-<!-- institution -->
-
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
-<p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
-<p>
-
-
-<p><a href="._fci-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
-
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._fci-bs000.html">1</a></li>
-  <li><a href="._fci-bs001.html">2</a></li>
-  <li><a href="._fci-bs002.html">3</a></li>
-  <li><a href="._fci-bs003.html">4</a></li>
-  <li><a href="._fci-bs004.html">5</a></li>
-  <li><a href="._fci-bs005.html">6</a></li>
-  <li><a href="._fci-bs006.html">7</a></li>
+<li><a href="._fci-bs014.html">&laquo;</a></li>
+  <li><a href="._fci-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
   <li><a href="._fci-bs007.html">8</a></li>
   <li><a href="._fci-bs008.html">9</a></li>
   <li><a href="._fci-bs009.html">10</a></li>
+  <li><a href="._fci-bs010.html">11</a></li>
+  <li><a href="._fci-bs011.html">12</a></li>
+  <li><a href="._fci-bs012.html">13</a></li>
+  <li><a href="._fci-bs013.html">14</a></li>
+  <li><a href="._fci-bs014.html">15</a></li>
+  <li class="active"><a href="._fci-bs015.html">16</a></li>
+  <li><a href="._fci-bs016.html">17</a></li>
+  <li><a href="._fci-bs017.html">18</a></li>
+  <li><a href="._fci-bs018.html">19</a></li>
+  <li><a href="._fci-bs019.html">20</a></li>
+  <li><a href="._fci-bs020.html">21</a></li>
+  <li><a href="._fci-bs021.html">22</a></li>
+  <li><a href="._fci-bs022.html">23</a></li>
+  <li><a href="._fci-bs023.html">24</a></li>
+  <li><a href="._fci-bs024.html">25</a></li>
   <li><a href="">...</a></li>
   <li><a href="._fci-bs062.html">63</a></li>
-  <li><a href="._fci-bs001.html">&raquo;</a></li>
+  <li><a href="._fci-bs016.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -298,7 +298,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 

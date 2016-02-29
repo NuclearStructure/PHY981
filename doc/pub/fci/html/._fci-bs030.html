@@ -189,7 +189,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._fci-bs027.html#___sec26" style="font-size: 80%;">Building a many-body basis</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs028.html#___sec27" style="font-size: 80%;">Building a many-body basis</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs029.html#___sec28" style="font-size: 80%;">Building a many-body basis</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs030.html#___sec29" style="font-size: 80%;">Building a many-body basis</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec29" style="font-size: 80%;">Building a many-body basis</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs031.html#___sec30" style="font-size: 80%;">Building a many-body basis</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs032.html#___sec31" style="font-size: 80%;">Building a many-body basis</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs033.html#___sec32" style="font-size: 80%;">Building a many-body basis</a></li>
@@ -234,54 +234,47 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0030"></a>
+<!-- !split -->
 
-<!-- Slides for PHY981 -->
-
-
-<div class="jumbotron">
-<center><h1>Nuclear Shell Model, how to develop a shell-model code</h1></center>  <!-- document title -->
+<h2 id="___sec29">Building a many-body basis </h2>
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+There are different kinds of truncations.
 
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
-
-<p>
-<!-- institution -->
-
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
-<p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
-<p>
-
-
-<p><a href="._fci-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
+<ul>
+<li> For example, one can start with `filled' orbits (almost always the lowest), and then  allow one, two, three... particles excited out of those filled orbits. These are called  1p-1h, 2p-2h, 3p-3h excitations.</li> 
+<li> Alternately, one can state a maximal orbit and allow all possible configurations with  particles occupying states up to that maximum. This is called <em>full configuration</em>.</li>
+<li> Finally, for particular use in nuclear physics, there is the <em>energy</em> truncation, also  called the \( N\hbar\Omega \) or \( N_{max} \) truncation.</li> 
+</ul>
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._fci-bs000.html">1</a></li>
-  <li><a href="._fci-bs001.html">2</a></li>
-  <li><a href="._fci-bs002.html">3</a></li>
-  <li><a href="._fci-bs003.html">4</a></li>
-  <li><a href="._fci-bs004.html">5</a></li>
-  <li><a href="._fci-bs005.html">6</a></li>
-  <li><a href="._fci-bs006.html">7</a></li>
-  <li><a href="._fci-bs007.html">8</a></li>
-  <li><a href="._fci-bs008.html">9</a></li>
-  <li><a href="._fci-bs009.html">10</a></li>
+<li><a href="._fci-bs029.html">&laquo;</a></li>
+  <li><a href="._fci-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
+  <li><a href="._fci-bs022.html">23</a></li>
+  <li><a href="._fci-bs023.html">24</a></li>
+  <li><a href="._fci-bs024.html">25</a></li>
+  <li><a href="._fci-bs025.html">26</a></li>
+  <li><a href="._fci-bs026.html">27</a></li>
+  <li><a href="._fci-bs027.html">28</a></li>
+  <li><a href="._fci-bs028.html">29</a></li>
+  <li><a href="._fci-bs029.html">30</a></li>
+  <li class="active"><a href="._fci-bs030.html">31</a></li>
+  <li><a href="._fci-bs031.html">32</a></li>
+  <li><a href="._fci-bs032.html">33</a></li>
+  <li><a href="._fci-bs033.html">34</a></li>
+  <li><a href="._fci-bs034.html">35</a></li>
+  <li><a href="._fci-bs035.html">36</a></li>
+  <li><a href="._fci-bs036.html">37</a></li>
+  <li><a href="._fci-bs037.html">38</a></li>
+  <li><a href="._fci-bs038.html">39</a></li>
+  <li><a href="._fci-bs039.html">40</a></li>
   <li><a href="">...</a></li>
   <li><a href="._fci-bs062.html">63</a></li>
-  <li><a href="._fci-bs001.html">&raquo;</a></li>
+  <li><a href="._fci-bs031.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -298,7 +291,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 

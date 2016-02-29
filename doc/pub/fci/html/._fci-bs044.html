@@ -203,7 +203,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._fci-bs041.html#___sec40" style="font-size: 80%;">Project 2, step 1</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs042.html#___sec41" style="font-size: 80%;">Project 2, step 1</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs043.html#___sec42" style="font-size: 80%;">Project 2, step 1</a></li>
-     <!-- navigation toc: --> <li><a href="._fci-bs044.html#___sec43" style="font-size: 80%;">Project 2, step 1</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec43" style="font-size: 80%;">Project 2, step 1</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs045.html#___sec44" style="font-size: 80%;">Project 2, step 1</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs046.html#___sec45" style="font-size: 80%;">Project 2, step 1</a></li>
      <!-- navigation toc: --> <li><a href="._fci-bs047.html#___sec46" style="font-size: 80%;">Project 2, step 1</a></li>
@@ -234,54 +234,58 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0044"></a>
+<!-- !split -->
 
-<!-- Slides for PHY981 -->
-
-
-<div class="jumbotron">
-<center><h1>Nuclear Shell Model, how to develop a shell-model code</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
+<h2 id="___sec43">Project 2, step 1 </h2>
+<div class="panel panel-default">
+<div class="panel-body">
+When we restrict ourselves to an \( M \)-scheme basis, we could choose two paths. 
+The first is simplest (and simplest is often best, at 
+least in the first draft of a code): generate all possible Slater determinants, 
+and then extract from this initial list a list of those Slater determinants with a given 
+\( M \). (You will need to write a short function or routine that computes \( M \) for any 
+given occupation.)
 
 <p>
-<!-- institution -->
+Alternately, and not too difficult, is to run the odometer routine twice: each time, as 
+as a Slater determinant is calculated, compute \( M \), but do not store the Slater determinants 
+except the current one. You can then count up the number of Slater determinants with a 
+chosen \( M \).  Then allocated storage for the Slater determinants, and run the odometer 
+algorithm again, this time storing Slater determinants with the desired \( M \) (this can be 
+done with a simple logical flag).
+</div>
+</div>
 
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
+
 <p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
-<p>
-
-
-<p><a href="._fci-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
-
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._fci-bs000.html">1</a></li>
-  <li><a href="._fci-bs001.html">2</a></li>
-  <li><a href="._fci-bs002.html">3</a></li>
-  <li><a href="._fci-bs003.html">4</a></li>
-  <li><a href="._fci-bs004.html">5</a></li>
-  <li><a href="._fci-bs005.html">6</a></li>
-  <li><a href="._fci-bs006.html">7</a></li>
-  <li><a href="._fci-bs007.html">8</a></li>
-  <li><a href="._fci-bs008.html">9</a></li>
-  <li><a href="._fci-bs009.html">10</a></li>
+<li><a href="._fci-bs043.html">&laquo;</a></li>
+  <li><a href="._fci-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
+  <li><a href="._fci-bs036.html">37</a></li>
+  <li><a href="._fci-bs037.html">38</a></li>
+  <li><a href="._fci-bs038.html">39</a></li>
+  <li><a href="._fci-bs039.html">40</a></li>
+  <li><a href="._fci-bs040.html">41</a></li>
+  <li><a href="._fci-bs041.html">42</a></li>
+  <li><a href="._fci-bs042.html">43</a></li>
+  <li><a href="._fci-bs043.html">44</a></li>
+  <li class="active"><a href="._fci-bs044.html">45</a></li>
+  <li><a href="._fci-bs045.html">46</a></li>
+  <li><a href="._fci-bs046.html">47</a></li>
+  <li><a href="._fci-bs047.html">48</a></li>
+  <li><a href="._fci-bs048.html">49</a></li>
+  <li><a href="._fci-bs049.html">50</a></li>
+  <li><a href="._fci-bs050.html">51</a></li>
+  <li><a href="._fci-bs051.html">52</a></li>
+  <li><a href="._fci-bs052.html">53</a></li>
+  <li><a href="._fci-bs053.html">54</a></li>
   <li><a href="">...</a></li>
   <li><a href="._fci-bs062.html">63</a></li>
-  <li><a href="._fci-bs001.html">&raquo;</a></li>
+  <li><a href="._fci-bs045.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -298,7 +302,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 
