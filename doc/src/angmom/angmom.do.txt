@@ -740,6 +740,365 @@ If charge is conserved, the Hamiltonian $\hat{H}$ commutes with $\hat{T}_z$ and 
 !eblock
 
 
+!split
+===== Angular momentum algebra, Examples =====
+!bblock 
+We have till now seen the following definitions of a two-body matrix elements 
+with quantum numbers $p=j_pm_p$ etc we have a two-body state defined as
+!bt
+\[
+|(pq)M\rangle  = a^{\dagger}_pa^{\dagger}_q|\Phi_0\rangle,
+\]
+!et
+where $|\Phi_0\rangle$ is a chosen reference state, say for example the Slater determinant which approximates 
+${}^{16}\mbox{O}$ with the $0s$ and the $0p$ shells being filled, and $M=m_p+m_q$. Recall that we label single-particle states above the Fermi level as $abcd\dots$ and states below the Fermi level for $ijkl\dots$.  
+In case of two-particles in the single-particle states $a$ and $b$ outside ${}^{16}\mbox{O}$ as a closed shell core, say ${}^{18}\mbox{O}$, 
+we would write the representation of the Slater determinant as
+!bt
+\[
+|^{18}\mathrm{O}\rangle =|(ab)M\rangle  = a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle=|\Phi^{ab}\rangle.
+\]
+!et
+In case of two-particles removed from say ${}^{16}\mbox{O}$, for example two neutrons in the single-particle states $i$ and $j$, we would write this as
+!bt
+\[
+|^{14}\mathrm{O}\rangle =|(ij)M\rangle  = a_ja_i|^{16}\mathrm{O}\rangle=|\Phi_{ij}\rangle.
+\]
+!et
+!eblock
+
+
+!split
+===== Angular momentum algebra and many-body states  =====
+!bblock 
+For a one-hole-one-particle state we have
+!bt
+\[
+|^{16}\mathrm{O}\rangle_{1p1h} =|(ai)M\rangle  = a_a^{\dagger}a_i|^{16}\mathrm{O}\rangle=|\Phi_{i}^a\rangle,
+\]
+!et
+and finally for a two-particle-two-hole state we 
+!bt
+\[
+|^{16}\mathrm{O}\rangle_{2p2h} =|(abij)M\rangle  = a_a^{\dagger}a_b^{\dagger}a_ja_i|^{16}\mathrm{O}\rangle=|\Phi_{ij}^{ab}\rangle.
+\]
+!et
+!eblock
+
+!split
+===== Angular momentum algebra, two-body state and anti-symmetrized matrix elements =====
+!bblock 
+Let us go back to the case of two-particles in the single-particle states $a$ and $b$ outside ${}^{16}\mbox{O}$ as a closed shell core, say ${}^{18}\mbox{O}$.
+The representation of the Slater determinant is 
+!bt
+\[
+|^{18}\mathrm{O}\rangle =|(ab)M\rangle  = a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle=|\Phi^{ab}\rangle.
+\]
+!et
+The anti-symmetrized matrix element is detailed as 
+!bt
+\[
+\langle (ab) M | \hat{V} | (cd) M \rangle = \langle (j_am_aj_bm_b)M=m_a+m_b |  \hat{V} | (j_cm_cj_dm_d)M=m_a+m_b \rangle,
+\]
+!et
+and note that anti-symmetrization means 
+!bt
+\[
+\langle (ab) M | \hat{V} | (cd) M \rangle =-\langle (ba) M | \hat{V} | (cd) M \rangle =\langle (ba) M | \hat{V} | (dc) M \rangle,
+\]
+!et
+!bt
+\[
+\langle (ab) M | \hat{V} | (cd) M \rangle =-\langle (ab) M | \hat{V} | (dc) M \rangle. 
+\]
+!et
+!eblock
+
+!split
+===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
+!bblock 
+This matrix element is given by
+!bt
+\[
+\langle ^{16}\mathrm{O}|a_ba_a\frac{1}{4}\sum_{pqrs}\langle (pq) M | \hat{V} | (rs) M' \rangle a^{\dagger}_pa^{\dagger}_qa_sa_r a^{\dagger}_ca^{\dagger}_d|^{16}\mathrm{O}\rangle.
+\]
+!et
+We can compute this matrix element using Wick's theorem.
+!eblock
+
+
+!split
+===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
+!bblock 
+We have also defined matrix elements in the coupled basis, the so-called $J$-coupled scheme.
+In this case the two-body wave function for two neutrons outside ${}^{16}\mbox{O}$ is written as 
+!bt
+\[
+|^{18}\mathrm{O}\rangle_J =|(ab)JM\rangle  = \left\{a^{\dagger}_aa^{\dagger}_b\right\}^J_M|^{16}\mathrm{O}\rangle=N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ab}\rangle, 
+\]
+!et
+with 
+!bt
+\[
+|\Phi^{ab}\rangle=a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle.
+\]
+!et
+We have now an explicit coupling order, where the angular momentum $j_a$ is coupled to the angular momentum $j_b$ to yield a final two-body angular momentum $J$. 
+The normalization factor is
+!bt
+\[
+N_{ab}=\frac{\sqrt{1+\delta_{ab}\times (-1)^J}}{1+\delta_{ab}}.
+\]
+!et
+!eblock
+
+!split
+===== Angular momentum algebra =====
+!bblock 
+We
+note that, using the anti-commuting 
+properties of the creation operators, we obtain
+!bt
+\[
+N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle \vert\Phi^{ab}\rangle=-N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle\vert\Phi^{ba}\rangle.
+\]
+!et
+Furthermore, using the property of the Clebsch-Gordan coefficient
+!bt
+\[
+\langle j_am_aj_bm_b|JM>=(-1)^{j_a+j_b-J}\langle j_bm_bj_am_a|JM\rangle,
+\]
+!et
+which can be used to show that
+!bt
+\[
+|(j_bj_a)JM\rangle  = \left\{a^{\dagger}_ba^{\dagger}_a\right\}^J_M|^{16}\mathrm{O}\rangle=N_{ab}\sum_{m_am_b}\langle j_bm_bj_am_a|JM\rangle|\Phi^{ba}\rangle, 
+\]
+!et
+is equal to 
+!bt
+\[
+|(j_bj_a)JM\rangle=(-1)^{j_a+j_b-J+1}|(j_aj_b)JM\rangle.
+\]
+!et
+!eblock
+
+
+!split
+===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
+!bblock 
+The implementation of the Pauli principle looks different in the $J$-scheme compared with the $m$-scheme. In the latter, no two fermions or more can have the same set of quantum numbers. In the $J$-scheme, when we write a state with the shorthand 
+!bt
+\[
+|^{18}\mathrm{O}\rangle_J =|(ab)JM\rangle,
+\]
+!et
+we do refer to the angular momenta only. This means that another way of writing the last state is
+!bt
+\[
+|^{18}\mathrm{O}\rangle_J =|(j_aj_b)JM\rangle.
+\]
+!et
+We will use this notation throughout when we refer to a two-body state in $J$-scheme. The Kronecker $\delta$ function in the normalization factor 
+refers thus to the values of $j_a$ and $j_b$. If two identical particles are in a state with the same $j$-value, then only even values of the total angular momentum apply.  In the notation below, when we label a state as $j_p$ it will actually represent all quantum numbers except $m_p$.
+!eblock
+
+
+
+
+!split
+===== Angular momentum algebra, two-body matrix elements =====
+!bblock 
+The two-body matrix element is a scalar and since it obeys rotational symmetry, it is diagonal in $J$, 
+meaning that the corresponding matrix element in $J$-scheme is 
+!bt
+\[
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_bm_cm_d}\langle j_am_aj_bm_b|JM\rangle
+\]
+!et
+!bt
+\[
+\times \langle j_cm_cj_dm_d|JM\rangle\langle (j_am_aj_bm_b)M |  \hat{V} | (j_cm_cj_dm_d)M \rangle,
+\]
+!et
+and note that of the four $m$-values in the above sum, only three are independent due to the constraint $m_a+m_b=M=m_c+m_d$.
+!eblock
+
+!split
+===== Angular momentum algebra, two-body matrix element =====
+!bblock 
+Since
+!bt
+\[
+|(j_bj_a)JM\rangle=(-1)^{j_a+j_b-J+1}|(j_aj_b)JM\rangle,
+\]
+!et
+the anti-symmetrized matrix elements need now to obey the following relations
+!bt
+\[
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_a+j_b-J+1}\langle (j_bj_a) JM | \hat{V} | (j_cj_d) JM \rangle,
+\]
+!et
+!bt
+\[
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_c+j_d-J+1}\langle (j_aj_b) JM | \hat{V} | (j_dj_c) JM \rangle,
+\]
+!et
+!bt
+\[
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_a+j_b+j_c+j_d}\langle (j_bj_a) JM | \hat{V} | (j_dj_c) JM \rangle=\langle (j_bj_a) JM | \hat{V} | (j_dj_c) JM \rangle,
+\]
+!et
+where the last relations follows from the fact that $J$ is an integer and $2J$ is always an even number.
+
+
+!eblock
+
+!split
+===== Angular momentum algebra, two-body matrix element =====
+!bblock 
+Using the orthogonality properties of the Clebsch-Gordan coefficients,
+!bt
+\[
+\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle\langle j_am_aj_bm_b|J'M'\rangle=\delta_{JJ'}\delta_{MM'},
+\]
+!et
+and
+!bt
+\[
+\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_am_a'j_bm_b'|JM\rangle=\delta_{m_am_a'}\delta_{m_bm_b'},
+\]
+!et
+we can also express the two-body matrix element in $m$-scheme in terms of that in $J$-scheme, that is, if we multiply with 
+!bt
+\[
+\sum_{JMJ'M'}\langle j_am_a'j_bm_b'|JM\rangle\langle j_cm_c'j_dm_d'|J'M'\rangle
+\]
+!et
+from left in
+!bt
+\[
+\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_bm_cm_d}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle
+\]
+!et
+!bt
+\[
+\times \langle (j_am_aj_bm_b)M|  \hat{V} | (j_cm_cj_dm_d)M\rangle,
+\]
+!et
+we obtain
+!bt
+\[
+\langle (j_am_aj_bm_b)M |  \hat{V} | (j_cm_cj_dm_d)M\rangle=\frac{1}{N_{ab}N_{cd}}\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle
+\]
+!et
+!bt
+\[
+\times \langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle.
+\]
+!et
+!eblock
+
+
+!split
+===== The Hartree-Fock potential =====
+!bblock 
+We can now use the above relations to compute the Hartre-Fock energy in $j$-scheme. 
+In $m$-scheme we defined the Hartree-Fock energy as 
+!bt
+\[
+\varepsilon_{pq}^{\mathrm{HF}}=\delta_{pq}\varepsilon_p+  \sum_{i\le F} \langle pi \vert \hat{V} \vert qi\rangle_{AS},
+\]
+!et
+where the single-particle states $pqi$ point to the quantum numbers in $m$-scheme. For a state with for example $j=5/2$, this results in six identical values for the above potential. We would obviously like to reduce this to one only by rewriting our equations in $j$-scheme. 
+
+Our Hartree-Fock basis is orthogonal by definition, meaning that we have
+!bt
+\[
+\varepsilon_{p}^{\mathrm{HF}}=\varepsilon_p+  \sum_{i\le F} \langle pi \vert \hat{V} \vert pi\rangle_{AS},
+\]
+!et
+!eblock
+
+
+!split
+===== The Hartree-Fock potential =====
+!bblock 
+We have
+!bt
+\[
+\varepsilon_{p}^{\mathrm{HF}}=\varepsilon_p+  \sum_{i\le F} \langle pi \vert \hat{V} \vert pi\rangle_{AS},
+\]
+!et
+where the single-particle  states $p=[n_p,j_p,m_p,t_{z_{p}}]$. Let us assume that $p$ is a state above the Fermi level. The quantity $\varepsilon_p$ could represent the harmonic oscillator single-particle energies. 
+
+Let  $p\rightarrow a$. 
+
+The energies, as we have seen, are independent of $m_a$ and $m_i$. 
+We sum now over all $m_a$ on both sides of the above equation and divide by $2j_a+1$, recalling that $\sum_{m_a}=2j_a+1$.  This results in 
+!bt
+\[
+\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{i\le F}\sum_{m_a} \langle ai \vert \hat{V}\vert ai\rangle_{AS},
+\]
+!et
+
+
+!eblock
+
+
+!split
+===== The Hartree-Fock potential =====
+We rewrite 
+!bt
+\[
+\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{i\le F}\sum_{m_a} \langle ai \vert \hat{V} \vert ai\rangle_{AS},
+\]
+!et
+as
+!bt
+\[
+\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{n_i,j_i,t_{z_{i}}\le F}\sum_{m_im_a} 
+\langle (j_am_aj_im_i)M |  \hat{V} | (j_am_aj_im_i)M\rangle_{AS},
+\]
+!et
+where we have suppressed  the dependence on $n_p$ and $t_z$ in the matrix element. 
+Using the definition
+!bt
+\[
+\langle (j_am_aj_bm_b)M \vert  \hat{V} \vert (j_cm_cj_dm_d)M\rangle=\frac{1}{N_{ab}N_{cd}}\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle \langle (j_aj_b)J \vert \hat{V} \vert (j_cj_d)M\rangle_{AS},
+\]
+!et
+with the orthogonality properties of Glebsch-Gordan coefficients and that the  $j$-coupled two-body matrix element is a scalar and independent of $M$ we arrive at 
+!bt
+\[
+\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{j_i\le F}\sum_J (2J+1)
+\langle (j_aj_i)J \vert \hat{V} \vert (j_aj_i)M\rangle_{AS},
+\]
+!et
+
+
+
+!split
+===== First order in the potential energy =====
+!bblock 
+In a similar way it is easy to show that the potential energy contribution to the ground state energy in $m$-scheme
+!bt
+\[
+\frac{1}{2}\sum_{ij\le F}\langle (j_im_ij_jm_j)M |  \hat{V} | (j_im_ij_jm_j)M\rangle_{AS},
+\]
+!et
+can be rewritten as
+!bt
+\[
+\frac{1}{2}\sum_{j_i,j_j\le F}\sum_J(2J+1)
+\langle (j_ij_j)J |  \hat{V} | (j_ij_j)J\rangle_{AS},
+\]
+!et
+This reduces the number of floating point operations with an order of magnitude on average. 
+!eblock
+
+
+
 
 
 
@@ -1092,365 +1451,6 @@ which is equal to
 !et
 !eblock
 
-!split
-===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
-!bblock 
-We have till now seen the following definitions of a two-body matrix elements 
-with quantum numbers $p=j_pm_p$ etc we have a two-body state defined as
-!bt
-\[
-|(pq)M\rangle  = a^{\dagger}_pa^{\dagger}_q|\Phi_0\rangle,
-\]
-!et
-where $|\Phi_0\rangle$ is a chosen reference state, say for example the Slater determinant which approximates 
-${}^{16}\mbox{O}$ with the $0s$ and the $0p$ shells being filled, and $M=m_p+m_q$. Recall that we label single-particle states above the Fermi level as $abcd\dots$ and states below the Fermi level for $ijkl\dots$.  
-In case of two-particles in the single-particle states $a$ and $b$ outside ${}^{16}\mbox{O}$ as a closed shell core, say ${}^{18}\mbox{O}$, 
-we would write the representation of the Slater determinant as
-!bt
-\[
-|^{18}\mathrm{O}\rangle =|(ab)M\rangle  = a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle=|\Phi^{ab}\rangle.
-\]
-!et
-In case of two-particles removed from say ${}^{16}\mbox{O}$, for example two neutrons in the single-particle states $i$ and $j$, we would write this as
-!bt
-\[
-|^{14}\mathrm{O}\rangle =|(ij)M\rangle  = a_ja_i|^{16}\mathrm{O}\rangle=|\Phi_{ij}\rangle.
-\]
-!et
-!eblock
-
-
-!split
-===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
-!bblock 
-For a one-hole-one-particle state we have
-!bt
-\[
-|^{16}\mathrm{O}\rangle_{1p1h} =|(ai)M\rangle  = a_a^{\dagger}a_i|^{16}\mathrm{O}\rangle=|\Phi_{i}^a\rangle,
-\]
-!et
-and finally for a two-particle-two-hole state we 
-!bt
-\[
-|^{16}\mathrm{O}\rangle_{2p2h} =|(abij)M\rangle  = a_a^{\dagger}a_b^{\dagger}a_ja_i|^{16}\mathrm{O}\rangle=|\Phi_{ij}^{ab}\rangle.
-\]
-!et
-!eblock
-
-!split
-===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
-!bblock 
-Let us go back to the case of two-particles in the single-particle states $a$ and $b$ outside ${}^{16}\mbox{O}$ as a closed shell core, say ${}^{18}\mbox{O}$.
-The representation of the Slater determinant is 
-!bt
-\[
-|^{18}\mathrm{O}\rangle =|(ab)M\rangle  = a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle=|\Phi^{ab}\rangle.
-\]
-!et
-The anti-symmetrized matrix element is detailed as 
-!bt
-\[
-\langle (ab) M | \hat{V} | (cd) M \rangle = \langle (j_am_aj_bm_b)M=m_a+m_b |  \hat{V} | (j_cm_cj_dm_d)M=m_a+m_b \rangle,
-\]
-!et
-and note that anti-symmetrization means 
-!bt
-\[
-\langle (ab) M | \hat{V} | (cd) M \rangle =-\langle (ba) M | \hat{V} | (cd) M \rangle =\langle (ba) M | \hat{V} | (dc) M \rangle,
-\]
-!et
-!bt
-\[
-\langle (ab) M | \hat{V} | (cd) M \rangle =-\langle (ab) M | \hat{V} | (dc) M \rangle. 
-\]
-!et
-!eblock
-
-!split
-===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
-!bblock 
-This matrix element is the expectation value of 
-!bt
-\[
-\langle ^{16}\mathrm{O}|a_ba_a\frac{1}{4}\sum_{pqrs}\langle (pq) M | \hat{V} | (rs) M' \rangle a^{\dagger}_pa^{\dagger}_qa_sa_r a^{\dagger}_ca^{\dagger}_c|^{16}\mathrm{O}\rangle.
-\]
-!et
-!eblock
-
-
-!split
-===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
-!bblock 
-We have also defined matrix elements in the coupled basis, the so-called $J$-coupled scheme.
-In this case the two-body wave function for two neutrons outside ${}^{16}\mbox{O}$ is written as 
-!bt
-\[
-|^{18}\mathrm{O}\rangle_J =|(ab)JM\rangle  = \left\{a^{\dagger}_aa^{\dagger}_b\right\}^J_M|^{16}\mathrm{O}\rangle=N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ab}\rangle, 
-\]
-!et
-with 
-!bt
-\[
-|\Phi^{ab}\rangle=a^{\dagger}_aa^{\dagger}_b|^{16}\mathrm{O}\rangle.
-\]
-!et
-We have now an explicit coupling order, where the angular momentum $j_a$ is coupled to the angular momentum $j_b$ to yield a final two-body angular momentum $J$. 
-The normalization factor is
-!bt
-\[
-N_{ab}=\frac{\sqrt{1+\delta_{ab}\times (-1)^J}}{1+\delta_{ab}}.
-\]
-!et
-!eblock
-
-
-!split
-===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
-!bblock 
-The implementation of the Pauli principle looks different in the $J$-scheme compared with the $m$-scheme. In the latter, no two fermions or more can have the same set of quantum numbers. In the $J$-scheme, when we write a state with the shorthand 
-!bt
-\[
-|^{18}\mathrm{O}\rangle_J =|(ab)JM\rangle,
-\]
-!et
-we do refer to the angular momenta only. This means that another way of writing the last state is
-!bt
-\[
-|^{18}\mathrm{O}\rangle_J =|(j_aj_b)JM\rangle.
-\]
-!et
-We will use this notation throughout when we refer to a two-body state in $J$-scheme. The Kronecker $\delta$ function in the normalization factor 
-refers thus to the values of $j_a$ and $j_b$. If two identical particles are in a state with the same $j$-value, then only even values of the total angular momentum apply.
-!eblock
-
-
-!split
-===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
-!bblock 
-Note also that, using the anti-commuting 
-properties of the creation operators, we obtain
-!bt
-\[
-N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM>|\Phi^{ab}\rangle=-N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ba}\rangle.
-\]
-!et
-Furthermore, using the property of the Clebsch-Gordan coefficient
-!bt
-\[
-\langle j_am_aj_bm_b|JM>=(-1)^{j_a+j_b-J}\langle j_bm_bj_am_a|JM\rangle,
-\]
-!et
-which can be used to show that
-!bt
-\[
-|(j_bj_a)JM\rangle  = \left\{a^{\dagger}_ba^{\dagger}_a\right\}^J_M|^{16}\mathrm{O}\rangle=N_{ab}\sum_{m_am_b}\langle j_bm_bj_am_a|JM\rangle|\Phi^{ba}\rangle, 
-\]
-!et
-is equal to 
-!bt
-\[
-|(j_bj_a)JM\rangle=(-1)^{j_a+j_b-J+1}|(j_aj_b)JM\rangle.
-\]
-!et
-
-!eblock
-
-
-!split
-===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
-!bblock 
-The two-body matrix element is a scalar and since it obeys rotational symmetry, it is diagonal in $J$, 
-meaning that the corresponding matrix element in $J$-scheme is 
-!bt
-\[
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_bm_cm_d}\langle j_am_aj_bm_b|JM\rangle
-\]
-!et
-!bt
-\[
-\times \langle j_cm_cj_dm_d|JM\rangle\langle (j_am_aj_bm_b)M |  \hat{V} | (j_cm_cj_dm_d)M \rangle,
-\]
-!et
-and note that of the four $m$-values in the above sum, only three are independent due to the constraint $m_a+m_b=M=m_c+m_d$.
-!eblock
-
-!split
-===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
-!bblock 
-Since
-!bt
-\[
-|(j_bj_a)JM\rangle=(-1)^{j_a+j_b-J+1}|(j_aj_b)JM\rangle,
-\]
-!et
-the anti-symmetrized matrix elements need now to obey the following relations
-!bt
-\[
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_a+j_b-J+1}\langle (j_bj_a) JM | \hat{V} | (j_cj_d) JM \rangle,
-\]
-!et
-!bt
-\[
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_c+j_d-J+1}\langle (j_aj_b) JM | \hat{V} | (j_dj_c) JM \rangle,
-\]
-!et
-!bt
-\[
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = (-1)^{j_a+j_b+j_c+j_d}\langle (j_bj_a) JM | \hat{V} | (j_dj_c) JM \rangle=\langle (j_bj_a) JM | \hat{V} | (j_dj_c) JM \rangle,
-\]
-!et
-where the last relations follows from the fact that $J$ is an integer and $2J$ is always an even number.
-
-
-!eblock
-
-!split
-===== Angular momentum algebra, Wigner-Eckart theorem, Examples =====
-!bblock 
-Using the orthogonality properties of the Clebsch-Gordan coefficients,
-!bt
-\[
-\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle\langle j_am_aj_bm_b|J'M'\rangle=\delta_{JJ'}\delta_{MM'},
-\]
-!et
-and
-!bt
-\[
-\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_am_a'j_bm_b'|JM\rangle=\delta_{m_am_a'}\delta_{m_bm_b'},
-\]
-!et
-we can also express the two-body matrix element in $m$-scheme in terms of that in $J$-scheme, that is, if we multiply with 
-!bt
-\[
-\sum_{JMJ'M'}\langle j_am_a'j_bm_b'|JM\rangle\langle j_cm_c'j_dm_d'|J'M'\rangle
-\]
-!et
-from left in
-!bt
-\[
-\langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle = N_{ab}N_{cd}\sum_{m_am_bm_cm_d}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle
-\]
-!et
-!bt
-\[
-\times \langle (j_am_aj_bm_b)M|  \hat{V} | (j_cm_cj_dm_d)M\rangle,
-\]
-!et
-we obtain
-!bt
-\[
-\langle (j_am_aj_bm_b)M |  \hat{V} | (j_cm_cj_dm_d)M\rangle=\frac{1}{N_{ab}N_{cd}}\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle
-\]
-!et
-!bt
-\[
-\times \langle (j_aj_b) JM | \hat{V} | (j_cj_d) JM \rangle.
-\]
-!et
-!eblock
-
-
-!split
-===== The Hartree-Fock potential =====
-!bblock 
-We can now use the above relations to compute the Hartre-Fock energy in $j$-scheme. 
-In $m$-scheme we defined the Hartree-Fock energy as 
-!bt
-\[
-\varepsilon_{pq}^{\mathrm{HF}}=\delta_{pq}\varepsilon_p+  \sum_{i\le F} \langle pi \vert \hat{V} \vert qi\rangle_{AS},
-\]
-!et
-where the single-particle states $pqi$ point to the quantum numbers in $m$-scheme. For a state with for example $j=5/2$, this results in six identical values for the above potential. We would obviously like to reduce this to one only by rewriting our equations in $j$-scheme. 
-
-Our Hartree-Fock basis is orthogonal by definition, meaning that we have
-!bt
-\[
-\varepsilon_{p}^{\mathrm{HF}}=\varepsilon_p+  \sum_{i\le F} \langle pi \vert \hat{V} \vert pi\rangle_{AS},
-\]
-!et
-!eblock
-
-
-!split
-===== The Hartree-Fock potential =====
-!bblock 
-We have
-!bt
-\[
-\varepsilon_{p}^{\mathrm{HF}}=\varepsilon_p+  \sum_{i\le F} \langle pi \vert \hat{V} \vert pi\rangle_{AS},
-\]
-!et
-where the single-particle  states $p=[n_p,j_p,m_p,t_{z_{p}}]$. Let us assume that $p$ is a state above the Fermi level. The quantity $\varepsilon_p$ could represent the harmonic oscillator single-particle energies. 
-
-Let  $p\rightarrow a$. 
-
-The energies, as we have seen, are independent of $m_a$ and $m_i$. 
-We sum now over all $m_a$ on both sides of the above equation and divide by $2j_a+1$, recalling that $\sum_{m_a}=2j_a+1$.  This results in 
-!bt
-\[
-\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{i\le F}\sum_{m_a} \langle ai \vert \hat{V}\vert ai\rangle_{AS},
-\]
-!et
-
-
-!eblock
-
-
-!split
-===== The Hartree-Fock potential =====
-!bblock 
-We rewrite 
-!bt
-\[
-\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{i\le F}\sum_{m_a} \langle ai \vert \hat{V} \vert ai\rangle_{AS},
-\]
-!et
-as
-!bt
-\[
-\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{n_i,j_i,t_{z_{i}}\le F}\sum_{m_im_a} 
-\langle (j_am_aj_im_i)M |  \hat{V} | (j_am_aj_im_i)M\rangle_{AS},
-\]
-!et
-where we have suppressed  the dependence on $n_p$ and $t_z$ in the matrix element. 
-Using the definition
-!bt
-\[
-\langle (j_am_aj_bm_b)M \vert  \hat{V} \vert (j_cm_cj_dm_d)M\rangle=\frac{1}{N_{ab}N_{cd}}\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle,
-\]
-!et
-with the orthogonality properties of Glebsch-Gordan coefficients and that the  $j$-coupled two-body matrix element is a scalar and independent of $M$ we arrive at 
-!bt
-\[
-\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{n_i,j_i,t_{z_{i}}\le F}\sum_J (2J+1)
-\langle (j_aj_i)J \vert \hat{V} \vert (j_aj_i)M\rangle_{AS},
-\]
-!et
-!eblock
-
-
-!split
-===== First order in the potential energy =====
-!bblock 
-In a similar way it is easy to show that the potential energy contribution to the ground state energy in $m$-scheme
-!bt
-\[
-\frac{1}{2}\sum_{n_i,j_i,m_i,t_{z_{i}}\le F}\sum_{n_j,j_j,m_j,t_{z_{j}}\le F}
-\langle (j_im_ij_jm_j)M |  \hat{V} | (j_im_ij_jm_j)M\rangle_{AS},
-\]
-!et
-can be rewritten as
-!bt
-\[
-\frac{1}{2}\sum_{n_i,j_i,t_{z_{i}}\le F}\sum_{n_j,j_j,t_{z_{j}}\le F}\sum_J(2J+1)
-\langle (j_ij_j)J |  \hat{V} | (j_ij_j)J\rangle_{AS},
-\]
-!et
-This reduces the number of floating point operations with an order of magnitude on average. 
-!eblock
-
-
-
 
 
 !split
@@ -1521,7 +1521,7 @@ Till now we have mainly been concerned with the coupling of two angular momenta 
 If we wish to describe a three-body state with a final angular momentum $J$, we need to couple three angular momenta, say 
 the two momenta $j_a,j_b$ to a third one $j_c$. The coupling order is important and leads to a less trivial implementation of the 
 Pauli principle. With three angular momenta there are obviously $3!$ ways by which we can combine the angular momenta. 
-In $m$-scheme a three-body Slater determinant is represented as (say for the case of $^{19}$O, three neutrons outside the core of $^{16}$O),
+In $m$-scheme a three-body Slater determinant is represented as (say for the case of ${}^{19}\mbox{O}$, three neutrons outside the core of ${}^{16}\mbox{O}$),
 !bt
 \[
 |^{19}\mathrm{O}\rangle =|(abc)M\rangle  = a^{\dagger}_aa^{\dagger}_ba^{\dagger}_c|^{16}\mathrm{O}\rangle=|\Phi^{abc}\rangle.
@@ -1531,8 +1531,7 @@ The Pauli principle is automagically implemented via the anti-commutation relati
 
 !eblock
 !split
-===== Angular momentum algebra, Wigner-Eckart theorem =====
-!bblock 
+===== Angular momentum algebra, Wigner-Eckart theorem ===== 
 However, when we deal the same state in an angular momentum coupled basis, we need to be a little bit more careful. We can namely couple the states
 as follows
 !bt
@@ -1543,11 +1542,9 @@ label{eq:fabc}
 !et
 that is, we couple first $j_a$ to $j_b$ to yield an intermediate angular momentum $J_{ab}$, then to $j_c$ yielding the final angular momentum $J$.
 
-!eblock
 
 !split
 ===== Angular momentum algebra, Wigner-Eckart theorem =====
-!bblock 
 Now, nothing hinders us from recoupling this state by coupling $j_b$ to $j_c$, yielding an intermediate angular momentum $J_{bc}$ and then couple this angular momentum to $j_a$, resulting in the final angular momentum $J'$. 
 
 That is, we can have 
@@ -1565,11 +1562,9 @@ We will always assume that we work with orthornormal states, this means that whe
 \end{align}
 !et
 
-!eblock
 
 !split
 ===== Angular momentum algebra, Wigner-Eckart theorem =====
-!bblock 
 We use then the latter equation to define the so-called $6j$-symbols
 !bt
 \begin{eqnarray}
@@ -1588,7 +1583,6 @@ A specific coupling order has to be respected in the symbol, that is, the so-cal
 \]
 !et
 
-!eblock
 
 
 
@@ -1618,7 +1612,7 @@ The above properties of $6j$ symbols can again be tested using the symbolic pyth
 Let us test the invariance
 !bt
 \[
-    \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6 \end{Bmatrix} = \begin{Bmatrix} j_2 & j_1 & j_3\\ j_5 & j_4 & j_6 \end{Bmatrix}. . 
+    \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6 \end{Bmatrix} = \begin{Bmatrix} j_2 & j_1 & j_3\\ j_5 & j_4 & j_6 \end{Bmatrix}. 
 \]
 !et
 
@@ -1664,7 +1658,6 @@ A useful value is given when say one of the angular momenta are zero, say $J_{bc
 
 !split
 ===== Angular momentum algebra, Wigner-Eckart theorem =====
-!bblock 
 With the $6j$ symbol defined, we can go back and and rewrite the overlap between the two ways of recoupling angular momenta in terms of the $6j$ symbol.
 That is, we can have  
 !bt
@@ -1676,7 +1669,6 @@ Can you find the inverse relation?
 These relations can in turn be used to write out the fully anti-symmetrized three-body wave function in a $J$-scheme coupled basis. 
 If you opt then for a specific coupling order, say $| ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle$, you need to express this representation in terms of the other coupling possibilities. 
 
-!eblock
 !split
 ===== Angular momentum algebra, Wigner-Eckart theorem =====
 !bblock 
