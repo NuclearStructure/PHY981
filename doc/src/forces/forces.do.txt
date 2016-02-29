@@ -2041,28 +2041,34 @@ FIGURE: [figslides/pnDSG_at_199MeV.pdf, width=800 frac=0.8] Proton-neutron $^1S_
 
 
 !split
-===== Exercise 10 =====
+===== Exercise: Allowed partial waves =====
 !bblock 
+!bsubex
 List all _allowed_ according to the Pauli principle partial waves with isospin $T$, their 
 projection $T_z$, spin $S$, orbital angular momentum $l$ and total spin $J$ for $J\le 3$.
 Use the standard spectroscopic notation $^{2S+1}L_J$ to label different partial waves. A proton-proton state
 has $T_Z=-1$, a proton-neutron state has $T_z=0$ and a neutron-neutron state has $T_z=1$.
-
+!esubex
 !eblock
 
 !split
-===== Exercise 11 =====
+===== Exercise: Spin-orbit force and spin-spin terms =====
 !bblock 
- o Find the closed form expression for the spin-orbit force. Show that the spin-orbit force {\bf LS} gives a zero
+!bsubex
+Find the closed form expression for the spin-orbit force. Show that the spin-orbit force {\bf LS} gives a zero
 contribution for $S$-waves (orbital angular momentum $l=0$).   What is the value of the spin-orbit force for spin-singlet states ($S=0$)?  
- o Find thereafter the expectation value of $\mathbf{\sigma}_1\cdot\mathbf{\sigma}_2$, where $\mathbf{\sigma}_i$ are so-called Pauli matrices. 
- o Add thereafter isospin and find the expectation value of $\mathbf{\sigma}_1\cdot\mathbf{\sigma}_2\mathbf{\tau}_1\cdot\mathbf{\tau}_2$, where $\mathbf{\tau}_i$ are also so-called Pauli matrices. List all the cases with $S=0,1$ and $T=0,1$.
-
+!esubex
+!bsubex
+ Find thereafter the expectation value of $\mathbf{\sigma}_1\cdot\mathbf{\sigma}_2$, where $\mathbf{\sigma}_i$ are so-called Pauli matrices. 
+!esubex
+!bsubex 
+Add thereafter isospin and find the expectation value of $\mathbf{\sigma}_1\cdot\mathbf{\sigma}_2\mathbf{\tau}_1\cdot\mathbf{\tau}_2$, where $\mathbf{\tau}_i$ are also so-called Pauli matrices. List all the cases with $S=0,1$ and $T=0,1$.
+!esubex
 !eblock
 
 
 !split
-===== Exercise 12 =====
+===== Exercise: One-pion exchange =====
 !bblock 
 A simple parametrization of the nucleon-nucleon force is given by what is called the $V_8$ potential model,
 where we have kept eight different operators. These operators contain a central force, a spin-orbit force,
@@ -2122,16 +2128,16 @@ V_{\pi}(\mathbf{r})= -\frac{f_{\pi}^{2}}{4\pi m_{\pi}^{2}}\mathbf{ \tau}_1\cdot\
 !et
 Here the constant $f_{\pi}^{2}/4\pi\approx 0.08$ and the mass of the pion is $m_\pi\approx 140$ MeV/c${}^{2}$. 
 
- o Compute the expectation value of the tensor force and the spin-spin  and isospin operators for the one-pion exchange potential for all partial waves you found in exercise 9. Comment your results. How does the one-pion exchange part behave as function of different $l$, ${\cal J}$ and $S$ values? Do you see some patterns?
- o For the binding energy of the deuteron, with the ground state defined by the quantum numbers $l=0$, $S=1$ and ${\cal J}=1$, the tensor force plays an important role due to the admixture from the $l=2$ state. Use the expectation values of the different operators of the one-pion exchange potential and plot the ratio of the tensor force component over the spin-spin component of the one-pion exchange part as function of $x=m_\pi r$ for the $l=2$ state (that is the case $l,l'={\cal J}+1$). Comment your results. 
-
+!bsubex
+Compute the expectation value of the tensor force and the spin-spin  and isospin operators for the one-pion exchange potential for all partial waves you found in exercise 9. Comment your results. How does the one-pion exchange part behave as function of different $l$, ${\cal J}$ and $S$ values? Do you see some patterns?
+!esubex
+!bsubex
+For the binding energy of the deuteron, with the ground state defined by the quantum numbers $l=0$, $S=1$ and ${\cal J}=1$, the tensor force plays an important role due to the admixture from the $l=2$ state. Use the expectation values of the different operators of the one-pion exchange potential and plot the ratio of the tensor force component over the spin-spin component of the one-pion exchange part as function of $x=m_\pi r$ for the $l=2$ state (that is the case $l,l'={\cal J}+1$). Comment your results. 
+!esubex
 !eblock
 
 
-
-
-
-
+!split
 ===== Exercise: Program for the Lippman-Schwinger equation =====
 The aim here is to develop a program which solves the Lippman-Schwinger equation for a simple parametrization for the 
 $^1S_0$ partial wave. This partial wave is given by a central force only and is parametrized in coordinate space as
