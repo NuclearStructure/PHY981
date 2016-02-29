@@ -165,111 +165,105 @@ $(function () {
               ('Isospin', 2, None, '___sec25'),
               ('Isospin', 2, None, '___sec26'),
               ('Isospin', 2, None, '___sec27'),
-              ('Angular momentum algebra', 2, None, '___sec28'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Examples', 2, None, '___sec28'),
+              ('Angular momentum algebra and many-body states',
                2,
                None,
                '___sec29'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, two-body state and anti-symmetrized matrix elements',
                2,
                None,
                '___sec30'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec31'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec32'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
-               2,
-               None,
-               '___sec33'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra', 2, None, '___sec33'),
+              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
                2,
                None,
                '___sec34'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, two-body matrix elements',
                2,
                None,
                '___sec35'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, two-body matrix element',
                2,
                None,
                '___sec36'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
+              ('Angular momentum algebra, two-body matrix element',
                2,
                None,
                '___sec37'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
-               2,
-               None,
-               '___sec38'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
-               2,
-               None,
-               '___sec39'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
-               2,
-               None,
-               '___sec40'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
-               2,
-               None,
-               '___sec41'),
-              ('Angular momentum algebra, Wigner-Eckart theorem',
-               2,
-               None,
-               '___sec42'),
+              ('The Hartree-Fock potential', 2, None, '___sec38'),
+              ('The Hartree-Fock potential', 2, None, '___sec39'),
+              ('The Hartree-Fock potential', 2, None, '___sec40'),
+              ('First order in the potential energy', 2, None, '___sec41'),
+              ('Angular momentum algebra', 2, None, '___sec42'),
               ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec43'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec44'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec45'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec46'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec47'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec48'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec49'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec50'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec51'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec52'),
-              ('Angular momentum algebra, Wigner-Eckart theorem, Examples',
+              ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
                '___sec53'),
-              ('The Hartree-Fock potential', 2, None, '___sec54'),
-              ('The Hartree-Fock potential', 2, None, '___sec55'),
-              ('The Hartree-Fock potential', 2, None, '___sec56'),
-              ('First order in the potential energy', 2, None, '___sec57'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec54'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec55'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec56'),
+              ('Angular momentum algebra, Wigner-Eckart theorem',
+               2,
+               None,
+               '___sec57'),
               ('Angular momentum algebra, Wigner-Eckart theorem',
                2,
                None,
@@ -457,7 +451,7 @@ MathJax.Hub.Config({
 </ul>
 
 For quantum numbers, chapter 1 on angular momentum and chapter 5 of Suhonen and chapters 5, 12 and 13 of Alex Brown. 
-For a good discussion of isospin, see for example Alex Brown's lecture notes chapter 12, 13 and 19.
+For a discussion of isospin, see for example Alex Brown's lecture notes chapter 12, 13 and 19.
 </div>
 
 
@@ -1235,385 +1229,7 @@ If charge is conserved, the Hamiltonian \( \hat{H} \) commutes with \( \hat{T}_z
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec28">Angular momentum algebra </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-We are now going to define two-body and many-body states in an angular momentum coupled basis, the so-called \( j \)-scheme basis.  In this connection
-
-<ul>
-<li> we need to define the so-called \( 6j \) and \( 9j \) symbols</li>
-<li> as well as the the Wigner-Eckart theorem</li>
-</ul>
-
-We will also study  some specific examples, like the calculation of the tensor force.
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec29">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-We define an irreducible  spherical tensor \( T^{\lambda}_{\mu} \) of rank \( \lambda \) as an operator with \( 2\lambda+1 \) components \( \mu \) 
-that satisfies the commutation relations (\( \hbar=1 \))
-$$
-[J_{\pm}, T^{\lambda}_{\mu}]= \sqrt{(\lambda\mp \mu)(\lambda\pm \mu+1)}T^{\lambda}_{\mu\pm 1},
-$$
-
-and
-$$
-[J_{z}, T^{\lambda}_{\mu}]=\mu T^{\lambda}_{\mu}.
-$$
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec30">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-Our angular momentum coupled two-body wave function obeys clearly this definition, namely
-$$
-|(ab)JM\rangle  = \left\{a^{\dagger}_aa^{\dagger}_b\right\}^J_M|\Phi_0\rangle=N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ab}\rangle, 
-$$
-
-is a tensor of rank \( J \) with \( M \) components. Another well-known example is given by the spherical harmonics (see examples during today's lecture).
-
-<p>
-The product of two irreducible tensor operators
-$$
-T^{\lambda_3}_{\mu_3}=\sum_{\mu_1\mu_2}\langle \lambda_1\mu_1\lambda_2\mu_2|\lambda_3\mu_3\rangle T^{\lambda_1}_{\mu_1}T^{\lambda_2}_{\mu_2}
-$$
-
-is also a tensor operator of rank \( \lambda_3 \).
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec31">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-We wish to apply the above definitions to the computations of a matrix element
-$$
-\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle,
-$$
-
-where we have skipped a reference to specific single-particle states. This is the expectation value for two specific states, labelled by angular momenta \( J' \) and \( J \). These states form an orthonormal basis.
-Using the properties of the Clebsch-Gordan coefficients we can write 
-$$
-T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle=\sum_{J''M''}\langle \lambda \mu J'M'|J''M''\rangle|\Psi^{J''}_{M''}\rangle,
-$$
-
-and assuming that states with different \( J \) and \( M \) are orthonormal we arrive at
-$$
-\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle= \langle \lambda \mu J'M'|JM\rangle \langle \Phi^J_M|\Psi^{J}_{M}\rangle.
-$$
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec32">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-We need to show that 
-$$
-\langle \Phi^J_M|\Psi^{J}_{M}\rangle,
-$$
-
-is independent of \( M \).
-To show that 
-$$
-\langle \Phi^J_M|\Psi^{J}_{M}\rangle,
-$$
-
-is independent of \( M \), we use the ladder operators for angular momentum.
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec33">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
- We have that
-$$
-\langle \Phi^J_{M+1}|\Psi^{J}_{M+1}\rangle=\left((J-M)(J+M+1)\right)^{-1/2}\langle \hat{J}_{+}\Phi^J_{M}|\Psi^{J}_{M+1}\rangle,
-$$
-
-but this is also equal to 
-$$
-\langle \Phi^J_{M+1}|\Psi^{J}_{M+1}\rangle=\left((J-M)(J+M+1)\right)^{-1/2}\langle \Phi^J_{M}|\hat{J}_{-}\Psi^{J}_{M+1}\rangle,
-$$
-
-meaning that
-$$
-\langle \Phi^J_{M+1}|\Psi^{J}_{M+1}\rangle=\langle \Phi^J_M|\Psi^{J}_{M}\rangle\equiv\langle \Phi^J_{M}||T^{\lambda}||\Phi^{J'}_{M'}\rangle.
-$$
-
-The double bars indicate that this expectation value is independent of the projection \( M \).
-
-
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec34">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-The Wigner-Eckart theorem for an expectation value can then be written as 
-$$
-\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv\langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle.
-$$
-
-The double bars indicate that this expectation value is independent of the projection \( M \).
-We can manipulate the Clebsch-Gordan coefficients using the relations
-$$
-\langle \lambda \mu J'M'|JM\rangle= (-1)^{\lambda+J'-J}\langle J'M'\lambda \mu |JM\rangle 
-$$
-
-and
-$$
-\langle J'M'\lambda \mu |JM\rangle =(-1)^{J'-M'}\frac{\sqrt{2J+1}}{\sqrt{2\lambda+1}}\langle J'M'J-M |\lambda-\mu\rangle,
-$$
-
-together with the so-called \( 3j \) symbols.
-It is then normal to encounter the Wigner-Eckart theorem in the form 
-$$
-\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv(-1)^{J-M}\left(\begin{array}{ccc}  J & \lambda & J' \\ -M & \mu & M'\end{array}\right)\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle,
-$$
-
-with the condition \( \mu+M'-M=0 \).
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec35">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-The \( 3j \) symbols obey the symmetry relation
-$$
-\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_1 & m_2 & m_3\end{array}\right)=(-1)^{p}\left(\begin{array}{ccc}  j_a & j_b & j_c \\ m_a & m_b & m_c\end{array}\right),
-$$
-
-with \( (-1)^p=1 \) when the columns \( a,b, c \) are even permutations of the columns \( 1,2,3 \), \( p=j_1+j_2+j_3 \) when the columns \( a,b,c \) are odd permtations of the
-columns \( 1,2,3 \) and \( p=j_1+j_2+j_3 \) when all the magnetic quantum numbers \( m_i \) change sign. Their orthogonality is given by
-$$
-\sum_{j_3m_3}(2j_3+1)\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_1 & m_2 & m_3\end{array}\right)\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_{1'} & m_{2'} & m_3\end{array}\right)=\delta_{m_1m_{1'}}\delta_{m_2m_{2'}},
-$$
-
-and 
-$$
-\sum_{m_1m_2}\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_1 & m_2 & m_3\end{array}\right)\left(\begin{array}{ccc}  j_1 & j_2 & j_{3'} \\ m_{1} & m_{2} & m_{3'}\end{array}\right)=\frac{1}{(2j_3+1)}\delta_{j_3j_{3'}}\delta_{m_3m_{3'}}.
-$$
-</div>
-
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec36">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-For later use, the following special cases for the Clebsch-Gordan and \( 3j \) symbols are rather useful
-\[
-\langle JM J'M' |00\rangle =\frac{(-1)^{J-M}}{\sqrt{2J+1}}\delta_{JJ'}\delta_{MM'}.
-\] 
-and 
-\[
-\left(\begin{array}{ccc}  J &amp; 1 & J \\ -M &amp; 0 & M'\end{array}\right)=(-1)^{J-M}\frac{M}{\sqrt{(2J+1)(J+1)}}\delta_{MM'}.
-\]
-</div>
-
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec37">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-Using \( 3j \) symbols we rewrote the Wigner-Eckart theorem as
-$$
-\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv(-1)^{J-M}\left(\begin{array}{ccc}  J & \lambda & J' \\ -M & \mu & M'\end{array}\right)\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle.
-$$
-
-Multiplying from the left with the same \( 3j \) symbol and summing over \( M,\mu,M' \) we obtain the equivalent relation 
-$$
-\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle\equiv\sum_{M,\mu,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & \lambda & J' \\ -M & \mu & M'\end{array}\right)\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle,
-$$
-
-where we used the orthogonality properties of the \( 3j \) symbols from the previous page.
-</div>
-
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec38">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-This relation can in turn be used to compute the expectation value of some simple reduced matrix elements like
-$$
-\langle \Phi^J||{\bf 1}||\Phi^{J'}\rangle=\sum_{M,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & 0 & J' \\ -M & 0 & M'\end{array}\right)\langle \Phi^J_M|1|\Phi^{J'}_{M'}\rangle=\sqrt{2J+1}\delta_{JJ'}\delta_{MM'},
-$$
-
-where we used
-$$
-\langle JM J'M' |00\rangle =\frac{(-1)^{J-M}}{\sqrt{2J+1}}\delta_{JJ'}\delta_{MM'}.
-$$
-</div>
-
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec39">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-Similarly, using 
-$$
-\left(\begin{array}{ccc}  J & 1 & J \\ -M & 0 & M'\end{array}\right)=(-1)^{J-M}\frac{M}{\sqrt{(2J+1)(J+1)}}\delta_{MM'},
-$$
-
-we have that 
-$$
-\langle \Phi^J||{\bf J}||\Phi^{J}\rangle=\sum_{M,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & 1 & J' \\ -M & 0 & M'\end{array}\right)\langle \Phi^J_M|j_Z|\Phi^{J'}_{M'}\rangle=\sqrt{J(J+1)(2J+1)}
-$$
-
-With the Pauli spin matrices \( \sigma \) and a state with \( J=1/2 \), the reduced matrix element
-$$
-\langle \frac{1}{2}||{\bf \sigma}||\frac{1}{2}\rangle=\sqrt{6}.
-$$
-
-Before we proceed with further examples, we need some other properties of the Wigner-Eckart theorem plus some additional angular momenta relations.
-</div>
-
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec40">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-The Wigner-Eckart theorem states that the  expectation value for an irreducible spherical tensor can be written as
-$$
-\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv\langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle.
-$$
-
-Since the Clebsch-Gordan coefficients themselves are easy to evaluate, the interesting quantity is the reduced matrix element. Note also that 
-the Clebsch-Gordan coefficients limit via the triangular relation among \( \lambda \), \( J \) and \( J' \) the possible non-zero values.
-
-<p>
-From the theorem we see also that 
-$$
-\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle=\frac{\langle \lambda \mu J'M'|JM\rangle\langle }{\langle \lambda \mu_0 J'M'_0|JM_0\rangle\langle }\langle \Phi^J_{M_0}|T^{\lambda}_{\mu_0}|\Phi^{J'}_{M'_0}\rangle,
-$$
-
-meaning that if we know the matrix elements for say some \( \mu=\mu_0 \), \( M'=M'_0 \) and \( M=M_0 \) we can calculate all other.
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec41">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-If we look at the hermitian adjoint of the operator \( T^{\lambda}_{\mu} \), 
-we see via the commutation relations that \( (T^{\lambda}_{\mu})^{\dagger} \) is not an irreducible tensor, that is
-$$
-[J_{\pm}, (T^{\lambda}_{\mu})^{\dagger}]= -\sqrt{(\lambda\pm \mu)(\lambda\mp \mu+1)}(T^{\lambda}_{\mu\mp 1})^{\dagger},
-$$
-
-and 
-$$
-[J_{z}, (T^{\lambda}_{\mu})^{\dagger}]=-\mu (T^{\lambda}_{\mu})^{\dagger}.
-$$
-
-The hermitian adjoint \( (T^{\lambda}_{\mu})^{\dagger} \) is not an irreducible tensor. As an example, consider the spherical harmonics for 
-\( l=1 \) and \( m_l=\pm 1 \). These functions are 
-$$
-Y^{l=1}_{m_l=1}(\theta,\phi)=-\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{\imath\phi},
-$$
-
-and
-$$
-Y^{l=1}_{m_l=-1}(\theta,\phi)=\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{-\imath\phi},
-$$
-</div>
-
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec42">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-It is easy to see that the Hermitian adjoint of these two functions
-$$
-\left[Y^{l=1}_{m_l=1}(\theta,\phi)\right]^{\dagger}=-\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{-\imath\phi},
-$$
-
-and 
-$$
-\left[Y^{l=1}_{m_l=-1}(\theta,\phi)\right]^{\dagger}=\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{\imath\phi},
-$$
-
-do not behave as a spherical tensor. However, the modified quantity 
-$$
-\tilde{T}^{\lambda}_{\mu}=(-1)^{\lambda+\mu}(T^{\lambda}_{-\mu})^{\dagger},
-$$
-
-does satisfy the above commutation relations.
-
-
-</div>
-
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec43">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-With the modified quantity 
-$$
-\tilde{T}^{\lambda}_{\mu}=(-1)^{\lambda+\mu}(T^{\lambda}_{-\mu})^{\dagger},
-$$
-
-we can then define the expectation value
-$$
-\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle^{\dagger} = \langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle^*,
-$$
-
-since the Clebsch-Gordan coefficients are real. The rhs is equivalent with 
-$$
-\langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle^*=\langle \Phi^{J'}_{M'}|(T^{\lambda}_{\mu})^{\dagger}|\Phi^{J}_{M}\rangle,
-$$
-
-which is equal to 
-$$
-\langle \Phi^{J'}_{M'}|(T^{\lambda}_{\mu})^{\dagger}|\Phi^{J}_{M}\rangle=(-1)^{-\lambda+\mu}\langle \lambda -\mu JM|J'M'\rangle\langle \Phi^{J'}||\tilde{T}^{\lambda}||\Phi^{J}\rangle.
-$$
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec44">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec28">Angular momentum algebra, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1641,7 +1257,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec45">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec29">Angular momentum algebra and many-body states  </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1660,7 +1276,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec46">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec30">Angular momentum algebra, two-body state and anti-symmetrized matrix elements </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1689,21 +1305,23 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec47">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec31">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-This matrix element is the expectation value of 
+This matrix element is given by
 $$
-\langle ^{16}\mathrm{O}|a_ba_a\frac{1}{4}\sum_{pqrs}\langle (pq) M | \hat{V} | (rs) M' \rangle a^{\dagger}_pa^{\dagger}_qa_sa_r a^{\dagger}_ca^{\dagger}_c|^{16}\mathrm{O}\rangle.
+\langle ^{16}\mathrm{O}|a_ba_a\frac{1}{4}\sum_{pqrs}\langle (pq) M | \hat{V} | (rs) M' \rangle a^{\dagger}_pa^{\dagger}_qa_sa_r a^{\dagger}_ca^{\dagger}_d|^{16}\mathrm{O}\rangle.
 $$
+
+We can compute this matrix element using Wick's theorem.
 </div>
 
 
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec48">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec32">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1729,36 +1347,15 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec49">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec33">Angular momentum algebra </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-The implementation of the Pauli principle looks different in the \( J \)-scheme compared with the \( m \)-scheme. In the latter, no two fermions or more can have the same set of quantum numbers. In the \( J \)-scheme, when we write a state with the shorthand 
-$$
-|^{18}\mathrm{O}\rangle_J =|(ab)JM\rangle,
-$$
-
-we do refer to the angular momenta only. This means that another way of writing the last state is
-$$
-|^{18}\mathrm{O}\rangle_J =|(j_aj_b)JM\rangle.
-$$
-
-We will use this notation throughout when we refer to a two-body state in \( J \)-scheme. The Kronecker \( \delta \) function in the normalization factor 
-refers thus to the values of \( j_a \) and \( j_b \). If two identical particles are in a state with the same \( j \)-value, then only even values of the total angular momentum apply.
-</div>
-
-
-<p>
-<!-- !split --><br><br><br><br><br><br><br><br><br><br>
-
-<h2 id="___sec50">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-Note also that, using the anti-commuting 
+We
+note that, using the anti-commuting 
 properties of the creation operators, we obtain
 $$
-N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM>|\Phi^{ab}\rangle=-N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ba}\rangle.
+N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle \vert\Phi^{ab}\rangle=-N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle\vert\Phi^{ba}\rangle.
 $$
 
 Furthermore, using the property of the Clebsch-Gordan coefficient
@@ -1775,15 +1372,35 @@ is equal to
 $$
 |(j_bj_a)JM\rangle=(-1)^{j_a+j_b-J+1}|(j_aj_b)JM\rangle.
 $$
-
-
 </div>
 
 
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec51">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec34">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The implementation of the Pauli principle looks different in the \( J \)-scheme compared with the \( m \)-scheme. In the latter, no two fermions or more can have the same set of quantum numbers. In the \( J \)-scheme, when we write a state with the shorthand 
+$$
+|^{18}\mathrm{O}\rangle_J =|(ab)JM\rangle,
+$$
+
+we do refer to the angular momenta only. This means that another way of writing the last state is
+$$
+|^{18}\mathrm{O}\rangle_J =|(j_aj_b)JM\rangle.
+$$
+
+We will use this notation throughout when we refer to a two-body state in \( J \)-scheme. The Kronecker \( \delta \) function in the normalization factor 
+refers thus to the values of \( j_a \) and \( j_b \). If two identical particles are in a state with the same \( j \)-value, then only even values of the total angular momentum apply.  In the notation below, when we label a state as \( j_p \) it will actually represent all quantum numbers except \( m_p \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec35">Angular momentum algebra, two-body matrix elements </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1804,7 +1421,7 @@ and note that of the four \( m \)-values in the above sum, only three are indepe
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec52">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec36">Angular momentum algebra, two-body matrix element </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1835,7 +1452,7 @@ where the last relations follows from the fact that \( J \) is an integer and \(
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec53">Angular momentum algebra, Wigner-Eckart theorem, Examples </h2>
+<h2 id="___sec37">Angular momentum algebra, two-body matrix element </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1877,7 +1494,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec54">The Hartree-Fock potential </h2>
+<h2 id="___sec38">The Hartree-Fock potential </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1900,7 +1517,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec55">The Hartree-Fock potential </h2>
+<h2 id="___sec39">The Hartree-Fock potential </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -1928,10 +1545,7 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec56">The Hartree-Fock potential </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<h2 id="___sec40">The Hartree-Fock potential </h2>
 We rewrite 
 $$
 \varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{i\le F}\sum_{m_a} \langle ai \vert \hat{V} \vert ai\rangle_{AS},
@@ -1946,13 +1560,71 @@ $$
 where we have suppressed  the dependence on \( n_p \) and \( t_z \) in the matrix element. 
 Using the definition
 $$
-\langle (j_am_aj_bm_b)M \vert  \hat{V} \vert (j_cm_cj_dm_d)M\rangle=\frac{1}{N_{ab}N_{cd}}\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle,
+\langle (j_am_aj_bm_b)M \vert  \hat{V} \vert (j_cm_cj_dm_d)M\rangle=\frac{1}{N_{ab}N_{cd}}\sum_{JM}\langle j_am_aj_bm_b|JM\rangle\langle j_cm_cj_dm_d|JM\rangle \langle (j_aj_b)J \vert \hat{V} \vert (j_cj_d)M\rangle_{AS},
 $$
 
 with the orthogonality properties of Glebsch-Gordan coefficients and that the  \( j \)-coupled two-body matrix element is a scalar and independent of \( M \) we arrive at 
 $$
-\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{n_i,j_i,t_{z_{i}}\le F}\sum_J (2J+1)
+\varepsilon_{a}^{\mathrm{HF}}=\varepsilon_a+  \frac{1}{2j_a+1}\sum_{j_i\le F}\sum_J (2J+1)
 \langle (j_aj_i)J \vert \hat{V} \vert (j_aj_i)M\rangle_{AS},
+$$
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec41">First order in the potential energy </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In a similar way it is easy to show that the potential energy contribution to the ground state energy in \( m \)-scheme
+$$
+\frac{1}{2}\sum_{ij\le F}\langle (j_im_ij_jm_j)M |  \hat{V} | (j_im_ij_jm_j)M\rangle_{AS},
+$$
+
+can be rewritten as
+$$
+\frac{1}{2}\sum_{j_i,j_j\le F}\sum_J(2J+1)
+\langle (j_ij_j)J |  \hat{V} | (j_ij_j)J\rangle_{AS},
+$$
+
+This reduces the number of floating point operations with an order of magnitude on average.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec42">Angular momentum algebra </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We are now going to define two-body and many-body states in an angular momentum coupled basis, the so-called \( j \)-scheme basis.  In this connection
+
+<ul>
+<li> we need to define the so-called \( 6j \) and \( 9j \) symbols</li>
+<li> as well as the the Wigner-Eckart theorem</li>
+</ul>
+
+We will also study  some specific examples, like the calculation of the tensor force.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec43">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We define an irreducible  spherical tensor \( T^{\lambda}_{\mu} \) of rank \( \lambda \) as an operator with \( 2\lambda+1 \) components \( \mu \) 
+that satisfies the commutation relations (\( \hbar=1 \))
+$$
+[J_{\pm}, T^{\lambda}_{\mu}]= \sqrt{(\lambda\mp \mu)(\lambda\pm \mu+1)}T^{\lambda}_{\mu\pm 1},
+$$
+
+and
+$$
+[J_{z}, T^{\lambda}_{\mu}]=\mu T^{\lambda}_{\mu}.
 $$
 </div>
 
@@ -1960,23 +1632,340 @@ $$
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec57">First order in the potential energy </h2>
+<h2 id="___sec44">Angular momentum algebra, Wigner-Eckart theorem </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
-In a similar way it is easy to show that the potential energy contribution to the ground state energy in \( m \)-scheme
+Our angular momentum coupled two-body wave function obeys clearly this definition, namely
 $$
-\frac{1}{2}\sum_{n_i,j_i,m_i,t_{z_{i}}\le F}\sum_{n_j,j_j,m_j,t_{z_{j}}\le F}
-\langle (j_im_ij_jm_j)M |  \hat{V} | (j_im_ij_jm_j)M\rangle_{AS},
-$$
-
-can be rewritten as
-$$
-\frac{1}{2}\sum_{n_i,j_i,t_{z_{i}}\le F}\sum_{n_j,j_j,t_{z_{j}}\le F}\sum_J(2J+1)
-\langle (j_ij_j)J |  \hat{V} | (j_ij_j)J\rangle_{AS},
+|(ab)JM\rangle  = \left\{a^{\dagger}_aa^{\dagger}_b\right\}^J_M|\Phi_0\rangle=N_{ab}\sum_{m_am_b}\langle j_am_aj_bm_b|JM\rangle|\Phi^{ab}\rangle, 
 $$
 
-This reduces the number of floating point operations with an order of magnitude on average.
+is a tensor of rank \( J \) with \( M \) components. Another well-known example is given by the spherical harmonics (see examples during today's lecture).
+
+<p>
+The product of two irreducible tensor operators
+$$
+T^{\lambda_3}_{\mu_3}=\sum_{\mu_1\mu_2}\langle \lambda_1\mu_1\lambda_2\mu_2|\lambda_3\mu_3\rangle T^{\lambda_1}_{\mu_1}T^{\lambda_2}_{\mu_2}
+$$
+
+is also a tensor operator of rank \( \lambda_3 \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec45">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We wish to apply the above definitions to the computations of a matrix element
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle,
+$$
+
+where we have skipped a reference to specific single-particle states. This is the expectation value for two specific states, labelled by angular momenta \( J' \) and \( J \). These states form an orthonormal basis.
+Using the properties of the Clebsch-Gordan coefficients we can write 
+$$
+T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle=\sum_{J''M''}\langle \lambda \mu J'M'|J''M''\rangle|\Psi^{J''}_{M''}\rangle,
+$$
+
+and assuming that states with different \( J \) and \( M \) are orthonormal we arrive at
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle= \langle \lambda \mu J'M'|JM\rangle \langle \Phi^J_M|\Psi^{J}_{M}\rangle.
+$$
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec46">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+We need to show that 
+$$
+\langle \Phi^J_M|\Psi^{J}_{M}\rangle,
+$$
+
+is independent of \( M \).
+To show that 
+$$
+\langle \Phi^J_M|\Psi^{J}_{M}\rangle,
+$$
+
+is independent of \( M \), we use the ladder operators for angular momentum.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec47">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+ We have that
+$$
+\langle \Phi^J_{M+1}|\Psi^{J}_{M+1}\rangle=\left((J-M)(J+M+1)\right)^{-1/2}\langle \hat{J}_{+}\Phi^J_{M}|\Psi^{J}_{M+1}\rangle,
+$$
+
+but this is also equal to 
+$$
+\langle \Phi^J_{M+1}|\Psi^{J}_{M+1}\rangle=\left((J-M)(J+M+1)\right)^{-1/2}\langle \Phi^J_{M}|\hat{J}_{-}\Psi^{J}_{M+1}\rangle,
+$$
+
+meaning that
+$$
+\langle \Phi^J_{M+1}|\Psi^{J}_{M+1}\rangle=\langle \Phi^J_M|\Psi^{J}_{M}\rangle\equiv\langle \Phi^J_{M}||T^{\lambda}||\Phi^{J'}_{M'}\rangle.
+$$
+
+The double bars indicate that this expectation value is independent of the projection \( M \).
+
+
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec48">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The Wigner-Eckart theorem for an expectation value can then be written as 
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv\langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle.
+$$
+
+The double bars indicate that this expectation value is independent of the projection \( M \).
+We can manipulate the Clebsch-Gordan coefficients using the relations
+$$
+\langle \lambda \mu J'M'|JM\rangle= (-1)^{\lambda+J'-J}\langle J'M'\lambda \mu |JM\rangle 
+$$
+
+and
+$$
+\langle J'M'\lambda \mu |JM\rangle =(-1)^{J'-M'}\frac{\sqrt{2J+1}}{\sqrt{2\lambda+1}}\langle J'M'J-M |\lambda-\mu\rangle,
+$$
+
+together with the so-called \( 3j \) symbols.
+It is then normal to encounter the Wigner-Eckart theorem in the form 
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv(-1)^{J-M}\left(\begin{array}{ccc}  J & \lambda & J' \\ -M & \mu & M'\end{array}\right)\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle,
+$$
+
+with the condition \( \mu+M'-M=0 \).
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec49">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The \( 3j \) symbols obey the symmetry relation
+$$
+\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_1 & m_2 & m_3\end{array}\right)=(-1)^{p}\left(\begin{array}{ccc}  j_a & j_b & j_c \\ m_a & m_b & m_c\end{array}\right),
+$$
+
+with \( (-1)^p=1 \) when the columns \( a,b, c \) are even permutations of the columns \( 1,2,3 \), \( p=j_1+j_2+j_3 \) when the columns \( a,b,c \) are odd permtations of the
+columns \( 1,2,3 \) and \( p=j_1+j_2+j_3 \) when all the magnetic quantum numbers \( m_i \) change sign. Their orthogonality is given by
+$$
+\sum_{j_3m_3}(2j_3+1)\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_1 & m_2 & m_3\end{array}\right)\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_{1'} & m_{2'} & m_3\end{array}\right)=\delta_{m_1m_{1'}}\delta_{m_2m_{2'}},
+$$
+
+and 
+$$
+\sum_{m_1m_2}\left(\begin{array}{ccc}  j_1 & j_2 & j_3 \\ m_1 & m_2 & m_3\end{array}\right)\left(\begin{array}{ccc}  j_1 & j_2 & j_{3'} \\ m_{1} & m_{2} & m_{3'}\end{array}\right)=\frac{1}{(2j_3+1)}\delta_{j_3j_{3'}}\delta_{m_3m_{3'}}.
+$$
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec50">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+For later use, the following special cases for the Clebsch-Gordan and \( 3j \) symbols are rather useful
+\[
+\langle JM J'M' |00\rangle =\frac{(-1)^{J-M}}{\sqrt{2J+1}}\delta_{JJ'}\delta_{MM'}.
+\] 
+and 
+\[
+\left(\begin{array}{ccc}  J &amp; 1 & J \\ -M &amp; 0 & M'\end{array}\right)=(-1)^{J-M}\frac{M}{\sqrt{(2J+1)(J+1)}}\delta_{MM'}.
+\]
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec51">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Using \( 3j \) symbols we rewrote the Wigner-Eckart theorem as
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv(-1)^{J-M}\left(\begin{array}{ccc}  J & \lambda & J' \\ -M & \mu & M'\end{array}\right)\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle.
+$$
+
+Multiplying from the left with the same \( 3j \) symbol and summing over \( M,\mu,M' \) we obtain the equivalent relation 
+$$
+\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle\equiv\sum_{M,\mu,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & \lambda & J' \\ -M & \mu & M'\end{array}\right)\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle,
+$$
+
+where we used the orthogonality properties of the \( 3j \) symbols from the previous page.
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec52">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+This relation can in turn be used to compute the expectation value of some simple reduced matrix elements like
+$$
+\langle \Phi^J||{\bf 1}||\Phi^{J'}\rangle=\sum_{M,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & 0 & J' \\ -M & 0 & M'\end{array}\right)\langle \Phi^J_M|1|\Phi^{J'}_{M'}\rangle=\sqrt{2J+1}\delta_{JJ'}\delta_{MM'},
+$$
+
+where we used
+$$
+\langle JM J'M' |00\rangle =\frac{(-1)^{J-M}}{\sqrt{2J+1}}\delta_{JJ'}\delta_{MM'}.
+$$
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec53">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Similarly, using 
+$$
+\left(\begin{array}{ccc}  J & 1 & J \\ -M & 0 & M'\end{array}\right)=(-1)^{J-M}\frac{M}{\sqrt{(2J+1)(J+1)}}\delta_{MM'},
+$$
+
+we have that 
+$$
+\langle \Phi^J||{\bf J}||\Phi^{J}\rangle=\sum_{M,M'}(-1)^{J-M}\left(\begin{array}{ccc}  J & 1 & J' \\ -M & 0 & M'\end{array}\right)\langle \Phi^J_M|j_Z|\Phi^{J'}_{M'}\rangle=\sqrt{J(J+1)(2J+1)}
+$$
+
+With the Pauli spin matrices \( \sigma \) and a state with \( J=1/2 \), the reduced matrix element
+$$
+\langle \frac{1}{2}||{\bf \sigma}||\frac{1}{2}\rangle=\sqrt{6}.
+$$
+
+Before we proceed with further examples, we need some other properties of the Wigner-Eckart theorem plus some additional angular momenta relations.
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec54">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The Wigner-Eckart theorem states that the  expectation value for an irreducible spherical tensor can be written as
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle\equiv\langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle.
+$$
+
+Since the Clebsch-Gordan coefficients themselves are easy to evaluate, the interesting quantity is the reduced matrix element. Note also that 
+the Clebsch-Gordan coefficients limit via the triangular relation among \( \lambda \), \( J \) and \( J' \) the possible non-zero values.
+
+<p>
+From the theorem we see also that 
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle=\frac{\langle \lambda \mu J'M'|JM\rangle\langle }{\langle \lambda \mu_0 J'M'_0|JM_0\rangle\langle }\langle \Phi^J_{M_0}|T^{\lambda}_{\mu_0}|\Phi^{J'}_{M'_0}\rangle,
+$$
+
+meaning that if we know the matrix elements for say some \( \mu=\mu_0 \), \( M'=M'_0 \) and \( M=M_0 \) we can calculate all other.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec55">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+If we look at the hermitian adjoint of the operator \( T^{\lambda}_{\mu} \), 
+we see via the commutation relations that \( (T^{\lambda}_{\mu})^{\dagger} \) is not an irreducible tensor, that is
+$$
+[J_{\pm}, (T^{\lambda}_{\mu})^{\dagger}]= -\sqrt{(\lambda\pm \mu)(\lambda\mp \mu+1)}(T^{\lambda}_{\mu\mp 1})^{\dagger},
+$$
+
+and 
+$$
+[J_{z}, (T^{\lambda}_{\mu})^{\dagger}]=-\mu (T^{\lambda}_{\mu})^{\dagger}.
+$$
+
+The hermitian adjoint \( (T^{\lambda}_{\mu})^{\dagger} \) is not an irreducible tensor. As an example, consider the spherical harmonics for 
+\( l=1 \) and \( m_l=\pm 1 \). These functions are 
+$$
+Y^{l=1}_{m_l=1}(\theta,\phi)=-\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{\imath\phi},
+$$
+
+and
+$$
+Y^{l=1}_{m_l=-1}(\theta,\phi)=\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{-\imath\phi},
+$$
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec56">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+It is easy to see that the Hermitian adjoint of these two functions
+$$
+\left[Y^{l=1}_{m_l=1}(\theta,\phi)\right]^{\dagger}=-\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{-\imath\phi},
+$$
+
+and 
+$$
+\left[Y^{l=1}_{m_l=-1}(\theta,\phi)\right]^{\dagger}=\sqrt{\frac{3}{8\pi}}\sin{(\theta)}\exp{\imath\phi},
+$$
+
+do not behave as a spherical tensor. However, the modified quantity 
+$$
+\tilde{T}^{\lambda}_{\mu}=(-1)^{\lambda+\mu}(T^{\lambda}_{-\mu})^{\dagger},
+$$
+
+does satisfy the above commutation relations.
+
+
+</div>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec57">Angular momentum algebra, Wigner-Eckart theorem </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+With the modified quantity 
+$$
+\tilde{T}^{\lambda}_{\mu}=(-1)^{\lambda+\mu}(T^{\lambda}_{-\mu})^{\dagger},
+$$
+
+we can then define the expectation value
+$$
+\langle \Phi^J_M|T^{\lambda}_{\mu}|\Phi^{J'}_{M'}\rangle^{\dagger} = \langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle^*,
+$$
+
+since the Clebsch-Gordan coefficients are real. The rhs is equivalent with 
+$$
+\langle \lambda \mu J'M'|JM\rangle\langle \Phi^J||T^{\lambda}||\Phi^{J'}\rangle^*=\langle \Phi^{J'}_{M'}|(T^{\lambda}_{\mu})^{\dagger}|\Phi^{J}_{M}\rangle,
+$$
+
+which is equal to 
+$$
+\langle \Phi^{J'}_{M'}|(T^{\lambda}_{\mu})^{\dagger}|\Phi^{J}_{M}\rangle=(-1)^{-\lambda+\mu}\langle \lambda -\mu JM|J'M'\rangle\langle \Phi^{J'}||\tilde{T}^{\lambda}||\Phi^{J}\rangle.
+$$
 </div>
 
 
@@ -2058,7 +2047,7 @@ Till now we have mainly been concerned with the coupling of two angular momenta 
 If we wish to describe a three-body state with a final angular momentum \( J \), we need to couple three angular momenta, say 
 the two momenta \( j_a,j_b \) to a third one \( j_c \). The coupling order is important and leads to a less trivial implementation of the 
 Pauli principle. With three angular momenta there are obviously \( 3! \) ways by which we can combine the angular momenta. 
-In \( m \)-scheme a three-body Slater determinant is represented as (say for the case of $^{19}$O, three neutrons outside the core of $^{16}$O),
+In \( m \)-scheme a three-body Slater determinant is represented as (say for the case of \( {}^{19}\mbox{O} \), three neutrons outside the core of \( {}^{16}\mbox{O} \)),
 $$
 |^{19}\mathrm{O}\rangle =|(abc)M\rangle  = a^{\dagger}_aa^{\dagger}_ba^{\dagger}_c|^{16}\mathrm{O}\rangle=|\Phi^{abc}\rangle.
 $$
@@ -2071,9 +2060,6 @@ The Pauli principle is automagically implemented via the anti-commutation relati
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec62">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
 However, when we deal the same state in an angular momentum coupled basis, we need to be a little bit more careful. We can namely couple the states
 as follows
 $$
@@ -2083,17 +2069,10 @@ $$
 
 that is, we couple first \( j_a \) to \( j_b \) to yield an intermediate angular momentum \( J_{ab} \), then to \( j_c \) yielding the final angular momentum \( J \).
 
-
-</div>
-
-
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec63">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
 Now, nothing hinders us from recoupling this state by coupling \( j_b \) to \( j_c \), yielding an intermediate angular momentum \( J_{bc} \) and then couple this angular momentum to \( j_a \), resulting in the final angular momentum \( J' \).
 
 <p>
@@ -2113,17 +2092,10 @@ $$
 \end{align}
 $$
 
-
-</div>
-
-
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec64">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
 We use then the latter equation to define the so-called \( 6j \)-symbols
 $$
 \begin{eqnarray}
@@ -2139,10 +2111,6 @@ A specific coupling order has to be respected in the symbol, that is, the so-cal
 $$
 \left\{\begin{array}{ccc} x & x& x \\  &  &  \end{array}\right\}\hspace{0.1cm}\left\{\begin{array}{ccc}  & & x \\  x& x &  \end{array}\right\}\hspace{0.1cm}\left\{\begin{array}{ccc}  & x&  \\ x &  &x  \end{array}\right\}\hspace{0.1cm}\left\{\begin{array}{ccc} x & &  \\  & x &x  \end{array}\right\}\hspace{0.1cm}
 $$
-
-
-</div>
-
 
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
@@ -2175,7 +2143,7 @@ $$
 The above properties of \( 6j \) symbols can again be tested using the symbolic python package <b>wigner</b>. 
 Let us test the invariance
 $$
-    \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6 \end{Bmatrix} = \begin{Bmatrix} j_2 & j_1 & j_3\\ j_5 & j_4 & j_6 \end{Bmatrix}. . 
+    \begin{Bmatrix} j_1 & j_2 & j_3\\ j_4 & j_5 & j_6 \end{Bmatrix} = \begin{Bmatrix} j_2 & j_1 & j_3\\ j_5 & j_4 & j_6 \end{Bmatrix}. 
 $$
 
 <p>
@@ -2229,9 +2197,6 @@ $$
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec68">Angular momentum algebra, Wigner-Eckart theorem </h2>
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
 With the \( 6j \) symbol defined, we can go back and and rewrite the overlap between the two ways of recoupling angular momenta in terms of the \( 6j \) symbol.
 That is, we can have  
 $$
@@ -2242,9 +2207,7 @@ Can you find the inverse relation?
 These relations can in turn be used to write out the fully anti-symmetrized three-body wave function in a \( J \)-scheme coupled basis. 
 If you opt then for a specific coupling order, say \( | ([j_a\rightarrow j_b]J_{ab}\rightarrow j_c) JM\rangle \), you need to express this representation in terms of the other coupling possibilities.
 
-
-</div>
-
+<p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <h2 id="___sec69">Angular momentum algebra, Wigner-Eckart theorem </h2>
