@@ -1381,7 +1381,7 @@ Calculate
 and
 !bt
 \[
-\langle \Phi_0\hat{G}|\Phi_0\rangle.
+\langle \Phi_0\vert\hat{G}|\Phi_0\rangle.
 \]
 !et
 !esubex
@@ -1707,4 +1707,6 @@ For ${}^{16}\mbox{O}$  we have an experimental value for the  shell gap of $11.5
 The splitting between the $0p_{3/2}^{\nu}$ and the $0p_{1/2}^{\nu}$ state is 4.88 MeV, while the experimental value for the gap between the ground state $1/2^{-}$ and the first excited $3/2^{-}$ states is 6.08 MeV. The two-nucleon spin-orbit force plays a central role here. In our discussion of nuclear forces we will see how the spin-orbit force comes into play here.
 
 !esubex
+
+
 
