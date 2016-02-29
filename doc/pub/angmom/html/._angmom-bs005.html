@@ -406,7 +406,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._angmom-bs002.html#___sec1" style="font-size: 80%;">Motivation</a></li>
      <!-- navigation toc: --> <li><a href="._angmom-bs003.html#___sec2" style="font-size: 80%;">Single-particle and two-particle quantum numbers</a></li>
      <!-- navigation toc: --> <li><a href="._angmom-bs004.html#___sec3" style="font-size: 80%;">Single-particle and two-particle quantum numbers, brief review on angular momenta etc</a></li>
-     <!-- navigation toc: --> <li><a href="._angmom-bs005.html#___sec4" style="font-size: 80%;">Single-particle and two-particle quantum numbers, brief review on angular momenta etc</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec4" style="font-size: 80%;">Single-particle and two-particle quantum numbers, brief review on angular momenta etc</a></li>
      <!-- navigation toc: --> <li><a href="._angmom-bs006.html#___sec5" style="font-size: 80%;">Single-particle and two-particle quantum numbers, brief review on angular momenta etc</a></li>
      <!-- navigation toc: --> <li><a href="._angmom-bs007.html#___sec6" style="font-size: 80%;">Single-particle and two-particle quantum numbers, brief review on angular momenta etc</a></li>
      <!-- navigation toc: --> <li><a href="._angmom-bs008.html#___sec7" style="font-size: 80%;">Single-particle and two-particle quantum numbers, brief review on angular momenta etc</a></li>
@@ -505,54 +505,55 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0005"></a>
+<!-- !split -->
 
-<!-- Slides for PHY981 -->
+<h2 id="___sec4">Single-particle and two-particle quantum numbers, brief review on angular momenta etc </h2>
+<div class="panel panel-default">
+<div class="panel-body">
+Since we have a spin orbit force which is strong, it is easy to show that 
+the total angular momentum operator
+$$
+   \hat{J}=\hat{L}+\hat{S}
+$$
 
+does not commute with \( \hat{L}_z \) and \( \hat{S}_z \). To see this, we calculate for example
+$$
+\begin{eqnarray} 
+   [\hat{L}_z,\hat{J}^2]&=&[\hat{L}_z,(\hat{L}+\hat{S})^2] \\ \nonumber
+   &=&[\hat{L}_z,\hat{L}^2+\hat{S}^2+2\hat{L}\hat{S}]\\ \nonumber 
+   &=& [\hat{L}_z,\hat{L}\hat{S}]=[\hat{L}_z,\hat{L}_x\hat{S}_x+\hat{L}_y\hat{S}_y+\hat{L}_z\hat{S}_z]\ne 0, 
+\end{eqnarray}
+$$
 
-<div class="jumbotron">
-<center><h1>Quantum numbers and Angular Momentum Algebra</h1></center>  <!-- document title -->
+since we have that \( [\hat{L}_z,\hat{L}_x]=i\hbar\hat{L}_y \) and \( [\hat{L}_z,\hat{L}_y]=i\hbar\hat{L}_x \).
+</div>
+</div>
+
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> 
-</center>
-
-<p>
-<!-- institution -->
-
-<center><b><a href="http://www.nscl.msu.edu/" target="_self">National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b></center>
-<br>
-<p>
-<center><h4>Spring 2016</h4></center> <!-- date -->
-<br>
-<p>
-
-
-<p><a href="._angmom-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
-
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._angmom-bs000.html">1</a></li>
+<li><a href="._angmom-bs004.html">&laquo;</a></li>
+  <li><a href="._angmom-bs000.html">1</a></li>
   <li><a href="._angmom-bs001.html">2</a></li>
   <li><a href="._angmom-bs002.html">3</a></li>
   <li><a href="._angmom-bs003.html">4</a></li>
   <li><a href="._angmom-bs004.html">5</a></li>
-  <li><a href="._angmom-bs005.html">6</a></li>
+  <li class="active"><a href="._angmom-bs005.html">6</a></li>
   <li><a href="._angmom-bs006.html">7</a></li>
   <li><a href="._angmom-bs007.html">8</a></li>
   <li><a href="._angmom-bs008.html">9</a></li>
   <li><a href="._angmom-bs009.html">10</a></li>
+  <li><a href="._angmom-bs010.html">11</a></li>
+  <li><a href="._angmom-bs011.html">12</a></li>
+  <li><a href="._angmom-bs012.html">13</a></li>
+  <li><a href="._angmom-bs013.html">14</a></li>
+  <li><a href="._angmom-bs014.html">15</a></li>
   <li><a href="">...</a></li>
   <li><a href="._angmom-bs091.html">92</a></li>
-  <li><a href="._angmom-bs001.html">&raquo;</a></li>
+  <li><a href="._angmom-bs006.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
@@ -569,7 +570,7 @@ MathJax.Hub.Config({
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2016, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 
 
