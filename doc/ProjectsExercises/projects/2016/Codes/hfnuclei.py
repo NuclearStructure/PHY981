@@ -57,7 +57,7 @@ if __name__ == '__main__':
                     sum += C[gamma][i]*C[delta][i]
                 DensityMatrix[gamma][delta] = Decimal(sum)
         maxHFiter = 100
-        epsilon =  1.0e-10 
+        epsilon =  1.0e-5 
         difference = 1.0
 	hf_count = 0
 	oldenergies = np.zeros(spOrbitals)
