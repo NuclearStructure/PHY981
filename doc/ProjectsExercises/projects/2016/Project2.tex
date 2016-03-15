@@ -47,7 +47,7 @@ The aim of this project is to study a simple pairing model and thereafter constr
 The model is simple enough that closed-form solutions can be found, allowing thereby for useful tests of shell-model codes or other
 numerical approaches to Schr\"odinger's equation. 
 
-In this project we will thus work with a simplified Hamiltonian consisting of one-body operator and a so-called 
+In this project we will thus work with a simplified Hamiltonian consisting of a one-body operator and a so-called 
  pairing interaction term. It is a model which to a large extent mimicks some central features of
 atomic nuclei, certain atoms and systems which exhibit superfluiditity or superconductivity.  
 Pairing plays a central role in nuclear physics, in particular, for identical particles it makes up large fractions of the correlations among particles. The partial wave $^{1}S_0$ of the nucleon-nucleon force plays a central role in setting up pairing correlations in nuclei. Without this particular partial wave, the $J=0$ ground state spin assignment for many nuclei with even numbers of particles would not be possible. 
@@ -58,7 +58,7 @@ the single-particle basis. Thereafter, we present the various exercises.
 
 The Hamiltonian acting in the complete Hilbert space (usually infinite
 dimensional) consists of an unperturbed one-body part, $\hat{H}_0$,
-and a perturbation $\hat{V}$. 
+and a perturbation $\hat{H}_I$. 
 
 We limit ourselves to at most two-body interactions, our Hamiltonian  is 
 then represented by the following operators
@@ -234,9 +234,11 @@ This model corresponds to a system with no broken pairs. This means that the Ham
 Assume now that the effective Hilbert space consists only of the two lowest single-particle states and that we have two particles only.
 Set up the possible two-particle configurations when we have only two single-particle states, that is $p=1$ and $p=2$ in  
 Fig.~\ref{fig:schematic}. 
-Construct thereafter the Hamiltonian matrix using second quantization and Wick's theorem (resulting in a $2\times 2$ matrix) 
+Construct thereafter the Hamiltonian matrix using second quantization and for example Wick's theorem 
 for a system with no broken pairs and spin $S=0$ (with projection $S_z=0$) for the case of the two lowest single-particle levels  
-indicated in the Fig.~\ref{fig:schematic} and two particles only. 
+indicated in the Fig.~\ref{fig:schematic} and two particles only.  This gives you 
+ $2\times 2$ matrix to be diagonalized. 
+
 Find the eigenvalues by diagonalizing the Hamiltonian matrix.
 Vary your results for selected values of $g\in [-1,1]$ and comment your results.
 
@@ -245,7 +247,7 @@ indicated in the Fig.~\ref{fig:schematic}. Our system consists of four particles
 Our single-particle space consists of only the four lowest levels 
 $p=1,2,3,4$.  You need to set up all possible Slater determinants and the Hamiltonian matrix using second quantization and
 find all eigenvalues by diagonalizing the Hamiltonian matrix.
-Vary your results for values of $g\in [-1,1]$. 
+Vary your results for values of $g\in [-1,1]$.  Your Hamiltonian matrix is a $6\times 6$ matrix. 
 These results will serve as a benchmark for the construction  of our shell-model program. 
 We  refer to this as the exact results. Comment the behavior of the ground state as function of $g$. 
 
@@ -253,7 +255,7 @@ We  refer to this as the exact results. Comment the behavior of the ground state
 To achieve this you should
 \begin{itemize}
 \item Decide whether you want to read from file the single-particle data and the matrix elements in $m$-scheme, or set them up internally in your code.
-The latter is the simplest possibility for the pairing model, whereas the first option which gives you a more general code which can be extended to more realistic cases. 
+The latter is the simplest possibility for the pairing model, whereas the first option gives you a more general code which can be extended to more realistic cases. The final oral project could thus be an extension of this program. 
 \item Based on the single-particle basis, write a function which sets up all possible Slater determinants which have total $M=0$. 
 Test that this function  reproduces the cases in b) and c). If you make this function more general, it can then be reused for say a shell-model
 calculation of $sd$-shell nuclei.
@@ -276,7 +278,7 @@ against the exact result for the ground state. Introduce thereafter a finite sin
 \end{enumerate}
 
 The way we will set up the Slater determinants here follows a simple odometric recipe. The way it is done in more professional codes, is to use bitwise manipulations. If this is of interest, this project could form the basis for the development of a more advanced code
-to be presented at the final oral exam. Another alternative is to study algorithms for exact solutions of the pairing model with many fermions and could also form the basis for the final oral presentation.  
+to be presented at the final oral exam. Another alternative is to study algorithms for exact solutions of the pairing model with many fermions. This could also form the basis for the final oral presentation.  
 \end{document}
 
 
