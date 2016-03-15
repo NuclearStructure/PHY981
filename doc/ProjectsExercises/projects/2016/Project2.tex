@@ -1,0 +1,284 @@
+\documentclass[prc]{revtex4}
+\usepackage[dvips]{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{lscape}
+
+\usepackage{epic,eepic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvips]{epsfig}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{bezier}
+\usepackage{pstricks}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{braket}
+\usepackage[dvips]{graphicx}
+\usepackage{pst-plot}
+
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]
+    {\bra{#1}#2\ket{#3}}
+
+\newcommand{\normord}[1]{
+    \left\{#1\right\}
+}
+
+\usepackage{amsmath}
+\begin{document}
+
+\title{Project 2 PHY981 Spring 2016}
+%\author{}
+\maketitle
+\section*{Project 2 PHY981, Deadline April 8}
+
+The aim of this project is to study a simple pairing model and thereafter construct a shell-model program which finds the eigenvalues.
+The model is simple enough that closed-form solutions can be found, allowing thereby for useful tests of shell-model codes or other
+numerical approaches to Schr\"odinger's equation. 
+
+In this project we will thus work with a simplified Hamiltonian consisting of a one-body operator and a so-called 
+ pairing interaction term. It is a model which to a large extent mimicks some central features of
+atomic nuclei, certain atoms and systems which exhibit superfluiditity or superconductivity.  
+Pairing plays a central role in nuclear physics, in particular, for identical particles it makes up large fractions of the correlations among particles. The partial wave $^{1}S_0$ of the nucleon-nucleon force plays a central role in setting up pairing correlations in nuclei. Without this particular partial wave, the $J=0$ ground state spin assignment for many nuclei with even numbers of particles would not be possible. 
+
+
+We define first the Hamiltonian, with a definition of the model space and
+the single-particle basis. Thereafter, we present the various exercises.
+
+The Hamiltonian acting in the complete Hilbert space (usually infinite
+dimensional) consists of an unperturbed one-body part, $\hat{H}_0$,
+and a perturbation $\hat{H}_I$. 
+
+We limit ourselves to at most two-body interactions, our Hamiltonian  is 
+then represented by the following operators
+\begin{equation}
+\hat{H} = \hat{H}_0 +\hat{H}_I=\sum_{pq}\langle p |h_0|q\rangle a_{p}^{\dagger}a_{q} +\frac{1}{4}\sum_{pqrs}\langle pq| V|rs\rangle a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r},
+\label{eq:hamiltonian}
+\end{equation}
+where $a_{p}^{\dagger}$ and $a_{q}$ etc.~are standard fermion creation and annihilation operators, respectively,
+and $pqrs$ represent all possible single-particle quantum numbers. 
+The full single-particle space is defined by the completeness relation
+$\hat{{\bf 1}} = \sum_{p =1}^{\infty}|p \rangle \langle p|$.
+In our calculations  we will let  the single-particle states $|p\rangle$
+be eigenfunctions of  the one-particle operator $\hat{h}_0$. 
+
+
+The above Hamiltonian 
+acts in turn on various many-body Slater determinants constructed from the single-basis defined by the one-body
+operator $\hat{h}_0$.    
+
+Our specific model consists of only $2$ doubly-degenerate and equally spaced
+single-particle levels labeled by $p=1,2,\dots$ and spin $\sigma=\pm
+1$.  These states are schematically portrayed in
+Fig.~\ref{fig:schematic}.  In Eq.~(\ref{eq:hamiltonian}) the labels $pqrs$ could also include spin $\sigma$. From now and for the rest of this project, labels like $pqrs$ represent the states in Fig.~\ref{fig:schematic} without spin. The spin quantum numbers need to be accounted for explicitely.
+
+We write
+the Hamiltonian as 
+\[ \hat{H} = \hat{H}_0 +\hat{H}_I=\hat{H}_0 + \hat{V} , \]
+where
+\[
+\hat{H}_0=\xi\sum_{p\sigma}(p-1)a_{p\sigma}^{\dagger}a_{p\sigma}.
+\]
+Here, $H_0$ is the unperturbed Hamiltonian with a spacing between
+successive single-particle states given by $\xi$, which we will set to
+a constant value $\xi=1$ without loss of generality. The number $p$ refers to the labels in
+in Fig.~\ref{fig:schematic}.
+
+The two-body
+operator $\hat{V}$ has one term only. It represents the
+pairing contribution and carries a constant strength $g$
+and is  given by 
+\[
+\langle q+q-| V|s+s-\rangle  = -g  
+\]
+where $g$ is a constant. The above labeling means that for a  general matrix elements
+$\langle pq| V|rs\rangle$ we require that the states $p$ and $q$ (and $r$ and $s$) have the same number 
+quantum number $q$ but opposite spins. The two spins values are
+$\sigma = \pm 1$.  
+{\bf Note: you need to figure out how to make the two-body interaction antisymmetric.}
+The variables $\sigma=\pm$ represent the two possible spin values. The 
+interaction can only couple pairs and excites therefore only two
+particles at the time.
+
+
+In our model we have kept both the interaction strength and the single-particle level as constants.
+In a realistic system like the atomic  nucleus this is not the case. 
+
+
+
+The   unperturbed Hamiltonian  $\hat{H}_0$ and $\hat{V}$ both commute
+with  the spin projection $\hat{S}_z$ and the total spin
+$\hat{S}^2$.
+This is an important feature of our system that allows us to block-diagonalize
+the full Hamiltonian. In this project we will focus only on total spin $S=0$, this case is normally called the no-broken pair case. 
+\begin{figure*}[htbp]
+\vspace{1.0cm}
+ \setlength{\unitlength}{1cm}
+ \begin{picture}(15,14)
+ \thicklines
+\put(-0.6,1){\makebox(0,0){$p=1$}}
+\put(-0.6,2){\makebox(0,0){$p=2$}}
+\put(-0.6,3){\makebox(0,0){$p=3$}}
+\put(-0.6,4){\makebox(0,0){$p=4$}}
+\put(-0.6,5){\makebox(0,0){$p=5$}}
+\put(-0.6,6){\makebox(0,0){$p=6$}}
+\put(-0.6,7){\makebox(0,0){$p=7$}}
+\put(-0.6,8){\makebox(0,0){$p=8$}}
+\put(-0.6,9){\makebox(0,0){$p=9$}}
+\put(-0.6,10){\makebox(0,0){$p=10$}}
+\put(-0.6,11){\makebox(0,0){$p=\dots$}}
+% first 4-particle state
+\put(0.8,1){\circle*{0.3}}
+\put(0.8,2){\circle*{0.3}}
+\put(1.7,1){\circle*{0.3}}
+\put(1.7,2){\circle*{0.3}}
+% second 4-particle state
+\put(5.0,1){\circle*{0.3}}
+\put(5.9,1){\circle*{0.3}}
+\put(5.0,4){\circle*{0.3}}
+\put(5.0,2){\circle{0.3}}
+\put(5.9,3){\circle*{0.3}}
+\put(5.9,2){\circle{0.3}}
+% third 4-particle state
+\put(9.2,1){\circle*{0.3}}
+\put(10.1,3){\circle*{0.3}}
+\put(9.2,4){\circle*{0.3}}
+\put(10.1,8){\circle*{0.3}}
+\put(10.1,1){\circle{0.3}}
+\put(9.2,2){\circle{0.3}}
+\put(10.1,2){\circle{0.3}}
+% third 4-particle state
+\put(13.4,7){\circle*{0.3}}
+\put(14.3,7){\circle*{0.3}}
+\put(13.4,9){\circle*{0.3}}
+\put(14.3,9){\circle*{0.3}}
+\put(13.4,1){\circle{0.3}}
+\put(14.3,1){\circle{0.3}}
+\put(13.4,2){\circle{0.3}}
+\put(14.3,2){\circle{0.3}}
+\dashline[+1]{2.5}(0,1)(15,1)
+\dashline[+1]{2.5}(0,2)(15,2)
+\dashline[+1]{2.5}(0,3)(15,3)
+\dashline[+1]{2.5}(0,4)(15,4)
+\dashline[+1]{2.5}(0,5)(15,5)
+\dashline[+1]{2.5}(0,6)(15,6)
+\dashline[+1]{2.5}(0,7)(15,7)
+\dashline[+1]{2.5}(0,8)(15,8)
+\dashline[+1]{2.5}(0,9)(15,9)
+\dashline[+1]{2.5}(0,10)(15,10)
+\thinlines
+\dashline{0.1}(0,2.5)(15,2.5)
+\dashline{0.1}(0,11)(15,11)
+ \end{picture}
+\caption{Schematic plot of the possible single-particle levels with double degeneracy.
+The filled circles indicate occupied particle states while the empty circles 
+represent vacant particle(hole) states.
+The spacing between each level $p$ is constant in this picture. 
+The first state to the left represents
+a possible ground state representation for a four-fermion system. In the second state to the left,
+one pair is broken. This possibility is however not included in our interaction. \label{fig:schematic}}
+\end{figure*}
+
+\begin{enumerate}
+\item[a)] Show that the  
+unperturbed Hamiltonian  $\hat{H}_0$ and $\hat{V}$ commute
+with both the spin projection $\hat{S}_z$ and the total spin
+$\hat{S}^2$, given by
+\[
+  \hat{S}_z := \frac{1}{2}\sum_{p\sigma} \sigma a^\dag_{p\sigma}a_{p\sigma}
+\]
+and
+\[
+  \hat{S}^2 := \hat{S}_z^2 + \frac{1}{2}(\hat{S}_+\hat{S}_- +
+  \hat{S}_-\hat{S}_+),
+\]
+where
+\[
+  \hat{S}_\pm := \sum_{p} a^\dag_{p\pm} a_{p\mp}.
+\]
+
+This is an important feature of our system that allows us to block-diagonalize
+the full Hamiltonian. We will focus on total spin $S=0$.
+In this case, it is convenient to define the so-called pair creation and pair
+annihilation operators
+\[
+\hat{P}^{+}_p = a^\dag_{p+}a^\dag_{p-},
+\]
+and
+\[
+\hat{P}^{-}_p = a_{p-}a_{p+},
+\] 
+respectively.
+
+The Hamiltonian (with $\xi=1$) we will use can be written as
+\[
+\hat{H}=\sum_{p\sigma}(p-1)a_{p\sigma}^{\dagger}a_{p\sigma}
+-g\sum_{pq}\hat{P}^{+}_p\hat{P}^{-}_q.
+\]
+Show  that Hamiltonian commutes with the product of the pair creation and annihilation operators.
+This model corresponds to a system with no broken pairs. This means that the Hamiltonian can only link two-particle states in so-called spin-reversed states. 
+
+
+\item[b)] 
+Assume now that the effective Hilbert space consists only of the two lowest single-particle states and that we have two particles only.
+Set up the possible two-particle configurations when we have only two single-particle states, that is $p=1$ and $p=2$ in  
+Fig.~\ref{fig:schematic}. 
+Construct thereafter the Hamiltonian matrix using second quantization and for example Wick's theorem 
+for a system with no broken pairs and spin $S=0$ (with projection $S_z=0$) for the case of the two lowest single-particle levels  
+indicated in the Fig.~\ref{fig:schematic} and two particles only.  This gives you 
+ $2\times 2$ matrix to be diagonalized. 
+
+Find the eigenvalues by diagonalizing the Hamiltonian matrix.
+Vary your results for selected values of $g\in [-1,1]$ and comment your results.
+
+\item[c)] Construct thereafter the Hamiltonian matrix for a system with no broken pairs and spin $S=0$ for the case of the four lowest single-particle levels  
+indicated in the Fig.~\ref{fig:schematic}. Our system consists of four particles only.
+Our single-particle space consists of only the four lowest levels 
+$p=1,2,3,4$.  You need to set up all possible Slater determinants and the Hamiltonian matrix using second quantization and
+find all eigenvalues by diagonalizing the Hamiltonian matrix.
+Vary your results for values of $g\in [-1,1]$.  Your Hamiltonian matrix is a $6\times 6$ matrix. 
+These results will serve as a benchmark for the construction  of our shell-model program. 
+We  refer to this as the exact results. Comment the behavior of the ground state as function of $g$. 
+
+\item[d)]  Our next step is to develop a code which sets up the above Hamiltonian matrices for two and four particles in 2 and 4 single-particles states (the same as what you did in exercises b) and c) and obtain the eigenvalues.
+To achieve this you should
+\begin{itemize}
+\item Decide whether you want to read from file the single-particle data and the matrix elements in $m$-scheme, or set them up internally in your code.
+The latter is the simplest possibility for the pairing model, whereas the first option gives you a more general code which can be extended to more realistic cases. The final oral project could thus be an extension of this program. 
+\item Based on the single-particle basis, write a function which sets up all possible Slater determinants which have total $M=0$. 
+Test that this function  reproduces the cases in b) and c). If you make this function more general, it can then be reused for say a shell-model
+calculation of $sd$-shell nuclei.
+\item Use the Slater determinant basis from the previous step to set up the Hamiltonian matrix.
+\item With the Hamiltonian matrix, you can finally diagonalize the matrix and obtain the final eigenvalues and test against the results of b) and c).
+\end{itemize}
+Codes to diagonalize in C++ or Fortran can be provided. For Python, numpy contains eigenvalue solvers based on for example Householder's and Givens' algorithms.   These are topics which can we discuss separately. The lecture slides contain a rather detailed recipe
+on how to construct a Slater determinant basis and how to set up the Hamiltonian matrix to diagonalize.
+
+\item[e)]
+In developing the code it also useful to test against cases which have closed-form solutions. One obvious case is that of removing the 
+two-body interaction. Then we have only the single-particle energies.
+For the case of degenerete single-particle orbits, that is one value of total single-particle angular momentum only $j$, with degeneracy $\Omega=2j+1$, one can show that the ground state energy $E_0$ is with $n$ particles 
+\[
+E_0= -\frac{g}{4}n\left(\Omega-n+2\right).
+\]
+
+Enlarge now your system to six and eight fermions and to $p=6$ and $p=8$ single-particle states, respectively. Run your program for a degenerate single-particle state with degeneracy $\Omega$ and test
+against the exact result for the ground state. Introduce thereafter a finite single-particle spacing and study the results as you vary $g$,  as done in b) and c). Comment your results. 
+\end{enumerate}
+
+The way we will set up the Slater determinants here follows a simple odometric recipe. The way it is done in more professional codes, is to use bitwise manipulations. If this is of interest, this project could form the basis for the development of a more advanced code
+to be presented at the final oral exam. Another alternative is to study algorithms for exact solutions of the pairing model with many fermions. This could also form the basis for the final oral presentation.  
+\end{document}
+
+
