@@ -1510,17 +1510,16 @@ matrix elements between many-body states (Slater determinants) of two-body
 operators
 !bt
 \[
-\sum_{i < j, k < l}V_{ijkl} \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a\
-}_k
+\sum_{p < q, r < s}V_{pqr} \hat{a}^\dagger_p \hat{a}^\dagger_q\hat{a}_s \hat{a}_r
 \]
 !et
-In particular we will compute
+In particular we will need to compute
 !bt
 \[
-\langle \beta | \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a}_k |\alpha \rangle
+\langle \beta | \hat{a}^\dagger_p \hat{a}^\dagger_q\hat{a}_s \hat{a}_r |\alpha \rangle
 \]
 !et
-where $\alpha, \beta$ are indices labeling Slater determinants and $i,j,k,l$ label
+where $\alpha, \beta$ are indices labeling Slater determinants and $p,q,r,s$ label
 single-particle states.
 !eblock
 
@@ -1537,8 +1536,10 @@ a Slater determinant $| \alpha \rangle$ with index $\alpha$ is a
 list of $N$ occupied single-particle states $i_1 < i_2 < i_3 \ldots i_N$.
 
 
-Furthermore, for the two-body matrix elements $V_{ijkl}$ we normally assume
-$i < j$ and $k < l$ (for our specific project, the interaction is much simpler). 
+Furthermore, for the two-body matrix elements $V_{pqrs}$ we normally assume
+$p < q$ and $r < s$. For our specific project, the interaction is much simpler and you can use this to simplify considerably the setup of a shell-model code for project 2.
+
+What follows here is a more general, but still brute force, approach. 
 
 !eblock
 
@@ -1547,12 +1548,12 @@ $i < j$ and $k < l$ (for our specific project, the interaction is much simpler).
 ===== Building a Hamiltonian matrix =====
 !bblock
 Write a function that:
-o Has as input the single-particle indices $i,j,k,l$ for the two-body operator and the index $\alpha$ for the ket Slater determinant;
+o Has as input the single-particle indices $p,q,r,s$ for the two-body operator and the index $\alpha$ for the ket Slater determinant;
 
-o Returns the index $ \beta$ of the unique (if any) Slater determinant such that
+o Returns the index $\beta$ of the unique (if any) Slater determinant such that
 !bt
 \[
-| \beta \rangle = \pm \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a}_k |\alpha \rangle
+| \beta \rangle = \pm \hat{a}^\dagger_p \hat{a}^\dagger_q\hat{a}_s \hat{a}_r |\alpha \rangle
 \]
 !et
 as well as the phase
@@ -1560,7 +1561,7 @@ as well as the phase
 This is equivalent to computing
 !bt
 \[
-\langle \beta | \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a}_k |\alpha \rangle
+\langle \beta | \hat{a}^\dagger_p \hat{a}^\dagger_q\hat{a}_s \hat{a}_r |\alpha \rangle
 \]
 !et
 
@@ -1573,12 +1574,14 @@ This is equivalent to computing
 The first step can take as input an initial Slater determinant
 (whose position in the list of basis Slater determinants is $\alpha$) written as an
 ordered listed of occupied single-particle states, e.g. $1,2,5,8$, and the
-indices $p,q,r,s$ from the two-body operator. It will return another, 
-final Slater determinant;
-if the single-particle states $r$ and $s$ are not occupied, it will return an 
+indices $p,q,r,s$ from the two-body operator. 
+
+It will return another final Slater determinant if the single-particle states $r$ and $s$ are occupied, else it will return an 
 empty Slater determinant
-(all zeroes). If $r$ and $s$ are in the list of occupied single particle states, then
-replace $i \rightarrow r$ and $j \rightarrow r$.
+(all zeroes). 
+
+If $r$ and $s$ are in the list of occupied single particle states, then
+replace the initial single-particle states $ij$ as $i \rightarrow r$ and $j \rightarrow r$.
 
 
 !eblock
@@ -1616,8 +1619,8 @@ Slater determinant into ascending order, $j_1 < j_2 < j_3 \ldots$.
 _Example_: Suppose in the $sd$ single-particle space that the initial 
 Slater determinant
 is $1,3,9,12$. If $p,q,r,s = 2,8,1,12$, then after the first step the final Slater determinant
-is $2,3,9,8$.  The second step will return $2,4,8,9$ and a phase of -1, 
-because one interchange is required.
+is $2,3,9,8$.  The second step will return $2,3,8,9$ and a phase of -1, 
+because an odd number  of interchanges is required.
 
 
 !eblock
@@ -1656,12 +1659,11 @@ can be allocated once you have created the many-body basis and know $N_{SD}$.
 ===== Building a Hamiltonian matrix =====
 !bblock
 
-o Initialize $ H(\alpha, \beta) = 0.0$
+o Initialize $H(\alpha,\beta)=0.0$
 o Loop over $\alpha = 1, NSD$
-o For each $ \alpha$, loop over $ a = 1, ntbme $  and fetch $ V(a) $ and the single-particle indices $p, q, r, s $ 
+o For each $\alpha$, loop over $a=1,ntbme$  and fetch $V(a)$ and the single-particle indices $p,q,r,s$ 
 o If $V(a) = 0$ skip.  Otherwise, apply $\hat{a}^\dagger_p\hat{a}^\dagger_q \hat{a}_s \hat{a}_r$ to the Slater determinant labeled by $\alpha$.
-o Find, if any, the label $\beta $ of the resulting Slater determinant and the
-phase (which is 0, +1, -1).
+o Find, if any, the label $\beta $ of the resulting Slater determinant and the phase (which is 0, +1, -1).
 o If phase $\neq 0$, then update $H(\alpha,\beta)$  as $H(\alpha,\beta) + phase*V(a)$. The sum is important because multiple operators might contribute to the same matrix element.
 o Continue loop over $a$
 o Continue loop over $\alpha$.
@@ -1679,7 +1681,7 @@ updating $H(\alpha,\beta)$, if $\alpha \neq \beta$, also update $H(\beta,\alpha)
 
 You will also need to include the single-particle energies. This is easy: they only
 contribute to diagonal matrix elements, that is, $H(\alpha,\alpha)$.  
-Simply find the occupied single-particle states $n_i$ of and add $\epsilon(n_i)$.
+Simply find the occupied single-particle states $i$ and add the corresponding $\epsilon(i)$.
 
 
 !eblock

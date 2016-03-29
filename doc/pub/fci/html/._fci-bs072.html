@@ -295,12 +295,16 @@ MathJax.Hub.Config({
 The first step can take as input an initial Slater determinant
 (whose position in the list of basis Slater determinants is \( \alpha \)) written as an
 ordered listed of occupied single-particle states, e.g. \( 1,2,5,8 \), and the
-indices \( p,q,r,s \) from the two-body operator. It will return another, 
-final Slater determinant;
-if the single-particle states \( r \) and \( s \) are not occupied, it will return an 
+indices \( p,q,r,s \) from the two-body operator.
+
+<p>
+It will return another final Slater determinant if the single-particle states \( r \) and \( s \) are occupied, else it will return an 
 empty Slater determinant
-(all zeroes). If \( r \) and \( s \) are in the list of occupied single particle states, then
-replace \( i \rightarrow r \) and \( j \rightarrow r \).
+(all zeroes).
+
+<p>
+If \( r \) and \( s \) are in the list of occupied single particle states, then
+replace the initial single-particle states \( ij \) as \( i \rightarrow r \) and \( j \rightarrow r \).
 
 <p>
 </div>

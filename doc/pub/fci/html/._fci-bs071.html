@@ -295,12 +295,12 @@ MathJax.Hub.Config({
 Write a function that:
 
 <ol>
-<li> Has as input the single-particle indices \( i,j,k,l \) for the two-body operator and the index \( \alpha \) for the ket Slater determinant;</li>
-<li> Returns the index $ \beta$ of the unique (if any) Slater determinant such that</li>
+<li> Has as input the single-particle indices \( p,q,r,s \) for the two-body operator and the index \( \alpha \) for the ket Slater determinant;</li>
+<li> Returns the index \( \beta \) of the unique (if any) Slater determinant such that</li>
 </ol>
 
 $$
-| \beta \rangle = \pm \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a}_k |\alpha \rangle
+| \beta \rangle = \pm \hat{a}^\dagger_p \hat{a}^\dagger_q\hat{a}_s \hat{a}_r |\alpha \rangle
 $$
 
 as well as the phase
@@ -308,7 +308,7 @@ as well as the phase
 <p>
 This is equivalent to computing
 $$
-\langle \beta | \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a}_k |\alpha \rangle
+\langle \beta | \hat{a}^\dagger_p \hat{a}^\dagger_q\hat{a}_s \hat{a}_r |\alpha \rangle
 $$
 
 <p>
