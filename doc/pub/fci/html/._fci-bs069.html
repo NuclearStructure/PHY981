@@ -296,16 +296,15 @@ The goal is to compute the matrix elements of the Hamiltonian, specifically
 matrix elements between many-body states (Slater determinants) of two-body
 operators
 $$
-\sum_{i < j, k < l}V_{ijkl} \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a\
-}_k
+\sum_{p < q, r < s}V_{pqr} \hat{a}^\dagger_p \hat{a}^\dagger_q\hat{a}_s \hat{a}_r
 $$
 
-In particular we will compute
+In particular we will need to compute
 $$
-\langle \beta | \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a}_k |\alpha \rangle
+\langle \beta | \hat{a}^\dagger_p \hat{a}^\dagger_q\hat{a}_s \hat{a}_r |\alpha \rangle
 $$
 
-where \( \alpha, \beta \) are indices labeling Slater determinants and \( i,j,k,l \) label
+where \( \alpha, \beta \) are indices labeling Slater determinants and \( p,q,r,s \) label
 single-particle states.
 </div>
 </div>

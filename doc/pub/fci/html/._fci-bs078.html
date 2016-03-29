@@ -294,16 +294,11 @@ MathJax.Hub.Config({
 <div class="panel-body">
 
 <ol>
-<li> Initialize $ H(\alpha, \beta) = 0.0$</li>
+<li> Initialize \( H(\alpha,\beta)=0.0 \)</li>
 <li> Loop over \( \alpha = 1, NSD \)</li>
-<li> For each $ \alpha$, loop over $ a = 1, ntbme $  and fetch $ V(a) $ and the single-particle indices \( p, q, r, s  \)</li> 
+<li> For each \( \alpha \), loop over \( a=1,ntbme \)  and fetch \( V(a) \) and the single-particle indices \( p,q,r,s \)</li> 
 <li> If \( V(a) = 0 \) skip.  Otherwise, apply \( \hat{a}^\dagger_p\hat{a}^\dagger_q \hat{a}_s \hat{a}_r \) to the Slater determinant labeled by \( \alpha \).</li>
-<li> Find, if any, the label \( \beta  \) of the resulting Slater determinant and the</li>
-</ol>
-
-phase (which is 0, +1, -1).
-
-<ol>
+<li> Find, if any, the label \( \beta  \) of the resulting Slater determinant and the phase (which is 0, +1, -1).</li>
 <li> If phase \( \neq 0 \), then update \( H(\alpha,\beta) \)  as \( H(\alpha,\beta) + phase*V(a) \). The sum is important because multiple operators might contribute to the same matrix element.</li>
 <li> Continue loop over \( a \)</li>
 <li> Continue loop over \( \alpha \).</li>
