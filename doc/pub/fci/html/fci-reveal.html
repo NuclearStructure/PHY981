@@ -2034,6 +2034,235 @@ For \( \delta = 0 \) we have the closed form solution of  the g.s. energy given 
 </section>
 
 
+<section>
+<h2 id="___sec68">Building a Hamiltonian matrix </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The goal is to compute the matrix elements of the Hamiltonian, specifically
+matrix elements between many-body states (Slater determinants) of two-body
+operators
+<p>&nbsp;<br>
+$$
+\sum_{i < j, k < l}V_{ijkl} \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a\
+}_k
+$$
+<p>&nbsp;<br>
+
+In particular we will compute
+<p>&nbsp;<br>
+$$
+\langle \beta | \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a}_k |\alpha \rangle
+$$
+<p>&nbsp;<br>
+
+where \( \alpha, \beta \) are indices labeling Slater determinants and \( i,j,k,l \) label
+single-particle states.
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec69">Building a Hamiltonian matrix </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Note: there are other, more efficient ways to do this than the method we describe, 
+but you will
+be able to produce a working code quickly.
+
+<p>
+As we coded in the first step,
+a Slater determinant \( | \alpha \rangle \) with index \( \alpha \) is a
+list of \( N \) occupied single-particle states \( i_1 < i_2 < i_3 \ldots i_N \).
+
+<p>
+Furthermore, for the two-body matrix elements \( V_{ijkl} \) we normally assume
+\( i < j \) and \( k < l \) (for our specific project, the interaction is much simpler).
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec70">Building a Hamiltonian matrix </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Write a function that:
+
+<ol>
+<p><li> Has as input the single-particle indices \( i,j,k,l \) for the two-body operator and the index \( \alpha \) for the ket Slater determinant;</li>
+<p><li> Returns the index $ \beta$ of the unique (if any) Slater determinant such that</li>
+</ol>
+<p>&nbsp;<br>
+$$
+| \beta \rangle = \pm \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a}_k |\alpha \rangle
+$$
+<p>&nbsp;<br>
+
+as well as the phase
+
+<p>
+This is equivalent to computing
+<p>&nbsp;<br>
+$$
+\langle \beta | \hat{a}^\dagger_i \hat{a}^\dagger_j\hat{a}_l \hat{a}_k |\alpha \rangle
+$$
+<p>&nbsp;<br>
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec71">Building a Hamiltonian matrix, first step </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The first step can take as input an initial Slater determinant
+(whose position in the list of basis Slater determinants is \( \alpha \)) written as an
+ordered listed of occupied single-particle states, e.g. \( 1,2,5,8 \), and the
+indices \( p,q,r,s \) from the two-body operator. It will return another, 
+final Slater determinant;
+if the single-particle states \( r \) and \( s \) are not occupied, it will return an 
+empty Slater determinant
+(all zeroes). If \( r \) and \( s \) are in the list of occupied single particle states, then
+replace \( i \rightarrow r \) and \( j \rightarrow r \).
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec72">Building a Hamiltonian matrix, second step </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The second step will take the final Slater determinant 
+from the first step (if not empty),
+and then order by pairwise permutations (i.e., if the Slater determinant is
+\( i_1, i_2, i_3, \ldots \), then if \( i_n > i_{n+1} \), interchange 
+\( i_n \leftrightarrow i_{n+1} \).
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec73">Building a Hamiltonian matrix </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+It will also output a phase.  If any two single-particle occupancies are repeated, 
+the phase is
+0.  Otherwise it is +1 for an even permutation and -1 for an odd permutation to 
+bring the final
+Slater determinant into ascending order, \( j_1 < j_2 < j_3 \ldots \).
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec74">Building a Hamiltonian matrix </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<b>Example</b>: Suppose in the \( sd \) single-particle space that the initial 
+Slater determinant
+is \( 1,3,9,12 \). If \( p,q,r,s = 2,8,1,12 \), then after the first step the final Slater determinant
+is \( 2,3,9,8 \).  The second step will return \( 2,4,8,9 \) and a phase of -1, 
+because one interchange is required.
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec75">Building a Hamiltonian matrix </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<b>Example</b>: Suppose in the \( sd \) single-particle space that the initial 
+Slater determinant
+is \( 1,3,9,12 \). If \( p,q,r,s = 3,8,1,12 \), then after the first step the 
+final  Slater determinant
+is \( 3,3,9,8 \), but after the second step the phase is 0 
+because the single-particle state 3 is
+occupied twice.
+
+<p>
+Lastly, the final step  takes the ordered final Slater determinant and 
+we search through the basis list to
+determine its index in the many-body basis, that is, \( \beta \).
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec76">Building a Hamiltonian matrix </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The Hamiltonian is then stored as an \( N_{SD} \times N_{SD} \) array of real numbers, which
+can be allocated once you have created the many-body basis and know \( N_{SD} \).
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec77">Building a Hamiltonian matrix </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<ol>
+<p><li> Initialize $ H(\alpha, \beta) = 0.0$</li>
+<p><li> Loop over \( \alpha = 1, NSD \)</li>
+<p><li> For each $ \alpha$, loop over $ a = 1, ntbme $  and fetch $ V(a) $ and the single-particle indices \( p, q, r, s  \)</li> 
+<p><li> If \( V(a) = 0 \) skip.  Otherwise, apply \( \hat{a}^\dagger_p\hat{a}^\dagger_q \hat{a}_s \hat{a}_r \) to the Slater determinant labeled by \( \alpha \).</li>
+<p><li> Find, if any, the label \( \beta  \) of the resulting Slater determinant and the</li>
+</ol>
+<p>
+
+phase (which is 0, +1, -1).
+
+<ol>
+<p><li> If phase \( \neq 0 \), then update \( H(\alpha,\beta) \)  as \( H(\alpha,\beta) + phase*V(a) \). The sum is important because multiple operators might contribute to the same matrix element.</li>
+<p><li> Continue loop over \( a \)</li>
+<p><li> Continue loop over \( \alpha \).</li>
+</ol>
+<p>
+
+You should force the resulting matrix \( H \) to be symmetric. To do this, when
+updating \( H(\alpha,\beta) \), if \( \alpha \neq \beta \), also update \( H(\beta,\alpha) \).
+
+
+</div>
+</section>
+
+
+<section>
+<h2 id="___sec78">Building a Hamiltonian matrix </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+You will also need to include the single-particle energies. This is easy: they only
+contribute to diagonal matrix elements, that is, \( H(\alpha,\alpha) \).  
+Simply find the occupied single-particle states \( n_i \) of and add \( \epsilon(n_i) \).
+
+
+</div>
+</section>
+
+
 
 </div> <!-- class="slides" -->
 </div> <!-- class="reveal" -->
