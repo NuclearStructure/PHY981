@@ -1,0 +1,314 @@
+\documentclass[prc]{revtex4}
+\usepackage[dvips]{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{lscape}
+
+\usepackage{epic,eepic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvips]{epsfig}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{bezier}
+\usepackage{pstricks}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{braket}
+\usepackage[dvips]{graphicx}
+\usepackage{pst-plot}
+
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]
+    {\bra{#1}#2\ket{#3}}
+
+\newcommand{\normord}[1]{
+    \left\{#1\right\}
+}
+
+
+\usepackage{amsmath}
+\begin{document}
+
+
+\title{Project for the final oral examination of PHY981}
+%\author{}
+\maketitle
+\section*{Nucleon-nucleon scattering}
+
+The aim of this project is to solve the Lippman-Schwinger equation for two interacting nucleons and relate the obtained phase shifts with those extracted from the experimental cross sections.
+
+We are going to solve the Schr\"odinger equation (SE) 
+for the neutron-proton system 
+in momentum space for positive energies $E$ in order to obtain
+the phase shifts. 
+We can rewrite the SE 
+in momentum space as
+\begin{equation}
+     \frac{k^2}{m}\psi_l(k)+\frac{2}{\pi}\int_0^{\infty}dqq^2V_l(k,q)\psi_l(q)=E\psi_l(k).
+     \label{eq:sem}
+\end{equation}
+Here we have used units $\hbar=c=1$. This means that $k$ has dimension energy. 
+$k$ is the relative momentum between the two particles. A partial
+wave expansion has been used in order to reduce the problem to an integral
+over the magnitude of momentum only. The subscript $l$ refers therefore to a partial wave with a given orbital momentum $l$.
+To obtain the potential in momentum space we used 
+the Fourier-Bessel transform (Hankel transform)
+\begin{equation}
+      V_l(k,k')= \int j_l(kr)V(r)j_l(k'r)r^2dr,
+      \label{eq:vtrans}
+\end{equation}
+where $j_l$ is the spherical Bessel function. 
+We will just study the case
+$l=0$, which means that $j_0(kr)=sin(kr)/kr$. 
+
+For scattering states, $E>0$, the corresponding equation to solve is 
+the so-called Lippman-Schwinger equation. This is an integral equation
+where we have to deal with the amplitude $R(k,k')$ (reaction matrix) 
+defined through the integral equation 
+\begin{equation}
+    R_l(k,k') = V_l(k,k') +\frac{2}{\pi}{\cal P}
+                \int_0^{\infty}dqq^2V_l(k,q)\frac{1}{E-q^2/m}R_l(q,k'),
+   \label{eq:ls1}
+\end{equation}
+where the total kinetic energy of the two 
+incoming particles in the center-of-mass system
+is 
+\begin{equation}
+    E=\frac{k_0^2}{m}.
+\end{equation}
+The symbol ${\cal P}$ indicates that Cauchy's principal-value prescription
+is used in order to avoid the singularity arising from the zero of the denominator.
+We will discuss below how to solve this problem. Eq.\ (\ref{eq:ls1}) represents
+then the problem you will have to solve numerically.
+
+The matrix $R_l(k,k')$ relates to the 
+the  phase shifts through its diagonal elements as
+\begin{equation}
+     R_l(k_0,k_0)=-\frac{tan\delta_l}{mk_0}.
+     \label{eq:shifts}
+\end{equation}
+
+From now on we will drop the subscript $l$ in all equations.
+
+In order to solve the Lippman-Schwinger equation 
+in momentum space, we need first to write 
+a function which sets up the mesh points. 
+We need to do that since we are going to approximate an integral
+through 
+\[
+   \int_a^bf(x)dx\approx\sum_{i=1}^Nw_if(x_i),
+\]
+where we have fixed $N$ lattice points through the corresponding weights
+$w_i$ and points $x_i$. 
+Start writing your main program by setting up the mesh points
+and the corresponding weights.
+Fix first the number of mesh points $N$.
+Use the included function {\em gauleg} in the file lib.cpp (see also lib.h) to set up the 
+weights $\omega_i$ and the points $k_i$. Before you go on 
+you need to keep in mind that {\em gauleg} uses 
+the Legendre polynomials to fix
+the mesh points and weights. This means that the integral is for the 
+interval [-1,1]. Your integral is for the interval [0,$\infty$]. 
+You will need to map the weights  from {\em gauleg} to your interval.
+To do this, call first {\em gauleg(a,b,x[],w[],N)}, 
+with $a=-1$, $b=1$.
+It returns the mesh points $x_i$ and weights $w_i$. 
+You map these points over to the limits in your integral. You can then
+use the following mapping
+        \[
+          k_i=const\times tan\left\{\frac{\pi}{4}(1+x_i)\right\},
+        \]
+and 
+         \[
+            \omega_i= const\frac{\pi}{4}\frac{w_i}{cos^2\left(\frac{\pi}{4}(1+x_i)\right)}.
+         \]
+If you choose dimension fm$^{-1}$ for $k$, set $const=1$. If you choose to work
+with MeV, set $const\sim 200$ ($\hbar c=197$ MeVfm).
+You must choose the units to use.
+
+The next step is to write a function which calculates the potential
+in momentum space. The potential we will use here is a parametrized  potential
+between a proton and neutron for the partial wave  $^1S_0$, 
+i.e., spin $S=0$ and
+orbital momentum $l=0$, a singlet S-state. 
+This state does not have a bound state
+for the deuteron (only the triplet S-state has). 
+The parametrized version of this potential fits the experimental
+phase-shifts. It is given by
+\begin{equation}
+  V(r)=V_a \frac{e^{-ax}}{x}+V_b \frac{e^{-bx}}{x}+V_c \frac{e^{-cx}}{x}
+  \label{eq:realp}
+\end{equation}
+with $x=\mu r$, $\mu=0.7$ fm$^{-1}$ (the inverse of the pion mass),
+$V_a=-10.463$ MeV and $a=1$, $V_b=-1650.6$ MeV and $b=4$ and
+$V_c=6484.3$ MeV and $c=7$. 
+Find the potential in momentum space using Eq.\ (\ref{eq:vtrans})
+with $j_0(kr)=sin(kr)/kr$. 
+The transform of a potential on the form 
+$V(r)=V_0\exp{(-\mu r)}/r$ is
+\begin{equation}
+     V(k',k)= \frac{V_0}{4k'k}ln\left(\frac{(k'+k)^2+\mu^2}{(k'-k)^2+\mu^2}\right).
+\end{equation}
+
+Write a function which calculates the expressions for the
+potential in momentum space.
+
+The principal value in Eq.\ (\ref{eq:ls1}) is rather tricky
+to evaluate numerically, mainly since computers have limited
+precision. We will here use a subtraction trick often used
+when dealing with singular integrals in numerical calculations.
+We introduce first the calculus relation
+\begin{equation}
+  \int_{-\infty}^{\infty} \frac{dk}{k-k_0} =0.
+\end{equation}
+It means that the curve $1/(k-k_0)$ has equal and opposite
+areas on both sides of the singular point $k_0$. If we break
+the integral into one over positive $k$ and one over 
+negative $k$, a change of variable $k\rightarrow -k$ 
+allows us to rewrite the last equation as
+\begin{equation}
+  \int_{0}^{\infty} \frac{dk}{k^2-k_0^2} =0.
+\end{equation}
+We can use this to express a principal values integral
+as
+\begin{equation}
+  {\cal P}\int_{0}^{\infty} \frac{f(k)dk}{k^2-k_0^2} =
+  \int_{0}^{\infty} \frac{(f(k)-f(k_0))dk}{k^2-k_0^2},
+   \label{eq:trick}
+\end{equation}
+where the right-hand side is no longer singular at 
+$k=k_0$, it is proportional to the derivative $df/dk$,
+and can be evaluated numerically as any other integral.
+
+We can then use the trick in Eq.\ (\ref{eq:trick}) to rewrite
+Eq.\ (\ref{eq:ls1}) as
+\begin{equation}
+    R(k,k') = V(k,k') +\frac{2}{\pi}
+                \int_0^{\infty}dq
+                \frac{q^2V(k,q)R(q,k')-k_0^2V(k,k_0)R(k_0,k')  }
+                     {(k_0^2-q^2)/m}.
+   \label{eq:ls2}
+\end{equation}
+{\bf This is the equation you are going to solve numerically in order
+to calculate the phase shifts of 
+Eq.\ (\ref{eq:shifts}). } We are interested in obtaining
+$R(k_0,k_0)$.
+
+How do we proceed in order to solve Eq.\ (\ref{eq:ls2})?
+\begin{enumerate}
+  \item  Using the mesh points $k_j$ and the weights $\omega_j$,
+         we can rewrite Eq.\ (\ref{eq:ls2}) as
+\begin{equation}
+          R(k,k') = V(k,k') +\frac{2}{\pi}
+          \sum_{j=1}^N\frac{\omega_jk_j^2V(k,k_j)R(k_j,k')}
+                           {(k_0^2-k_j^2)/m}
+           -\frac{2}{\pi}k_0^2V(k,k_0)R(k_0,k')
+          \sum_{n=1}^N\frac{\omega_n}
+                           {(k_0^2-k_n^2)/m}.                
+          \label{eq:ls3}
+\end{equation}
+This equation contains now the unknowns $R(k_i,k_j)$
+(with dimension $N\times N$) and $R(k_0,k_0)$.
+\item 
+We can turn Eq.\ (\ref{eq:ls3}) into an equation
+with dimension $(N+1)\times (N+1)$ with  a mesh
+which contains the original mesh points $k_j$ for $j=1,N$
+and the point which corresponds to the energy $k_0$.
+Consider the latter as the 'observable' point.
+The mesh points become then $k_j$ for $j=1,n$ and
+$k_{N+1}=k_0$. 
+\item With these new mesh points we define the matrix
+\begin{equation}
+      A_{i,j}=\delta_{i,j}-V(k_i,k_j)u_j,
+      \label{eq:aeq}
+\end{equation}
+where $\delta$ is the Kronecker $\delta$
+and
+\begin{equation}
+     u_j=\frac{2}{\pi}
+         \frac{\omega_jk_j^2}{(k_0^2-k_j^2)/m}\hspace{1cm}
+         j=1,N
+\end{equation}
+and
+\begin{equation}
+     u_{N+1}=-\frac{2}{\pi}
+          \sum_{j=1}^N\frac{k_0^2\omega_j}{(k_0^2-k_j^2)/m}.
+\end{equation}
+The first task is then to 
+set up the matrix $A$ for a given $k_0$. This is an
+$(N+1)\times (N+1)$ matrix. It can be convenient
+to have an outer loop which runs over the chosen
+observable values for the energy $k_0^2/m$.
+{\em Note that all mesh points $k_j$ for $j=1,N$ must be
+different from $k_0$. Note also that
+$V(k_i,k_j)$ is an
+$(N+1)\times (N+1)$ matrix}. Write a small function
+which sets up $A$.
+\item
+  With the matrix $A$ we can rewrite Eq.\ (\ref{eq:ls3}) 
+  as a matrix problem of dimension $(N+1)\times (N+1)$.
+  All matrices $R$, $A$ and $V$ have this dimension
+  and we get
+\begin{equation}
+    A_{i,l}R_{l,j}=V_{i,j},
+\end{equation} 
+or just
+\begin{equation}
+    AR=V.
+    \label{eq:final1}
+\end{equation} 
+\item Since you already have defined $A$ and $V$
+(these are stored as $(N+1)\times (N+1)$ matrices) 
+Eq.\ (\ref{eq:final1}) involves only the unknown
+$R$. We obtain it by matrix inversion, i.e.,
+\begin{equation}
+    R=A^{-1}V.
+    \label{eq:final2}
+\end{equation} 
+Thus, to obtain $R$, you will need to set up the matrices
+$A$ and $V$ and invert the matrix $A$. To do that
+you must call the function
+{\em matinv} in the program library lib.cpp (see also lib.h).
+With the inverse $A^{-1}$, performing
+a matrix multiplication with $V$ results in $R$.
+\end{enumerate}
+
+With $R$ you can then evaluate the phase shifts
+by noting that 
+\begin{equation}
+      R(k_{N+1},k_{N+1})=R(k_0,k_0),
+\end{equation}
+and you are done.
+
+You can choose to read $k_0$ from file or screen, or set up
+a loop over chosen values of $k_0$ and for each
+$k_0$ solve Eq.\ (\ref{eq:final2}). 
+
+
+
+\begin{enumerate}
+\item When you have $R(k,k')$ for the given potential, evaluate now the phase-shifts 
+using
+\[
+     R(k_0,k_0)=-\frac{tan\delta}{mk_0}.
+\]
+\item Compare the phase shifts for the potential of Eq.\ (\ref{eq:realp}) with the 
+experimental phase shifts that can be found 
+in the article 
+of the Nijmegen group in Physical Review C {\bf 48}, 792 (1993).  Alternatively look up their webpage at
+\url{http://nn-online.org/}
+\end{enumerate}
+
+The code can easily be extended to include realistic nucleon-nucleon interactions.
+Let me know if this is of interest, I will then provide a function (fortran) for the nucleon-nucleon force.
+\end{document}
