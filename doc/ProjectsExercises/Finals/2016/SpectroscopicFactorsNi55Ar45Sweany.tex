@@ -1,0 +1,106 @@
+\documentclass[prc]{revtex4}
+\usepackage[dvips]{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{lscape}
+
+\usepackage{epic,eepic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dvips]{epsfig}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{bezier}
+\usepackage{pstricks}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{braket}
+\usepackage[dvips]{graphicx}
+\usepackage{pst-plot}
+
+\newcommand{\One}{\hat{\mathbf{1}}}
+\newcommand{\eff}{\text{eff}}
+\newcommand{\Heff}{\hat{H}_\text{eff}}
+\newcommand{\Veff}{\hat{V}_\text{eff}}
+\newcommand{\braket}[1]{\langle#1\rangle}
+\newcommand{\Span}{\operatorname{sp}}
+\newcommand{\tr}{\operatorname{trace}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\bra}[1]{\left\langle #1 \right|}
+\newcommand{\ket}[1]{\left| #1 \right\rangle}
+\newcommand{\element}[3]
+    {\bra{#1}#2\ket{#3}}
+
+\newcommand{\normord}[1]{
+    \left\{#1\right\}
+}
+
+
+
+\usepackage{amsmath}
+\begin{document}
+
+
+\title{Project for the final oral examination PHY981}
+%\author{}
+\maketitle
+\section*{Studies of spectroscopic factos in Ar isotopes and $^{48}$Ca}
+
+The aim of this project is to study the structure of selected low-lying states of the Ar isotopes and 
+pertinent spectroscopic factors using Alex Brown's Nushellx code. 
+There is considerable interest in neutron-rich nuclei between $N = 14$ and $N = 28$,
+motivated particularly by the development of collectivity in nuclei such as
+$^{40,42}$S and by questions
+concerning the strength of the N = 28 shell gap far from stability (see Refs.~[1-5] and references
+therein). The Ar isotopes from $^{34}$Ar ($N = 16$) to $^{46}$Ar ($N = 28$) are important for studying this
+evolution of collectivity and for testing shell model calculations for neutron-rich nuclei in the
+region. Because they have two proton holes in the $sd$ shell, the neutron-rich Ar isotopes offer a
+relatively ‘simple’ case to probe proton-neutron interactions and build up a
+microscopic description of nuclear structure in neutron rich nuclei near $N = 28$. Being close to $^{48}$Ca, there 
+is great interest in understanding the role of such interactions.   
+The lightest Ar isotopes can be studied with effective interactions for $sd$-shell only as a first trial. 
+For the heavier ones, one would need to test 
+effective interactions that include the $0f_{7/2}$ orbit as well and possibly the $1p_{3/2}$ single-particle state. 
+In Refs.~[2,3], shell-model calculations where performed
+with effective interactions that included parts of the $pf$-shell as well. 
+
+The task here is to compute low-lying states of the Ar isotopes from
+$N=16$ to $N=28$ and compute spectroscopic factors for the ground states and selected excited states
+and compare with available data. To achieve this
+you will need to use an effective interaction designed for the $1s0d$
+and $1s0d1p0f$ shells. Since a full calculation in two major shells
+may be beyond reach, you will need to truncate the number of particles
+which can leave/occupy selected single-particle states. In the file
+which contains the single-particle data, you should block some of the
+single-particle orbis in the $1p0f$ shells.
+
+The possible tasks are as follows
+\begin{enumerate}
+\item Compute the spectra  of the low-lying spectrum of the above even Ar isotopes using the $1s0d$ shell as degree of freedom first. Add thereafter the $0f_{7/2}$ single-particle orbit and study the behavior of your results. Compare with Refs.~[2,3]. 
+\item Add thereafter the $1p_{3/2}$ single-particle state and commnet your results.
+\item Compute thereafter the spectroscopic factors for the ground states
+and compare with available data using the above model spaces. 
+\end{enumerate}
+
+
+
+Here follows a list of possible references.
+
+\begin{enumerate}
+\item  H. Scheit et al., Phys Rev Lett 77, 3967 (1996) 
+\item  J. Retamosa et al., Phys Rev C 55, 1266 (1997) 
+\item  S. Nummela et al., Phys Rev C 63, 044316 (2001) 
+\item A.D. Davies et al., Phys Rev Lett 96, 112503 (2006)
+\item  A.E. Stuchbery et al., Phys Rev C 74, 054307 (2006)
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
