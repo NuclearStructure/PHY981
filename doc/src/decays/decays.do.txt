@@ -1350,6 +1350,48 @@ being the third-order contribution.
 
 
 
+!split
+===== Learning outcomes  =====
+
+I hope this is not the case
+FIGURE: [figures/exam2.jpg, width=500 frac=0.6]
+
+!split
+===== Topics we have covered this year =====
+* Single-particle properties and mean-field and relation to data
+* How to set up basis states in second quantization and find expectation values
+* Angular momentum properties and the Wigner-Eckart theorem
+* Short survey of properties of nuclear forces
+* The nuclear shell model
+* And how to relate a shell-model calculation to decays and properties of decays.
+
+
+!split
+===== Final presentation =====
+* Introduction with motivation
+* Explain an eventual experimental set up
+* Give a short overview of the theory employed and how it relates to the analysis of eventual data
+* Present and discuss your results
+* Summary, conclusions and perspectives
+* Anything else you think is important. Useful to have backup slides
+
+In total your talk should have a duration of 20-25 minutes, but longer is also ok. 
+
+!split
+===== What? Me worry?  =====
+FIGURE: [figures/exam1.jpeg, width=500 frac=0.6]
+FIGURE: [figures/whatmeworry.jpeg, width=500 frac=0.6]
+
+
+!split
+=====  Best wishes to you all and thanks so much for your efforts this semester =====
+
+FIGURE: [figures/Nebbdyr2.png, width=500 frac=0.6]
+
+
+
+
+
 
 
 
