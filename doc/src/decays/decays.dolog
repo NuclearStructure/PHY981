@@ -1,0 +1,249 @@
+*** error: file has a mako construction ${\cal O}'
+    but seemingly no definition in <%...%>'
+    (it is not a command-line given mako variable either).
+    However, if this is a variable in a Makefile or Bash script
+    run with --no_mako - and you cannot use mako and Makefile or Bash variables
+    in the same document!
+
+translating doconce text in decays.do.txt to html
+*** warning: math block in HTML must have space around <:
+\[
+=\sqrt{\lambda (2\lambda +1)}<j_{a}\vert\vert [Y^{\lambda -1}(\hat{r})\otimes\mathbf{s}\,]^{\lambda }\vert\vert j_{b}><k_{a}\vert r^{\lambda -1}\vert k_{b}>g^{s}_{q}\mu _{N},
+\]
+
+    changed to
+\[
+=\sqrt{\lambda (2\lambda +1)}< j_{a}\vert\vert [Y^{\lambda -1}(\hat{r})\otimes\mathbf{s}\,]^{\lambda }\vert\vert j_{b}> < k_{a}\vert r^{\lambda -1}\vert k_{b}>g^{s}_{q}\mu _{N},
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<k_{a}\vert r^{0}\vert k_{b}>\, = \delta _{n_{a},n_{b}},
+\]
+
+    changed to
+\[
+ < k_{a}\vert r^{0}\vert k_{b}>\, = \delta _{n_{a},n_{b}},
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<s\vert\vert \mathbf{s}\,\vert\vert s>\, = \sqrt{3/2}\, ,
+\]
+
+    changed to
+\[
+ < s\vert\vert \mathbf{s}\,\vert\vert s>\, = \sqrt{3/2}\, ,
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<k_{a}\vert\vert O(M1,l )\vert\vert k_{b}>\, =
+\sqrt{ \frac{3}{4\pi }}\,
+<j_{a}\vert\vert \mathbf{l}\,\vert\vert j_{b}> \delta _{n_{a},n_{b}} \; g^{l }_{q} \; \mu _{N}
+\]
+
+    changed to
+\[
+ < k_{a}\vert\vert O(M1,l )\vert\vert k_{b}>\, =
+\sqrt{ \frac{3}{4\pi }}\,
+ < j_{a}\vert\vert \mathbf{l}\,\vert\vert j_{b}> \delta _{n_{a},n_{b}} \; g^{l }_{q} \; \mu _{N}
+\]
+
+output in decays-reveal.html
+*** error: file has a mako construction ${\cal O}'
+    but seemingly no definition in <%...%>'
+    (it is not a command-line given mako variable either).
+    However, if this is a variable in a Makefile or Bash script
+    run with --no_mako - and you cannot use mako and Makefile or Bash variables
+    in the same document!
+
+translating doconce text in decays.do.txt to html
+*** warning: math block in HTML must have space around <:
+\[
+=\sqrt{\lambda (2\lambda +1)}<j_{a}\vert\vert [Y^{\lambda -1}(\hat{r})\otimes\mathbf{s}\,]^{\lambda }\vert\vert j_{b}><k_{a}\vert r^{\lambda -1}\vert k_{b}>g^{s}_{q}\mu _{N},
+\]
+
+    changed to
+\[
+=\sqrt{\lambda (2\lambda +1)}< j_{a}\vert\vert [Y^{\lambda -1}(\hat{r})\otimes\mathbf{s}\,]^{\lambda }\vert\vert j_{b}> < k_{a}\vert r^{\lambda -1}\vert k_{b}>g^{s}_{q}\mu _{N},
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<k_{a}\vert r^{0}\vert k_{b}>\, = \delta _{n_{a},n_{b}},
+\]
+
+    changed to
+\[
+ < k_{a}\vert r^{0}\vert k_{b}>\, = \delta _{n_{a},n_{b}},
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<s\vert\vert \mathbf{s}\,\vert\vert s>\, = \sqrt{3/2}\, ,
+\]
+
+    changed to
+\[
+ < s\vert\vert \mathbf{s}\,\vert\vert s>\, = \sqrt{3/2}\, ,
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<k_{a}\vert\vert O(M1,l )\vert\vert k_{b}>\, =
+\sqrt{ \frac{3}{4\pi }}\,
+<j_{a}\vert\vert \mathbf{l}\,\vert\vert j_{b}> \delta _{n_{a},n_{b}} \; g^{l }_{q} \; \mu _{N}
+\]
+
+    changed to
+\[
+ < k_{a}\vert\vert O(M1,l )\vert\vert k_{b}>\, =
+\sqrt{ \frac{3}{4\pi }}\,
+ < j_{a}\vert\vert \mathbf{l}\,\vert\vert j_{b}> \delta _{n_{a},n_{b}} \; g^{l }_{q} \; \mu _{N}
+\]
+
+output in decays-solarized.html
+*** error: file has a mako construction ${\cal O}'
+    but seemingly no definition in <%...%>'
+    (it is not a command-line given mako variable either).
+    However, if this is a variable in a Makefile or Bash script
+    run with --no_mako - and you cannot use mako and Makefile or Bash variables
+    in the same document!
+
+translating doconce text in decays.do.txt to html
+*** warning: math block in HTML must have space around <:
+\[
+=\sqrt{\lambda (2\lambda +1)}<j_{a}\vert\vert [Y^{\lambda -1}(\hat{r})\otimes\mathbf{s}\,]^{\lambda }\vert\vert j_{b}><k_{a}\vert r^{\lambda -1}\vert k_{b}>g^{s}_{q}\mu _{N},
+\]
+
+    changed to
+\[
+=\sqrt{\lambda (2\lambda +1)}< j_{a}\vert\vert [Y^{\lambda -1}(\hat{r})\otimes\mathbf{s}\,]^{\lambda }\vert\vert j_{b}> < k_{a}\vert r^{\lambda -1}\vert k_{b}>g^{s}_{q}\mu _{N},
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<k_{a}\vert r^{0}\vert k_{b}>\, = \delta _{n_{a},n_{b}},
+\]
+
+    changed to
+\[
+ < k_{a}\vert r^{0}\vert k_{b}>\, = \delta _{n_{a},n_{b}},
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<s\vert\vert \mathbf{s}\,\vert\vert s>\, = \sqrt{3/2}\, ,
+\]
+
+    changed to
+\[
+ < s\vert\vert \mathbf{s}\,\vert\vert s>\, = \sqrt{3/2}\, ,
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<k_{a}\vert\vert O(M1,l )\vert\vert k_{b}>\, =
+\sqrt{ \frac{3}{4\pi }}\,
+<j_{a}\vert\vert \mathbf{l}\,\vert\vert j_{b}> \delta _{n_{a},n_{b}} \; g^{l }_{q} \; \mu _{N}
+\]
+
+    changed to
+\[
+ < k_{a}\vert\vert O(M1,l )\vert\vert k_{b}>\, =
+\sqrt{ \frac{3}{4\pi }}\,
+ < j_{a}\vert\vert \mathbf{l}\,\vert\vert j_{b}> \delta _{n_{a},n_{b}} \; g^{l }_{q} \; \mu _{N}
+\]
+
+output in decays.html
+*** error: file has a mako construction ${\cal O}'
+    but seemingly no definition in <%...%>'
+    (it is not a command-line given mako variable either).
+    However, if this is a variable in a Makefile or Bash script
+    run with --no_mako - and you cannot use mako and Makefile or Bash variables
+    in the same document!
+
+translating doconce text in decays.do.txt to html
+*** warning: math block in HTML must have space around <:
+\[
+=\sqrt{\lambda (2\lambda +1)}<j_{a}\vert\vert [Y^{\lambda -1}(\hat{r})\otimes\mathbf{s}\,]^{\lambda }\vert\vert j_{b}><k_{a}\vert r^{\lambda -1}\vert k_{b}>g^{s}_{q}\mu _{N},
+\]
+
+    changed to
+\[
+=\sqrt{\lambda (2\lambda +1)}< j_{a}\vert\vert [Y^{\lambda -1}(\hat{r})\otimes\mathbf{s}\,]^{\lambda }\vert\vert j_{b}> < k_{a}\vert r^{\lambda -1}\vert k_{b}>g^{s}_{q}\mu _{N},
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<k_{a}\vert r^{0}\vert k_{b}>\, = \delta _{n_{a},n_{b}},
+\]
+
+    changed to
+\[
+ < k_{a}\vert r^{0}\vert k_{b}>\, = \delta _{n_{a},n_{b}},
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<s\vert\vert \mathbf{s}\,\vert\vert s>\, = \sqrt{3/2}\, ,
+\]
+
+    changed to
+\[
+ < s\vert\vert \mathbf{s}\,\vert\vert s>\, = \sqrt{3/2}\, ,
+\]
+
+*** warning: math block in HTML must have space around <:
+\[
+<k_{a}\vert\vert O(M1,l )\vert\vert k_{b}>\, =
+\sqrt{ \frac{3}{4\pi }}\,
+<j_{a}\vert\vert \mathbf{l}\,\vert\vert j_{b}> \delta _{n_{a},n_{b}} \; g^{l }_{q} \; \mu _{N}
+\]
+
+    changed to
+\[
+ < k_{a}\vert\vert O(M1,l )\vert\vert k_{b}>\, =
+\sqrt{ \frac{3}{4\pi }}\,
+ < j_{a}\vert\vert \mathbf{l}\,\vert\vert j_{b}> \delta _{n_{a},n_{b}} \; g^{l }_{q} \; \mu _{N}
+\]
+
+output in decays-bs.html
+*** error: file has a mako construction ${\cal O}'
+    but seemingly no definition in <%...%>'
+    (it is not a command-line given mako variable either).
+    However, if this is a variable in a Makefile or Bash script
+    run with --no_mako - and you cannot use mako and Makefile or Bash variables
+    in the same document!
+
+translating doconce text in decays.do.txt to ipynb
+collected all required additional files in ipynb-decays-src.tar.gz which must be distributed with the notebook
+output in decays.ipynb
+*** error: file has a mako construction ${\cal O}'
+    but seemingly no definition in <%...%>'
+    (it is not a command-line given mako variable either).
+    However, if this is a variable in a Makefile or Bash script
+    run with --no_mako - and you cannot use mako and Makefile or Bash variables
+    in the same document!
+
+translating doconce text in decays.do.txt to pdflatex
+output in decays.p.tex
+*** error: file has a mako construction ${\cal O}'
+    but seemingly no definition in <%...%>'
+    (it is not a command-line given mako variable either).
+    However, if this is a variable in a Makefile or Bash script
+    run with --no_mako - and you cannot use mako and Makefile or Bash variables
+    in the same document!
+
+translating doconce text in decays.do.txt to pdflatex
+output in decays.p.tex
+*** error: file has a mako construction ${\cal O}'
+    but seemingly no definition in <%...%>'
+    (it is not a command-line given mako variable either).
+    However, if this is a variable in a Makefile or Bash script
+    run with --no_mako - and you cannot use mako and Makefile or Bash variables
+    in the same document!
+
+translating doconce text in decays.do.txt to pdflatex
+output in decays.p.tex
