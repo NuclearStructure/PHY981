@@ -1,0 +1,1392 @@
+ 
+
+% Slides for FYS-KJM4480
+
+
+\documentclass[compress]{beamer}
+
+
+% Try the class options [notes], [notes=only], [trans], [handout],
+% [red], [compress], [draft], [class=article] and see what happens!
+
+% For a green structure color use:
+%\colorlet{structure}{green!50!black}
+
+\mode<article> % only for the article version
+{
+  \usepackage{beamerbasearticle}
+  \usepackage{fullpage}
+  \usepackage{hyperref}
+}
+
+\beamertemplateshadingbackground{red!10}{blue!10}
+
+%\beamertemplateshadingbackground{red!10}{blue!10}
+\beamertemplatetransparentcovereddynamic
+%\usetheme{Hannover}
+
+\setbeamertemplate{footline}[page number]
+
+
+%\usepackage{beamerthemeshadow}
+
+%\usepackage{beamerthemeshadow}
+\usepackage{ucs}
+
+
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{graphicx}
+\usepackage{simplewick}
+\usepackage{amsmath,amssymb}
+\usepackage[latin1]{inputenc}
+\usepackage{colortbl}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{shadow}
+\lstset{language=c++}
+\lstset{alsolanguage=[90]Fortran}
+\lstset{basicstyle=\small}
+%\lstset{backgroundcolor=\color{white}}
+%\lstset{frame=single}
+\lstset{stringstyle=\ttfamily}
+%\lstset{keywordstyle=\color{red}\bfseries}
+%\lstset{commentstyle=\itshape\color{blue}}
+\lstset{showspaces=false}
+\lstset{showstringspaces=false}
+\lstset{showtabs=false}
+\lstset{breaklines}
+\usepackage{times}
+
+% Use some nice templates
+\beamertemplatetransparentcovereddynamic
+
+% own commands
+\newcommand*{\cre}[1]{a^{\dagger}_{#1}}
+\newcommand*{\an}[1]{a_{#1}}
+\newcommand*{\crequasi}[1]{b^{\dagger}_{#1}}
+\newcommand*{\anquasi}[1]{b_{#1}}
+\newcommand*{\for}[3]{\langle#1|#2|#3\rangle}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand*{\kpr}[1]{\left\{#1\right\}}
+\newcommand*{\ket}[1]{|#1\rangle}
+\newcommand*{\bra}[1]{\langle#1|}
+%\newcommand{\bra}[1]{\left\langle #1 \right|}
+%\newcommand{\ket}[1]{\left| # \right\rangle}
+\newcommand{\braket}[2]{\left\langle #1 \right| #2 \right\rangle}
+\newcommand{\OP}[1]{{\bf\widehat{#1}}}
+\newcommand{\matr}[1]{{\bf \cal{#1}}}
+\newcommand{\beN}{\begin{equation*}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\beaN}{\begin{eqnarray*}}
+\newcommand{\eeN}{\end{equation*}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\eeaN}{\end{eqnarray*}}
+\newcommand{\bdm}{\begin{displaymath}}
+\newcommand{\edm}{\end{displaymath}}
+\newcommand{\bsubeqs}{\begin{subequations}}
+\newcommand*{\fpr}[1]{\left[#1\right]}
+\newcommand{\esubeqs}{\end{subequations}}
+\newcommand*{\pr}[1]{\left(#1\right)}
+\newcommand{\element}[3]
+        {\bra{#1}#2\ket{#3}}
+
+\newcommand{\md}{\mathrm{d}}
+\newcommand{\e}[1]{\times 10^{#1}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\gvec}[1]{\boldsymbol{#1}}
+\newcommand{\dr}{\, \mathrm d^3 \vec r}
+\newcommand{\dk}{\, \mathrm d^3 \vec k}
+\def\psii{\psi_{i}}
+\def\psij{\psi_{j}}
+\def\psiij{\psi_{ij}}
+\def\psisq{\psi^2}
+\def\psisqex{\langle \psi^2 \rangle}
+\def\psiR{\psi({\bf R})}
+\def\psiRk{\psi({\bf R}_k)}
+\def\psiiRk{\psi_{i}(\Rveck)}
+\def\psijRk{\psi_{j}(\Rveck)}
+\def\psiijRk{\psi_{ij}(\Rveck)}
+\def\ranglep{\rangle_{\psisq}}
+\def\Hpsibypsi{{H \psi \over \psi}}
+\def\Hpsiibypsi{{H \psii \over \psi}}
+\def\HmEpsibypsi{{(H-E) \psi \over \psi}}
+\def\HmEpsiibypsi{{(H-E) \psii \over \psi}}
+\def\HmEpsijbypsi{{(H-E) \psij \over \psi}}
+\def\psiibypsi{{\psii \over \psi}}
+\def\psijbypsi{{\psij \over \psi}}
+\def\psiijbypsi{{\psiij \over \psi}}
+\def\psiibypsiRk{{\psii(\Rveck) \over \psi(\Rveck)}}
+\def\psijbypsiRk{{\psij(\Rveck) \over \psi(\Rveck)}}
+\def\psiijbypsiRk{{\psiij(\Rveck) \over \psi(\Rveck)}}
+\def\EL{E_{\rm L}}
+\def\ELi{E_{{\rm L},i}}
+\def\ELj{E_{{\rm L},j}}
+\def\ELRk{E_{\rm L}(\Rveck)}
+\def\ELiRk{E_{{\rm L},i}(\Rveck)}
+\def\ELjRk{E_{{\rm L},j}(\Rveck)}
+\def\Ebar{\bar{E}}
+\def\Ei{\Ebar_{i}}
+\def\Ej{\Ebar_{j}}
+\def\Ebar{\bar{E}}
+\def\Rvec{{\bf R}}
+\def\Rveck{{\bf R}_k}
+\def\Rvecl{{\bf R}_l}
+\def\NMC{N_{\rm MC}}
+\def\sumMC{\sum_{k=1}^{\NMC}}
+\def\MC{Monte Carlo}
+\def\adiag{a_{\rm diag}}
+\def\tcorr{T_{\rm corr}}
+\def\intR{{\int {\rm d}^{3N}\!\!R\;}}
+
+\def\ul{\underline}
+\def\beq{\begin{eqnarray}}
+\def\eeq{\end{eqnarray}}
+
+\newcommand{\eqbrace}[4]{\left\{
+\begin{array}{ll}
+#1 & #2 \\[0.5cm]
+#3 & #4
+\end{array}\right.}
+\newcommand{\eqbraced}[4]{\left\{
+\begin{array}{ll}
+#1 & #2 \\[0.5cm]
+#3 & #4
+\end{array}\right\}}
+\newcommand{\eqbracetriple}[6]{\left\{
+\begin{array}{ll}
+#1 & #2 \\
+#3 & #4 \\
+#5 & #6
+\end{array}\right.}
+\newcommand{\eqbracedtriple}[6]{\left\{
+\begin{array}{ll}
+#1 & #2 \\
+#3 & #4 \\
+#5 & #6
+\end{array}\right\}}
+
+\newcommand{\mybox}[3]{\mbox{\makebox[#1][#2]{$#3$}}}
+\newcommand{\myframedbox}[3]{\mbox{\framebox[#1][#2]{$#3$}}}
+
+%% Infinitesimal (and double infinitesimal), useful at end of integrals
+%\newcommand{\ud}[1]{\mathrm d#1}
+\newcommand{\ud}[1]{d#1}
+\newcommand{\udd}[1]{d^2\!#1}
+
+%% Operators, algebraic matrices, algebraic vectors
+
+%% Operator (hat, bold or bold symbol, whichever you like best):
+\newcommand{\op}[1]{\widehat{#1}}
+%\newcommand{\op}[1]{\mathbf{#1}}
+%\newcommand{\op}[1]{\boldsymbol{#1}}
+
+%% Vector:
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
+%% Matrix symbol:
+%\newcommand{\matr}[1]{\boldsymbol{#1}}
+%\newcommand{\bb}[1]{\mathbb{#1}}
+
+%% Determinant symbol:
+\renewcommand{\det}[1]{|#1|}
+
+%% Means (expectation values) of varius sizes
+\newcommand{\mean}[1]{\langle #1 \rangle}
+\newcommand{\meanb}[1]{\big\langle #1 \big\rangle}
+\newcommand{\meanbb}[1]{\Big\langle #1 \Big\rangle}
+\newcommand{\meanbbb}[1]{\bigg\langle #1 \bigg\rangle}
+\newcommand{\meanbbbb}[1]{\Bigg\langle #1 \Bigg\rangle}
+
+%% Shorthands for text set in roman font
+\newcommand{\prob}[0]{\mathrm{Prob}} %probability
+\newcommand{\cov}[0]{\mathrm{Cov}}   %covariance
+\newcommand{\var}[0]{\mathrm{Var}}   %variancd
+
+%% Big-O (typically for specifying the speed scaling of an algorithm)
+\newcommand{\bigO}{\mathcal{O}}
+
+%% Real value of a complex number
+\newcommand{\real}[1]{\mathrm{Re}\!\left\{#1\right\}}
+
+%% Quantum mechanical state vectors and matrix elements (of different sizes)
+%\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\brab}[1]{\big\langle #1 \big|}
+\newcommand{\brabb}[1]{\Big\langle #1 \Big|}
+\newcommand{\brabbb}[1]{\bigg\langle #1 \bigg|}
+\newcommand{\brabbbb}[1]{\Bigg\langle #1 \Bigg|}
+%\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\ketb}[1]{\big| #1 \big\rangle}
+\newcommand{\ketbb}[1]{\Big| #1 \Big\rangle}
+\newcommand{\ketbbb}[1]{\bigg| #1 \bigg\rangle}
+\newcommand{\ketbbbb}[1]{\Bigg| #1 \Bigg\rangle}
+%\newcommand{\overlap}[2]{\langle #1 | #2 \rangle}
+\newcommand{\overlapb}[2]{\big\langle #1 \big| #2 \big\rangle}
+\newcommand{\overlapbb}[2]{\Big\langle #1 \Big| #2 \Big\rangle}
+\newcommand{\overlapbbb}[2]{\bigg\langle #1 \bigg| #2 \bigg\rangle}
+\newcommand{\overlapbbbb}[2]{\Bigg\langle #1 \Bigg| #2 \Bigg\rangle}
+\newcommand{\bracket}[3]{\langle #1 | #2 | #3 \rangle}
+\newcommand{\bracketb}[3]{\big\langle #1 \big| #2 \big| #3 \big\rangle}
+\newcommand{\bracketbb}[3]{\Big\langle #1 \Big| #2 \Big| #3 \Big\rangle}
+\newcommand{\bracketbbb}[3]{\bigg\langle #1 \bigg| #2 \bigg| #3 \bigg\rangle}
+\newcommand{\bracketbbbb}[3]{\Bigg\langle #1 \Bigg| #2 \Bigg| #3 \Bigg\rangle}
+\newcommand{\projection}[2]
+{| #1 \rangle \langle  #2 |}
+\newcommand{\projectionb}[2]
+{\big| #1 \big\rangle \big\langle #2 \big|}
+\newcommand{\projectionbb}[2]
+{ \Big| #1 \Big\rangle \Big\langle #2 \Big|}
+\newcommand{\projectionbbb}[2]
+{ \bigg| #1 \bigg\rangle \bigg\langle #2 \bigg|}
+\newcommand{\projectionbbbb}[2]
+{ \Bigg| #1 \Bigg\rangle \Bigg\langle #2 \Bigg|}
+
+
+%% If you run out of greek symbols, here's another one you haven't
+%% thought of:
+\newcommand{\Feta}{\hspace{0.6ex}\begin{turn}{180}
+        {\raisebox{-\height}{\parbox[c]{1mm}{F}}}\end{turn}}
+\newcommand{\feta}{\hspace{-1.6ex}\begin{turn}{180}
+        {\raisebox{-\height}{\parbox[b]{4mm}{f}}}\end{turn}}
+
+
+
+
+\title[PHY981]{Slides from PHY981}
+\author[Nuclear Structure]{%
+  Morten Hjorth-Jensen}
+\institute[ORNL, University of Oslo and MSU]{
+Department of Physics and Center of Mathematics for Applications\\
+  University of Oslo, N-0316 Oslo, Norway and\\
+  National Superconducting Cyclotron Laboratory, Michigan State University, East Lansing, MI 48824, USA }
+
+  
+\date[MSU]{Spring  2013}
+\subject{Nuclear Structure}
+
+\begin{document}
+\include{commands}
+
+
+%\pagenumbering{plain}
+
+\frame{\titlepage}
+
+
+
+
+
+
+\section[Week 2]{Week 2}
+\frame
+{
+  \frametitle{Topics for Week 2, January 7-11}
+  \begin{block}{Introduction to the course and overview of observables}
+\begin{itemize}
+\item Tuesday:
+\item Presentation of topics to be covered and introduction to nuclear structure
+physics
+\item Discussion of quantities like binding energies, masses, radii, separation energies, 
+see chapters 1-4 of Alex Brown's (AB) 2011 lectures
+\item Definitions of various quantities
+\item Thursday:
+\item Single-particle degrees of freedom, discussion of data
+\item Hamiltonians and single-particle fields, see  Suhonen (JS) chapter 3 and AB chapters 9 and 10.
+You can fetch JS's book from \url{http://link.springer.com.proxy2.cl.msu.edu/book/10.1007/978-3-540-48861-3/page/1}
+\item No exercises this week.
+\end{itemize}
+  \end{block}
+} 
+
+\section[Week 3]{Week 3}
+
+\frame
+{
+  \frametitle{Topics for Week 3, January 14-18}
+  \begin{block}{Single-particle fields and construction of many-body wave functions}
+\begin{itemize}
+\item Tuesday:
+\item Hamiltonians and single-particle fields, continued from last week
+\item Thursday:
+\item Two-body wave functions and start discussion of Nuclear forces
+\item Exercises 1 and 2.
+\end{itemize}
+Suggested literature is AB chapters 9 and 10 and JS chapter 3
+  \end{block}
+} 
+
+
+
+\frame
+{
+  \frametitle{Lectures and exercise sessions}
+  \begin{block}{and syllabus (see next slide as well)}
+\begin{itemize}
+\item Lectures: Tuesdays and Thursdays 1.00pm-2.20pm, seminar room 1341
+\item Exercise sessions:  To be discussed.
+       \item Detailed lecture notes, all exercises presented and projects
+can be found at the homepage of the course.
+       \item Weekly plans and all other information are on the official webpage.
+\end{itemize}
+  \end{block}
+}
+
+
+\frame
+{
+  \frametitle{Lectures and exercise sessions}
+  \begin{block}{and syllabus (see next slide as well)}
+\begin{itemize}
+\item Syllabus: Lecture notes, exercises and projects. Relevant chapters of Suhonen's text that cover parts of the material are chapters 3-9 and 11. Chapters 1-2 on angular momentum will be used as references for various derivations and only parts of these two chapters will be used. Alex Brown's lecture notes from 2011 can also be used, and the relevant chapters are 1-4, 6-29. Chapter 5 of Brown on angular momentum plays the same role as chapters 1-2 of Suhonen. 
+\end{itemize}
+  \end{block}
+}
+
+
+
+\frame
+{
+  \frametitle{Main themes and reading suggestions}
+\begin{small}
+{\scriptsize
+The various observables we will discuss in the course are thought to be understood via the following five 
+major topics
+\begin{enumerate}
+\item Single  particle properties and mean-field models, lecture notes, JS chapters 3-5 and AB chapters 7-10
+\item Nuclear forces, covered by lecture notes
+\item The nuclear shell-model, lecture notes, JS chapter 8 and AB chapters 11-22.
+\item Particle-hole excitations, random-phase approximation and pairing, lecture notes and JS chapters 9 and 11.
+\item Decays and one and two-body transition probabilities, lecture notes, JS chapters 6 and 7, AB chapters 23-29.
+\end{enumerate}
+}
+\end{small}
+}
+
+
+
+
+
+\frame
+{
+  \frametitle{Plan for the semester}
+  \begin{block}{Projects, weekly exercises, deadlines and final oral exam}
+\begin{enumerate}
+\item Two  projects with a numerical content that count each 25\%, weekly exercises  that count 10\% and a final oral exam which counts 40\% of the final grade. 
+\item Project 1 will be available February 4 and has to be handed in on February 22.
+\item Project 2 will be available March 25 and has to be handed in on April 12. 
+\item For the final oral exam (Week of April 29 - May 3) you have to prepare five 20 minutes talks which cover the five main topics from the previous slide. At the exam, you will have to pick, randomly, one of the five topics.
+Duration of the examination is 40 minutes. The remaining 20 minutes are for questions from other topics as well. 
+\end{enumerate}
+I need your feedback by the end of this week. Also about the final dates for the exam.
+%The grading is as follows:
+%$A=90-100$, $B=76-89$, $C=61-75$, $D=51-60$, $E=41-50$ and $F=0-40$. 
+  \end{block}
+} 
+
+
+\frame
+{
+  \frametitle{Plan for the semester}
+  \begin{block}{Projects}
+\begin{enumerate}
+\item Project 1 will deal with computing scattering phase shifts used to constrain nucleon-nucleon forces. The project will thus involved a comparison with experimental scattering data. Numerically, we need to compute inverses of matrices, where the matrices are discretizations on a grid of the nucleon-nucleon forces at study. All relevant auxiliary functions will be provided (such as computing the inverse of a matrix).
+\item Project 2 will most likely deal with the build up of your own shell model code, and involves basically solving an eigenvalue problem. Again, all auxiliary functions will be provided.
+\end{enumerate}
+%The grading is as follows:
+%$A=90-100$, $B=76-89$, $C=61-75$, $D=51-60$, $E=41-50$ and $F=0-40$. 
+  \end{block}
+} 
+
+
+
+\frame
+{
+  \frametitle{Selected Texts on Nuclear Structure and Many-body theory}
+ \begin{small}
+ {\scriptsize
+
+  \begin{enumerate}
+   \item Heyde, {\em The Nuclear Shell Model}, Springer 1990
+   \item Lawson, {\em Theory of the Nuclear Shell Model}, Oxford 1980
+   \item Ring and Schuck, {\em Nuclear Many-Body Theory}, Springer 1980
+   \item Talmi, {\em Simple Models of Complex Nuclei: The Shell Model and Interacting Boson Model}, Harwood Academic Publishers 1993.
+   \item Blaizot and Ripka, {\em Quantum Theory of Finite systems}, MIT press 1986
+   \item Negele and Orland, {\em Quantum Many-Particle Systems}, Addison-Wesley, 1987.
+   \item Fetter and Walecka, {\em Quantum Theory of Many-Particle Systems}, McGraw-Hill, 1971.
+   \item Dickhoff and Van Neck, {\em Many-Body Theory Exposed}, World Scientific, 2006.
+\end{enumerate}
+ }
+ \end{small}
+}
+
+\frame
+{
+  \frametitle{Masses and Binding energies}
+\begin{small}
+{\scriptsize
+A basic quantity which can be measured for the ground states of nuclei is the atomic mass
+$M(N, Z)$ of the neutral atom with atomic mass number $A$ and charge $Z$. The number of neutrons are $N$.
+
+Atomic masses are
+usually tabulated in terms of the mass excess defined by
+\[
+\Delta M(N, Z) =  M(N, Z) - uA,
+\]
+where $u$ is the Atomic Mass Unit 
+\[
+u = M(^{12}\mathrm{C})/12 = 931.49386 \hspace{0.1cm} \mathrm{MeV}/c^2.
+\]
+In this course we will mainly use 
+data from the 2003 compilation of Audi, Wapstra and Thibault.
+}
+\end{small}
+}
+
+
+
+
+
+
+
+\frame
+{
+  \frametitle{Masses and Binding energies}
+\begin{small}
+{\scriptsize
+The nucleon masses are
+\[
+m_p = 938.27203(8)\hspace{0.1cm} \mathrm{MeV}/c^2 = 1.00727646688(13)u,
+\]
+and 
+\[
+m_n = 939.56536(8)\hspace{0.1cm} \mathrm{MeV}/c^2 = 1.0086649156(6)u.
+\]
+In the 2003 mass evaluation there are 2127 nuclei measured with an accuracy of 0.2
+MeV or better, and 101 nuclei measured with an accuracy of greater than 0.2 MeV. For
+heavy nuclei one observes several chains of nuclei with a constant $N-Z$ value whose masses
+are obtained from the energy released in alpha decay.
+}
+\end{small}
+}
+
+
+\frame
+{
+  \frametitle{Masses and Binding energies}
+\begin{small}
+{\scriptsize
+Nuclear binding energy is defined as the energy required to break up a given nucleus
+into its constituent parts of $N$ neutrons and $Z$ protons. In terms of the atomic masses
+$M(N, Z)$ the binding energy is defined by:
+\[
+BE(N, Z) = ZM_H c^2 + Nm_n c^2 - M(N, Z)c^2 ,
+\]
+where $M_H$ is the mass of the hydrogen atom and $m_n$ is the mass of the neutron.
+In terms
+of the mass excess the binding energy is given by:
+\[
+BE(N, Z) = Z\Delta_H c^2 + N\Delta_n c^2 -\Delta(N, Z)c^2 ,
+\]
+where $\Delta_H c^2 = 7.2890$ MeV and $\Delta_n c^2 = 8.0713$ MeV.
+
+}
+\end{small}
+}
+
+
+\frame
+{
+  \frametitle{$Q$-values and separation energies}
+\begin{small}
+{\scriptsize
+We consider energy conservation for nuclear transformations that include, for
+example, the fusion of two nuclei $a$ and $b$ into the combined system $c$
+\[
+{^{N_a+Z_a}}a+ {^{N_b+Z_b}}b\rightarrow {^{N_c+Z_c}}c
+\]
+or the decay of nucleus $c$ into two other nuclei $a$ and $b$
+\[
+^{N_c+Z_c}c \rightarrow  ^{N_a+Z_a}a+ ^{N_b+Z_b}b
+\]
+In general we have the reactions
+\[
+\sum_i {^{N_i+Z_i}}i \rightarrow  \sum_f {^{N_f+Z_f}}f
+\]
+We require also that number of protons and neutrons are conserved in the initial stage and final stage, unless we have processes which violate baryon conservation, 
+\[
+\sum_iN_i = \sum_f N_f \hspace{0.2cm}\mathrm{and} \hspace{0.2cm}\sum_iZ_i = \sum_f Z_f.
+\]
+}
+\end{small}
+}
+
+
+
+\frame
+{
+  \frametitle{$Q$-values and separation energies}
+\begin{small}
+{\scriptsize
+This process is characterized by an energy difference called the $Q$ value:
+\[
+Q=\sum_iM(N_i, Z_i)c^2-\sum_fM(N_f, Z_f)c^2=\sum_iBE(N_f, Z_f)-\sum_iBE(N_i, Z_i)
+\]
+Spontaneous decay involves a single initial nuclear state and is allowed if $Q > 0$. In the
+decay, energy is released in the form of the kinetic energy of the final products. Reactions
+involving two initial nuclei and are endothermic (a net loss of energy) if $Q < 0$; the reactions
+are exothermic (a net release of energy) if $Q > 0$.
+
+}
+\end{small}
+}
+\frame
+{
+  \frametitle{$Q$-values and separation energies}
+\begin{small}
+{\scriptsize
+We can consider the Q values associated with the removal of one or two nucleons from
+a nucleus. These are conventionally defined in terms of the one-nucleon and two-nucleon
+separation energies
+\[
+S_n= -Q_n= BE(N,Z)-BE(N-1,Z),
+\]
+\[
+S_p= -Q_p= BE(N,Z)-BE(N,Z-1),
+\]
+\[
+S_{2n}= -Q_{2n}= BE(N,Z)-BE(N-2,Z),
+\]
+and
+\[
+S_{2p}= -Q_{2p}= BE(N,Z)-BE(N,Z-2),
+\]
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Radii}
+\begin{small}
+{\scriptsize
+The root-mean-square (rms) charge radius has been measured for the ground states of many
+nuclei. For a spherical charge density, $\rho({\bf r})$, the mean-square radius is defined by:
+\[
+\langle r^2\rangle = \frac{ \int  d {\bf r} \rho({\bf r}) r^2}{ \int  d {\bf r} \rho({\bf r})},
+\]
+and the rms radius is the square root of this quantity denoted by
+\[
+R =\sqrt{ \langle r^2\rangle}.
+\]
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Radii}
+\begin{small}
+{\scriptsize
+
+Radii for most stable
+nuclei have been deduced from electron scattering form
+factors and/or from the x-ray transition energies of muonic atoms. 
+The relative radii for a
+series of isotopes can be extracted from the isotope shifts of atomic x-ray transitions.
+The rms radius for the nuclear point-proton density, $R_p$ is obtained from the rms charge radius by:
+\[
+R_p = \sqrt{R^2_{\mathrm{ch}}- R^2_{\mathrm{corr}}},
+\]
+where
+\[
+R^2_{\mathrm{corr}}= R^2_{\mathrm{op}}+(N/Z)R^2_{\mathrm{on}}+R^2_{\mathrm{rel}},
+\]
+where $ R_{\mathrm{op}}= 0.875(7)$ fm  is the rms radius of the proton, $R^2_{\mathrm{on}} = 0.116(2)$ fm$^2$ is the
+mean-square radius of the neutron and $R^2_{\mathrm{rel}} = 0.033$ fm$^2$ is the relativistic Darwin-Foldy correction. There are also smaller nucleus-dependent relativistic spin-orbit and
+mesonic-exchange corrections that should be included.
+}
+\end{small}
+}
+
+
+\frame
+{
+\frametitle{Definitions}
+An operator is defined as $\hat{O}$ throughout. Unless otherwise
+specified the number of particles is always $A$ and $d$ is the dimension of the 
+system. 
+In nuclear physics we normally define the total number of particles to be $A=N+Z$,
+where $N$ is total number of neutrons and $Z$ the total number of protons. In case of other baryons such isobars $\Delta$ or
+various hyperons such as $\Lambda$ or $\Sigma$, one needs to add their definitions.  
+%
+Hereafter, $A$ is reserved for the total number of particles, unless otherwise specificied. When we refer to a neutron we will use the label $n$ and when we refer to a proton we will use the label $p$. Unless otherwise specified, we will call these particles for nucleons.
+}
+
+
+
+\frame
+{
+\frametitle{Definitions}
+The quantum numbers of a single-nucleon state in coordinate space are
+defined by the variable $x=({\bf r},\sigma)$, where ${\bf r}\in {\mathbb{R}}^{d}$with $d=1,2,3$ represents the spatial coordinates and $\sigma$ is the eigenspin of the nucleon. For fermions with eigenspin $1/2$ this means that
+\[
+ x\in {\mathbb{R}}^{d}\oplus (\frac{1}{2}),
+\]
+and the integral
+\[
+\int dx = \sum_{\sigma}\int d^dr = \sum_{\sigma}\int d{\bf r},
+\]
+and
+\[
+\int d^Ax= \int dx_1\int dx_2\dots\int dx_A.
+\]
+
+}
+
+
+\frame
+{
+\frametitle{Definitions}
+The quantum mechanical wave function of a given state with quantum numbers $\lambda$ (encompassing all quantum numbers needed to specify the system), ignoring time, is
+\[
+\Psi_{\lambda}=\Psi_{\lambda}(x_1,x_2,\dots,x_A),
+\]
+with $x_i=({\bf r}_i,\sigma_i)$ and the projection of $\sigma_i$ takes the values
+$\{-1/2,+1/2\}$ for nucleons with spin $1/2$. 
+We will hereafter always refer to $\Psi_{\lambda}$ as the exact wave function, and if the ground state is not degenerate we label it as 
+\[
+\Psi_0=\Psi_0(x_1,x_2,\dots,x_A).
+\]
+
+}
+
+
+\frame
+{
+\frametitle{Definitions}
+Since the solution $\Psi_{\lambda}$ seldomly can be found in closed form, approximations are sought. In this text we define an approximative wave function or an ansatz to the exact wave function as 
+\[
+\Phi_{\lambda}=\Phi_{\lambda}(x_1,x_2,\dots,x_A),
+\]
+with 
+\[
+\Phi_0=\Phi_0(x_1,x_2,\dots,x_A),
+\]
+being the ansatz to the ground state.  
+}
+
+
+\frame
+{
+\frametitle{Definitions}
+The wave function $\Psi_{\lambda}$ is sought in the Hilbert space of either symmetric or anti-symmetric $A$-body functions, namely
+\[
+\Psi_{\lambda}\in {\cal H}_N:= {\cal H}_1\oplus{\cal H}_1\oplus\dots\oplus{\cal H}_1,
+\]
+where the single-nucleon Hilbert space ${\cal H}_1$ is the space of square integrable functions over
+$\in {\mathbb{R}}^{d}\oplus (\sigma)$
+resulting in
+\[
+{\cal H}_1:= L^2(\mathbb{R}^{d}\oplus (\sigma)).
+\]
+}
+
+
+
+\frame
+{
+\frametitle{Definitions}
+Our Hamiltonian is invariant under the permutation (interchange) of two nucleons.
+Since we deal with fermions however, the total wave function is antisymmetric.
+Let $\hat{P}$ be an operator which interchanges two nucleons.
+Due to the symmetries we have ascribed to our Hamiltonian, this operator commutes with the total Hamiltonian,
+\[
+[\hat{H},\hat{P}] = 0,
+\]
+meaning that $\Psi_{\lambda}(x_1, x_2, \dots , x_A)$ is an eigenfunction of 
+$\hat{P}$ as well, that is
+\[
+\hat{P}_{ij}\Psi_{\lambda}(x_1, x_2, \dots,x_i,\dots,x_j,\dots,x_A)=
+\beta\Psi_{\lambda}(x_1, x_2, \dots,x_j,\dots,x_i,\dots,x_A),
+\]
+where $\beta$ is the eigenvalue of $\hat{P}$. We have introduced the suffix $ij$ in order to indicate that we permute nucleons $i$ and $j$.
+The Pauli principle tells us that the total wave function for a system of fermions
+has to be antisymmetric, resulting in the eigenvalue $\beta = -1$.   
+
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+The Schr\"odinger equation reads 
+\begin{equation}
+\hat{H}(x_1, x_2, \dots , x_N) \Psi_{\lambda}(x_1, x_2, \dots , x_A) = 
+E_\lambda  \Psi_\lambda(x_1, x_2, \dots , x_A), 
+\label{eq:basicSE1}
+\end{equation}
+where the vector $x_i$ represents the coordinates (spatial and spin) of nucleon $i$, $\lambda$ stands  for all the quantum
+numbers needed to classify a given $A$-nucleon state and $\Psi_{\lambda}$ is the pertaining eigenfunction.  Throughout this course,
+$\Psi$ refers to the exact eigenfunction, unless otherwise stated.
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+We write the Hamilton operator, or Hamiltonian,  in a generic way 
+\[
+	\hat{H} = \hat{T} + \hat{V} 
+\]
+where $\hat{T}$  represents the kinetic energy of the system
+\[
+	\hat{T} = \sum_{i=1}^A \frac{\mathbf{p}_i^2}{2m_i} = \sum_{i=1}^A \left( -\frac{\hbar^2}{2m_i} \mathbf{\nabla_i}^2 \right) =
+		\sum_{i=1}^A t(x_i)
+\]
+while the operator $\hat{V}$ for the potential energy is given by
+\begin{equation}
+	\hat{V} = \sum_{i=1}^A \hat{u}_{\mathrm{ext}}(x_i) + \sum_{ji=1}^A v(x_i,x_j)+\sum_{ijk=1}^Av(x_i,x_j,x_k)+\dots
+\label{eq:firstv}
+\end{equation}
+Hereafter we use natural units, viz.~$\hbar=c=e=1$, with $e$ the elementary charge and $c$ the speed of light. This means that momenta and masses
+have dimension energy. 
+}
+\end{small}
+}
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+If one does quantum chemistry, after having introduced the  Born-Oppenheimer approximation which effectively freezes out the nucleonic degrees
+of freedom, the Hamiltonian for $N=n_e$ electrons takes the following form 
+\[
+  \hat{H} = \sum_{i=1}^{n_e} t(x_i) 
+  - \sum_{i=1}^{n_e} k\frac{Z}{r_i} + \sum_{i<j}^{n_e} \frac{k}{r_{ij}},
+\]
+with $k=1.44$ eVnm
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+ We can rewrite this as
+\begin{equation}
+    \hat{H} = \hat{H_0} + \hat{H_I} 
+    = \sum_{i=1}^{n_e}\hat{h}_0(x_i) + \sum_{i<j=1}^{n_e}\frac{1}{r_{ij}},
+\label{H1H2}
+\end{equation}
+where  we have defined $r_{ij}=| {\bf r}_i-{\bf r}_j|$ and
+\begin{equation}
+  \hat{h}_0(x_i) =  \hat{t}(x_i) - \frac{Z}{x_i}.
+\label{hi}
+\end{equation}
+The first term of eq.~(\ref{H1H2}), $H_0$, is the sum of the $N$
+\emph{one-body} Hamiltonians $\hat{h}_0$. Each individual
+Hamiltonian $\hat{h}_0$ contains the kinetic energy operator of an
+electron and its potential energy due to the attraction of the
+nucleus. The second term, $H_I$, is the sum of the $n_e(n_e-1)/2$
+two-body interactions between each pair of electrons. Note that the double sum carries a restriction $i<j$.
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+The potential energy term due to the attraction of the nucleus defines the one-body field $u_i=u_{\mathrm{ext}}(x_i)$ of Eq.~(\ref{eq:firstv}).
+We have moved this term into the $\hat{H}_0$ part of the Hamiltonian, instead of keeping  it in $\hat{V}$ as in  Eq.~(\ref{eq:firstv}).
+The reason is that we will hereafter treat $\hat{H}_0$ as our non-interacting  Hamiltonian. For a many-body wavefunction $\Phi_{\lambda}$ defined by an  
+appropriate single-nucleon basis, we may solve exactly the non-interacting eigenvalue problem 
+\[
+\hat{H}_0\Phi_{\lambda}= w_{\lambda}\Phi_{\lambda},
+\]
+with $w_{\lambda}$ being the non-interacting energy. This energy is defined by the sum over single-nucleon energies to be defined below.
+For atoms the single-nucleon energies could be the hydrogen-like single-nucleon energies corrected for the charge $Z$. For nuclei and quantum
+dots, these energies could be given by the harmonic oscillator in three and two dimensions, respectively.
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+We will assume that the interacting part of the Hamiltonian
+can be approximated by a two-body interaction.
+This means that our Hamiltonian is written as 
+\begin{equation}
+    \hat{H} = \hat{H_0} + \hat{H_I} 
+    = \sum_{i=1}^A \hat{h}_0(x_i) + \sum_{i<j=1}^A V(x_{ij}),
+\label{Hnuclei}
+\end{equation}
+with 
+\begin{equation}
+  H_0=\sum_{i=1}^A \hat{h}_0(x_i) =  \sum_{i=1}^A\left(\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i)\right).
+\label{hinuclei}
+\end{equation}
+The one-body part $u_{\mathrm{ext}}(x_i)$ is normally approximated by a harmonic oscillator potential or the Coulomb interaction an electron feels from the nucleus. However, other potentials are fully possible, such as 
+one derived from the self-consistent solution of the Hartree-Fock equations or so-called Woods-Saxon potentials to be discussed in the next weeks.
+}
+\end{small}
+}
+
+
+\frame
+{
+  \frametitle{The harmonic oscillator Hamiltonian}
+\begin{small}
+{\scriptsize
+In the previous slide we defined
+\[
+    \hat{H} = \hat{H_0} + \hat{H_I} 
+    = \sum_{i=1}^A \hat{h}_0(x_i) + \sum_{i<j=1}^A V(x_{ij}),
+\]
+with 
+\[
+  H_0=\sum_{i=1}^A \hat{h}_0(x_i) =  \sum_{i=1}^A\left(\hat{t}(x_i) + \hat{u}_{\mathrm{ext}}(x_i)\right).
+\]
+
+In nuclear physics the one-body part $u_{\mathrm{ext}}(x_i)$ is normally approximated by a harmonic oscillator potential. However, this is not fully correct, because as we have discussed, nuclei are self-bound systems and there is no external confining potential. The above Hamiltonian is thus not entirely correct for nuclear physics.
+}
+\end{small}
+}
+
+
+\frame
+{
+  \frametitle{The harmonic oscillator Hamiltonian}
+\begin{small}
+{\scriptsize
+What many people do then, is to add and subtract a harmonic oscillator potential,
+with 
+\[
+\hat{u}_{\mathrm{ext}}(x_i)=\hat{u}_{\mathrm{ho}}(x_i)= \frac{1}{2}m\omega^2 r_i^2,
+\]
+where $\omega$ is the oscillator frequency. This leads to 
+\[
+    \hat{H} = \hat{H_0} + \hat{H_I} 
+    = \sum_{i=1}^A \hat{h}_0(x_i) + \sum_{i<j=1}^A V(x_{ij})-\sum_{i=1}^A\hat{u}_{\mathrm{ho}}(x_i),
+\]
+with 
+\[
+  H_0=\sum_{i=1}^A \hat{h}_0(x_i) =  \sum_{i=1}^A\left(\hat{t}(x_i) + \hat{u}_{\mathrm{ho}}(x_i)\right).
+\]
+Many practitioners use this as the standard Hamiltonian when doing nuclear structure calculations. 
+This is ok if the number of nucleons is large, but still with this Hamiltonian, we do not obey translational invariance.  How can we cure this?
+}
+\end{small}
+}
+
+ \frame
+ {
+ \frametitle{Translationally Invariant Hamiltonian}
+ In setting up a translationally invariant Hamiltonian  
+ the following expressions are helpful.
+ The center-of-mass (CoM)  momentum is
+ \[
+    P=\sum_{i=1}^A\vec{p}_i,
+ \]
+ and we have that
+ \[
+ \sum_{i=1}^A\vec{p}_i^2 =
+ \frac{1}{A}\left[\vec{P}^2+\sum_{i<j}(\vec{p}_i-\vec{p}_j)^2\right]
+ \]
+ meaning that
+ \[
+ \left[\sum_{i=1}^A\frac{\vec{p}_i^2}{2m} -\frac{\vec{P}^2}{2mA}\right]
+ =\frac{1}{2mA}\sum_{i<j}(\vec{p}_i-\vec{p}_j)^2.
+ \]
+ }
+
+
+ \frame
+ {
+ \frametitle{Translationally Invariant Hamiltonian}
+ In a similar fashion we can define the CoM coordinate
+ \[
+     \vec{R}=\frac{1}{A}\sum_{i=1}^{A}\vec{r}_i,
+ \]
+ which yields
+ \[
+ \sum_{i=1}^A\vec{r}_i^2 =
+ \frac{1}{A}\left[A^2\vec{R}^2+\sum_{i<j}(\vec{r}_i-\vec{r}_j)^2\right].
+ \]
+
+ }
+
+
+ \frame
+ {
+ \frametitle{Translationally Invariant Hamiltonian}
+ If we then introduce the harmonic oscillator one-body Hamiltonian
+ \[
+      H_0= \sum_{i=1}^A\left(\frac{\vec{p}_i^2}{2m}+
+	   \frac{1}{2}m\omega^2\vec{r}_i^2\right),
+ \]
+ with $\omega$ the oscillator frequency,
+ we can rewrite the latter as 
+ \[
+      H_{\mathrm{HO}}= \frac{\vec{P}^2}{2mA}+\frac{mA\omega^2\vec{R}^2}{2}
+	    +\frac{1}{2mA}\sum_{i<j}(\vec{p}_i-\vec{p}_j)^2
+	    +\frac{m\omega^2}{2A}\sum_{i<j}(\vec{r}_i-\vec{r}_j)^2.
+     \label{eq:obho}
+ \]
+ }
+
+
+ \frame
+ {
+ \frametitle{Translationally Invariant Hamiltonian}
+ Or we could write 
+ \[
+ H_{\mathrm{HO}}= H_{\mathrm{CoM}}+\frac{1}{2mA}\sum_{i<j}(\vec{p}_i-\vec{p}_j)^2
+	    +\frac{m\omega^2}{2A}\sum_{i<j}(\vec{r}_i-\vec{r}_j)^2,
+ \]
+ with 
+ \[
+      H_{\mathrm{CoM}}= \frac{\vec{P}^2}{2mA}+\frac{mA\omega^2\vec{R}^2}{2}.
+ \]
+
+ }
+
+
+ \frame
+ {
+ \frametitle{Translationally Invariant Hamiltonian}
+ The translationally invariant one- and two-body 
+ Hamiltonian reads
+ for an A-nucleon system,
+ %
+ \[\label{eq:ham}
+\hat{H}=\left[\sum_{i=1}^A\frac{\vec{p}_i^2}{2m} -\frac{\vec{P}^2}{2mA}\right] +\sum_{i<j}^A V_{ij} \; ,
+ \]
+ %
+ where $V_{ij}$ is the nucleon-nucleon interaction. Adding zero as her
+ \[
+ \sum_{i=1}^A\frac{1}{2}m\omega^2\vec{r}_i^2-
+ \frac{m\omega^2}{2A}\left[\vec{R}^2+\sum_{i<j}(\vec{r}_i-\vec{r}_j)^2\right]=0.
+ \]
+we can then rewrite the Hamiltonian as 
+ }
+
+
+
+ \frame
+ {
+ \frametitle{Translationally Invariant Hamiltonian}
+ We can rewrite the Hamiltonian as
+ \[
+ \hat{H}=\sum_{i=1}^A \left[ \frac{\vec{p}_i^2}{2m}
+ +\frac{1}{2}m\omega^2 \vec{r}^2_i
+ \right] + \sum_{i<j}^A \left[ V_{ij}-\frac{m\omega^2}{2A}
+ (\vec{r}_i-\vec{r}_j)^2
+ \right]
+ \]
+ \[
+  -H_{\mathrm{CoM}}.
+ \]
+
+ }
+
+
+
+
+
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+Our Hamiltonian is invariant under the permutation (interchange) of two nucleons. % (exercise here, prove it)
+Since we deal with fermions, the total wave function is antisymmetric.
+Let $\hat{P}$ be an operator which interchanges two nucleons.
+Due to the symmetries we have ascribed to our Hamiltonian, this operator commutes with the total Hamiltonian,
+\[
+[\hat{H},\hat{P}] = 0,
+\]
+meaning that $\Psi_{\lambda}(x_1, x_2, \dots , x_N)$ is an eigenfunction of 
+$\hat{P}$ as well, that is
+\[
+\hat{P}_{ij}\Psi_{\lambda}(x_1, x_2, \dots,x_i,\dots,x_j,\dots,x_N)=
+\beta\Psi_{\lambda}(x_1, x_2, \dots,x_i,\dots,x_j,\dots,x_N),
+\]
+where $\beta$ is the eigenvalue of $\hat{P}$. We have introduced the suffix $ij$ in order to indicate that we permute nucleons $i$ and $j$.
+The Pauli principle tells us that the total wave function for a system of fermions
+has to be antisymmetric, resulting in the eigenvalue $\beta = -1$.   
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+In our case we assume that  we can approximate the exact eigenfunction with a Slater determinant
+\be
+   \Phi(x_1, x_2,\dots ,x_N,\alpha,\beta,\dots, \sigma)=\frac{1}{\sqrt{N!}}
+\left| \begin{array}{ccccc} \psi_{\alpha}(x_1)& \psi_{\alpha}(x_2)& \dots & \dots & \psi_{\alpha}(x_N)\\
+                            \psi_{\beta}(x_1)&\psi_{\beta}(x_2)& \dots & \dots & \psi_{\beta}(x_N)\\  
+                            \dots & \dots & \dots & \dots & \dots \\
+                            \dots & \dots & \dots & \dots & \dots \\
+                     \psi_{\sigma}(x_1)&\psi_{\sigma}(x_2)& \dots & \dots & \psi_{\sigma}(x_N)\end{array} \right|, 
+\label{HartreeFockDet}
+\ee 
+where  $x_i$  stand for the coordinates and spin values of a nucleon $i$ and $\alpha,\beta,\dots, \gamma$ 
+are quantum numbers needed to describe remaining quantum numbers.  
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+The single-nucleon function $\psi_{\alpha}(x_i)$  are eigenfunctions of the one-body
+Hamiltonian, that is
+\[
+\hat{h}_0(x_i)=\hat{t}(x_i) + \hat{u}_{\mathrm{ho}}(x_i),
+\]
+with eigenvalues 
+\[
+\hat{h}_0(x_i) \psi_{\alpha}(x_i)=\left(\hat{t}(x_i) + \hat{u}_{\mathrm{ho}}(x_i)\right)\psi_{\alpha}(x_i)=\varepsilon_{\alpha}\psi_{\alpha}(x_i).
+\]
+The energies $\varepsilon_{\alpha}$ are the so-called non-interacting single-nucleon energies, or unperturbed energies. 
+The total energy is in this case the sum over all  single-nucleon energies, if no two-body or more complicated
+many-body interactions are present.
+}
+\end{small}
+}
+
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+Let us denote the ground state energy by $E_0$. According to the
+variational principle we have
+\begin{equation*}
+  E_0 \le E[\Phi] = \int \Phi^*\hat{H}\Phi d\mathbf{\tau}
+\end{equation*}
+where $\Phi$ is a trial function which we assume to be normalized
+\begin{equation*}
+  \int \Phi^*\Phi d\mathbf{\tau} = 1,
+\end{equation*}
+where we have used the shorthand $d\mathbf{\tau}=d\mathbf{x}_1d\mathbf{x}_2\dots d\mathbf{x}_A$.
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+In the Hartree-Fock method the trial function is the Slater
+determinant of Eq.~(\ref{HartreeFockDet}) which can be rewritten as 
+\begin{equation}
+  \Phi(x_1,x_2,\dots,x_A,\alpha,\beta,\dots,\nu) = \frac{1}{\sqrt{A!}}\sum_{P} (-)^P\hat{P}\psi_{\alpha}(x_1)
+    \psi_{\beta}(x_2)\dots\psi_{\nu}(x_A)=\sqrt{A!}{\cal A}\Phi_H,
+\label{HartreeFockPermutation}
+\end{equation}
+where we have introduced the antisymmetrization operator ${\cal A}$ defined by the 
+summation over all possible permutations of two nucleons.
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+It is defined as
+\begin{equation}
+  {\cal A} = \frac{1}{A!}\sum_{p} (-)^p\hat{P},
+\label{antiSymmetryOperator}
+\end{equation}
+with $p$ standing for the number of permutations. We have introduced for later use the so-called
+Hartree-function, defined by the simple product of all possible single-nucleon functions
+\begin{equation*}
+  \Phi_H(x_1,x_2,\dots,x_A,\alpha,\beta,\dots,\nu) =
+  \psi_{\alpha}(x_1)
+    \psi_{\beta}(x_2)\dots\psi_{\nu}(x_A).
+\end{equation*}
+
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+Both $\hat{H_0}$ and $\hat{\hat{H}_I}$ are invariant under all possible permutations of any two nucleons
+and hence commute with ${\cal A}$
+\begin{equation}
+  [H_0,{\cal A}] = [H_I,{\cal A}] = 0.
+  \label{cummutionAntiSym}
+\end{equation}
+Furthermore, ${\cal A}$ satisfies
+\begin{equation}
+  {\cal A}^2 = {\cal A},
+  \label{AntiSymSquared}
+\end{equation}
+since every permutation of the Slater
+determinant reproduces it. 
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+The expectation value of $\hat{H_0}$ 
+\[
+  \int \Phi^*\hat{H_0}\Phi d\mathbf{\tau} 
+  = A! \int \Phi_H^*{\cal A}\hat{H_0}{\cal A}\Phi_H d\mathbf{\tau}
+\]
+is readily reduced to
+\[
+  \int \Phi^*\hat{H_0}\Phi d\mathbf{\tau} 
+  = A! \int \Phi_H^*\hat{H_0}{\cal A}\Phi_H d\mathbf{\tau},
+\]
+where we have used eqs.~(\ref{cummutionAntiSym}) and
+(\ref{AntiSymSquared}). The next step is to replace the antisymmetrization
+operator by its definition Eq.~(\ref{HartreeFockPermutation}) and to
+replace $\hat{H_0}$ with the sum of one-body operators
+\[
+  \int \Phi^*\hat{H_0}\Phi  d\mathbf{\tau}
+  = \sum_{i=1}^A \sum_{p} (-)^p\int 
+  \Phi_H^*\hat{h}_0\hat{P}\Phi_H d\mathbf{\tau}.
+\]
+
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+The integral vanishes if two or more nucleons are permuted in only one
+of the Hartree-functions $\Phi_H$ because the individual single-nucleon wave functions are
+orthogonal. We obtain then
+\[
+  \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}= \sum_{i=1}^A \int \Phi_H^*\hat{h}_0\Phi_H  d\mathbf{\tau}.
+\]
+Orthogonality of the single-nucleon functions allows us to further simplify the integral, and we
+arrive at the following expression for the expectation values of the
+sum of one-body Hamiltonians 
+\begin{equation}
+  \int \Phi^*\hat{H}_0\Phi  d\mathbf{\tau}
+  = \sum_{\mu=1}^A \int \psi_{\mu}^*(\mathbf{x})\hat{h}_0\psi_{\mu}(\mathbf{x})
+  d\mathbf{x}.
+  \label{H1Expectation}
+\end{equation}
+
+}
+\end{small}
+}
+
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+We introduce the following shorthand for the above integral
+\[
+\langle \mu | \hat{h}_0 | \mu \rangle = \int \psi_{\mu}^*(\mathbf{x})\hat{h}_0\psi_{\mu}(\mathbf{x})d\mathbf{x}.,
+\]
+and rewrite Eq.~(\ref{H1Expectation}) as
+\begin{equation}
+  \int \Phi^*\hat{H_0}\Phi  d\mathbf{\tau}
+  = \sum_{\mu=1}^A \langle \mu | \hat{h}_0 | \mu \rangle.
+  \label{H1Expectation1}
+\end{equation}
+
+}
+\end{small}
+}
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+The expectation value of the two-body part of the Hamiltonian (assuming a two-body Hamiltonian at most) is obtained in a
+similar manner. We have
+\begin{equation*}
+  \int \Phi^*\hat{H_I}\Phi d\mathbf{\tau} 
+  = A! \int \Phi_H^*{\cal A}\hat{H_I}{\cal A}\Phi_H d\mathbf{\tau},
+\end{equation*}
+which reduces to
+\begin{equation*}
+ \int \Phi^*\hat{H_I}\Phi d\mathbf{\tau} 
+  = \sum_{i\le j=1}^A \sum_{p} (-)^p\int 
+  \Phi_H^*V(x_{ij})\hat{P}\Phi_H d\mathbf{\tau},
+\end{equation*}
+by following the same arguments as for the one-body
+Hamiltonian. 
+}
+\end{small}
+}
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+Because of the dependence on the inter-nucleon distance $r_{ij}$,  permutations of
+any two nucleons no longer vanish, and we get
+\begin{equation*}
+  \int \Phi^*\hat{H_I}\Phi d\mathbf{\tau} 
+  = \sum_{i < j=1}^A \int  
+  \Phi_H^*V(x_{ij})(1-P_{ij})\Phi_H d\mathbf{\tau}.
+\end{equation*}
+where $P_{ij}$ is the permutation operator that interchanges
+nucleon $i$ and nucleon $j$. Again we use the assumption that the single-nucleon wave functions
+are orthogonal. 
+}
+\end{small}
+}
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+We obtain
+\begin{equation}
+\begin{split}
+  \int \Phi^*\hat{H_I}\Phi d\mathbf{\tau} 
+  = \frac{1}{2}\sum_{\mu=1}^A\sum_{\nu=1}^A
+    &\left[ \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)V(x_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
+    dx_idx_j \right.\\
+  &\left.
+  - \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)
+  V(x_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
+  dx_idx_j
+  \right]. \label{H2Expectation}
+\end{split}
+\end{equation}
+The first term is the so-called direct term. In Hartree-Fock theory it leads to the so-called Hartree term, 
+while the second is due to the Pauli principle and is called
+the exchange term and in Hartree-Fock theory it defines the so-called xFock term.
+The factor  $1/2$ is introduced because we now run over
+all pairs twice. 
+}
+\end{small}
+}
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+The last equation allows us to  introduce some further definitions.  
+The single-nucleon wave functions $\psi_{\mu}({\bf x})$, defined by the quantum numbers $\mu$ and ${\bf x}$
+(recall that ${\bf x}$ also includes spin degree, later we will also add isospin)   are defined as the overlap 
+\[
+   \psi_{\alpha}(x)  = \langle x | \alpha \rangle .
+\]
+
+}
+\end{small}
+}
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+We introduce the following shorthands for the above two integrals
+\[
+\langle \mu\nu|V|\mu\nu\rangle =  \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)V(x_{ij})\psi_{\mu}(x_i)\psi_{\nu}(x_j)
+    dx_idx_j,
+\]
+and 
+\[
+\langle \mu\nu|V|\nu\mu\rangle = \int \psi_{\mu}^*(x_i)\psi_{\nu}^*(x_j)
+  V(x_{ij})\psi_{\nu}(x_i)\psi_{\mu}(x_j)
+  dx_idx_j.  
+\]
+}
+\end{small}
+}
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+The direct and exchange matrix elements can be  brought together if we define the antisymmetrized matrix element
+\[
+\langle \mu\nu|V|\mu\nu\rangle_{\mathrm{AS}}= \langle \mu\nu|V|\mu\nu\rangle-\langle \mu\nu|V|\nu\mu\rangle,
+\]
+or for a general matrix element  
+\[
+\langle \mu\nu|V|\sigma\tau\rangle_{\mathrm{AS}}= \langle \mu\nu|V|\sigma\tau\rangle-\langle \mu\nu|V|\tau\sigma\rangle.
+\]
+It has the symmetry property
+\[
+\langle \mu\nu|V|\sigma\tau\rangle_{\mathrm{AS}}= -\langle \mu\nu|V|\tau\sigma\rangle_{\mathrm{AS}}=-\langle \nu\mu|V|\sigma\tau\rangle_{\mathrm{AS}}.
+\]
+}
+\end{small}
+}
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+The antisymmetric matrix element is also hermitian, implying 
+\[
+\langle \mu\nu|V|\sigma\tau\rangle_{\mathrm{AS}}= \langle \sigma\tau|V|\mu\nu\rangle_{\mathrm{AS}}.
+\]
+
+With these notations we rewrite Eq.~(\ref{H2Expectation}) as 
+\begin{equation}
+  \int \Phi^*\hat{H_I}\Phi d\mathbf{\tau} 
+  = \frac{1}{2}\sum_{\mu=1}^A\sum_{\nu=1}^A \langle \mu\nu|V|\mu\nu\rangle_{\mathrm{AS}}.
+\label{H2Expectation2}
+\end{equation}
+
+}
+\end{small}
+}
+\frame
+{
+  \frametitle{Definitions and notations}
+\begin{small}
+{\scriptsize
+Combining Eqs.~(\ref{H1Expectation1}) and
+(\ref{H2Expectation2}) we obtain the energy functional 
+\begin{equation}
+  E[\Phi] 
+  = \sum_{\mu=1}^A \langle \mu | \hat{h}_0 | \mu \rangle +
+  \frac{1}{2}\sum_{{\mu}=1}^A\sum_{{\nu}=1}^A \langle \mu\nu|V|\mu\nu\rangle_{\mathrm{AS}}.
+\label{FunctionalEPhi}
+\end{equation}
+which we will use as our starting point for the Hartree-Fock calculations later in this course. 
+}
+\end{small}
+}
+
+
+\end{document}
+%\section[Week 11]{Week 3}
+
